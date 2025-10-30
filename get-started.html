@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Started | PAARU STUDIO</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="popup-form.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="services-page">
+    <!-- Top Banner -->
+    <div class="top-banner">
+        <div class="container">
+            <div class="banner-content">
+                <p>Let's Create Your Video</p>
+                <a href="index.html#contact" class="book-now-btn">BOOK NOW</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">
+                    <img src="logo.png" alt="Paaru Studio Logo" class="logo-image">
+                    <span class="logo-text">PAARU STUDIO</span>
+                </a>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="services.html">Services</a>
+                    <a href="ecommerce.html">E-Commerce</a>
+                    <a href="media-offerings.html">Media</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="get-started.html">Get Started</a>
+                    <a href="join-team.html">Join Team</a>
+                    <a href="index.html#contact" class="cta-btn">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="page-title">Get <span class="gradient-text">Started</span></h1>
+            <p class="page-subtitle">Let's bring your creative vision to life</p>
+        </div>
+    </section>
+
+    <!-- Project Form -->
+    <section class="get-started-section">
+        <div class="container">
+            <div class="get-started-grid">
+                <div class="get-started-info">
+                    <h2>Start Your Project Today</h2>
+                    <p>Fill out the form and our team will get back to you within 24 hours with a customized proposal and quote for your project.</p>
+                    
+                    <div class="info-cards">
+                        <div class="info-card">
+                            <div class="info-icon">⚡</div>
+                            <h3>Quick Response</h3>
+                            <p>Get a response within 24 hours</p>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-icon">💼</div>
+                            <h3>Professional Team</h3>
+                            <p>Work with experienced professionals</p>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-icon">🎯</div>
+                            <h3>Custom Solutions</h3>
+                            <p>Tailored to your specific needs</p>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-icon">💰</div>
+                            <h3>Competitive Pricing</h3>
+                            <p>Best value for your investment</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-details">
+                        <h3>Or Contact Us Directly</h3>
+                        <div class="contact-item">
+                            <strong>📧 Email:</strong> info@paarustudio.com
+                        </div>
+                        <div class="contact-item">
+                            <strong>📱 Phone:</strong> +91 XXX XXX XXXX
+                        </div>
+                        <div class="contact-item">
+                            <strong>📍 Location:</strong> Bengaluru, Karnataka, India
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-form-card">
+                    <h3>Project Inquiry Form</h3>
+                    <form class="project-form" action="https://formspree.io/f/mblzqbjr" method="POST">
+                        <style>
+                            /* Compact project form - scoped to project-form */
+                            .project-form { background: transparent; padding: 8px; font-family: inherit; }
+                            .project-form h4 { margin: 6px 0 8px; font-size: 15px; }
+                            .project-form .grid { display:grid; grid-template-columns: 1fr 1fr; gap:8px 12px; }
+                            .project-form .full-width { grid-column: 1 / -1; }
+                            .project-form input, .project-form select, .project-form textarea { width:100%; padding:8px 10px; border-radius:6px; border:1px solid rgba(0,0,0,0.08); box-sizing:border-box; font-size:14px; }
+                            .project-form textarea { min-height:100px; }
+                            .project-form .checkbox-group { font-size:13px; }
+                            .project-form .actions { margin-top:8px; }
+                            .project-form .cta-btn { width:100%; padding:10px 12px; font-size:14px; }
+                            @media (max-width:720px){ .project-form .grid { grid-template-columns: 1fr; } }
+                        </style>
+
+                        <h4>Personal Information</h4>
+                        <div class="grid">
+                            <div><input type="text" name="name" placeholder="Full Name *" required></div>
+                            <div><input type="email" name="email" placeholder="Email Address *" required></div>
+                            <div><input type="tel" name="phone" placeholder="Phone Number *" required></div>
+                            <div><input type="text" name="company" placeholder="Company Name"></div>
+                            <div class="full-width"><input type="url" name="website" placeholder="Website URL"></div>
+                        </div>
+
+                        <h4>Project Details</h4>
+                        <div class="grid">
+                            <div><select name="service_type" required>
+                                <option value="">Select Service Type *</option>
+                                <option value="video">Video Production</option>
+                                <option value="photography">Photography</option>
+                                <option value="ecommerce">E-commerce Solutions</option>
+                                <option value="digital">Digital Marketing</option>
+                                <option value="btl">BTL Activations</option>
+                                <option value="ooh">OOH/DOOH Advertising</option>
+                                <option value="podcast">Podcast Production</option>
+                                <option value="design">Design Services</option>
+                                <option value="multiple">Multiple Services</option>
+                            </select></div>
+
+                            <div><select name="budget" required>
+                                <option value="">Project Budget *</option>
+                                <option value="under-1l">Under ₹1 Lakh</option>
+                                <option value="1-5l">₹1-5 Lakhs</option>
+                                <option value="5-10l">₹5-10 Lakhs</option>
+                                <option value="10-25l">₹10-25 Lakhs</option>
+                                <option value="25l-plus">₹25 Lakhs+</option>
+                                <option value="flexible">Flexible</option>
+                            </select></div>
+
+                            <div><select name="timeline" required>
+                                <option value="">Timeline *</option>
+                                <option value="urgent">Urgent (Within 1 week)</option>
+                                <option value="fast">Fast (1-2 weeks)</option>
+                                <option value="normal">Normal (2-4 weeks)</option>
+                                <option value="flexible">Flexible (1-2 months)</option>
+                                <option value="long">Long-term (2+ months)</option>
+                            </select></div>
+
+                            <div class="full-width"><textarea name="description" placeholder="Project Description & Requirements *" rows="4" required></textarea></div>
+
+
+                            <div><select name="source">
+                                <option value="">Select Source</option>
+                                <option value="google">Google Search</option>
+                                <option value="social">Social Media</option>
+                                <option value="referral">Referral</option>
+                                <option value="client">Previous Client</option>
+                                <option value="ads">Advertisement</option>
+                                <option value="other">Other</option>
+                            </select></div>
+
+                            <div class="full-width">
+                                <div class="checkbox-group">
+                                    <label style="display:block;"><input type="checkbox" name="agree" value="yes" required> I agree to the Terms & Conditions and Privacy Policy</label>
+                                    <div class="tnc-links" style="margin-top:6px;font-size:13px">
+                                        <a href="#">Terms & Conditions</a>
+                                        &nbsp;|&nbsp;
+                                        <a href="#">Privacy Policy</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="full-width actions"><button type="submit" class="cta-btn">SUBMIT PROJECT INQUIRY</button></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What Happens Next -->
+    <section class="next-steps-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>WHAT HAPPENS NEXT?</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="steps-container">
+                <div class="step-item">
+                    <div class="step-number">01</div>
+                    <h3>We Review Your Request</h3>
+                    <p>Our team reviews your project details and requirements within 24 hours.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">02</div>
+                    <h3>Initial Consultation</h3>
+                    <p>We schedule a call to discuss your project in detail and understand your goals.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">03</div>
+                    <h3>Proposal & Quote</h3>
+                    <p>Receive a detailed proposal with timeline, deliverables, and pricing.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">04</div>
+                    <h3>Project Kickoff</h3>
+                    <p>Once approved, we kick off the project and keep you updated throughout.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>FREQUENTLY ASKED QUESTIONS</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>How long does a typical project take?</h3>
+                    <p>Project timelines vary based on scope and complexity. Video production typically takes 2-4 weeks, while e-commerce photography can be completed in 1-2 weeks. We'll provide a detailed timeline in our proposal.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What is your payment structure?</h3>
+                    <p>We typically work with a 50% advance payment and 50% upon project completion. For larger projects, we can discuss milestone-based payments.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do you provide revisions?</h3>
+                    <p>Yes, we include a specified number of revisions in our proposals to ensure you're completely satisfied with the final deliverables.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can you work with our existing brand guidelines?</h3>
+                    <p>Absolutely! We can work with your existing brand guidelines and assets to ensure consistency across all deliverables.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do you sign NDAs?</h3>
+                    <p>Yes, we're happy to sign Non-Disclosure Agreements to protect your confidential information and intellectual property.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What if I need rush delivery?</h3>
+                    <p>We can accommodate rush projects based on our current workload. Rush delivery may involve additional fees, which we'll discuss upfront.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>PAARU STUDIO</h3>
+                    <p>An Agency of Possibilities</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="services.html">Services</a>
+                    <a href="ecommerce.html">E-Commerce</a>
+                    <a href="media-offerings.html">Media</a>
+                    <a href="get-started.html">Get Started</a>
+                    <a href="join-team.html">Join Team</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Paaru Studio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="popup-form.js"></script>
+</body>
+</html>
