@@ -1,0 +1,43 @@
+/* Minimal popup form styles, neutral, matches attached visual loosely */
+.video-modal, .site-popup-modal { }
+.site-popup-modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.45);
+  z-index: 100000 !important;
+}
+.site-popup-inner {
+  width: 880px;
+  max-width: calc(100% - 40px);
+  background: #fff;
+  border-radius: 12px;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.45);
+}
+.site-popup-left {
+  flex: 0 0 45%;
+  background: linear-gradient(180deg,#5B2FDD,#4A20B8);
+  color: #fff;
+  padding: 36px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.site-popup-left h3{ font-size: 22px; margin:0 0 8px; }
+.site-popup-left p{ opacity:0.95; }
+.site-popup-right { flex:1; padding: 28px 32px; position: relative; }
+.site-popup-close { position: absolute; right: 14px; top: 12px; background: transparent; border: 0; font-size: 22px; cursor: pointer; }
+.site-popup-form { display: flex; flex-direction: column; gap: 12px; }
+.site-popup-form input, .site-popup-form textarea { width: 100%; padding: 12px 14px; border-radius: 8px; border: 1px solid #e6e6e6; font-size: 14px; }
+.site-popup-form textarea { min-height: 96px; resize: vertical; }
+.site-popup-form .submit-btn { background: #0b8454; color: #fff; padding: 12px 18px; border-radius: 8px; border: none; cursor: pointer; font-weight:700; }
+@media (max-width: 720px){
+  .site-popup-inner { flex-direction: column; }
+  .site-popup-left { flex: 0 0 auto; width: 100%; padding: 22px; }
+  .site-popup-right { padding: 18px; }
+}
