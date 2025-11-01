@@ -287,6 +287,47 @@ html, body { height: 100%; }
     .page-hero, .hero { padding-top: 74px; }
 }
 
+/* Mobile navigation overlay (revealed when .navbar has .open) */
+.mobile-menu-btn { display: none; background: transparent; border: 0; color: inherit; padding: 6px 10px; }
+.navbar.open .nav-links {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 64px; /* below navbar */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(10,10,10,0.98), rgba(10,10,10,0.98));
+    padding: 20px 18px;
+    gap: 18px;
+    overflow-y: auto;
+    z-index: 11001;
+}
+.navbar.open .nav-links a { font-size: 18px; padding: 12px 6px; border-bottom: 1px solid rgba(255,255,255,0.03); }
+.mobile-nav-backdrop { display: none; }
+.navbar.open + .mobile-nav-backdrop { display: block; position: fixed; inset: 64px 0 0 0; background: rgba(0,0,0,0.3); z-index: 11000; }
+
+/* Hero responsive adjustments: smaller font-size and spacing on narrow screens */
+@media (max-width: 900px) {
+    .hero-title { font-size: 40px; margin-bottom: 20px; }
+    .hero-subtitle { font-size: 22px; margin-bottom: 28px; }
+    .hero-content { padding-bottom: 36px; max-width: 720px; }
+    .hero-visual { display: none; }
+    .hero-bg-video { top: 0; opacity: 0.28; }
+    .index-page .hero-cta { top: 0; position: static; margin-top: 8px; }
+}
+
+@media (max-width: 420px) {
+    .hero-title { font-size: 28px; }
+    .hero-subtitle { font-size: 18px; }
+    .hero-cta { padding: 12px 18px; font-size: 14px; }
+    .container { padding: 0 12px; }
+}
+
+/* Make images and videos fluid across the site by default */
+img, video { max-width: 100%; height: auto; display: block; }
+
+
 /* Hero Section */
 /* .hero {
     padding: 220px 0 120px;
