@@ -1065,6 +1065,69 @@ img, video { max-width: 100%; height: auto; display: block; }
     margin: 8px 0 12px; /* much tighter vertical spacing */
 }
 
+/* On the standalone portfolio page we want a grid of videos (3x3) instead of the carousel.
+   This rule turns the existing carousel markup into a responsive grid while hiding nav arrows. */
+.portfolio-section .carousel-viewport { width: 100%; margin: 0; }
+.portfolio-section .carousel-track {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    align-items: stretch;
+    padding: 0;
+    transform: none !important;
+}
+.portfolio-section .carousel-viewport .portfolio-item {
+    flex: none;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+.portfolio-section .portfolio-image { height: 260px; }
+.portfolio-section .carousel-nav { display: none; }
+
+@media (max-width: 900px) {
+    .portfolio-section .carousel-track { grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    .portfolio-section .portfolio-image { height: 220px; }
+}
+@media (max-width: 480px) {
+    .portfolio-section .carousel-track { grid-template-columns: 1fr; gap: 12px; }
+    .portfolio-section .portfolio-image { height: 180px; }
+}
+
+/* Video modal styles (centered popup) */
+.video-modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.75);
+    z-index: 20000;
+}
+.video-modal.active { display: flex; }
+.video-modal .modal-inner {
+    width: min(1100px, 94vw);
+    height: calc(min(1100px, 94vw) * 9 / 16);
+    background: #000;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+}
+.video-modal .close-btn {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 20010;
+}
+
 /* Reactive image gallery styles */
 .gallery-section {
     padding: 40px 0 60px;

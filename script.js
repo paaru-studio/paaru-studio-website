@@ -180,3 +180,60 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 console.log('Paaru Studio website loaded successfully! 🚀');
+
+/* Video modal: idempotent modal that opens YouTube iframes when a .video-poster is clicked.
+   Adds centered popup playback for portfolio tiles. */
+(function(){
+    if (window.__ps_video_modal_installed) return;
+    window.__ps_video_modal_installed = true;
+
+    var modal = document.createElement('div');
+    modal.className = 'video-modal';
+    modal.innerHTML = '<div class="modal-inner" role="dialog" aria-modal="true"></div><button class="close-btn" aria-label="Close">✕</button>';
+    document.body.appendChild(modal);
+    var modalInner = modal.querySelector('.modal-inner');
+    var closeBtn = modal.querySelector('.close-btn');
+
+    function openModal(videoId){
+        if (!videoId) return;
+        // lock scroll
+        document.documentElement.style.overflow = 'hidden';
+        document.body.style.overflow = 'hidden';
+        modal.classList.add('active');
+        modalInner.innerHTML = '';
+        var iframe = document.createElement('iframe');
+        var src = 'https://www.youtube.com/embed/' + encodeURIComponent(videoId) + '?rel=0&autoplay=1&modestbranding=1&controls=1';
+        iframe.setAttribute('src', src);
+        iframe.setAttribute('frameborder', '0');
+        iframe.setAttribute('allow', 'autoplay; encrypted-media; fullscreen');
+        iframe.setAttribute('allowfullscreen', '');
+        iframe.style.width = '100%'; iframe.style.height = '100%';
+        modalInner.appendChild(iframe);
+        // move focus to close button for accessibility
+        closeBtn.focus();
+    }
+
+    function closeModal(){
+        modal.classList.remove('active');
+        modalInner.innerHTML = '';
+        document.body.style.overflow = '';
+        document.documentElement.style.overflow = '';
+    }
+
+    closeBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', function(e){ if (e.target === modal) closeModal(); });
+    document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeModal(); });
+
+    // delegate clicks on poster buttons
+    document.addEventListener('click', function(e){
+        var btn = e.target.closest && e.target.closest('.video-poster');
+        if (!btn) return;
+        var container = btn.closest && btn.closest('.video-embed');
+        var vid = container && container.getAttribute('data-video-id');
+        if (vid) {
+            openModal(vid);
+            e.preventDefault();
+            e.stopPropagation();
+        }
+    });
+})();
