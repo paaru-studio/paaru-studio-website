@@ -1494,17 +1494,23 @@ img, video { max-width: 100%; height: auto; display: block; }
     background: #f8f8f8;
     color: #111111;
     border: 1px solid #e6e6e6;
+    padding: 12px 14px; /* compact the white tiles */
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 140px;
 }
 
 /* Logo variant: center and size logo images inside client tiles */
 #clients .client-logo.client-logo--img {
-    padding: 8px;
+    padding: 10px;
     background: transparent;
     border: none;
 }
 #clients .client-logo.client-logo--img img {
     display: block;
-    width: 120px;
+    width: 140px; /* slightly larger but contained so logos are clearer */
     height: auto;
     object-fit: contain;
 }
@@ -2442,9 +2448,9 @@ img, video { max-width: 100%; height: auto; display: block; }
     margin-bottom: 40px;
 }
 
-/* Clients Section */
+/* Clients Section: circular logo marquee */
 .clients-section {
-    padding: 120px 0;
+    padding: 80px 0;
 }
 
 .clients-grid {
@@ -2453,38 +2459,63 @@ img, video { max-width: 100%; height: auto; display: block; }
     gap: 30px;
 }
 
-/* Running marquee for clients on the index page */
+/* Running marquee for clients on the index page - circular logos, smooth infinite wrap */
 .clients-marquee {
     width: 100%;
     overflow: hidden;
     position: relative;
-    padding: 18px 0;
+    padding: 20px 0;
 }
 .clients-track {
     display: flex;
     width: calc(200% + 40px);
-    animation: clients-scroll 18s linear infinite;
-    gap: 24px;
+    animation: clients-scroll 20s linear infinite;
+    gap: 28px; /* spacing between circular logos */
     align-items: center;
 }
 .clients-group {
     display: flex;
-    gap: 24px;
+    gap: 28px;
     align-items: center;
     white-space: nowrap;
 }
+
+/* Circular logo tile */
 .client-logo {
-    background: var(--card-bg);
-    color: var(--text-secondary);
-    padding: 16px 24px;
-    border-radius: 10px;
-    border: 1px solid var(--border-color);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-    font-weight: 700;
     flex: 0 0 auto;
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    background: var(--card-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    box-shadow: 0 8px 28px rgba(0,0,0,0.08);
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+    transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
 }
 
-/* Pause animation when hovered or focused */
+/* Image variant: ensure logos fit inside the circular tile */
+.client-logo.client-logo--img {
+    background: transparent;
+    border: none;
+    padding: 8px;
+}
+.client-logo.client-logo--img img {
+    display: block;
+    width: 80%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Slight pop on hover and pause marquee */
+.client-logo:hover {
+    transform: scale(1.06);
+    box-shadow: 0 18px 44px rgba(0,0,0,0.12);
+    border-color: var(--accent-color);
+}
 .clients-marquee:hover .clients-track,
 .clients-marquee:focus-within .clients-track {
     animation-play-state: paused;
@@ -2504,22 +2535,15 @@ img, video { max-width: 100%; height: auto; display: block; }
     100% { transform: translateX(-50%); }
 }
 
-.client-logo {
-    background: var(--card-bg);
-    padding: 50px 30px;
-    border-radius: 12px;
-    border: 1px solid var(--border-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 600;
-    color: var(--text-secondary);
-    transition: transform 0.3s ease, border-color 0.3s ease;
+/* Responsive: reduce logo size on small screens to avoid overlap */
+@media (max-width: 900px) {
+    .client-logo { width: 80px; height: 80px; }
+    .clients-track { gap: 20px; }
 }
 
-.client-logo:hover {
-    transform: scale(1.05);
-    border-color: var(--accent-color);
+@media (max-width: 480px) {
+    .client-logo { width: 64px; height: 64px; }
+    .clients-track { gap: 14px; animation-duration: 16s; }
 }
 
 /* Testimonials */
