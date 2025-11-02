@@ -1065,10 +1065,10 @@ img, video { max-width: 100%; height: auto; display: block; }
     margin: 8px 0 12px; /* much tighter vertical spacing */
 }
 
-/* On the standalone portfolio page we want a grid of videos (3x3) instead of the carousel.
-   This rule turns the existing carousel markup into a responsive grid while hiding nav arrows. */
-.portfolio-section .carousel-viewport { width: 100%; margin: 0; }
-.portfolio-section .carousel-track {
+/* Grid layout for the standalone portfolio page only (applies when JS sets .portfolio-page on <body>)
+   This keeps the index page using the original sliding carousel. */
+.portfolio-page .portfolio-section .carousel-viewport { width: 100%; margin: 0; }
+.portfolio-page .portfolio-section .carousel-track {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 28px;
@@ -1076,21 +1076,21 @@ img, video { max-width: 100%; height: auto; display: block; }
     padding: 0;
     transform: none !important;
 }
-.portfolio-section .carousel-viewport .portfolio-item {
+.portfolio-page .portfolio-section .carousel-viewport .portfolio-item {
     flex: none;
     max-width: 100%;
     box-sizing: border-box;
 }
-.portfolio-section .portfolio-image { height: 260px; }
-.portfolio-section .carousel-nav { display: none; }
+.portfolio-page .portfolio-section .portfolio-image { height: 260px; }
+.portfolio-page .portfolio-section .carousel-nav { display: none; }
 
 @media (max-width: 900px) {
-    .portfolio-section .carousel-track { grid-template-columns: repeat(2, 1fr); gap: 18px; }
-    .portfolio-section .portfolio-image { height: 220px; }
+    .portfolio-page .portfolio-section .carousel-track { grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    .portfolio-page .portfolio-section .portfolio-image { height: 220px; }
 }
 @media (max-width: 480px) {
-    .portfolio-section .carousel-track { grid-template-columns: 1fr; gap: 12px; }
-    .portfolio-section .portfolio-image { height: 180px; }
+    .portfolio-page .portfolio-section .carousel-track { grid-template-columns: 1fr; gap: 12px; }
+    .portfolio-page .portfolio-section .portfolio-image { height: 180px; }
 }
 
 /* Video modal styles (centered popup) */
@@ -1102,6 +1102,14 @@ img, video { max-width: 100%; height: auto; display: block; }
     justify-content: center;
     background: rgba(0,0,0,0.75);
     z-index: 20000;
+}
+.video-modal {
+    /* reinforce fixed positioning in case of stacking-context surprises */
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
 }
 .video-modal.active { display: flex; }
 .video-modal .modal-inner {
@@ -1127,6 +1135,52 @@ img, video { max-width: 100%; height: auto; display: block; }
     cursor: pointer;
     z-index: 20010;
 }
+
+/* Fallback 'Open on YouTube' link inside modal (small, unobtrusive) */
+.video-modal .modal-open-link {
+    position: absolute;
+    left: 18px;
+    top: 18px;
+    background: rgba(255,255,255,0.06);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    z-index: 20011;
+}
+.video-modal .modal-open-link:hover { background: rgba(255,255,255,0.12); }
+
+/* file:// help banner shown when page is opened from local file system */
+.file-banner {
+    position: fixed;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(90deg,#fbbf24,#f59e0b);
+    color: #0a0a0a;
+    padding: 10px 16px;
+    border-radius: 10px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+    z-index: 30000;
+    font-weight: 700;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    max-width: calc(100% - 40px);
+}
+.file-banner .cmd {
+    background: rgba(255,255,255,0.12);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-family: monospace;
+}
+.file-banner .actions { margin-left: auto; display:flex; gap:8px; }
+.file-banner .btn { background: rgba(0,0,0,0.08); border-radius:6px; padding:6px 8px; color:#fff; text-decoration:none; font-weight:700; cursor:pointer; }
+.file-banner .btn:hover { background: rgba(0,0,0,0.12); }
+.file-banner .close-btn { background: transparent; border: 0; color: #0a0a0a; font-weight:800; padding:4px 6px; cursor:pointer; }
 
 /* Reactive image gallery styles */
 .gallery-section {
