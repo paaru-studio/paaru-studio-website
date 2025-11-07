@@ -921,24 +921,6 @@ img, video { max-width: 100%; height: auto; display: block; }
     border: 0;
 }
 
-/* Force iframe and poster to cover the card (cover behaviour for iframes)
-   Some browsers don't honor object-fit on iframes; use centering + min-size to
-   ensure the iframe always fills the container without letterboxing. */
-.video-embed iframe {
-    position: absolute !important;
-    top: 50% !important;
-    left: 50% !important;
-    transform: translate(-50%, -50%) !important;
-    min-width: 100% !important;
-    min-height: 100% !important;
-    width: auto !important;
-    height: auto !important;
-}
-.video-poster {
-    background-size: cover !important;
-    background-position: center center !important;
-}
-
 .video-embed > iframe, .video-embed > .video-poster {
     width: 100%;
     height: 100%;
@@ -1081,75 +1063,6 @@ img, video { max-width: 100%; height: auto; display: block; }
 .portfolio-carousel {
     position: relative;
     margin: 8px 0 12px; /* much tighter vertical spacing */
-}
-
-/* Ensure portfolio cards fill their container edges (fix poster/iframe spacing)
-   This makes embedded posters and iframes match the rounded card edges and
-   removes any inner padding/gaps that reveal the page background. */
-#portfolio .carousel-viewport {
-    width: 100%;
-    margin: 0; /* don't full-bleed unless explicitly desired elsewhere */
-    padding: 0;
-}
-#portfolio .carousel-track {
-    padding: 0; /* remove side padding which can create visible background at edges */
-    gap: 28px;
-}
-#portfolio .carousel-track .portfolio-item {
-    max-width: 100%;
-    flex: 0 0 auto;
-}
-
-/* Make the image/embed layer sit flush and inherit the card's rounding */
-.portfolio-item, .portfolio-image, .video-embed, .video-poster, .video-embed iframe {
-    border-radius: 14px;
-    padding: 0 !important;
-    margin: 0 !important;
-}
-.portfolio-image { overflow: hidden; }
-.video-embed, .video-poster, .video-embed > iframe { display: block !important; width: 100% !important; height: 100% !important; object-fit: cover !important; }
-
-/* Reels (vertical 9:16) ----------------------------------------------------------- */
-.reel-row { padding: 48px 0; }
-.reel-row .section-header { text-align: left; margin-bottom: 18px; }
-.reel-track {
-    display: flex;
-    gap: 22px;
-    align-items: flex-start;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    padding-bottom: 12px;
-}
-.reel-item {
-    flex: 0 0 auto;
-    width: 240px; /* default reel width */
-}
-.reel-embed {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 9 / 16; /* vertical */
-    background: var(--secondary-bg);
-    border-radius: 14px;
-    overflow: hidden;
-    box-shadow: 0 18px 50px rgba(0,0,0,0.45);
-}
-.reel-embed .video-poster {
-    position: absolute;
-    inset: 0;
-    background-size: cover !important;
-    background-position: center center !important;
-}
-.reel-embed .video-title {
-    position: absolute;
-    left: 12px;
-    bottom: 10px;
-    font-size: 16px;
-}
-@media (max-width: 900px) {
-    .reel-item { width: 180px; }
-}
-@media (max-width: 480px) {
-    .reel-item { width: 140px; }
 }
 
 /* Grid layout for the standalone portfolio page only (applies when JS sets .portfolio-page on <body>)

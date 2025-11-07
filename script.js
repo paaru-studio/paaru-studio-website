@@ -323,12 +323,11 @@ console.log('Paaru Studio website loaded successfully! 🚀');
     modal.addEventListener('click', function(e){ if (e.target === modal) closeModal(); });
     document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeModal(); });
 
-    // delegate clicks on poster buttons (support both .video-embed and .reel-embed)
+    // delegate clicks on poster buttons
     document.addEventListener('click', function(e){
         var btn = e.target.closest && e.target.closest('.video-poster');
         if (!btn) return;
-        // support both regular video cards and reel cards
-        var container = btn.closest && btn.closest('.video-embed, .reel-embed');
+        var container = btn.closest && btn.closest('.video-embed');
         var vid = container && container.getAttribute('data-video-id');
         if (vid) {
             openModal(vid);
