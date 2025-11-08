@@ -1169,6 +1169,61 @@ img, video { max-width: 100%; height: auto; display: block; }
     align-items: center;
     max-width: calc(100% - 40px);
 }
+
+/* Reels Section: vertical portrait embeds (9:16) ------------------------------------------- */
+.reels-section {
+    padding: 48px 0 64px;
+    background: transparent;
+}
+.reels-section .section-header { margin-bottom: 24px; }
+.reels-grid {
+    display: grid;
+    /* set a sensible minimum column width so each reel is a bit larger */
+    grid-template-columns: repeat(6, minmax(160px, 1fr));
+    gap: 20px;
+    align-items: start;
+}
+.reel {
+    display: block;
+}
+.reel .video-embed {
+    position: relative;
+    width: 100%;
+    /* portrait aspect: width / height = 9/16 -> aspect-ratio: 9 / 16 */
+    aspect-ratio: 9 / 16;
+    background: var(--secondary-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 18px 50px rgba(0,0,0,0.18);
+}
+.reel .video-embed iframe,
+.reel .video-embed > .video-poster {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    border: 0;
+    object-fit: cover !important;
+}
+.reel .video-poster { background-size: cover; background-position: center; cursor: pointer; }
+
+/* Remove any inherited play-circle pseudo elements for reel thumbnails */
+.reel .video-poster::before,
+.reel .video-poster::after {
+    display: none !important;
+    content: none !important;
+}
+
+@media (max-width: 1200px) {
+    .reels-grid { grid-template-columns: repeat(4, 1fr); }
+}
+@media (max-width: 900px) {
+    .reels-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+}
+@media (max-width: 480px) {
+    .reels-grid { grid-template-columns: 1fr; gap: 12px; }
+    .reel .video-embed { border-radius: 10px; }
+}
 .file-banner .cmd {
     background: rgba(255,255,255,0.12);
     color: #fff;
