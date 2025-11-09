@@ -2395,6 +2395,396 @@ img, video { max-width: 100%; height: auto; display: block; }
     text-align: right;
 }
 
+/* Metro Billboard Layout */
+.metro-billboard {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    gap: 0;
+    align-items: center;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    border-radius: 20px;
+    overflow: hidden;
+    min-height: 480px;
+}
+
+/* Irregular Collage Layout - Different Sizes */
+.metro-visual-collage {
+    position: relative;
+    padding: 30px 25px;
+    height: 100%;
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.collage-image {
+    position: absolute;
+    overflow: hidden;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6);
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.collage-image:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 20px 50px rgba(245, 158, 11, 0.4), 0 0 30px rgba(245, 158, 11, 0.2);
+    z-index: 100 !important;
+}
+
+.collage-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* Image 1 - Large portrait (tallest) */
+.collage-img-1 {
+    width: 200px;
+    height: 280px;
+    top: 20px;
+    left: 20px;
+    z-index: 3;
+    transform: rotate(-3deg);
+}
+
+.collage-img-1:hover {
+    transform: rotate(-3deg) translateY(-8px) scale(1.05);
+}
+
+/* Image 2 - Medium landscape (widest) */
+.collage-img-2 {
+    width: 240px;
+    height: 180px;
+    top: 180px;
+    left: 110px;
+    z-index: 2;
+    transform: rotate(2deg);
+}
+
+.collage-img-2:hover {
+    transform: rotate(2deg) translateY(-8px) scale(1.05);
+}
+
+/* Image 3 - Small square */
+.collage-img-3 {
+    width: 160px;
+    height: 160px;
+    top: 100px;
+    left: 230px;
+    z-index: 1;
+    transform: rotate(-4deg);
+}
+
+.collage-img-3:hover {
+    transform: rotate(-4deg) translateY(-8px) scale(1.05);
+}
+
+.metro-content {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    justify-content: center;
+}
+
+.metro-headline {
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 1.1;
+    color: #ffffff;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+}
+
+.metro-emphasis {
+    display: block;
+    background: linear-gradient(135deg, var(--accent-color) 0%, #fbbf24 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 3.5rem;
+}
+
+.metro-description {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.metro-cta {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.metro-btn {
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.85rem;
+}
+
+.metro-btn.primary {
+    background: var(--accent-color);
+    color: var(--bg-dark);
+    border: 2px solid var(--accent-color);
+}
+
+.metro-btn.primary:hover {
+    background: transparent;
+    color: var(--accent-color);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(245, 158, 11, 0.3);
+}
+
+.metro-btn.secondary {
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.metro-btn.secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.6);
+    transform: translateY(-2px);
+}
+
+/* Responsive Metro Billboard */
+@media (max-width: 1100px) {
+    .metro-billboard {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+    
+    .metro-visual-collage {
+        min-height: 400px;
+        padding: 30px 25px;
+    }
+    
+    .collage-img-1 {
+        width: 170px;
+        height: 240px;
+        top: 20px;
+        left: 25px;
+    }
+    
+    .collage-img-2 {
+        width: 210px;
+        height: 155px;
+        top: 160px;
+        left: 100px;
+    }
+    
+    .collage-img-3 {
+        width: 140px;
+        height: 140px;
+        top: 85px;
+        left: 210px;
+    }
+    
+    .metro-content {
+        padding: 35px 30px;
+    }
+    
+    .metro-headline {
+        font-size: 2.5rem;
+    }
+    
+    .metro-emphasis {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .metro-visual-collage {
+        min-height: 360px;
+        padding: 25px 20px;
+    }
+    
+    .collage-img-1 {
+        width: 145px;
+        height: 200px;
+        top: 15px;
+        left: 20px;
+    }
+    
+    .collage-img-2 {
+        width: 185px;
+        height: 135px;
+        top: 140px;
+        left: 85px;
+    }
+    
+    .collage-img-3 {
+        width: 120px;
+        height: 120px;
+        top: 75px;
+        left: 180px;
+    }
+    
+    .metro-content {
+        padding: 30px 20px;
+        gap: 20px;
+    }
+    
+    .metro-headline {
+        font-size: 2rem;
+    }
+    
+    .metro-emphasis {
+        font-size: 2.5rem;
+    }
+    
+    .metro-cta {
+        flex-direction: column;
+    }
+    
+    .metro-btn {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .metro-visual-collage {
+        min-height: 320px;
+        padding: 20px 15px;
+    }
+    
+    .collage-img-1 {
+        width: 120px;
+        height: 170px;
+        top: 12px;
+        left: 15px;
+    }
+    
+    .collage-img-2 {
+        width: 160px;
+        height: 115px;
+        top: 120px;
+        left: 70px;
+    }
+    
+    .collage-img-3 {
+        width: 100px;
+        height: 100px;
+        top: 65px;
+        left: 145px;
+    }
+    
+    .metro-headline {
+        font-size: 1.75rem;
+    }
+    
+    .metro-emphasis {
+        font-size: 2.2rem;
+    }
+}
+
+/* Old metro grid styles - can be removed if not used elsewhere */
+.metro-layout .ad-details.metro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.metro-layout .ad-spec {
+    grid-column: 1;
+}
+
+.metro-layout .ad-pricing.metro-center {
+    grid-column: 2;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.metro-layout .ad-images {
+    grid-column: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.metro-image {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    border: 2px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.metro-image:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(245, 158, 11, 0.2);
+    border-color: var(--accent-color);
+}
+
+.metro-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1100px) {
+    .metro-layout .ad-details.metro-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+    
+    .metro-layout .ad-spec {
+        grid-column: 1;
+    }
+    
+    .metro-layout .ad-pricing.metro-center {
+        grid-column: 2;
+    }
+    
+    .metro-layout .ad-images {
+        grid-column: 1 / -1;
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 768px) {
+    .metro-layout .ad-details.metro-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .metro-layout .ad-spec,
+    .metro-layout .ad-pricing.metro-center,
+    .metro-layout .ad-images {
+        grid-column: 1;
+    }
+    
+    .metro-layout .ad-pricing.metro-center {
+        text-align: left;
+        align-items: flex-start;
+    }
+    
+    .metro-layout .ad-images {
+        flex-direction: column;
+    }
+}
+
 .price-label {
     font-size: 20px;
     font-weight: 600;
