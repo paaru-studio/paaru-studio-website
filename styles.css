@@ -2056,7 +2056,10 @@ img, video { max-width: 100%; height: auto; display: block; }
 }
 
 /* Remove the gap between the contact band and footer when they are adjacent */
-.index-page .contact-section { margin-bottom: 0; }
+.index-page .contact-section { 
+    margin-bottom: 0;
+    padding-bottom: 60px; /* Reduce bottom padding to close gap */
+}
 
 /* If the contact section is immediately followed by the footer on the index page, remove any top gap */
 .index-page .contact-section + .footer {
@@ -3277,107 +3280,253 @@ img, video { max-width: 100%; height: auto; display: block; }
     box-shadow: 0 15px 40px rgba(245, 158, 11, 0.4);
 }
 
-/* Footer */
+/* Footer - Modern Design with Reveal Animation */
 .footer {
-    background: var(--secondary-bg);
-    padding: 28px 0 18px; /* default vertical space */
-    border-top: 1px solid var(--border-color);
+    background: var(--primary-bg);
+    position: relative;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    margin: 0;
+    padding: 0;
 }
 
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 18px; /* tighten spacing */
-    flex-wrap: wrap;
-    gap: 18px;
+/* Only hide footer if JavaScript will reveal it */
+.footer.will-animate {
+    opacity: 0;
+    transform: translateY(40px);
 }
 
+.footer.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Footer CTA Section - Golden Yellow Gradient Band */
+.footer-cta {
+    background: linear-gradient(135deg, #f59e0b, #fbbf24);
+    padding: 80px 0;
+    text-align: left;
+}
+
+.footer-cta .container {
+    max-width: 1400px;
+}
+
+.footer-cta h2 {
+    font-size: 56px;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0;
+    line-height: 1.3;
+    letter-spacing: -0.5px;
+}
+
+.footer-cta-link {
+    color: #ffffff;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    text-decoration-thickness: 2px;
+    transition: opacity 0.3s ease;
+    display: inline;
+    font-weight: 600;
+}
+
+.footer-cta-link:hover {
+    opacity: 0.85;
+}
+
+/* Footer Main Section */
+.footer-main {
+    background: #0f172a;
+    padding: 60px 0 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 100px;
+    margin-bottom: 50px;
+}
+
+/* Footer Brand */
 .footer-brand h3 {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 800;
-    margin-bottom: 5px;
-    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    margin-bottom: 8px;
+    color: #ffffff;
 }
 
 .footer-brand p {
-    color: var(--text-secondary);
+    color: #94a3b8;
     font-size: 14px;
+    margin-bottom: 40px;
 }
 
-.footer-links {
+/* Footer Social Links - Horizontal inline layout */
+.footer-social {
     display: flex;
-    gap: 30px;
+    gap: 32px;
+    flex-direction: row;
+    align-items: flex-start;
 }
 
-.footer-links a {
-    color: var(--text-secondary);
+.footer-social a {
+    color: #94a3b8;
     text-decoration: none;
     font-size: 14px;
+    font-weight: 400;
     transition: color 0.3s ease;
 }
 
-.footer-links a:hover {
-    color: var(--text-primary);
+.footer-social a:hover {
+    color: #ffffff;
 }
 
+/* Footer Navigation Grid - 4 columns */
+.footer-nav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 60px;
+}
+
+.footer-col h4 {
+    font-size: 13px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 16px;
+    letter-spacing: 0.3px;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-col a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 400;
+    transition: color 0.3s ease;
+    display: inline-block;
+}
+
+.footer-col a:hover {
+    color: #ffffff;
+}
+
+/* Footer Bottom */
 .footer-bottom {
-    text-align: center;
-    padding-top: 12px;
-    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-top: 1px solid #1e293b;
 }
 
-/* Compact footer variant: use on index page if needed to match other pages */
-.footer.compact {
-    padding: 18px 0 12px; /* slightly tighter vertical spacing */
+.footer-bottom p {
+    color: #64748b;
+    font-size: 13px;
+    margin: 0;
 }
 
-.footer.compact .footer-content {
-    margin-bottom: 10px; /* tighten spacing between content and bottom line */
+.footer-meta {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
-/* Ensure container inside footer doesn't add extra horizontal padding on index when using full-bleed sections */
-.footer .container {
-    max-width: 1200px; /* keep consistent with main container */
-    padding-left: 20px;
-    padding-right: 20px;
+.back-to-top {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 50%;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
 }
 
-/* Make footer background span full viewport for pages that want end-to-end band */
+.back-to-top:hover {
+    background: linear-gradient(135deg, #f59e0b, #fbbf24);
+    border-color: #f59e0b;
+    transform: translateY(-4px);
+}
+
+/* Responsive Footer */
+@media (max-width: 1100px) {
+    .footer-nav {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+}
+
+@media (max-width: 900px) {
+    .footer-cta {
+        padding: 60px 0;
+    }
+    
+    .footer-cta h2 {
+        font-size: 36px;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    
+    .footer-nav {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+    
+    .footer-main {
+        padding: 50px 0 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-cta {
+        padding: 40px 0;
+    }
+    
+    .footer-cta h2 {
+        font-size: 28px;
+    }
+    
+    .footer-nav {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .footer-social {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+}
+
+/* Full-bleed footer styling */
 .footer.full-bleed {
     width: 100vw;
     margin-left: calc(50% - 50vw);
     margin-right: calc(50% - 50vw);
-    left: 0;
 }
 
-.footer.full-bleed .footer-content {
-    /* keep content constrained while band is full-bleed */
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-left: 20px;
-    padding-right: 20px;
-    width: 100%;
-}
-
-.footer-bottom p {
-    color: var(--text-secondary);
-    font-size: 13px;
-}
-
-/* Index-only: pin footer to bottom when user reaches page end */
-.index-page .footer.footer-fixed {
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1500; /* above most elements but below modals */
-}
-
-/* When footer is fixed we add padding to the body so content doesn't get hidden */
+/* Legacy footer styles compatibility */
 /* (JS will add inline padding to <body> when footer is fixed to prevent content overlap) */
 
 /* Responsive Design */
@@ -3500,6 +3649,167 @@ html {
     background: var(--primary-bg);
 }
 
+/* Media Offerings page hero with black to golden yellow gradient background - 75% black, 25% yellow at 0.5 opacity */
+.services-page .page-hero {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 60%, rgba(251, 191, 36, 0.5) 85%, rgba(245, 158, 11, 0.5) 100%);
+    padding: 200px 0 100px !important;
+    padding-top: 200px !important;
+    text-align: center;
+}
+
+/* Add white dots pattern to the hero background */
+.services-page .page-hero {
+    background-image: 
+        radial-gradient(circle, rgba(255, 255, 255, 0.3) 2px, transparent 2px),
+        radial-gradient(circle, rgba(255, 255, 255, 0.2) 1.5px, transparent 1.5px),
+        radial-gradient(circle, rgba(255, 255, 255, 0.15) 1px, transparent 1px),
+        linear-gradient(135deg, #000000 0%, #1a1a1a 60%, rgba(251, 191, 36, 0.5) 85%, rgba(245, 158, 11, 0.5) 100%);
+    background-size: 50px 50px, 80px 80px, 120px 120px, 100%;
+    background-position: 0 0, 40px 40px, 80px 80px, 0 0;
+}
+
+/* Animated light wave moving from left to right with fade out on right */
+@keyframes lightWave {
+    0% {
+        left: -100%;
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.4;
+    }
+    30% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    70% {
+        opacity: 0.3;
+    }
+    85% {
+        opacity: 0.15;
+    }
+    100% {
+        left: 100%;
+        opacity: 0;
+    }
+}
+
+/* Smooth curved wave effect with reduced width and 45-degree angle */
+.services-page .page-hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -100%;
+    width: 25%;
+    height: 200%;
+    background: radial-gradient(
+        ellipse 150px 600px at center,
+        rgba(255, 255, 255, 0.5) 0%,
+        rgba(255, 255, 255, 0.3) 25%,
+        rgba(255, 255, 255, 0.15) 50%,
+        rgba(255, 255, 255, 0.05) 75%,
+        transparent 100%
+    );
+    transform: rotate(45deg);
+    animation: lightWave 6s ease-in-out infinite;
+    z-index: 3;
+    pointer-events: none;
+    filter: blur(20px);
+}
+
+/* Gradient overlay for depth - 75% black, 25% yellow */
+.services-page .page-hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        135deg,
+        rgba(0, 0, 0, 0.3) 0%,
+        rgba(26, 26, 26, 0.2) 60%,
+        rgba(251, 191, 36, 0.1) 85%,
+        rgba(245, 158, 11, 0.15) 100%
+    );
+    z-index: 1;
+}
+
+.services-page .page-hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Portfolio page hero with black to golden yellow gradient background - same as Media Offerings */
+.index-page .page-hero {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 60%, rgba(251, 191, 36, 0.5) 85%, rgba(245, 158, 11, 0.5) 100%);
+    padding: 200px 0 100px !important;
+    padding-top: 200px !important;
+    text-align: center;
+}
+
+/* Add white dots pattern to the portfolio hero background */
+.index-page .page-hero {
+    background-image: 
+        radial-gradient(circle, rgba(255, 255, 255, 0.3) 2px, transparent 2px),
+        radial-gradient(circle, rgba(255, 255, 255, 0.2) 1.5px, transparent 1.5px),
+        radial-gradient(circle, rgba(255, 255, 255, 0.15) 1px, transparent 1px),
+        linear-gradient(135deg, #000000 0%, #1a1a1a 60%, rgba(251, 191, 36, 0.5) 85%, rgba(245, 158, 11, 0.5) 100%);
+    background-size: 50px 50px, 80px 80px, 120px 120px, 100%;
+    background-position: 0 0, 40px 40px, 80px 80px, 0 0;
+}
+
+/* Smooth curved wave effect with reduced width and 45-degree angle */
+.index-page .page-hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -100%;
+    width: 25%;
+    height: 200%;
+    background: radial-gradient(
+        ellipse 150px 600px at center,
+        rgba(255, 255, 255, 0.5) 0%,
+        rgba(255, 255, 255, 0.3) 25%,
+        rgba(255, 255, 255, 0.15) 50%,
+        rgba(255, 255, 255, 0.05) 75%,
+        transparent 100%
+    );
+    transform: rotate(45deg);
+    animation: lightWave 6s ease-in-out infinite;
+    z-index: 3;
+    pointer-events: none;
+    filter: blur(20px);
+}
+
+/* Gradient overlay for depth - portfolio */
+.index-page .page-hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        135deg,
+        rgba(0, 0, 0, 0.3) 0%,
+        rgba(26, 26, 26, 0.2) 60%,
+        rgba(251, 191, 36, 0.1) 85%,
+        rgba(245, 158, 11, 0.15) 100%
+    );
+    z-index: 1;
+}
+
+.index-page .page-hero .container {
+    position: relative;
+    z-index: 2;
+}
+
 /* Index page: remove side margins for How It Works section so it sits full-width */
 .index-page #how-it-works {
     width: 100vw;
@@ -3518,6 +3828,62 @@ html {
 .page-subtitle {
     font-size: 22px;
     color: var(--text-secondary);
+}
+
+/* Media Offerings title - footer CTA style with white "Media" and black "Offerings" */
+.services-page .page-hero .page-title {
+    font-size: 56px;
+    font-weight: 600;
+    color: #ffffff;
+    line-height: 1.3;
+    letter-spacing: -0.5px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Make "Offerings" text golden yellow in Media Offerings page */
+.services-page .page-hero .page-title .gradient-text {
+    color: #fbbf24;
+    background: none;
+    background-clip: unset;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: #fbbf24;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Media Offerings subtitle - white text */
+.services-page .page-hero .page-subtitle {
+    color: #ffffff;
+    opacity: 1;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* Portfolio title - white "OUR" and golden yellow "PORTFOLIO" */
+.index-page .page-hero .page-title {
+    font-size: 56px;
+    font-weight: 600;
+    color: #ffffff;
+    line-height: 1.3;
+    letter-spacing: -0.5px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Make "PORTFOLIO" text golden yellow */
+.index-page .page-hero .page-title .gradient-text {
+    color: #fbbf24;
+    background: none;
+    background-clip: unset;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: #fbbf24;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Portfolio subtitle - white text */
+.index-page .page-hero .page-subtitle {
+    color: #ffffff;
+    opacity: 1;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* Services Page */

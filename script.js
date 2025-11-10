@@ -384,3 +384,44 @@ console.log('Paaru Studio website loaded successfully! 🚀');
         }
     }catch(e){}
 })();
+
+/* Footer Reveal Animation - Triggers when footer enters viewport */
+(function(){
+    try {
+        const footer = document.querySelector('.footer');
+        if (!footer) return;
+
+        // Add the animation class so footer starts hidden
+        footer.classList.add('will-animate');
+
+        const footerObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    footer.classList.remove('will-animate');
+                    footer.classList.add('revealed');
+                    // Optionally stop observing after first reveal
+                    footerObserver.unobserve(footer);
+                }
+            });
+        }, {
+            threshold: 0.1, // Trigger when 10% of footer is visible
+            rootMargin: '0px 0px -50px 0px' // Trigger slightly before footer fully enters
+        });
+
+        footerObserver.observe(footer);
+
+        // Back to top button smooth scroll
+        const backToTop = document.querySelector('.back-to-top');
+        if (backToTop) {
+            backToTop.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+    } catch(e) {
+        console.error('Footer animation error:', e);
+    }
+})();
