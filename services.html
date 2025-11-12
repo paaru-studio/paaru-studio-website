@@ -33,7 +33,15 @@
                     <a href="index.html">Home</a>
                     <a href="services.html">Services</a>
                     <a href="ecommerce.html">E-Commerce</a>
-                    <a href="media-offerings.html">Media</a>
+                    <div class="nav-dropdown">
+                        <a href="media-offerings.html" class="nav-dropdown-toggle">Media <span class="dropdown-arrow">▾</span></a>
+                        <div class="nav-dropdown-menu">
+                            <a href="media-offerings.html">Media Offerings (OOH & DOOH)</a>
+                            <a href="performance-marketing.html">Performance Marketing</a>
+                            <a href="social-media-marketing.html">Social Media Marketing</a>
+                            <a href="influencer-marketing.html">Influencer Marketing</a>
+                        </div>
+                    </div>
                     <a href="portfolio.html">Portfolio</a>
                     <a href="get-started.html">Get Started</a>
                     <a href="join-team.html">Join Team</a>
@@ -59,9 +67,11 @@
                 <div class="underline"></div>
             </div>
 
-            <div class="services-grid">
+            <div class="services-grid" style="grid-template-columns: repeat(2, 1fr);">
                 <div class="service-item">
-                    <div class="service-icon">📺</div>
+                    <div class="service-banner" style="width: 100%; height: 260px; border-radius: 8px; overflow: hidden; margin-bottom: 16px;">
+                        <img src="video_pro.jpg" alt="TV & Digital Video Production" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
                     <h3>TV & Digital Video Production</h3>
                     <p>End-to-end video production services from concept development and scriptwriting to production, post-production, and distribution across TV and online platforms.</p>
                     <ul class="service-features">
@@ -75,7 +85,9 @@
                 </div>
 
                 <div class="service-item">
-                    <div class="service-icon">🎬</div>
+                    <div class="service-banner" style="width: 100%; height: 260px; border-radius: 8px; overflow: hidden; margin-bottom: 16px;">
+                        <img src="youtube_social_media.jpg" alt="YouTube & Social Media Campaigns" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
                     <h3>YouTube & Social Media Campaigns</h3>
                     <p>Engaging video ads and content optimized for maximum reach and performance across all social media platforms.</p>
                     <ul class="service-features">
@@ -89,7 +101,9 @@
                 </div>
 
                 <div class="service-item">
-                    <div class="service-icon">🛍️</div>
+                    <div class="service-banner" style="width: 100%; height: 260px; border-radius: 8px; overflow: hidden; margin-bottom: 16px;">
+                        <img src="e_commerce.jpg" alt="E-commerce Solutions" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
                     <h3>E-commerce Solutions</h3>
                     <p>Professional product photography, lifestyle shoots, unboxing videos, and catalog creation for seamless onboarding on major e-commerce platforms.</p>
                     <ul class="service-features">
@@ -104,7 +118,9 @@
                 </div>
 
                 <div class="service-item">
-                    <div class="service-icon">📱</div>
+                    <div class="service-banner" style="width: 100%; height: 260px; border-radius: 8px; overflow: hidden; margin-bottom: 16px;">
+                        <img src="dmarketing_banner.jpg" alt="Digital Marketing & Advertising" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
                     <h3>Digital Marketing & Advertising</h3>
                     <p>Strategic digital marketing campaigns as a trusted partner of Amazon Ads and Google Ads to maximize brand visibility and conversions.</p>
                     <ul class="service-features">
@@ -118,7 +134,9 @@
                 </div>
 
                 <div class="service-item">
-                    <div class="service-icon">🎪</div>
+                    <div class="service-banner" style="width: 100%; height: 260px; border-radius: 8px; overflow: hidden; margin-bottom: 16px;">
+                        <img src="BTL_banner.jpg" alt="BTL Activations" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
                     <h3>BTL Activations</h3>
                     <p>Experiential marketing solutions that create memorable brand experiences and connect directly with your target audience.</p>
                     <ul class="service-features">
@@ -132,7 +150,9 @@
                 </div>
 
                 <div class="service-item">
-                    <div class="service-icon">📢</div>
+                    <div class="service-banner" style="width: 100%; height: 260px; border-radius: 8px; overflow: hidden; margin-bottom: 16px;">
+                        <img src="OOH_banner.jpg" alt="OOH & DOOH Campaigns" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
                     <h3>OOH & DOOH Campaigns</h3>
                     <p>Strategically designed out-of-home and digital out-of-home advertising to amplify your brand presence in the physical world.</p>
                     <ul class="service-features">
@@ -146,7 +166,9 @@
                 </div>
 
                 <div class="service-item">
-                    <div class="service-icon">🎙️</div>
+                    <div class="service-banner" style="width: 100%; height: 260px; border-radius: 8px; overflow: hidden; margin-bottom: 16px;">
+                        <img src="Podcast.jpg" alt="Podcast Production" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
                     <h3>Podcast Production</h3>
                     <p>Complete podcast production services from concept to distribution, helping you reach your audience through audio content.</p>
                     <ul class="service-features">
@@ -160,7 +182,9 @@
                 </div>
 
                 <div class="service-item">
-                    <div class="service-icon">🎨</div>
+                    <div class="service-banner" style="width: 100%; height: 260px; border-radius: 8px; overflow: hidden; margin-bottom: 16px;">
+                        <img src="creative_design.jpg" alt="Creative Design Services" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
                     <h3>Creative Design Services</h3>
                     <p>Comprehensive design solutions for all your branding and marketing needs.</p>
                     <ul class="service-features">
@@ -172,192 +196,6 @@
                         <li>UI/UX Design</li>
                     </ul>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Influencer Network Form -->
-    <section class="influencer-section">
-        <div class="container">
-            <div class="influencer-content">
-                <div class="influencer-text">
-                    <!-- Influencer network image inserted by request -->
-                    <div class="influencer-image-wrap" style="text-align:center;margin-bottom:18px;">
-                        <img src="Influencer Network Pic.png" alt="Influencer Network" class="influencer-image">
-                    </div>
-                    <h2>Join Our Influencer Network</h2>
-                    <p>Are you an influencer looking to collaborate with brands? Join our network and get access to exclusive campaigns and opportunities.</p>
-                    <ul class="benefits-list">
-                        <li>✓ Exclusive Brand Collaborations</li>
-                        <li>✓ Competitive Compensation</li>
-                        <li>✓ Professional Support</li>
-                        <li>✓ Creative Freedom</li>
-                    </ul>
-                </div>
-                                                                <div class="influencer-form">
-                                                                        <!-- Scoped form styles to avoid changing page body -->
-                                                                    <style>
-                                                                        /* Compact two-column influencer form - scoped */
-                                                                        .influencer-form .form-wrapper { display:flex; justify-content:center; }
-                                                                        .influencer-form form {
-                                                                            background-color: #333232;
-                                                                            border-radius: 10px;
-                                                                            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-                                                                            max-width: 720px;
-                                                                            width: 100%;
-                                                                            padding: 18px;
-                                                                            box-sizing: border-box;
-                                                                            font-family: inherit;
-                                                                            color: var(--text-primary, #fff);
-                                                                        }
-                                                                        .influencer-form h3 { text-align:center; margin:6px 0 12px; font-size:18px; }
-                                                                        .influencer-form .grid {
-                                                                            display: grid;
-                                                                            grid-template-columns: 1fr 1fr;
-                                                                            gap: 10px 12px;
-                                                                        }
-                                                                        .influencer-form .full-width { grid-column: 1 / -1; }
-                                                                        .influencer-form label { display:block; font-weight:600; font-size:13px; margin-bottom:6px; color:var(--text-secondary,#ddd); }
-                                                                        .influencer-form input, .influencer-form select, .influencer-form textarea {
-                                                                            width:100%; padding:8px 10px; border:1px solid rgba(255,255,255,0.08); border-radius:6px; background:rgba(255,255,255,0.02); color:inherit; box-sizing:border-box; font-size:14px;
-                                                                        }
-                                                                        .influencer-form textarea { min-height:84px; resize:vertical; }
-                                                                        .influencer-form .actions { margin-top:10px; }
-                                                                        .influencer-form button { width:100%; background:linear-gradient(90deg,var(--gradient-start,#ffdd00),var(--gradient-end,#ff9a00)); color:#111; border:0; padding:10px; border-radius:8px; cursor:pointer; font-weight:700; font-size:14px; }
-                                                                        .influencer-form button:active { transform: translateY(1px); }
-                                                                        .influencer-form .error { color:#ff8b8b; font-size:12px; margin-top:6px; display:none; }
-                                                                        @media (max-width:720px){
-                                                                            .influencer-form form { padding:14px; }
-                                                                            .influencer-form .grid { grid-template-columns: 1fr; gap:8px; }
-                                                                        }
-                                                                    </style>
-
-                                    <div class="form-wrapper">
-                                        <form id="signupForm" action="https://formspree.io/f/mblzqbjr" method="POST" novalidate>
-                                                                            <h3>Sign Up Now</h3>
-
-                                                                            <div class="grid">
-                                                                                <div>
-                                                                                    <label for="fullName">Full Name</label>
-                                                                                    <input type="text" id="fullName" name="Full Name" placeholder="Full name" required>
-                                                                                    <span class="error" id="nameError">Please enter your full name.</span>
-                                                                                </div>
-
-                                                                                <div>
-                                                                                    <label for="email">Email</label>
-                                                                                    <input type="email" id="email" name="Email" placeholder="you@example.com" required>
-                                                                                    <span class="error" id="emailError">Please enter a valid email address.</span>
-                                                                                </div>
-
-                                                                                <div>
-                                                                                    <label for="phone">Phone</label>
-                                                                                    <input type="tel" id="phone" name="Phone Number" placeholder="Phone" pattern="[0-9]{10,15}" required>
-                                                                                    <span class="error" id="phoneError">Please enter a valid phone number.</span>
-                                                                                </div>
-
-                                                                                <div>
-                                                                                    <label for="gender">Gender</label>
-                                                                                    <select id="gender" name="Gender" required>
-                                                                                        <option value="">Select</option>
-                                                                                        <option>Female</option>
-                                                                                        <option>Male</option>
-                                                                                        <option>Non-binary</option>
-                                                                                        <option>Prefer not to say</option>
-                                                                                    </select>
-                                                                                    <span class="error" id="genderError">Please select your gender.</span>
-                                                                                </div>
-
-                                                                                <div>
-                                                                                    <label for="platform">Platform</label>
-                                                                                    <select id="platform" name="Platform" required>
-                                                                                        <option value="">Select</option>
-                                                                                        <option>Instagram</option>
-                                                                                        <option>Facebook</option>
-                                                                                        <option>Twitter (X)</option>
-                                                                                        <option>LinkedIn</option>
-                                                                                        <option>Snapchat</option>
-                                                                                        <option>YouTube</option>
-                                                                                        <option>Other</option>
-                                                                                    </select>
-                                                                                    <span class="error" id="platformError">Please select a platform.</span>
-                                                                                </div>
-
-                                                                                <div>
-                                                                                    <label for="profile">Profile Link</label>
-                                                                                    <input type="url" id="profile" name="Profile Link" placeholder="https://" required>
-                                                                                    <span class="error" id="profileError">Please enter a valid profile URL.</span>
-                                                                                </div>
-
-                                                                                <div>
-                                                                                    <label for="followers">Followers</label>
-                                                                                    <input type="number" id="followers" name="Followers Count" placeholder="e.g. 12000" min="1" required>
-                                                                                    <span class="error" id="followersError">Please enter a valid follower count.</span>
-                                                                                </div>
-
-                                                                                <div>
-                                                                                    <label for="state">State</label>
-                                                                                    <input type="text" id="state" name="State" placeholder="State" required>
-                                                                                    <span class="error" id="stateError">Please enter your state.</span>
-                                                                                </div>
-
-                                                                                <div>
-                                                                                    <label for="category">Category</label>
-                                                                                    <input type="text" id="category" name="Category" placeholder="e.g. Fashion, Food" required>
-                                                                                    <span class="error" id="categoryError">Please enter your category.</span>
-                                                                                </div>
-
-                                                                                <div class="full-width">
-                                                                                    <label for="message">Message</label>
-                                                                                    <textarea id="message" name="Message" rows="3" placeholder="A short message..." required></textarea>
-                                                                                    <span class="error" id="messageError">Please enter a message.</span>
-                                                                                </div>
-
-                                                                                <div class="full-width actions">
-                                                                                    <button type="submit">JOIN THE NETWORK</button>
-                                                                                </div>
-                                                                            </div>
-                                                                        </form>
-                                                                    </div>
-
-                                                                        <script>
-                                                                            (function(){
-                                                                                var form = document.getElementById('signupForm');
-                                                                                if (!form) return;
-                                                                                form.addEventListener('submit', function (event) {
-                                                                                    var isValid = true;
-                                                                                    function showError(id, condition) {
-                                                                                        var error = document.getElementById(id);
-                                                                                        if (!error) return;
-                                                                                        if (condition) { error.style.display = 'block'; isValid = false; } else { error.style.display = 'none'; }
-                                                                                    }
-
-                                                                                    var fullName = document.getElementById('fullName').value.trim();
-                                                                                    var email = document.getElementById('email').value.trim();
-                                                                                    var phone = document.getElementById('phone').value.trim();
-                                                                                    var gender = document.getElementById('gender').value;
-                                                                                    var platform = document.getElementById('platform').value;
-                                                                                    var profile = document.getElementById('profile').value.trim();
-                                                                                    var followers = document.getElementById('followers').value;
-                                                                                    var state = document.getElementById('state').value.trim();
-                                                                                    var category = document.getElementById('category').value.trim();
-                                                                                    var message = document.getElementById('message').value.trim();
-
-                                                                                    showError('nameError', fullName === '');
-                                                                                    showError('emailError', !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email));
-                                                                                    showError('phoneError', !/^[0-9]{10,15}$/.test(phone));
-                                                                                    showError('genderError', gender === '');
-                                                                                    showError('platformError', platform === '');
-                                                                                    showError('profileError', !profile.startsWith('http'));
-                                                                                    showError('followersError', Number(followers) < 1);
-                                                                                    showError('stateError', state === '');
-                                                                                    showError('categoryError', category === '');
-                                                                                    showError('messageError', message === '');
-
-                                                                                    if (!isValid) { event.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }
-                                                                                });
-                                                                            })();
-                                                                        </script>
-                                                                </div>
             </div>
         </div>
     </section>
@@ -396,7 +234,7 @@
                             <a href="services.html">All Services</a>
                             <a href="media-offerings.html">Media Offerings</a>
                             <a href="ecommerce.html">E-Commerce</a>
-                            <a href="product-shoot.html">Product Shoots</a>
+                            <a href="portfolio.html">Portfolio</a>
                         </div>
                         <div class="footer-col">
                             <h4>Company</h4>
@@ -410,7 +248,7 @@
                             <a href="#">Security Compliance</a>
                             <a href="#">Accessibility</a>
                             <a href="#">Terms of Use</a>
-                            <a href="#">Privacy Policy</a>
+                            <a href="privacy-policy.html">Privacy Policy</a>
                         </div>
                     </div>
                 </div>
