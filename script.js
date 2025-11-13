@@ -12,17 +12,18 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Navbar scroll effect
+// Navbar scroll effect with compression and color change
 let lastScroll = 0;
 const navbar = document.querySelector('.navbar');
 
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
     
-    if (currentScroll <= 0) {
-        navbar.style.boxShadow = 'none';
+    // Add 'scrolled' class when scrolled down more than 50px
+    if (currentScroll > 50) {
+        navbar.classList.add('scrolled');
     } else {
-        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.5)';
+        navbar.classList.remove('scrolled');
     }
     
     lastScroll = currentScroll;
