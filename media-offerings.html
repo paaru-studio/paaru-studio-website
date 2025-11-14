@@ -29,6 +29,7 @@
                     <img src="logo.png" alt="Paaru Studio Logo" class="logo-image">
                     <span class="logo-text">PAARU STUDIO</span>
                 </a>
+                <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">☰</button>
                 <div class="nav-links">
                     <a href="index.html">Home</a>
                     <a href="services.html">Services</a>
@@ -50,6 +51,7 @@
             </div>
         </div>
     </nav>
+    <div class="mobile-nav-backdrop" aria-hidden="true"></div>
 
     <!-- Page Header -->
     <section class="page-hero">
@@ -600,5 +602,21 @@
 
     <script src="script.js"></script>
     <script src="popup-form.js"></script>
+    <script>
+    (function(){
+        var nav = document.querySelector('.navbar');
+        var btn = document.querySelector('.mobile-menu-btn');
+        var backdrop = document.querySelector('.mobile-nav-backdrop');
+        if (!nav || !btn) return;
+        function setOpen(v){
+            if (v) { nav.classList.add('open'); btn.setAttribute('aria-expanded','true'); if (backdrop) backdrop.setAttribute('aria-hidden','false'); }
+            else { nav.classList.remove('open'); btn.setAttribute('aria-expanded','false'); if (backdrop) backdrop.setAttribute('aria-hidden','true'); }
+        }
+        btn.addEventListener('click', function(){ setOpen(!nav.classList.contains('open')); });
+        nav.querySelectorAll('.nav-links a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+        if (backdrop) backdrop.addEventListener('click', function(){ setOpen(false); });
+        document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+    })();
+    </script>
 </body>
 </html>

@@ -29,6 +29,7 @@
                     <img src="logo.png" alt="Paaru Studio Logo" class="logo-image">
                     <span class="logo-text">PAARU STUDIO</span>
                 </a>
+                <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">☰</button>
                 <div class="nav-links">
                     <a href="index.html">Home</a>
                     <a href="services.html">Services</a>
@@ -50,6 +51,7 @@
             </div>
         </div>
     </nav>
+    <div class="mobile-nav-backdrop" aria-hidden="true"></div>
 
     <!-- Page Header -->
     <section class="page-hero">
@@ -69,6 +71,12 @@
                     <p class="large-text">At Paaru Studio, we don't believe in guesswork. Our performance marketing services are built on data-driven strategies that maximize ROI and minimize acquisition costs.</p>
                     <p>Whether you're looking to generate leads, drive sales, or increase brand awareness, our expert team creates customized campaigns aligned with your business goals. From PPC advertising to cross-platform strategies, we optimize every campaign to deliver measurable results.</p>
                     <p>Our approach combines strategic planning, creative excellence, and continuous optimization to ensure every marketing dollar works harder for your business. We focus on metrics that matter - conversions, revenue, and sustainable growth.</p>
+                    
+                    <!-- Platform Logos -->
+                    <div class="platform-logos">
+                        <img src="meta_ads_logo.png" alt="Meta Ads">
+                        <img src="google_ads_logo.png" alt="Google Ads">
+                    </div>
                 </div>
                 <div class="ecommerce-image">
                     <img src="pm_1.jpg" alt="Performance Marketing Strategy Meeting">
@@ -293,5 +301,21 @@
     </a>
 
     <script src="script.js"></script>
+    <script>
+    (function(){
+        var nav = document.querySelector('.navbar');
+        var btn = document.querySelector('.mobile-menu-btn');
+        var backdrop = document.querySelector('.mobile-nav-backdrop');
+        if (!nav || !btn) return;
+        function setOpen(v){
+            if (v) { nav.classList.add('open'); btn.setAttribute('aria-expanded','true'); if (backdrop) backdrop.setAttribute('aria-hidden','false'); }
+            else { nav.classList.remove('open'); btn.setAttribute('aria-expanded','false'); if (backdrop) backdrop.setAttribute('aria-hidden','true'); }
+        }
+        btn.addEventListener('click', function(){ setOpen(!nav.classList.contains('open')); });
+        nav.querySelectorAll('.nav-links a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+        if (backdrop) backdrop.addEventListener('click', function(){ setOpen(false); });
+        document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+    })();
+    </script>
 </body>
 </html>
