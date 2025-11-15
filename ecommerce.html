@@ -28,7 +28,13 @@
             <div class="nav-content">
                 <a href="ecommerce.html" class="logo">
                     <img src="logo.png" alt="Paaru Studio Logo" class="logo-image">
-                    <span class="logo-text">PAARU STUDIO</span>
+                    <span class="logo-text">
+                        <span class="logo-text-static">PAARU</span>
+                        <span class="logo-text-flip">
+                            <span class="flip-word">STUDIO</span>
+                            <span class="flip-word">MEDIA</span>
+                        </span>
+                    </span>
                 </a>
                     <!-- Mobile menu button (visible on small screens) -->
                     <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">☰</button>
@@ -58,10 +64,29 @@
     <div class="mobile-nav-backdrop" aria-hidden="true"></div>
 
     <!-- Page Header -->
-    <section class="page-hero">
-        <div class="container">
-            <h1 class="page-title">E-Commerce <span class="gradient-text">Solutions</span></h1>
-            <p class="page-subtitle">Professional product catalogue services for Amazon, Flipkart, and Myntra</p>
+    <section class="page-hero" style="position: relative; overflow: visible;">
+        <div class="container" style="position: relative;">
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 60px;">
+                <div style="flex: 1;">
+                    <h1 class="page-title">E-Commerce <span class="gradient-text">Solutions</span></h1>
+                    <p class="page-subtitle">Professional product catalogue services for Amazon, Flipkart, and Myntra</p>
+                </div>
+                
+                <!-- Portfolio Images Grid -->
+                <div class="hero-portfolio-grid" style="flex: 0 0 auto; display: grid; grid-template-columns: repeat(3, 150px); grid-template-rows: repeat(2, 150px); gap: 12px;">
+                    <img src="portfolio_pics/01.jpg" alt="Portfolio 1" style="width: 150px; height: 150px; object-fit: cover; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.3); transition: transform 0.3s ease;">
+                    
+                    <img src="portfolio_pics/02.jpg" alt="Portfolio 2" style="width: 150px; height: 150px; object-fit: cover; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.3); transition: transform 0.3s ease;">
+                    
+                    <img src="portfolio_pics/03.jpg" alt="Portfolio 3" style="width: 150px; height: 150px; object-fit: cover; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.3); transition: transform 0.3s ease;">
+                    
+                    <img src="portfolio_pics/04.jpg" alt="Portfolio 4" style="width: 150px; height: 150px; object-fit: cover; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.3); transition: transform 0.3s ease;">
+                    
+                    <img src="portfolio_pics/06.jpeg" alt="Portfolio 5" style="width: 150px; height: 150px; object-fit: cover; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.3); transition: transform 0.3s ease;">
+                    
+                    <img src="portfolio_pics/08.jpeg" alt="Portfolio 6" style="width: 150px; height: 150px; object-fit: cover; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.3); transition: transform 0.3s ease;">
+                </div>
+            </div>
         </div>
     </section>
 
