@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 /* Reduce opacity for TV Commercial thumbnail */
 .tv-com-opacity {
@@ -153,7 +153,7 @@
 }
 
 body {
-    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     background-color: var(--primary-bg);
     color: var(--text-primary);
     line-height: 1.6;
@@ -168,6 +168,7 @@ html, body { height: 100%; }
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 .index-page footer.footer {
@@ -199,7 +200,7 @@ html, body { height: 100%; }
     position: relative; /* no fixed to avoid overlap issues */
     width: 100%;
     border-bottom: 1px solid rgba(255,255,255,0.03);
-    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 .banner-content {
@@ -221,7 +222,7 @@ html, body { height: 100%; }
     font-weight: 700;
     font-size: 13px;
     box-shadow: 0 6px 18px rgba(245,158,11,0.08);
-    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 .book-now-btn:hover { transform: translateY(-2px); }
@@ -245,7 +246,7 @@ html, body { height: 100%; }
     box-shadow: 0 6px 30px rgba(0,0,0,0.45);
     z-index: 999998 !important; /* extremely high to ensure visibility */
     border-bottom: 1px solid rgba(255,255,255,0.03);
-    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     border-radius: 0;
 }
@@ -273,6 +274,65 @@ html, body { height: 100%; }
 
 /* Service-page per-page rule simplified: same navbar top as site */
 .services-page .navbar { top: 0px; }
+
+/* Portfolio page navbar - black background positioned under banner */
+.portfolio-page .navbar {
+    top: 55px; /* positioned under the banner */
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px) saturate(120%);
+    -webkit-backdrop-filter: blur(10px) saturate(120%);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Portfolio page navbar scrolled state - golden yellow background with white text */
+.portfolio-page .navbar.scrolled {
+    top: 10px;
+    left: 75px;
+    right: 75px;
+    width: calc(100% - 150px);
+    height: 54px;
+    background: linear-gradient(180deg, rgba(245, 158, 11, 0.95), rgba(245, 158, 11, 0.9));
+    backdrop-filter: blur(12px) saturate(140%);
+    -webkit-backdrop-filter: blur(12px) saturate(140%);
+    box-shadow: 0 4px 20px rgba(245, 158, 11, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+}
+
+/* Portfolio page navbar scrolled - white text for all links */
+.portfolio-page .navbar.scrolled .nav-links a {
+    color: #ffffff;
+}
+
+/* Portfolio page navbar scrolled - white text on hover */
+.portfolio-page .navbar.scrolled .nav-links a:hover {
+    color: #ffffff;
+    opacity: 0.8;
+}
+
+/* Portfolio page navbar scrolled - logo text white */
+.portfolio-page .navbar.scrolled .logo-text {
+    color: #ffffff;
+}
+
+/* Portfolio page navbar scrolled - CTA button styling */
+.portfolio-page .navbar.scrolled .nav-links .cta-btn {
+    background: #000000;
+    color: #ffffff;
+    border: 2px solid #000000;
+}
+
+.portfolio-page .navbar.scrolled .nav-links .cta-btn:hover {
+    background: #ffffff;
+    color: #000000;
+    border: 2px solid #000000;
+}
+
+/* Portfolio page navbar scrolled - dropdown arrow white */
+.portfolio-page .navbar.scrolled .dropdown-arrow {
+    color: #ffffff;
+}
 
 .nav-content {
     display: flex;
@@ -415,7 +475,7 @@ html, body { height: 100%; }
     text-decoration: none; 
     font-size: 14px; 
     font-weight: 600; 
-    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -438,7 +498,7 @@ html, body { height: 100%; }
     background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end)); 
     color: white; 
     font-weight: 700; 
-    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -525,7 +585,7 @@ html, body { height: 100%; }
 }
 
 /* ensure the mobile menu button uses the same brand font */
-.mobile-menu-btn { font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+.mobile-menu-btn { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 
 /* Mobile: show a compact menu button and stack nav links inside a mobile drawer (basic) */
 @media (max-width: 900px) {
@@ -1411,6 +1471,8 @@ img, video { max-width: 100%; height: auto; display: block; }
 .portfolio-section {
     padding: 80px 0; /* tightened to sit closer to About */
     background: transparent; /* remove gray/dark block */
+    position: relative;
+    z-index: 1;
 }
 
 /* Compact the portfolio header so it doesn't add vertical space (we keep underline but visually hide it)
@@ -4544,7 +4606,12 @@ html {
     text-align: center;
     background: var(--primary-bg);
     position: relative;
-    z-index: 1;
+    z-index: 500;
+}
+
+.page-hero .container {
+    position: relative;
+    z-index: 501;
 }
 
 /* Media Offerings page hero with black to golden yellow gradient background - 75% black, 25% yellow at 0.5 opacity */
@@ -4555,7 +4622,7 @@ html {
     padding: 200px 0 100px !important;
     padding-top: 200px !important;
     text-align: center;
-    z-index: 1;
+    z-index: 500;
 }
 
 /* Add white dots pattern to the hero background */
@@ -4643,6 +4710,74 @@ html {
 }
 
 /* Portfolio page hero with black to golden yellow gradient background - same as Media Offerings */
+.portfolio-page .page-hero {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 60%, rgba(251, 191, 36, 0.5) 85%, rgba(245, 158, 11, 0.5) 100%);
+    padding: 200px 0 100px !important;
+    padding-top: 200px !important;
+    text-align: center;
+    z-index: 500;
+}
+
+/* Add white dots pattern to the portfolio hero background */
+.portfolio-page .page-hero {
+    background-image: 
+        radial-gradient(circle, rgba(255, 255, 255, 0.3) 2px, transparent 2px),
+        radial-gradient(circle, rgba(255, 255, 255, 0.2) 1.5px, transparent 1.5px),
+        radial-gradient(circle, rgba(255, 255, 255, 0.15) 1px, transparent 1px),
+        linear-gradient(135deg, #000000 0%, #1a1a1a 60%, rgba(251, 191, 36, 0.5) 85%, rgba(245, 158, 11, 0.5) 100%);
+    background-size: 50px 50px, 80px 80px, 120px 120px, 100%;
+    background-position: 0 0, 40px 40px, 80px 80px, 0 0;
+}
+
+/* Smooth curved wave effect with reduced width and 45-degree angle */
+.portfolio-page .page-hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -100%;
+    width: 25%;
+    height: 200%;
+    background: radial-gradient(
+        ellipse 150px 600px at center,
+        rgba(255, 255, 255, 0.5) 0%,
+        rgba(255, 255, 255, 0.3) 25%,
+        rgba(255, 255, 255, 0.15) 50%,
+        rgba(255, 255, 255, 0.05) 75%,
+        transparent 100%
+    );
+    transform: rotate(45deg);
+    animation: lightWave 6s ease-in-out infinite;
+    z-index: 1;
+    pointer-events: none;
+    filter: blur(20px);
+}
+
+/* Gradient overlay for depth - 75% black, 25% yellow */
+.portfolio-page .page-hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        135deg,
+        rgba(0, 0, 0, 0.3) 0%,
+        rgba(26, 26, 26, 0.2) 60%,
+        rgba(251, 191, 36, 0.1) 85%,
+        rgba(245, 158, 11, 0.15) 100%
+    );
+    z-index: 1;
+}
+
+.portfolio-page .page-hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Index page hero with black to golden yellow gradient background - same as Media Offerings */
 .index-page .page-hero {
     position: relative;
     overflow: hidden;
@@ -4726,6 +4861,8 @@ html {
     word-wrap: break-word;
     overflow-wrap: break-word;
     hyphens: auto;
+    position: relative;
+    z-index: 502;
 }
 
 .page-subtitle {
@@ -4733,6 +4870,11 @@ html {
     color: var(--text-secondary);
     word-wrap: break-word;
     overflow-wrap: break-word;
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.5;
+    position: relative;
+    z-index: 502;
 }
 
 /* Media Offerings title - footer CTA style with white "Media" and black "Offerings" */
@@ -4764,6 +4906,34 @@ html {
 }
 
 /* Portfolio title - white "OUR" and golden yellow "PORTFOLIO" */
+.portfolio-page .page-hero .page-title {
+    font-size: 56px;
+    font-weight: 600;
+    color: #ffffff;
+    line-height: 1.3;
+    letter-spacing: -0.5px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Make "PORTFOLIO" text golden yellow */
+.portfolio-page .page-hero .page-title .gradient-text {
+    color: #fbbf24;
+    background: none;
+    background-clip: unset;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: #fbbf24;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Portfolio subtitle - white text */
+.portfolio-page .page-hero .page-subtitle {
+    color: #ffffff;
+    opacity: 1;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* Index page Portfolio title - white "OUR" and golden yellow "PORTFOLIO" */
 .index-page .page-hero .page-title {
     font-size: 56px;
     font-weight: 600;
@@ -5757,7 +5927,7 @@ html {
     margin-bottom: 24px;
     margin-top: 0;
     letter-spacing: -0.5px;
-    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 .policy-section h3 {
@@ -6386,5 +6556,456 @@ html {
 @media (max-width: 768px) {
     .hero-portfolio-grid {
         display: none !important;
+    }
+}
+
+/* Why Choose Section - Yellow Overlay Reveal Effect */
+.why-choose-reveal {
+    position: relative;
+    overflow: hidden;
+}
+
+.yellow-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fde047; /* Lemon yellow */
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+    cursor: pointer;
+}
+
+.why-choose-reveal:hover .yellow-overlay {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.overlay-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.overlay-logo {
+    width: 200px;
+    height: auto;
+    filter: brightness(0) saturate(100%); /* Make logo black */
+    opacity: 0.9;
+}
+
+.more-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.more-text span {
+    font-size: 32px;
+    font-weight: 700;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.arrow-down {
+    animation: blink-arrow 1.5s ease-in-out infinite;
+}
+
+.arrow-down svg {
+    color: #000;
+}
+
+@keyframes blink-arrow {
+    0%, 100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    50% {
+        opacity: 0.3;
+        transform: translateY(10px);
+    }
+}
+
+.reveal-content {
+    position: relative;
+    z-index: 5;
+}
+
+/* Mobile adjustments for yellow overlay */
+@media (max-width: 768px) {
+    .overlay-logo {
+        width: 150px;
+    }
+    
+    .more-text span {
+        font-size: 24px;
+    }
+    
+    .arrow-down svg {
+        width: 30px;
+        height: 30px;
+    }
+    
+    /* On mobile, tap to reveal */
+    .yellow-overlay {
+        cursor: pointer;
+    }
+    
+    .why-choose-reveal:active .yellow-overlay {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* Individual Card Reveal Effect */
+.card-reveal {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-yellow-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fde047; /* Lemon yellow */
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    cursor: pointer;
+    border-radius: 12px; /* Match card border radius */
+}
+
+.card-reveal:hover .card-yellow-overlay {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.card-overlay-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card-overlay-icon {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 0;
+}
+
+.card-overlay-icon svg {
+    width: 100%;
+    height: 100%;
+    stroke: #000;
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.card-more-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.card-more-text span {
+    font-size: 20px;
+    font-weight: 700;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.card-arrow-down {
+    animation: blink-card-arrow 1.5s ease-in-out infinite;
+}
+
+.card-arrow-down svg {
+    color: #000;
+}
+
+@keyframes blink-card-arrow {
+    0%, 100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    50% {
+        opacity: 0.3;
+        transform: translateY(8px);
+    }
+}
+
+.card-content-layer {
+    position: relative;
+    z-index: 5;
+}
+
+/* Ensure service-item has proper positioning for overlay */
+.service-item.card-reveal {
+    position: relative;
+}
+
+/* Mobile adjustments for card overlays */
+@media (max-width: 768px) {
+    .card-overlay-icon {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .card-more-text span {
+        font-size: 16px;
+        letter-spacing: 1.5px;
+    }
+    
+    .card-arrow-down svg {
+        width: 24px;
+        height: 24px;
+    }
+    
+    /* Mobile tap to reveal */
+    .card-reveal:active .card-yellow-overlay {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* Stagger the reveal animation for multiple cards */
+.services-grid .card-reveal:nth-child(1) .card-yellow-overlay {
+    animation-delay: 0s;
+}
+
+.services-grid .card-reveal:nth-child(2) .card-yellow-overlay {
+    animation-delay: 0.1s;
+}
+
+.services-grid .card-reveal:nth-child(3) .card-yellow-overlay {
+    animation-delay: 0.2s;
+}
+
+.services-grid .card-reveal:nth-child(4) .card-yellow-overlay {
+    animation-delay: 0.3s;
+}
+
+/* Case Studies Page Styles */
+.case-studies-section {
+    min-height: 60vh;
+    position: relative;
+    z-index: 5;
+    margin-bottom: 300px;
+}
+
+.case-studies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+    position: relative;
+    z-index: 10;
+}
+
+.case-study-card {
+    background: var(--secondary-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    z-index: 10;
+}
+
+.case-study-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(245, 158, 11, 0.2);
+    z-index: 20;
+}
+
+.case-study-link {
+    display: flex;
+    flex-direction: column;
+    min-height: 550px;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
+.case-study-image {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+}
+
+.case-study-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.case-study-card:hover .case-study-image img {
+    transform: scale(1.1);
+}
+
+.case-study-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(245, 158, 11, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.case-study-card:hover .case-study-overlay {
+    opacity: 1;
+}
+
+.view-case-study {
+    color: #000;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.case-study-content {
+    padding: 30px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+.case-study-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.case-study-description {
+    font-size: 16px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 20px;
+    flex: 1;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.case-study-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: auto;
+    padding-top: 10px;
+}
+
+.case-study-tags .tag {
+    display: inline-block;
+    background: rgba(245, 158, 11, 0.1);
+    color: #f59e0b;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Coming Soon Placeholder */
+.case-study-image.coming-soon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.placeholder-image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+}
+
+.coming-soon-text {
+    font-size: 24px;
+    font-weight: 700;
+    color: #f59e0b;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .case-studies-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .case-study-link {
+        min-height: 480px;
+    }
+    
+    .case-study-image {
+        height: 200px;
+    }
+    
+    .case-study-title {
+        font-size: 22px;
+        line-height: 1.3;
+        margin-bottom: 12px;
+    }
+    
+    .case-study-description {
+        font-size: 14px;
+        line-height: 1.7;
+        margin-bottom: 15px;
+    }
+    
+    .case-study-content {
+        padding: 25px 20px;
+        min-height: 0;
+    }
+    
+    .case-study-tags {
+        padding-top: 8px;
+    }
+    
+    .case-study-tags .tag {
+        font-size: 11px;
+        padding: 5px 10px;
+    }
+    
+    .page-subtitle {
+        font-size: 18px;
+        line-height: 1.5;
+        padding: 0 20px;
     }
 }

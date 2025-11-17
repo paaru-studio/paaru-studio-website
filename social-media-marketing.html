@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="services-page">
@@ -93,55 +93,142 @@
     </section>
 
     <!-- Why Choose Paaru Studio -->
-    <section class="services-overview" style="padding: 100px 0; background: var(--primary-bg);">
+    <section class="services-overview why-choose-reveal" style="padding: 100px 0; background: var(--primary-bg);">
         <div class="container">
             <div class="section-header">
                 <h2>Why Choose <span style="color: #f59e0b;">Paaru Studio</span> for Social Media Marketing</h2>
                 <div class="underline"></div>
             </div>
 
-            <div class="services-grid">
-                <div class="service-item">
-                    <div class="service-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <circle cx="12" cy="12" r="6"></circle>
-                            <circle cx="12" cy="12" r="2"></circle>
-                        </svg>
+            <div class="services-grid stagger-animation">
+                <div class="service-item card-hover card-reveal">
+                    <!-- Yellow Overlay -->
+                    <div class="card-yellow-overlay">
+                        <div class="card-overlay-content">
+                            <div class="card-overlay-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <circle cx="12" cy="12" r="6"></circle>
+                                    <circle cx="12" cy="12" r="2"></circle>
+                                </svg>
+                            </div>
+                            <div class="card-more-text">
+                                <span>more</span>
+                                <div class="card-arrow-down">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <h3>Brand-Aligned Strategy</h3>
-                    <p>Custom social media strategies that match your business goals, target audience, and brand tone. We create engaging content across all key platforms.</p>
+                    <!-- Content -->
+                    <div class="card-content-layer">
+                        <div class="service-icon pulse-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <circle cx="12" cy="12" r="6"></circle>
+                                <circle cx="12" cy="12" r="2"></circle>
+                            </svg>
+                        </div>
+                        <h3>Brand-Aligned Strategy</h3>
+                        <p>Custom social media strategies that match your business goals, target audience, and brand tone. We create engaging content across all key platforms.</p>
+                    </div>
                 </div>
 
-                <div class="service-item">
-                    <div class="service-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
-                            <path d="M12 18h.01"></path>
-                        </svg>
+                <div class="service-item card-hover card-reveal">
+                    <!-- Yellow Overlay -->
+                    <div class="card-yellow-overlay">
+                        <div class="card-overlay-content">
+                            <div class="card-overlay-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                                    <path d="M12 18h.01"></path>
+                                </svg>
+                            </div>
+                            <div class="card-more-text">
+                                <span>more</span>
+                                <div class="card-arrow-down">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <h3>End-to-End SMM Services</h3>
-                    <p>Complete content creation, paid campaigns, audience targeting, scheduling, and analytics to keep your brand active and relevant.</p>
+                    <!-- Content -->
+                    <div class="card-content-layer">
+                        <div class="service-icon pulse-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                                <path d="M12 18h.01"></path>
+                            </svg>
+                        </div>
+                        <h3>End-to-End SMM Services</h3>
+                        <p>Complete content creation, paid campaigns, audience targeting, scheduling, and analytics to keep your brand active and relevant.</p>
+                    </div>
                 </div>
 
-                <div class="service-item">
-                    <div class="service-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-                        </svg>
+                <div class="service-item card-hover card-reveal">
+                    <!-- Yellow Overlay -->
+                    <div class="card-yellow-overlay">
+                        <div class="card-overlay-content">
+                            <div class="card-overlay-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                </svg>
+                            </div>
+                            <div class="card-more-text">
+                                <span>more</span>
+                                <div class="card-arrow-down">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <h3>ROI-Focused Advertising</h3>
-                    <p>Data-driven campaigns that deliver results, not just likes. We optimize ad spend for maximum reach, conversions, and measurable ROI.</p>
+                    <!-- Content -->
+                    <div class="card-content-layer">
+                        <div class="service-icon pulse-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                            </svg>
+                        </div>
+                        <h3>ROI-Focused Advertising</h3>
+                        <p>Data-driven campaigns that deliver results, not just likes. We optimize ad spend for maximum reach, conversions, and measurable ROI.</p>
+                    </div>
                 </div>
 
-                <div class="service-item">
-                    <div class="service-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-                        </svg>
+                <div class="service-item card-hover card-reveal">
+                    <!-- Yellow Overlay -->
+                    <div class="card-yellow-overlay">
+                        <div class="card-overlay-content">
+                            <div class="card-overlay-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                                </svg>
+                            </div>
+                            <div class="card-more-text">
+                                <span>more</span>
+                                <div class="card-arrow-down">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <h3>Social Media Optimization</h3>
-                    <p>Profile optimization, organic reach improvement, and engagement boosting to ensure your presence is professional, responsive, and trustworthy.</p>
+                    <!-- Content -->
+                    <div class="card-content-layer">
+                        <div class="service-icon pulse-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                            </svg>
+                        </div>
+                        <h3>Social Media Optimization</h3>
+                        <p>Profile optimization, organic reach improvement, and engagement boosting to ensure your presence is professional, responsive, and trustworthy.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -343,7 +430,7 @@
                         </div>
                         <div class="footer-col">
                             <h4>Resources</h4>
-                            <a href="case-study-japfa.html">Case Studies</a>
+                            <a href="case-studies.html">Case Studies</a>
                             <a href="#">Blog</a>
                             <a href="#">FAQ</a>
                             <a href="get-started.html">Get Started</a>
