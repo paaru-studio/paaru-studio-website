@@ -1,0 +1,3 @@
+# Placeholder for Calvin Klein hero image
+# Replace this with an actual image from the CK Creatives.pptx
+# Recommended size: 1200x800px or similar 3:2 aspect ratio

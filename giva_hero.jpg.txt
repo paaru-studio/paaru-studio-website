@@ -1,0 +1,1 @@
+Note: Please extract one of the 11 images from the GIVA.pptx presentation and save it as giva_hero.jpg in the website root directory

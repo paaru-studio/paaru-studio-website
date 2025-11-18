@@ -6808,6 +6808,8 @@ html {
     position: relative;
     z-index: 5;
     margin-bottom: 300px;
+    padding: 100px 0;
+    background: transparent;
 }
 
 .case-studies-grid {
