@@ -194,6 +194,14 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="portfolio-item">
+                            <div class="portfolio-image">
+                                <div class="video-embed" data-video-id="dGMX2N6Ee7c">
+                                    <button class="video-poster" aria-label="Play video" style="background-image: url('https://i.ytimg.com/vi/dGMX2N6Ee7c/sddefault.jpg')"></button>
+                                    <div class="video-title">Cyseck Event</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <button class="carousel-nav next" aria-label="Next project">›</button>
@@ -420,30 +428,40 @@
                 <div class="underline"></div>
             </div>
             <div class="steps-container">
-                <div class="step-item">
-                    <div class="step-number">01</div>
-                    <h3>Discovery & Consultation</h3>
-                    <p>We begin by understanding your brand, goals, and target audience. Our team conducts thorough research to create a tailored strategy.</p>
+                <div class="step-item step-gradient-1">
+                    <div class="step-content">
+                        <div class="step-number">01</div>
+                        <h3>Discovery & Consultation</h3>
+                        <p>We begin by understanding your brand, goals, and target audience. Our team conducts thorough research to create a tailored strategy.</p>
+                    </div>
                 </div>
-                <div class="step-item">
-                    <div class="step-number">02</div>
-                    <h3>Concept Development</h3>
-                    <p>Our creative team develops compelling concepts and scripts that align with your brand identity and campaign objectives.</p>
+                <div class="step-item step-gradient-2">
+                    <div class="step-content">
+                        <div class="step-number">02</div>
+                        <h3>Concept Development</h3>
+                        <p>Our creative team develops compelling concepts and scripts that align with your brand identity and campaign objectives.</p>
+                    </div>
                 </div>
-                <div class="step-item">
-                    <div class="step-number">03</div>
-                    <h3>Production</h3>
-                    <p>With state-of-the-art equipment and experienced crew, we bring your vision to life through professional production.</p>
+                <div class="step-item step-gradient-3">
+                    <div class="step-content">
+                        <div class="step-number">03</div>
+                        <h3>Production</h3>
+                        <p>With state-of-the-art equipment and experienced crew, we bring your vision to life through professional production.</p>
+                    </div>
                 </div>
-                <div class="step-item">
-                    <div class="step-number">04</div>
-                    <h3>Post-Production</h3>
-                    <p>Our expert editors add the finishing touches with editing, color grading, sound design, and visual effects.</p>
+                <div class="step-item step-gradient-4">
+                    <div class="step-content">
+                        <div class="step-number">04</div>
+                        <h3>Post-Production</h3>
+                        <p>Our expert editors add the finishing touches with editing, color grading, sound design, and visual effects.</p>
+                    </div>
                 </div>
-                <div class="step-item">
-                    <div class="step-number">05</div>
-                    <h3>Delivery & Distribution</h3>
-                    <p>We ensure your content reaches the right audience through strategic distribution across appropriate channels.</p>
+                <div class="step-item step-gradient-5">
+                    <div class="step-content">
+                        <div class="step-number">05</div>
+                        <h3>Delivery & Distribution</h3>
+                        <p>We ensure your content reaches the right audience through strategic distribution across appropriate channels.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -976,98 +994,6 @@
         if (backdrop) backdrop.addEventListener('click', function(){ setOpen(false); });
         // close on escape
         document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
-    })();
-    </script>
-    <script>
-    /* Global, idempotent video modal + poster click handler
-       - Ensures a single modal exists and that clicking .video-poster opens it
-       - Uses muted autoplay to avoid browser autoplay blocks; unmute is left to user control
-    */
-    (function(){
-        if (window.__videoModalInitialized) return;
-        window.__videoModalInitialized = true;
-
-        var modal = document.createElement('div');
-        modal.className = 'video-modal';
-        modal.innerHTML = '<div class="modal-inner" role="dialog" aria-modal="true"></div><button class="close-btn" aria-label="Close">✕</button>';
-        document.body.appendChild(modal);
-        var modalInner = modal.querySelector('.modal-inner');
-        var closeBtn = modal.querySelector('.close-btn');
-
-        function safeCall(name){ try{ var fn = window[name]; if (typeof fn === 'function') fn(); }catch(e){} }
-
-        function openModal(videoId){
-            if (!videoId) return;
-            safeCall('stopAutoMotion');
-            // pragmatic quick-fix: force modal to fixed positioning and very high z-index
-            try{ modal.style.position = 'fixed'; modal.style.zIndex = '99999'; modal.style.left = '0'; modal.style.top = '0'; modal.style.width = '100%'; modal.style.height = '100%'; modal.style.pointerEvents = 'auto'; }catch(e){}
-            modal.classList.add('active');
-            modalInner.innerHTML = '';
-            var iframe = document.createElement('iframe');
-            // muted autoplay improves reliability across browsers
-            // remove mute param so playback attempts to play unmuted (relies on user gesture)
-            var src = 'https://www.youtube.com/embed/' + encodeURIComponent(videoId) + '?rel=0&autoplay=1&modestbranding=1&controls=1';
-            iframe.setAttribute('src', src);
-            iframe.setAttribute('frameborder', '0');
-            iframe.setAttribute('allow', 'autoplay; encrypted-media; fullscreen');
-            iframe.setAttribute('allowfullscreen', '');
-            iframe.style.width = '100%'; iframe.style.height = '100%';
-            modalInner.appendChild(iframe);
-            // focus for accessibility
-            closeBtn.focus();
-            // run diagnostics so we can inspect runtime stacking/visibility info in the console
-            try{ if (typeof __modalDiagnostics === 'function') __modalDiagnostics(); }catch(e){}
-        }
-
-        // Diagnostic helper: when opening modal log stacking/visibility info
-        var __modalDiagnostics = function(){
-            try{
-                console.group && console.group('VideoModalDiagnostics');
-                console.log('Modal present in DOM:', !!document.body.contains(modal));
-                var cs = window.getComputedStyle(modal);
-                console.log('Computed z-index:', cs.zIndex, 'position:', cs.position, 'visibility:', cs.visibility, 'display:', cs.display, 'opacity:', cs.opacity);
-                var rect = modal.getBoundingClientRect();
-                console.log('Modal rect:', rect);
-                var cx = Math.round(rect.left + rect.width/2), cy = Math.round(rect.top + rect.height/2);
-                console.log('Center point (client):', cx, cy);
-                var elAtCenter = document.elementFromPoint(cx, cy);
-                console.log('Element at center (elementFromPoint):', elAtCenter);
-                // list nearest ancestors that create stacking contexts (transform/opacity/position with z-index/backdrop-filter)
-                var anc = elAtCenter, chain = [];
-                while(anc && anc !== document.documentElement){
-                    var s = window.getComputedStyle(anc);
-                    if (s.transform && s.transform !== 'none' || s.opacity && parseFloat(s.opacity) < 1 || s.position === 'fixed' || s.position === 'relative' || s.position === 'absolute' || (s.zIndex && s.zIndex !== 'auto') || (s.backdropFilter && s.backdropFilter !== 'none') || (s.filter && s.filter !== 'none')){
-                        chain.push({ node: anc, tag: anc.tagName, id: anc.id || null, classes: anc.className || null, zIndex: s.zIndex, transform: s.transform, opacity: s.opacity, position: s.position, backdropFilter: s.backdropFilter, filter: s.filter });
-                    }
-                    anc = anc.parentElement;
-                }
-                console.log('Potential stacking-context ancestors near center:', chain);
-                console.groupEnd && console.groupEnd();
-            }catch(e){ console.log('Modal diagnostics error', e); }
-        };
-
-        function closeModal(){
-            modal.classList.remove('active');
-            modalInner.innerHTML = '';
-            safeCall('startAutoMotion');
-        }
-
-        closeBtn.addEventListener('click', closeModal);
-        modal.addEventListener('click', function(ev){ if (ev.target === modal) closeModal(); });
-
-        // Delegated click handler for posters
-        document.addEventListener('click', function(e){
-            var btn = e.target.closest && e.target.closest('.video-poster');
-            if (!btn) return;
-            var container = btn.closest && btn.closest('.video-embed');
-            var vid = container && container.getAttribute('data-video-id');
-            if (vid) {
-                openModal(vid);
-                // prevent any default behavior
-                e.preventDefault();
-                e.stopPropagation();
-            }
-        });
     })();
     </script>
     <script>

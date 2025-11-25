@@ -272,9 +272,6 @@ html, body { height: 100%; }
     padding-top: 84px; /* navbar height (64) + small offset */
 }
 
-/* Service-page per-page rule simplified: same navbar top as site */
-.services-page .navbar { top: 0px; }
-
 /* Portfolio page navbar - black background positioned under banner */
 .portfolio-page .navbar {
     top: 55px; /* positioned under the banner */
@@ -361,7 +358,7 @@ html, body { height: 100%; }
     text-decoration: none;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     flex-shrink: 0;
-    margin-right: auto;
+    margin-right: 200px;
 }
 
 .logo-image { 
@@ -378,13 +375,14 @@ html, body { height: 100%; }
 
 .logo-text { 
     font-weight: 800; 
-    font-size: 16px; 
-    letter-spacing: -0.4px; 
+    font-size: 20px; /* Increased by 50% from 16px */
+    letter-spacing: -0.6px; 
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     display: inline-flex;
     align-items: center;
-    gap: 6px;
+    gap: 9px; /* Increased proportionally */
     line-height: 1.2;
+    color: #FFD700; /* Yellow color */
 }
 
 .logo-text-static {
@@ -395,7 +393,7 @@ html, body { height: 100%; }
 .logo-text-flip {
     display: inline-block;
     position: relative;
-    width: 60px; /* Adjusted to accommodate both words */
+    width: 90px; /* Increased proportionally to accommodate larger text */
     height: 1.2em;
     perspective: 500px;
     vertical-align: baseline;
@@ -449,7 +447,7 @@ html, body { height: 100%; }
 }
 
 .navbar.scrolled .logo-text {
-    font-size: 14px;
+    font-size: 20px; /* Increased by 50% from 14px */
 }
 
 .navbar.scrolled .logo-text-flip {
@@ -612,12 +610,12 @@ html, body { height: 100%; }
     }
     
     .logo-text { 
-        font-size: 14px;
-        gap: 5px;
+        font-size: 21px; /* Increased by 50% from 14px */
+        gap: 7.5px; /* Increased proportionally */
     }
     
     .logo-text-flip {
-        width: 55px;
+        width: 82.5px; /* Increased proportionally */
     }
     
     .logo-image { 
@@ -681,7 +679,7 @@ html, body { height: 100%; }
     }
     
     .navbar.scrolled .logo-text {
-        font-size: 13px;
+        font-size: 19.5px; /* Increased by 50% from 13px */
         color: #0a0a0a !important; /* Dark text on golden background */
         font-weight: 800;
     }
@@ -1293,6 +1291,20 @@ img, video { max-width: 100%; height: auto; display: block; }
     color: var(--text-secondary);
     margin-bottom: 18px;
 }
+
+/* Shopify Section Button Styles */
+.shopify-cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(255, 215, 0, 0.5) !important;
+    background: linear-gradient(135deg, #ffed4e 0%, #ffd700 100%) !important;
+}
+
+.shopify-secondary-btn:hover {
+    background: rgba(255, 255, 255, 0.25) !important;
+    border-color: rgba(255, 255, 255, 0.5) !important;
+    transform: translateY(-3px);
+}
+
 @media (max-width: 900px) {
     .ecommerce-detail { flex-direction: column; }
     .ecommerce-image { width: 100%; max-width: 100%; }
@@ -1419,6 +1431,7 @@ img, video { max-width: 100%; height: auto; display: block; }
 /* How It Works Section */
 .how-it-works-section {
     padding: 120px 0;
+    background: var(--primary-bg);
 }
 
 .steps-container {
@@ -1439,18 +1452,61 @@ img, video { max-width: 100%; height: auto; display: block; }
 }
 .index-page .steps-container .step-item { flex: 1 1 0; }
 
+/* E-commerce page: also force single horizontal row (1x5) */
+.ecommerce-page .steps-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 24px;
+    justify-content: space-between;
+    align-items: stretch;
+}
+.ecommerce-page .steps-container .step-item { flex: 1 1 0; }
+
 .step-item {
     text-align: center;
-    padding: 30px;
+    padding: 40px 30px;
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(255, 215, 0, 0.3);
+}
+
+.step-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Yellow gradient backgrounds for each step - incremental from light to dark */
+.step-gradient-1 {
+    background: linear-gradient(135deg, #FFED4E 0%, #FFD700 100%);
+}
+
+.step-gradient-2 {
+    background: linear-gradient(135deg, #FFD700 0%, #FFC107 100%);
+}
+
+.step-gradient-3 {
+    background: linear-gradient(135deg, #FFC107 0%, #FFB300 100%);
+}
+
+.step-gradient-4 {
+    background: linear-gradient(135deg, #FFB300 0%, #FF9800 100%);
+}
+
+.step-gradient-5 {
+    background: linear-gradient(135deg, #FF9800 0%, #FF6F00 100%);
 }
 
 .step-number {
-    font-size: 64px;
+    font-size: 72px;
     font-weight: 900;
-    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: rgba(0, 0, 0, 0.15);
     margin-bottom: 20px;
     line-height: 1;
 }
@@ -1458,12 +1514,13 @@ img, video { max-width: 100%; height: auto; display: block; }
 .step-item h3 {
     font-size: 22px;
     margin-bottom: 15px;
-    color: var(--text-primary);
+    color: #1a1a1a;
+    font-weight: 800;
 }
 
 .step-item p {
     font-size: 15px;
-    color: var(--text-secondary);
+    color: #2a2a2a;
     line-height: 1.7;
 }
 
@@ -2119,42 +2176,6 @@ img, video { max-width: 100%; height: auto; display: block; }
     justify-content: center;
     z-index: 10;
     cursor: pointer;
-}
-.video-modal {
-    position: fixed;
-    inset: 0;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    background: rgba(0,0,0,0.75);
-    /* ensure modal sits above the footer (footer-fixed uses z-index:1500) and navbar (999998) */
-    z-index: 9999999 !important;
-}
-.video-modal.active { display: flex; }
-.video-modal .modal-inner {
-    width: min(1600px, 94vw); /* larger max width to match larger podcast embeds */
-    height: calc(min(1600px, 94vw) * 9 / 16);
-    background: #000;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 30px 80px rgba(0,0,0,0.6);
-    position: relative;
-    z-index: 10000000;
-}
-.video-modal .close-btn {
-    position: absolute;
-    top: 22px;
-    right: 22px;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.08);
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    z-index: 10000001;
 }
 .carousel-nav.prev { left: 12px; }
 .carousel-nav.next { right: 12px; }
@@ -4113,7 +4134,7 @@ img, video { max-width: 100%; height: auto; display: block; }
 
 /* Footer Brand */
 .footer-brand h3 {
-    font-size: 20px;
+    font-size: 20px; /* Increased by 50% from 20px */
     font-weight: 800;
     margin-bottom: 8px;
     color: #f59e0b;
@@ -4499,6 +4520,12 @@ img, video { max-width: 100%; height: auto; display: block; }
         padding: 100px 20px 50px !important;
     }
     
+    /* E-commerce page hero - reduced mobile padding */
+    .ecommerce-page .page-hero {
+        padding: 90px 20px 40px !important;
+        padding-top: 90px !important;
+    }
+    
     .page-title {
         font-size: 32px; /* Reduced from 36px for better mobile fit */
         line-height: 1.2;
@@ -4623,6 +4650,12 @@ html {
     padding-top: 200px !important;
     text-align: center;
     z-index: 500;
+}
+
+/* E-commerce page hero - reduced height to match services page better */
+.ecommerce-page .page-hero {
+    padding: 150px 0 80px !important;
+    padding-top: 100px !important;
 }
 
 /* Add white dots pattern to the hero background */
@@ -7009,5 +7042,248 @@ html {
         font-size: 18px;
         line-height: 1.5;
         padding: 0 20px;
+    }
+}
+
+/* Logo Portfolio Section - Horizontal Circular Carousel */
+.logo-portfolio-section {
+    padding: 70px 0;
+    background: var(--primary-bg);
+    position: relative;
+    overflow: hidden;
+}
+
+.logo-carousel {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    animation: scrollLogos 30s linear infinite;
+    width: max-content;
+}
+
+@keyframes scrollLogos {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Pause animation on hover */
+.logo-portfolio-section:hover .logo-carousel {
+    animation-play-state: paused;
+}
+
+.logo-item {
+    width: auto;
+    height: 180px;
+    overflow: hidden;
+    background: transparent;
+    transition: transform 0.4s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.logo-item:hover {
+    transform: scale(1.1) translateY(-10px);
+    z-index: 10;
+}
+
+.logo-item img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.4s ease;
+}
+
+.logo-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Responsive adjustments for logo carousel */
+@media (max-width: 768px) {
+    .logo-carousel {
+        gap: 30px;
+    }
+    
+    .logo-item {
+        height: 140px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-carousel {
+        gap: 25px;
+    }
+    
+    .logo-item {
+        height: 120px;
+    }
+}
+
+/* Fashion Photography Section */
+.fashion-section {
+    padding: 70px 0;
+    background: var(--primary-bg);
+    position: relative;
+    overflow: hidden;
+}
+
+.fashion-carousel {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    animation: scrollFashion 40s linear infinite;
+    width: max-content;
+}
+
+@keyframes scrollFashion {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Pause animation on hover */
+.fashion-section:hover .fashion-carousel {
+    animation-play-state: paused;
+}
+
+.fashion-item {
+    width: auto;
+    height: 500px;
+    overflow: hidden;
+    background: transparent;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.fashion-item:hover {
+    transform: scale(1.05) translateY(-10px);
+    box-shadow: 0 20px 60px rgba(255, 215, 0, 0.3);
+    z-index: 10;
+}
+
+.fashion-item img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.4s ease;
+}
+
+.fashion-item:hover img {
+    transform: scale(1.02);
+}
+
+/* Responsive adjustments for fashion carousel */
+@media (max-width: 768px) {
+    .fashion-carousel {
+        gap: 30px;
+    }
+    
+    .fashion-item {
+        height: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .fashion-carousel {
+        gap: 25px;
+    }
+    
+    .fashion-item {
+        height: 350px;
+    }
+}
+
+/* Graphics Section - Horizontal Carousel */
+.graphics-section {
+    padding: 100px 0;
+    background: var(--primary-bg);
+    position: relative;
+    overflow: hidden;
+}
+
+.graphics-carousel {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    animation: scrollGraphics 35s linear infinite;
+    width: max-content;
+}
+
+@keyframes scrollGraphics {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Pause animation on hover */
+.graphics-section:hover .graphics-carousel {
+    animation-play-state: paused;
+}
+
+.graphics-item {
+    width: auto;
+    height: 500px;
+    overflow: hidden;
+    background: transparent;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.graphics-item:hover {
+    transform: scale(1.05) translateY(-10px);
+    box-shadow: 0 20px 60px rgba(255, 215, 0, 0.3);
+    z-index: 10;
+}
+
+.graphics-item img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.4s ease;
+}
+
+.graphics-item:hover img {
+    transform: scale(1.02);
+}
+
+/* Responsive adjustments for graphics carousel */
+@media (max-width: 768px) {
+    .graphics-carousel {
+        gap: 30px;
+    }
+    
+    .graphics-item {
+        height: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .graphics-carousel {
+        gap: 25px;
+    }
+    
+    .graphics-item {
+        height: 350px;
     }
 }
