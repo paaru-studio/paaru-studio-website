@@ -421,6 +421,7 @@ html, body { height: 100%; }
 .flip-word:nth-child(2) {
     animation-delay: 4s; /* 3s initial + 1s offset */
     opacity: 0;
+    color: #fff; /* Make 'Media' text white */
 }
 
 @keyframes flip {
@@ -1425,7 +1426,6 @@ img, video { max-width: 100%; height: auto; display: block; }
     left: 0;
     color: var(--accent-color);
     font-weight: bold;
-    font-size: 18px;
 }
 
 /* How It Works Section */
@@ -3037,7 +3037,7 @@ img, video { max-width: 100%; height: auto; display: block; }
     border-radius: 20px;
     font-size: 13px;
     font-weight: 600;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.05em;
 }
 
 .ad-details {
@@ -3067,7 +3067,7 @@ img, video { max-width: 100%; height: auto; display: block; }
 }
 
 .ad-spec li::before {
-    content: '•';
+    content: '✓';
     position: absolute;
     left: 0;
     color: var(--accent-color);
@@ -3187,7 +3187,7 @@ img, video { max-width: 100%; height: auto; display: block; }
 
 .metro-emphasis {
     display: block;
-    background: linear-gradient(135deg, var(--accent-color) 0%, #fbbf24 100%);
+    background: linear-gradient(135deg, #f59e0b, #fbbf24);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -5188,7 +5188,7 @@ html {
 .contact-form-section,
 .get-started-section,
 .application-section {
-    padding: 100px 0;
+    padding: 60px 0;
     background: var(--secondary-bg);
 }
 
@@ -5198,7 +5198,7 @@ html {
     max-width: 800px;
     margin: 0 auto;
     background: var(--card-bg);
-    padding: 50px;
+    padding: 30px;
     border-radius: 16px;
     border: 1px solid var(--border-color);
 }
@@ -5222,8 +5222,8 @@ html {
 .career-form select,
 .career-form textarea {
     width: 100%;
-    padding: 14px;
-    margin-bottom: 20px;
+    padding: 10px;
+    margin-bottom: 12px;
     background: var(--secondary-bg);
     border: 1px solid var(--border-color);
     border-radius: 8px;
@@ -5245,14 +5245,25 @@ html {
 .form-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.form-row input,
+.form-row select,
+.form-row textarea {
+    margin-bottom: 0;
 }
 
 .project-form h4,
 .career-form h4 {
-    margin: 30px 0 15px;
-    font-size: 20px;
+    margin: 15px 0 8px;
+    font-size: 17px;
     color: var(--text-primary);
+}
+
+.career-form h4:first-of-type {
+    margin-top: 0;
 }
 
 .checkbox-group {
@@ -5307,26 +5318,50 @@ html {
 }
 
 .info-card {
-    background: var(--card-bg);
-    padding: 25px;
+    padding: 30px 20px;
     border-radius: 12px;
-    border: 1px solid var(--border-color);
+    border: none;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(255, 215, 0, 0.3);
+}
+
+.info-card .step-content {
+    position: relative;
+    z-index: 2;
+}
+
+.info-card .step-number {
+    font-size: 56px;
+    font-weight: 900;
+    color: rgba(0, 0, 0, 0.15);
+    margin-bottom: 15px;
+    line-height: 1;
 }
 
 .info-icon {
     font-size: 32px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .info-card h3 {
     font-size: 18px;
     margin-bottom: 8px;
+    color: #1a1a1a;
+    font-weight: 800;
 }
 
 .info-card p {
     font-size: 14px;
-    color: var(--text-secondary);
+    color: #2a2a2a;
     margin: 0;
+    line-height: 1.6;
 }
 
 .contact-details {
@@ -5632,12 +5667,12 @@ html {
 .application-grid {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
-    gap: 60px;
+    gap: 30px;
 }
 
 .application-info h3 {
-    font-size: 28px;
-    margin-bottom: 20px;
+    font-size: 24px;
+    margin-bottom: 15px;
 }
 
 .looking-for-list {
@@ -5646,58 +5681,103 @@ html {
 }
 
 .looking-for-list li {
-    margin-bottom: 12px;
+    margin-bottom: 8px;
     color: var(--text-secondary);
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .process-steps {
-    margin-top: 20px;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 .process-step {
-    background: var(--card-bg);
-    padding: 15px;
+    padding: 20px;
+    border-radius: 12px;
+    border: none;
+    position: relative;
+}
+
+.process-step .step-content {
+    position: relative;
+    z-index: 1;
+}
+
+.process-step .step-number {
+    font-size: 48px;
+    font-weight: 900;
+    color: rgba(0, 0, 0, 0.15);
     margin-bottom: 10px;
-    border-radius: 8px;
-    border: 1px solid var(--border-color);
-    color: var(--text-secondary);
+    line-height: 1;
+}
+
+.process-step strong {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #1a1a1a;
+    font-weight: 800;
+}
+
+.process-step p {
+    font-size: 14px;
+    color: #2a2a2a;
+    line-height: 1.6;
+    margin: 0;
 }
 
 /* Internships Section */
 .internships-section {
-    padding: 100px 0;
+    padding: 60px 0;
     background: var(--secondary-bg);
 }
 
 .internship-content {
-    max-width: 900px;
+    max-width: 90%;
     margin: 0 auto;
     text-align: center;
 }
 
 .internship-benefits {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
     margin: 40px 0;
 }
 
 .internship-item {
     background: var(--card-bg);
-    padding: 30px;
+    padding: 30px 20px;
     border-radius: 12px;
     border: 1px solid var(--border-color);
+    text-align: center;
 }
 
 .internship-item h3 {
-    font-size: 22px;
-    margin-bottom: 10px;
+    font-size: 20px;
+    margin-bottom: 12px;
 }
 
 .internship-item p {
     color: var(--text-secondary);
+    line-height: 1.6;
     margin: 0;
+    font-size: 15px;
+}
+
+/* Responsive layout for internship benefits */
+@media (max-width: 1024px) {
+    .internship-benefits {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .internship-benefits {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Media Offerings Specific */
