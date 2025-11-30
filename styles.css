@@ -128,11 +128,11 @@
     .product-gallery {
         flex-direction: column;
         gap: 40px;
-    }
+}
 
     .video-grid {
         grid-template-columns: 1fr;
-    }
+}
 }
 
 /* Make portfolio links cover the whole card */
@@ -691,32 +691,40 @@ body {
         padding: 0 16px;
         z-index: 10000000 !important;
         position: fixed !important;
-        top: 28px !important;
+        top: 100px !important;
         /* Below banner on mobile */
         left: 0 !important;
         right: 0 !important;
-        width: 100vw !important;
+        width: 100% !important;
         transform: translateZ(0);
         /* Force new rendering layer */
         background: linear-gradient(180deg, rgba(10, 10, 10, 0.75), rgba(10, 10, 10, 0.65)) !important;
         /* More opaque on mobile */
-        max-width: 100vw;
+        max-width: 100%;
     }
 
     .navbar.scrolled {
-        width: 100vw !important;
-        left: 0 !important;
-        right: 0 !important;
-        top: 28px !important;
-        /* Stay below banner when scrolled */
-        height: 56px;
-        border-radius: 0;
-        padding: 0 16px;
+        top: 10px !important;
+        left: 16px !important;
+        right: 16px !important;
+        width: calc(100% - 32px) !important;
+        height: 54px !important;
+        background: linear-gradient(180deg, rgba(245, 158, 11, 0.95), rgba(245, 158, 11, 0.9)) !important;
+        backdrop-filter: blur(12px) saturate(140%) !important;
+        -webkit-backdrop-filter: blur(12px) saturate(140%) !important;
+        box-shadow: 0 4px 20px rgba(245, 158, 11, 0.3) !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+        border-radius: 30px !important;
+        padding: 0 8px !important;
         z-index: 10000000 !important;
-        background: linear-gradient(180deg, rgba(245, 158, 11, 0.98), rgba(245, 158, 11, 0.95)) !important;
-        backdrop-filter: blur(12px) saturate(140%);
-        -webkit-backdrop-filter: blur(12px) saturate(140%);
-        box-shadow: 0 2px 12px rgba(245, 158, 11, 0.3);
+    }
+    .navbar.scrolled .nav-links a,
+    .navbar.scrolled .logo-text {
+        color: #ffffff !important;
+    }
+    .navbar.scrolled .nav-links a:hover {
+        color: #ffffff !important;
+        opacity: 0.8;
     }
 
     .navbar .container {
@@ -1329,8 +1337,8 @@ video {
 
     .services-overview .services-grid,
     .services-page .services-overview .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-        margin: 18px 20px;
+        grid-template-columns: repeat(4, 1fr);
+        margin: 28px 40px;
     }
 }
 
@@ -1338,8 +1346,8 @@ video {
 
     .services-overview .services-grid,
     .services-page .services-overview .services-grid {
-        grid-template-columns: 1fr;
-        margin: 12px 12px;
+        grid-template-columns: repeat(4, 1fr);
+        margin: 28px 40px;
     }
 }
 
@@ -1513,12 +1521,13 @@ video {
 
 @media (max-width: 900px) {
     .ecommerce-detail {
-        flex-direction: column;
+        flex-direction: row;
+        gap: 40px;
+        align-items: center;
     }
-
     .ecommerce-image {
-        width: 100%;
-        max-width: 100%;
+        width: 36%;
+        max-width: 520px;
     }
 }
 
@@ -1597,10 +1606,10 @@ video {
 
 @media (max-width:900px) {
     .instagram-embed-wrapper {
-        width: 100%;
-        max-width: 100%;
-        margin: 12px auto;
-        max-height: 540px
+        width: 48%;
+        max-width: 520px;
+        margin: 0;
+        max-height: 420px;
     }
 }
 
@@ -1952,7 +1961,7 @@ video {
     content: '';
     width: 18px;
     height: 18px;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="%23fff" d="M8 5v14l11-7z"/></svg>') center/contain no-repeat;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="%23fff" d="M8 5v14l11-7z"/></svg>') center/contain no-repeat;
     position: absolute;
     /* center the small play icon inside the 44px circle located at 12px,12px */
     left: calc(12px + (44px - 18px) / 2);
@@ -3407,7 +3416,7 @@ video {
         max-width: 560px;
         max-height: 560px;
         /* Layer 1: a warmer gradient tint matching the banner; Layer 2: user's globe; Layer 3: SVG fallback */
-        background-image: linear-gradient(135deg, rgba(251, 191, 36, 0.14), rgba(245, 158, 11, 0.12)), url('Globe.png'), url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><circle cx='100' cy='100' r='90' fill='none' stroke='%23ffffff' stroke-width='4' opacity='0.06'/><path d='M10 100a90 90 0 0 0 180 0' stroke='%23ffffff' stroke-width='2' opacity='0.04' fill='none'/><path d='M100 10a90 90 0 0 0 0 180' stroke='%23ffffff' stroke-width='2' opacity='0.04' fill='none'/></svg>");
+        background-image: linear-gradient(135deg, rgba(251, 191, 36, 0.14), rgba(245, 158, 11, 0.12)), url('Globe.png'), url("data:image/svg+xml;utf8,<svg xmlns='https://www.w3.org/2000/svg' viewBox='0 0 200 200'><circle cx='100' cy='100' r='90' fill='none' stroke='%23ffffff' stroke-width='4' opacity='0.06'/><path d='M10 100a90 90 0 0 0 180 0' stroke='%23ffffff' stroke-width='2' opacity='0.04' fill='none'/><path d='M100 10a90 90 0 0 0 0 180' stroke='%23ffffff' stroke-width='2' opacity='0.04' fill='none'/></svg>");
         background-repeat: no-repeat, no-repeat, no-repeat;
         /* anchor the globe to the left/bottom so it sits behind the center/left columns */
         background-position: left bottom, left bottom, center center;
