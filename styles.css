@@ -1622,6 +1622,9 @@ video {
         align-items: center;
     }
 
+    .ecommerce-copy h2 {
+        font-size: 24px !important;
+    }
 
     .ecommerce-image {
         width: 100%;
@@ -8988,5 +8991,37 @@ html {
     .influencer-form .grid {
         grid-template-columns: 1fr;
         gap: 8px;
+    }
+}
+
+/* Google Certificate Images - Mobile Styles */
+@media (max-width: 900px) {
+    .google-certificate-img {
+        width: 60px !important;
+        height: 60px !important;
+    }
+    
+    .google-certificates-container {
+        right: 50px !important;
+        bottom: 160px !important;
+        gap: 10px !important;
+    }
+}
+
+/* Fix for View Case Studies button visibility on mobile */
+@media (max-width: 768px) {
+    .about-section {
+        padding-bottom: 100px !important;
+    }
+    
+    .about-section .cta-btn {
+        position: relative;
+        z-index: 15 !important;
+        margin-bottom: 40px !important;
+    }
+    
+    /* Ensure the button wrapper has enough space */
+    .about-section > .container {
+        margin-bottom: 20px;
     }
 }

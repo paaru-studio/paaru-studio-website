@@ -97,7 +97,7 @@
             </div>
             
             <!-- Case Study Button - Centered -->
-            <div style="display: flex; justify-content: center; align-items: center; width: 100%; margin-top: 40px;">
+            <div style="display: flex; justify-content: center; align-items: center; width: 100%; margin-top: 40px; margin-bottom: 40px; position: relative; z-index: 20;">
                 <a href="case-studies.html" class="cta-btn">View Case Studies</a>
             </div>
         </div>
@@ -488,9 +488,9 @@
     </footer>
 
     <!-- Performance Ads Floating Images -->
-    <div style="position: fixed; right: 55px; bottom: 180px; z-index: 99999; display: flex; flex-direction: column; gap: 12px; align-items: flex-end;">
-        <img src="google Ads Video01.png" alt="Google Ads Video" style="width: 75px; height: 75px; object-fit: contain; box-shadow: none; background: none;">
-        <img src="google performance ads01.png" alt="Google Performance Ads" style="width: 75px; height: 75px; object-fit: contain; box-shadow: none; background: none;">
+    <div class="google-certificates-container" style="position: fixed; right: 60px; bottom: 180px; z-index: 99999; display: flex; flex-direction: column; gap: 12px; align-items: flex-end;">
+        <img src="google Ads Video01.png" alt="Google Ads Video" class="google-certificate-img" style="width: 75px; height: 75px; object-fit: contain; box-shadow: none; background: none;">
+        <img src="google performance ads01.png" alt="Google Performance Ads" class="google-certificate-img" style="width: 75px; height: 75px; object-fit: contain; box-shadow: none; background: none;">
     </div>
     <!-- WhatsApp Floating Button -->
     <a href="https://api.whatsapp.com/message/YUCOIE6IW45VJ1?autoload=1&app_absent=0" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
@@ -501,21 +501,6 @@
 
     <script src="script.js"></script>
     <script>
-    (function(){
-        var nav = document.querySelector('.navbar');
-        var btn = document.querySelector('.mobile-menu-btn');
-        var backdrop = document.querySelector('.mobile-nav-backdrop');
-        if (!nav || !btn) return;
-        function setOpen(v){
-            if (v) { nav.classList.add('open'); btn.setAttribute('aria-expanded','true'); if (backdrop) backdrop.setAttribute('aria-hidden','false'); }
-            else { nav.classList.remove('open'); btn.setAttribute('aria-expanded','false'); if (backdrop) backdrop.setAttribute('aria-hidden','true'); }
-        }
-        btn.addEventListener('click', function(){ setOpen(!nav.classList.contains('open')); });
-        nav.querySelectorAll('.nav-links a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
-        if (backdrop) backdrop.addEventListener('click', function(){ setOpen(false); });
-        document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
-    })();
-    
     // Scroll Animation Observer
     (function() {
         const observerOptions = {
