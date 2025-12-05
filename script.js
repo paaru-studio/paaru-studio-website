@@ -79,13 +79,53 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Mobile menu toggle (placeholder for future implementation)
+// Mobile menu toggle
 const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-const navLinks = document.querySelector('.nav-links');
+const mobileNavBackdrop = document.querySelector('.mobile-nav-backdrop');
 
-if (mobileMenuBtn) {
-    mobileMenuBtn.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
+if (mobileMenuBtn && navbar) {
+    mobileMenuBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        navbar.classList.toggle('open');
+        document.body.classList.toggle('menu-open');
+        
+        // Update aria-expanded attribute
+        const isOpen = navbar.classList.contains('open');
+        mobileMenuBtn.setAttribute('aria-expanded', isOpen);
+        
+        // Change menu icon
+        mobileMenuBtn.textContent = isOpen ? '✕' : '☰';
+    });
+    
+    // Close menu when clicking backdrop
+    if (mobileNavBackdrop) {
+        mobileNavBackdrop.addEventListener('click', () => {
+            navbar.classList.remove('open');
+            document.body.classList.remove('menu-open');
+            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+            mobileMenuBtn.textContent = '☰';
+        });
+    }
+    
+    // Close menu when clicking on a nav link
+    const navLinks = document.querySelectorAll('.nav-links a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navbar.classList.remove('open');
+            document.body.classList.remove('menu-open');
+            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+            mobileMenuBtn.textContent = '☰';
+        });
+    });
+    
+    // Close menu on escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && navbar.classList.contains('open')) {
+            navbar.classList.remove('open');
+            document.body.classList.remove('menu-open');
+            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+            mobileMenuBtn.textContent = '☰';
+        }
     });
 }
 

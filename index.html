@@ -1172,26 +1172,6 @@
                     })();
                 </script>
                 <script>
-                    // Mobile nav toggle: toggles .open on .navbar and updates aria attributes
-                    (function () {
-                        var nav = document.querySelector('.navbar');
-                        var btn = document.querySelector('.mobile-menu-btn');
-                        var backdrop = document.querySelector('.mobile-nav-backdrop');
-                        if (!nav || !btn) return;
-                        function setOpen(v) {
-                            if (v) { nav.classList.add('open'); btn.setAttribute('aria-expanded', 'true'); if (backdrop) backdrop.setAttribute('aria-hidden', 'false'); }
-                            else { nav.classList.remove('open'); btn.setAttribute('aria-expanded', 'false'); if (backdrop) backdrop.setAttribute('aria-hidden', 'true'); }
-                        }
-                        btn.addEventListener('click', function () { setOpen(!nav.classList.contains('open')); });
-                        // close when clicking a nav link
-                        nav.querySelectorAll('.nav-links a').forEach(function (a) { a.addEventListener('click', function () { setOpen(false); }); });
-                        // close when clicking backdrop
-                        if (backdrop) backdrop.addEventListener('click', function () { setOpen(false); });
-                        // close on escape
-                        document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
-                    })();
-                </script>
-                <script>
                     // Footer pin-to-bottom at page end (index-only)
                     (function () {
                         if (!document.body.classList.contains('index-page')) return;
