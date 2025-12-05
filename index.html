@@ -13,9 +13,14 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="hero-fixes.css">
+    <link rel="stylesheet" href="preloader.css">
 </head>
 
 <body class="index-page">
+    <!-- Loading snippet (provided) -->
+    <div class="loadding-page">
+        <div class="cssload-box-loading"></div>
+    </div>
     <!-- Top Banner -->
     <div class="top-banner">
         <div class="container">
@@ -261,81 +266,79 @@
             <div class="portfolio-cta" style="text-align:center;margin-top:18px;">
                 <a href="portfolio.html" class="cta-btn">View Portfolio</a>
             </div>
-            <!-- Reactive Image Gallery (15 varied tiles) -->
-            <section id="gallery" class="gallery-section full-bleed">
-                <div class="gallery-grid">
-                    <div class="gallery-item fit-auto">
-                        <div class="gallery-image fit-image"><img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927529/paaru-studio/Image%2001.jpg" alt="Gallery image 1"></div>
+            <!-- Home Gallery Section - Masonry Style -->
+            <section id="gallery" class="gallery-section" style="padding: 120px 0; background: var(--primary-bg);">
+                <div class="container">
+                    <div style="text-align: center; margin-bottom: 80px;">
+                        <h2 style="font-size: 52px; font-weight: 800; margin-bottom: 24px;">Our Latest Work</h2>
+                        <div class="underline" style="margin: 0 auto 20px;"></div>
+                        <p style="font-size: 18px; color: #a0a0a0; max-width: 700px; margin: 0 auto;">Explore our professional product photography and lifestyle shoots that showcase the best in visual storytelling.</p>
                     </div>
-                    <div class="gallery-item fit-auto">
-                        <div class="gallery-image fit-image"><img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927708/paaru-studio/01.jpg" alt="Gallery image 16">
-                        </div>
+                    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 50px;">
+                        <div class="gallery-featured" style="grid-column: span 2; grid-row: span 2; border-radius: 16px; overflow: hidden; box-shadow: 0 15px 50px rgba(0,0,0,0.4); cursor: pointer; position: relative; will-change: transform, box-shadow;"><img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927529/paaru-studio/Image%2001.jpg" alt="Featured - Lifestyle Shoot" style="width: 100%; height: 100%; object-fit: cover; display: block;"><div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.7), transparent); padding: 30px 20px 20px; color: white;"><p style="font-size: 14px; font-weight: 600; opacity: 0.9;">Lifestyle Photography</p></div></div>
+                        <div class="gallery-standard" style="grid-column: span 1; border-radius: 12px; overflow: hidden; box-shadow: 0 12px 40px rgba(0,0,0,0.35); cursor: pointer; height: 280px; will-change: transform, box-shadow;"><img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927708/paaru-studio/01.jpg" alt="Product Shot" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+                        <div class="gallery-standard" style="grid-column: span 1; border-radius: 12px; overflow: hidden; box-shadow: 0 12px 40px rgba(0,0,0,0.35); cursor: pointer; height: 280px; will-change: transform, box-shadow;"><img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927656/paaru-studio/02.jpg" alt="Product Display" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+                        <div class="gallery-standard" style="grid-column: span 1; border-radius: 12px; overflow: hidden; box-shadow: 0 12px 40px rgba(0,0,0,0.35); cursor: pointer; height: 280px; will-change: transform, box-shadow;"><img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927657/paaru-studio/03.jpg" alt="Product Photography" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+                        <div class="gallery-standard" style="grid-column: span 1; border-radius: 12px; overflow: hidden; box-shadow: 0 12px 40px rgba(0,0,0,0.35); cursor: pointer; height: 280px; will-change: transform, box-shadow;"><img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927659/paaru-studio/04.jpg" alt="Product Showcase" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+                        <div class="gallery-featured" style="grid-column: span 2; border-radius: 14px; overflow: hidden; box-shadow: 0 15px 50px rgba(0,0,0,0.4); cursor: pointer; height: 280px; will-change: transform, box-shadow;"><img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927658/paaru-studio/04%20%281%29.jpg" alt="Featured Product Range" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+                        <div class="gallery-standard" style="grid-column: span 1; border-radius: 12px; overflow: hidden; box-shadow: 0 12px 40px rgba(0,0,0,0.35); cursor: pointer; height: 280px; will-change: transform, box-shadow;"><img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927659/paaru-studio/06.jpg" alt="Product Details" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+                        <div class="gallery-standard" style="grid-column: span 1; border-radius: 12px; overflow: hidden; box-shadow: 0 12px 40px rgba(0,0,0,0.35); cursor: pointer; height: 280px; will-change: transform, box-shadow;"><img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927660/paaru-studio/08.jpg" alt="Studio Shot" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+                        <div class="gallery-standard" style="grid-column: span 1; border-radius: 12px; overflow: hidden; box-shadow: 0 12px 40px rgba(0,0,0,0.35); cursor: pointer; height: 280px; will-change: transform, box-shadow;"><img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927662/paaru-studio/DAS00810.jpg" alt="Professional Photography" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+                        <div class="gallery-standard" style="grid-column: span 1; border-radius: 12px; overflow: hidden; box-shadow: 0 12px 40px rgba(0,0,0,0.35); cursor: pointer; height: 280px; will-change: transform, box-shadow;"><img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764929253/paaru-studio/DSC00084.png" alt="Creative Shoot" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+                        <div class="gallery-standard" style="grid-column: span 1; border-radius: 12px; overflow: hidden; box-shadow: 0 12px 40px rgba(0,0,0,0.35); cursor: pointer; height: 280px; will-change: transform, box-shadow;"><img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764929265/paaru-studio/DSC00172-Edit.png" alt="Edited Product Photo" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+                        <div class="gallery-standard" style="grid-column: span 1; border-radius: 12px; overflow: hidden; box-shadow: 0 12px 40px rgba(0,0,0,0.35); cursor: pointer; height: 280px; will-change: transform, box-shadow;"><img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927663/paaru-studio/IMG_4742.png" alt="Product Layout" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+                        <div class="gallery-standard" style="grid-column: span 1; border-radius: 12px; overflow: hidden; box-shadow: 0 12px 40px rgba(0,0,0,0.35); cursor: pointer; height: 280px; will-change: transform, box-shadow;"><img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927665/paaru-studio/IMG_4748.png" alt="Lifestyle Content" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+                        <div class="gallery-standard" style="grid-column: span 1; border-radius: 12px; overflow: hidden; box-shadow: 0 12px 40px rgba(0,0,0,0.35); cursor: pointer; height: 280px; will-change: transform, box-shadow;"><img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927667/paaru-studio/IMG_4749.png" alt="Brand Photography" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+                        <div class="gallery-standard" style="grid-column: span 1; border-radius: 12px; overflow: hidden; box-shadow: 0 12px 40px rgba(0,0,0,0.35); cursor: pointer; height: 280px; will-change: transform, box-shadow;"><img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927668/paaru-studio/IMG_4752.png" alt="Studio Work" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
                     </div>
-                    <div class="gallery-item fit-auto">
-                        <div class="gallery-image fit-image"><img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927656/paaru-studio/02.jpg" alt="Gallery image 17">
-                        </div>
-                    </div>
-                    <div class="gallery-item fit-auto">
-                        <div class="gallery-image fit-image"><img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927657/paaru-studio/03.jpg" alt="Gallery image 15">
-                        </div>
-                    </div>
-                    <div class="gallery-item fit-auto">
-                        <div class="gallery-image fit-image"><img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927659/paaru-studio/04.jpg" alt="Gallery image 18">
-                        </div>
-                    </div>
-                    <div class="gallery-item fit-auto">
-                        <div class="gallery-image fit-image"><img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927708/paaru-studio/01.jpg" alt="Gallery image 2">
-                        </div>
-                    </div>
-                    <div class="gallery-item fit-auto">
-                        <div class="gallery-image fit-image"><img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927656/paaru-studio/03%20%281%29.jpg"
-                                alt="Gallery image 3"></div>
-                    </div>
-                    <div class="gallery-item fit-auto">
-                        <div class="gallery-image fit-image"><img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927658/paaru-studio/04%20%281%29.jpg"
-                                alt="Gallery image 4"></div>
-                    </div>
-                    <div class="gallery-item fit-auto">
-                        <div class="gallery-image fit-image"><img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927659/paaru-studio/06.jpg" alt="Gallery image 5">
-                        </div>
-                    </div>
-                    <div class="gallery-item fit-auto">
-                        <div class="gallery-image fit-image"><img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927660/paaru-studio/08.jpg" alt="Gallery image 6">
-                        </div>
-                    </div>
-                    <div class="gallery-item fit-auto">
-                        <div class="gallery-image fit-image"><img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927662/paaru-studio/DAS00810.jpg"
-                                alt="Gallery image 7"></div>
-                    </div>
-                    <div class="gallery-item fit-auto">
-                        <div class="gallery-image fit-image"><img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764929253/paaru-studio/DSC00084.png"
-                                alt="Gallery image 8"></div>
-                    </div>
-                    <div class="gallery-item fit-auto">
-                        <div class="gallery-image fit-image"><img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764929265/paaru-studio/DSC00172-Edit.png"
-                                alt="Gallery image 9"></div>
-                    </div>
-                    <div class="gallery-item fit-auto">
-                        <div class="gallery-image fit-image"><img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927663/paaru-studio/IMG_4742.png"
-                                alt="Gallery image 10"></div>
-                    </div>
-                    <div class="gallery-item fit-auto">
-                        <div class="gallery-image fit-image"><img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927665/paaru-studio/IMG_4748.png"
-                                alt="Gallery image 11"></div>
-                    </div>
-                    <div class="gallery-item fit-auto">
-                        <div class="gallery-image fit-image"><img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927667/paaru-studio/IMG_4749.png"
-                                alt="Gallery image 12"></div>
-                    </div>
-                    <div class="gallery-item fit-auto">
-                        <div class="gallery-image fit-image"><img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927668/paaru-studio/IMG_4752.png"
-                                alt="Gallery image 13"></div>
-                    </div>
-                    <div class="gallery-item fit-auto">
-                        <div class="gallery-image fit-image"><img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927656/paaru-studio/03%20%281%29.jpg"
-                                alt="Gallery image 14"></div>
-                    </div>
+                    <div style="text-align: center; padding: 60px 20px; background: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(251, 191, 36, 0.05) 100%); border-radius: 20px; border: 1px solid rgba(245, 158, 11, 0.2);"><h3 style="font-size: 32px; font-weight: 700; margin-bottom: 16px;">Ready to Showcase Your Products?</h3><p style="font-size: 16px; color: #a0a0a0; margin-bottom: 30px;">Let's create stunning visual content that sells.</p><a href="get-started.html#form" class="cta-button" style="display: inline-block; padding: 16px 48px; background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%); color: #000; font-weight: 700; font-size: 16px; border-radius: 50px; text-decoration: none; box-shadow: 0 12px 30px rgba(245, 158, 11, 0.4); will-change: transform, box-shadow;">Start Your Project</a></div>
                 </div>
+                <style>
+                    .gallery-featured,
+                    .gallery-standard,
+                    .cta-button {
+                        transform: translate3d(0, 0, 0);
+                    }
+                    
+                    .gallery-featured {
+                        transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.35s ease-out;
+                    }
+                    
+                    .gallery-featured:hover {
+                        transform: scale(1.02) translate3d(0, 0, 0);
+                        box-shadow: 0 25px 70px rgba(245, 158, 11, 0.4) !important;
+                    }
+                    
+                    .gallery-standard {
+                        transition: transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.25s ease-out;
+                    }
+                    
+                    .gallery-standard:hover {
+                        transform: translateY(-10px) translate3d(0, 0, 0);
+                        box-shadow: 0 20px 60px rgba(245, 158, 11, 0.35) !important;
+                    }
+                    
+                    .cta-button {
+                        transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.2s ease-out;
+                    }
+                    
+                    .cta-button:hover {
+                        transform: scale(1.05) translate3d(0, 0, 0);
+                        box-shadow: 0 15px 40px rgba(245, 158, 11, 0.6) !important;
+                    }
+                    
+                    @media (max-width: 1024px) {
+                        #gallery .container > div:first-child { grid-template-columns: repeat(3, 1fr) !important; }
+                    }
+                    @media (max-width: 768px) {
+                        #gallery .container > div:first-child { grid-template-columns: repeat(2, 1fr) !important; gap: 16px !important; }
+                        #gallery .container > div:first-child > div { height: 200px !important; }
+                    }
+                    @media (max-width: 480px) {
+                        #gallery .container > div:first-child { grid-template-columns: repeat(1, 1fr) !important; gap: 12px !important; }
+                        #gallery .container > div:first-child > div { grid-column: span 1 !important; height: 220px !important; }
+                    }
+                </style>
             </section>
             <!-- Golden stats banner inserted below the gallery -->
             <section class="gold-banner full-bleed" aria-label="Studio stats banner">

@@ -19,7 +19,6 @@
     <div class="loadding-page">
         <div class="cssload-box-loading"></div>
     </div>
-    
     <!-- Top Banner -->
     <div class="top-banner">
         <div class="container">
@@ -30,7 +29,7 @@
         </div>
     </div>
 
-    <!-- Navigation -->
+     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <div class="nav-content">
@@ -44,7 +43,8 @@
                         </span>
                     </span>
                 </a>
-                <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">☰</button>
+                    <!-- Mobile menu button (visible on small screens) -->
+                    <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">☰</button>
                 <div class="nav-links">
                     <a href="index.html">Home</a>
                     <a href="services.html">Services</a>
@@ -67,92 +67,62 @@
         </div>
     </nav>
 
+    <!-- Mobile nav overlay: toggled via .navbar.open on small screens -->
     <div class="mobile-nav-backdrop" aria-hidden="true"></div>
 
-    <!-- Page Header - Modern Hero -->
-    <section class="page-hero" style="padding: 140px 0 100px; position: relative; overflow: hidden;">
+    <!-- Page Header -->
+    <section class="page-hero">
         <div class="container">
-            <div style="max-width: 900px; margin: 0 auto; text-align: center;">
-                <h1 class="page-title" style="font-size: 72px; margin-bottom: 24px;">E-Commerce <span class="gradient-text">Solutions</span></h1>
-                <p class="page-subtitle" style="font-size: 22px; color: #a0a0a0; margin-bottom: 60px; line-height: 1.6;">Professional product catalogue services designed to boost your sales on Amazon, Flipkart, and Myntra with stunning visuals and optimized content.</p>
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 60px; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 300px;">
+                    <h1 class="page-title">E-Commerce <span class="gradient-text">Solutions</span></h1>
+                    <p class="page-subtitle">Professional product catalogue services for Amazon, Flipkart, and Myntra</p>
+                </div>
                 
-                <!-- Quick Stats -->
-                <div style="display: flex; justify-content: center; gap: 80px; flex-wrap: wrap; padding: 40px 0; border-top: 1px solid rgba(255,255,255,0.1); border-bottom: 1px solid rgba(255,255,255,0.1);">
-                    <div style="text-align: center;">
-                        <div style="font-size: 48px; font-weight: 800; color: #f59e0b; margin-bottom: 8px;">128+</div>
-                        <div style="font-size: 14px; color: #a0a0a0; font-weight: 500; text-transform: uppercase;">Projects Done</div>
-                    </div>
-                    <div style="text-align: center;">
-                        <div style="font-size: 48px; font-weight: 800; color: #f59e0b; margin-bottom: 8px;">3</div>
-                        <div style="font-size: 14px; color: #a0a0a0; font-weight: 500; text-transform: uppercase;">Major Platforms</div>
-                    </div>
-                    <div style="text-align: center;">
-                        <div style="font-size: 48px; font-weight: 800; color: #f59e0b; margin-bottom: 8px;">98%</div>
-                        <div style="font-size: 14px; color: #a0a0a0; font-weight: 500; text-transform: uppercase;">Client Satisfaction</div>
-                    </div>
-                </div>
-
-                <!-- CTA Buttons -->
-                <div style="margin-top: 60px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-                    <a href="get-started.html#form" style="display: inline-block; padding: 16px 48px; background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%); color: #000; font-weight: 700; font-size: 16px; border-radius: 50px; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 8px 20px rgba(245, 158, 11, 0.3);">Get Started</a>
-                    <a href="#services" style="display: inline-block; padding: 16px 48px; background: rgba(255,255,255,0.1); color: #fff; font-weight: 700; font-size: 16px; border-radius: 50px; text-decoration: none; transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.2);">Learn More</a>
+                <!-- Portfolio Images Grid -->
+                <div class="hero-portfolio-grid" style="flex: 1; min-width: 300px;">
+                    <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927708/paaru-studio/01.jpg" alt="Portfolio 1">
+                    <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927656/paaru-studio/02.jpg" alt="Portfolio 2">
+                    <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927657/paaru-studio/03.jpg" alt="Portfolio 3">
+                    <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927659/paaru-studio/04.jpg" alt="Portfolio 4">
+                    <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927659/paaru-studio/06.jpg" alt="Portfolio 5">
+                    <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927660/paaru-studio/08.jpg" alt="Portfolio 6">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- E-Commerce Introduction Section -->
-    <section style="padding: 100px 0; background: linear-gradient(135deg, var(--primary-bg) 0%, rgba(245, 158, 11, 0.05) 100%);">
-        <div class="container">
-            <div class="ecommerce-detail">
-                <div class="ecommerce-image" style="flex: 0 0 45%;">
-                    <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927607/paaru-studio/e_commerce.jpg" alt="E-commerce showcase" style="border-radius: 12px; box-shadow: 0 20px 60px rgba(245, 158, 11, 0.2);" />
-                </div>
-                <div class="ecommerce-copy" style="flex: 1;">
-                    <h2 style="font-size: 48px; font-weight: 800; letter-spacing: -1px; margin-bottom: 24px; background: linear-gradient(135deg, #fff 0%, #f59e0b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Why Partner With Us?</h2>
-                    <div class="underline" style="margin-bottom: 40px; width: 60px;"></div>
-                    <div style="space-y: 24px;">
-                        <p style="font-size: 18px; color: #a0a0a0; margin-bottom: 24px; line-height: 1.8;">We're an <strong style="color: #fff;">Authorised E-Commerce Services Provider</strong> delivering end-to-end solutions for premium brands across leading platforms.</p>
-                        
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 32px;">
-                            <div style="padding: 20px; background: rgba(245, 158, 11, 0.1); border-radius: 8px; border-left: 4px solid #f59e0b;">
-                                <h4 style="color: #f59e0b; font-weight: 700; margin-bottom: 8px; font-size: 16px;">Product Excellence</h4>
-                                <p style="font-size: 14px; color: #a0a0a0; line-height: 1.6;">Studio & on-location photography with professional lighting and styling.</p>
-                            </div>
-                            <div style="padding: 20px; background: rgba(245, 158, 11, 0.1); border-radius: 8px; border-left: 4px solid #f59e0b;">
-                                <h4 style="color: #f59e0b; font-weight: 700; margin-bottom: 8px; font-size: 16px;">Platform Expertise</h4>
-                                <p style="font-size: 14px; color: #a0a0a0; line-height: 1.6;">Optimized for Amazon, Flipkart, Myntra, and Shopify requirements.</p>
-                            </div>
-                            <div style="padding: 20px; background: rgba(245, 158, 11, 0.1); border-radius: 8px; border-left: 4px solid #f59e0b;">
-                                <h4 style="color: #f59e0b; font-weight: 700; margin-bottom: 8px; font-size: 16px;">Quick Turnaround</h4>
-                                <p style="font-size: 14px; color: #a0a0a0; line-height: 1.6;">Fast production without compromising on quality and accuracy.</p>
-                            </div>
-                            <div style="padding: 20px; background: rgba(245, 158, 11, 0.1); border-radius: 8px; border-left: 4px solid #f59e0b;">
-                                <h4 style="color: #f59e0b; font-weight: 700; margin-bottom: 8px; font-size: 16px;">End-to-End Support</h4>
-                                <p style="font-size: 14px; color: #a0a0a0; line-height: 1.6;">From shooting to editing to final catalog upload & management.</p>
-                            </div>
-                        </div>
-
-                        <p style="font-size: 16px; color: #a0a0a0; line-height: 1.8;">E-commerce isn't just a digital tool anymore—it's a <strong style="color: #fff;">business growth engine</strong>. From product cataloging to brand storytelling, inventory management to customer conversion, we handle it all.</p>
-                    </div>
-                </div>
+    <!-- Move: E-commerce detail block placed here so it appears directly under the page header -->
+    <div class="container">
+        <div class="ecommerce-detail about-section">
+            <div class="ecommerce-image">
+                <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927607/paaru-studio/e_commerce.jpg" alt="E-commerce showcase" />
+            </div>
+            <div class="ecommerce-copy about-content" style="max-width: 900px; margin: 0 auto; position: relative; z-index: 2; padding: 32px 24px; color: #fff;">
+                <h2 style="font-size: 48px; font-weight: 800; letter-spacing: -1px; margin-bottom: 15px; color: #fff;">AUTHORISED E-COMMERCE SERVICES PROVIDER</h2>
+                <div class="underline" style="margin-bottom: 30px;"></div>
+                <p class="large-text" style="font-size: 24px; line-height: 1.7; margin-bottom: 30px; color: #fff; font-weight: 400;">Elevate Your Brand with <span style="color: #f59e0b;">Paaru Studio</span> – Your Trusted E-commerce Partner</p>
+                <p style="font-size: 18px; color: #a0a0a0; margin-bottom: 25px; line-height: 1.8;">At <span style="color: #f59e0b;">Paaru Studio</span>, we deliver end-to-end E-commerce solutions tailored for premium brands across leading platforms. Our work consistently earns recognition, not only for driving sales but also for strengthening brand presence.</p>
+                <p style="font-size: 18px; color: #a0a0a0; margin-bottom: 25px; line-height: 1.8;">In today’s fast-paced digital ecosystem, success in business hinges on two core actions: <strong>buying and selling</strong>. While these were once limited to traditional in-store exchanges, the landscape has shifted. <strong>E-commerce has broken down all barriers</strong>—enabling global reach, seamless operations, and efficient brand positioning.</p>
+                <p style="font-size: 18px; color: #a0a0a0; margin-bottom: 25px; line-height: 1.8;">From <strong>product cataloging to brand storytelling</strong>, from <strong>inventory management</strong> to converting leads into loyal customers, E-commerce is no longer just a digital tool—it’s a business growth engine.</p>
             </div>
         </div>
-    </section>
+    </div>
 
     <!-- E-Commerce Services -->
-    <section class="ecommerce-services" id="services" style="padding: 120px 0; background: var(--primary-bg);">
+    <section class="ecommerce-services">
         <div class="container">
-            <div class="section-header" style="text-align: center; margin-bottom: 80px;">
-                <h2 style="font-size: 52px; font-weight: 800; margin-bottom: 24px;">Our Core Services</h2>
-                <div class="underline" style="margin: 0 auto 20px;"></div>
-                <p style="font-size: 18px; color: #a0a0a0; max-width: 700px; margin: 0 auto;">Comprehensive e-commerce solutions designed to maximize your product visibility and sales conversion across all major platforms.</p>
+            <div class="section-header">
+                <h2>COMPREHENSIVE E-COMMERCE SERVICES</h2>
+                <div class="underline"></div>
             </div>
 
             <div class="services-grid">
                 <div class="service-item">
-                    <div class="service-banner" style="width: 100%; height: 260px; border-radius: 8px; overflow: hidden; margin-bottom: 16px;">
-                        <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764929268/paaru-studio/product_shoot_banner.jpg" alt="Product Photography" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="service-banner"
+                        style="width: 100%; height: 260px; border-radius: 8px; overflow: hidden; margin-bottom: 16px;">
+                        <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764929268/paaru-studio/product_shoot_banner.jpg" alt="Product Photography"
+                            style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <h3>Product Photography</h3>
                     <p>High-quality product shoots with professional lighting, styling, and multiple angles for e-commerce catalogs.</p>
@@ -167,8 +137,10 @@
                 </div>
 
                 <div class="service-item">
-                    <div class="service-banner" style="width: 100%; height: 260px; border-radius: 8px; overflow: hidden; margin-bottom: 16px;">
-                        <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764929231/paaru-studio/lifestyle_shoot_banner.jpg" alt="Lifestyle Shoots" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="service-banner"
+                        style="width: 100%; height: 260px; border-radius: 8px; overflow: hidden; margin-bottom: 16px;">
+                        <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764929231/paaru-studio/lifestyle_shoot_banner.jpg" alt="Lifestyle Shoots"
+                            style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <h3>Lifestyle Shoots</h3>
                     <p>Contextual product photography showing your products in real-life settings to boost customer engagement and conversion.</p>
@@ -183,8 +155,10 @@
                 </div>
 
                 <div class="service-item">
-                    <div class="service-banner" style="width: 100%; height: 260px; border-radius: 8px; overflow: hidden; margin-bottom: 16px;">
-                        <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927687/paaru-studio/unboxing_video_banner.jpg" alt="Unboxing Videos" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="service-banner"
+                        style="width: 100%; height: 260px; border-radius: 8px; overflow: hidden; margin-bottom: 16px;">
+                        <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927687/paaru-studio/unboxing_video_banner.jpg" alt="Unboxing Videos"
+                            style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <h3>Unboxing Videos</h3>
                     <p>Engaging unboxing video content optimized for Amazon, Flipkart, and social media platforms to drive sales.</p>
@@ -199,8 +173,10 @@
                 </div>
 
                 <div class="service-item">
-                    <div class="service-banner" style="width: 100%; height: 260px; border-radius: 8px; overflow: hidden; margin-bottom: 16px;">
-                        <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764929222/paaru-studio/image_retouch_banner.jpg" alt="Image Editing & Retouching" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="service-banner"
+                        style="width: 100%; height: 260px; border-radius: 8px; overflow: hidden; margin-bottom: 16px;">
+                        <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764929222/paaru-studio/image_retouch_banner.jpg" alt="Image Editing & Retouching"
+                            style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <h3>Image Editing & Retouching</h3>
                     <p>Professional image editing services to ensure your product photos meet marketplace standards and look stunning.</p>
@@ -215,8 +191,10 @@
                 </div>
 
                 <div class="service-item">
-                    <div class="service-banner" style="width: 100%; height: 260px; border-radius: 8px; overflow: hidden; margin-bottom: 16px;">
-                        <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764929210/paaru-studio/cataloge_creation_banner.jpg" alt="Catalog Creation" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="service-banner"
+                        style="width: 100%; height: 260px; border-radius: 8px; overflow: hidden; margin-bottom: 16px;">
+                        <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764929210/paaru-studio/cataloge_creation_banner.jpg" alt="Catalog Creation"
+                            style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <h3>Catalog Creation</h3>
                     <p>Complete catalog design and formatting for seamless onboarding and listing on major e-commerce platforms.</p>
@@ -231,8 +209,10 @@
                 </div>
 
                 <div class="service-item">
-                    <div class="service-banner" style="width: 100%; height: 260px; border-radius: 8px; overflow: hidden; margin-bottom: 16px;">
-                        <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927670/paaru-studio/product_showcase_banner.jpg" alt="Product Showcase Videos" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="service-banner"
+                        style="width: 100%; height: 260px; border-radius: 8px; overflow: hidden; margin-bottom: 16px;">
+                        <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927670/paaru-studio/product_showcase_banner.jpg" alt="Product Showcase Videos"
+                            style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <h3>Product Showcase Videos</h3>
                     <p>Dynamic product videos highlighting features, benefits, and usage for maximum customer engagement.</p>
@@ -247,8 +227,10 @@
                 </div>
 
                 <div class="service-item">
-                    <div class="service-banner" style="width: 100%; height: 260px; border-radius: 8px; overflow: hidden; margin-bottom: 16px;">
-                        <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927637/paaru-studio/infographic_design_banner.jpg" alt="Infographic Design" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="service-banner"
+                        style="width: 100%; height: 260px; border-radius: 8px; overflow: hidden; margin-bottom: 16px;">
+                        <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927637/paaru-studio/infographic_design_banner.jpg" alt="Infographic Design"
+                            style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <h3>Infographic Design</h3>
                     <p>Eye-catching infographic images that communicate product features, specifications, and benefits effectively.</p>
@@ -263,8 +245,10 @@
                 </div>
 
                 <div class="service-item">
-                    <div class="service-banner" style="width: 100%; height: 260px; border-radius: 8px; overflow: hidden; margin-bottom: 16px;">
-                        <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927582/paaru-studio/aplus_content_banner.jpg" alt="A+ Content Creation" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="service-banner"
+                        style="width: 100%; height: 260px; border-radius: 8px; overflow: hidden; margin-bottom: 16px;">
+                        <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927582/paaru-studio/aplus_content_banner.jpg" alt="A+ Content Creation"
+                            style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <h3>A+ Content Creation</h3>
                     <p>Premium enhanced brand content for Amazon and other platforms to improve conversion rates.</p>
@@ -278,6 +262,8 @@
                     </ul>
                 </div>
             </div>
+
+            
         </div>
     </section>
 
@@ -395,157 +381,6 @@
         </div>
     </section>
 
-    <!-- Portfolio Gallery Section - Masonry Style -->
-    <section id="gallery" class="gallery-section" style="padding: 120px 0; background: var(--primary-bg);">
-        <div class="container">
-            <div style="text-align: center; margin-bottom: 80px;">
-                <h2 style="font-size: 52px; font-weight: 800; margin-bottom: 24px;">Our Portfolio Work</h2>
-                <div class="underline" style="margin: 0 auto 20px;"></div>
-                <p style="font-size: 18px; color: #a0a0a0; max-width: 700px; margin: 0 auto;">Professional product photography and lifestyle shoots showcasing our expertise in visual storytelling.</p>
-            </div>
-
-            <!-- Masonry Gallery Grid -->
-            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 50px;">
-                <!-- Featured Large Item (spans 2x2) -->
-                <div class="gallery-featured" style="grid-column: span 2; grid-row: span 2; border-radius: 16px; overflow: hidden; box-shadow: 0 15px 50px rgba(0,0,0,0.4); cursor: pointer; position: relative; will-change: transform, box-shadow;">
-                    <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927529/paaru-studio/Image%2001.jpg" alt="Featured - Lifestyle Shoot" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-                    <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.7), transparent); padding: 30px 20px 20px; color: white;">
-                        <p style="font-size: 14px; font-weight: 600; opacity: 0.9;">Lifestyle Photography</p>
-                    </div>
-                </div>
-
-                <!-- Standard Items Row 1 -->
-                <div class="gallery-standard" style="grid-column: span 1; border-radius: 12px; overflow: hidden; box-shadow: 0 12px 40px rgba(0,0,0,0.35); cursor: pointer; height: 280px; will-change: transform, box-shadow;">
-                    <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927708/paaru-studio/01.jpg" alt="Product Shot - Beauty Collection" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-                </div>
-                <div class="gallery-standard" style="grid-column: span 1; border-radius: 12px; overflow: hidden; box-shadow: 0 12px 40px rgba(0,0,0,0.35); cursor: pointer; height: 280px; will-change: transform, box-shadow;">
-                    <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927656/paaru-studio/02.jpg" alt="Product Display" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-                </div>
-
-                <!-- Standard Items Row 2 -->
-                <div class="gallery-standard" style="grid-column: span 1; border-radius: 12px; overflow: hidden; box-shadow: 0 12px 40px rgba(0,0,0,0.35); cursor: pointer; height: 280px; will-change: transform, box-shadow;">
-                    <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927657/paaru-studio/03.jpg" alt="Product Photography" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-                </div>
-                <div class="gallery-standard" style="grid-column: span 1; border-radius: 12px; overflow: hidden; box-shadow: 0 12px 40px rgba(0,0,0,0.35); cursor: pointer; height: 280px; will-change: transform, box-shadow;">
-                    <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927659/paaru-studio/04.jpg" alt="Product Showcase" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-                </div>
-
-                <!-- Featured Medium Item (spans 2 cols) -->
-                <div class="gallery-featured" style="grid-column: span 2; border-radius: 14px; overflow: hidden; box-shadow: 0 15px 50px rgba(0,0,0,0.4); cursor: pointer; height: 280px; will-change: transform, box-shadow;">
-                    <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927658/paaru-studio/04%20%281%29.jpg" alt="Featured Product Range" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-                </div>
-
-                <!-- Standard Items Row 3 -->
-                <div class="gallery-standard" style="grid-column: span 1; border-radius: 12px; overflow: hidden; box-shadow: 0 12px 40px rgba(0,0,0,0.35); cursor: pointer; height: 280px; will-change: transform, box-shadow;">
-                    <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927659/paaru-studio/06.jpg" alt="Product Details" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-                </div>
-                <div class="gallery-standard" style="grid-column: span 1; border-radius: 12px; overflow: hidden; box-shadow: 0 12px 40px rgba(0,0,0,0.35); cursor: pointer; height: 280px; will-change: transform, box-shadow;">
-                    <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927660/paaru-studio/08.jpg" alt="Studio Shot" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-                </div>
-                <div class="gallery-standard" style="grid-column: span 1; border-radius: 12px; overflow: hidden; box-shadow: 0 12px 40px rgba(0,0,0,0.35); cursor: pointer; height: 280px; will-change: transform, box-shadow;">
-                    <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927662/paaru-studio/DAS00810.jpg" alt="Professional Photography" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-                </div>
-                <div class="gallery-standard" style="grid-column: span 1; border-radius: 12px; overflow: hidden; box-shadow: 0 12px 40px rgba(0,0,0,0.35); cursor: pointer; height: 280px; will-change: transform, box-shadow;">
-                    <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764929253/paaru-studio/DSC00084.png" alt="Creative Shoot" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-                </div>
-
-                <!-- Standard Items Row 4 -->
-                <div class="gallery-standard" style="grid-column: span 1; border-radius: 12px; overflow: hidden; box-shadow: 0 12px 40px rgba(0,0,0,0.35); cursor: pointer; height: 280px; will-change: transform, box-shadow;">
-                    <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764929265/paaru-studio/DSC00172-Edit.png" alt="Edited Product Photo" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-                </div>
-                <div class="gallery-standard" style="grid-column: span 1; border-radius: 12px; overflow: hidden; box-shadow: 0 12px 40px rgba(0,0,0,0.35); cursor: pointer; height: 280px; will-change: transform, box-shadow;">
-                    <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927663/paaru-studio/IMG_4742.png" alt="Product Layout" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-                </div>
-                <div class="gallery-standard" style="grid-column: span 1; border-radius: 12px; overflow: hidden; box-shadow: 0 12px 40px rgba(0,0,0,0.35); cursor: pointer; height: 280px; will-change: transform, box-shadow;">
-                    <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927665/paaru-studio/IMG_4748.png" alt="Lifestyle Content" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-                </div>
-                <div class="gallery-standard" style="grid-column: span 1; border-radius: 12px; overflow: hidden; box-shadow: 0 12px 40px rgba(0,0,0,0.35); cursor: pointer; height: 280px; will-change: transform, box-shadow;">
-                    <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927667/paaru-studio/IMG_4749.png" alt="Brand Photography" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-                </div>
-                <div class="gallery-standard" style="grid-column: span 1; border-radius: 12px; overflow: hidden; box-shadow: 0 12px 40px rgba(0,0,0,0.35); cursor: pointer; height: 280px; will-change: transform, box-shadow;">
-                    <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927668/paaru-studio/IMG_4752.png" alt="Studio Work" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-                </div>
-            </div>
-
-            <!-- CTA Section -->
-            <div style="text-align: center; padding: 60px 20px; background: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(251, 191, 36, 0.05) 100%); border-radius: 20px; border: 1px solid rgba(245, 158, 11, 0.2);">
-                <h3 style="font-size: 32px; font-weight: 700; margin-bottom: 16px;">Ready to Showcase Your Products?</h3>
-                <p style="font-size: 16px; color: #a0a0a0; margin-bottom: 30px;">Let's create stunning visual content that sells.</p>
-                <a href="get-started.html#form" class="cta-button" style="display: inline-block; padding: 16px 48px; background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%); color: #000; font-weight: 700; font-size: 16px; border-radius: 50px; text-decoration: none; box-shadow: 0 12px 30px rgba(245, 158, 11, 0.4); will-change: transform, box-shadow;">Start Your Project</a>
-            </div>
-        </div>
-
-        <!-- Optimized CSS for Smooth Hover -->
-        <style>
-            .gallery-featured,
-            .gallery-standard,
-            .cta-button {
-                transform: translate3d(0, 0, 0);
-            }
-            
-            .gallery-featured {
-                transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.35s ease-out;
-            }
-            
-            .gallery-featured:hover {
-                transform: scale(1.02) translate3d(0, 0, 0);
-                box-shadow: 0 25px 70px rgba(245, 158, 11, 0.4) !important;
-            }
-            
-            .gallery-standard {
-                transition: transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.25s ease-out;
-            }
-            
-            .gallery-standard:hover {
-                transform: translateY(-10px) translate3d(0, 0, 0);
-                box-shadow: 0 20px 60px rgba(245, 158, 11, 0.35) !important;
-            }
-            
-            .cta-button {
-                transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.2s ease-out;
-            }
-            
-            .cta-button:hover {
-                transform: scale(1.05) translate3d(0, 0, 0);
-                box-shadow: 0 15px 40px rgba(245, 158, 11, 0.6) !important;
-            }
-
-            @media (max-width: 1024px) {
-                #gallery .container > div:first-child {
-                    grid-template-columns: repeat(3, 1fr) !important;
-                }
-                #gallery .container > div:first-child > div:first-child {
-                    grid-column: span 2 !important;
-                    grid-row: span 1 !important;
-                }
-            }
-            @media (max-width: 768px) {
-                #gallery .container > div:first-child {
-                    grid-template-columns: repeat(2, 1fr) !important;
-                    gap: 16px !important;
-                }
-                #gallery .container > div:first-child > div:first-child,
-                #gallery .container > div:first-child > div:nth-child(9) {
-                    grid-column: span 2 !important;
-                    grid-row: span 1 !important;
-                }
-                #gallery .container > div:first-child > div {
-                    height: 200px !important;
-                }
-            }
-            @media (max-width: 480px) {
-                #gallery .container > div:first-child {
-                    grid-template-columns: repeat(1, 1fr) !important;
-                    gap: 12px !important;
-                }
-                #gallery .container > div:first-child > div {
-                    grid-column: span 1 !important;
-                    height: 220px !important;
-                }
-            }
-        </style>
-    </section>
-
     <!-- Contact Form -->
     <section class="contact-form-section">
         <div class="container">
@@ -661,8 +496,11 @@
                 else { nav.classList.remove('open'); btn.setAttribute('aria-expanded', 'false'); if (backdrop) backdrop.setAttribute('aria-hidden', 'true'); }
             }
             btn.addEventListener('click', function () { setOpen(!nav.classList.contains('open')); });
+            // close when clicking a nav link
             nav.querySelectorAll('.nav-links a').forEach(function (a) { a.addEventListener('click', function () { setOpen(false); }); });
+            // close when clicking backdrop
             if (backdrop) backdrop.addEventListener('click', function () { setOpen(false); });
+            // close on escape
             document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
         })();
     </script>

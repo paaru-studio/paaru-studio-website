@@ -1,0 +1,162 @@
+/* Preloader / loading overlay styles */
+
+/* optional page-wide spacing left intact */
+body { margin-top: 20px; }
+
+/* `.loadding-page` is the overlay inserted at the top of <body>. */
+.loadding-page {
+  position: fixed;
+  inset: 0; /* top:0; right:0; bottom:0; left:0 */
+  width: 100%;
+  height: 100%;
+  background: #000000; /* black background (changed from red #d90845) */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999999; /* must be higher than navbar's z-index: 999998 !important */
+  opacity: 1;
+  pointer-events: auto;
+}.cssload-box-loading {
+    width: 49px;
+    height: 49px;
+    position: relative; /* contain pseudo elements */
+}
+
+.cssload-box-loading:before {
+    content: '';
+    width: 49px;
+    height: 5px;
+    background: rgba(0,0,0,0.1);
+    position: absolute;
+    top: 58px;
+    left: 0;
+    border-radius: 50%;
+    animation: shadow 0.58s linear infinite;
+}
+
+.cssload-box-loading:after {
+    content: '';
+    width: 49px;
+    height: 49px;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 3px;
+    animation: cssload-animate 0.58s linear infinite;
+}
+
+@keyframes cssload-animate {
+    17% { border-bottom-right-radius: 3px; }
+    25% { transform: translateY(9px) rotate(22.5deg); }
+    50% { transform: translateY(18px) scale(1,0.9) rotate(45deg); border-bottom-right-radius:39px; }
+    75% { transform: translateY(9px) rotate(67.5deg); }
+    100% { transform: translateY(0) rotate(90deg); }
+}
+
+@keyframes shadow {
+    0%,100% { transform: scale(1,1); }
+    50% { transform: scale(1.2,1); }
+}
+
+/* Fade-out helper used by JS: transition opacity to hide */
+.loadding-page.fade-out { opacity: 0; transition: opacity 200ms ease; pointer-events: none; }
+
+/* Keep compatibility for older `.preloader` class (if still present): make it act like .loadding-page */
+.preloader { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; z-index: 9999; }
+.preloader .loader { opacity: 1; transform: translateY(-50%) scale(1); }
+
+/* helper animations left intact for older loaders */
+@-webkit-keyframes loader-outter { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+@keyframes loader-outter { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+@-webkit-keyframes loader-inner { 0% { transform: rotate(0deg); } 100% { transform: rotate(-360deg); } }
+@keyframes loader-inner { 0% { transform: rotate(0deg); } 100% { transform: rotate(-360deg); } }
+@-webkit-keyframes dash { 62.5% { opacity: 0; } to { stroke-dashoffset: 0; } }
+@keyframes dash { 62.5% { opacity: 0; } to { stroke-dashoffset: 0; } }
+
+/* fully removed/hidden state (applied after transitions complete via JS) */
+.preloader.preloader-hidden {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+@-webkit-keyframes loader-outter {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+/* small helper class applied on DOM ready to animate loader entrance */
+.preloader.preloader-ready .loader{
+    opacity: 1;
+    -webkit-transform: translateY(-50%) scale(1);
+    transform: translateY(-50%) scale(1);
+}
+
+/* optional subtle entrance for curtains to close in at first (metaphorically 'opening window') */
+.preloader.preloader-ready::before,
+.preloader.preloader-ready::after{
+    width: 60%;
+}
+
+@keyframes loader-outter {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes loader-inner {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(-360deg);
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes loader-inner {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(-360deg);
+        transform: rotate(-360deg);
+    }
+}
+
+@-webkit-keyframes dash {
+    62.5% {
+        opacity: 0;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes dash {
+    62.5% {
+        opacity: 0;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
