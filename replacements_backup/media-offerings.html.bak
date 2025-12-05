@@ -11,7 +11,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="hero-fixes.css">
 </head>
 
 <body class="services-page">
@@ -30,7 +29,7 @@
         <div class="container">
             <div class="nav-content">
                 <a href="index.html" class="logo">
-                    <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927649/paaru-studio/logo.png" alt="Paaru Studio Logo" class="logo-image">
+                    <img src="logo.png" alt="Paaru Studio Logo" class="logo-image">
                     <span class="logo-text">
                         <span class="logo-text-static">PAARU</span>
                         <span class="logo-text-flip">
@@ -94,13 +93,13 @@
                 <div class="metro-billboard">
                     <div class="metro-visual-collage">
                         <div class="collage-image collage-img-1">
-                            <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927652/paaru-studio/metro_ad_1.jpg" alt="Metro Interior Advertising">
+                            <img src="metro_ad_1.jpg" alt="Metro Interior Advertising">
                         </div>
                         <div class="collage-image collage-img-2">
-                            <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927653/paaru-studio/metro_ad_2.jpg" alt="Metro Exterior Advertising">
+                            <img src="metro_ad_2.jpg" alt="Metro Exterior Advertising">
                         </div>
                         <div class="collage-image collage-img-3">
-                            <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927653/paaru-studio/metro_ad_3.jpg" alt="Metro Station Advertising">
+                            <img src="metro_ad_3.jpg" alt="Metro Station Advertising">
                         </div>
                     </div>
                     <div class="metro-content">
@@ -138,13 +137,13 @@
                 <div class="metro-billboard">
                     <div class="metro-visual-collage">
                         <div class="collage-image collage-img-1">
-                            <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927588/paaru-studio/dooh_ad_1.jpg" alt="Digital Mall Screen Advertising">
+                            <img src="dooh_ad_1.jpg" alt="Digital Mall Screen Advertising">
                         </div>
                         <div class="collage-image collage-img-2">
-                            <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927590/paaru-studio/dooh_ad_2.jpg" alt="Premium Digital Display">
+                            <img src="dooh_ad_2.jpg" alt="Premium Digital Display">
                         </div>
                         <div class="collage-image collage-img-3">
-                            <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927592/paaru-studio/dooh_ad_3.jpg" alt="Mall Digital Advertising">
+                            <img src="dooh_ad_3.jpg" alt="Mall Digital Advertising">
                         </div>
                     </div>
                     <div class="metro-content">
@@ -177,13 +176,13 @@
                 <div class="metro-billboard">
                     <div class="metro-visual-collage">
                         <div class="collage-image collage-img-1">
-                            <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927596/paaru-studio/dooh_society_1.png" alt="Digital Screen in Society Lobby">
+                            <img src="dooh_society_1.png" alt="Digital Screen in Society Lobby">
                         </div>
                         <div class="collage-image collage-img-2">
-                            <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927598/paaru-studio/dooh_society_2.png" alt="Digital Display in Residential Complex">
+                            <img src="dooh_society_2.png" alt="Digital Display in Residential Complex">
                         </div>
                         <div class="collage-image collage-img-3">
-                            <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927600/paaru-studio/dooh_society_3.png" alt="Society Digital Advertising">
+                            <img src="dooh_society_3.png" alt="Society Digital Advertising">
                         </div>
                     </div>
                     <div class="metro-content">
@@ -225,13 +224,13 @@
                 <div class="metro-billboard">
                     <div class="metro-visual-collage">
                         <div class="collage-image collage-img-1">
-                            <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927593/paaru-studio/dooh_coworking_1.png" alt="Digital Screen in Co-Working Space">
+                            <img src="dooh_coworking_1.png" alt="Digital Screen in Co-Working Space">
                         </div>
                         <div class="collage-image collage-img-2">
-                            <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927594/paaru-studio/dooh_coworking_2.png" alt="IT Park Digital Display">
+                            <img src="dooh_coworking_2.png" alt="IT Park Digital Display">
                         </div>
                         <div class="collage-image collage-img-3">
-                            <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927595/paaru-studio/dooh_coworking_3.png" alt="Professional Workspace Advertising">
+                            <img src="dooh_coworking_3.png" alt="Professional Workspace Advertising">
                         </div>
                     </div>
                     <div class="metro-content">
@@ -284,10 +283,10 @@
                 <div class="metro-billboard">
                     <div class="ipl-visual-stacked">
                         <div class="ipl-image-stacked">
-                            <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927643/paaru-studio/ipl_lband_1.png" alt="IPL L-Band Desktop Display">
+                            <img src="ipl_lband_1.png" alt="IPL L-Band Desktop Display">
                         </div>
                         <div class="ipl-image-stacked">
-                            <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927644/paaru-studio/ipl_lband_2.png" alt="IPL L-Band Mobile Display">
+                            <img src="ipl_lband_2.png" alt="IPL L-Band Mobile Display">
                         </div>
                     </div>
                     <div class="metro-content">
@@ -328,10 +327,10 @@
                 <div class="metro-billboard">
                     <div class="ipl-visual-stacked">
                         <div class="ipl-image-stacked">
-                            <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927639/paaru-studio/ipl_billboard_1.png" alt="IPL Billboard Desktop Display">
+                            <img src="ipl_billboard_1.png" alt="IPL Billboard Desktop Display">
                         </div>
                         <div class="ipl-image-stacked">
-                            <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927641/paaru-studio/ipl_billboard_2.png" alt="IPL Billboard Mobile Display">
+                            <img src="ipl_billboard_2.png" alt="IPL Billboard Mobile Display">
                         </div>
                     </div>
                     <div class="metro-content">
@@ -372,7 +371,7 @@
                 <div class="metro-billboard">
                     <div class="ipl-visual-stacked">
                         <div class="ipl-image-stacked">
-                            <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927642/paaru-studio/ipl_dframe_1.png" alt="IPL Display Frame Mobile">
+                            <img src="ipl_dframe_1.png" alt="IPL Display Frame Mobile">
                         </div>
                     </div>
                     <div class="metro-content">
@@ -412,7 +411,7 @@
                 <div class="metro-billboard">
                     <div class="ipl-visual-stacked">
                         <div class="ipl-image-stacked">
-                            <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927645/paaru-studio/ipl_sportstab_1.png" alt="IPL Sports BrandTab Display">
+                            <img src="ipl_sportstab_1.png" alt="IPL Sports BrandTab Display">
                         </div>
                     </div>
                     <div class="metro-content">
@@ -820,7 +819,6 @@
             document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
         })();
     </script>
-    <script src="loading-animation.js"></script>
 </body>
 
 </html>

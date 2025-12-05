@@ -9,7 +9,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="hero-fixes.css">
 </head>
 <body class="portfolio-page">
     <!-- Top Banner -->
@@ -226,8 +225,8 @@
                     <div class="gallery-item fit-auto"><div class="gallery-image fit-image"><img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927659/paaru-studio/06.jpg" alt="Gallery image 5"></div></div>
                     <div class="gallery-item fit-auto"><div class="gallery-image fit-image"><img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927660/paaru-studio/08.jpg" alt="Gallery image 6"></div></div>
                     <div class="gallery-item fit-auto"><div class="gallery-image fit-image"><img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927662/paaru-studio/DAS00810.jpg" alt="Gallery image 7"></div></div>
-                    <div class="gallery-item fit-auto"><div class="gallery-image fit-image"><img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764929253/paaru-studio/DSC00084.png" alt="Gallery image 8"></div></div>
-                    <div class="gallery-item fit-auto"><div class="gallery-image fit-image"><img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764929265/paaru-studio/DSC00172-Edit.png" alt="Gallery image 9"></div></div>
+                    <div class="gallery-item fit-auto"><div class="gallery-image fit-image"><img src="portfolio_pics/DSC00084.png" alt="Gallery image 8"></div></div>
+                    <div class="gallery-item fit-auto"><div class="gallery-image fit-image"><img src="portfolio_pics/DSC00172-Edit.png" alt="Gallery image 9"></div></div>
                     <div class="gallery-item fit-auto"><div class="gallery-image fit-image"><img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927663/paaru-studio/IMG_4742.png" alt="Gallery image 10"></div></div>
                     <div class="gallery-item fit-auto"><div class="gallery-image fit-image"><img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927665/paaru-studio/IMG_4748.png" alt="Gallery image 11"></div></div>
                     <div class="gallery-item fit-auto"><div class="gallery-image fit-image"><img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927667/paaru-studio/IMG_4749.png" alt="Gallery image 12"></div></div>
@@ -303,7 +302,7 @@
                 </div>
                 <div class="fashion-carousel">
                     <div class="fashion-item">
-                        <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764928766/paaru-studio/Fashion_img_01.jpg" alt="Fashion Photography 1">
+                        <img src="Fashion_img_01.jpg" alt="Fashion Photography 1">
                     </div>
                     <div class="fashion-item">
                         <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927495/paaru-studio/Fashion_img_02.jpg" alt="Fashion Photography 2">
@@ -312,14 +311,14 @@
                         <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927497/paaru-studio/Fashion_img_03.jpg" alt="Fashion Photography 3">
                     </div>
                     <div class="fashion-item">
-                        <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764928768/paaru-studio/Fashion_img_04.jpg" alt="Fashion Photography 4">
+                        <img src="Fashion_img_04.jpg" alt="Fashion Photography 4">
                     </div>
                     <div class="fashion-item">
-                        <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764928773/paaru-studio/Fashion_img_05.jpg" alt="Fashion Photography 5">
+                        <img src="Fashion_img_05.jpg" alt="Fashion Photography 5">
                     </div>
                     <!-- Duplicate images for seamless infinite scroll -->
                     <div class="fashion-item">
-                        <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764928766/paaru-studio/Fashion_img_01.jpg" alt="Fashion Photography 1">
+                        <img src="Fashion_img_01.jpg" alt="Fashion Photography 1">
                     </div>
                     <div class="fashion-item">
                         <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927495/paaru-studio/Fashion_img_02.jpg" alt="Fashion Photography 2">
@@ -328,10 +327,10 @@
                         <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927497/paaru-studio/Fashion_img_03.jpg" alt="Fashion Photography 3">
                     </div>
                     <div class="fashion-item">
-                        <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764928768/paaru-studio/Fashion_img_04.jpg" alt="Fashion Photography 4">
+                        <img src="Fashion_img_04.jpg" alt="Fashion Photography 4">
                     </div>
                     <div class="fashion-item">
-                        <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764928773/paaru-studio/Fashion_img_05.jpg" alt="Fashion Photography 5">
+                        <img src="Fashion_img_05.jpg" alt="Fashion Photography 5">
                     </div>
                 </div>
             </section>
@@ -519,6 +518,5 @@
         document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
     })();
     </script>
-    <script src="loading-animation.js"></script>
 </body>
 </html>

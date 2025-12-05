@@ -9,7 +9,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="hero-fixes.css">
 </head>
 <body class="index-page">
     <!-- Top Banner -->
@@ -27,7 +26,7 @@
         <div class="container">
             <div class="nav-content">
                 <a href="index.html" class="logo">
-                    <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927649/paaru-studio/logo.png" alt="Paaru Studio Logo" class="logo-image">
+                    <img src="logo.png" alt="Paaru Studio Logo" class="logo-image">
                     <span class="logo-text">
                         <span class="logo-text-static">PAARU</span>
                         <span class="logo-text-flip">
@@ -122,10 +121,10 @@
             <div style="max-width: 1200px; margin: 0 auto;">
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); gap: 30px; margin-bottom: 0;">
                     <div style="position: relative; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
-                        <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927481/paaru-studio/CK_CS_01.png" alt="Calvin Klein Campaign Creative 1" style="width: 100%; height: auto; display: block; transition: transform 0.3s ease;">
+                        <img src="CK_CS_01.png" alt="Calvin Klein Campaign Creative 1" style="width: 100%; height: auto; display: block; transition: transform 0.3s ease;">
                     </div>
                     <div style="position: relative; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
-                        <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927484/paaru-studio/CK_CS_02.png" alt="Calvin Klein Campaign Creative 2" style="width: 100%; height: auto; display: block; transition: transform 0.3s ease;">
+                        <img src="CK_CS_02.png" alt="Calvin Klein Campaign Creative 2" style="width: 100%; height: auto; display: block; transition: transform 0.3s ease;">
                     </div>
                 </div>
             </div>
@@ -296,6 +295,5 @@
 
     <script src="script.js"></script>
     <script src="popup-form.js"></script>
-    <script src="loading-animation.js"></script>
 </body>
 </html>

@@ -11,7 +11,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="hero-fixes.css">
 </head>
 
 <body class="services-page ecommerce-page">
@@ -129,7 +128,7 @@
                 <div class="service-item">
                     <div class="service-banner"
                         style="width: 100%; height: 260px; border-radius: 8px; overflow: hidden; margin-bottom: 16px;">
-                        <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764929268/paaru-studio/product_shoot_banner.jpg" alt="Product Photography"
+                        <img src="product_shoot_banner.jpg" alt="Product Photography"
                             style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <h3>Product Photography</h3>
@@ -148,7 +147,7 @@
                 <div class="service-item">
                     <div class="service-banner"
                         style="width: 100%; height: 260px; border-radius: 8px; overflow: hidden; margin-bottom: 16px;">
-                        <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764929231/paaru-studio/lifestyle_shoot_banner.jpg" alt="Lifestyle Shoots"
+                        <img src="lifestyle_shoot_banner.jpg" alt="Lifestyle Shoots"
                             style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <h3>Lifestyle Shoots</h3>
@@ -186,7 +185,7 @@
                 <div class="service-item">
                     <div class="service-banner"
                         style="width: 100%; height: 260px; border-radius: 8px; overflow: hidden; margin-bottom: 16px;">
-                        <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764929222/paaru-studio/image_retouch_banner.jpg" alt="Image Editing & Retouching"
+                        <img src="image_retouch_banner.jpg" alt="Image Editing & Retouching"
                             style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <h3>Image Editing & Retouching</h3>
@@ -205,7 +204,7 @@
                 <div class="service-item">
                     <div class="service-banner"
                         style="width: 100%; height: 260px; border-radius: 8px; overflow: hidden; margin-bottom: 16px;">
-                        <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764929210/paaru-studio/cataloge_creation_banner.jpg" alt="Catalog Creation"
+                        <img src="cataloge_creation_banner.jpg" alt="Catalog Creation"
                             style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <h3>Catalog Creation</h3>
@@ -532,7 +531,6 @@
             document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
         })();
     </script>
-    <script src="loading-animation.js"></script>
 </body>
 
 </html>

@@ -8,7 +8,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="hero-fixes.css">
 </head>
 <body class="privacy-policy-page services-page">
     <!-- Top Banner -->
@@ -26,7 +25,7 @@
         <div class="container">
             <div class="nav-content">
                 <a href="index.html" class="logo">
-                    <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927649/paaru-studio/logo.png" alt="Paaru Studio Logo" class="logo-image">
+                    <img src="logo.png" alt="Paaru Studio Logo" class="logo-image">
                     <span class="logo-text">
                         <span class="logo-text-static">PAARU</span>
                         <span class="logo-text-flip">
@@ -409,6 +408,5 @@
         document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
     })();
     </script>
-    <script src="loading-animation.js"></script>
 </body>
 </html>

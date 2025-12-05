@@ -12,7 +12,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="hero-fixes.css">
 </head>
 
 <body class="index-page">
@@ -70,11 +69,11 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <iframe class="hero-bg-iframe" id="heroVideo"
-            src="https://www.youtube.com/embed/1KmBeKsYq_0?autoplay=1&mute=1&controls=0&loop=1&playlist=1KmBeKsYq_0&playsinline=1&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&cc_load_policy=0"
+        <iframe class="hero-bg-iframe"
+            src="https://www.youtube.com/embed/1KmBeKsYq_0?autoplay=1&mute=1&controls=0&loop=1&playlist=1KmBeKsYq_0&playsinline=1&showinfo=0&rel=0"
             title="Hero Background Video" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         <div class="container">
             <div class="hero-content">
                 <h1 class="hero-title">
@@ -83,38 +82,11 @@
                 <p class="hero-subtitle">An Agency of Possibilities</p>
                 <a href="services.html" class="hero-cta">EXPLORE OUR SERVICES</a>
             </div>
+            <div class="hero-visual">
+                <div class="floating-card"></div>
+            </div>
         </div>
     </section>
-
-    <!-- Script to ensure hero video always plays -->
-    <script>
-        (function() {
-            const heroVideo = document.getElementById('heroVideo');
-            if (!heroVideo) return;
-
-            // Force YouTube player to maintain autoplay
-            function ensureVideoPlays() {
-                if (heroVideo && heroVideo.src) {
-                    // Ensure autoplay parameter is set
-                    if (!heroVideo.src.includes('autoplay=1')) {
-                        const url = new URL(heroVideo.src);
-                        url.searchParams.set('autoplay', '1');
-                        url.searchParams.set('mute', '1');
-                        heroVideo.src = url.toString();
-                    }
-                }
-            }
-
-            // Run on page load
-            window.addEventListener('load', ensureVideoPlays);
-            
-            // Try to play on user interaction as fallback
-            document.addEventListener('click', ensureVideoPlays);
-            
-            // Retry periodically
-            setInterval(ensureVideoPlays, 5000);
-        })();
-    </script>
 
     <!-- About Section -->
     <section id="about" class="about-section">
@@ -308,11 +280,11 @@
                                 alt="Gallery image 7"></div>
                     </div>
                     <div class="gallery-item fit-auto">
-                        <div class="gallery-image fit-image"><img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764929253/paaru-studio/DSC00084.png"
+                        <div class="gallery-image fit-image"><img src="portfolio_pics/DSC00084.png"
                                 alt="Gallery image 8"></div>
                     </div>
                     <div class="gallery-item fit-auto">
-                        <div class="gallery-image fit-image"><img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764929265/paaru-studio/DSC00172-Edit.png"
+                        <div class="gallery-image fit-image"><img src="portfolio_pics/DSC00172-Edit.png"
                                 alt="Gallery image 9"></div>
                     </div>
                     <div class="gallery-item fit-auto">
@@ -1535,7 +1507,6 @@
             </svg>
         </a>
 
-    <script src="loading-animation.js"></script>
 </body>
 
 </html>

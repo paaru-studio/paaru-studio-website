@@ -338,7 +338,6 @@
             }
         }
     </style>
-    <link rel="stylesheet" href="hero-fixes.css">
 </head>
 <body class="services-page">
     <!-- Top Banner -->
@@ -451,7 +450,7 @@
                 <!-- Image on Left -->
                 <div style="flex: 1; min-width: 300px;">
                     <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.4);">
-                        <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764929225/paaru-studio/japfa_challenge.jpg" alt="Japfa Best Marketing Challenge - Team Strategy Meeting" style="width: 100%; height: auto; display: block;">
+                        <img src="japfa_challenge.jpg" alt="Japfa Best Marketing Challenge - Team Strategy Meeting" style="width: 100%; height: auto; display: block;">
                     </div>
                 </div>
                 
@@ -719,6 +718,5 @@
         document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
     })();
     </script>
-    <script src="loading-animation.js"></script>
 </body>
 </html>

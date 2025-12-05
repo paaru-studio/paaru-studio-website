@@ -11,7 +11,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="hero-fixes.css">
 </head>
 
 <body class="services-page">
@@ -30,7 +29,7 @@
         <div class="container">
             <div class="nav-content">
                 <a href="index.html" class="logo">
-                    <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927649/paaru-studio/logo.png" alt="Paaru Studio Logo" class="logo-image">
+                    <img src="logo.png" alt="Paaru Studio Logo" class="logo-image">
                     <span class="logo-text">
                         <span class="logo-text-static">PAARU</span>
                         <span class="logo-text-flip">
@@ -82,7 +81,7 @@
                 <div class="case-study-card">
                     <a href="case-study-japfa.html" class="case-study-link">
                         <div class="case-study-image">
-                            <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927647/paaru-studio/japfa_hero.png" alt="Japfa Case Study">
+                            <img src="japfa_hero.png" alt="Japfa Case Study">
                             <div class="case-study-overlay">
                                 <span class="view-case-study">View Case Study →</span>
                             </div>
@@ -103,7 +102,7 @@
                 <div class="case-study-card">
                     <a href="case-study-calvin-klein.html" class="case-study-link">
                         <div class="case-study-image">
-                            <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927584/paaru-studio/ck-banner.png" alt="Calvin Klein Case Study">
+                            <img src="ck-banner.png" alt="Calvin Klein Case Study">
                             <div class="case-study-overlay">
                                 <span class="view-case-study">View Case Study →</span>
                             </div>
@@ -124,7 +123,7 @@
                 <div class="case-study-card">
                     <a href="case-study-giva.html" class="case-study-link">
                         <div class="case-study-image">
-                            <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927608/paaru-studio/giva-banner.png" alt="GIVA Case Study">
+                            <img src="giva-banner.png" alt="GIVA Case Study">
                             <div class="case-study-overlay">
                                 <span class="view-case-study">View Case Study →</span>
                             </div>
@@ -224,7 +223,6 @@
 
     <script src="script.js"></script>
     <script src="popup-form.js"></script>
-    <script src="loading-animation.js"></script>
 </body>
 
 </html>

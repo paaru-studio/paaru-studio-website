@@ -1,0 +1,19 @@
+{
+  "name": "paaru-studio-cloudinary-migration",
+  "version": "1.0.0",
+  "description": "Automated image and file migration to Cloudinary CDN",
+  "main": "cloudinary-migrate.js",
+  "scripts": {
+    "migrate": "node cloudinary-migrate.js",
+    "upload": "node cloudinary-upload.js",
+    "replace-urls": "node replace-urls.js",
+    "full-migration": "npm run migrate && npm run replace-urls"
+  },
+  "dependencies": {
+    "cloudinary": "^1.41.0",
+    "dotenv": "^16.3.1",
+    "glob": "^10.3.10",
+    "chalk": "^5.3.0"
+  },
+  "devDependencies": {}
+}

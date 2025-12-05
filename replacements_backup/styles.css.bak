@@ -9,7 +9,7 @@
 
 /* TV Commercial Background Image */
 .tv-com-bg {
-    background-image: url('https://res.cloudinary.com/dvjveceob/image/upload/v1764927684/paaru-studio/tv_com.jpg');
+    background-image: url('tv_com.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -1277,7 +1277,7 @@ video {
     content: '';
     position: absolute;
     inset: 0;
-    background-image: url('https://res.cloudinary.com/dvjveceob/image/upload/v1764927576/paaru-studio/about_us_bg.jpg');
+    background-image: url('about_us_bg.JPG');
     /* Use cover to keep the image visually strong while we lighten the overlay below */
     background-size: cover;
     background-position: center center;
@@ -3516,13 +3516,13 @@ video {
     position: absolute;
     left: 4%;
     bottom: 4%;
-    /* use the user-supplied raster globe at workspace root (https://res.cloudinary.com/dvjveceob/image/upload/v1764927527/paaru-studio/Globe.png) with SVG fallback */
+    /* use the user-supplied raster globe at workspace root (Globe.png) with SVG fallback */
     width: 48vw;
     height: 48vw;
     max-width: 560px;
     max-height: 560px;
     /* Layer 1: a warmer gradient tint matching the banner; Layer 2: user's globe; Layer 3: SVG fallback */
-    background-image: linear-gradient(135deg, rgba(251, 191, 36, 0.14), rgba(245, 158, 11, 0.12)), url('https://res.cloudinary.com/dvjveceob/image/upload/v1764927527/paaru-studio/Globe.png'), url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><circle cx='100' cy='100' r='90' fill='none' stroke='%23ffffff' stroke-width='4' opacity='0.06'/><path d='M10 100a90 90 0 0 0 180 0' stroke='%23ffffff' stroke-width='2' opacity='0.04' fill='none'/><path d='M100 10a90 90 0 0 0 0 180' stroke='%23ffffff' stroke-width='2' opacity='0.04' fill='none'/></svg>");
+    background-image: linear-gradient(135deg, rgba(251, 191, 36, 0.14), rgba(245, 158, 11, 0.12)), url('Globe.png'), url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><circle cx='100' cy='100' r='90' fill='none' stroke='%23ffffff' stroke-width='4' opacity='0.06'/><path d='M10 100a90 90 0 0 0 180 0' stroke='%23ffffff' stroke-width='2' opacity='0.04' fill='none'/><path d='M100 10a90 90 0 0 0 0 180' stroke='%23ffffff' stroke-width='2' opacity='0.04' fill='none'/></svg>");
     background-repeat: no-repeat, no-repeat, no-repeat;
     /* anchor the globe to the left/bottom so it sits behind the center/left columns */
     background-position: left bottom, left bottom, center center;
@@ -3764,7 +3764,7 @@ video {
     transform: translateX(-50%);
     width: 2000px;
     height: 900px;
-    background-image: url('https://res.cloudinary.com/dvjveceob/image/upload/v1764927688/paaru-studio/web%20page%20bg%204K.png');
+    background-image: url('web page bg 4k.png');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center center;
@@ -3791,7 +3791,7 @@ video {
     transform: translateX(-50%);
     width: 2000px;
     height: 900px;
-    background-image: url('https://res.cloudinary.com/dvjveceob/image/upload/v1764927688/paaru-studio/web%20page%20bg%204K.png');
+    background-image: url('web page bg 4k.png');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center center;
