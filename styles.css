@@ -1,5 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
+/* Certifications Section Styles */
+.certifications-section {
+    position: relative;
+    z-index: 1;
+}
+
+.certification-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 30px 20px;
+    border-radius: 12px;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+}
+
+.certification-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 32px rgba(245, 158, 11, 0.2);
+}
+
+.certification-badge {
+    transition: transform 0.3s ease;
+}
+
+.certification-card:hover .certification-badge {
+    transform: scale(1.05);
+}
+
 /* Reduce opacity for TV Commercial thumbnail */
 .tv-com-opacity {
     opacity: 0.9;
@@ -259,6 +286,12 @@ body {
 }
 
 .index-page .footer.full-bleed {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.index-page .footer-bottom {
+    padding-bottom: 0;
     margin-bottom: 0;
 }
 
@@ -1337,7 +1370,7 @@ video {
         line-height: 1.5;
         margin-bottom: 10px;
     }
-    
+
     /* Compact about section on mobile */
     .about-section {
         padding: 20px 0 !important;
@@ -1345,25 +1378,25 @@ video {
         top: -50px;
         margin-bottom: -80px;
     }
-    
+
     .about-section .section-header {
         margin-bottom: 15px;
     }
-    
+
     .about-section .section-header h2 {
         font-size: 20px;
         margin-bottom: 8px;
     }
-    
+
     .about-section .underline {
         width: 40px;
         height: 3px;
     }
-    
+
     .index-page .about-content {
         padding: 8px 12px;
     }
-    
+
     .about-content {
         max-width: 100%;
         margin: 0;
@@ -1420,7 +1453,7 @@ video {
         margin: 10px 18px;
         gap: 16px;
     }
-    
+
     .services-overview .service-item,
     .services-page .services-overview .service-item {
         padding: 16px;
@@ -1637,39 +1670,38 @@ video {
     margin-bottom: 60px;
 }
 
-/* Instagram embed helpers: a responsive two-column row that stacks on mobile */
-/* Instagram embed helpers: responsive two-column row wrapped in a white card */
+/* Instagram embed helpers: Professional dark-themed Instagram section */
 .instagram-card {
-    background: #fff;
-    color: #111;
-    padding: 20px;
-    border-radius: 10px;
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.05) 0%, rgba(17, 24, 39, 0.1) 100%);
+    border: 1px solid rgba(245, 158, 11, 0.15);
+    padding: 60px 20px;
+    border-radius: 20px;
 
-    /* Full-bleed white band for the Instagram embed inside E-commerce block (no side margins) */
+    /* Full-bleed dark band for Instagram embed inside E-commerce block */
     .instagram-card.full-bleed-instagram {
         width: 100vw;
         margin-left: calc(50% - 50vw);
         margin-right: calc(50% - 50vw);
-        background: #ffffff;
-        padding: 20px 0;
-        /* vertical padding to keep spacing */
+        background: linear-gradient(135deg, rgba(245, 158, 11, 0.03) 0%, rgba(17, 24, 39, 0.05) 100%);
+        border-top: 1px solid rgba(245, 158, 11, 0.1);
+        border-bottom: 1px solid rgba(245, 158, 11, 0.1);
+        padding: 60px 20px;
     }
 
     .instagram-card.full-bleed-instagram .instagram-row {
         max-width: 1200px;
         margin: 0 auto;
         padding: 0 20px;
-        /* keep content aligned with site container */
     }
 
-    box-shadow:0 10px 30px rgba(0, 0, 0, 0.08);
-    max-width:1100px;
-    margin:24px auto;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    max-width: 100%;
+    margin: 40px auto;
 }
 
 .instagram-row {
     display: flex;
-    gap: 18px;
+    gap: 24px;
     justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
@@ -1677,40 +1709,51 @@ video {
 }
 
 .instagram-embed-wrapper {
-    width: 48%;
+    width: calc(50% - 12px);
     max-width: 520px;
     margin: 0;
-    /* clamp vertical display so we can crop long embeds */
-    max-height: 420px;
-    overflow: hidden;
     position: relative;
-    background: transparent;
-    border-radius: 8px;
-    padding: 8px;
+    background: rgba(17, 24, 39, 0.4);
+    border: 1px solid rgba(245, 158, 11, 0.2);
+    border-radius: 16px;
+    padding: 12px;
+    transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    overflow: hidden;
+    will-change: transform, box-shadow;
 }
 
 .instagram-embed-wrapper:hover {
-    overflow: auto
+    background: rgba(17, 24, 39, 0.6);
+    border-color: rgba(245, 158, 11, 0.4);
+    box-shadow: 0 12px 48px rgba(245, 158, 11, 0.2);
+    transform: translateY(-8px) translate3d(0, 0, 0);
 }
 
 .instagram-embed-wrapper::-webkit-scrollbar {
     height: 8px;
-    width: 8px
+    width: 8px;
+    background: rgba(245, 158, 11, 0.1);
+}
+
+.instagram-embed-wrapper::-webkit-scrollbar-thumb {
+    background: rgba(245, 158, 11, 0.3);
+    border-radius: 4px;
 }
 
 .instagram-embed-wrapper blockquote.instagram-media {
     width: 100% !important;
-    max-width: 420px !important;
+    max-width: 100% !important;
     padding: 0 !important;
-    margin: 0 auto !important
+    margin: 0 !important;
+    border-radius: 12px;
+    overflow: hidden;
 }
 
-@media (max-width:900px) {
+@media (max-width: 900px) {
     .instagram-embed-wrapper {
         width: 100%;
         max-width: 100%;
         margin: 12px auto;
-        max-height: 540px
     }
 }
 
@@ -2141,7 +2184,7 @@ video {
 
 /* Grid layout for the standalone portfolio page only (applies when JS sets .portfolio-page on <body>)
    This keeps the index page using the original sliding carousel. */
-.portfolio-page .portfolio-section .carousel-viewport {
+/* .portfolio-page .portfolio-section .carousel-viewport {
     width: 100%;
     margin: 0;
 }
@@ -2189,7 +2232,7 @@ video {
     .portfolio-page .portfolio-section .portfolio-image {
         height: 180px;
     }
-}
+} */
 
 /* Video modal styles (centered popup) */
 .video-modal {
@@ -2334,11 +2377,99 @@ video {
 }
 
 .reels-grid {
-    display: grid;
-    /* set a sensible minimum column width so each reel is a bit larger */
-    grid-template-columns: repeat(6, minmax(160px, 1fr));
+    display: flex;
+    overflow-x: auto;
     gap: 20px;
-    align-items: start;
+    padding-bottom: 24px;
+    /* Space for scrollbar/shadow */
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    /* Hide scrollbar for cleaner look, but allow scrolling */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.reels-grid::-webkit-scrollbar {
+    display: none;
+    /* Chrome/Safari */
+}
+
+.reel {
+    flex: 0 0 200px;
+    /* Fixed width for consistency */
+    display: block;
+    scroll-snap-align: start;
+}
+
+/* Reels Navigation Buttons */
+.reels-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(10, 10, 10, 0.6);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 20;
+    transition: all 0.2s ease;
+    opacity: 0;
+    /* Hidden by default */
+    pointer-events: none;
+}
+
+.container:hover .reels-nav {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.reels-nav:hover {
+    background: rgba(245, 158, 11, 0.9);
+    border-color: rgba(245, 158, 11, 0.9);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.reels-nav.prev {
+    left: -22px;
+}
+
+.reels-nav.next {
+    right: -22px;
+}
+
+@media (max-width: 1200px) {
+    .reels-nav.prev {
+        left: 10px;
+    }
+
+    .reels-nav.next {
+        right: 10px;
+    }
+
+    /* Hide nav buttons on mobile where swipe is natural */
+    .reels-nav {
+        display: none !important;
+    }
+
+    .reels-grid {
+        gap: 16px;
+        padding-left: 16px;
+        /* peeking effect */
+        padding-right: 16px;
+    }
+
+    .reel {
+        /* Slightly larger relative width on mobile for better visibility */
+        flex: 0 0 160px;
+    }
 }
 
 .reel {
@@ -2379,27 +2510,29 @@ video {
     content: none !important;
 }
 
-@media (max-width: 1200px) {
-    .reels-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
 
-@media (max-width: 900px) {
-    .reels-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 14px;
-    }
-}
 
 @media (max-width: 480px) {
     .reels-grid {
-        grid-template-columns: 1fr;
-        gap: 12px;
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 20px;
+        /* Space for scrollbar if visible/touch */
+        gap: 16px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .reel {
+        flex: 0 0 70%;
+        /* Show part of the next reel to encourage scrolling */
+        scroll-snap-align: start;
+        min-width: 0;
     }
 
     .reel .video-embed {
-        border-radius: 10px;
+        border-radius: 14px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
     }
 }
 
@@ -5313,7 +5446,9 @@ video {
 /* Footer Main Section */
 .footer-main {
     background: #0f172a;
-    padding: 60px 0 0;
+    padding: 60px 0 60px 0;
+    margin: 0;
+    border: none;
 }
 
 .footer-grid {
@@ -5398,8 +5533,9 @@ video {
     justify-content: space-between;
     align-items: center;
     padding-top: 40px;
-    padding-bottom: 40px;
+    padding-bottom: 0;
     border-top: 1px solid #1e293b;
+    margin: 0;
 }
 
 .footer-bottom p {
@@ -5679,7 +5815,7 @@ video {
     section {
         padding: 50px 20px;
     }
-    
+
     /* Override for about section - make it more compact */
     .about-section {
         padding: 20px 12px !important;
@@ -8994,17 +9130,93 @@ html {
     }
 }
 
-/* Google Certificate Images - Mobile Styles */
+/* Google Certifications Floating Badges */
+.certifications-badges-container {
+    position: fixed;
+    bottom: 120px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 40;
+    pointer-events: auto;
+}
+
+.cert-badge-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(245, 158, 11, 0.05) 100%);
+    border: 2px solid rgba(245, 158, 11, 0.3);
+    border-radius: 50%;
+    padding: 8px;
+    transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform, box-shadow, border-color;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    text-decoration: none;
+    backdrop-filter: blur(10px);
+}
+
+.cert-badge-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.15));
+    transition: filter 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.cert-badge-item:hover {
+    transform: scale(1.1) translateY(-5px);
+    box-shadow: 0 12px 40px rgba(245, 158, 11, 0.25), 0 0 20px rgba(245, 158, 11, 0.15);
+    border-color: rgba(245, 158, 11, 0.6);
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.2) 0%, rgba(245, 158, 11, 0.1) 100%);
+}
+
+.cert-badge-item:hover img {
+    filter: drop-shadow(0 4px 16px rgba(245, 158, 11, 0.3));
+}
+
+/* Certifications Badges - Responsive */
 @media (max-width: 900px) {
     .google-certificate-img {
         width: 60px !important;
         height: 60px !important;
     }
-    
+
     .google-certificates-container {
         right: 50px !important;
         bottom: 160px !important;
         gap: 10px !important;
+    }
+
+    .certifications-badges-container {
+        bottom: 100px;
+        right: 20px;
+        gap: 12px;
+    }
+
+    .cert-badge-item {
+        width: 60px;
+        height: 60px;
+        border-width: 1.5px;
+    }
+}
+
+@media (max-width: 600px) {
+    .certifications-badges-container {
+        bottom: 90px;
+        right: 15px;
+        gap: 10px;
+    }
+
+    .cert-badge-item {
+        width: 55px;
+        height: 55px;
+        padding: 6px;
+        border-width: 1.5px;
     }
 }
 
@@ -9013,15 +9225,15 @@ html {
     .about-section {
         padding-bottom: 100px !important;
     }
-    
+
     .about-section .cta-btn {
         position: relative;
         z-index: 15 !important;
         margin-bottom: 40px !important;
     }
-    
+
     /* Ensure the button wrapper has enough space */
-    .about-section > .container {
+    .about-section>.container {
         margin-bottom: 20px;
     }
 }

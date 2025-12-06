@@ -328,15 +328,45 @@
                     }
                     
                     @media (max-width: 1024px) {
-                        #gallery .container > div:first-child { grid-template-columns: repeat(3, 1fr) !important; }
+                        #gallery .container > div:first-child { grid-template-columns: repeat(3, 1fr) !important; gap: 18px !important; }
+                        #gallery .container > div:first-child > .gallery-featured:first-child { grid-column: span 3 !important; grid-row: span 1 !important; height: 280px !important; }
+                        #gallery .container > div:first-child > div:nth-child(6) { grid-column: span 3 !important; }
                     }
                     @media (max-width: 768px) {
-                        #gallery .container > div:first-child { grid-template-columns: repeat(2, 1fr) !important; gap: 16px !important; }
-                        #gallery .container > div:first-child > div { height: 200px !important; }
+                        #gallery .container > div:first-child { grid-template-columns: repeat(2, 1fr) !important; gap: 14px !important; }
+                        #gallery .container > div:first-child > .gallery-featured { grid-column: span 2 !important; grid-row: span 1 !important; height: 220px !important; }
+                        #gallery .container > div:first-child > .gallery-standard { grid-column: span 1 !important; height: 180px !important; }
                     }
                     @media (max-width: 480px) {
-                        #gallery .container > div:first-child { grid-template-columns: repeat(1, 1fr) !important; gap: 12px !important; }
-                        #gallery .container > div:first-child > div { grid-column: span 1 !important; height: 220px !important; }
+                        #gallery { padding: 60px 0 !important; }
+                        #gallery .container > div:first-of-type { margin-bottom: 40px !important; }
+                        #gallery .container > div:first-of-type h2 { font-size: 36px !important; margin-bottom: 16px !important; }
+                        #gallery .container > div:first-of-type p { font-size: 14px !important; }
+                        #gallery .container > div:nth-of-type(2) { 
+                            grid-template-columns: 1fr !important; 
+                            gap: 10px !important; 
+                            padding: 0 !important;
+                        }
+                        #gallery .container > div:nth-of-type(2) > div { 
+                            grid-column: span 1 !important; 
+                            height: 160px !important;
+                            border-radius: 8px !important;
+                        }
+                        #gallery .container > div:nth-of-type(2) > .gallery-featured { 
+                            height: 180px !important;
+                        }
+                        #gallery .container > div:nth-of-type(3) { 
+                            padding: 40px 16px !important;
+                            border-radius: 12px !important;
+                        }
+                        #gallery .container > div:nth-of-type(3) h3 { 
+                            font-size: 24px !important;
+                            margin-bottom: 12px !important;
+                        }
+                        #gallery .container > div:nth-of-type(3) p { 
+                            font-size: 14px !important;
+                            margin-bottom: 24px !important;
+                        }
                     }
                 </style>
             </section>
@@ -1175,38 +1205,8 @@
                     })();
                 </script>
                 <script>
-                    // Footer pin-to-bottom at page end (index-only)
-                    (function () {
-                        if (!document.body.classList.contains('index-page')) return;
-                        var footer = document.querySelector('footer.footer');
-                        if (!footer) return;
-                        var ticking = false;
-                        function check() {
-                            var scrollY = window.scrollY || window.pageYOffset;
-                            var viewportH = window.innerHeight;
-                            var docH = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
-                            // If the user scrolled to within 20px of bottom, fix the footer
-                            var atBottom = (scrollY + viewportH) >= (docH - 20);
-                            if (atBottom) {
-                                if (!footer.classList.contains('footer-fixed')) {
-                                    footer.classList.add('footer-fixed');
-                                    // add padding to body so content isn't hidden
-                                    document.body.style.paddingBottom = footer.offsetHeight + 'px';
-                                }
-                            } else {
-                                if (footer.classList.contains('footer-fixed')) {
-                                    footer.classList.remove('footer-fixed');
-                                    document.body.style.paddingBottom = '';
-                                }
-                            }
-                            ticking = false;
-                        }
-                        function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(check); } }
-                        window.addEventListener('scroll', onScroll, { passive: true });
-                        window.addEventListener('resize', onScroll);
-                        // initial check
-                        setTimeout(check, 120);
-                    })();
+                    // Footer pin-to-bottom at page end (index-only) - REMOVED to fix extra black space
+                    // This script was adding padding to the body which created unwanted black space
                 </script>
                 <script>
                     // Small UX helper: show a temporary success message after the hidden-iframe submission
