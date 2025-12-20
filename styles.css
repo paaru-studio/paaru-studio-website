@@ -914,6 +914,18 @@ body {
     border-left: 3px solid var(--accent-color);
 }
 
+/* Portfolio page mobile menu - override black CTA button */
+.portfolio-page .navbar.open .nav-links .cta-btn {
+    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end)) !important;
+    color: white !important;
+    border: none !important;
+}
+
+.portfolio-page .navbar.open .nav-links .cta-btn:hover {
+    background: linear-gradient(90deg, var(--accent-hover), var(--accent-color)) !important;
+    color: white !important;
+}
+
 .navbar.open .nav-dropdown {
     width: 100%;
 }
