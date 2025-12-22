@@ -97,22 +97,13 @@
                 <div class="metro-billboard">
                     <div class="metro-visual-collage">
                         <div class="collage-image collage-img-1">
-                            <picture>
-                                <source srcset="metro_ad_1.webp" type="image/webp">
-                                <img loading="lazy" src="metro_ad_1.jpg" alt="Metro Interior Advertising">
-                            </picture>
+                            <img loading="lazy" src="metro_ad_1.jpg" alt="Metro Interior Advertising">
                         </div>
                         <div class="collage-image collage-img-2">
-                            <picture>
-                                <source srcset="metro_ad_2.webp" type="image/webp">
-                                <img loading="lazy" src="metro_ad_2.jpg" alt="Metro Exterior Advertising">
-                            </picture>
+                            <img loading="lazy" src="metro_ad_2.jpg" alt="Metro Exterior Advertising">
                         </div>
                         <div class="collage-image collage-img-3">
-                            <picture>
-                                <source srcset="metro_ad_3.webp" type="image/webp">
-                                <img loading="lazy" src="metro_ad_3.jpg" alt="Metro Station Advertising">
-                            </picture>
+                            <img loading="lazy" src="metro_ad_3.jpg" alt="Metro Station Advertising">
                         </div>
                     </div>
                     <div class="metro-content">
@@ -150,22 +141,13 @@
                 <div class="metro-billboard">
                     <div class="metro-visual-collage">
                         <div class="collage-image collage-img-1">
-                            <picture>
-                                <source srcset="dooh_ad_1.webp" type="image/webp">
-                                <img loading="lazy" src="dooh_ad_1.jpg" alt="Digital Mall Screen Advertising">
-                            </picture>
+                            <img loading="lazy" src="dooh_ad_1.jpg" alt="Digital Mall Screen Advertising">
                         </div>
                         <div class="collage-image collage-img-2">
-                            <picture>
-                                <source srcset="dooh_ad_2.webp" type="image/webp">
-                                <img loading="lazy" src="dooh_ad_2.jpg" alt="Premium Digital Display">
-                            </picture>
+                            <img loading="lazy" src="dooh_ad_2.jpg" alt="Premium Digital Display">
                         </div>
                         <div class="collage-image collage-img-3">
-                            <picture>
-                                <source srcset="dooh_ad_3.webp" type="image/webp">
-                                <img loading="lazy" src="dooh_ad_3.jpg" alt="Mall Digital Advertising">
-                            </picture>
+                            <img loading="lazy" src="dooh_ad_3.jpg" alt="Mall Digital Advertising">
                         </div>
                     </div>
                     <div class="metro-content">

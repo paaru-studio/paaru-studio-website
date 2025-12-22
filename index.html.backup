@@ -238,92 +238,59 @@
                 <div class="gallery-grid">
                     <div class="gallery-item fit-auto">
                         <div class="gallery-image fit-image">
-                            <picture><picture>
-    <source srcset="Image 01.webp" type="image/webp">
-    <img loading="lazy" src="Image 01.jpeg" alt="Gallery image 1">
-</picture></picture>
+                            <picture><img loading="lazy" src="Image 01.jpeg" alt="Gallery image 1"></picture>
                         </div>
                     </div>
                     <div class="gallery-item fit-auto">
                         <div class="gallery-image fit-image">
-                            <picture><picture>
-    <source srcset="portfolio_pics/01.webp" type="image/webp">
-    <img loading="lazy" src="portfolio_pics/01.jpg" alt="Gallery image 16">
-</picture></picture>
+                            <picture><img loading="lazy" src="portfolio_pics/01.jpg" alt="Gallery image 16"></picture>
                         </div>
                     </div>
                     <div class="gallery-item fit-auto">
                         <div class="gallery-image fit-image">
-                            <picture><picture>
-    <source srcset="portfolio_pics/02.webp" type="image/webp">
-    <img loading="lazy" src="portfolio_pics/02.jpg" alt="Gallery image 17">
-</picture></picture>
+                            <picture><img loading="lazy" src="portfolio_pics/02.jpg" alt="Gallery image 17"></picture>
                         </div>
                     </div>
                     <div class="gallery-item fit-auto">
                         <div class="gallery-image fit-image">
-                            <picture><picture>
-    <source srcset="portfolio_pics/03.webp" type="image/webp">
-    <img loading="lazy" src="portfolio_pics/03.jpg" alt="Gallery image 15">
-</picture></picture>
+                            <picture><img loading="lazy" src="portfolio_pics/03.jpg" alt="Gallery image 15"></picture>
                         </div>
                     </div>
                     <div class="gallery-item fit-auto">
                         <div class="gallery-image fit-image">
-                            <picture><picture>
-    <source srcset="portfolio_pics/04.webp" type="image/webp">
-    <img loading="lazy" src="portfolio_pics/04.jpg" alt="Gallery image 18">
-</picture></picture>
+                            <picture><img loading="lazy" src="portfolio_pics/04.jpg" alt="Gallery image 18"></picture>
                         </div>
                     </div>
                     <div class="gallery-item fit-auto">
                         <div class="gallery-image fit-image">
-                            <picture><picture>
-    <source srcset="portfolio_pics/01.webp" type="image/webp">
-    <img loading="lazy" src="portfolio_pics/01.jpeg" alt="Gallery image 2">
-</picture></picture>
+                            <picture><img loading="lazy" src="portfolio_pics/01.jpeg" alt="Gallery image 2"></picture>
                         </div>
                     </div>
                     <div class="gallery-item fit-auto">
                         <div class="gallery-image fit-image">
-                            <picture><picture>
-    <source srcset="portfolio_pics/03 (1).webp" type="image/webp">
-    <img loading="lazy" src="portfolio_pics/03 (1).jpeg" alt="Gallery image 3">
-</picture>
+                            <picture><img loading="lazy" src="portfolio_pics/03 (1).jpeg" alt="Gallery image 3">
                             </picture>
                         </div>
                     </div>
                     <div class="gallery-item fit-auto">
                         <div class="gallery-image fit-image">
-                            <picture><picture>
-    <source srcset="portfolio_pics/04 (1).webp" type="image/webp">
-    <img loading="lazy" src="portfolio_pics/04 (1).jpeg" alt="Gallery image 4">
-</picture>
+                            <picture><img loading="lazy" src="portfolio_pics/04 (1).jpeg" alt="Gallery image 4">
                             </picture>
                         </div>
                     </div>
                     <div class="gallery-item fit-auto">
                         <div class="gallery-image fit-image">
-                            <picture><picture>
-    <source srcset="portfolio_pics/06.webp" type="image/webp">
-    <img loading="lazy" src="portfolio_pics/06.jpeg" alt="Gallery image 5">
-</picture></picture>
+                            <picture><img loading="lazy" src="portfolio_pics/06.jpeg" alt="Gallery image 5"></picture>
                         </div>
                     </div>
                     <div class="gallery-item fit-auto">
                         <div class="gallery-image fit-image">
-                            <picture><picture>
-    <source srcset="portfolio_pics/08.webp" type="image/webp">
-    <img loading="lazy" src="portfolio_pics/08.jpeg" alt="Gallery image 6">
-</picture></picture>
+                            <picture><img loading="lazy" src="portfolio_pics/08.jpeg" alt="Gallery image 6"></picture>
                         </div>
                     </div>
                     <div class="gallery-item fit-auto">
                         <div class="gallery-image fit-image">
-                            <picture><picture>
-    <source srcset="portfolio_pics/DAS00810.webp" type="image/webp">
-    <img loading="lazy" src="portfolio_pics/DAS00810.jpg" alt="Gallery image 7">
-</picture>
+                            <picture><img loading="lazy" src="portfolio_pics/DAS00810.jpg" alt="Gallery image 7">
                             </picture>
                         </div>
                     </div>
@@ -365,10 +332,7 @@
                     </div>
                     <div class="gallery-item fit-auto">
                         <div class="gallery-image fit-image">
-                            <picture><picture>
-    <source srcset="portfolio_pics/03 (1).webp" type="image/webp">
-    <img loading="lazy" src="portfolio_pics/03 (1).jpeg" alt="Gallery image 14">
-</picture>
+                            <picture><img loading="lazy" src="portfolio_pics/03 (1).jpeg" alt="Gallery image 14">
                             </picture>
                         </div>
                     </div>

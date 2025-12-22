@@ -92,10 +92,7 @@
                     </div>
                 </div>
                 <div class="ecommerce-image fade-in-right">
-                    <picture>
-                        <source srcset="pm_1.webp" type="image/webp">
-                        <img loading="lazy" src="pm_1.jpg" alt="Performance Marketing Strategy Meeting">
-                    </picture>
+                    <img loading="lazy" src="pm_1.jpg" alt="Performance Marketing Strategy Meeting">
                 </div>
             </div>
             

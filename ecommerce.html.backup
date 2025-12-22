@@ -79,41 +79,23 @@
                 <!-- Portfolio Images Grid -->
                 <div class="hero-portfolio-grid"
                     style="flex: 0 0 auto; display: grid; grid-template-columns: repeat(3, 150px); grid-template-rows: repeat(2, 150px); gap: 12px;">
-                    <picture>
-                        <source srcset="portfolio_pics/01.webp" type="image/webp">
-                        <img loading="lazy" src="portfolio_pics/01.jpg" alt="Portfolio 1"
+                    <img loading="lazy" src="portfolio_pics/01.jpg" alt="Portfolio 1"
                         style="width: 150px; height: 150px; object-fit: cover; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.3); transition: transform 0.3s ease;">
-                    </picture>
 
-                    <picture>
-                        <source srcset="portfolio_pics/02.webp" type="image/webp">
-                        <img loading="lazy" src="portfolio_pics/02.jpg" alt="Portfolio 2"
+                    <img loading="lazy" src="portfolio_pics/02.jpg" alt="Portfolio 2"
                         style="width: 150px; height: 150px; object-fit: cover; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.3); transition: transform 0.3s ease;">
-                    </picture>
 
-                    <picture>
-                        <source srcset="portfolio_pics/03.webp" type="image/webp">
-                        <img loading="lazy" src="portfolio_pics/03.jpg" alt="Portfolio 3"
+                    <img loading="lazy" src="portfolio_pics/03.jpg" alt="Portfolio 3"
                         style="width: 150px; height: 150px; object-fit: cover; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.3); transition: transform 0.3s ease;">
-                    </picture>
 
-                    <picture>
-                        <source srcset="portfolio_pics/04.webp" type="image/webp">
-                        <img loading="lazy" src="portfolio_pics/04.jpg" alt="Portfolio 4"
+                    <img loading="lazy" src="portfolio_pics/04.jpg" alt="Portfolio 4"
                         style="width: 150px; height: 150px; object-fit: cover; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.3); transition: transform 0.3s ease;">
-                    </picture>
 
-                    <picture>
-                        <source srcset="portfolio_pics/06.webp" type="image/webp">
-                        <img loading="lazy" src="portfolio_pics/06.jpeg" alt="Portfolio 5"
+                    <img loading="lazy" src="portfolio_pics/06.jpeg" alt="Portfolio 5"
                         style="width: 150px; height: 150px; object-fit: cover; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.3); transition: transform 0.3s ease;">
-                    </picture>
 
-                    <picture>
-                        <source srcset="portfolio_pics/08.webp" type="image/webp">
-                        <img loading="lazy" src="portfolio_pics/08.jpeg" alt="Portfolio 6"
+                    <img loading="lazy" src="portfolio_pics/08.jpeg" alt="Portfolio 6"
                         style="width: 150px; height: 150px; object-fit: cover; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.3); transition: transform 0.3s ease;">
-                    </picture>
                 </div>
             </div>
         </div>
@@ -124,10 +106,7 @@
         <div class="ecommerce-detail about-section"
             style="background: #0a0a0a; border-radius: 18px; position: relative; margin: 40px 0; box-shadow: 0 8px 32px rgba(0,0,0,0.45); overflow: hidden;">
             <div class="ecommerce-image" style="position: relative; z-index: 2;">
-                <picture>
-                    <source srcset="e_commerce.webp" type="image/webp">
-                    <img loading="lazy" src="e_commerce.jpg" alt="E-commerce showcase" />
-                </picture>
+                <img loading="lazy" src="e_commerce.jpg" alt="E-commerce showcase" />
             </div>
             <div class="ecommerce-copy about-content"
                 style="max-width: 900px; margin: 0 auto; position: relative; z-index: 2; padding: 32px 24px; color: #fff;">
@@ -169,11 +148,8 @@
             <div class="service-item">
                 <div class="service-banner"
                     style="width: 100%; height: 260px; border-radius: 8px; overflow: hidden; margin-bottom: 16px;">
-                    <picture>
-                        <source srcset="product_shoot_banner.webp" type="image/webp">
-                        <img loading="lazy" src="product_shoot_banner.jpg" alt="Product Photography"
+                    <img loading="lazy" src="product_shoot_banner.jpg" alt="Product Photography"
                         style="width: 100%; height: 100%; object-fit: cover;">
-                    </picture>
                 </div>
                 <h3>Product Photography</h3>
                 <p>High-quality product shoots with professional lighting, styling, and multiple angles for e-commerce
@@ -191,11 +167,8 @@
             <div class="service-item">
                 <div class="service-banner"
                     style="width: 100%; height: 260px; border-radius: 8px; overflow: hidden; margin-bottom: 16px;">
-                    <picture>
-                        <source srcset="lifestyle_shoot_banner.webp" type="image/webp">
-                        <img loading="lazy" src="lifestyle_shoot_banner.jpg" alt="Lifestyle Shoots"
+                    <img loading="lazy" src="lifestyle_shoot_banner.jpg" alt="Lifestyle Shoots"
                         style="width: 100%; height: 100%; object-fit: cover;">
-                    </picture>
                 </div>
                 <h3>Lifestyle Shoots</h3>
                 <p>Contextual product photography showing your products in real-life settings to boost customer
@@ -213,11 +186,8 @@
             <div class="service-item">
                 <div class="service-banner"
                     style="width: 100%; height: 260px; border-radius: 8px; overflow: hidden; margin-bottom: 16px;">
-                    <picture>
-                        <source srcset="unboxing_video_banner.webp" type="image/webp">
-                        <img loading="lazy" src="unboxing_video_banner.jpg" alt="Unboxing Videos"
+                    <img loading="lazy" src="unboxing_video_banner.jpg" alt="Unboxing Videos"
                         style="width: 100%; height: 100%; object-fit: cover;">
-                    </picture>
                 </div>
                 <h3>Unboxing Videos</h3>
                 <p>Engaging unboxing video content optimized for Amazon, Flipkart, and social media platforms to drive
@@ -235,11 +205,8 @@
             <div class="service-item">
                 <div class="service-banner"
                     style="width: 100%; height: 260px; border-radius: 8px; overflow: hidden; margin-bottom: 16px;">
-                    <picture>
-                        <source srcset="image_retouch_banner.webp" type="image/webp">
-                        <img loading="lazy" src="image_retouch_banner.jpg" alt="Image Editing & Retouching"
+                    <img loading="lazy" src="image_retouch_banner.jpg" alt="Image Editing & Retouching"
                         style="width: 100%; height: 100%; object-fit: cover;">
-                    </picture>
                 </div>
                 <h3>Image Editing & Retouching</h3>
                 <p>Professional image editing services to ensure your product photos meet marketplace standards and look
@@ -257,11 +224,8 @@
             <div class="service-item">
                 <div class="service-banner"
                     style="width: 100%; height: 260px; border-radius: 8px; overflow: hidden; margin-bottom: 16px;">
-                    <picture>
-                        <source srcset="cataloge_creation_banner.webp" type="image/webp">
-                        <img loading="lazy" src="cataloge_creation_banner.jpg" alt="Catalog Creation"
+                    <img loading="lazy" src="cataloge_creation_banner.jpg" alt="Catalog Creation"
                         style="width: 100%; height: 100%; object-fit: cover;">
-                    </picture>
                 </div>
                 <h3>Catalog Creation</h3>
                 <p>Complete catalog design and formatting for seamless onboarding and listing on major e-commerce
@@ -279,11 +243,8 @@
             <div class="service-item">
                 <div class="service-banner"
                     style="width: 100%; height: 260px; border-radius: 8px; overflow: hidden; margin-bottom: 16px;">
-                    <picture>
-                        <source srcset="product_showcase_banner.webp" type="image/webp">
-                        <img loading="lazy" src="product_showcase_banner.jpg" alt="Product Showcase Videos"
+                    <img loading="lazy" src="product_showcase_banner.jpg" alt="Product Showcase Videos"
                         style="width: 100%; height: 100%; object-fit: cover;">
-                    </picture>
                 </div>
                 <h3>Product Showcase Videos</h3>
                 <p>Dynamic product videos highlighting features, benefits, and usage for maximum customer engagement.
@@ -301,11 +262,8 @@
             <div class="service-item">
                 <div class="service-banner"
                     style="width: 100%; height: 260px; border-radius: 8px; overflow: hidden; margin-bottom: 16px;">
-                    <picture>
-                        <source srcset="infographic_design_banner.webp" type="image/webp">
-                        <img loading="lazy" src="infographic_design_banner.jpg" alt="Infographic Design"
+                    <img loading="lazy" src="infographic_design_banner.jpg" alt="Infographic Design"
                         style="width: 100%; height: 100%; object-fit: cover;">
-                    </picture>
                 </div>
                 <h3>Infographic Design</h3>
                 <p>Eye-catching infographic images that communicate product features, specifications, and benefits
@@ -323,11 +281,8 @@
             <div class="service-item">
                 <div class="service-banner"
                     style="width: 100%; height: 260px; border-radius: 8px; overflow: hidden; margin-bottom: 16px;">
-                    <picture>
-                        <source srcset="aplus_content_banner.webp" type="image/webp">
-                        <img loading="lazy" src="aplus_content_banner.jpg" alt="A+ Content Creation"
+                    <img loading="lazy" src="aplus_content_banner.jpg" alt="A+ Content Creation"
                         style="width: 100%; height: 100%; object-fit: cover;">
-                    </picture>
                 </div>
                 <h3>A+ Content Creation</h3>
                 <p>Premium enhanced brand content for Amazon and other platforms to improve conversion rates.</p>

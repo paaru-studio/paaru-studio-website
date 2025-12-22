@@ -86,10 +86,7 @@
                     <p>From viral Instagram reels to compelling YouTube content, our influencer marketing services transform brand messages into relatable stories that resonate with communities, drive conversions, and build lasting brand loyalty.</p>
                 </div>
                 <div class="ecommerce-image">
-                    <picture>
-                        <source srcset="im_1.webp" type="image/webp">
-                        <img loading="lazy" src="im_1.jpg" alt="Influencer Marketing Services">
-                    </picture>
+                    <img loading="lazy" src="im_1.jpg" alt="Influencer Marketing Services">
                 </div>
             </div>
             <div style="text-align:center; margin-top:32px;">
