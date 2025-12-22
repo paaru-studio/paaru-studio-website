@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japfa Best Case Study - Paaru Studio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="preloader.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .case-study-hero {
+            background: linear-gradient(135deg, var(--primary-bg) 0%, var(--secondary-bg) 100%);
+            padding: 120px 0 80px;
+            color: var(--text-primary);
+            position: relative;
+            overflow: hidden;
+            border-bottom: 2px solid var(--border-color);
+        }
+        
+        .case-study-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(245, 158, 11, 0.1) 0%, transparent 50%);
+            opacity: 0.3;
+        }
+        
+        .case-study-hero .container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .case-study-title {
+            font-size: 56px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            color: var(--text-primary);
+        }
+        
+        .case-study-subtitle {
+            font-size: 24px;
+            font-weight: 400;
+            color: var(--accent-color);
+            margin-bottom: 40px;
+        }
+        
+        .case-study-meta {
+            display: flex;
+            gap: 40px;
+            margin-top: 40px;
+            padding-top: 40px;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .meta-item h4 {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+        }
+        
+        .meta-item p {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--accent-color);
+        }
+        
+        .case-study-image-placeholder {
+            width: 100%;
+            height: 500px;
+            background: var(--card-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            margin: 60px 0;
+            color: var(--text-secondary);
+            font-size: 18px;
+            border: 2px dashed var(--border-color);
+            transition: border-color 0.3s ease;
+        }
+        
+        .case-study-image-placeholder:hover {
+            border-color: var(--accent-color);
+        }
+        
+        .case-study-section {
+            padding: 80px 0;
+            background: var(--primary-bg);
+        }
+        
+        .case-study-section:nth-child(even) {
+            background: var(--secondary-bg);
+        }
+        
+        .section-title {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: var(--text-primary);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-color), var(--gradient-end));
+            border-radius: 2px;
+        }
+        
+        .section-content {
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            max-width: 900px;
+        }
+        
+        .section-content p {
+            margin-bottom: 20px;
+        }
+        
+        .section-content strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+        
+        .section-content ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        
+        .section-content ul li {
+            padding-left: 30px;
+            position: relative;
+            margin-bottom: 15px;
+            color: var(--text-secondary);
+        }
+        
+        .section-content ul li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, var(--card-bg) 0%, var(--secondary-bg) 100%);
+            color: var(--text-primary);
+            padding: 40px;
+            border-radius: 12px;
+            margin: 40px 0;
+            border-left: 4px solid var(--accent-color);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+        }
+        
+        .highlight-box h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+        }
+        
+        .highlight-box ul {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        
+        .highlight-box ul li {
+            color: var(--text-secondary);
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
+        }
+        
+        .stat-card {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid var(--border-color);
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 32px rgba(245, 158, 11, 0.2);
+            border-color: var(--accent-color);
+        }
+        
+        .stat-number {
+            font-size: 48px;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--accent-color), var(--gradient-end));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 16px;
+            color: var(--text-secondary);
+        }
+        
+        .quote-section {
+            background: var(--card-bg);
+            padding: 60px 0;
+            margin: 80px 0;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .quote-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .quote-text {
+            font-size: 28px;
+            font-style: italic;
+            line-height: 1.6;
+            color: var(--text-primary);
+            margin-bottom: 30px;
+            position: relative;
+        }
+        
+        .quote-text::before {
+            content: '"';
+            font-size: 80px;
+            color: var(--accent-color);
+            opacity: 0.3;
+            position: absolute;
+            top: -20px;
+            left: -40px;
+        }
+        
+        .quote-author {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--accent-color);
+        }
+        
+        .strategy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .strategy-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+        }
+        
+        .strategy-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 8px 24px rgba(245, 158, 11, 0.2);
+        }
+        
+        .strategy-card h4 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+        }
+        
+        .strategy-card p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--text-secondary);
+        }
+        
+        .cta-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--card-bg) 0%, var(--primary-bg) 100%);
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .cta-section h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+        
+        .cta-section p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            color: var(--text-secondary);
+        }
+        
+        @media (max-width: 768px) {
+            .case-study-title {
+                font-size: 36px;
+            }
+            
+            .case-study-subtitle {
+                font-size: 18px;
+            }
+            
+            .case-study-meta {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .section-title {
+                font-size: 32px;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .quote-text {
+                font-size: 20px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="hero-fixes.css">
+</head>
+<body class="services-page">
+    <!-- Loading snippet (provided) -->
+    <div class="loadding-page">
+        <div class="cssload-box-loading"></div>
+    </div>
+    <!-- Top Banner -->
+    <div class="top-banner">
+        <div class="container">
+            <div class="banner-content">
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle; margin-right: 8px;">
+                        <path d="M3 3v18h18"></path>
+                        <path d="m19 9-5 5-4-4-3 3"></path>
+                        <circle cx="20" cy="8" r="2"></circle>
+                    </svg>
+                    See how we helped Japfa Best achieve 2x ROAS
+                </p>
+                <a href="get-started.html" class="book-now-btn">Start Your Project</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">
+                    <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927649/paaru-studio/logo.png" alt="Paaru Studio Logo" class="logo-image">
+                    <span class="logo-text">
+                        <span class="logo-text-static">PAARU</span>
+                        <span class="logo-text-flip">
+                            <span class="flip-word">STUDIO</span>
+                            <span class="flip-word">MEDIA</span>
+                        </span>
+                    </span>
+                </a>
+                <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">☰</button>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="services.html">Services</a>
+                    <a href="ecommerce.html">E-Commerce</a>
+                    <div class="nav-dropdown">
+                        <a href="media-offerings.html" class="nav-dropdown-toggle">Media <span class="dropdown-arrow">▾</span></a>
+                        <div class="nav-dropdown-menu">
+                            <a href="media-offerings.html">Media Offerings (OOH & DOOH)</a>
+                            <a href="performance-marketing.html">Performance Marketing</a>
+                            <a href="social-media-marketing.html">Social Media Marketing</a>
+                            <a href="influencer-marketing.html">Influencer Marketing</a>
+                        </div>
+                    </div>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="get-started.html">Get Started</a>
+                    <a href="join-team.html">Join Team</a>
+                    <a href="index.html#contact" class="cta-btn">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="mobile-nav-backdrop" aria-hidden="true"></div>
+
+    <!-- Hero Section -->
+    <section class="case-study-hero">
+        <div class="container">
+            <h1 class="case-study-title">How We Helped Japfa Best Increase Brand Awareness and Boost Sales</h1>
+            <p class="case-study-subtitle">Insights into Japfa's Success Story</p>
+            
+            <div class="case-study-meta">
+                <div class="meta-item">
+                    <h4>Client</h4>
+                    <p>Japfa Best</p>
+                </div>
+                <div class="meta-item">
+                    <h4>Industry</h4>
+                    <p>Food & Beverage</p>
+                </div>
+                <div class="meta-item">
+                    <h4>Services</h4>
+                    <p>Performance Marketing, Social Media Marketing</p>
+                </div>
+                <div class="meta-item">
+                    <h4>Duration</h4>
+                    <p>1 Month Campaign</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Image Placeholder -->
+    <div class="container">
+        <div style="width: 100%; margin: 60px 0; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.4);">
+            <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764927647/paaru-studio/japfa_hero.png" alt="Japfa Best Campaign - Heavy on Quality, Light on the Pocket" style="width: 100%; height: auto; display: block;">
+        </div>
+    </div>
+
+    <!-- Introduction Section -->
+    <section class="case-study-section">
+        <div class="container">
+            <h2 class="section-title">The Challenge</h2>
+            <div class="section-content">
+                <p>When we first connected with <strong>Japfa Best</strong>, they were facing a major hurdle. Despite offering <strong>premium chicken products</strong>, their brand remained <strong>largely unnoticed</strong> in a highly competitive market.</p>
+                
+                <p>Without a strong marketing strategy, their message wasn't reaching potential customers, resulting in <strong>stagnant sales</strong> and <strong>limited growth opportunities</strong>.</p>
+                
+                <p>Japfa Best needed a way to <strong>amplify brand visibility</strong> and <strong>drive measurable sales results</strong> through a clear, impactful marketing approach.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Understanding Section with Image -->
+    <section class="case-study-section">
+        <div class="container">
+            <div style="display: flex; gap: 40px; align-items: center; flex-wrap: wrap;">
+                <!-- Image on Left -->
+                <div style="flex: 1; min-width: 300px;">
+                    <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.4);">
+                        <img src="https://res.cloudinary.com/dvjveceob/image/upload/v1764929225/paaru-studio/japfa_challenge.jpg" alt="Japfa Best Marketing Challenge - Team Strategy Meeting" style="width: 100%; height: auto; display: block;">
+                    </div>
+                </div>
+                
+                <!-- Text on Right -->
+                <div style="flex: 1; min-width: 300px;">
+                    <h2 class="section-title">Understanding the Challenge</h2>
+                    <div class="section-content">
+                        <p>After analyzing Japfa Best's situation, it became clear that the core issue wasn't product quality—it was <strong>brand visibility</strong>.</p>
+                        
+                        <p>In a <strong>competitive market</strong>, their products were often <strong>overshadowed by competitors</strong> with stronger online presence and more targeted campaigns.</p>
+                        
+                        <p>The <strong>digital marketing landscape</strong> had evolved; customers now seek <strong>brands that connect emotionally</strong> and tell meaningful stories. Japfa Best's marketing efforts weren't effectively <strong>reaching or engaging</strong> their target audience.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Highlight Box Below -->
+            <div class="section-content" style="margin-top: 40px;">
+                <div class="highlight-box">
+                    <h3>They needed a clear, strategic marketing approach that would:</h3>
+                    <ul style="margin-top: 20px; font-size: 18px;">
+                        <li>Highlight their <strong>product strengths</strong></li>
+                        <li>Strengthen their <strong>online presence</strong></li>
+                        <li>Build a <strong>connection with their audience</strong> through storytelling</li>
+                    </ul>
+                </div>
+                
+                <p>That's where <strong>we stepped in</strong> to help Japfa Best redefine their marketing strategy and stand out in the digital space.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strategy Section -->
+    <section class="case-study-section">
+        <div class="container">
+            <h2 class="section-title">Our Strategic Approach</h2>
+            <div class="section-content">
+                <p>Our goal was clear: Build <strong>brand awareness</strong> and <strong>drive measurable sales growth</strong>.</p>
+                
+                <p>We leveraged digital platforms to reach the <strong>right audience with the right message</strong>, combining <strong>visual storytelling</strong>, <strong>targeted advertising</strong>, and <strong>data-driven execution</strong> for maximum impact.</p>
+            </div>
+            
+            <div class="strategy-grid">
+                <div class="strategy-card">
+                    <h4>Meta Advertising</h4>
+                    <p>Focused on building brand awareness and driving engagement through targeted social media campaigns on Facebook and Instagram platforms.</p>
+                </div>
+                
+                <div class="strategy-card">
+                    <h4>Google Ads Campaign</h4>
+                    <p>Implemented traffic campaigns to drive website visits and increase conversion opportunities with precision targeting.</p>
+                </div>
+                
+                <div class="strategy-card">
+                    <h4>YouTube Marketing</h4>
+                    <p>Created engaging video content to reach audiences and build brand recall through consistent messaging and visual storytelling.</p>
+                </div>
+                
+                <div class="strategy-card">
+                    <h4>Programmatic Advertising</h4>
+                    <p>Used appographic programmatic targeting to reach users of apps like Licious, Green Chick Chop, and KFC, ensuring high-intent audience engagement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="case-study-section">
+        <div class="container">
+            <h2 class="section-title">The Results & Impact</h2>
+            <div class="section-content">
+                <p>Our comprehensive digital marketing strategy delivered exceptional results across all platforms, exceeding Japfa Best's initial expectations and setting new benchmarks for their brand performance.</p>
+            </div>
+            
+            <h3 style="font-size: 32px; margin: 40px 0 20px; color: var(--text-primary);">Meta Campaign Results</h3>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">30-40%</div>
+                    <div class="stat-label">Target Audience Reach</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-number">3x</div>
+                    <div class="stat-label">Ad Frequency (Brand Recall)</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-number">2x</div>
+                    <div class="stat-label">ROAS in 1 Month</div>
+                </div>
+            </div>
+            
+            <div class="section-content">
+                <p>The Meta campaigns achieved an impressive <strong>reach of 30-40%</strong> of the target audience with an <strong>ad frequency of 3</strong>, meaning the same audience saw the ads multiple times, reinforcing <strong>brand recall and recognition</strong>.</p>
+                
+                <p>This drove <strong>consistent engagement</strong> and strengthened <strong>brand awareness</strong> across social platforms, delivering a <strong>2x ROAS in just one month</strong>.</p>
+            </div>
+            
+            <h3 style="font-size: 32px; margin: 60px 0 30px; color: var(--text-primary);">Google & YouTube Results</h3>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">0.8%+</div>
+                    <div class="stat-label">Click-Through Rate</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-number">50%</div>
+                    <div class="stat-label">Click to Traffic Conversion</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-number">60%</div>
+                    <div class="stat-label">YouTube Campaign Reach</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-number">3-4x</div>
+                    <div class="stat-label">Monthly Frequency</div>
+                </div>
+            </div>
+            
+            <div class="section-content">
+                <p>The <strong>Google Ads traffic campaign</strong> significantly boosted sales and attracted new user demographics with a <strong>CTR of 0.8%+</strong> and <strong>click to traffic percentage of 50%</strong>.</p>
+                
+                <p>Through our <strong>YouTube Campaign</strong>, we helped Japfa Best expand its customer base and increase brand loyalty with a <strong>frequency of 3-4 in a month</strong> and a <strong>reach of 60%</strong>.</p>
+                
+                <p>This created a strong foundation for sustained engagement and growth in future campaigns.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programmatic Section -->
+    <section class="case-study-section">
+        <div class="container">
+            <h2 class="section-title">Programmatic Targeting Excellence</h2>
+            <div class="section-content">
+                <p>We used <strong>appographic programmatic targeting</strong> to reach users of apps like <strong>Licious, Green Chick Chop, and KFC</strong>, or visitors of similar sites.</p>
+                
+                <p>This approach ensured the campaign reached <strong>high-intent audiences</strong> already interested in chicken products.</p>
+                
+                <div class="highlight-box">
+                    <h3>Result: Higher relevance, stronger engagement, and better conversion potential</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section class="quote-section">
+        <div class="container">
+            <div class="quote-content">
+                <p class="quote-text">"<span style="color: #f59e0b;">Paaru Studio</span> transformed our digital presence and helped us achieve results we never thought possible in such a short time. The strategic approach and execution were exceptional."</p>
+                <p class="quote-author">— Japfa Best Marketing Team</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Takeaways -->
+    <section class="case-study-section">
+        <div class="container">
+            <h2 class="section-title">Key Takeaways</h2>
+            <div class="section-content">
+                <ul>
+                    <li><strong>Strategic targeting</strong> is crucial - reaching high-intent audiences through programmatic advertising significantly improved conversion rates</li>
+                    <li><strong>Multi-channel approach</strong> delivers better results - combining Meta, Google, YouTube, and programmatic ads created comprehensive brand coverage</li>
+                    <li><strong>Frequency matters</strong> - consistent exposure (3-4x monthly) reinforced brand recall and drove better engagement</li>
+                    <li><strong>Data-driven decisions</strong> - continuous optimization based on real-time metrics delivered exceptional 2x ROAS</li>
+                    <li><strong>Brand storytelling</strong> - connecting emotionally with audiences through compelling content drove meaningful engagement</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Achieve Similar Results?</h2>
+            <p>Let's create a data-driven marketing strategy for your brand</p>
+            <a href="get-started.html" class="hero-cta">Start Your Success Story</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer full-bleed">
+        <div class="footer-cta">
+            <div class="container">
+                <h2>Looking to drive results? <a href="get-started.html" class="footer-cta-link">Let's chat →</a></h2>
+            </div>
+        </div>
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <h3>PAARU STUDIO</h3>
+                        <p>An Agency of Possibilities</p>
+                        <div class="footer-social">
+                            <a href="https://www.linkedin.com/company/paaru-studio/?viewAsMember=true" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
+                            <a href="https://www.linkedin.com/company/paaru-studio" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
+                            <a href="#" aria-label="Facebook">Facebook</a>
+                        </div>
+                    </div>
+                    <div class="footer-nav">
+                        <div class="footer-col">
+                            <h4>Services</h4>
+                            <a href="services.html">Video Production</a>
+                            <a href="media-offerings.html">Media Buying</a>
+                            <a href="ecommerce.html">E-Commerce</a>
+                            <a href="portfolio.html">Portfolio</a>
+                        </div>
+                        <div class="footer-col">
+                            <h4>Company</h4>
+                            <a href="index.html">About Us</a>
+                            <a href="portfolio.html">Portfolio</a>
+                            <a href="join-team.html">Careers</a>
+                            <a href="index.html#contact">Contact</a>
+                        </div>
+                        <div class="footer-col">
+                            <h4>Resources</h4>
+                            <a href="case-studies.html">Case Studies</a>
+                            <a href="#">Blog</a>
+                            <a href="get-started.html#faq">FAQ</a>
+                            <a href="get-started.html">Get Started</a>
+                        </div>
+                        <div class="footer-col">
+                            <h4>Legal</h4>
+                            <a href="#">Terms of Use</a>
+                            <a href="privacy-policy.html">Privacy Policy</a>
+                            <a href="#">Security</a>
+                            <a href="#">Accessibility</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>© Paaru Studio 2025</p>
+                    <div class="footer-meta">
+                        <span style="color: #64748b; font-size: 13px; margin-right: 20px;">EN / <a href="#" style="color: #64748b; text-decoration: none;">FR</a></span>
+                        <a href="#top" class="back-to-top">↑</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://api.whatsapp.com/message/YUCOIE6IW45VJ1?autoload=1&app_absent=0" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+        </svg>
+    </a>
+
+    <script src="script.js"></script>
+    <script>
+    (function(){
+        var nav = document.querySelector('.navbar');
+        var btn = document.querySelector('.mobile-menu-btn');
+        var backdrop = document.querySelector('.mobile-nav-backdrop');
+        if (!nav || !btn) return;
+        function setOpen(v){
+            if (v) { nav.classList.add('open'); btn.setAttribute('aria-expanded','true'); if (backdrop) backdrop.setAttribute('aria-hidden','false'); }
+            else { nav.classList.remove('open'); btn.setAttribute('aria-expanded','false'); if (backdrop) backdrop.setAttribute('aria-hidden','true'); }
+        }
+        btn.addEventListener('click', function(){ setOpen(!nav.classList.contains('open')); });
+        nav.querySelectorAll('.nav-links a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+        if (backdrop) backdrop.addEventListener('click', function(){ setOpen(false); });
+        document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+    })();
+    </script>
+    <script src="loading-animation.js"></script>
+</body>
+</html>

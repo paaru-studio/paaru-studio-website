@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Utility Demo</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+            transition: background 0.3s;
+        }
+
+        .no-animations * {
+            transition: none !important;
+            animation: none !important;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        button {
+            padding: 8px 16px;
+            cursor: pointer;
+            margin-right: 5px;
+        }
+
+        button.active {
+            background-color: #007bff;
+            color: white;
+            border: 1px solid #0056b3;
+        }
+
+        /* Popup Styles */
+        #promo-popup {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #222;
+            color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            display: none;
+            /* Controlled by JS */
+        }
+
+        /* Portfolio Grid */
+        .portfolio-grid {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .portfolio-item {
+            width: 100px;
+            height: 100px;
+            background: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .portfolio-item[data-category="design"] {
+            background: #ffcccc;
+        }
+
+        .portfolio-item[data-category="video"] {
+            background: #ccffcc;
+        }
+
+        /* Intro */
+        #intro-message {
+            padding: 10px;
+            background: gold;
+            margin-bottom: 20px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Cookie Utilities Demo</h1>
+    <p>Refresh the page to see preferences persist!</p>
+
+    <!-- FEATURE 3: INTRO -->
+    <div id="intro-message">👋 Welcome! This is your FIRST visit (or cookies were cleared).</div>
+
+    <!-- FEATURE 1: ANIMATION PREF -->
+    <div class="section">
+        <h2>1. Animation Preference</h2>
+        <div class="box" style="width: 50px; height: 50px; background: red; transition: transform 0.5s;"
+            onmouseover="this.style.transform='rotate(45deg)'" onmouseout="this.style.transform='rotate(0deg)'">Hover Me
+        </div>
+        <br>
+        <button id="toggle-anim">Toggle Animations</button>
+        <p><em>Check cookie 'reduce-motion' in DevTools.</em></p>
+    </div>
+
+    <!-- FEATURE 4: PORTFOLIO FILTER -->
+    <div class="section">
+        <h2>2. Portfolio Filter Memory</h2>
+        <div class="filters">
+            <button class="filter-btn" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="design">Design</button>
+            <button class="filter-btn" data-filter="video">Video</button>
+        </div>
+        <div class="portfolio-grid">
+            <div class="portfolio-item" data-category="design">Design 1</div>
+            <div class="portfolio-item" data-category="video">Video 1</div>
+            <div class="portfolio-item" data-category="design">Design 2</div>
+            <div class="portfolio-item" data-category="video">Video 2</div>
+        </div>
+    </div>
+
+    <!-- FEATURE 2: POPUP -->
+    <div id="promo-popup">
+        <h3>Special Offer!</h3>
+        <p>Subscribe to our newsletter.</p>
+        <button id="close-popup">Close (Don't show again)</button>
+    </div>
+
+    <script src="cookie-utils.js"></script>
+    <script>
+        // 1. Initialize Animation Toggle
+        // Note: CookieUtils.applyAnimationPref() runs automatically on load
+        document.getElementById('toggle-anim').addEventListener('click', () => {
+            CookieUtils.toggleAnimationPref();
+        });
+
+        // 2. Initialize Portfolio Filter
+        CookieUtils.initPortfolioFilter('.filter-btn', '.portfolio-item');
+
+        // 3. Check Intro Logic
+        if (CookieUtils.shouldPlayIntro()) {
+            document.getElementById('intro-message').style.display = 'block';
+            console.log("Playing intro...");
+        } else {
+            console.log("Skipping intro (user has visited before).");
+        }
+
+        // 4. Initialize Popup
+        // Will be hidden if 'popup_closed_promo-popup' cookie exists
+        CookieUtils.initPopup('promo-popup', 'close-popup', 7); 
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,216 @@
+# Paaru Studio - Cloudinary Migration Complete Setup
+
+## ✅ What's Been Set Up
+
+I've created an automated migration system to move all your images and videos to Cloudinary CDN. This will significantly reduce your Netlify bandwidth usage.
+
+### Files Created:
+1. **package.json** - Node.js dependencies (for npm approach)
+2. **.env.example** - Template for Cloudinary credentials
+3. **cloudinary-migrate.js** - Node.js upload script
+4. **replace-urls.js** - Node.js URL replacement script
+5. **cloudinary-migrate-python.py** - Python alternative (works immediately)
+6. **CLOUDINARY_SETUP.md** - Detailed setup guide
+
+---
+
+## 🚀 Quick Start (Choose One Option)
+
+### OPTION 1: Using Python (Fastest - No Installation Needed)
+
+**Step 1: Get Cloudinary Credentials**
+- Go to https://cloudinary.com and sign up (free tier available)
+- From your Dashboard, copy:
+  - Cloud Name
+  - API Key
+  - API Secret
+
+**Step 2: Create .env file**
+```bash
+cp .env.example .env
+```
+
+Edit `.env` and add your credentials:
+```
+CLOUDINARY_CLOUD_NAME=your_cloud_name
+CLOUDINARY_API_KEY=your_api_key
+CLOUDINARY_API_SECRET=your_api_secret
+DRY_RUN=false
+```
+
+**Step 3: Run Migration (Dry Run First - Recommended)**
+```bash
+python3 cloudinary-migrate-python.py --dry-run
+```
+
+This shows what will be uploaded without actually uploading.
+
+**Step 4: If Dry Run Looks Good, Run Full Migration**
+```bash
+python3 cloudinary-migrate-python.py
+```
+
+This will:
+- Upload all images and videos to Cloudinary
+- Create `cloudinary-upload-log.json` with all mappings
+
+---
+
+### OPTION 2: Using Node.js/npm (If You Install Node First)
+
+**Step 1: Install Node.js**
+Visit https://nodejs.org and download the LTS version, or use:
+```bash
+# If you have Homebrew
+brew install node
+
+# Otherwise, download from nodejs.org
+```
+
+**Step 2: Configure Cloudinary**
+```bash
+cp .env.example .env
+# Edit .env with your credentials
+```
+
+**Step 3: Install Dependencies**
+```bash
+npm install
+```
+
+**Step 4: Test Migration**
+```bash
+DRY_RUN=true npm run migrate
+```
+
+**Step 5: Run Full Migration**
+```bash
+npm run migrate
+npm run replace-urls
+# OR run both at once:
+npm run full-migration
+```
+
+---
+
+## 📊 What Gets Uploaded
+
+The system automatically uploads and replaces:
+- ✅ Images: jpg, jpeg, png, gif, webp
+- ✅ Videos: mp4, webm
+- ✅ Documents: pdf
+
+**Excluded** (won't be uploaded):
+- node_modules/
+- .git/
+- legacy_site/
+- paaru-studio-website/
+- public/
+- src/
+
+---
+
+## 📝 Understanding the Process
+
+### 1. Upload Phase
+The script finds all media files and uploads them to Cloudinary in the `paaru-studio` folder. Each file gets a Cloudinary URL like:
+```
+https://res.cloudinary.com/your-cloud-name/image/upload/paaru-studio/filename.jpg
+```
+
+### 2. Replacement Phase
+Updates all `.html`, `.css`, and `.js` files to use Cloudinary URLs instead of local paths:
+```html
+<!-- Before -->
+<img src="logo.png" />
+
+<!-- After -->
+<img src="https://res.cloudinary.com/.../paaru-studio/logo.png" />
+```
+
+### 3. Logging
+Creates `cloudinary-upload-log.json` with all mappings for reference and rollback if needed.
+
+---
+
+## 🎯 Expected Results
+
+After migration:
+- ✅ **Netlify bandwidth reduced by ~80-90%** (all media served from CDN)
+- ✅ **Faster image loading** (Cloudinary auto-optimizes)
+- ✅ **Automatic image transformations** (resize, format conversion, etc.)
+- ✅ **Easy to manage** (one centralized CDN)
+
+---
+
+## 🔧 Next Steps
+
+1. **Get Cloudinary Account**: https://cloudinary.com/users/register/free
+2. **Copy Credentials**: From Dashboard
+3. **Create .env file**: Add credentials
+4. **Test with Python**: `python3 cloudinary-migrate-python.py --dry-run`
+5. **Run migration**: `python3 cloudinary-migrate-python.py`
+6. **Deploy to Netlify**: Push changes to GitHub
+
+---
+
+## 📋 Manual URL Replacement (If Needed)
+
+If you want to replace URLs manually, the format is:
+```
+https://res.cloudinary.com/your-cloud-name/image/upload/paaru-studio/filename.ext
+```
+
+Example in HTML:
+```html
+<!-- Replace this -->
+<img src="logo.png">
+
+<!-- With this -->
+<img src="https://res.cloudinary.com/your-cloud-name/image/upload/paaru-studio/logo.png">
+```
+
+---
+
+## ✅ Verification Checklist
+
+After migration:
+- [ ] .env file created with credentials
+- [ ] Dry run completed successfully
+- [ ] Full migration completed
+- [ ] cloudinary-upload-log.json generated
+- [ ] HTML files have new Cloudinary URLs
+- [ ] Images display correctly on Netlify
+- [ ] Bandwidth usage in Netlify decreased
+
+---
+
+## 🆘 Troubleshooting
+
+**Problem**: "Cloudinary credentials not found"
+- **Solution**: Ensure `.env` file exists in project root and has correct values
+
+**Problem**: "Upload failed"
+- **Solution**: Check that API key/secret are correct in Cloudinary Dashboard
+
+**Problem**: "URLs not being replaced"
+- **Solution**: Make sure `cloudinary-upload-log.json` exists with successful uploads
+
+**Problem**: "Want to undo changes"
+- **Solution**: Use `git checkout -- .` to revert all file changes
+
+---
+
+## 💡 Pro Tips
+
+1. **Test with 1-2 files first** using `--dry-run` before full migration
+2. **Keep the upload log** for reference and debugging
+3. **Use Cloudinary Dashboard** to see all uploaded files and manage them
+4. **Set up automatic backups** by committing the upload log to Git
+
+---
+
+For questions or support:
+- Cloudinary Docs: https://cloudinary.com/documentation
+- GitHub Issues: Create an issue in the repo
+- Netlify Support: For bandwidth issues

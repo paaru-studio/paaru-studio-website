@@ -1,0 +1,929 @@
+[
+  {
+    "local_path": "BTL_banner.jpg",
+    "file_name": "BTL_banner.jpg",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927480/paaru-studio/BTL_banner.jpg",
+    "cloudinary_public_id": "paaru-studio/BTL_banner",
+    "status": "success"
+  },
+  {
+    "local_path": "CK_CS_01.png",
+    "file_name": "CK_CS_01.png",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927481/paaru-studio/CK_CS_01.png",
+    "cloudinary_public_id": "paaru-studio/CK_CS_01",
+    "status": "success"
+  },
+  {
+    "local_path": "CK_CS_02.png",
+    "file_name": "CK_CS_02.png",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927484/paaru-studio/CK_CS_02.png",
+    "cloudinary_public_id": "paaru-studio/CK_CS_02",
+    "status": "success"
+  },
+  {
+    "local_path": "Cart Logo.png",
+    "file_name": "Cart Logo.png",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927485/paaru-studio/Cart%20Logo.png",
+    "cloudinary_public_id": "paaru-studio/Cart Logo",
+    "status": "success"
+  },
+  {
+    "local_path": "Fashion_img_01.jpg",
+    "file_name": "Fashion_img_01.jpg",
+    "status": "success",
+    "error": "File size too large. Got 10672121. Maximum is 10485760.",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764928766/paaru-studio/Fashion_img_01.jpg",
+    "cloudinary_public_id": "paaru-studio/Fashion_img_01"
+  },
+  {
+    "local_path": "Fashion_img_02.jpg",
+    "file_name": "Fashion_img_02.jpg",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927495/paaru-studio/Fashion_img_02.jpg",
+    "cloudinary_public_id": "paaru-studio/Fashion_img_02",
+    "status": "success"
+  },
+  {
+    "local_path": "Fashion_img_03.jpg",
+    "file_name": "Fashion_img_03.jpg",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927497/paaru-studio/Fashion_img_03.jpg",
+    "cloudinary_public_id": "paaru-studio/Fashion_img_03",
+    "status": "success"
+  },
+  {
+    "local_path": "Fashion_img_04.jpg",
+    "file_name": "Fashion_img_04.jpg",
+    "status": "success",
+    "error": "File size too large. Got 14560398. Maximum is 10485760.",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764928768/paaru-studio/Fashion_img_04.jpg",
+    "cloudinary_public_id": "paaru-studio/Fashion_img_04"
+  },
+  {
+    "local_path": "Fashion_img_05.jpg",
+    "file_name": "Fashion_img_05.jpg",
+    "status": "success",
+    "error": null,
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764928773/paaru-studio/Fashion_img_05.jpg",
+    "cloudinary_public_id": "paaru-studio/Fashion_img_05"
+  },
+  {
+    "local_path": "Giva_CS_01.png",
+    "file_name": "Giva_CS_01.png",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927525/paaru-studio/Giva_CS_01.png",
+    "cloudinary_public_id": "paaru-studio/Giva_CS_01",
+    "status": "success"
+  },
+  {
+    "local_path": "Giva_CS_02.png",
+    "file_name": "Giva_CS_02.png",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927526/paaru-studio/Giva_CS_02.png",
+    "cloudinary_public_id": "paaru-studio/Giva_CS_02",
+    "status": "success"
+  },
+  {
+    "local_path": "Globe.png",
+    "file_name": "Globe.png",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927527/paaru-studio/Globe.png",
+    "cloudinary_public_id": "paaru-studio/Globe",
+    "status": "success"
+  },
+  {
+    "local_path": "Image 01.jpeg",
+    "file_name": "Image 01.jpeg",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927529/paaru-studio/Image%2001.jpg",
+    "cloudinary_public_id": "paaru-studio/Image 01",
+    "status": "success"
+  },
+  {
+    "local_path": "Influencer Network Pic.png",
+    "file_name": "Influencer Network Pic.png",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927530/paaru-studio/Influencer%20Network%20Pic.png",
+    "cloudinary_public_id": "paaru-studio/Influencer Network Pic",
+    "status": "success"
+  },
+  {
+    "local_path": "Logo_Port_01.jpg",
+    "file_name": "Logo_Port_01.jpg",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927533/paaru-studio/Logo_Port_01.jpg",
+    "cloudinary_public_id": "paaru-studio/Logo_Port_01",
+    "status": "success"
+  },
+  {
+    "local_path": "Logo_Port_02.jpg",
+    "file_name": "Logo_Port_02.jpg",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927536/paaru-studio/Logo_Port_02.jpg",
+    "cloudinary_public_id": "paaru-studio/Logo_Port_02",
+    "status": "success"
+  },
+  {
+    "local_path": "Logo_Port_03.jpg",
+    "file_name": "Logo_Port_03.jpg",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927538/paaru-studio/Logo_Port_03.jpg",
+    "cloudinary_public_id": "paaru-studio/Logo_Port_03",
+    "status": "success"
+  },
+  {
+    "local_path": "Logo_Port_04.jpg",
+    "file_name": "Logo_Port_04.jpg",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927539/paaru-studio/Logo_Port_04.jpg",
+    "cloudinary_public_id": "paaru-studio/Logo_Port_04",
+    "status": "success"
+  },
+  {
+    "local_path": "Logo_Port_05.jpg",
+    "file_name": "Logo_Port_05.jpg",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927541/paaru-studio/Logo_Port_05.jpg",
+    "cloudinary_public_id": "paaru-studio/Logo_Port_05",
+    "status": "success"
+  },
+  {
+    "local_path": "Logo_Port_06.jpg",
+    "file_name": "Logo_Port_06.jpg",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927542/paaru-studio/Logo_Port_06.jpg",
+    "cloudinary_public_id": "paaru-studio/Logo_Port_06",
+    "status": "success"
+  },
+  {
+    "local_path": "Logo_Port_07.jpg",
+    "file_name": "Logo_Port_07.jpg",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927543/paaru-studio/Logo_Port_07.jpg",
+    "cloudinary_public_id": "paaru-studio/Logo_Port_07",
+    "status": "success"
+  },
+  {
+    "local_path": "Logo_Port_08.jpg",
+    "file_name": "Logo_Port_08.jpg",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927544/paaru-studio/Logo_Port_08.jpg",
+    "cloudinary_public_id": "paaru-studio/Logo_Port_08",
+    "status": "success"
+  },
+  {
+    "local_path": "Logos/ChatGPT Image Aug 21, 2025 at 01_00_18 PM.png",
+    "file_name": "ChatGPT Image Aug 21, 2025 at 01_00_18 PM.png",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927545/paaru-studio/ChatGPT%20Image%20Aug%2021%2C%202025%20at%2001_00_18%20PM.png",
+    "cloudinary_public_id": "paaru-studio/ChatGPT Image Aug 21, 2025 at 01_00_18 PM",
+    "status": "success"
+  },
+  {
+    "local_path": "Logos/ChatGPT Image Aug 21, 2025 at 01_51_46 PM.png",
+    "file_name": "ChatGPT Image Aug 21, 2025 at 01_51_46 PM.png",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927546/paaru-studio/ChatGPT%20Image%20Aug%2021%2C%202025%20at%2001_51_46%20PM.png",
+    "cloudinary_public_id": "paaru-studio/ChatGPT Image Aug 21, 2025 at 01_51_46 PM",
+    "status": "success"
+  },
+  {
+    "local_path": "Logos/ChatGPT Image Aug 21, 2025 at 02_14_37 PM.png",
+    "file_name": "ChatGPT Image Aug 21, 2025 at 02_14_37 PM.png",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927547/paaru-studio/ChatGPT%20Image%20Aug%2021%2C%202025%20at%2002_14_37%20PM.png",
+    "cloudinary_public_id": "paaru-studio/ChatGPT Image Aug 21, 2025 at 02_14_37 PM",
+    "status": "success"
+  },
+  {
+    "local_path": "Logos/ChatGPT Image Aug 21, 2025 at 12_46_51 PM.png",
+    "file_name": "ChatGPT Image Aug 21, 2025 at 12_46_51 PM.png",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927550/paaru-studio/ChatGPT%20Image%20Aug%2021%2C%202025%20at%2012_46_51%20PM.png",
+    "cloudinary_public_id": "paaru-studio/ChatGPT Image Aug 21, 2025 at 12_46_51 PM",
+    "status": "success"
+  },
+  {
+    "local_path": "Logos/ChatGPT Image Aug 21, 2025 at 12_52_24 PM.png",
+    "file_name": "ChatGPT Image Aug 21, 2025 at 12_52_24 PM.png",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927551/paaru-studio/ChatGPT%20Image%20Aug%2021%2C%202025%20at%2012_52_24%20PM.png",
+    "cloudinary_public_id": "paaru-studio/ChatGPT Image Aug 21, 2025 at 12_52_24 PM",
+    "status": "success"
+  },
+  {
+    "local_path": "Logos/ChatGPT Image Aug 22, 2025 at 01_00_39 PM.png",
+    "file_name": "ChatGPT Image Aug 22, 2025 at 01_00_39 PM.png",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927553/paaru-studio/ChatGPT%20Image%20Aug%2022%2C%202025%20at%2001_00_39%20PM.png",
+    "cloudinary_public_id": "paaru-studio/ChatGPT Image Aug 22, 2025 at 01_00_39 PM",
+    "status": "success"
+  },
+  {
+    "local_path": "Logos/ChatGPT Image Aug 22, 2025 at 12_00_42 PM.png",
+    "file_name": "ChatGPT Image Aug 22, 2025 at 12_00_42 PM.png",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927554/paaru-studio/ChatGPT%20Image%20Aug%2022%2C%202025%20at%2012_00_42%20PM.png",
+    "cloudinary_public_id": "paaru-studio/ChatGPT Image Aug 22, 2025 at 12_00_42 PM",
+    "status": "success"
+  },
+  {
+    "local_path": "Logos/ChatGPT Image Aug 22, 2025 at 12_16_18 PM.png",
+    "file_name": "ChatGPT Image Aug 22, 2025 at 12_16_18 PM.png",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927557/paaru-studio/ChatGPT%20Image%20Aug%2022%2C%202025%20at%2012_16_18%20PM.png",
+    "cloudinary_public_id": "paaru-studio/ChatGPT Image Aug 22, 2025 at 12_16_18 PM",
+    "status": "success"
+  },
+  {
+    "local_path": "Logos/ChatGPT Image Aug 22, 2025 at 12_21_11 PM.png",
+    "file_name": "ChatGPT Image Aug 22, 2025 at 12_21_11 PM.png",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927559/paaru-studio/ChatGPT%20Image%20Aug%2022%2C%202025%20at%2012_21_11%20PM.png",
+    "cloudinary_public_id": "paaru-studio/ChatGPT Image Aug 22, 2025 at 12_21_11 PM",
+    "status": "success"
+  },
+  {
+    "local_path": "Logos/ChatGPT Image Aug 22, 2025 at 12_55_36 PM.png",
+    "file_name": "ChatGPT Image Aug 22, 2025 at 12_55_36 PM.png",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927560/paaru-studio/ChatGPT%20Image%20Aug%2022%2C%202025%20at%2012_55_36%20PM.png",
+    "cloudinary_public_id": "paaru-studio/ChatGPT Image Aug 22, 2025 at 12_55_36 PM",
+    "status": "success"
+  },
+  {
+    "local_path": "Logos/ChatGPT Image Aug 22, 2025 at 12_57_54 PM.png",
+    "file_name": "ChatGPT Image Aug 22, 2025 at 12_57_54 PM.png",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927561/paaru-studio/ChatGPT%20Image%20Aug%2022%2C%202025%20at%2012_57_54%20PM.png",
+    "cloudinary_public_id": "paaru-studio/ChatGPT Image Aug 22, 2025 at 12_57_54 PM",
+    "status": "success"
+  },
+  {
+    "local_path": "Logos/ChatGPT Image Aug 26, 2025 at 11_29_17 AM.png",
+    "file_name": "ChatGPT Image Aug 26, 2025 at 11_29_17 AM.png",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927564/paaru-studio/ChatGPT%20Image%20Aug%2026%2C%202025%20at%2011_29_17%20AM.png",
+    "cloudinary_public_id": "paaru-studio/ChatGPT Image Aug 26, 2025 at 11_29_17 AM",
+    "status": "success"
+  },
+  {
+    "local_path": "Logos/Logo_1.png",
+    "file_name": "Logo_1.png",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927566/paaru-studio/Logo_1.png",
+    "cloudinary_public_id": "paaru-studio/Logo_1",
+    "status": "success"
+  },
+  {
+    "local_path": "Logos/Logo_2.png",
+    "file_name": "Logo_2.png",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927569/paaru-studio/Logo_2.png",
+    "cloudinary_public_id": "paaru-studio/Logo_2",
+    "status": "success"
+  },
+  {
+    "local_path": "Logos/Logo_3.png",
+    "file_name": "Logo_3.png",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927570/paaru-studio/Logo_3.png",
+    "cloudinary_public_id": "paaru-studio/Logo_3",
+    "status": "success"
+  },
+  {
+    "local_path": "OOH_banner.jpg",
+    "file_name": "OOH_banner.jpg",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927572/paaru-studio/OOH_banner.jpg",
+    "cloudinary_public_id": "paaru-studio/OOH_banner",
+    "status": "success"
+  },
+  {
+    "local_path": "Podcast.jpg",
+    "file_name": "Podcast.jpg",
+    "status": "success",
+    "error": null,
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764929207/paaru-studio/Podcast.jpg",
+    "cloudinary_public_id": "paaru-studio/Podcast"
+  },
+  {
+    "local_path": "Shopify_Banner.jpg",
+    "file_name": "Shopify_Banner.jpg",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927573/paaru-studio/Shopify_Banner.jpg",
+    "cloudinary_public_id": "paaru-studio/Shopify_Banner",
+    "status": "success"
+  },
+  {
+    "local_path": "Showreel_Paaru Studio 01.mp4",
+    "file_name": "Showreel_Paaru Studio 01.mp4",
+    "status": "error",
+    "error": "File corrupted (too small)"
+  },
+  {
+    "local_path": "Web Bg Curve 4k .png",
+    "file_name": "Web Bg Curve 4k .png",
+    "status": "success",
+    "error": null,
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764929367/paaru-studio/Web_Bg_Curve_4k.png",
+    "cloudinary_public_id": "paaru-studio/Web_Bg_Curve_4k"
+  },
+  {
+    "local_path": "Website Bg Curve.png",
+    "file_name": "Website Bg Curve.png",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927575/paaru-studio/Website%20Bg%20Curve.png",
+    "cloudinary_public_id": "paaru-studio/Website Bg Curve",
+    "status": "success"
+  },
+  {
+    "local_path": "about_us_bg.JPG",
+    "file_name": "about_us_bg.JPG",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927576/paaru-studio/about_us_bg.jpg",
+    "cloudinary_public_id": "paaru-studio/about_us_bg",
+    "status": "success"
+  },
+  {
+    "local_path": "aplus_content_banner.jpg",
+    "file_name": "aplus_content_banner.jpg",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927582/paaru-studio/aplus_content_banner.jpg",
+    "cloudinary_public_id": "paaru-studio/aplus_content_banner",
+    "status": "success"
+  },
+  {
+    "local_path": "cataloge_creation_banner.jpg",
+    "file_name": "cataloge_creation_banner.jpg",
+    "status": "success",
+    "error": null,
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764929210/paaru-studio/cataloge_creation_banner.jpg",
+    "cloudinary_public_id": "paaru-studio/cataloge_creation_banner"
+  },
+  {
+    "local_path": "ck-banner.png",
+    "file_name": "ck-banner.png",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927584/paaru-studio/ck-banner.png",
+    "cloudinary_public_id": "paaru-studio/ck-banner",
+    "status": "success"
+  },
+  {
+    "local_path": "creative_design.jpg",
+    "file_name": "creative_design.jpg",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927587/paaru-studio/creative_design.jpg",
+    "cloudinary_public_id": "paaru-studio/creative_design",
+    "status": "success"
+  },
+  {
+    "local_path": "dmarketing_banner.jpg",
+    "file_name": "dmarketing_banner.jpg",
+    "status": "success",
+    "error": null,
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764929215/paaru-studio/dmarketing_banner.jpg",
+    "cloudinary_public_id": "paaru-studio/dmarketing_banner"
+  },
+  {
+    "local_path": "dooh_ad_1.jpg",
+    "file_name": "dooh_ad_1.jpg",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927588/paaru-studio/dooh_ad_1.jpg",
+    "cloudinary_public_id": "paaru-studio/dooh_ad_1",
+    "status": "success"
+  },
+  {
+    "local_path": "dooh_ad_2.jpg",
+    "file_name": "dooh_ad_2.jpg",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927590/paaru-studio/dooh_ad_2.jpg",
+    "cloudinary_public_id": "paaru-studio/dooh_ad_2",
+    "status": "success"
+  },
+  {
+    "local_path": "dooh_ad_3.jpg",
+    "file_name": "dooh_ad_3.jpg",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927592/paaru-studio/dooh_ad_3.jpg",
+    "cloudinary_public_id": "paaru-studio/dooh_ad_3",
+    "status": "success"
+  },
+  {
+    "local_path": "dooh_coworking_1.png",
+    "file_name": "dooh_coworking_1.png",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927593/paaru-studio/dooh_coworking_1.png",
+    "cloudinary_public_id": "paaru-studio/dooh_coworking_1",
+    "status": "success"
+  },
+  {
+    "local_path": "dooh_coworking_2.png",
+    "file_name": "dooh_coworking_2.png",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927594/paaru-studio/dooh_coworking_2.png",
+    "cloudinary_public_id": "paaru-studio/dooh_coworking_2",
+    "status": "success"
+  },
+  {
+    "local_path": "dooh_coworking_3.png",
+    "file_name": "dooh_coworking_3.png",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927595/paaru-studio/dooh_coworking_3.png",
+    "cloudinary_public_id": "paaru-studio/dooh_coworking_3",
+    "status": "success"
+  },
+  {
+    "local_path": "dooh_society_1.png",
+    "file_name": "dooh_society_1.png",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927596/paaru-studio/dooh_society_1.png",
+    "cloudinary_public_id": "paaru-studio/dooh_society_1",
+    "status": "success"
+  },
+  {
+    "local_path": "dooh_society_2.png",
+    "file_name": "dooh_society_2.png",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927598/paaru-studio/dooh_society_2.png",
+    "cloudinary_public_id": "paaru-studio/dooh_society_2",
+    "status": "success"
+  },
+  {
+    "local_path": "dooh_society_3.png",
+    "file_name": "dooh_society_3.png",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927600/paaru-studio/dooh_society_3.png",
+    "cloudinary_public_id": "paaru-studio/dooh_society_3",
+    "status": "success"
+  },
+  {
+    "local_path": "e_commerce.jpg",
+    "file_name": "e_commerce.jpg",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927607/paaru-studio/e_commerce.jpg",
+    "cloudinary_public_id": "paaru-studio/e_commerce",
+    "status": "success"
+  },
+  {
+    "local_path": "giva-banner.png",
+    "file_name": "giva-banner.png",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927608/paaru-studio/giva-banner.png",
+    "cloudinary_public_id": "paaru-studio/giva-banner",
+    "status": "success"
+  },
+  {
+    "local_path": "google Ads Video01.png",
+    "file_name": "google Ads Video01.png",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927609/paaru-studio/google%20Ads%20Video01.png",
+    "cloudinary_public_id": "paaru-studio/google Ads Video01",
+    "status": "success"
+  },
+  {
+    "local_path": "google performance ads01.png",
+    "file_name": "google performance ads01.png",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927610/paaru-studio/google%20performance%20ads01.png",
+    "cloudinary_public_id": "paaru-studio/google performance ads01",
+    "status": "success"
+  },
+  {
+    "local_path": "google_ads_logo.png",
+    "file_name": "google_ads_logo.png",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927610/paaru-studio/google_ads_logo.png",
+    "cloudinary_public_id": "paaru-studio/google_ads_logo",
+    "status": "success"
+  },
+  {
+    "local_path": "hero-bg.mp4",
+    "file_name": "hero-bg.mp4",
+    "status": "error",
+    "error": "File corrupted (too small)"
+  },
+  {
+    "local_path": "im_1.jpg",
+    "file_name": "im_1.jpg",
+    "status": "success",
+    "error": null,
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764929219/paaru-studio/im_1.jpg",
+    "cloudinary_public_id": "paaru-studio/im_1"
+  },
+  {
+    "local_path": "image_retouch_banner.jpg",
+    "file_name": "image_retouch_banner.jpg",
+    "status": "success",
+    "error": null,
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764929222/paaru-studio/image_retouch_banner.jpg",
+    "cloudinary_public_id": "paaru-studio/image_retouch_banner"
+  },
+  {
+    "local_path": "influencer_1.png",
+    "file_name": "influencer_1.png",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927612/paaru-studio/influencer_1.png",
+    "cloudinary_public_id": "paaru-studio/influencer_1",
+    "status": "success"
+  },
+  {
+    "local_path": "influencer_10.png",
+    "file_name": "influencer_10.png",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927613/paaru-studio/influencer_10.png",
+    "cloudinary_public_id": "paaru-studio/influencer_10",
+    "status": "success"
+  },
+  {
+    "local_path": "influencer_11.png",
+    "file_name": "influencer_11.png",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927614/paaru-studio/influencer_11.png",
+    "cloudinary_public_id": "paaru-studio/influencer_11",
+    "status": "success"
+  },
+  {
+    "local_path": "influencer_12.png",
+    "file_name": "influencer_12.png",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927617/paaru-studio/influencer_12.png",
+    "cloudinary_public_id": "paaru-studio/influencer_12",
+    "status": "success"
+  },
+  {
+    "local_path": "influencer_2.png",
+    "file_name": "influencer_2.png",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927618/paaru-studio/influencer_2.png",
+    "cloudinary_public_id": "paaru-studio/influencer_2",
+    "status": "success"
+  },
+  {
+    "local_path": "influencer_3.png",
+    "file_name": "influencer_3.png",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927619/paaru-studio/influencer_3.png",
+    "cloudinary_public_id": "paaru-studio/influencer_3",
+    "status": "success"
+  },
+  {
+    "local_path": "influencer_4.png",
+    "file_name": "influencer_4.png",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927620/paaru-studio/influencer_4.png",
+    "cloudinary_public_id": "paaru-studio/influencer_4",
+    "status": "success"
+  },
+  {
+    "local_path": "influencer_5.png",
+    "file_name": "influencer_5.png",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927621/paaru-studio/influencer_5.png",
+    "cloudinary_public_id": "paaru-studio/influencer_5",
+    "status": "success"
+  },
+  {
+    "local_path": "influencer_6.png",
+    "file_name": "influencer_6.png",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927623/paaru-studio/influencer_6.png",
+    "cloudinary_public_id": "paaru-studio/influencer_6",
+    "status": "success"
+  },
+  {
+    "local_path": "influencer_7.png",
+    "file_name": "influencer_7.png",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927631/paaru-studio/influencer_7.png",
+    "cloudinary_public_id": "paaru-studio/influencer_7",
+    "status": "success"
+  },
+  {
+    "local_path": "influencer_8.png",
+    "file_name": "influencer_8.png",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927632/paaru-studio/influencer_8.png",
+    "cloudinary_public_id": "paaru-studio/influencer_8",
+    "status": "success"
+  },
+  {
+    "local_path": "influencer_9.png",
+    "file_name": "influencer_9.png",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927633/paaru-studio/influencer_9.png",
+    "cloudinary_public_id": "paaru-studio/influencer_9",
+    "status": "success"
+  },
+  {
+    "local_path": "infographic_design_banner.jpg",
+    "file_name": "infographic_design_banner.jpg",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927637/paaru-studio/infographic_design_banner.jpg",
+    "cloudinary_public_id": "paaru-studio/infographic_design_banner",
+    "status": "success"
+  },
+  {
+    "local_path": "ipl_billboard_1.png",
+    "file_name": "ipl_billboard_1.png",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927639/paaru-studio/ipl_billboard_1.png",
+    "cloudinary_public_id": "paaru-studio/ipl_billboard_1",
+    "status": "success"
+  },
+  {
+    "local_path": "ipl_billboard_2.png",
+    "file_name": "ipl_billboard_2.png",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927641/paaru-studio/ipl_billboard_2.png",
+    "cloudinary_public_id": "paaru-studio/ipl_billboard_2",
+    "status": "success"
+  },
+  {
+    "local_path": "ipl_dframe_1.png",
+    "file_name": "ipl_dframe_1.png",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927642/paaru-studio/ipl_dframe_1.png",
+    "cloudinary_public_id": "paaru-studio/ipl_dframe_1",
+    "status": "success"
+  },
+  {
+    "local_path": "ipl_lband_1.png",
+    "file_name": "ipl_lband_1.png",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927643/paaru-studio/ipl_lband_1.png",
+    "cloudinary_public_id": "paaru-studio/ipl_lband_1",
+    "status": "success"
+  },
+  {
+    "local_path": "ipl_lband_2.png",
+    "file_name": "ipl_lband_2.png",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927644/paaru-studio/ipl_lband_2.png",
+    "cloudinary_public_id": "paaru-studio/ipl_lband_2",
+    "status": "success"
+  },
+  {
+    "local_path": "ipl_sportstab_1.png",
+    "file_name": "ipl_sportstab_1.png",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927645/paaru-studio/ipl_sportstab_1.png",
+    "cloudinary_public_id": "paaru-studio/ipl_sportstab_1",
+    "status": "success"
+  },
+  {
+    "local_path": "itc_logo.png",
+    "file_name": "itc_logo.png",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927646/paaru-studio/itc_logo.png",
+    "cloudinary_public_id": "paaru-studio/itc_logo",
+    "status": "success"
+  },
+  {
+    "local_path": "japfa_challenge.jpg",
+    "file_name": "japfa_challenge.jpg",
+    "status": "success",
+    "error": null,
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764929225/paaru-studio/japfa_challenge.jpg",
+    "cloudinary_public_id": "paaru-studio/japfa_challenge"
+  },
+  {
+    "local_path": "japfa_hero.png",
+    "file_name": "japfa_hero.png",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927647/paaru-studio/japfa_hero.png",
+    "cloudinary_public_id": "paaru-studio/japfa_hero",
+    "status": "success"
+  },
+  {
+    "local_path": "japfa_strategy.png",
+    "file_name": "japfa_strategy.png",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927648/paaru-studio/japfa_strategy.png",
+    "cloudinary_public_id": "paaru-studio/japfa_strategy",
+    "status": "success"
+  },
+  {
+    "local_path": "lifestyle_shoot_banner.jpg",
+    "file_name": "lifestyle_shoot_banner.jpg",
+    "status": "success",
+    "error": null,
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764929231/paaru-studio/lifestyle_shoot_banner.jpg",
+    "cloudinary_public_id": "paaru-studio/lifestyle_shoot_banner"
+  },
+  {
+    "local_path": "logo.png",
+    "file_name": "logo.png",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927649/paaru-studio/logo.png",
+    "cloudinary_public_id": "paaru-studio/logo",
+    "status": "success"
+  },
+  {
+    "local_path": "marriott_logo.png",
+    "file_name": "marriott_logo.png",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927650/paaru-studio/marriott_logo.png",
+    "cloudinary_public_id": "paaru-studio/marriott_logo",
+    "status": "success"
+  },
+  {
+    "local_path": "media_offerings_bg.jpg",
+    "file_name": "media_offerings_bg.jpg",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927650/paaru-studio/media_offerings_bg.jpg",
+    "cloudinary_public_id": "paaru-studio/media_offerings_bg",
+    "status": "success"
+  },
+  {
+    "local_path": "meta_ads_logo.png",
+    "file_name": "meta_ads_logo.png",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927651/paaru-studio/meta_ads_logo.png",
+    "cloudinary_public_id": "paaru-studio/meta_ads_logo",
+    "status": "success"
+  },
+  {
+    "local_path": "metro_ad_1.jpg",
+    "file_name": "metro_ad_1.jpg",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927652/paaru-studio/metro_ad_1.jpg",
+    "cloudinary_public_id": "paaru-studio/metro_ad_1",
+    "status": "success"
+  },
+  {
+    "local_path": "metro_ad_2.jpg",
+    "file_name": "metro_ad_2.jpg",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927653/paaru-studio/metro_ad_2.jpg",
+    "cloudinary_public_id": "paaru-studio/metro_ad_2",
+    "status": "success"
+  },
+  {
+    "local_path": "metro_ad_3.jpg",
+    "file_name": "metro_ad_3.jpg",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927653/paaru-studio/metro_ad_3.jpg",
+    "cloudinary_public_id": "paaru-studio/metro_ad_3",
+    "status": "success"
+  },
+  {
+    "local_path": "pm_1.jpg",
+    "file_name": "pm_1.jpg",
+    "status": "success",
+    "error": null,
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764929235/paaru-studio/pm_1.jpg",
+    "cloudinary_public_id": "paaru-studio/pm_1"
+  },
+  {
+    "local_path": "portfolio_pics/01.jpeg",
+    "file_name": "01.jpeg",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927707/paaru-studio/01.jpg",
+    "cloudinary_public_id": "paaru-studio/01",
+    "status": "success"
+  },
+  {
+    "local_path": "portfolio_pics/01.jpg",
+    "file_name": "01.jpg",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927708/paaru-studio/01.jpg",
+    "cloudinary_public_id": "paaru-studio/01",
+    "status": "success"
+  },
+  {
+    "local_path": "portfolio_pics/02.jpg",
+    "file_name": "02.jpg",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927656/paaru-studio/02.jpg",
+    "cloudinary_public_id": "paaru-studio/02",
+    "status": "success"
+  },
+  {
+    "local_path": "portfolio_pics/03 (1).jpeg",
+    "file_name": "03 (1).jpeg",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927656/paaru-studio/03%20%281%29.jpg",
+    "cloudinary_public_id": "paaru-studio/03 (1)",
+    "status": "success"
+  },
+  {
+    "local_path": "portfolio_pics/03.jpg",
+    "file_name": "03.jpg",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927657/paaru-studio/03.jpg",
+    "cloudinary_public_id": "paaru-studio/03",
+    "status": "success"
+  },
+  {
+    "local_path": "portfolio_pics/04 (1).jpeg",
+    "file_name": "04 (1).jpeg",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927658/paaru-studio/04%20%281%29.jpg",
+    "cloudinary_public_id": "paaru-studio/04 (1)",
+    "status": "success"
+  },
+  {
+    "local_path": "portfolio_pics/04.jpg",
+    "file_name": "04.jpg",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927659/paaru-studio/04.jpg",
+    "cloudinary_public_id": "paaru-studio/04",
+    "status": "success"
+  },
+  {
+    "local_path": "portfolio_pics/06.jpeg",
+    "file_name": "06.jpeg",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927659/paaru-studio/06.jpg",
+    "cloudinary_public_id": "paaru-studio/06",
+    "status": "success"
+  },
+  {
+    "local_path": "portfolio_pics/08.jpeg",
+    "file_name": "08.jpeg",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927660/paaru-studio/08.jpg",
+    "cloudinary_public_id": "paaru-studio/08",
+    "status": "success"
+  },
+  {
+    "local_path": "portfolio_pics/DAS00810.jpg",
+    "file_name": "DAS00810.jpg",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927662/paaru-studio/DAS00810.jpg",
+    "cloudinary_public_id": "paaru-studio/DAS00810",
+    "status": "success"
+  },
+  {
+    "local_path": "portfolio_pics/DSC00084.png",
+    "file_name": "DSC00084.png",
+    "status": "success",
+    "error": null,
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764929253/paaru-studio/DSC00084.png",
+    "cloudinary_public_id": "paaru-studio/DSC00084"
+  },
+  {
+    "local_path": "portfolio_pics/DSC00172-Edit.png",
+    "file_name": "DSC00172-Edit.png",
+    "status": "success",
+    "error": null,
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764929265/paaru-studio/DSC00172-Edit.png",
+    "cloudinary_public_id": "paaru-studio/DSC00172-Edit"
+  },
+  {
+    "local_path": "portfolio_pics/IMG_4742.PNG",
+    "file_name": "IMG_4742.PNG",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927663/paaru-studio/IMG_4742.png",
+    "cloudinary_public_id": "paaru-studio/IMG_4742",
+    "status": "success"
+  },
+  {
+    "local_path": "portfolio_pics/IMG_4748.PNG",
+    "file_name": "IMG_4748.PNG",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927665/paaru-studio/IMG_4748.png",
+    "cloudinary_public_id": "paaru-studio/IMG_4748",
+    "status": "success"
+  },
+  {
+    "local_path": "portfolio_pics/IMG_4749.PNG",
+    "file_name": "IMG_4749.PNG",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927667/paaru-studio/IMG_4749.png",
+    "cloudinary_public_id": "paaru-studio/IMG_4749",
+    "status": "success"
+  },
+  {
+    "local_path": "portfolio_pics/IMG_4752.PNG",
+    "file_name": "IMG_4752.PNG",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927668/paaru-studio/IMG_4752.png",
+    "cloudinary_public_id": "paaru-studio/IMG_4752",
+    "status": "success"
+  },
+  {
+    "local_path": "product_shoot_banner.jpg",
+    "file_name": "product_shoot_banner.jpg",
+    "status": "success",
+    "error": null,
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764929268/paaru-studio/product_shoot_banner.jpg",
+    "cloudinary_public_id": "paaru-studio/product_shoot_banner"
+  },
+  {
+    "local_path": "product_showcase_banner.jpg",
+    "file_name": "product_showcase_banner.jpg",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927670/paaru-studio/product_showcase_banner.jpg",
+    "cloudinary_public_id": "paaru-studio/product_showcase_banner",
+    "status": "success"
+  },
+  {
+    "local_path": "shopify_img.png",
+    "file_name": "shopify_img.png",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927671/paaru-studio/shopify_img.png",
+    "cloudinary_public_id": "paaru-studio/shopify_img",
+    "status": "success"
+  },
+  {
+    "local_path": "shopify_meeting.jpg",
+    "file_name": "shopify_meeting.jpg",
+    "status": "success",
+    "error": null,
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764929271/paaru-studio/shopify_meeting.jpg",
+    "cloudinary_public_id": "paaru-studio/shopify_meeting"
+  },
+  {
+    "local_path": "sm_1.jpg",
+    "file_name": "sm_1.jpg",
+    "status": "success",
+    "error": null,
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764929274/paaru-studio/sm_1.jpg",
+    "cloudinary_public_id": "paaru-studio/sm_1"
+  },
+  {
+    "local_path": "social media_01.jpg",
+    "file_name": "social media_01.jpg",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927673/paaru-studio/social%20media_01.jpg",
+    "cloudinary_public_id": "paaru-studio/social media_01",
+    "status": "success"
+  },
+  {
+    "local_path": "social media_02.jpg",
+    "file_name": "social media_02.jpg",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927673/paaru-studio/social%20media_02.jpg",
+    "cloudinary_public_id": "paaru-studio/social media_02",
+    "status": "success"
+  },
+  {
+    "local_path": "social media_03.jpg",
+    "file_name": "social media_03.jpg",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927674/paaru-studio/social%20media_03.jpg",
+    "cloudinary_public_id": "paaru-studio/social media_03",
+    "status": "success"
+  },
+  {
+    "local_path": "social media_04.jpg",
+    "file_name": "social media_04.jpg",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927677/paaru-studio/social%20media_04.jpg",
+    "cloudinary_public_id": "paaru-studio/social media_04",
+    "status": "success"
+  },
+  {
+    "local_path": "social media_05.jpg",
+    "file_name": "social media_05.jpg",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927680/paaru-studio/social%20media_05.jpg",
+    "cloudinary_public_id": "paaru-studio/social media_05",
+    "status": "success"
+  },
+  {
+    "local_path": "toyota_logo.png",
+    "file_name": "toyota_logo.png",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927681/paaru-studio/toyota_logo.png",
+    "cloudinary_public_id": "paaru-studio/toyota_logo",
+    "status": "success"
+  },
+  {
+    "local_path": "tv_com.jpg",
+    "file_name": "tv_com.jpg",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927684/paaru-studio/tv_com.jpg",
+    "cloudinary_public_id": "paaru-studio/tv_com",
+    "status": "success"
+  },
+  {
+    "local_path": "unboxing_video_banner.jpg",
+    "file_name": "unboxing_video_banner.jpg",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927687/paaru-studio/unboxing_video_banner.jpg",
+    "cloudinary_public_id": "paaru-studio/unboxing_video_banner",
+    "status": "success"
+  },
+  {
+    "local_path": "video_pro.jpg",
+    "file_name": "video_pro.jpg",
+    "status": "success",
+    "error": null,
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764929277/paaru-studio/video_pro.jpg",
+    "cloudinary_public_id": "paaru-studio/video_pro"
+  },
+  {
+    "local_path": "web page bg 4K.png",
+    "file_name": "web page bg 4K.png",
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764927688/paaru-studio/web%20page%20bg%204K.png",
+    "cloudinary_public_id": "paaru-studio/web page bg 4K",
+    "status": "success"
+  },
+  {
+    "local_path": "youtube_social_media.jpg",
+    "file_name": "youtube_social_media.jpg",
+    "status": "success",
+    "error": null,
+    "cloudinary_url": "https://res.cloudinary.com/dvjveceob/image/upload/v1764929280/paaru-studio/youtube_social_media.jpg",
+    "cloudinary_public_id": "paaru-studio/youtube_social_media"
+  }
+]
