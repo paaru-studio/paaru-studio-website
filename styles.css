@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fredoka+One&display=swap');
 
 /* Reduce opacity for TV Commercial thumbnail */
 .tv-com-opacity {
@@ -616,6 +616,126 @@ body {
     font-size: 13px;
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
+
+/* AI Button - 3D Jelly Text Effect (No Background) */
+.nav-links .ai-btn {
+    padding: 12px 24px;
+    background: transparent;
+    color: #FFD700;
+    font-weight: 400;
+    /* Fredoka One is inherently bold */
+    font-size: 30px;
+    /* Slightly larger for this font */
+    letter-spacing: 1px;
+    font-family: 'Fredoka One', cursive;
+    position: relative;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+
+    /* Golden Yellow text fill with pink outline */
+    -webkit-text-fill-color: #FFD700;
+    -webkit-text-stroke: 2px #ff1493;
+
+    /* 3D Depth shadows for jelly effect */
+    text-shadow:
+        /* Highlight on top */
+        0 1px 0 rgba(255, 255, 255, 0.6),
+        /* Pink outline depth */
+        -1px -1px 0 #ff1493,
+        1px -1px 0 #ff1493,
+        -1px 1px 0 #ff1493,
+        1px 1px 0 #ff1493,
+        /* Purple depth layers */
+        0 2px 0 #a855f7,
+        0 3px 0 #9333ea,
+        0 4px 0 #7e22ce,
+        0 5px 0 #6b21a8,
+        0 6px 0 #581c87,
+        /* Shadow blur for depth */
+        0 8px 15px rgba(0, 0, 0, 0.6),
+        0 12px 25px rgba(0, 0, 0, 0.4);
+
+    transform: translateY(0);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    animation: jellyBounce 2s ease-in-out infinite;
+}
+
+/* Jelly Bounce Animation */
+@keyframes jellyBounce {
+
+    0%,
+    100% {
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        transform: translateY(-2px) scale(1.02, 0.98);
+    }
+}
+
+/* Shimmer Animation */
+@keyframes jellyShimmer {
+    0% {
+        transform: translateX(-100%) translateY(-100%) rotate(45deg);
+    }
+
+    100% {
+        transform: translateX(100%) translateY(100%) rotate(45deg);
+    }
+}
+
+/* Hover State - Squish Effect */
+.nav-links .ai-btn:hover {
+    transform: translateY(0) scale(1.05, 0.98);
+    -webkit-text-fill-color: #FFD700;
+    -webkit-text-stroke: 2px #ff69b4;
+    animation: jellyWobble 0.5s ease-in-out;
+}
+
+/* Active/Click State - Deep Press */
+.nav-links .ai-btn:active {
+    transform: translateY(2px) scale(1.02, 0.96);
+    -webkit-text-fill-color: #FFD700;
+    -webkit-text-stroke: 2px #ff1493;
+}
+
+/* Wobble Animation on Hover */
+@keyframes jellyWobble {
+
+    0%,
+    100% {
+        transform: translateY(2px) scale(1.05, 0.95);
+    }
+
+    25% {
+        transform: translateY(2px) scale(1.03, 0.97);
+    }
+
+    50% {
+        transform: translateY(2px) scale(1.07, 0.93);
+    }
+
+    75% {
+        transform: translateY(2px) scale(1.04, 0.96);
+    }
+}
+
+/* Scrolled Navbar State */
+.navbar.scrolled .nav-links .ai-btn {
+    padding: 10px 22px;
+    font-size: 25px;
+    -webkit-text-fill-color: #FFD700;
+    -webkit-text-stroke: 2px #ff1493;
+}
+
+.navbar.scrolled .nav-links .ai-btn:hover {
+    transform: translateY(0) scale(1.05, 0.98);
+    -webkit-text-fill-color: #FFD700;
+    -webkit-text-stroke: 2px #ff69b4;
+}
+
+
 
 /* Navigation Dropdown Styles */
 .nav-dropdown {
@@ -9134,4 +9254,136 @@ html {
 /* Add 200px padding after contact section on index page only */
 .index-page .contact-section {
     padding-bottom: 200px !important;
+}
+
+/* AI Services Page Styles */
+.ai-page {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+}
+
+.ai-hero {
+    height: 60vh;
+    padding-top: 140px;
+    /* Offset for fixed navbar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url('ai_hero_image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ai-hero-content h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #FFD700 0%, #ff69b4 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+    font-family: 'Fredoka One', cursive;
+    /* Match button style */
+}
+
+.ai-hero-content p {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.ai-media-section {
+    padding: 80px 0;
+}
+
+.ai-media-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.media-placeholder {
+    aspect-ratio: 16/9;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px dashed rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.media-placeholder:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.placeholder-icon {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.video-embed-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+
+    /* Portfolio Style Match */
+    background: var(--card-bg);
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-embed-wrapper:hover {
+    transform: scale(1.02);
+    border-color: var(--accent-color);
+    box-shadow: 0 12px 32px rgba(245, 158, 11, 0.15);
+    z-index: 2;
+}
+
+.video-embed-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border: 0;
+}
+
+/* AI Image Gallery Styles */
+.ai-image-wrapper {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    background: var(--card-bg);
+}
+
+.ai-image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.ai-image-wrapper:hover {
+    transform: scale(1.02);
+    border-color: var(--accent-color);
+    box-shadow: 0 12px 32px rgba(245, 158, 11, 0.15);
+    z-index: 2;
+}
+
+.ai-image-wrapper:hover img {
+    transform: scale(1.05);
 }

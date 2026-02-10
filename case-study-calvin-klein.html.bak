@@ -53,7 +53,6 @@
                     <a href="portfolio.html">Portfolio</a>
                     <a href="get-started.html">Get Started</a>
                     <a href="join-team.html">Join Team</a>
-                    <a href="ai-services.html" class="ai-btn">AI</a>
                     <a href="index.html#contact" class="cta-btn">Contact Us</a>
                 </div>
             </div>
@@ -266,7 +265,6 @@
                             <a href="portfolio.html">Portfolio</a>
                             <a href="case-studies.html">Case Studies</a>
                             <a href="join-team.html">Join Team</a>
-                    <a href="ai-services.html" class="ai-btn">AI</a>
                             <a href="index.html#contact">Contact</a>
                         </div>
                         <div class="footer-col">
