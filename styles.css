@@ -8545,11 +8545,12 @@ html {
 }
 
 /* Logo Portfolio Section - Horizontal Circular Carousel */
-.logo-portfolio-section {
+.logo-portfolio-section.full-bleed {
     padding: 70px 0;
     background: var(--primary-bg);
     position: relative;
     overflow: hidden;
+    width: 100%;
 }
 
 .logo-carousel {
@@ -8604,19 +8605,15 @@ html {
 }
 
 /* Responsive adjustments for logo carousel */
-@media (max-width: 768px) {
-    .logo-carousel {
-        gap: 30px;
-    }
-
+@media (max-width: 1200px) {
     .logo-item {
-        height: 140px;
+        height: 160px;
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .logo-carousel {
-        gap: 25px;
+        gap: 30px;
     }
 
     .logo-item {
@@ -8624,19 +8621,30 @@ html {
     }
 }
 
+@media (max-width: 480px) {
+    .logo-carousel {
+        gap: 20px;
+    }
+
+    .logo-item {
+        height: 100px;
+    }
+}
+
 /* Fashion Photography Section */
-.fashion-section {
+.fashion-section.full-bleed {
     padding: 70px 0;
     background: var(--primary-bg);
     position: relative;
     overflow: hidden;
+    width: 100%;
 }
 
 .fashion-carousel {
     display: flex;
-    gap: 40px;
+    gap: 30px;
     align-items: center;
-    animation: scrollFashion 40s linear infinite;
+    animation: scrollFashion 45s linear infinite;
     width: max-content;
 }
 
@@ -8657,7 +8665,9 @@ html {
 
 .fashion-item {
     width: auto;
-    height: 500px;
+    height: 60vh;
+    min-height: 400px;
+    max-height: 700px;
     overflow: hidden;
     background: transparent;
     border-radius: 12px;
@@ -8670,7 +8680,7 @@ html {
 }
 
 .fashion-item:hover {
-    transform: scale(1.05) translateY(-10px);
+    transform: scale(1.03) translateY(-10px);
     box-shadow: 0 20px 60px rgba(255, 215, 0, 0.3);
     z-index: 10;
 }
@@ -8678,48 +8688,50 @@ html {
 .fashion-item img {
     height: 100%;
     width: auto;
-    object-fit: contain;
+    object-fit: cover;
     transition: transform 0.4s ease;
 }
 
-.fashion-item:hover img {
-    transform: scale(1.02);
+/* Responsive adjustments for fashion carousel */
+@media (max-width: 1024px) {
+    .fashion-item {
+        height: 50vh;
+        min-height: 350px;
+    }
 }
 
-/* Responsive adjustments for fashion carousel */
 @media (max-width: 768px) {
     .fashion-carousel {
-        gap: 30px;
+        gap: 20px;
     }
 
     .fashion-item {
-        height: 400px;
+        height: 45vh;
+        min-height: 300px;
     }
 }
 
 @media (max-width: 480px) {
-    .fashion-carousel {
-        gap: 25px;
-    }
-
     .fashion-item {
-        height: 350px;
+        height: 40vh;
+        min-height: 250px;
     }
 }
 
 /* Graphics Section - Horizontal Carousel */
-.graphics-section {
-    padding: 100px 0;
+.graphics-section.full-bleed {
+    padding: 80px 0;
     background: var(--primary-bg);
     position: relative;
     overflow: hidden;
+    width: 100%;
 }
 
 .graphics-carousel {
     display: flex;
-    gap: 40px;
+    gap: 30px;
     align-items: center;
-    animation: scrollGraphics 35s linear infinite;
+    animation: scrollGraphics 40s linear infinite;
     width: max-content;
 }
 
@@ -8740,7 +8752,9 @@ html {
 
 .graphics-item {
     width: auto;
-    height: 500px;
+    height: 55vh;
+    min-height: 350px;
+    max-height: 650px;
     overflow: hidden;
     background: transparent;
     border-radius: 12px;
@@ -8753,7 +8767,7 @@ html {
 }
 
 .graphics-item:hover {
-    transform: scale(1.05) translateY(-10px);
+    transform: scale(1.03) translateY(-10px);
     box-shadow: 0 20px 60px rgba(255, 215, 0, 0.3);
     z-index: 10;
 }
@@ -8761,32 +8775,33 @@ html {
 .graphics-item img {
     height: 100%;
     width: auto;
-    object-fit: contain;
+    object-fit: cover;
     transition: transform 0.4s ease;
 }
 
-.graphics-item:hover img {
-    transform: scale(1.02);
+/* Responsive adjustments for graphics carousel */
+@media (max-width: 1024px) {
+    .graphics-item {
+        height: 45vh;
+        min-height: 300px;
+    }
 }
 
-/* Responsive adjustments for graphics carousel */
 @media (max-width: 768px) {
     .graphics-carousel {
-        gap: 30px;
+        gap: 20px;
     }
 
     .graphics-item {
-        height: 400px;
+        height: 40vh;
+        min-height: 250px;
     }
 }
 
 @media (max-width: 480px) {
-    .graphics-carousel {
-        gap: 25px;
-    }
-
     .graphics-item {
-        height: 350px;
+        height: 35vh;
+        min-height: 220px;
     }
 }
 
