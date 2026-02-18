@@ -1,0 +1,13 @@
+RewriteEngine On
+
+# Redirect index.html to /
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html\ HTTP/
+RewriteRule ^index\.html$ https://paarustudio.com/ [R=301,L]
+
+# Optional: Redirect www to non-www (or vice versa, but user requested https://paarustudio.com/)
+# RewriteCond %{HTTP_HOST} ^www\.paarustudio\.com [NC]
+# RewriteRule ^(.*)$ https://paarustudio.com/$1 [L,R=301]
+
+# Optional: Force HTTPS
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
