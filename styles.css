@@ -1172,7 +1172,7 @@ body {
 
     .hero-bg-video {
         top: 0;
-        opacity: 0.25;
+        opacity: 0.8;
     }
 
     .index-page .hero-cta {
@@ -1266,6 +1266,17 @@ video {
     /* Creates separate stacking context */
 }
 
+.hero-poster {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
 .hero-bg-video,
 .hero-bg-iframe {
     position: absolute;
@@ -1276,7 +1287,19 @@ video {
     object-fit: cover;
     z-index: 0;
     pointer-events: none;
-    opacity: 0.4;
+    opacity: 1;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+    pointer-events: none;
 }
 
 .hero .container,
@@ -2504,11 +2527,10 @@ video {
     cursor: pointer;
 }
 
-/* Remove any inherited play-circle pseudo elements for reel thumbnails */
+/* Restored play-circle pseudo elements for reel thumbnails */
 .reel .video-poster::before,
 .reel .video-poster::after {
-    display: none !important;
-    content: none !important;
+    display: block;
 }
 
 @media (max-width: 1200px) {
