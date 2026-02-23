@@ -35,6 +35,19 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fredoka+One&display=swap"
         rel="stylesheet">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Advertising & Video Production",
+      "provider": {
+        "@type": "AdvertisingAgency",
+        "name": "Paaru Studio",
+        "url": "https://paarustudio.com/"
+      },
+      "description": "Comprehensive creative services with 11+ years of experience in TV production, digital marketing, and OOH advertising."
+    }
+    </script>
 </head>
 
 <body class="services-page">
@@ -124,15 +137,70 @@
     <div class="mobile-nav-backdrop" aria-hidden="true"></div>
 
     <!-- Page Header -->
-    <section class="hero service-page-hero"
-        style="min-height: 100vh; padding: 120px 0 40px 0; align-items: center; justify-content: center;">
-        <div class="hero-poster" style="background-image: url('https://i.ytimg.com/vi/S6vVIqh_sOo/maxresdefault.jpg');">
+    <style>
+        /* Robust video background implementation for Services page */
+        .service-page-hero {
+            background: #000 !important;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Remove default hero overlays */
+        .service-page-hero::before,
+        .service-page-hero::after {
+            display: none !important;
+            content: none !important;
+        }
+
+        .video-hero-bg-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+            background: #000;
+        }
+
+        .service-page-hero .hero-bg-iframe {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100vw;
+            height: 56.25vw;
+            /* 16:9 aspect ratio */
+            min-height: 100vh;
+            min-width: 177.77vh;
+            /* 16:9 aspect ratio */
+            transform: translate(-50%, -50%);
+            opacity: 0.75;
+            /* 75% visibility for the video */
+            border: none;
+        }
+
+        .video-hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.8) 100%);
+            z-index: 1;
+        }
+
+        .service-page-hero .container {
+            position: relative;
+            z-index: 2;
+        }
+    </style>
+    <section class="hero service-page-hero">
+        <div class="video-hero-bg-container">
+            <iframe class="hero-bg-iframe"
+                src="https://www.youtube.com/embed/S6vVIqh_sOo?autoplay=1&mute=1&controls=0&loop=1&playlist=S6vVIqh_sOo&playsinline=1&showinfo=0&rel=0"
+                title="Hero Background Video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="video-hero-overlay"></div>
         </div>
-        <iframe class="hero-bg-iframe" style="opacity: 0.75;"
-            src="https://www.youtube.com/embed/S6vVIqh_sOo?autoplay=1&mute=1&controls=0&loop=1&playlist=S6vVIqh_sOo&playsinline=1&showinfo=0&rel=0"
-            title="Hero Background Video" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
         <div class="container hero-split-container">
             <div class="hero-content left-align">
                 <h1 class="hero-title ref-title">

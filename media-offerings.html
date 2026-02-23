@@ -35,6 +35,20 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fredoka+One&display=swap"
         rel="stylesheet">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "OOH & DOOH Advertising",
+      "description": "High-impact outdoor and digital out-of-home advertising solutions.",
+      "provider": {
+        "@type": "AdvertisingAgency",
+        "name": "Paaru Studio",
+        "url": "https://paarustudio.com/"
+      }
+    }
+    </script>
+
 </head>
 
 <body class="services-page">
@@ -123,15 +137,61 @@
     <div class="mobile-nav-backdrop" aria-hidden="true"></div>
 
     <!-- Page Header -->
-    <section class="hero media-page-hero"
-        style="min-height: 100vh; padding: 120px 0 40px 0; align-items: center; justify-content: center;">
-        <div class="hero-poster" style="background-image: url('https://i.ytimg.com/vi/S6vVIqh_sOo/maxresdefault.jpg');">
+    <style>
+        /* Robust background implementation for Media page */
+        .media-page-hero {
+            background: #000 !important;
+            /* Base black background */
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Remove default hero overlays and pseudo-elements */
+        .media-page-hero::before,
+        .media-page-hero::after {
+            display: none !important;
+            content: none !important;
+        }
+
+        .media-hero-bg-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+            background: #000;
+            /* Ensure solid black behind for opacity effect */
+        }
+
+        .media-hero-bg-image {
+            width: 100%;
+            height: 100%;
+            background: url('offline_marketing_hero_bg.jpg') center center / cover no-repeat;
+            opacity: 0.75;
+            /* 75% opacity as requested */
+        }
+
+        /* Additional dark gradient overlay for premium look and text readability */
+        .media-hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.7) 100%);
+            z-index: 1;
+        }
+
+        .media-page-hero .container {
+            position: relative;
+            z-index: 2;
+            /* Move container above overlay */
+        }
+    </style>
+    <section class="hero media-page-hero">
+        <div class="media-hero-bg-container">
+            <div class="media-hero-bg-image"></div>
+            <div class="media-hero-overlay"></div>
         </div>
-        <iframe class="hero-bg-iframe" style="opacity: 0.75;"
-            src="https://www.youtube.com/embed/S6vVIqh_sOo?autoplay=1&mute=1&controls=0&loop=1&playlist=S6vVIqh_sOo&playsinline=1&showinfo=0&rel=0"
-            title="Hero Background Video" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         <div class="container hero-split-container">
             <div class="hero-content left-align">
                 <h1 class="hero-title ref-title">
@@ -183,6 +243,7 @@
             </div>
         </div>
     </section>
+
 
     <!-- OOH & DOOH -->
     <section class="media-offerings-section">

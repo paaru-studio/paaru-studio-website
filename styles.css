@@ -878,6 +878,124 @@ body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
+/* Responsive Additions for Navbar and Hero */
+@media (max-width: 1280px) {
+
+    .logo,
+    .navbar.scrolled .logo,
+    .portfolio-page .navbar.scrolled .logo {
+        margin-right: 50px;
+    }
+
+    .nav-content,
+    .navbar.scrolled .nav-content {
+        gap: 40px;
+        padding: 0 20px;
+    }
+
+    .nav-links,
+    .navbar.scrolled .nav-links {
+        gap: 20px;
+    }
+
+    .hero-title.ref-title {
+        font-size: 56px;
+    }
+
+    .hero-subtitle.ref-subtitle {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 1150px) {
+
+    .nav-links a,
+    .navbar.scrolled .nav-links a {
+        font-size: 13px;
+    }
+
+    .nav-links,
+    .navbar.scrolled .nav-links {
+        gap: 15px;
+    }
+
+    .logo,
+    .navbar.scrolled .logo,
+    .portfolio-page .navbar.scrolled .logo {
+        margin-right: 20px;
+    }
+
+    .hero-title.ref-title {
+        font-size: 48px;
+    }
+
+    .hero-visual.right-form {
+        flex: 0 0 350px;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .nav-content,
+    .navbar.scrolled .nav-content {
+        gap: 20px;
+        padding: 0 10px;
+    }
+
+    .logo,
+    .navbar.scrolled .logo,
+    .portfolio-page .navbar.scrolled .logo {
+        margin-right: 0;
+    }
+
+    .logo-text,
+    .navbar.scrolled .logo-text,
+    .portfolio-page .navbar.scrolled .logo-text {
+        font-size: 16px;
+    }
+
+    .logo-text-flip,
+    .navbar.scrolled .logo-text-flip,
+    .portfolio-page .navbar.scrolled .logo-text-flip {
+        width: 70px;
+    }
+
+    .logo-image,
+    .navbar.scrolled .logo-image,
+    .portfolio-page .navbar.scrolled .logo-image {
+        width: 36px;
+        height: 36px;
+    }
+
+    .nav-links a,
+    .navbar.scrolled .nav-links a {
+        font-size: 12px;
+    }
+
+    .nav-links,
+    .navbar.scrolled .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links .ai-btn,
+    .navbar.scrolled .nav-links .ai-btn {
+        font-size: 20px;
+        padding: 8px 16px;
+    }
+
+    .hero-split-container {
+        gap: 20px;
+    }
+
+    .hero-visual.right-form {
+        flex: 0 0 320px;
+    }
+
+    .hero-title.ref-title {
+        font-size: 40px;
+    }
+}
+
 /* Mobile: show a compact menu button and stack nav links inside a mobile drawer (basic) */
 @media (max-width: 900px) {
     .nav-links {
@@ -1229,11 +1347,20 @@ body {
     }
 
     .hero-visual {
-        display: none;
+        display: block;
+        width: 100%;
+        max-width: 400px;
+        margin-top: 20px;
     }
 
-    .hero-bg-video {
-        top: 0;
+    .hero-bg-video,
+    .hero-bg-iframe {
+        top: 50%;
+        left: 50%;
+        width: 300vw;
+        height: 168.75vw;
+        min-height: 150vh;
+        min-width: 266.66vh;
         opacity: 0.8;
     }
 
@@ -1249,11 +1376,14 @@ body {
 }
 
 @media (max-width: 600px) {
-    .hero-title {
+
+    .hero-title,
+    .hero-title.ref-title {
         font-size: 32px;
     }
 
-    .hero-subtitle {
+    .hero-subtitle,
+    .hero-subtitle.ref-subtitle {
         font-size: 18px;
     }
 
@@ -1267,12 +1397,15 @@ body {
 }
 
 @media (max-width: 420px) {
-    .hero-title {
+
+    .hero-title,
+    .hero-title.ref-title {
         font-size: 28px;
         line-height: 1.2;
     }
 
-    .hero-subtitle {
+    .hero-subtitle,
+    .hero-subtitle.ref-subtitle {
         font-size: 16px;
     }
 
@@ -1319,10 +1452,9 @@ video {
     overflow: hidden;
     min-height: 100vh;
     display: flex;
-    align-items: flex-end;
-    /* push content to bottom */
+    align-items: center;
     justify-content: center;
-    padding: 0;
+    padding: 120px 0 40px 0;
     z-index: 0;
     isolation: isolate;
     /* Creates separate stacking context */
@@ -1342,10 +1474,13 @@ video {
 .hero-bg-video,
 .hero-bg-iframe {
     position: absolute;
-    top: -100px;
-    left: 0;
-    width: 100%;
-    height: 120%;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 56.25vw;
+    min-height: 100vh;
+    min-width: 177.77vh;
+    transform: translate(-50%, -50%);
     object-fit: cover;
     z-index: 0;
     pointer-events: none;
@@ -1432,12 +1567,12 @@ video {
 }
 
 .hero-title.ref-title {
-    font-size: 42px;
-    line-height: 1.25;
+    font-size: 64px;
+    line-height: 1.15;
     font-weight: 800;
     text-align: left;
     color: #fff;
-    letter-spacing: -0.5px;
+    letter-spacing: -1px;
     margin-bottom: 20px;
 }
 
@@ -1486,17 +1621,26 @@ video {
 
 .compact-hero-form input,
 .compact-hero-form select,
-.compact-hero-form textarea {
+.compact-hero-form textarea,
+.compact-hero-form input:-webkit-autofill,
+.compact-hero-form select:-webkit-autofill,
+.compact-hero-form textarea:-webkit-autofill {
     width: 100%;
     padding: 12px 14px;
     border-radius: 6px;
-    border: 1px solid #e5e7eb;
+    border: 1px solid #d1d5db !important;
     box-sizing: border-box;
     font-size: 14px;
     margin-bottom: 12px;
-    background: #fff;
-    color: #333;
+    background: #ffffff !important;
+    color: #000000 !important;
+    -webkit-text-fill-color: #000000 !important;
     font-family: 'Inter', sans-serif;
+}
+
+.compact-hero-form option {
+    color: #000000 !important;
+    background: #ffffff !important;
 }
 
 .compact-hero-form input:focus,
@@ -1556,6 +1700,7 @@ video {
         width: 100%;
         max-width: 400px;
         transform: translateY(0);
+        margin-top: 20px;
     }
 }
 
@@ -1671,7 +1816,7 @@ video {
 .about-section .container,
 .about-section .about-content {
     position: relative;
-    z-index: 1199;
+    z-index: 10;
 }
 
 .about-section .section-header {
@@ -6329,10 +6474,37 @@ html {
     z-index: 500;
 }
 
-/* E-commerce page hero - reduced height to match services page better */
+/* E-commerce page hero - custom background image
+   Uses combined selector to beat .services-page .page-hero specificity */
+.services-page.ecommerce-page .page-hero,
 .ecommerce-page .page-hero {
-    padding: 150px 0 80px !important;
-    padding-top: 100px !important;
+    padding: 200px 0 100px !important;
+    padding-top: 200px !important;
+    position: relative;
+    overflow: hidden;
+    background: url('ecommerce_hero_bg.jpg') center center / cover no-repeat !important;
+    text-align: center;
+    z-index: 500;
+}
+
+/* Dark overlay so text is readable on top of the bright, colourful bg image */
+.services-page.ecommerce-page .page-hero::after,
+.ecommerce-page .page-hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg,
+            rgba(0, 0, 0, 0.72) 0%,
+            rgba(0, 0, 0, 0.58) 50%,
+            rgba(10, 10, 10, 0.52) 100%) !important;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.services-page.ecommerce-page .page-hero .container,
+.ecommerce-page .page-hero .container {
+    position: relative;
+    z-index: 2;
 }
 
 /* Add white dots pattern to the hero background */
@@ -6346,7 +6518,12 @@ html {
     background-position: 0 0, 40px 40px, 80px 80px, 0 0;
 }
 
-/* Animated light wave moving from left to right with fade out on right */
+/* Ecommerce page must override the dots pattern set above — placed AFTER the services-page rule */
+.services-page.ecommerce-page .page-hero {
+    background: url('ecommerce_hero_bg.jpg') center center / cover no-repeat !important;
+}
+
+
 @keyframes lightWave {
     0% {
         left: -100%;
@@ -10021,4 +10198,151 @@ html {
         padding: 10px 12px;
         font-size: 13px;
     }
+}
+
+@media (max-width: 900px) {
+    .hero-split-container {
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .hero-form-card {
+        padding: 24px 20px;
+    }
+
+    .hero {
+        padding-top: 140px;
+        padding-bottom: 40px;
+    }
+}
+
+/* Fixes for Mobile Screen Sizes and Overrides */
+@media (max-width: 900px) {
+    .hero {
+        padding-top: 150px;
+        padding-bottom: 60px;
+        align-items: stretch;
+        justify-content: flex-start;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .hero-split-container {
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 30px;
+    }
+
+    .hero-visual {
+        display: block !important;
+    }
+
+    .hero-visual.right-form {
+        max-width: 100%;
+        margin-top: 10px;
+    }
+
+    .hero-content.left-align {
+        margin-bottom: 0px;
+        padding-right: 0;
+    }
+
+    .hero-title.ref-title {
+        font-size: 34px !important;
+        line-height: 1.15;
+    }
+
+    .hero-subtitle.ref-subtitle {
+        font-size: 17px !important;
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero {
+        padding-top: 120px;
+        padding-bottom: 60px;
+    }
+
+    .hero-title.ref-title {
+        font-size: 30px !important;
+    }
+
+    .hero-subtitle.ref-subtitle {
+        font-size: 15px !important;
+    }
+
+    .hero-form-card {
+        padding: 20px 15px;
+    }
+}
+
+@media (max-width: 420px) {
+    .hero-title.ref-title {
+        font-size: 26px !important;
+        letter-spacing: -0.5px;
+    }
+
+    .hero-subtitle.ref-subtitle {
+        font-size: 14px !important;
+    }
+}
+
+/* Fix z-index override on mobile causing About section to overlap hero form */
+@media (max-width: 900px) {
+    .hero-visual {
+        z-index: 50 !important;
+        position: relative;
+    }
+
+    .about-section {
+        z-index: 1 !important;
+        position: relative;
+        margin-top: 40px;
+        /* Add extra spacing before About starts */
+    }
+}
+
+/* Override Mega Menu for Mobile Navbar Open State */
+.navbar.open .nav-dropdown-menu.mega-menu {
+    width: 100% !important;
+    max-width: 100% !important;
+    grid-template-columns: 1fr !important;
+    padding: 12px 16px !important;
+    gap: 8px !important;
+    transform: none !important;
+    left: 0 !important;
+    position: static !important;
+}
+
+.navbar.open .nav-dropdown-menu.mega-menu a.mega-menu-item {
+    padding: 12px !important;
+    background: rgba(0, 0, 0, 0.3) !important;
+}
+
+.navbar.open .nav-dropdown-menu.mega-menu .mega-menu-item img {
+    display: none !important;
+    /* hide image on mobile menu for space */
+}
+
+.navbar.open .nav-dropdown-menu.mega-menu .mega-item-content {
+    padding: 0 !important;
+}
+
+.navbar.open .nav-dropdown-menu.mega-menu .mega-item-content h4 {
+    font-size: 16px !important;
+    margin-bottom: 0 !important;
+    color: rgba(255, 255, 255, 0.95) !important;
+}
+
+.navbar.open .nav-dropdown-menu.mega-menu .mega-item-content p {
+    display: none !important;
+    /* hide long description on mobile */
+}
+
+.navbar.open .nav-dropdown-menu.mega-menu .mega-menu-item:hover {
+    background: rgba(245, 158, 11, 0.25) !important;
+    border-left: 2px solid var(--accent-color) !important;
+    transform: none !important;
 }

@@ -35,6 +35,20 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fredoka+One&display=swap"
         rel="stylesheet">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "E-commerce Solutions",
+      "description": "Professional e-commerce product cataloging, photography, and Amazon/Google ads management.",
+      "provider": {
+        "@type": "AdvertisingAgency",
+        "name": "Paaru Studio",
+        "url": "https://paarustudio.com/"
+      }
+    }
+    </script>
+
 </head>
 
 <body class="services-page ecommerce-page">
@@ -126,7 +140,59 @@
     <div class="mobile-nav-backdrop" aria-hidden="true"></div>
 
     <!-- Page Header -->
-    <section class="page-hero">
+    <style>
+        /* Robust background implementation for E-commerce page */
+        .ecommerce-hero {
+            background: #000 !important;
+            position: relative;
+            overflow: hidden;
+            padding: 200px 0 100px !important;
+            text-align: center;
+        }
+
+        /* Remove default hero overlays and pseudo-elements */
+        .ecommerce-hero::before,
+        .ecommerce-hero::after {
+            display: none !important;
+            content: none !important;
+        }
+
+        .ecommerce-hero-bg-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+            background: #000;
+        }
+
+        .ecommerce-hero-bg-image {
+            width: 100%;
+            height: 100%;
+            background: url('ecommerce_hero_bg.jpg') center center / cover no-repeat;
+            opacity: 0.75;
+            /* Premium 75% visibility */
+        }
+
+        .ecommerce-hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.7) 100%);
+            z-index: 1;
+        }
+
+        .ecommerce-hero .container {
+            position: relative;
+            z-index: 2;
+        }
+    </style>
+    <section class="hero ecommerce-hero">
+        <div class="ecommerce-hero-bg-container">
+            <div class="ecommerce-hero-bg-image"></div>
+            <div class="ecommerce-hero-overlay"></div>
+        </div>
         <div class="container">
             <h1 class="page-title">
                 Expert E-Commerce Solutions<br>
