@@ -90,4 +90,4 @@ Simply open `index.html` in a web browser to view the website.
 
 ---
 
-**Created for Paaru Studio** | An Agency of Possibilities
+**Created for Paaru Studio** | Video Production Company in Bangalore | Ad Films, BTL & OOH.

@@ -277,8 +277,8 @@ body {
    Use a subtle gradient and small action button. */
 .top-banner {
     background: linear-gradient(90deg, rgb(245, 159, 11), rgba(247, 177, 56, 0.922));
-    color: var(--text-primary);
-    padding: 8px 0;
+    color: #000;
+    padding: 4px 0;
     position: relative;
     /* no fixed to avoid overlap issues */
     width: 100%;
@@ -301,9 +301,9 @@ body {
 }
 
 .book-now-btn {
-    background: #fff;
-    color: var(--accent-color);
-    padding: 8px 18px;
+    background: #000;
+    color: #fff;
+    padding: 4px 14px;
     border-radius: 999px;
     text-decoration: none;
     font-weight: 700;
@@ -323,23 +323,26 @@ body {
 .navbar {
     position: fixed;
     top: 0;
-    /* flush to top of viewport */
     left: 0;
     right: 0;
-    height: 64px;
+    height: 79px;
+    /* 64px + 15px */
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(180deg, rgba(10, 10, 10, 0.55), rgba(10, 10, 10, 0.45));
-    backdrop-filter: blur(8px) saturate(120%);
-    -webkit-backdrop-filter: blur(8px) saturate(120%);
-    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.45);
+    background: #ffffff;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
     z-index: 999998 !important;
-    /* extremely high to ensure visibility */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     border-radius: 0;
+}
+
+.navbar .container {
+    max-width: none !important;
+    width: 100% !important;
+    padding: 0;
 }
 
 /* Navbar scrolled state - compressed by 15% with golden yellow background */
@@ -361,8 +364,8 @@ body {
 /* Make sure page content (page-hero) is not hidden under the fixed navbar. */
 .page-hero,
 .hero {
-    padding-top: 140px;
-    /* navbar height (64) + banner height (~28) + spacing (~48) */
+    padding-top: 130px;
+    /* Adjusted for slimmer banner + taller navbar */
 }
 
 /* Portfolio page navbar - black background positioned under banner */
@@ -429,14 +432,39 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 64px;
+    height: 79px;
     width: 100%;
-    max-width: 1400px;
+    max-width: 100% !important;
     position: relative;
     z-index: 999998;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    padding: 0 32px;
-    gap: 80px;
+    padding: 0 100px 0 150px;
+    /* 150px left for logo, 100px right for contact button */
+    gap: 20px;
+}
+
+@media (max-width: 1600px) {
+    .nav-content {
+        padding: 0 50px 0 80px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .nav-content {
+        padding: 0 30px 0 40px;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 900px) {
+    .nav-content {
+        padding: 0 20px;
+        height: 64px;
+    }
+
+    .navbar {
+        height: 64px;
+    }
 }
 
 .navbar.scrolled .nav-content {
@@ -452,7 +480,7 @@ body {
     text-decoration: none;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     flex-shrink: 0;
-    margin-right: 200px;
+    margin-right: 0;
 }
 
 .logo-image {
@@ -470,16 +498,14 @@ body {
 .logo-text {
     font-weight: 800;
     font-size: 20px;
-    /* Increased by 50% from 16px */
     letter-spacing: -0.6px;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     display: inline-flex;
     align-items: center;
     gap: 9px;
-    /* Increased proportionally */
     line-height: 1.2;
-    color: #FFD700;
-    /* Yellow color */
+    color: #000000;
+    /* Text in black */
 }
 
 .logo-text-static {
@@ -504,59 +530,45 @@ body {
     top: 0;
     width: 100%;
     backface-visibility: hidden;
-    animation: flip 2s infinite;
-    animation-delay: 3s;
-    /* Start after 3 seconds */
+    animation: flip 4s infinite;
+    /* 4 second total cycle */
     opacity: 0;
-    /* Initially hidden */
     white-space: nowrap;
 }
 
-/* Show first word immediately, then start animation after 3s */
+/* Alternate visibility: each word shows for 2 seconds */
 .flip-word:nth-child(1) {
-    animation-delay: 3s;
-    opacity: 1;
-    /* Show STUDIO initially */
+    animation-delay: 0s;
 }
 
 .flip-word:nth-child(2) {
-    animation-delay: 4s;
-    /* 3s initial + 1s offset */
-    opacity: 0;
-    color: #fff;
-    /* Make 'Media' text white */
+    animation-delay: 2s;
+    color: #000;
 }
 
 @keyframes flip {
-    0% {
-        transform: rotateX(0deg);
-        opacity: 1;
-    }
 
+    0%,
     45% {
         transform: rotateX(0deg);
         opacity: 1;
     }
 
-    50% {
-        transform: rotateX(90deg);
-        opacity: 0;
-    }
-
-    55% {
+    50%,
+    95% {
         transform: rotateX(90deg);
         opacity: 0;
     }
 
     100% {
         transform: rotateX(0deg);
-        opacity: 0;
+        opacity: 1;
     }
 }
 
 .navbar.scrolled .logo-text {
     font-size: 20px;
-    /* Increased by 50% from 14px */
+    color: #000;
 }
 
 .navbar.scrolled .logo-text-flip {
@@ -566,7 +578,7 @@ body {
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 32px;
+    gap: 20px;
     position: relative;
     z-index: 999998;
     transition: gap 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -578,7 +590,8 @@ body {
 }
 
 .nav-links a {
-    color: rgba(255, 255, 255, 0.85);
+    color: #000000;
+    /* Text in black */
     text-decoration: none;
     font-size: 14px;
     font-weight: 600;
@@ -592,7 +605,7 @@ body {
 }
 
 .nav-links a:hover {
-    color: white;
+    color: var(--accent-color);
 }
 
 .navbar.scrolled .nav-links a:hover {
@@ -754,7 +767,7 @@ body {
 .dropdown-arrow {
     font-size: 12px;
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    color: rgba(255, 255, 255, 0.85);
+    color: #000000;
 }
 
 .navbar.scrolled .dropdown-arrow {
@@ -1361,7 +1374,7 @@ body {
         height: 168.75vw;
         min-height: 150vh;
         min-width: 266.66vh;
-        opacity: 0.8;
+        opacity: 0.75;
     }
 
     .index-page .hero-cta {
@@ -1457,7 +1470,7 @@ video {
     padding: 120px 0 40px 0;
     z-index: 0;
     isolation: isolate;
-    /* Creates separate stacking context */
+    background: #000;
 }
 
 .hero-poster {
@@ -1480,7 +1493,8 @@ video {
     height: 56.25vw;
     min-height: 100vh;
     min-width: 177.77vh;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(1.15);
+    /* Scale up to crop out YouTube UI details */
     object-fit: cover;
     z-index: 0;
     pointer-events: none;
@@ -1560,15 +1574,15 @@ video {
 .hero-content.left-align {
     align-items: flex-start;
     padding-bottom: 0;
-    flex: 1;
-    max-width: 100%;
+    flex: 1.5;
+    max-width: 700px;
     padding-right: 20px;
     text-align: left;
 }
 
 .hero-title.ref-title {
-    font-size: 64px;
-    line-height: 1.15;
+    font-size: 48px;
+    line-height: 1.2;
     font-weight: 800;
     text-align: left;
     color: #fff;
