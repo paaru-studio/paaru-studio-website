@@ -17,7 +17,7 @@
     <meta property="og:title" content="Calvin Klein Case Study | PAARU STUDIO">
     <meta property="og:description"
         content="11+ years of creative excellence. Explore our bold campaign for Calvin Klein.">
-    <meta property="og:image" content="https://paarustudio.com/logo.png">
+    <meta property="og:image" content="https://paarustudio.com/logo.webp">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
@@ -25,15 +25,29 @@
     <meta property="twitter:title" content="Calvin Klein Case Study | PAARU STUDIO">
     <meta property="twitter:description"
         content="11+ years of creative excellence. Explore our bold campaign for Calvin Klein.">
-    <meta property="twitter:image" content="https://paarustudio.com/logo.png">
+    <meta property="twitter:image" content="https://paarustudio.com/logo.webp">
 
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="popup-form.css">
+    <link rel="icon" type="image/png" href="logo.webp">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fredoka+One&display=swap"
+        as="style">
+
+    <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="popup-form.css" media="print" onload="this.media='all'">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fredoka+One&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" media="print" onload="this.media='all'">
+
+    <noscript>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="popup-form.css">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fredoka+One&display=swap"
+            rel="stylesheet">
+    </noscript>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -66,7 +80,7 @@
         <div class="container">
             <div class="nav-content">
                 <a href="/" class="logo">
-                    <img loading="lazy" decoding="async" src="logo.png" alt="Paaru Studio Logo" class="logo-image">
+                    <img loading="lazy" decoding="async" src="logo.webp" alt="Paaru Studio Logo" class="logo-image">
                     <span class="logo-text">
                         <span class="logo-text-static">PAARU</span>
                         <span class="logo-text-flip">
@@ -168,7 +182,7 @@
                 <h2
                     style="font-size: 36px; font-weight: 800; color: var(--text-primary); margin-bottom: 32px; text-align: center;">
                     Project <span
-                        style="background: linear-gradient(135deg, #fbbf24, #f59e0b); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Overview</span>
+                        style="background: linear-gradient(135deg, #fbbf24, #f59e0b); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">Overview</span>
                 </h2>
 
                 <div style="background: var(--secondary-bg); border-radius: 16px; padding: 48px; margin-bottom: 48px;">
@@ -190,21 +204,21 @@
                     <div
                         style="text-align: center; padding: 32px; background: var(--secondary-bg); border-radius: 12px;">
                         <div
-                            style="font-size: 48px; font-weight: 900; background: linear-gradient(135deg, #fbbf24, #f59e0b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 8px;">
+                            style="font-size: 48px; font-weight: 900; background: linear-gradient(135deg, #fbbf24, #f59e0b); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 8px;">
                             15+</div>
                         <div style="color: var(--text-secondary); font-size: 16px;">Creative Assets</div>
                     </div>
                     <div
                         style="text-align: center; padding: 32px; background: var(--secondary-bg); border-radius: 12px;">
                         <div
-                            style="font-size: 48px; font-weight: 900; background: linear-gradient(135deg, #fbbf24, #f59e0b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 8px;">
+                            style="font-size: 48px; font-weight: 900; background: linear-gradient(135deg, #fbbf24, #f59e0b); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 8px;">
                             3</div>
                         <div style="color: var(--text-secondary); font-size: 16px;">Campaign Phases</div>
                     </div>
                     <div
                         style="text-align: center; padding: 32px; background: var(--secondary-bg); border-radius: 12px;">
                         <div
-                            style="font-size: 48px; font-weight: 900; background: linear-gradient(135deg, #fbbf24, #f59e0b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 8px;">
+                            style="font-size: 48px; font-weight: 900; background: linear-gradient(135deg, #fbbf24, #f59e0b); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 8px;">
                             100%</div>
                         <div style="color: var(--text-secondary); font-size: 16px;">Brand Aligned</div>
                     </div>
@@ -241,7 +255,7 @@
                 <h2
                     style="font-size: 36px; font-weight: 800; color: var(--text-primary); margin-bottom: 48px; text-align: center;">
                     The <span
-                        style="background: linear-gradient(135deg, #fbbf24, #f59e0b); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Challenge</span>
+                        style="background: linear-gradient(135deg, #fbbf24, #f59e0b); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">Challenge</span>
                 </h2>
 
                 <div
@@ -264,7 +278,7 @@
                 <h2
                     style="font-size: 36px; font-weight: 800; color: var(--text-primary); margin-bottom: 48px; text-align: center;">
                     Our <span
-                        style="background: linear-gradient(135deg, #fbbf24, #f59e0b); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Solution</span>
+                        style="background: linear-gradient(135deg, #fbbf24, #f59e0b); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">Solution</span>
                 </h2>
 
                 <div style="display: grid; gap: 32px;">
@@ -318,7 +332,7 @@
                 <h2
                     style="font-size: 36px; font-weight: 800; color: var(--text-primary); margin-bottom: 48px; text-align: center;">
                     The <span
-                        style="background: linear-gradient(135deg, #fbbf24, #f59e0b); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Results</span>
+                        style="background: linear-gradient(135deg, #fbbf24, #f59e0b); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">Results</span>
                 </h2>
 
                 <div
@@ -354,7 +368,7 @@
         <div class="container">
             <h2 style="font-size: 48px; font-weight: 900; color: var(--text-primary); margin-bottom: 24px;">
                 Ready to Elevate Your <span
-                    style="background: linear-gradient(135deg, #fbbf24, #f59e0b); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Brand?</span>
+                    style="background: linear-gradient(135deg, #fbbf24, #f59e0b); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">Brand?</span>
             </h2>
             <p
                 style="font-size: 20px; color: var(--text-secondary); margin-bottom: 40px; max-width: 700px; margin-left: auto; margin-right: auto;">

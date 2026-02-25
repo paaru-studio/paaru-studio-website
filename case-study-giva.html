@@ -17,7 +17,7 @@
     <meta property="og:title" content="GIVA Case Study | PAARU STUDIO">
     <meta property="og:description"
         content="11+ years of e-commerce growth expertise. See how we accelerated growth for GIVA jewelry.">
-    <meta property="og:image" content="https://paarustudio.com/logo.png">
+    <meta property="og:image" content="https://paarustudio.com/logo.webp">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
@@ -25,15 +25,29 @@
     <meta property="twitter:title" content="GIVA Case Study | PAARU STUDIO">
     <meta property="twitter:description"
         content="11+ years of e-commerce growth expertise. See how we accelerated growth for GIVA jewelry.">
-    <meta property="twitter:image" content="https://paarustudio.com/logo.png">
+    <meta property="twitter:image" content="https://paarustudio.com/logo.webp">
 
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="popup-form.css">
+    <link rel="icon" type="image/png" href="logo.webp">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fredoka+One&display=swap"
+        as="style">
+
+    <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="popup-form.css" media="print" onload="this.media='all'">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fredoka+One&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" media="print" onload="this.media='all'">
+
+    <noscript>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="popup-form.css">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fredoka+One&display=swap"
+            rel="stylesheet">
+    </noscript>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -66,7 +80,7 @@
         <div class="container">
             <div class="nav-content">
                 <a href="/" class="logo">
-                    <img loading="lazy" decoding="async" src="logo.png" alt="Paaru Studio Logo" class="logo-image">
+                    <img loading="lazy" decoding="async" src="logo.webp" alt="Paaru Studio Logo" class="logo-image">
                     <span class="logo-text">
                         <span class="logo-text-static">PAARU</span>
                         <span class="logo-text-flip">
@@ -137,7 +151,7 @@
 
     <!-- Hero Section -->
     <section class="case-study-hero"
-        style="background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%); padding: 150px 0 120px; position: relative; z-index: 500; min-height: 500px; display: flex; align-items: center;">
+        style="background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%); padding: 150px 10px 120px; position: relative; z-index: 500; min-height: 500px; display: flex; align-items: center;">
         <div class="container" style="position: relative; z-index: 501; width: 100%;">
             <div
                 style="max-width: 1000px; margin: 0 auto; text-align: center; position: relative; z-index: 502; padding: 0 20px;">
@@ -166,7 +180,7 @@
     </section>
 
     <!-- Overview Section -->
-    <section style="padding: 100px 0; background: var(--primary-bg);">
+    <section style="padding: 100px 10px; background: var(--primary-bg);">
         <div class="container">
             <div style="max-width: 1000px; margin: 0 auto;">
                 <div style="margin-bottom: 60px;">

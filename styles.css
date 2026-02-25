@@ -1,50 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fredoka+One&display=swap');
 
-/* Reduce opacity for TV Commercial thumbnail */
-.tv-com-opacity {
-    opacity: 0.9;
-    transform: scale(1.3);
-    transition: transform 0.3s, opacity 0.3s;
-}
-
-/* TV Commercial Background Image */
-.tv-com-bg {
-    background-image: url('tv_com.jpg');
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    width: 100%;
-    height: 250px;
-    border-radius: 0.75em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.3s cubic-bezier(.4, 2, .6, 1), box-shadow 0.3s;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
-    overflow: hidden;
-}
-
-.tv-com-bg::after {
-    display: none;
-}
-
-.portfolio-img-label {
-    position: relative;
-    z-index: 2;
-    color: #fff;
-    font-size: 1.5rem;
-    font-weight: 700;
-    text-align: center;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-    letter-spacing: 1px;
-}
-
-.pop-hover:hover.tv-com-bg {
-    transform: scale(1.06) translateY(-8px);
-    box-shadow: 0 12px 32px rgba(245, 158, 11, 0.18);
-    z-index: 2;
-}
-
 /* Portfolio Thumbnail Pop Animation */
 .portfolio-thumb {
     width: 100%;
@@ -59,88 +14,6 @@
     transform: scale(1.06) translateY(-8px);
     box-shadow: 0 12px 32px rgba(245, 158, 11, 0.18);
     z-index: 2;
-}
-
-/* Product Shoot Gallery Styles */
-.product-shoot-section {
-    padding: 100px 0;
-    background: var(--secondary-bg);
-}
-
-.product-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 60px;
-    justify-content: space-between;
-}
-
-.gallery-photos,
-.gallery-videos {
-    flex: 1 1 400px;
-    min-width: 320px;
-}
-
-.gallery-photos h3,
-.gallery-videos h3 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    color: var(--accent-color);
-}
-
-.photo-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 20px;
-}
-
-.gallery-img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 12px;
-    border: 2px solid var(--border-color);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.gallery-img:hover {
-    transform: scale(1.04);
-    box-shadow: 0 8px 32px rgba(245, 158, 11, 0.15);
-    border-color: var(--accent-color);
-}
-
-.video-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-.gallery-video {
-    width: 100%;
-    height: 220px;
-    border-radius: 12px;
-    background: #000;
-    border: 2px solid var(--border-color);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
-}
-
-@media (max-width: 900px) {
-    .product-gallery {
-        flex-direction: column;
-        gap: 40px;
-    }
-
-    .video-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Make portfolio links cover the whole card */
-.portfolio-link {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-    height: 100%;
 }
 
 /* Reset and Base Styles */
@@ -368,65 +241,7 @@ body {
     /* Adjusted for slimmer banner + taller navbar */
 }
 
-/* Portfolio page navbar - black background positioned under banner */
-.portfolio-page .navbar {
-    top: 55px;
-    /* positioned under the banner */
-    background: rgba(0, 0, 0, 0.95);
-    backdrop-filter: blur(10px) saturate(120%);
-    -webkit-backdrop-filter: blur(10px) saturate(120%);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
 
-/* Portfolio page navbar scrolled state - golden yellow background with white text */
-.portfolio-page .navbar.scrolled {
-    top: 10px;
-    left: 75px;
-    right: 75px;
-    width: calc(100% - 150px);
-    height: 54px;
-    background: linear-gradient(180deg, rgba(245, 158, 11, 0.95), rgba(245, 158, 11, 0.9));
-    backdrop-filter: blur(12px) saturate(140%);
-    -webkit-backdrop-filter: blur(12px) saturate(140%);
-    box-shadow: 0 4px 20px rgba(245, 158, 11, 0.3);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 30px;
-}
-
-/* Portfolio page navbar scrolled - white text for all links */
-.portfolio-page .navbar.scrolled .nav-links a {
-    color: #ffffff;
-}
-
-/* Portfolio page navbar scrolled - white text on hover */
-.portfolio-page .navbar.scrolled .nav-links a:hover {
-    color: #ffffff;
-    opacity: 0.8;
-}
-
-/* Portfolio page navbar scrolled - logo text white */
-.portfolio-page .navbar.scrolled .logo-text {
-    color: #ffffff;
-}
-
-/* Portfolio page navbar scrolled - CTA button styling */
-.portfolio-page .navbar.scrolled .nav-links .cta-btn {
-    background: #000000;
-    color: #ffffff;
-    border: 2px solid #000000;
-}
-
-.portfolio-page .navbar.scrolled .nav-links .cta-btn:hover {
-    background: #ffffff;
-    color: #000000;
-    border: 2px solid #000000;
-}
-
-/* Portfolio page navbar scrolled - dropdown arrow white */
-.portfolio-page .navbar.scrolled .dropdown-arrow {
-    color: #ffffff;
-}
 
 .nav-content {
     display: flex;
@@ -895,8 +710,7 @@ body {
 @media (max-width: 1280px) {
 
     .logo,
-    .navbar.scrolled .logo,
-    .portfolio-page .navbar.scrolled .logo {
+    .navbar.scrolled .logo {
         margin-right: 50px;
     }
 
@@ -933,8 +747,7 @@ body {
     }
 
     .logo,
-    .navbar.scrolled .logo,
-    .portfolio-page .navbar.scrolled .logo {
+    .navbar.scrolled .logo {
         margin-right: 20px;
     }
 
@@ -956,26 +769,22 @@ body {
     }
 
     .logo,
-    .navbar.scrolled .logo,
-    .portfolio-page .navbar.scrolled .logo {
+    .navbar.scrolled .logo {
         margin-right: 0;
     }
 
     .logo-text,
-    .navbar.scrolled .logo-text,
-    .portfolio-page .navbar.scrolled .logo-text {
+    .navbar.scrolled .logo-text {
         font-size: 16px;
     }
 
     .logo-text-flip,
-    .navbar.scrolled .logo-text-flip,
-    .portfolio-page .navbar.scrolled .logo-text-flip {
+    .navbar.scrolled .logo-text-flip {
         width: 70px;
     }
 
     .logo-image,
-    .navbar.scrolled .logo-image,
-    .portfolio-page .navbar.scrolled .logo-image {
+    .navbar.scrolled .logo-image {
         width: 36px;
         height: 36px;
     }
@@ -1227,17 +1036,7 @@ body {
     border-left: 3px solid var(--accent-color);
 }
 
-/* Portfolio page mobile menu - override black CTA button */
-.portfolio-page .navbar.open .nav-links .cta-btn {
-    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end)) !important;
-    color: white !important;
-    border: none !important;
-}
 
-.portfolio-page .navbar.open .nav-links .cta-btn:hover {
-    background: linear-gradient(90deg, var(--accent-hover), var(--accent-color)) !important;
-    color: white !important;
-}
 
 .navbar.open .nav-dropdown {
     width: 100%;
@@ -1508,7 +1307,9 @@ video {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6);
+    background:
+        linear-gradient(to top, #000000 0%, rgba(0, 0, 0, 0.85) 15%, rgba(245, 158, 11, 0.25) 35%, transparent 60%),
+        rgba(0, 0, 0, 0.35);
     z-index: 0;
     pointer-events: none;
 }
@@ -5225,99 +5026,6 @@ video {
 
     .spec-inline-item {
         flex: 1 1 100%;
-    }
-}
-
-/* Old metro grid styles - can be removed if not used elsewhere */
-.metro-layout .ad-details.metro-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 40px;
-    align-items: start;
-}
-
-.metro-layout .ad-spec {
-    grid-column: 1;
-}
-
-.metro-layout .ad-pricing.metro-center {
-    grid-column: 2;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.metro-layout .ad-images {
-    grid-column: 3;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.metro-image {
-    width: 100%;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-    border: 2px solid var(--border-color);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.metro-image:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 32px rgba(245, 158, 11, 0.2);
-    border-color: var(--accent-color);
-}
-
-.metro-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-}
-
-/* Responsive adjustments */
-@media (max-width: 1100px) {
-    .metro-layout .ad-details.metro-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 30px;
-    }
-
-    .metro-layout .ad-spec {
-        grid-column: 1;
-    }
-
-    .metro-layout .ad-pricing.metro-center {
-        grid-column: 2;
-    }
-
-    .metro-layout .ad-images {
-        grid-column: 1 / -1;
-        flex-direction: row;
-    }
-}
-
-@media (max-width: 768px) {
-    .metro-layout .ad-details.metro-grid {
-        grid-template-columns: 1fr;
-        gap: 25px;
-    }
-
-    .metro-layout .ad-spec,
-    .metro-layout .ad-pricing.metro-center,
-    .metro-layout .ad-images {
-        grid-column: 1;
-    }
-
-    .metro-layout .ad-pricing.metro-center {
-        text-align: left;
-        align-items: flex-start;
-    }
-
-    .metro-layout .ad-images {
-        flex-direction: column;
     }
 }
 
@@ -9854,6 +9562,7 @@ html {
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
     height: 100%;
     border: 0;
 }
@@ -10190,6 +9899,10 @@ html {
 .blog-cta-box p {
     color: var(--text-secondary);
     margin-bottom: 24px;
+}
+
+.blog-cta-box .cta-btn {
+    color: #ffffff !important;
 }
 
 /* Responsive blog */

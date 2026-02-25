@@ -17,7 +17,7 @@
     <meta property="og:title" content="Join Our Team | PAARU STUDIO">
     <meta property="og:description"
         content="Join a team with 11+ years of creative excellence. Explore career opportunities at Paaru Studio.">
-    <meta property="og:image" content="https://paarustudio.com/logo.png">
+    <meta property="og:image" content="https://paarustudio.com/logo.webp">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
@@ -25,16 +25,29 @@
     <meta property="twitter:title" content="Join Our Team | PAARU STUDIO">
     <meta property="twitter:description"
         content="Join a team with 11+ years of creative excellence. Explore career opportunities at Paaru Studio.">
-    <meta property="twitter:image" content="https://paarustudio.com/logo.png">
+    <meta property="twitter:image" content="https://paarustudio.com/logo.webp">
 
-    <link rel="icon" type="image/png" href="logo.png">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="popup-form.css">
+    <link rel="icon" type="image/png" href="logo.webp">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fredoka+One&display=swap"
+        as="style">
+
+    <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="popup-form.css" media="print" onload="this.media='all'">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fredoka+One&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" media="print" onload="this.media='all'">
+
+    <noscript>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="popup-form.css">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fredoka+One&display=swap"
+            rel="stylesheet">
+    </noscript>
 </head>
 
 <body class="services-page">
@@ -53,7 +66,7 @@
         <div class="container">
             <div class="nav-content">
                 <a href="/" class="logo">
-                    <img loading="lazy" decoding="async" src="logo.png" alt="Paaru Studio Logo" class="logo-image">
+                    <img loading="lazy" decoding="async" src="logo.webp" alt="Paaru Studio Logo" class="logo-image">
                     <span class="logo-text">
                         <span class="logo-text-static">PAARU</span>
                         <span class="logo-text-flip">
