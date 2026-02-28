@@ -450,123 +450,39 @@ body {
 
 /* AI Button - 3D Jelly Text Effect (No Background) */
 .nav-links .ai-btn {
-    padding: 12px 24px;
+    padding: 8px 16px;
     background: transparent;
-    color: #FFD700;
-    font-weight: 400;
-    /* Fredoka One is inherently bold */
-    font-size: 30px;
-    /* Slightly larger for this font */
-    letter-spacing: 1px;
-    font-family: "Inter", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
     border: none;
     cursor: pointer;
-    text-transform: uppercase;
-
-    /* Golden Yellow text fill with pink outline */
-    -webkit-text-fill-color: #FFD700;
-    -webkit-text-stroke: 2px #ff1493;
-
-    /* 3D Depth shadows for jelly effect */
-    text-shadow:
-        /* Highlight on top */
-        0 1px 0 rgba(255, 255, 255, 0.6),
-        /* Pink outline depth */
-        -1px -1px 0 #ff1493,
-        1px -1px 0 #ff1493,
-        -1px 1px 0 #ff1493,
-        1px 1px 0 #ff1493,
-        /* Purple depth layers */
-        0 2px 0 #a855f7,
-        0 3px 0 #9333ea,
-        0 4px 0 #7e22ce,
-        0 5px 0 #6b21a8,
-        0 6px 0 #581c87,
-        /* Shadow blur for depth */
-        0 8px 15px rgba(0, 0, 0, 0.6),
-        0 12px 25px rgba(0, 0, 0, 0.4);
-
-    transform: translateY(0);
-    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    animation: jellyBounce 2s ease-in-out infinite;
+    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-/* Jelly Bounce Animation */
-@keyframes jellyBounce {
-
-    0%,
-    100% {
-        transform: translateY(0) scale(1);
-    }
-
-    50% {
-        transform: translateY(-2px) scale(1.02, 0.98);
-    }
+.ai-logo-nav {
+    width: 65px;
+    /* Based on 35% reduction of a standard 100px asset if applicable, or target size */
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
 }
 
-/* Shimmer Animation */
-@keyframes jellyShimmer {
-    0% {
-        transform: translateX(-100%) translateY(-100%) rotate(45deg);
-    }
-
-    100% {
-        transform: translateX(100%) translateY(100%) rotate(45deg);
-    }
-}
-
-/* Hover State - Squish Effect */
 .nav-links .ai-btn:hover {
-    transform: translateY(0) scale(1.05, 0.98);
-    -webkit-text-fill-color: #FFD700;
-    -webkit-text-stroke: 2px #ff69b4;
-    animation: jellyWobble 0.5s ease-in-out;
+    transform: scale(1.1);
 }
 
-/* Active/Click State - Deep Press */
 .nav-links .ai-btn:active {
-    transform: translateY(2px) scale(1.02, 0.96);
-    -webkit-text-fill-color: #FFD700;
-    -webkit-text-stroke: 2px #ff1493;
-}
-
-/* Wobble Animation on Hover */
-@keyframes jellyWobble {
-
-    0%,
-    100% {
-        transform: translateY(2px) scale(1.05, 0.95);
-    }
-
-    25% {
-        transform: translateY(2px) scale(1.03, 0.97);
-    }
-
-    50% {
-        transform: translateY(2px) scale(1.07, 0.93);
-    }
-
-    75% {
-        transform: translateY(2px) scale(1.04, 0.96);
-    }
-}
-
-/* Scrolled Navbar State */
-.navbar.scrolled .nav-links .ai-btn {
-    padding: 10px 22px;
-    font-size: 25px;
-    -webkit-text-fill-color: #FFD700;
-    -webkit-text-stroke: 2px #ff1493;
-}
-
-.navbar.scrolled .nav-links .ai-btn:hover {
-    transform: translateY(0) scale(1.05, 0.98);
-    -webkit-text-fill-color: #FFD700;
-    -webkit-text-stroke: 2px #ff69b4;
+    transform: scale(0.95);
 }
 
 
+/* AI Logo Scrolled State Scaling */
+.navbar.scrolled .nav-links .ai-logo-nav {
+    width: 55px;
+    /* Slightly smaller when scrolled */
+}
 
 /* Navigation Dropdown Styles */
 .nav-dropdown {
