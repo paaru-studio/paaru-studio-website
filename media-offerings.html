@@ -30,19 +30,19 @@
     <link rel="icon" type="image/png" href="logo.webp">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="styles.min.css" as="style">
     <link rel="preload"
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fredoka+One&display=swap"
         as="style">
 
-    <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="styles.min.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="popup-form.css" media="print" onload="this.media='all'">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fredoka+One&display=swap"
         rel="stylesheet" media="print" onload="this.media='all'">
 
     <noscript>
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="styles.min.css">
         <link rel="stylesheet" href="popup-form.css">
         <link
             href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fredoka+One&display=swap"
@@ -97,28 +97,28 @@
                                 class="dropdown-arrow">▾</span></a>
                         <div class="nav-dropdown-menu mega-menu">
                             <a href="services.html" class="mega-menu-item">
-                                <img src="video_pro.webp" alt="Video Production">
+                                <img loading="lazy" decoding="async" src="video_pro.webp" alt="Video Production">
                                 <div class="mega-item-content">
                                     <h4>Video Production</h4>
                                     <p>TVCs, Digital Ads, Corporate films. End-to-end video solutions.</p>
                                 </div>
                             </a>
                             <a href="ecommerce.html" class="mega-menu-item">
-                                <img src="shopify_img.png" alt="E-commerce Solutions">
+                                <img loading="lazy" decoding="async" src="shopify_img.webp" alt="E-commerce Solutions">
                                 <div class="mega-item-content">
                                     <h4>E-commerce Solutions</h4>
                                     <p>Boost your online sales with tailored e-commerce strategies.</p>
                                 </div>
                             </a>
                             <a href="performance-marketing.html" class="mega-menu-item">
-                                <img src="pm_1.webp" alt="Digital Marketing">
+                                <img loading="lazy" decoding="async" src="pm_1.webp" alt="Digital Marketing">
                                 <div class="mega-item-content">
                                     <h4>Digital Marketing</h4>
                                     <p>Data-driven performance and social media campaigns.</p>
                                 </div>
                             </a>
                             <a href="media-offerings.html" class="mega-menu-item">
-                                <img src="OOH_banner.webp" alt="Offline Marketing (OOH/DOOH)">
+                                <img loading="lazy" decoding="async" src="OOH_banner.webp" alt="Offline Marketing (OOH/DOOH)">
                                 <div class="mega-item-content">
                                     <h4>Offline Marketing</h4>
                                     <p>High-impact outdoor and digital out-of-home advertising.</p>
@@ -276,22 +276,31 @@
                         <div class="collage-image collage-img-1">
                             <picture>
                                 <source srcset="metro_ad_1.webp" type="image/webp">
-                                <img loading="lazy" decoding="async" src="metro_ad_1.jpg"
+                                <picture>
+                                    <source srcset="metro_ad_1.webp" type="image/webp">
+                                    <img loading="lazy" decoding="async" src="metro_ad_1.jpg"
                                     alt="Metro Interior Advertising">
+                                </picture>
                             </picture>
                         </div>
                         <div class="collage-image collage-img-2">
                             <picture>
                                 <source srcset="metro_ad_2.webp" type="image/webp">
-                                <img loading="lazy" decoding="async" src="metro_ad_2.jpg"
+                                <picture>
+                                    <source srcset="metro_ad_2.webp" type="image/webp">
+                                    <img loading="lazy" decoding="async" src="metro_ad_2.jpg"
                                     alt="Metro Exterior Advertising">
+                                </picture>
                             </picture>
                         </div>
                         <div class="collage-image collage-img-3">
                             <picture>
                                 <source srcset="metro_ad_3.webp" type="image/webp">
-                                <img loading="lazy" decoding="async" src="metro_ad_3.jpg"
+                                <picture>
+                                    <source srcset="metro_ad_3.webp" type="image/webp">
+                                    <img loading="lazy" decoding="async" src="metro_ad_3.jpg"
                                     alt="Metro Station Advertising">
+                                </picture>
                             </picture>
                         </div>
                     </div>
@@ -332,22 +341,31 @@
                         <div class="collage-image collage-img-1">
                             <picture>
                                 <source srcset="dooh_ad_1.webp" type="image/webp">
-                                <img loading="lazy" decoding="async" src="dooh_ad_1_optimized.jpg"
+                                <picture>
+                                    <source srcset="dooh_ad_1_optimized.webp" type="image/webp">
+                                    <img loading="lazy" decoding="async" src="dooh_ad_1_optimized.jpg"
                                     alt="Digital Mall Screen Advertising">
+                                </picture>
                             </picture>
                         </div>
                         <div class="collage-image collage-img-2">
                             <picture>
                                 <source srcset="dooh_ad_2.webp" type="image/webp">
-                                <img loading="lazy" decoding="async" src="dooh_ad_2_optimized.jpg"
+                                <picture>
+                                    <source srcset="dooh_ad_2_optimized.webp" type="image/webp">
+                                    <img loading="lazy" decoding="async" src="dooh_ad_2_optimized.jpg"
                                     alt="Premium Digital Display">
+                                </picture>
                             </picture>
                         </div>
                         <div class="collage-image collage-img-3">
                             <picture>
                                 <source srcset="dooh_ad_3.webp" type="image/webp">
-                                <img loading="lazy" decoding="async" src="dooh_ad_3_optimized.jpg"
+                                <picture>
+                                    <source srcset="dooh_ad_3_optimized.webp" type="image/webp">
+                                    <img loading="lazy" decoding="async" src="dooh_ad_3_optimized.jpg"
                                     alt="Mall Digital Advertising">
+                                </picture>
                             </picture>
                         </div>
                     </div>
@@ -381,15 +399,15 @@
                 <div class="metro-billboard">
                     <div class="metro-visual-collage">
                         <div class="collage-image collage-img-1">
-                            <img loading="lazy" decoding="async" src="dooh_society_1.png"
+                            <img loading="lazy" decoding="async" src="dooh_society_1.webp"
                                 alt="Digital Screen in Society Lobby">
                         </div>
                         <div class="collage-image collage-img-2">
-                            <img loading="lazy" decoding="async" src="dooh_society_2.png"
+                            <img loading="lazy" decoding="async" src="dooh_society_2.webp"
                                 alt="Digital Display in Residential Complex">
                         </div>
                         <div class="collage-image collage-img-3">
-                            <img loading="lazy" decoding="async" src="dooh_society_3.png"
+                            <img loading="lazy" decoding="async" src="dooh_society_3.webp"
                                 alt="Society Digital Advertising">
                         </div>
                     </div>
@@ -432,15 +450,15 @@
                 <div class="metro-billboard">
                     <div class="metro-visual-collage">
                         <div class="collage-image collage-img-1">
-                            <img loading="lazy" decoding="async" src="dooh_coworking_1.png"
+                            <img loading="lazy" decoding="async" src="dooh_coworking_1.webp"
                                 alt="Digital Screen in Co-Working Space">
                         </div>
                         <div class="collage-image collage-img-2">
-                            <img loading="lazy" decoding="async" src="dooh_coworking_2.png"
+                            <img loading="lazy" decoding="async" src="dooh_coworking_2.webp"
                                 alt="IT Park Digital Display">
                         </div>
                         <div class="collage-image collage-img-3">
-                            <img loading="lazy" decoding="async" src="dooh_coworking_3.png"
+                            <img loading="lazy" decoding="async" src="dooh_coworking_3.webp"
                                 alt="Professional Workspace Advertising">
                         </div>
                     </div>
@@ -494,10 +512,10 @@
                 <div class="metro-billboard">
                     <div class="ipl-visual-stacked">
                         <div class="ipl-image-stacked">
-                            <img loading="lazy" decoding="async" src="ipl_lband_1.png" alt="IPL L-Band Desktop Display">
+                            <img loading="lazy" decoding="async" src="ipl_lband_1.webp" alt="IPL L-Band Desktop Display">
                         </div>
                         <div class="ipl-image-stacked">
-                            <img loading="lazy" decoding="async" src="ipl_lband_2.png" alt="IPL L-Band Mobile Display">
+                            <img loading="lazy" decoding="async" src="ipl_lband_2.webp" alt="IPL L-Band Mobile Display">
                         </div>
                     </div>
                     <div class="metro-content">
@@ -538,11 +556,11 @@
                 <div class="metro-billboard">
                     <div class="ipl-visual-stacked">
                         <div class="ipl-image-stacked">
-                            <img loading="lazy" decoding="async" src="ipl_billboard_1.png"
+                            <img loading="lazy" decoding="async" src="ipl_billboard_1.webp"
                                 alt="IPL Billboard Desktop Display">
                         </div>
                         <div class="ipl-image-stacked">
-                            <img loading="lazy" decoding="async" src="ipl_billboard_2.png"
+                            <img loading="lazy" decoding="async" src="ipl_billboard_2.webp"
                                 alt="IPL Billboard Mobile Display">
                         </div>
                     </div>
@@ -584,7 +602,7 @@
                 <div class="metro-billboard">
                     <div class="ipl-visual-stacked">
                         <div class="ipl-image-stacked">
-                            <img loading="lazy" decoding="async" src="ipl_dframe_1.png" alt="IPL Display Frame Mobile">
+                            <img loading="lazy" decoding="async" src="ipl_dframe_1.webp" alt="IPL Display Frame Mobile">
                         </div>
                     </div>
                     <div class="metro-content">
@@ -624,7 +642,7 @@
                 <div class="metro-billboard">
                     <div class="ipl-visual-stacked">
                         <div class="ipl-image-stacked">
-                            <img loading="lazy" decoding="async" src="ipl_sportstab_1.png"
+                            <img loading="lazy" decoding="async" src="ipl_sportstab_1.webp"
                                 alt="IPL Sports BrandTab Display">
                         </div>
                     </div>

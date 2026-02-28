@@ -29,21 +29,23 @@
     <meta property="twitter:image" content="https://paarustudio.com/logo.webp">
 
     <link rel="icon" type="image/png" href="logo.webp">
+        <link rel="preconnect" href="https://www.youtube.com">
+    <link rel="preconnect" href="https://i.ytimg.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="styles.min.css" as="style">
     <link rel="preload"
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Caveat:wght@600&family=Fredoka+One&display=swap"
         as="style">
 
-    <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="styles.min.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="popup-form.css" media="print" onload="this.media='all'">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Caveat:wght@600&family=Fredoka+One&display=swap"
         rel="stylesheet" media="print" onload="this.media='all'">
 
     <noscript>
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="styles.min.css">
         <link rel="stylesheet" href="popup-form.css">
         <link
             href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Caveat:wght@600&family=Fredoka+One&display=swap"
@@ -105,28 +107,28 @@
                                 class="dropdown-arrow">▾</span></a>
                         <div class="nav-dropdown-menu mega-menu">
                             <a href="services.html" class="mega-menu-item">
-                                <img src="video_pro.webp" alt="Video Production">
+                                <img loading="lazy" decoding="async" src="video_pro.webp" alt="Video Production">
                                 <div class="mega-item-content">
                                     <h4>Video Production</h4>
                                     <p>TVCs, Digital Ads, Corporate films. End-to-end video solutions.</p>
                                 </div>
                             </a>
                             <a href="ecommerce.html" class="mega-menu-item">
-                                <img src="shopify_img.png" alt="E-commerce Solutions">
+                                <img loading="lazy" decoding="async" src="shopify_img.webp" alt="E-commerce Solutions">
                                 <div class="mega-item-content">
                                     <h4>E-commerce Solutions</h4>
                                     <p>Boost your online sales with tailored e-commerce strategies.</p>
                                 </div>
                             </a>
                             <a href="performance-marketing.html" class="mega-menu-item">
-                                <img src="pm_1.webp" alt="Digital Marketing">
+                                <img loading="lazy" decoding="async" src="pm_1.webp" alt="Digital Marketing">
                                 <div class="mega-item-content">
                                     <h4>Digital Marketing</h4>
                                     <p>Data-driven performance and social media campaigns.</p>
                                 </div>
                             </a>
                             <a href="media-offerings.html" class="mega-menu-item">
-                                <img src="OOH_banner.webp" alt="Offline Marketing (OOH/DOOH)">
+                                <img loading="lazy" decoding="async" src="OOH_banner.webp" alt="Offline Marketing (OOH/DOOH)">
                                 <div class="mega-item-content">
                                     <h4>Offline Marketing</h4>
                                     <p>High-impact outdoor and digital out-of-home advertising.</p>
@@ -392,7 +394,10 @@
                             <picture>
                                 <picture>
                                     <source srcset="Image 01.webp" type="image/webp">
-                                    <img loading="lazy" decoding="async" src="Image 01.jpeg" alt="Gallery image 1">
+                                    <picture>
+                                        <source srcset="Image 01.webp" type="image/webp">
+                                        <img loading="lazy" decoding="async" src="Image 01.jpeg" alt="Gallery image 1">
+                                    </picture>
                                 </picture>
                             </picture>
                         </div>
@@ -402,8 +407,11 @@
                             <picture>
                                 <picture>
                                     <source srcset="portfolio_pics/01.webp" type="image/webp">
-                                    <img loading="lazy" decoding="async" src="portfolio_pics/01.jpg"
+                                    <picture>
+                                        <source srcset="portfolio_pics/01.webp" type="image/webp">
+                                        <img loading="lazy" decoding="async" src="portfolio_pics/01.jpg"
                                         alt="Gallery image 16">
+                                    </picture>
                                 </picture>
                             </picture>
                         </div>
@@ -413,8 +421,11 @@
                             <picture>
                                 <picture>
                                     <source srcset="portfolio_pics/02.webp" type="image/webp">
-                                    <img loading="lazy" decoding="async" src="portfolio_pics/02.jpg"
+                                    <picture>
+                                        <source srcset="portfolio_pics/02.webp" type="image/webp">
+                                        <img loading="lazy" decoding="async" src="portfolio_pics/02.jpg"
                                         alt="Gallery image 17">
+                                    </picture>
                                 </picture>
                             </picture>
                         </div>
@@ -424,8 +435,11 @@
                             <picture>
                                 <picture>
                                     <source srcset="portfolio_pics/03.webp" type="image/webp">
-                                    <img loading="lazy" decoding="async" src="portfolio_pics/03.jpg"
+                                    <picture>
+                                        <source srcset="portfolio_pics/03.webp" type="image/webp">
+                                        <img loading="lazy" decoding="async" src="portfolio_pics/03.jpg"
                                         alt="Gallery image 15">
+                                    </picture>
                                 </picture>
                             </picture>
                         </div>
@@ -435,8 +449,11 @@
                             <picture>
                                 <picture>
                                     <source srcset="portfolio_pics/04.webp" type="image/webp">
-                                    <img loading="lazy" decoding="async" src="portfolio_pics/04.jpg"
+                                    <picture>
+                                        <source srcset="portfolio_pics/04.webp" type="image/webp">
+                                        <img loading="lazy" decoding="async" src="portfolio_pics/04.jpg"
                                         alt="Gallery image 18">
+                                    </picture>
                                 </picture>
                             </picture>
                         </div>
@@ -446,8 +463,11 @@
                             <picture>
                                 <picture>
                                     <source srcset="portfolio_pics/01.webp" type="image/webp">
-                                    <img loading="lazy" decoding="async" src="portfolio_pics/01.jpeg"
+                                    <picture>
+                                        <source srcset="portfolio_pics/01.webp" type="image/webp">
+                                        <img loading="lazy" decoding="async" src="portfolio_pics/01.jpeg"
                                         alt="Gallery image 2">
+                                    </picture>
                                 </picture>
                             </picture>
                         </div>
@@ -457,8 +477,11 @@
                             <picture>
                                 <picture>
                                     <source srcset="portfolio_pics/03 (1).webp" type="image/webp">
-                                    <img loading="lazy" decoding="async" src="portfolio_pics/03 (1).jpeg"
+                                    <picture>
+                                        <source srcset="portfolio_pics/03 (1).webp" type="image/webp">
+                                        <img loading="lazy" decoding="async" src="portfolio_pics/03 (1).jpeg"
                                         alt="Gallery image 3">
+                                    </picture>
                                 </picture>
                             </picture>
                         </div>
@@ -468,8 +491,11 @@
                             <picture>
                                 <picture>
                                     <source srcset="portfolio_pics/04 (1).webp" type="image/webp">
-                                    <img loading="lazy" decoding="async" src="portfolio_pics/04 (1).jpeg"
+                                    <picture>
+                                        <source srcset="portfolio_pics/04 (1).webp" type="image/webp">
+                                        <img loading="lazy" decoding="async" src="portfolio_pics/04 (1).jpeg"
                                         alt="Gallery image 4">
+                                    </picture>
                                 </picture>
                             </picture>
                         </div>
@@ -479,8 +505,11 @@
                             <picture>
                                 <picture>
                                     <source srcset="portfolio_pics/06.webp" type="image/webp">
-                                    <img loading="lazy" decoding="async" src="portfolio_pics/06.jpeg"
+                                    <picture>
+                                        <source srcset="portfolio_pics/06.webp" type="image/webp">
+                                        <img loading="lazy" decoding="async" src="portfolio_pics/06.jpeg"
                                         alt="Gallery image 5">
+                                    </picture>
                                 </picture>
                             </picture>
                         </div>
@@ -490,8 +519,11 @@
                             <picture>
                                 <picture>
                                     <source srcset="portfolio_pics/08.webp" type="image/webp">
-                                    <img loading="lazy" decoding="async" src="portfolio_pics/08.jpeg"
+                                    <picture>
+                                        <source srcset="portfolio_pics/08.webp" type="image/webp">
+                                        <img loading="lazy" decoding="async" src="portfolio_pics/08.jpeg"
                                         alt="Gallery image 6">
+                                    </picture>
                                 </picture>
                             </picture>
                         </div>
@@ -501,50 +533,59 @@
                             <picture>
                                 <picture>
                                     <source srcset="portfolio_pics/DAS00810.webp" type="image/webp">
-                                    <img loading="lazy" decoding="async" src="portfolio_pics/DAS00810.jpg"
+                                    <picture>
+                                        <source srcset="portfolio_pics/DAS00810.webp" type="image/webp">
+                                        <img loading="lazy" decoding="async" src="portfolio_pics/DAS00810.jpg"
                                         alt="Gallery image 7">
+                                    </picture>
                                 </picture>
                             </picture>
                         </div>
                     </div>
                     <div class="gallery-item fit-auto">
                         <div class="gallery-image fit-image">
-                            <picture><img loading="lazy" decoding="async" src="portfolio_pics/DSC00084_optimized.jpg"
+                            <picture><picture>
+    <source srcset="portfolio_pics/DSC00084_optimized.webp" type="image/webp">
+    <img loading="lazy" decoding="async" src="portfolio_pics/DSC00084_optimized.jpg"
                                     alt="Gallery image 8" decoding="async">
+</picture>
                             </picture>
                         </div>
                     </div>
                     <div class="gallery-item fit-auto">
                         <div class="gallery-image fit-image">
-                            <picture><img loading="lazy" decoding="async" src="portfolio_pics/DSC00172_optimized.jpg"
+                            <picture><picture>
+    <source srcset="portfolio_pics/DSC00172_optimized.webp" type="image/webp">
+    <img loading="lazy" decoding="async" src="portfolio_pics/DSC00172_optimized.jpg"
                                     alt="Gallery image 9" decoding="async">
+</picture>
                             </picture>
                         </div>
                     </div>
                     <div class="gallery-item fit-auto">
                         <div class="gallery-image fit-image">
-                            <picture><img loading="lazy" decoding="async" src="portfolio_pics/IMG_4742.PNG"
+                            <picture><img loading="lazy" decoding="async" src="portfolio_pics/IMG_4742.webp"
                                     alt="Gallery image 10">
                             </picture>
                         </div>
                     </div>
                     <div class="gallery-item fit-auto">
                         <div class="gallery-image fit-image">
-                            <picture><img loading="lazy" decoding="async" src="portfolio_pics/IMG_4748.PNG"
+                            <picture><img loading="lazy" decoding="async" src="portfolio_pics/IMG_4748.webp"
                                     alt="Gallery image 11">
                             </picture>
                         </div>
                     </div>
                     <div class="gallery-item fit-auto">
                         <div class="gallery-image fit-image">
-                            <picture><img loading="lazy" decoding="async" src="portfolio_pics/IMG_4749.PNG"
+                            <picture><img loading="lazy" decoding="async" src="portfolio_pics/IMG_4749.webp"
                                     alt="Gallery image 12">
                             </picture>
                         </div>
                     </div>
                     <div class="gallery-item fit-auto">
                         <div class="gallery-image fit-image">
-                            <picture><img loading="lazy" decoding="async" src="portfolio_pics/IMG_4752.PNG"
+                            <picture><img loading="lazy" decoding="async" src="portfolio_pics/IMG_4752.webp"
                                     alt="Gallery image 13">
                             </picture>
                         </div>
@@ -554,8 +595,11 @@
                             <picture>
                                 <picture>
                                     <source srcset="portfolio_pics/03 (1).webp" type="image/webp">
-                                    <img loading="lazy" decoding="async" src="portfolio_pics/03 (1).jpeg"
+                                    <picture>
+                                        <source srcset="portfolio_pics/03 (1).webp" type="image/webp">
+                                        <img loading="lazy" decoding="async" src="portfolio_pics/03 (1).jpeg"
                                         alt="Gallery image 14">
+                                    </picture>
                                 </picture>
                             </picture>
                         </div>
@@ -593,45 +637,45 @@
                         <div class="clients-track">
                             <div class="clients-group">
                                 <div class="client-logo client-logo--img">
-                                    <picture><img loading="lazy" decoding="async" src="Logos/Logo_1.png" alt="Logo 1">
+                                    <picture><img loading="lazy" decoding="async" src="Logos/Logo_1.webp" alt="Logo 1">
                                     </picture>
                                 </div>
                                 <div class="client-logo client-logo--img">
-                                    <picture><img loading="lazy" decoding="async" src="Logos/Logo_2.png" alt="Logo 2">
+                                    <picture><img loading="lazy" decoding="async" src="Logos/Logo_2.webp" alt="Logo 2">
                                     </picture>
                                 </div>
                                 <div class="client-logo client-logo--img">
-                                    <picture><img loading="lazy" decoding="async" src="Logos/Logo_3.png" alt="Logo 3">
-                                    </picture>
-                                </div>
-                                <div class="client-logo client-logo--img">
-                                    <picture><img loading="lazy" decoding="async"
-                                            src="Logos/ChatGPT Image Aug 21, 2025 at 01_00_18 PM.png" alt="Logo A">
+                                    <picture><img loading="lazy" decoding="async" src="Logos/Logo_3.webp" alt="Logo 3">
                                     </picture>
                                 </div>
                                 <div class="client-logo client-logo--img">
                                     <picture><img loading="lazy" decoding="async"
-                                            src="Logos/ChatGPT Image Aug 21, 2025 at 01_51_46 PM.png" alt="Logo B">
+                                            src="Logos/ChatGPT Image Aug 21, 2025 at 01_00_18 PM.webp" alt="Logo A">
                                     </picture>
                                 </div>
                                 <div class="client-logo client-logo--img">
                                     <picture><img loading="lazy" decoding="async"
-                                            src="Logos/ChatGPT Image Aug 21, 2025 at 02_14_37 PM.png" alt="Logo C">
+                                            src="Logos/ChatGPT Image Aug 21, 2025 at 01_51_46 PM.webp" alt="Logo B">
                                     </picture>
                                 </div>
                                 <div class="client-logo client-logo--img">
                                     <picture><img loading="lazy" decoding="async"
-                                            src="Logos/ChatGPT Image Aug 21, 2025 at 12_46_51 PM.png" alt="Logo D">
+                                            src="Logos/ChatGPT Image Aug 21, 2025 at 02_14_37 PM.webp" alt="Logo C">
                                     </picture>
                                 </div>
                                 <div class="client-logo client-logo--img">
                                     <picture><img loading="lazy" decoding="async"
-                                            src="Logos/ChatGPT Image Aug 21, 2025 at 12_52_24 PM.png" alt="Logo E">
+                                            src="Logos/ChatGPT Image Aug 21, 2025 at 12_46_51 PM.webp" alt="Logo D">
                                     </picture>
                                 </div>
                                 <div class="client-logo client-logo--img">
                                     <picture><img loading="lazy" decoding="async"
-                                            src="Logos/ChatGPT Image Aug 22, 2025 at 01_00_39 PM.png" alt="Logo F">
+                                            src="Logos/ChatGPT Image Aug 21, 2025 at 12_52_24 PM.webp" alt="Logo E">
+                                    </picture>
+                                </div>
+                                <div class="client-logo client-logo--img">
+                                    <picture><img loading="lazy" decoding="async"
+                                            src="Logos/ChatGPT Image Aug 22, 2025 at 01_00_39 PM.webp" alt="Logo F">
                                     </picture>
                                 </div>
                                 <div class="client-logo client-logo--img">
@@ -647,57 +691,57 @@
                                     </picture>
                                 </div>
                                 <div class="client-logo client-logo--img">
-                                    <picture><img src="Logos/ChatGPT Image Aug 22, 2025 at 12_55_36 PM.png"
+                                    <picture><img loading="lazy" decoding="async" src="Logos/ChatGPT Image Aug 22, 2025 at 12_55_36 PM.webp"
                                             alt="Logo J"></picture>
                                 </div>
                                 <div class="client-logo client-logo--img">
-                                    <picture><img src="Logos/ChatGPT Image Aug 22, 2025 at 12_57_54 PM.png"
+                                    <picture><img loading="lazy" decoding="async" src="Logos/ChatGPT Image Aug 22, 2025 at 12_57_54 PM.webp"
                                             alt="Logo K"></picture>
                                 </div>
                                 <div class="client-logo client-logo--img">
-                                    <picture><img src="Logos/ChatGPT Image Aug 26, 2025 at 11_29_17 AM.png"
+                                    <picture><img loading="lazy" decoding="async" src="Logos/ChatGPT Image Aug 26, 2025 at 11_29_17 AM.webp"
                                             alt="Logo L"></picture>
                                 </div>
                                 <div class="client-logo client-logo--img">
-                                    <picture><img src="Logos/sugar_fit_logo.webp" alt="Sugar Fit"></picture>
+                                    <picture><img loading="lazy" decoding="async" src="Logos/sugar_fit_logo.webp" alt="Sugar Fit"></picture>
                                 </div>
                             </div>
                             <!-- duplicate for seamless scroll -->
                             <div class="clients-group" aria-hidden="true">
                                 <div class="client-logo client-logo--img" aria-hidden="true">
-                                    <picture><img loading="lazy" decoding="async" src="Logos/Logo_1.png" alt="Logo 1">
+                                    <picture><img loading="lazy" decoding="async" src="Logos/Logo_1.webp" alt="Logo 1">
                                     </picture>
                                 </div>
                                 <div class="client-logo client-logo--img" aria-hidden="true">
-                                    <picture><img loading="lazy" decoding="async" src="Logos/Logo_2.png" alt="Logo 2">
+                                    <picture><img loading="lazy" decoding="async" src="Logos/Logo_2.webp" alt="Logo 2">
                                     </picture>
                                 </div>
                                 <div class="client-logo client-logo--img" aria-hidden="true">
-                                    <picture><img loading="lazy" decoding="async" src="Logos/Logo_3.png" alt="Logo 3">
+                                    <picture><img loading="lazy" decoding="async" src="Logos/Logo_3.webp" alt="Logo 3">
                                     </picture>
                                 </div>
                                 <div class="client-logo client-logo--img" aria-hidden="true">
-                                    <picture><img src="Logos/ChatGPT Image Aug 21, 2025 at 01_00_18 PM.png"
+                                    <picture><img loading="lazy" decoding="async" src="Logos/ChatGPT Image Aug 21, 2025 at 01_00_18 PM.webp"
                                             alt="Logo A"></picture>
                                 </div>
                                 <div class="client-logo client-logo--img" aria-hidden="true">
-                                    <picture><img src="Logos/ChatGPT Image Aug 21, 2025 at 01_51_46 PM.png"
+                                    <picture><img loading="lazy" decoding="async" src="Logos/ChatGPT Image Aug 21, 2025 at 01_51_46 PM.webp"
                                             alt="Logo B"></picture>
                                 </div>
                                 <div class="client-logo client-logo--img" aria-hidden="true">
-                                    <picture><img src="Logos/ChatGPT Image Aug 21, 2025 at 02_14_37 PM.png"
+                                    <picture><img loading="lazy" decoding="async" src="Logos/ChatGPT Image Aug 21, 2025 at 02_14_37 PM.webp"
                                             alt="Logo C"></picture>
                                 </div>
                                 <div class="client-logo client-logo--img" aria-hidden="true">
-                                    <picture><img src="Logos/ChatGPT Image Aug 21, 2025 at 12_46_51 PM.png"
+                                    <picture><img loading="lazy" decoding="async" src="Logos/ChatGPT Image Aug 21, 2025 at 12_46_51 PM.webp"
                                             alt="Logo D"></picture>
                                 </div>
                                 <div class="client-logo client-logo--img" aria-hidden="true">
-                                    <picture><img src="Logos/ChatGPT Image Aug 21, 2025 at 12_52_24 PM.png"
+                                    <picture><img loading="lazy" decoding="async" src="Logos/ChatGPT Image Aug 21, 2025 at 12_52_24 PM.webp"
                                             alt="Logo E"></picture>
                                 </div>
                                 <div class="client-logo client-logo--img" aria-hidden="true">
-                                    <picture><img src="Logos/ChatGPT Image Aug 22, 2025 at 01_00_39 PM.png"
+                                    <picture><img loading="lazy" decoding="async" src="Logos/ChatGPT Image Aug 22, 2025 at 01_00_39 PM.webp"
                                             alt="Logo F"></picture>
                                 </div>
                                 <div class="client-logo client-logo--img" aria-hidden="true">
@@ -705,26 +749,26 @@
                                     </picture>
                                 </div>
                                 <div class="client-logo client-logo--img" aria-hidden="true">
-                                    <picture><img src="marriott_logo.webp" alt="Marriott"></picture>
+                                    <picture><img loading="lazy" decoding="async" src="marriott_logo.webp" alt="Marriott"></picture>
                                 </div>
                                 <div class="client-logo client-logo--img" aria-hidden="true">
                                     <picture><img loading="lazy" decoding="async" src="itc_logo.webp" alt="ITC">
                                     </picture>
                                 </div>
                                 <div class="client-logo client-logo--img" aria-hidden="true">
-                                    <picture><img src="Logos/ChatGPT Image Aug 22, 2025 at 12_55_36 PM.png"
+                                    <picture><img loading="lazy" decoding="async" src="Logos/ChatGPT Image Aug 22, 2025 at 12_55_36 PM.webp"
                                             alt="Logo J"></picture>
                                 </div>
                                 <div class="client-logo client-logo--img" aria-hidden="true">
-                                    <picture><img src="Logos/ChatGPT Image Aug 22, 2025 at 12_57_54 PM.png"
+                                    <picture><img loading="lazy" decoding="async" src="Logos/ChatGPT Image Aug 22, 2025 at 12_57_54 PM.webp"
                                             alt="Logo K"></picture>
                                 </div>
                                 <div class="client-logo client-logo--img" aria-hidden="true">
-                                    <picture><img src="Logos/ChatGPT Image Aug 26, 2025 at 11_29_17 AM.png"
+                                    <picture><img loading="lazy" decoding="async" src="Logos/ChatGPT Image Aug 26, 2025 at 11_29_17 AM.webp"
                                             alt="Logo L"></picture>
                                 </div>
                                 <div class="client-logo client-logo--img" aria-hidden="true">
-                                    <picture><img src="Logos/sugar_fit_logo.webp" alt="Sugar Fit"></picture>
+                                    <picture><img loading="lazy" decoding="async" src="Logos/sugar_fit_logo.webp" alt="Sugar Fit"></picture>
                                 </div>
                                 <div class="client-logo">Livspace</div>
                                 <div class="client-logo">Urban Ladder</div>

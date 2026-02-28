@@ -28,21 +28,23 @@
     <meta property="twitter:image" content="https://paarustudio.com/logo.webp">
 
     <link rel="icon" type="image/png" href="logo.webp">
+        <link rel="preconnect" href="https://www.youtube.com">
+    <link rel="preconnect" href="https://i.ytimg.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="styles.min.css" as="style">
     <link rel="preload"
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fredoka+One&display=swap"
         as="style">
 
-    <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="styles.min.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="popup-form.css" media="print" onload="this.media='all'">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fredoka+One&display=swap"
         rel="stylesheet" media="print" onload="this.media='all'">
 
     <noscript>
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="styles.min.css">
         <link rel="stylesheet" href="popup-form.css">
         <link
             href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fredoka+One&display=swap"
@@ -96,28 +98,37 @@
                                 class="dropdown-arrow">▾</span></a>
                         <div class="nav-dropdown-menu mega-menu">
                             <a href="services.html" class="mega-menu-item">
-                                <img src="video_pro.jpg" alt="Video Production">
+                                <picture>
+                                    <source srcset="video_pro.webp" type="image/webp">
+                                    <img loading="lazy" decoding="async" src="video_pro.jpg" alt="Video Production">
+                                </picture>
                                 <div class="mega-item-content">
                                     <h4>Video Production</h4>
                                     <p>TVCs, Digital Ads, Corporate films. End-to-end video solutions.</p>
                                 </div>
                             </a>
                             <a href="ecommerce.html" class="mega-menu-item">
-                                <img src="shopify_img.png" alt="E-commerce Solutions">
+                                <img loading="lazy" decoding="async" src="shopify_img.webp" alt="E-commerce Solutions">
                                 <div class="mega-item-content">
                                     <h4>E-commerce Solutions</h4>
                                     <p>Boost your online sales with tailored e-commerce strategies.</p>
                                 </div>
                             </a>
                             <a href="performance-marketing.html" class="mega-menu-item">
-                                <img src="pm_1.jpg" alt="Digital Marketing">
+                                <picture>
+                                    <source srcset="pm_1.webp" type="image/webp">
+                                    <img loading="lazy" decoding="async" src="pm_1.jpg" alt="Digital Marketing">
+                                </picture>
                                 <div class="mega-item-content">
                                     <h4>Digital Marketing</h4>
                                     <p>Data-driven performance and social media campaigns.</p>
                                 </div>
                             </a>
                             <a href="media-offerings.html" class="mega-menu-item">
-                                <img src="OOH_banner.jpg" alt="Offline Marketing (OOH/DOOH)">
+                                <picture>
+                                    <source srcset="OOH_banner.webp" type="image/webp">
+                                    <img loading="lazy" decoding="async" src="OOH_banner.jpg" alt="Offline Marketing (OOH/DOOH)">
+                                </picture>
                                 <div class="mega-item-content">
                                     <h4>Offline Marketing</h4>
                                     <p>High-impact outdoor and digital out-of-home advertising.</p>
@@ -370,7 +381,10 @@
                             <picture>
                                 <picture>
                                     <source srcset="Image 01.webp" type="image/webp">
-                                    <img loading="lazy" decoding="async" src="Image 01.jpeg" alt="Gallery image 1">
+                                    <picture>
+                                        <source srcset="Image 01.webp" type="image/webp">
+                                        <img loading="lazy" decoding="async" src="Image 01.jpeg" alt="Gallery image 1">
+                                    </picture>
                                 </picture>
                             </picture>
                         </div>
@@ -380,8 +394,11 @@
                             <picture>
                                 <picture>
                                     <source srcset="portfolio_pics/01.webp" type="image/webp">
-                                    <img loading="lazy" decoding="async" src="portfolio_pics/01.jpg"
+                                    <picture>
+                                        <source srcset="portfolio_pics/01.webp" type="image/webp">
+                                        <img loading="lazy" decoding="async" src="portfolio_pics/01.jpg"
                                         alt="Gallery image 16">
+                                    </picture>
                                 </picture>
                             </picture>
                         </div>
@@ -391,8 +408,11 @@
                             <picture>
                                 <picture>
                                     <source srcset="portfolio_pics/02.webp" type="image/webp">
-                                    <img loading="lazy" decoding="async" src="portfolio_pics/02.jpg"
+                                    <picture>
+                                        <source srcset="portfolio_pics/02.webp" type="image/webp">
+                                        <img loading="lazy" decoding="async" src="portfolio_pics/02.jpg"
                                         alt="Gallery image 17">
+                                    </picture>
                                 </picture>
                             </picture>
                         </div>
@@ -402,8 +422,11 @@
                             <picture>
                                 <picture>
                                     <source srcset="portfolio_pics/03.webp" type="image/webp">
-                                    <img loading="lazy" decoding="async" src="portfolio_pics/03.jpg"
+                                    <picture>
+                                        <source srcset="portfolio_pics/03.webp" type="image/webp">
+                                        <img loading="lazy" decoding="async" src="portfolio_pics/03.jpg"
                                         alt="Gallery image 15">
+                                    </picture>
                                 </picture>
                             </picture>
                         </div>
@@ -413,8 +436,11 @@
                             <picture>
                                 <picture>
                                     <source srcset="portfolio_pics/04.webp" type="image/webp">
-                                    <img loading="lazy" decoding="async" src="portfolio_pics/04.jpg"
+                                    <picture>
+                                        <source srcset="portfolio_pics/04.webp" type="image/webp">
+                                        <img loading="lazy" decoding="async" src="portfolio_pics/04.jpg"
                                         alt="Gallery image 18">
+                                    </picture>
                                 </picture>
                             </picture>
                         </div>
@@ -424,8 +450,11 @@
                             <picture>
                                 <picture>
                                     <source srcset="portfolio_pics/01.webp" type="image/webp">
-                                    <img loading="lazy" decoding="async" src="portfolio_pics/01.jpeg"
+                                    <picture>
+                                        <source srcset="portfolio_pics/01.webp" type="image/webp">
+                                        <img loading="lazy" decoding="async" src="portfolio_pics/01.jpeg"
                                         alt="Gallery image 2">
+                                    </picture>
                                 </picture>
                             </picture>
                         </div>
@@ -435,8 +464,11 @@
                             <picture>
                                 <picture>
                                     <source srcset="portfolio_pics/04 (1).webp" type="image/webp">
-                                    <img loading="lazy" decoding="async" src="portfolio_pics/04 (1).jpeg"
+                                    <picture>
+                                        <source srcset="portfolio_pics/04 (1).webp" type="image/webp">
+                                        <img loading="lazy" decoding="async" src="portfolio_pics/04 (1).jpeg"
                                         alt="Gallery image 4">
+                                    </picture>
                                 </picture>
                             </picture>
                         </div>
@@ -446,8 +478,11 @@
                             <picture>
                                 <picture>
                                     <source srcset="portfolio_pics/06.webp" type="image/webp">
-                                    <img loading="lazy" decoding="async" src="portfolio_pics/06.jpeg"
+                                    <picture>
+                                        <source srcset="portfolio_pics/06.webp" type="image/webp">
+                                        <img loading="lazy" decoding="async" src="portfolio_pics/06.jpeg"
                                         alt="Gallery image 5">
+                                    </picture>
                                 </picture>
                             </picture>
                         </div>
@@ -457,8 +492,11 @@
                             <picture>
                                 <picture>
                                     <source srcset="portfolio_pics/08.webp" type="image/webp">
-                                    <img loading="lazy" decoding="async" src="portfolio_pics/08.jpeg"
+                                    <picture>
+                                        <source srcset="portfolio_pics/08.webp" type="image/webp">
+                                        <img loading="lazy" decoding="async" src="portfolio_pics/08.jpeg"
                                         alt="Gallery image 6">
+                                    </picture>
                                 </picture>
                             </picture>
                         </div>
@@ -468,50 +506,59 @@
                             <picture>
                                 <picture>
                                     <source srcset="portfolio_pics/DAS00810.webp" type="image/webp">
-                                    <img loading="lazy" decoding="async" src="portfolio_pics/DAS00810.jpg"
+                                    <picture>
+                                        <source srcset="portfolio_pics/DAS00810.webp" type="image/webp">
+                                        <img loading="lazy" decoding="async" src="portfolio_pics/DAS00810.jpg"
                                         alt="Gallery image 7">
+                                    </picture>
                                 </picture>
                             </picture>
                         </div>
                     </div>
                     <div class="gallery-item fit-auto">
                         <div class="gallery-image fit-image">
-                            <picture><img loading="lazy" decoding="async" src="portfolio_pics/DSC00084_optimized.jpg"
+                            <picture><picture>
+    <source srcset="portfolio_pics/DSC00084_optimized.webp" type="image/webp">
+    <img loading="lazy" decoding="async" src="portfolio_pics/DSC00084_optimized.jpg"
                                     alt="Gallery image 8" decoding="async">
+</picture>
                             </picture>
                         </div>
                     </div>
                     <div class="gallery-item fit-auto">
                         <div class="gallery-image fit-image">
-                            <picture><img loading="lazy" decoding="async" src="portfolio_pics/DSC00172_optimized.jpg"
+                            <picture><picture>
+    <source srcset="portfolio_pics/DSC00172_optimized.webp" type="image/webp">
+    <img loading="lazy" decoding="async" src="portfolio_pics/DSC00172_optimized.jpg"
                                     alt="Gallery image 9" decoding="async">
+</picture>
                             </picture>
                         </div>
                     </div>
                     <div class="gallery-item fit-auto">
                         <div class="gallery-image fit-image">
-                            <picture><img loading="lazy" decoding="async" src="portfolio_pics/IMG_4742.PNG"
+                            <picture><img loading="lazy" decoding="async" src="portfolio_pics/IMG_4742.webp"
                                     alt="Gallery image 10">
                             </picture>
                         </div>
                     </div>
                     <div class="gallery-item fit-auto">
                         <div class="gallery-image fit-image">
-                            <picture><img loading="lazy" decoding="async" src="portfolio_pics/IMG_4748.PNG"
+                            <picture><img loading="lazy" decoding="async" src="portfolio_pics/IMG_4748.webp"
                                     alt="Gallery image 11">
                             </picture>
                         </div>
                     </div>
                     <div class="gallery-item fit-auto">
                         <div class="gallery-image fit-image">
-                            <picture><img loading="lazy" decoding="async" src="portfolio_pics/IMG_4749.PNG"
+                            <picture><img loading="lazy" decoding="async" src="portfolio_pics/IMG_4749.webp"
                                     alt="Gallery image 12">
                             </picture>
                         </div>
                     </div>
                     <div class="gallery-item fit-auto">
                         <div class="gallery-image fit-image">
-                            <picture><img loading="lazy" decoding="async" src="portfolio_pics/IMG_4752.PNG"
+                            <picture><img loading="lazy" decoding="async" src="portfolio_pics/IMG_4752.webp"
                                     alt="Gallery image 13">
                             </picture>
                         </div>
@@ -521,8 +568,11 @@
                             <picture>
                                 <picture>
                                     <source srcset="portfolio_pics/03 (1).webp" type="image/webp">
-                                    <img loading="lazy" decoding="async" src="portfolio_pics/03 (1).jpeg"
+                                    <picture>
+                                        <source srcset="portfolio_pics/03 (1).webp" type="image/webp">
+                                        <img loading="lazy" decoding="async" src="portfolio_pics/03 (1).jpeg"
                                         alt="Gallery image 14">
+                                    </picture>
                                 </picture>
                             </picture>
                         </div>
@@ -545,7 +595,10 @@
                 <picture>
                     <picture>
                         <source srcset="Logo_Port_01.webp" type="image/webp">
-                        <img loading="lazy" decoding="async" src="Logo_Port_01.jpg" alt="Logo Design 1">
+                        <picture>
+                            <source srcset="Logo_Port_01.webp" type="image/webp">
+                            <img loading="lazy" decoding="async" src="Logo_Port_01.jpg" alt="Logo Design 1">
+                        </picture>
                     </picture>
                 </picture>
             </div>
@@ -553,7 +606,10 @@
                 <picture>
                     <picture>
                         <source srcset="Logo_Port_02.webp" type="image/webp">
-                        <img loading="lazy" decoding="async" src="Logo_Port_02.jpg" alt="Logo Design 2">
+                        <picture>
+                            <source srcset="Logo_Port_02.webp" type="image/webp">
+                            <img loading="lazy" decoding="async" src="Logo_Port_02.jpg" alt="Logo Design 2">
+                        </picture>
                     </picture>
                 </picture>
             </div>
@@ -561,7 +617,10 @@
                 <picture>
                     <picture>
                         <source srcset="Logo_Port_03.webp" type="image/webp">
-                        <img loading="lazy" decoding="async" src="Logo_Port_03.jpg" alt="Logo Design 3">
+                        <picture>
+                            <source srcset="Logo_Port_03.webp" type="image/webp">
+                            <img loading="lazy" decoding="async" src="Logo_Port_03.jpg" alt="Logo Design 3">
+                        </picture>
                     </picture>
                 </picture>
             </div>
@@ -569,7 +628,10 @@
                 <picture>
                     <picture>
                         <source srcset="Logo_Port_04.webp" type="image/webp">
-                        <img loading="lazy" decoding="async" src="Logo_Port_04.jpg" alt="Logo Design 4">
+                        <picture>
+                            <source srcset="Logo_Port_04.webp" type="image/webp">
+                            <img loading="lazy" decoding="async" src="Logo_Port_04.jpg" alt="Logo Design 4">
+                        </picture>
                     </picture>
                 </picture>
             </div>
@@ -577,7 +639,10 @@
                 <picture>
                     <picture>
                         <source srcset="Logo_Port_05.webp" type="image/webp">
-                        <img loading="lazy" decoding="async" src="Logo_Port_05_optimized.jpg" alt="Logo Design 5">
+                        <picture>
+                            <source srcset="Logo_Port_05_optimized.webp" type="image/webp">
+                            <img loading="lazy" decoding="async" src="Logo_Port_05_optimized.jpg" alt="Logo Design 5">
+                        </picture>
                     </picture>
                 </picture>
             </div>
@@ -585,7 +650,10 @@
                 <picture>
                     <picture>
                         <source srcset="Logo_Port_06.webp" type="image/webp">
-                        <img loading="lazy" decoding="async" src="Logo_Port_06.jpg" alt="Logo Design 6">
+                        <picture>
+                            <source srcset="Logo_Port_06.webp" type="image/webp">
+                            <img loading="lazy" decoding="async" src="Logo_Port_06.jpg" alt="Logo Design 6">
+                        </picture>
                     </picture>
                 </picture>
             </div>
@@ -593,7 +661,10 @@
                 <picture>
                     <picture>
                         <source srcset="Logo_Port_07.webp" type="image/webp">
-                        <img loading="lazy" decoding="async" src="Logo_Port_07.jpg" alt="Logo Design 7">
+                        <picture>
+                            <source srcset="Logo_Port_07.webp" type="image/webp">
+                            <img loading="lazy" decoding="async" src="Logo_Port_07.jpg" alt="Logo Design 7">
+                        </picture>
                     </picture>
                 </picture>
             </div>
@@ -601,7 +672,10 @@
                 <picture>
                     <picture>
                         <source srcset="Logo_Port_08.webp" type="image/webp">
-                        <img loading="lazy" decoding="async" src="Logo_Port_08.jpg" alt="Logo Design 8">
+                        <picture>
+                            <source srcset="Logo_Port_08.webp" type="image/webp">
+                            <img loading="lazy" decoding="async" src="Logo_Port_08.jpg" alt="Logo Design 8">
+                        </picture>
                     </picture>
                 </picture>
             </div>
@@ -610,7 +684,10 @@
                 <picture>
                     <picture>
                         <source srcset="Logo_Port_01.webp" type="image/webp">
-                        <img loading="lazy" decoding="async" src="Logo_Port_01.jpg" alt="Logo Design 1">
+                        <picture>
+                            <source srcset="Logo_Port_01.webp" type="image/webp">
+                            <img loading="lazy" decoding="async" src="Logo_Port_01.jpg" alt="Logo Design 1">
+                        </picture>
                     </picture>
                 </picture>
             </div>
@@ -618,7 +695,10 @@
                 <picture>
                     <picture>
                         <source srcset="Logo_Port_02.webp" type="image/webp">
-                        <img loading="lazy" decoding="async" src="Logo_Port_02.jpg" alt="Logo Design 2">
+                        <picture>
+                            <source srcset="Logo_Port_02.webp" type="image/webp">
+                            <img loading="lazy" decoding="async" src="Logo_Port_02.jpg" alt="Logo Design 2">
+                        </picture>
                     </picture>
                 </picture>
             </div>
@@ -626,7 +706,10 @@
                 <picture>
                     <picture>
                         <source srcset="Logo_Port_03.webp" type="image/webp">
-                        <img loading="lazy" decoding="async" src="Logo_Port_03.jpg" alt="Logo Design 3">
+                        <picture>
+                            <source srcset="Logo_Port_03.webp" type="image/webp">
+                            <img loading="lazy" decoding="async" src="Logo_Port_03.jpg" alt="Logo Design 3">
+                        </picture>
                     </picture>
                 </picture>
             </div>
@@ -634,7 +717,10 @@
                 <picture>
                     <picture>
                         <source srcset="Logo_Port_04.webp" type="image/webp">
-                        <img loading="lazy" decoding="async" src="Logo_Port_04.jpg" alt="Logo Design 4">
+                        <picture>
+                            <source srcset="Logo_Port_04.webp" type="image/webp">
+                            <img loading="lazy" decoding="async" src="Logo_Port_04.jpg" alt="Logo Design 4">
+                        </picture>
                     </picture>
                 </picture>
             </div>
@@ -642,7 +728,10 @@
                 <picture>
                     <picture>
                         <source srcset="Logo_Port_05.webp" type="image/webp">
-                        <img loading="lazy" decoding="async" src="Logo_Port_05_optimized.jpg" alt="Logo Design 5">
+                        <picture>
+                            <source srcset="Logo_Port_05_optimized.webp" type="image/webp">
+                            <img loading="lazy" decoding="async" src="Logo_Port_05_optimized.jpg" alt="Logo Design 5">
+                        </picture>
                     </picture>
                 </picture>
             </div>
@@ -650,7 +739,10 @@
                 <picture>
                     <picture>
                         <source srcset="Logo_Port_06.webp" type="image/webp">
-                        <img loading="lazy" decoding="async" src="Logo_Port_06.jpg" alt="Logo Design 6">
+                        <picture>
+                            <source srcset="Logo_Port_06.webp" type="image/webp">
+                            <img loading="lazy" decoding="async" src="Logo_Port_06.jpg" alt="Logo Design 6">
+                        </picture>
                     </picture>
                 </picture>
             </div>
@@ -658,7 +750,10 @@
                 <picture>
                     <picture>
                         <source srcset="Logo_Port_07.webp" type="image/webp">
-                        <img loading="lazy" decoding="async" src="Logo_Port_07.jpg" alt="Logo Design 7">
+                        <picture>
+                            <source srcset="Logo_Port_07.webp" type="image/webp">
+                            <img loading="lazy" decoding="async" src="Logo_Port_07.jpg" alt="Logo Design 7">
+                        </picture>
                     </picture>
                 </picture>
             </div>
@@ -666,7 +761,10 @@
                 <picture>
                     <picture>
                         <source srcset="Logo_Port_08.webp" type="image/webp">
-                        <img loading="lazy" decoding="async" src="Logo_Port_08.jpg" alt="Logo Design 8">
+                        <picture>
+                            <source srcset="Logo_Port_08.webp" type="image/webp">
+                            <img loading="lazy" decoding="async" src="Logo_Port_08.jpg" alt="Logo Design 8">
+                        </picture>
                     </picture>
                 </picture>
             </div>
@@ -686,8 +784,11 @@
                 <picture>
                     <picture>
                         <source srcset="Fashion_img_01.webp" type="image/webp">
-                        <img loading="lazy" decoding="async" src="Fashion_img_01_optimized.jpg"
+                        <picture>
+                            <source srcset="Fashion_img_01_optimized.webp" type="image/webp">
+                            <img loading="lazy" decoding="async" src="Fashion_img_01_optimized.jpg"
                             alt="Fashion Photography 1">
+                        </picture>
                     </picture>
                 </picture>
             </div>
@@ -695,8 +796,11 @@
                 <picture>
                     <picture>
                         <source srcset="Fashion_img_02.webp" type="image/webp">
-                        <img loading="lazy" decoding="async" src="Fashion_img_02_optimized.jpg"
+                        <picture>
+                            <source srcset="Fashion_img_02_optimized.webp" type="image/webp">
+                            <img loading="lazy" decoding="async" src="Fashion_img_02_optimized.jpg"
                             alt="Fashion Photography 2">
+                        </picture>
                     </picture>
                 </picture>
             </div>
@@ -704,8 +808,11 @@
                 <picture>
                     <picture>
                         <source srcset="Fashion_img_03.webp" type="image/webp">
-                        <img loading="lazy" decoding="async" src="Fashion_img_03_optimized.jpg"
+                        <picture>
+                            <source srcset="Fashion_img_03_optimized.webp" type="image/webp">
+                            <img loading="lazy" decoding="async" src="Fashion_img_03_optimized.jpg"
                             alt="Fashion Photography 3">
+                        </picture>
                     </picture>
                 </picture>
             </div>
@@ -713,7 +820,10 @@
                 <picture>
                     <picture>
                         <source srcset="Fashion_img_04.webp" type="image/webp">
-                        <img loading="lazy" decoding="async" src="Fashion_img_04.jpg" alt="Fashion Photography 4">
+                        <picture>
+                            <source srcset="Fashion_img_04.webp" type="image/webp">
+                            <img loading="lazy" decoding="async" src="Fashion_img_04.jpg" alt="Fashion Photography 4">
+                        </picture>
                     </picture>
                 </picture>
             </div>
@@ -721,8 +831,11 @@
                 <picture>
                     <picture>
                         <source srcset="Fashion_img_05.webp" type="image/webp">
-                        <img loading="lazy" decoding="async" src="Fashion_img_05_optimized.jpg"
+                        <picture>
+                            <source srcset="Fashion_img_05_optimized.webp" type="image/webp">
+                            <img loading="lazy" decoding="async" src="Fashion_img_05_optimized.jpg"
                             alt="Fashion Photography 5">
+                        </picture>
                     </picture>
                 </picture>
             </div>
@@ -731,8 +844,11 @@
                 <picture>
                     <picture>
                         <source srcset="Fashion_img_01.webp" type="image/webp">
-                        <img loading="lazy" decoding="async" src="Fashion_img_01_optimized.jpg"
+                        <picture>
+                            <source srcset="Fashion_img_01_optimized.webp" type="image/webp">
+                            <img loading="lazy" decoding="async" src="Fashion_img_01_optimized.jpg"
                             alt="Fashion Photography 1">
+                        </picture>
                     </picture>
                 </picture>
             </div>
@@ -740,8 +856,11 @@
                 <picture>
                     <picture>
                         <source srcset="Fashion_img_02.webp" type="image/webp">
-                        <img loading="lazy" decoding="async" src="Fashion_img_02_optimized.jpg"
+                        <picture>
+                            <source srcset="Fashion_img_02_optimized.webp" type="image/webp">
+                            <img loading="lazy" decoding="async" src="Fashion_img_02_optimized.jpg"
                             alt="Fashion Photography 2">
+                        </picture>
                     </picture>
                 </picture>
             </div>
@@ -749,8 +868,11 @@
                 <picture>
                     <picture>
                         <source srcset="Fashion_img_03.webp" type="image/webp">
-                        <img loading="lazy" decoding="async" src="Fashion_img_03_optimized.jpg"
+                        <picture>
+                            <source srcset="Fashion_img_03_optimized.webp" type="image/webp">
+                            <img loading="lazy" decoding="async" src="Fashion_img_03_optimized.jpg"
                             alt="Fashion Photography 3">
+                        </picture>
                     </picture>
                 </picture>
             </div>
@@ -758,7 +880,10 @@
                 <picture>
                     <picture>
                         <source srcset="Fashion_img_04.webp" type="image/webp">
-                        <img loading="lazy" decoding="async" src="Fashion_img_04.jpg" alt="Fashion Photography 4">
+                        <picture>
+                            <source srcset="Fashion_img_04.webp" type="image/webp">
+                            <img loading="lazy" decoding="async" src="Fashion_img_04.jpg" alt="Fashion Photography 4">
+                        </picture>
                     </picture>
                 </picture>
             </div>
@@ -766,8 +891,11 @@
                 <picture>
                     <picture>
                         <source srcset="Fashion_img_05.webp" type="image/webp">
-                        <img loading="lazy" decoding="async" src="Fashion_img_05_optimized.jpg"
+                        <picture>
+                            <source srcset="Fashion_img_05_optimized.webp" type="image/webp">
+                            <img loading="lazy" decoding="async" src="Fashion_img_05_optimized.jpg"
                             alt="Fashion Photography 5">
+                        </picture>
                     </picture>
                 </picture>
             </div>
@@ -787,7 +915,10 @@
                 <picture>
                     <picture>
                         <source srcset="metro_ad_1.webp" type="image/webp">
-                        <img loading="lazy" decoding="async" src="metro_ad_1.jpg" alt="Metro Interior Advertising">
+                        <picture>
+                            <source srcset="metro_ad_1.webp" type="image/webp">
+                            <img loading="lazy" decoding="async" src="metro_ad_1.jpg" alt="Metro Interior Advertising">
+                        </picture>
                     </picture>
                 </picture>
             </div>
@@ -795,7 +926,10 @@
                 <picture>
                     <picture>
                         <source srcset="metro_ad_2.webp" type="image/webp">
-                        <img loading="lazy" decoding="async" src="metro_ad_2.jpg" alt="Metro Exterior Advertising">
+                        <picture>
+                            <source srcset="metro_ad_2.webp" type="image/webp">
+                            <img loading="lazy" decoding="async" src="metro_ad_2.jpg" alt="Metro Exterior Advertising">
+                        </picture>
                     </picture>
                 </picture>
             </div>
@@ -803,7 +937,10 @@
                 <picture>
                     <picture>
                         <source srcset="metro_ad_3.webp" type="image/webp">
-                        <img loading="lazy" decoding="async" src="metro_ad_3.jpg" alt="Metro Station Advertising">
+                        <picture>
+                            <source srcset="metro_ad_3.webp" type="image/webp">
+                            <img loading="lazy" decoding="async" src="metro_ad_3.jpg" alt="Metro Station Advertising">
+                        </picture>
                     </picture>
                 </picture>
             </div>
@@ -811,8 +948,11 @@
                 <picture>
                     <picture>
                         <source srcset="social media_01.webp" type="image/webp">
-                        <img loading="lazy" decoding="async" src="social_media_01_optimized.jpg"
+                        <picture>
+                            <source srcset="social_media_01_optimized.webp" type="image/webp">
+                            <img loading="lazy" decoding="async" src="social_media_01_optimized.jpg"
                             alt="Social Media Graphics 1">
+                        </picture>
                     </picture>
                 </picture>
             </div>
@@ -820,7 +960,10 @@
                 <picture>
                     <picture>
                         <source srcset="social media_02.webp" type="image/webp">
-                        <img loading="lazy" decoding="async" src="social media_02.jpg" alt="Social Media Graphics 2">
+                        <picture>
+                            <source srcset="social media_02.webp" type="image/webp">
+                            <img loading="lazy" decoding="async" src="social media_02.jpg" alt="Social Media Graphics 2">
+                        </picture>
                     </picture>
                 </picture>
             </div>
@@ -828,7 +971,10 @@
                 <picture>
                     <picture>
                         <source srcset="social media_03.webp" type="image/webp">
-                        <img loading="lazy" decoding="async" src="social media_03.jpg" alt="Social Media Graphics 3">
+                        <picture>
+                            <source srcset="social media_03.webp" type="image/webp">
+                            <img loading="lazy" decoding="async" src="social media_03.jpg" alt="Social Media Graphics 3">
+                        </picture>
                     </picture>
                 </picture>
             </div>
@@ -836,7 +982,10 @@
                 <picture>
                     <picture>
                         <source srcset="social media_04.webp" type="image/webp">
-                        <img loading="lazy" decoding="async" src="social media_04.jpg" alt="Social Media Graphics 4">
+                        <picture>
+                            <source srcset="social media_04.webp" type="image/webp">
+                            <img loading="lazy" decoding="async" src="social media_04.jpg" alt="Social Media Graphics 4">
+                        </picture>
                     </picture>
                 </picture>
             </div>
@@ -844,8 +993,11 @@
                 <picture>
                     <picture>
                         <source srcset="social media_05.webp" type="image/webp">
-                        <img loading="lazy" decoding="async" src="social_media_05_optimized.jpg"
+                        <picture>
+                            <source srcset="social_media_05_optimized.webp" type="image/webp">
+                            <img loading="lazy" decoding="async" src="social_media_05_optimized.jpg"
                             alt="Social Media Graphics 5">
+                        </picture>
                     </picture>
                 </picture>
             </div>
@@ -854,8 +1006,11 @@
                 <picture>
                     <picture>
                         <source srcset="social media_01.webp" type="image/webp">
-                        <img loading="lazy" decoding="async" src="social_media_01_optimized.jpg"
+                        <picture>
+                            <source srcset="social_media_01_optimized.webp" type="image/webp">
+                            <img loading="lazy" decoding="async" src="social_media_01_optimized.jpg"
                             alt="Social Media Graphics 1">
+                        </picture>
                     </picture>
                 </picture>
             </div>
@@ -863,7 +1018,10 @@
                 <picture>
                     <picture>
                         <source srcset="social media_02.webp" type="image/webp">
-                        <img loading="lazy" decoding="async" src="social media_02.jpg" alt="Social Media Graphics 2">
+                        <picture>
+                            <source srcset="social media_02.webp" type="image/webp">
+                            <img loading="lazy" decoding="async" src="social media_02.jpg" alt="Social Media Graphics 2">
+                        </picture>
                     </picture>
                 </picture>
             </div>
@@ -871,7 +1029,10 @@
                 <picture>
                     <picture>
                         <source srcset="social media_03.webp" type="image/webp">
-                        <img loading="lazy" decoding="async" src="social media_03.jpg" alt="Social Media Graphics 3">
+                        <picture>
+                            <source srcset="social media_03.webp" type="image/webp">
+                            <img loading="lazy" decoding="async" src="social media_03.jpg" alt="Social Media Graphics 3">
+                        </picture>
                     </picture>
                 </picture>
             </div>
@@ -879,7 +1040,10 @@
                 <picture>
                     <picture>
                         <source srcset="social media_04.webp" type="image/webp">
-                        <img loading="lazy" decoding="async" src="social media_04.jpg" alt="Social Media Graphics 4">
+                        <picture>
+                            <source srcset="social media_04.webp" type="image/webp">
+                            <img loading="lazy" decoding="async" src="social media_04.jpg" alt="Social Media Graphics 4">
+                        </picture>
                     </picture>
                 </picture>
             </div>
@@ -887,8 +1051,11 @@
                 <picture>
                     <picture>
                         <source srcset="social media_05.webp" type="image/webp">
-                        <img loading="lazy" decoding="async" src="social_media_05_optimized.jpg"
+                        <picture>
+                            <source srcset="social_media_05_optimized.webp" type="image/webp">
+                            <img loading="lazy" decoding="async" src="social_media_05_optimized.jpg"
                             alt="Social Media Graphics 5">
+                        </picture>
                     </picture>
                 </picture>
             </div>

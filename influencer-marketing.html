@@ -28,21 +28,23 @@
     <meta property="twitter:image" content="https://paarustudio.com/logo.webp">
 
     <link rel="icon" type="image/png" href="logo.webp">
+        <link rel="preconnect" href="https://www.youtube.com">
+    <link rel="preconnect" href="https://i.ytimg.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="styles.min.css" as="style">
     <link rel="preload"
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fredoka+One&display=swap"
         as="style">
 
-    <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="styles.min.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="popup-form.css" media="print" onload="this.media='all'">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fredoka+One&display=swap"
         rel="stylesheet" media="print" onload="this.media='all'">
 
     <noscript>
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="styles.min.css">
         <link rel="stylesheet" href="popup-form.css">
         <link
             href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fredoka+One&display=swap"
@@ -106,28 +108,37 @@
                                 class="dropdown-arrow">▾</span></a>
                         <div class="nav-dropdown-menu mega-menu">
                             <a href="services.html" class="mega-menu-item">
-                                <img src="video_pro.jpg" alt="Video Production">
+                                <picture>
+                                    <source srcset="video_pro.webp" type="image/webp">
+                                    <img loading="lazy" decoding="async" src="video_pro.jpg" alt="Video Production">
+                                </picture>
                                 <div class="mega-item-content">
                                     <h4>Video Production</h4>
                                     <p>TVCs, Digital Ads, Corporate films. End-to-end video solutions.</p>
                                 </div>
                             </a>
                             <a href="ecommerce.html" class="mega-menu-item">
-                                <img src="shopify_img.png" alt="E-commerce Solutions">
+                                <img loading="lazy" decoding="async" src="shopify_img.webp" alt="E-commerce Solutions">
                                 <div class="mega-item-content">
                                     <h4>E-commerce Solutions</h4>
                                     <p>Boost your online sales with tailored e-commerce strategies.</p>
                                 </div>
                             </a>
                             <a href="performance-marketing.html" class="mega-menu-item">
-                                <img src="pm_1.jpg" alt="Digital Marketing">
+                                <picture>
+                                    <source srcset="pm_1.webp" type="image/webp">
+                                    <img loading="lazy" decoding="async" src="pm_1.jpg" alt="Digital Marketing">
+                                </picture>
                                 <div class="mega-item-content">
                                     <h4>Digital Marketing</h4>
                                     <p>Data-driven performance and social media campaigns.</p>
                                 </div>
                             </a>
                             <a href="media-offerings.html" class="mega-menu-item">
-                                <img src="OOH_banner.jpg" alt="Offline Marketing (OOH/DOOH)">
+                                <picture>
+                                    <source srcset="OOH_banner.webp" type="image/webp">
+                                    <img loading="lazy" decoding="async" src="OOH_banner.jpg" alt="Offline Marketing (OOH/DOOH)">
+                                </picture>
                                 <div class="mega-item-content">
                                     <h4>Offline Marketing</h4>
                                     <p>High-impact outdoor and digital out-of-home advertising.</p>
@@ -231,8 +242,11 @@
                 <div class="ecommerce-image">
                     <picture>
                         <source srcset="im_1.webp" type="image/webp">
-                        <img loading="lazy" decoding="async" src="im_1_optimized.jpg"
+                        <picture>
+                            <source srcset="im_1_optimized.webp" type="image/webp">
+                            <img loading="lazy" decoding="async" src="im_1_optimized.jpg"
                             alt="Influencer Marketing Services" decoding="async">
+                        </picture>
                     </picture>
                 </div>
             </div>
@@ -255,7 +269,7 @@
                 <div class="influencer-item" style="text-align: center;">
                     <div class="influencer-image"
                         style="width: 100%; aspect-ratio: 1; background: var(--card-bg); border-radius: 12px; overflow: hidden; margin-bottom: 20px; border: 2px solid #2a2a2a;">
-                        <img loading="lazy" decoding="async" src="influencer_1.png" alt="Influencer 1"
+                        <img loading="lazy" decoding="async" src="influencer_1.webp" alt="Influencer 1"
                             style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <h3 style="font-size: 20px; margin-bottom: 8px; color: var(--text-primary);">Raghu Gowda</h3>
@@ -265,7 +279,7 @@
                 <div class="influencer-item" style="text-align: center;">
                     <div class="influencer-image"
                         style="width: 100%; aspect-ratio: 1; background: var(--card-bg); border-radius: 12px; overflow: hidden; margin-bottom: 20px; border: 2px solid #2a2a2a;">
-                        <img loading="lazy" decoding="async" src="influencer_2.png" alt="Influencer 2"
+                        <img loading="lazy" decoding="async" src="influencer_2.webp" alt="Influencer 2"
                             style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <h3 style="font-size: 20px; margin-bottom: 8px; color: var(--text-primary);">Yashwanth M K</h3>
@@ -275,7 +289,7 @@
                 <div class="influencer-item" style="text-align: center;">
                     <div class="influencer-image"
                         style="width: 100%; aspect-ratio: 1; background: var(--card-bg); border-radius: 12px; overflow: hidden; margin-bottom: 20px; border: 2px solid #2a2a2a;">
-                        <img loading="lazy" decoding="async" src="influencer_3.png" alt="Influencer 3"
+                        <img loading="lazy" decoding="async" src="influencer_3.webp" alt="Influencer 3"
                             style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <h3 style="font-size: 20px; margin-bottom: 8px; color: var(--text-primary);">Shivu Ng</h3>
@@ -285,7 +299,7 @@
                 <div class="influencer-item" style="text-align: center;">
                     <div class="influencer-image"
                         style="width: 100%; aspect-ratio: 1; background: var(--card-bg); border-radius: 12px; overflow: hidden; margin-bottom: 20px; border: 2px solid #2a2a2a;">
-                        <img loading="lazy" decoding="async" src="influencer_4.png" alt="Influencer 4"
+                        <img loading="lazy" decoding="async" src="influencer_4.webp" alt="Influencer 4"
                             style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <h3 style="font-size: 20px; margin-bottom: 8px; color: var(--text-primary);">Chetan Marambeed</h3>
@@ -295,7 +309,7 @@
                 <div class="influencer-item" style="text-align: center;">
                     <div class="influencer-image"
                         style="width: 100%; aspect-ratio: 1; background: var(--card-bg); border-radius: 12px; overflow: hidden; margin-bottom: 20px; border: 2px solid #2a2a2a;">
-                        <img loading="lazy" decoding="async" src="influencer_5.png" alt="Influencer 5"
+                        <img loading="lazy" decoding="async" src="influencer_5.webp" alt="Influencer 5"
                             style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <h3 style="font-size: 20px; margin-bottom: 8px; color: var(--text-primary);">Sumit _ Sankoji</h3>
@@ -305,7 +319,7 @@
                 <div class="influencer-item" style="text-align: center;">
                     <div class="influencer-image"
                         style="width: 100%; aspect-ratio: 1; background: var(--card-bg); border-radius: 12px; overflow: hidden; margin-bottom: 20px; border: 2px solid #2a2a2a;">
-                        <img loading="lazy" decoding="async" src="influencer_6.png" alt="Influencer 6"
+                        <img loading="lazy" decoding="async" src="influencer_6.webp" alt="Influencer 6"
                             style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <h3 style="font-size: 20px; margin-bottom: 8px; color: var(--text-primary);">Akshay Narayan</h3>
@@ -315,7 +329,7 @@
                 <div class="influencer-item" style="text-align: center;">
                     <div class="influencer-image"
                         style="width: 100%; aspect-ratio: 1; background: var(--card-bg); border-radius: 12px; overflow: hidden; margin-bottom: 20px; border: 2px solid #2a2a2a;">
-                        <img loading="lazy" decoding="async" src="influencer_7.png" alt="Influencer 7"
+                        <img loading="lazy" decoding="async" src="influencer_7.webp" alt="Influencer 7"
                             style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <h3 style="font-size: 20px; margin-bottom: 8px; color: var(--text-primary);">Deepak</h3>
@@ -325,7 +339,7 @@
                 <div class="influencer-item" style="text-align: center;">
                     <div class="influencer-image"
                         style="width: 100%; aspect-ratio: 1; background: var(--card-bg); border-radius: 12px; overflow: hidden; margin-bottom: 20px; border: 2px solid #2a2a2a;">
-                        <img loading="lazy" decoding="async" src="influencer_8.png" alt="Influencer 8"
+                        <img loading="lazy" decoding="async" src="influencer_8.webp" alt="Influencer 8"
                             style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <h3 style="font-size: 20px; margin-bottom: 8px; color: var(--text-primary);">Bindu Gowda</h3>
@@ -335,7 +349,7 @@
                 <div class="influencer-item" style="text-align: center;">
                     <div class="influencer-image"
                         style="width: 100%; aspect-ratio: 1; background: var(--card-bg); border-radius: 12px; overflow: hidden; margin-bottom: 20px; border: 2px solid #2a2a2a;">
-                        <img loading="lazy" decoding="async" src="influencer_9.png" alt="Influencer 9"
+                        <img loading="lazy" decoding="async" src="influencer_9.webp" alt="Influencer 9"
                             style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <h3 style="font-size: 20px; margin-bottom: 8px; color: var(--text-primary);">varsha.kaveri</h3>
@@ -345,7 +359,7 @@
                 <div class="influencer-item" style="text-align: center;">
                     <div class="influencer-image"
                         style="width: 100%; aspect-ratio: 1; background: var(--card-bg); border-radius: 12px; overflow: hidden; margin-bottom: 20px; border: 2px solid #2a2a2a;">
-                        <img loading="lazy" decoding="async" src="influencer_10.png" alt="Influencer 10"
+                        <img loading="lazy" decoding="async" src="influencer_10.webp" alt="Influencer 10"
                             style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <h3 style="font-size: 20px; margin-bottom: 8px; color: var(--text-primary);">Pavan Krishna Rao
@@ -356,7 +370,7 @@
                 <div class="influencer-item" style="text-align: center;">
                     <div class="influencer-image"
                         style="width: 100%; aspect-ratio: 1; background: var(--card-bg); border-radius: 12px; overflow: hidden; margin-bottom: 20px; border: 2px solid #2a2a2a;">
-                        <img loading="lazy" decoding="async" src="influencer_11.png" alt="Influencer 11"
+                        <img loading="lazy" decoding="async" src="influencer_11.webp" alt="Influencer 11"
                             style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <h3 style="font-size: 20px; margin-bottom: 8px; color: var(--text-primary);">Krishna Jorapur</h3>
@@ -366,7 +380,7 @@
                 <div class="influencer-item" style="text-align: center;">
                     <div class="influencer-image"
                         style="width: 100%; aspect-ratio: 1; background: var(--card-bg); border-radius: 12px; overflow: hidden; margin-bottom: 20px; border: 2px solid #2a2a2a;">
-                        <img loading="lazy" decoding="async" src="influencer_12.png" alt="Influencer 12"
+                        <img loading="lazy" decoding="async" src="influencer_12.webp" alt="Influencer 12"
                             style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <h3 style="font-size: 20px; margin-bottom: 8px; color: var(--text-primary);">Srishti Jahagirdar</h3>
@@ -726,7 +740,7 @@
                 <div class="influencer-text">
                     <!-- Influencer network image inserted by request -->
                     <div class="influencer-image-wrap" style="text-align:center;margin-bottom:18px;">
-                        <img loading="lazy" decoding="async" src="Influencer Network Pic.png" alt="Influencer Network"
+                        <img loading="lazy" decoding="async" src="Influencer Network Pic.webp" alt="Influencer Network"
                             class="influencer-image">
                     </div>
                     <h2>Join Our Influencer Network</h2>

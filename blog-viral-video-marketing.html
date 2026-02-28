@@ -28,19 +28,19 @@
     <link rel="icon" type="image/png" href="logo.webp">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="styles.min.css" as="style">
     <link rel="preload"
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fredoka+One&display=swap"
         as="style">
 
-    <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="styles.min.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="popup-form.css" media="print" onload="this.media='all'">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fredoka+One&display=swap"
         rel="stylesheet" media="print" onload="this.media='all'">
 
     <noscript>
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="styles.min.css">
         <link rel="stylesheet" href="popup-form.css">
         <link
             href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fredoka+One&display=swap"
@@ -104,8 +104,11 @@
                         <div class="nav-dropdown-menu mega-menu">
                             <a href="services.html" class="mega-menu-item">
                                 <picture>
-                                    <source srcset="video_pro.webp" type="image/webp"><img src="video_pro.jpg"
+                                    <source srcset="video_pro.webp" type="image/webp"><picture>
+    <source srcset="video_pro.webp" type="image/webp">
+    <img src="video_pro.jpg"
                                         alt="Video Production" width="7990" height="5327" loading="lazy">
+</picture>
                                 </picture>
                                 <div class="mega-item-content">
                                     <h4>Video Production</h4>
@@ -114,7 +117,7 @@
                             </a>
                             <a href="ecommerce.html" class="mega-menu-item">
                                 <picture>
-                                    <source srcset="shopify_img.webp" type="image/webp"><img src="shopify_img.png"
+                                    <source srcset="shopify_img.webp" type="image/webp"><img src="shopify_img.webp"
                                         alt="E-commerce Solutions" width="1024" height="1024" loading="lazy">
                                 </picture>
                                 <div class="mega-item-content">
@@ -124,8 +127,11 @@
                             </a>
                             <a href="performance-marketing.html" class="mega-menu-item">
                                 <picture>
-                                    <source srcset="pm_1.webp" type="image/webp"><img src="pm_1.jpg"
+                                    <source srcset="pm_1.webp" type="image/webp"><picture>
+    <source srcset="pm_1.webp" type="image/webp">
+    <img src="pm_1.jpg"
                                         alt="Digital Marketing" width="6629" height="3729" loading="lazy">
+</picture>
                                 </picture>
                                 <div class="mega-item-content">
                                     <h4>Digital Marketing</h4>
@@ -134,8 +140,11 @@
                             </a>
                             <a href="media-offerings.html" class="mega-menu-item">
                                 <picture>
-                                    <source srcset="OOH_banner.webp" type="image/webp"><img src="OOH_banner.jpg"
+                                    <source srcset="OOH_banner.webp" type="image/webp"><picture>
+    <source srcset="OOH_banner.webp" type="image/webp">
+    <img src="OOH_banner.jpg"
                                         alt="Offline Marketing (OOH/DOOH)" width="1170" height="876" loading="lazy">
+</picture>
                                 </picture>
                                 <div class="mega-item-content">
                                     <h4>Offline Marketing</h4>
@@ -352,7 +361,7 @@
         </svg>
     </a>
 
-    <script src="script.js" defer></script>
+    <script src="script.min.js" defer></script>
     <script src="popup-form.js" defer></script>
 </body>
 
