@@ -67,6 +67,9 @@ h3,
 h4,
 h5,
 h6 {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.5px;
     line-height: 1.2;
     margin-bottom: 1rem;
 }
@@ -455,7 +458,7 @@ body {
     font-size: 30px;
     /* Slightly larger for this font */
     letter-spacing: 1px;
-    font-family: 'Fredoka One', cursive;
+    font-family: "Inter", sans-serif;
     position: relative;
     border: none;
     cursor: pointer;
@@ -1526,7 +1529,7 @@ video {
     font-size: 40px;
     color: #E6E6FA;
     margin-bottom: 80px;
-    font-family: 'Caveat', cursive;
+    font-family: "Inter", sans-serif;
     font-weight: 600;
     text-align: center;
     display: block;
@@ -1894,7 +1897,15 @@ video {
 
 /* E-Commerce Section */
 .ecommerce-section {
-    padding: 120px 0;
+    padding: 120px 0 140px;
+    background: transparent;
+    /* made transparent to see curve */
+    position: relative;
+}
+
+/* removed opaque ::after clip to show fixed curve */
+.ecommerce-section::after {
+    display: none;
 }
 
 /* E-commerce specific layout tweaks: reduce service card sizes and add side margins
@@ -2036,7 +2047,7 @@ video {
     }
 }
 
-.ecommerce-content .large-text {
+.ecommerce-section .large-text {
     text-align: center;
     margin-bottom: 60px;
 }
@@ -2180,8 +2191,21 @@ video {
 
 /* How It Works Section */
 .how-it-works-section {
-    padding: 120px 0;
-    background: var(--primary-bg);
+    padding: 140px 0 140px;
+    background: transparent;
+    position: relative;
+}
+
+/* separator line for how-it-works */
+.how-it-works-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 80%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.12) 50%, transparent 100%);
+    pointer-events: none;
 }
 
 .steps-container {
@@ -2487,7 +2511,7 @@ video {
     content: '';
     width: 18px;
     height: 18px;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="%23fff" d="M8 5v14l11-7z"/></svg>') center/contain no-repeat;
+    background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTggNXYxNGwxMS03eiIvPjwvc3ZnPg==') center/contain no-repeat;
     position: absolute;
     /* center the small play icon inside the 44px circle located at 12px,12px */
     left: calc(12px + (44px - 18px) / 2);
@@ -3188,23 +3212,26 @@ video {
 
 /* Hover control variables (toggle/adjust hover behaviour) */
 :root {
-    --carousel-hover-enabled: 0;
+    --carousel-hover-enabled: 1;
     /* 1 = enabled, 0 = disabled (default: disabled) */
     --carousel-hover-strength: 0.25;
     /* 0..1 dampening factor for hover panning */
-    --portfolio-hover-scale: 1.00;
+    --portfolio-hover-scale: 1.05;
     /* scale applied on hover for main card (1 = no scale) */
 }
 
-/* Hover scale for the focused card (removed to fix over-active behavior) */
+/* Hover scale for the focused card (restored for interactive feel) */
 .carousel-track .portfolio-item:hover {
-    transition: transform 240ms ease;
+    transition: transform 350ms cubic-bezier(.2, .9, .25, 1), box-shadow 350ms ease;
+    transform: scale(var(--portfolio-hover-scale)) !important;
+    z-index: 5;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.5);
 }
 
-/* Disable hover effects when the variable is 0 */
+/* Disable hover effects only if explicitly set to 0 via data attribute */
 @media (hover: hover) {
     .portfolio-carousel[data-hover-enabled="0"] .carousel-track .portfolio-item:hover {
-        transform: none;
+        transform: none !important;
     }
 }
 
@@ -3213,7 +3240,6 @@ video {
 #clients.clients-section {
     background: #ffffff;
     color: #111111;
-    /* darker text for contrast */
 }
 
 /* Full-bleed white band for the clients section */
@@ -3232,16 +3258,20 @@ video {
 
 /* Adjust client-logo style for white background */
 #clients .client-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: #f8f8f8;
     color: #111111;
     border: 1px solid #e6e6e6;
     padding: 12px 14px;
-    /* compact the white tiles */
     border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     min-width: 140px;
+    transition: transform 0.3s ease;
+}
+
+#clients .client-logo:hover {
+    transform: scale(1.05);
 }
 
 /* Logo variant: center and size logo images inside client tiles */
@@ -4023,47 +4053,22 @@ video {
     background: #fff;
 }
 
-/* Decorative globe graphic behind the left/center area */
+/* Decorative globe graphic removed as requested */
 .contact-band {
     position: relative;
-    /* ensure pseudo-element positions relative to band */
-}
-
-.contact-band::before {
-    content: '';
-    position: absolute;
-    left: 4%;
-    bottom: 4%;
-    /* use the user-supplied raster globe at workspace root (Globe.png) with SVG fallback */
-    width: 48vw;
-    height: 48vw;
-    max-width: 560px;
-    max-height: 560px;
-    /* Layer 1: a warmer gradient tint matching the banner; Layer 2: user's globe; Layer 3: SVG fallback */
-    background-image: linear-gradient(135deg, rgba(251, 191, 36, 0.14), rgba(245, 158, 11, 0.12)), url('Globe.png'), url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><circle cx='100' cy='100' r='90' fill='none' stroke='%23ffffff' stroke-width='4' opacity='0.06'/><path d='M10 100a90 90 0 0 0 180 0' stroke='%23ffffff' stroke-width='2' opacity='0.04' fill='none'/><path d='M100 10a90 90 0 0 0 0 180' stroke='%23ffffff' stroke-width='2' opacity='0.04' fill='none'/></svg>");
-    background-repeat: no-repeat, no-repeat, no-repeat;
-    /* anchor the globe to the left/bottom so it sits behind the center/left columns */
-    background-position: left bottom, left bottom, center center;
-    background-size: cover, contain, contain;
-    pointer-events: none;
-    z-index: 0;
-    transform: translateY(8%);
-    opacity: 0.12;
-    /* slightly warmer due to tint */
 }
 
 /* Remove the gap between the contact band and footer when they are adjacent */
 .index-page .contact-section {
     margin-bottom: 0;
-    padding-bottom: 60px;
-    /* Reduce bottom padding to close gap */
+    padding-bottom: 0;
+    /* Eliminated bottom padding to close gap */
 }
 
 /* If the contact section is immediately followed by the footer on the index page, remove any top gap */
 .index-page .contact-section+.footer {
     margin-top: 0;
     padding-top: 0;
-    /* remove internal top padding so bands sit flush */
 }
 
 .index-page .contact-section+.footer .footer-content {
@@ -4277,20 +4282,19 @@ video {
     content: '';
     position: fixed;
     top: 300px;
-    /* requested offset */
     left: 50%;
     transform: translateX(-50%);
     width: 2000px;
-    height: 900px;
+    height: 1200px;
+    /* increased to reach further */
     background-image: url('web page bg 4k.png');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center center;
-    opacity: 0.5;
-    /* fixed 50% opacity as requested */
+    opacity: 0.8;
+    /* increased for more prominence */
     pointer-events: none;
     z-index: 0;
-    /* behind content */
 }
 
 /* Elevate page content above the decorative curve */
@@ -4299,25 +4303,22 @@ video {
     z-index: 1;
 }
 
-/* Index-only: fixed decorative curve behind the page content */
+/* Services-page decorative curve */
 .services-page::before {
     content: '';
     position: fixed;
     top: 300px;
-    /* requested offset */
     left: 50%;
     transform: translateX(-50%);
     width: 2000px;
-    height: 900px;
+    height: 1200px;
     background-image: url('web page bg 4k.png');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center center;
-    opacity: 0.5;
-    /* fixed 50% opacity as requested */
+    opacity: 0.8;
     pointer-events: none;
     z-index: 0;
-    /* behind content */
 }
 
 /* Elevate page content above the decorative curve */
@@ -4369,7 +4370,23 @@ video {
 
 /* Advertising Solutions */
 .advertising-section {
-    padding: 120px 0;
+    padding: 100px 0 120px;
+    background: transparent;
+    position: relative;
+}
+
+/* Glowing golden separator above advertising section */
+.advertising-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 80%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent 0%, #f59e0b 30%, #fbbf24 50%, #f59e0b 70%, transparent 100%);
+    border-radius: 2px;
+    box-shadow: 0 0 20px rgba(245, 158, 11, 0.6), 0 0 40px rgba(245, 158, 11, 0.3);
+    pointer-events: none;
 }
 
 /* Golden stats banner that appears below the gallery on the index page */
@@ -5365,27 +5382,35 @@ video {
 
 /* Reviews / Testimonial cards (three-up layout) */
 .reviews-section {
-    padding: 80px 0 60px;
+    padding: 30px 0 60px;
+    /* reduced top padding */
 }
 
 .reviews-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
-    max-width: 1100px;
-    margin: 20px auto 0;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    /* reduced gap */
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .review-card {
-    background: #fff;
-    color: #111;
+    background: #ffffff;
+    color: #111111;
     border-radius: 12px;
-    padding: 28px 24px;
-    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.06);
-    border: 1px solid rgba(0, 0, 0, 0.04);
+    padding: 24px;
+    /* more compact padding */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #eeeeee;
     display: flex;
     flex-direction: column;
     gap: 12px;
+    transition: transform 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-3px);
 }
 
 .review-header {
@@ -5394,21 +5419,21 @@ video {
 }
 
 .review-name {
-    font-size: 18px;
-    font-weight: 800;
+    font-size: 17px;
+    font-weight: 700;
     color: #111111;
 }
 
 .review-brand {
     font-size: 13px;
-    color: #6b6b6b;
-    margin-top: 4px;
+    color: #64748b;
+    margin-top: 2px;
 }
 
 .review-text {
-    color: #444;
-    font-size: 16px;
-    line-height: 1.7;
+    color: #334155;
+    font-size: 14px;
+    line-height: 1.6;
 }
 
 .review-footer {
@@ -9479,7 +9504,7 @@ html {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 20px;
-    font-family: 'Fredoka One', cursive;
+    font-family: "Inter", sans-serif;
     /* Match button style */
 }
 

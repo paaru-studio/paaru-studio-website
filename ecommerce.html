@@ -222,25 +222,32 @@
         .square-showcase {
             width: 100%;
             margin: 0;
-            padding: 0;
+            padding: 2vw 0;
+            /* Add a little breathe room on top/bottom */
             background: #000;
         }
 
         .square-grid {
             display: flex;
             width: 100%;
+            box-sizing: border-box;
+            /* Equal spacing on the extreme left and right */
+            padding: 0 2vw;
+            /* Equal spacing between images */
+            gap: 2vw;
             justify-content: center;
         }
 
         .square-grid .square-img {
-            flex: 1;
-            /* evenly distributes them across the 100% width */
+            flex: 1 1 0;
+            /* Ensures all items take exactly equal flexible space */
             aspect-ratio: 1 / 1;
-            max-width: 400px;
-            max-height: 400px;
+            width: 100%;
+            min-width: 0;
             object-fit: cover;
             border: 2px solid rgba(255, 255, 255, 0.05);
             transition: transform 0.4s ease, filter 0.4s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         }
 
         .square-grid .square-img:hover {
@@ -249,28 +256,34 @@
             z-index: 2;
         }
 
-        /* Stop them from becoming too small on mobile, switch to scroll or stacked if necessary,
-           but prompt requested "single line", so we enforce a row and allow scrolling or shrinking */
+        /* Stop them from becoming too small on mobile. 
+           Keep them on a single horizontal line that allows scrolling horizontally. */
         @media (max-width: 800px) {
             .square-grid {
                 overflow-x: auto;
                 justify-content: flex-start;
+                /* Pad bottom to prevent hover clip */
+                padding-bottom: 2vw;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+                /* Firefox */
+            }
+
+            .square-grid::-webkit-scrollbar {
+                display: none;
+                /* WebKit */
             }
 
             .square-grid .square-img {
-                flex: 0 0 calc(100vw / 2);
-                /* 2 per view on small screens */
-                max-width: calc(100vw / 2);
-                max-height: calc(100vw / 2);
+                /* On small screens, shrink them down up to 2 items visible at a time */
+                flex: 0 0 calc(50vw - 3vw);
             }
         }
 
         @media (max-width: 500px) {
             .square-grid .square-img {
-                flex: 0 0 100vw;
-                /* 1 per view on very small screens */
-                max-width: 100vw;
-                max-height: 100vw;
+                /* On very small screen, 1 large image with a slight peek of next one */
+                flex: 0 0 calc(85vw - 3vw);
             }
         }
     </style>
@@ -715,7 +728,7 @@
                     </div>
                 </div>
                 <div class="footer-bottom">
-                    <p>&copy; 2025 Paaru Studio. All rights reserved.</p>
+                    <p>&copy; 2026 Paaru Studio. All rights reserved.</p>
                     <div class="footer-meta">
                         <a href="#top" class="back-to-top">↑</a>
                     </div>
