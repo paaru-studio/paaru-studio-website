@@ -9521,6 +9521,42 @@ html {
     transform: scale(1.05);
 }
 
+/* ─── AI Services page: 1x5 portrait reels row ─── */
+.ai-reels-row {
+    grid-template-columns: repeat(5, 1fr) !important;
+    gap: 30px !important;
+}
+
+/* Placeholder reel slots – dashed outline so "Coming Soon" looks intentional */
+.ai-reels-row .reel .video-embed .video-poster[style*="linear-gradient"] {
+    border: 2px dashed rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: default;
+    opacity: 0.6;
+}
+
+@media (max-width: 1200px) {
+    .ai-reels-row {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .ai-reels-row {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .ai-reels-row {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+
 /* ============================================================
    BLOG STYLES
    ============================================================ */

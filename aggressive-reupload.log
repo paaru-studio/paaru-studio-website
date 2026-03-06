@@ -1,0 +1,123 @@
+/Users/paarustudio_editing/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+WARNING: You are using pip version 21.2.4; however, version 25.3 is available.
+You should consider upgrading via the '/Library/Developer/CommandLineTools/usr/bin/python3 -m pip install --upgrade pip' command.
+WARNING: You are using pip version 21.2.4; however, version 25.3 is available.
+You should consider upgrading via the '/Library/Developer/CommandLineTools/usr/bin/python3 -m pip install --upgrade pip' command.
+[AUTO-INSTALL] Installing python-dotenv...
+[AUTO-INSTALL] Installing Pillow...
+[AGGRESSIVE REUPLOAD] Starting...
+Found 19 failed/skipped items to reprocess
+
+
+[1] Fashion_img_05.jpg (21.01MB)
+  [COMPRESS] Fashion_img_05.jpg is 21.01MB, compressing...
+  ✓ Compressed to 3.03MB (quality=85, scale=100%)
+  ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764928773/paaru-studio/Fashion_img_05.jpg
+
+[2] Podcast.jpg (10.24MB)
+  [COMPRESS] Podcast.jpg is 10.24MB, compressing...
+  ✓ Compressed to 2.62MB (quality=85, scale=100%)
+  ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764929207/paaru-studio/Podcast.jpg
+
+[3] Showreel_Paaru Studio 01.mp4 (0.00MB)
+  [VIDEO] Uploading Showreel_Paaru Studio 01.mp4 with resource_type='video'...
+  ✗ Error: Unsupported video format or file
+  ✗ Reupload failed
+
+[3] Web Bg Curve 4k .png (0.64MB)
+  [UPLOAD] Uploading Web Bg Curve 4k .png...
+  ✗ Error: public_id must not end with a whitespace.
+  ✗ Reupload failed
+
+[3] cataloge_creation_banner.jpg (19.63MB)
+  [COMPRESS] cataloge_creation_banner.jpg is 19.63MB, compressing...
+  ✓ Compressed to 4.61MB (quality=85, scale=100%)
+  ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764929210/paaru-studio/cataloge_creation_banner.jpg
+
+[4] dmarketing_banner.jpg (16.78MB)
+  [COMPRESS] dmarketing_banner.jpg is 16.78MB, compressing...
+  ✓ Compressed to 4.15MB (quality=85, scale=100%)
+  ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764929215/paaru-studio/dmarketing_banner.jpg
+
+[5] hero-bg.mp4 (0.00MB)
+  [VIDEO] Uploading hero-bg.mp4 with resource_type='video'...
+  ✗ Error: Unsupported video format or file
+  ✗ Reupload failed
+
+[5] im_1.jpg (17.27MB)
+  [COMPRESS] im_1.jpg is 17.27MB, compressing...
+  ✓ Compressed to 2.35MB (quality=85, scale=100%)
+  ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764929219/paaru-studio/im_1.jpg
+
+[6] image_retouch_banner.jpg (13.18MB)
+  [COMPRESS] image_retouch_banner.jpg is 13.18MB, compressing...
+  ✓ Compressed to 3.15MB (quality=85, scale=100%)
+  ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764929222/paaru-studio/image_retouch_banner.jpg
+
+[7] japfa_challenge.jpg (12.12MB)
+  [COMPRESS] japfa_challenge.jpg is 12.12MB, compressing...
+  ✓ Compressed to 2.97MB (quality=85, scale=100%)
+  ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764929225/paaru-studio/japfa_challenge.jpg
+
+[8] lifestyle_shoot_banner.jpg (18.54MB)
+  [COMPRESS] lifestyle_shoot_banner.jpg is 18.54MB, compressing...
+  ✓ Compressed to 4.74MB (quality=85, scale=100%)
+  ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764929231/paaru-studio/lifestyle_shoot_banner.jpg
+
+[9] pm_1.jpg (13.09MB)
+  [COMPRESS] pm_1.jpg is 13.09MB, compressing...
+  ✓ Compressed to 2.90MB (quality=85, scale=100%)
+  ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764929235/paaru-studio/pm_1.jpg
+
+[10] DSC00084.png (46.85MB)
+  [COMPRESS] DSC00084.png is 46.85MB, compressing...
+  ✓ Compressed to 8.72MB (quality=85, scale=100%)
+  ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764929253/paaru-studio/DSC00084.png
+
+[11] DSC00172-Edit.png (42.58MB)
+  [COMPRESS] DSC00172-Edit.png is 42.58MB, compressing...
+  ✓ Compressed to 5.70MB (quality=85, scale=100%)
+  ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764929265/paaru-studio/DSC00172-Edit.png
+
+[12] product_shoot_banner.jpg (28.17MB)
+  [COMPRESS] product_shoot_banner.jpg is 28.17MB, compressing...
+  ✓ Compressed to 3.72MB (quality=85, scale=100%)
+  ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764929268/paaru-studio/product_shoot_banner.jpg
+
+[13] shopify_meeting.jpg (13.09MB)
+  [COMPRESS] shopify_meeting.jpg is 13.09MB, compressing...
+  ✓ Compressed to 2.90MB (quality=85, scale=100%)
+  ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764929271/paaru-studio/shopify_meeting.jpg
+
+[14] sm_1.jpg (16.78MB)
+  [COMPRESS] sm_1.jpg is 16.78MB, compressing...
+  ✓ Compressed to 4.15MB (quality=85, scale=100%)
+  ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764929274/paaru-studio/sm_1.jpg
+
+[15] video_pro.jpg (19.87MB)
+  [COMPRESS] video_pro.jpg is 19.87MB, compressing...
+  ✓ Compressed to 4.94MB (quality=85, scale=100%)
+  ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764929277/paaru-studio/video_pro.jpg
+
+[16] youtube_social_media.jpg (15.90MB)
+  [COMPRESS] youtube_social_media.jpg is 15.90MB, compressing...
+  ✓ Compressed to 2.83MB (quality=85, scale=100%)
+  ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764929280/paaru-studio/youtube_social_media.jpg
+
+[SAVE] Updated upload log with 16 successful reupload(s)
+
+[REPLACE] Re-running URL replacements...
+
+Replacement complete
+Files scanned: 29
+Files changed: 8
+ - index.html
+ - case-study-japfa.html
+ - performance-marketing.html
+ - influencer-marketing.html
+ - social-media-marketing.html
+ - ecommerce.html
+ - services.html
+ - portfolio.html
+

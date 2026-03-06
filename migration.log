@@ -1,0 +1,408 @@
+/Users/paarustudio_editing/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+🚀 Starting Cloudinary Migration
+
+✓ Cloud Name: dvjveceob
+✓ API Key: 6388899829...
+
+Found 130 files to migrate
+
+📤 Uploading: BTL_banner.jpg
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927480/paaru-studio/BTL_banner.jpg
+   [1/130]
+📤 Uploading: CK_CS_01.png
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927481/paaru-studio/CK_CS_01.png
+   [2/130]
+📤 Uploading: CK_CS_02.png
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927484/paaru-studio/CK_CS_02.png
+   [3/130]
+📤 Uploading: Cart Logo.png
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927485/paaru-studio/Cart%20Logo.png
+   [4/130]
+📤 Uploading: Fashion_img_01.jpg
+   ✗ File too large (10.2MB, max 10MB)
+   [5/130]
+📤 Uploading: Fashion_img_02.jpg
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927495/paaru-studio/Fashion_img_02.jpg
+   [6/130]
+📤 Uploading: Fashion_img_03.jpg
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927497/paaru-studio/Fashion_img_03.jpg
+   [7/130]
+📤 Uploading: Fashion_img_04.jpg
+   ✗ File too large (13.9MB, max 10MB)
+   [8/130]
+📤 Uploading: Fashion_img_05.jpg
+   ✗ File too large (21.0MB, max 10MB)
+   [9/130]
+📤 Uploading: Giva_CS_01.png
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927525/paaru-studio/Giva_CS_01.png
+   [10/130]
+📤 Uploading: Giva_CS_02.png
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927526/paaru-studio/Giva_CS_02.png
+   [11/130]
+📤 Uploading: Globe.png
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927527/paaru-studio/Globe.png
+   [12/130]
+📤 Uploading: Image 01.jpeg
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927529/paaru-studio/Image%2001.jpg
+   [13/130]
+📤 Uploading: Influencer Network Pic.png
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927530/paaru-studio/Influencer%20Network%20Pic.png
+   [14/130]
+📤 Uploading: Logo_Port_01.jpg
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927533/paaru-studio/Logo_Port_01.jpg
+   [15/130]
+📤 Uploading: Logo_Port_02.jpg
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927536/paaru-studio/Logo_Port_02.jpg
+   [16/130]
+📤 Uploading: Logo_Port_03.jpg
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927538/paaru-studio/Logo_Port_03.jpg
+   [17/130]
+📤 Uploading: Logo_Port_04.jpg
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927539/paaru-studio/Logo_Port_04.jpg
+   [18/130]
+📤 Uploading: Logo_Port_05.jpg
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927541/paaru-studio/Logo_Port_05.jpg
+   [19/130]
+📤 Uploading: Logo_Port_06.jpg
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927542/paaru-studio/Logo_Port_06.jpg
+   [20/130]
+📤 Uploading: Logo_Port_07.jpg
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927543/paaru-studio/Logo_Port_07.jpg
+   [21/130]
+📤 Uploading: Logo_Port_08.jpg
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927544/paaru-studio/Logo_Port_08.jpg
+   [22/130]
+📤 Uploading: Logos/ChatGPT Image Aug 21, 2025 at 01_00_18 PM.png
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927545/paaru-studio/ChatGPT%20Image%20Aug%2021%2C%202025%20at%2001_00_18%20PM.png
+   [23/130]
+📤 Uploading: Logos/ChatGPT Image Aug 21, 2025 at 01_51_46 PM.png
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927546/paaru-studio/ChatGPT%20Image%20Aug%2021%2C%202025%20at%2001_51_46%20PM.png
+   [24/130]
+📤 Uploading: Logos/ChatGPT Image Aug 21, 2025 at 02_14_37 PM.png
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927547/paaru-studio/ChatGPT%20Image%20Aug%2021%2C%202025%20at%2002_14_37%20PM.png
+   [25/130]
+📤 Uploading: Logos/ChatGPT Image Aug 21, 2025 at 12_46_51 PM.png
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927550/paaru-studio/ChatGPT%20Image%20Aug%2021%2C%202025%20at%2012_46_51%20PM.png
+   [26/130]
+📤 Uploading: Logos/ChatGPT Image Aug 21, 2025 at 12_52_24 PM.png
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927551/paaru-studio/ChatGPT%20Image%20Aug%2021%2C%202025%20at%2012_52_24%20PM.png
+   [27/130]
+📤 Uploading: Logos/ChatGPT Image Aug 22, 2025 at 01_00_39 PM.png
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927553/paaru-studio/ChatGPT%20Image%20Aug%2022%2C%202025%20at%2001_00_39%20PM.png
+   [28/130]
+📤 Uploading: Logos/ChatGPT Image Aug 22, 2025 at 12_00_42 PM.png
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927554/paaru-studio/ChatGPT%20Image%20Aug%2022%2C%202025%20at%2012_00_42%20PM.png
+   [29/130]
+📤 Uploading: Logos/ChatGPT Image Aug 22, 2025 at 12_16_18 PM.png
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927557/paaru-studio/ChatGPT%20Image%20Aug%2022%2C%202025%20at%2012_16_18%20PM.png
+   [30/130]
+📤 Uploading: Logos/ChatGPT Image Aug 22, 2025 at 12_21_11 PM.png
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927559/paaru-studio/ChatGPT%20Image%20Aug%2022%2C%202025%20at%2012_21_11%20PM.png
+   [31/130]
+📤 Uploading: Logos/ChatGPT Image Aug 22, 2025 at 12_55_36 PM.png
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927560/paaru-studio/ChatGPT%20Image%20Aug%2022%2C%202025%20at%2012_55_36%20PM.png
+   [32/130]
+📤 Uploading: Logos/ChatGPT Image Aug 22, 2025 at 12_57_54 PM.png
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927561/paaru-studio/ChatGPT%20Image%20Aug%2022%2C%202025%20at%2012_57_54%20PM.png
+   [33/130]
+📤 Uploading: Logos/ChatGPT Image Aug 26, 2025 at 11_29_17 AM.png
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927564/paaru-studio/ChatGPT%20Image%20Aug%2026%2C%202025%20at%2011_29_17%20AM.png
+   [34/130]
+📤 Uploading: Logos/Logo_1.png
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927566/paaru-studio/Logo_1.png
+   [35/130]
+📤 Uploading: Logos/Logo_2.png
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927569/paaru-studio/Logo_2.png
+   [36/130]
+📤 Uploading: Logos/Logo_3.png
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927570/paaru-studio/Logo_3.png
+   [37/130]
+📤 Uploading: OOH_banner.jpg
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927572/paaru-studio/OOH_banner.jpg
+   [38/130]
+📤 Uploading: Podcast.jpg
+   ✗ File too large (10.2MB, max 10MB)
+   [39/130]
+📤 Uploading: Shopify_Banner.jpg
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927573/paaru-studio/Shopify_Banner.jpg
+   [40/130]
+📤 Uploading: Showreel_Paaru Studio 01.mp4
+   ✗ Error: Invalid image file
+   [41/130]
+📤 Uploading: Web Bg Curve 4k .png
+   ✗ Error: public_id must not end with a whitespace.
+   [42/130]
+📤 Uploading: Website Bg Curve.png
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927575/paaru-studio/Website%20Bg%20Curve.png
+   [43/130]
+📤 Uploading: about_us_bg.JPG
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927576/paaru-studio/about_us_bg.jpg
+   [44/130]
+📤 Uploading: aplus_content_banner.jpg
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927582/paaru-studio/aplus_content_banner.jpg
+   [45/130]
+📤 Uploading: cataloge_creation_banner.jpg
+   ✗ File too large (19.6MB, max 10MB)
+   [46/130]
+📤 Uploading: ck-banner.png
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927584/paaru-studio/ck-banner.png
+   [47/130]
+📤 Uploading: creative_design.jpg
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927587/paaru-studio/creative_design.jpg
+   [48/130]
+📤 Uploading: dmarketing_banner.jpg
+   ✗ File too large (16.8MB, max 10MB)
+   [49/130]
+📤 Uploading: dooh_ad_1.jpg
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927588/paaru-studio/dooh_ad_1.jpg
+   [50/130]
+📤 Uploading: dooh_ad_2.jpg
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927590/paaru-studio/dooh_ad_2.jpg
+   [51/130]
+📤 Uploading: dooh_ad_3.jpg
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927592/paaru-studio/dooh_ad_3.jpg
+   [52/130]
+📤 Uploading: dooh_coworking_1.png
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927593/paaru-studio/dooh_coworking_1.png
+   [53/130]
+📤 Uploading: dooh_coworking_2.png
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927594/paaru-studio/dooh_coworking_2.png
+   [54/130]
+📤 Uploading: dooh_coworking_3.png
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927595/paaru-studio/dooh_coworking_3.png
+   [55/130]
+📤 Uploading: dooh_society_1.png
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927596/paaru-studio/dooh_society_1.png
+   [56/130]
+📤 Uploading: dooh_society_2.png
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927598/paaru-studio/dooh_society_2.png
+   [57/130]
+📤 Uploading: dooh_society_3.png
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927600/paaru-studio/dooh_society_3.png
+   [58/130]
+📤 Uploading: e_commerce.jpg
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927607/paaru-studio/e_commerce.jpg
+   [59/130]
+📤 Uploading: giva-banner.png
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927608/paaru-studio/giva-banner.png
+   [60/130]
+📤 Uploading: google Ads Video01.png
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927609/paaru-studio/google%20Ads%20Video01.png
+   [61/130]
+📤 Uploading: google performance ads01.png
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927610/paaru-studio/google%20performance%20ads01.png
+   [62/130]
+📤 Uploading: google_ads_logo.png
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927610/paaru-studio/google_ads_logo.png
+   [63/130]
+📤 Uploading: hero-bg.mp4
+   ✗ Error: Invalid image file
+   [64/130]
+📤 Uploading: im_1.jpg
+   ✗ File too large (17.3MB, max 10MB)
+   [65/130]
+📤 Uploading: image_retouch_banner.jpg
+   ✗ File too large (13.2MB, max 10MB)
+   [66/130]
+📤 Uploading: influencer_1.png
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927612/paaru-studio/influencer_1.png
+   [67/130]
+📤 Uploading: influencer_10.png
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927613/paaru-studio/influencer_10.png
+   [68/130]
+📤 Uploading: influencer_11.png
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927614/paaru-studio/influencer_11.png
+   [69/130]
+📤 Uploading: influencer_12.png
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927617/paaru-studio/influencer_12.png
+   [70/130]
+📤 Uploading: influencer_2.png
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927618/paaru-studio/influencer_2.png
+   [71/130]
+📤 Uploading: influencer_3.png
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927619/paaru-studio/influencer_3.png
+   [72/130]
+📤 Uploading: influencer_4.png
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927620/paaru-studio/influencer_4.png
+   [73/130]
+📤 Uploading: influencer_5.png
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927621/paaru-studio/influencer_5.png
+   [74/130]
+📤 Uploading: influencer_6.png
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927623/paaru-studio/influencer_6.png
+   [75/130]
+📤 Uploading: influencer_7.png
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927631/paaru-studio/influencer_7.png
+   [76/130]
+📤 Uploading: influencer_8.png
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927632/paaru-studio/influencer_8.png
+   [77/130]
+📤 Uploading: influencer_9.png
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927633/paaru-studio/influencer_9.png
+   [78/130]
+📤 Uploading: infographic_design_banner.jpg
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927637/paaru-studio/infographic_design_banner.jpg
+   [79/130]
+📤 Uploading: ipl_billboard_1.png
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927639/paaru-studio/ipl_billboard_1.png
+   [80/130]
+📤 Uploading: ipl_billboard_2.png
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927641/paaru-studio/ipl_billboard_2.png
+   [81/130]
+📤 Uploading: ipl_dframe_1.png
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927642/paaru-studio/ipl_dframe_1.png
+   [82/130]
+📤 Uploading: ipl_lband_1.png
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927643/paaru-studio/ipl_lband_1.png
+   [83/130]
+📤 Uploading: ipl_lband_2.png
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927644/paaru-studio/ipl_lband_2.png
+   [84/130]
+📤 Uploading: ipl_sportstab_1.png
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927645/paaru-studio/ipl_sportstab_1.png
+   [85/130]
+📤 Uploading: itc_logo.png
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927646/paaru-studio/itc_logo.png
+   [86/130]
+📤 Uploading: japfa_challenge.jpg
+   ✗ File too large (12.1MB, max 10MB)
+   [87/130]
+📤 Uploading: japfa_hero.png
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927647/paaru-studio/japfa_hero.png
+   [88/130]
+📤 Uploading: japfa_strategy.png
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927648/paaru-studio/japfa_strategy.png
+   [89/130]
+📤 Uploading: lifestyle_shoot_banner.jpg
+   ✗ File too large (18.5MB, max 10MB)
+   [90/130]
+📤 Uploading: logo.png
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927649/paaru-studio/logo.png
+   [91/130]
+📤 Uploading: marriott_logo.png
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927650/paaru-studio/marriott_logo.png
+   [92/130]
+📤 Uploading: media_offerings_bg.jpg
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927650/paaru-studio/media_offerings_bg.jpg
+   [93/130]
+📤 Uploading: meta_ads_logo.png
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927651/paaru-studio/meta_ads_logo.png
+   [94/130]
+📤 Uploading: metro_ad_1.jpg
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927652/paaru-studio/metro_ad_1.jpg
+   [95/130]
+📤 Uploading: metro_ad_2.jpg
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927653/paaru-studio/metro_ad_2.jpg
+   [96/130]
+📤 Uploading: metro_ad_3.jpg
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927653/paaru-studio/metro_ad_3.jpg
+   [97/130]
+📤 Uploading: pm_1.jpg
+   ✗ File too large (13.1MB, max 10MB)
+   [98/130]
+📤 Uploading: portfolio_pics/01.jpeg
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927695/paaru-studio/01.jpg
+   [99/130]
+📤 Uploading: portfolio_pics/01.jpg
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927695/paaru-studio/01.jpg
+   [100/130]
+📤 Uploading: portfolio_pics/02.jpg
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927656/paaru-studio/02.jpg
+   [101/130]
+📤 Uploading: portfolio_pics/03 (1).jpeg
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927656/paaru-studio/03%20%281%29.jpg
+   [102/130]
+📤 Uploading: portfolio_pics/03.jpg
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927657/paaru-studio/03.jpg
+   [103/130]
+📤 Uploading: portfolio_pics/04 (1).jpeg
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927658/paaru-studio/04%20%281%29.jpg
+   [104/130]
+📤 Uploading: portfolio_pics/04.jpg
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927659/paaru-studio/04.jpg
+   [105/130]
+📤 Uploading: portfolio_pics/06.jpeg
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927659/paaru-studio/06.jpg
+   [106/130]
+📤 Uploading: portfolio_pics/08.jpeg
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927660/paaru-studio/08.jpg
+   [107/130]
+📤 Uploading: portfolio_pics/DAS00810.jpg
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927662/paaru-studio/DAS00810.jpg
+   [108/130]
+📤 Uploading: portfolio_pics/DSC00084.png
+   ✗ File too large (46.9MB, max 10MB)
+   [109/130]
+📤 Uploading: portfolio_pics/DSC00172-Edit.png
+   ✗ File too large (42.6MB, max 10MB)
+   [110/130]
+📤 Uploading: portfolio_pics/IMG_4742.PNG
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927663/paaru-studio/IMG_4742.png
+   [111/130]
+📤 Uploading: portfolio_pics/IMG_4748.PNG
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927665/paaru-studio/IMG_4748.png
+   [112/130]
+📤 Uploading: portfolio_pics/IMG_4749.PNG
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927667/paaru-studio/IMG_4749.png
+   [113/130]
+📤 Uploading: portfolio_pics/IMG_4752.PNG
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927668/paaru-studio/IMG_4752.png
+   [114/130]
+📤 Uploading: product_shoot_banner.jpg
+   ✗ File too large (28.2MB, max 10MB)
+   [115/130]
+📤 Uploading: product_showcase_banner.jpg
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927670/paaru-studio/product_showcase_banner.jpg
+   [116/130]
+📤 Uploading: shopify_img.png
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927671/paaru-studio/shopify_img.png
+   [117/130]
+📤 Uploading: shopify_meeting.jpg
+   ✗ File too large (13.1MB, max 10MB)
+   [118/130]
+📤 Uploading: sm_1.jpg
+   ✗ File too large (16.8MB, max 10MB)
+   [119/130]
+📤 Uploading: social media_01.jpg
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927673/paaru-studio/social%20media_01.jpg
+   [120/130]
+📤 Uploading: social media_02.jpg
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927673/paaru-studio/social%20media_02.jpg
+   [121/130]
+📤 Uploading: social media_03.jpg
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927674/paaru-studio/social%20media_03.jpg
+   [122/130]
+📤 Uploading: social media_04.jpg
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927677/paaru-studio/social%20media_04.jpg
+   [123/130]
+📤 Uploading: social media_05.jpg
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927680/paaru-studio/social%20media_05.jpg
+   [124/130]
+📤 Uploading: toyota_logo.png
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927681/paaru-studio/toyota_logo.png
+   [125/130]
+📤 Uploading: tv_com.jpg
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927684/paaru-studio/tv_com.jpg
+   [126/130]
+📤 Uploading: unboxing_video_banner.jpg
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927687/paaru-studio/unboxing_video_banner.jpg
+   [127/130]
+📤 Uploading: video_pro.jpg
+   ✗ File too large (19.9MB, max 10MB)
+   [128/130]
+📤 Uploading: web page bg 4K.png
+   ✓ Success: https://res.cloudinary.com/dvjveceob/image/upload/v1764927688/paaru-studio/web%20page%20bg%204K.png
+   [129/130]
+📤 Uploading: youtube_social_media.jpg
+   ✗ File too large (15.9MB, max 10MB)
+   [130/130]
+
+✅ Migration complete!
+📄 Log saved to: cloudinary-upload-log.json
+
+📊 Summary:
+   ✓ Successful: 109
+   ✗ Failed: 3
+   ⊘ Skipped (too large): 18

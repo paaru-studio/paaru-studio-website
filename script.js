@@ -12,22 +12,25 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Navbar scroll effect with compression and color change
 let lastScroll = 0;
 const navbar = document.querySelector('.navbar');
+let scrollTicking = false;
 
 window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-
-    // Add 'scrolled' class when scrolled down more than 50px
-    if (currentScroll > 50) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
+    if (!scrollTicking) {
+        window.requestAnimationFrame(() => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+            lastScroll = currentScroll;
+            scrollTicking = false;
+        });
+        scrollTicking = true;
     }
-
-    lastScroll = currentScroll;
-});
+}, { passive: true });
 
 // Intersection Observer for fade-in animations
 const observerOptions = {
@@ -129,27 +132,41 @@ if (mobileMenuBtn && navbar) {
     });
 }
 
-// Add parallax effect to hero section
+// Add parallax effect to hero section (Throttled)
+let heroTicking = false;
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
-    const heroContent = document.querySelector('.hero-content');
+    if (scrolled > window.innerHeight) return;
 
-    if (heroContent && scrolled < window.innerHeight) {
-        heroContent.style.transform = `translateY(${scrolled * 0.3}px)`;
-        heroContent.style.opacity = 1 - (scrolled / 800);
+    if (!heroTicking) {
+        window.requestAnimationFrame(() => {
+            const heroContent = document.querySelector('.hero-content');
+            if (heroContent) {
+                heroContent.style.transform = `translateY(${scrolled * 0.3}px)`;
+                heroContent.style.opacity = 1 - (scrolled / 800);
+            }
+            heroTicking = false;
+        });
+        heroTicking = true;
     }
-});
+}, { passive: true });
 
-// Dynamic gradient effect on hero
+// Dynamic gradient effect on hero (Throttled)
+let mouseTicking = false;
 document.addEventListener('mousemove', (e) => {
-    const hero = document.querySelector('.hero');
-    if (hero) {
-        const x = e.clientX / window.innerWidth;
-        const y = e.clientY / window.innerHeight;
-
-        hero.style.background = `radial-gradient(circle at ${x * 100}% ${y * 100}%, rgba(99, 102, 241, 0.05), transparent)`;
+    if (!mouseTicking) {
+        window.requestAnimationFrame(() => {
+            const hero = document.querySelector('.hero');
+            if (hero) {
+                const x = e.clientX / window.innerWidth;
+                const y = e.clientY / window.innerHeight;
+                hero.style.background = `radial-gradient(circle at ${x * 100}% ${y * 100}%, rgba(99, 102, 241, 0.05), transparent)`;
+            }
+            mouseTicking = false;
+        });
+        mouseTicking = true;
     }
-});
+}, { passive: true });
 
 // Add loading animation
 window.addEventListener('load', () => {
