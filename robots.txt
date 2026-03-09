@@ -34,3 +34,4 @@ Allow: /
 
 # Sitemap location
 Sitemap: https://paarustudio.com/sitemap.xml
+Sitemap: https://paarustudio.com/video-sitemap.xml
