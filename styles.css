@@ -6144,7 +6144,7 @@ html {
     padding-top: 200px !important;
     position: relative;
     overflow: hidden;
-    background: url('ecommerce_hero_bg.jpg') center center / cover no-repeat !important;
+    background: url('ecommerce_hero_bg.webp') center center / cover no-repeat !important;
     text-align: center;
     z-index: 500;
 }
@@ -6182,7 +6182,7 @@ html {
 
 /* Ecommerce page must override the dots pattern set above — placed AFTER the services-page rule */
 .services-page.ecommerce-page .page-hero {
-    background: url('ecommerce_hero_bg.jpg') center center / cover no-repeat !important;
+    background: url('ecommerce_hero_bg.webp') center center / cover no-repeat !important;
 }
 
 
@@ -9417,7 +9417,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url('ai_hero_image.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url('ai_hero_image_optimized.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

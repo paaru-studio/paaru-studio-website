@@ -27,18 +27,23 @@
         content="Paaru Studio is a Bengaluru (Bangalore)‑based video production company and creative ad agency with 11+ years of experience in TV commercials, digital films, BTL activations, OOH and performance‑driven campaigns for brands.">
     <meta property="twitter:image" content="https://paarustudio.com/logo.webp">
 
-        <link rel="dns-prefetch" href="https://www.youtube.com">
+    <link rel="dns-prefetch" href="https://www.youtube.com">
     <link rel="dns-prefetch" href="https://i.ytimg.com">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<link rel="preload" href="fonts.css" as="style" onload="this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="fonts.css"></noscript>
+    <link rel="preload" href="fonts.css" as="style" onload="this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="fonts.css">
+    </noscript>
     <link rel="preconnect" href="https://www.youtube.com">
     <link rel="preconnect" href="https://i.ytimg.com">
     <link rel="preconnect" href="https://www.instagram.com">
     <link rel="preload" href="styles.min.css" as="style">
+    <link rel="preload" href="hero_poster.jpg" as="image">
     <link rel="preload" href="logo.webp" as="image">
     <link rel="stylesheet" href="styles.min.css">
-    <link rel="stylesheet" href="popup-form.css">
+    <link rel="preload" href="popup-form.css" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="preload" href="popup-form.css" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="popup-form.css"></noscript></noscript>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -194,8 +199,7 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-poster"
-            style="background-image: url('https://i.ytimg.com/vi/1KmBeKsYq_0/maxresdefault.jpg'); display: block;">
+        <div class="hero-poster" style="background-image: url('hero_poster.jpg'); display: block;">
         </div>
         <iframe class="hero-bg-iframe"
             data-src="https://www.youtube.com/embed/1KmBeKsYq_0?autoplay=1&mute=1&controls=0&loop=1&playlist=1KmBeKsYq_0&playsinline=1&showinfo=0&rel=0&modestbranding=1&disablekb=1&iv_load_policy=3&fs=0"
@@ -428,7 +432,7 @@
                                     <source srcset="Image 01.webp" type="image/webp">
                                     <picture>
                                         <source srcset="Image 01.webp" type="image/webp">
-                                        <img loading="lazy" decoding="async" src="Image 01.jpeg" alt="Gallery image 1"
+                                        <img loading="lazy" decoding="async" src="Image 01.webp" alt="Gallery image 1"
                                             width="400" height="267">
                                     </picture>
                                 </picture>
@@ -442,7 +446,7 @@
                                     <source srcset="portfolio_pics/01.webp" type="image/webp">
                                     <picture>
                                         <source srcset="portfolio_pics/01.webp" type="image/webp">
-                                        <img loading="lazy" decoding="async" src="portfolio_pics/01.jpg"
+                                        <img loading="lazy" decoding="async" src="portfolio_pics/01.webp"
                                             alt="Gallery image 16" width="400" height="400">
                                     </picture>
                                 </picture>
@@ -456,7 +460,7 @@
                                     <source srcset="portfolio_pics/02.webp" type="image/webp">
                                     <picture>
                                         <source srcset="portfolio_pics/02.webp" type="image/webp">
-                                        <img loading="lazy" decoding="async" src="portfolio_pics/02.jpg"
+                                        <img loading="lazy" decoding="async" src="portfolio_pics/02.webp"
                                             alt="Gallery image 17" width="400" height="400">
                                     </picture>
                                 </picture>
@@ -470,7 +474,7 @@
                                     <source srcset="portfolio_pics/03.webp" type="image/webp">
                                     <picture>
                                         <source srcset="portfolio_pics/03.webp" type="image/webp">
-                                        <img loading="lazy" decoding="async" src="portfolio_pics/03.jpg"
+                                        <img loading="lazy" decoding="async" src="portfolio_pics/03.webp"
                                             alt="Gallery image 15" width="400" height="400">
                                     </picture>
                                 </picture>
@@ -484,7 +488,7 @@
                                     <source srcset="portfolio_pics/04.webp" type="image/webp">
                                     <picture>
                                         <source srcset="portfolio_pics/04.webp" type="image/webp">
-                                        <img loading="lazy" decoding="async" src="portfolio_pics/04.jpg"
+                                        <img loading="lazy" decoding="async" src="portfolio_pics/04.webp"
                                             alt="Gallery image 18" width="400" height="400">
                                     </picture>
                                 </picture>
@@ -498,7 +502,7 @@
                                     <source srcset="portfolio_pics/01.webp" type="image/webp">
                                     <picture>
                                         <source srcset="portfolio_pics/01.webp" type="image/webp">
-                                        <img loading="lazy" decoding="async" src="portfolio_pics/01.jpeg"
+                                        <img loading="lazy" decoding="async" src="portfolio_pics/01.webp"
                                             alt="Gallery image 2" width="400" height="400">
                                     </picture>
                                 </picture>
@@ -512,7 +516,7 @@
                                     <source srcset="portfolio_pics/03 (1).webp" type="image/webp">
                                     <picture>
                                         <source srcset="portfolio_pics/03 (1).webp" type="image/webp">
-                                        <img loading="lazy" decoding="async" src="portfolio_pics/03 (1).jpeg"
+                                        <img loading="lazy" decoding="async" src="portfolio_pics/03 (1).webp"
                                             alt="Gallery image 3" width="400" height="400">
                                     </picture>
                                 </picture>
@@ -526,7 +530,7 @@
                                     <source srcset="portfolio_pics/04 (1).webp" type="image/webp">
                                     <picture>
                                         <source srcset="portfolio_pics/04 (1).webp" type="image/webp">
-                                        <img loading="lazy" decoding="async" src="portfolio_pics/04 (1).jpeg"
+                                        <img loading="lazy" decoding="async" src="portfolio_pics/04 (1).webp"
                                             alt="Gallery image 4" width="400" height="400">
                                     </picture>
                                 </picture>
@@ -540,7 +544,7 @@
                                     <source srcset="portfolio_pics/06.webp" type="image/webp">
                                     <picture>
                                         <source srcset="portfolio_pics/06.webp" type="image/webp">
-                                        <img loading="lazy" decoding="async" src="portfolio_pics/06.jpeg"
+                                        <img loading="lazy" decoding="async" src="portfolio_pics/06.webp"
                                             alt="Gallery image 5" width="400" height="400">
                                     </picture>
                                 </picture>
@@ -554,7 +558,7 @@
                                     <source srcset="portfolio_pics/08.webp" type="image/webp">
                                     <picture>
                                         <source srcset="portfolio_pics/08.webp" type="image/webp">
-                                        <img loading="lazy" decoding="async" src="portfolio_pics/08.jpeg"
+                                        <img loading="lazy" decoding="async" src="portfolio_pics/08.webp"
                                             alt="Gallery image 6" width="400" height="400">
                                     </picture>
                                 </picture>
@@ -568,7 +572,7 @@
                                     <source srcset="portfolio_pics/DAS00810.webp" type="image/webp">
                                     <picture>
                                         <source srcset="portfolio_pics/DAS00810.webp" type="image/webp">
-                                        <img loading="lazy" decoding="async" src="portfolio_pics/DAS00810.jpg"
+                                        <img loading="lazy" decoding="async" src="portfolio_pics/DAS00810.webp"
                                             alt="Gallery image 7" width="400" height="400">
                                     </picture>
                                 </picture>
@@ -580,7 +584,7 @@
                             <picture>
                                 <picture>
                                     <source srcset="portfolio_pics/DSC00084_optimized.webp" type="image/webp">
-                                    <img loading="lazy" decoding="async" src="portfolio_pics/DSC00084_optimized.jpg"
+                                    <img loading="lazy" decoding="async" src="portfolio_pics/DSC00084_optimized.webp"
                                         alt="Gallery image 8" decoding="async" width="400" height="400">
                                 </picture>
                             </picture>
@@ -591,7 +595,7 @@
                             <picture>
                                 <picture>
                                     <source srcset="portfolio_pics/DSC00172_optimized.webp" type="image/webp">
-                                    <img loading="lazy" decoding="async" src="portfolio_pics/DSC00172_optimized.jpg"
+                                    <img loading="lazy" decoding="async" src="portfolio_pics/DSC00172_optimized.webp"
                                         alt="Gallery image 9" decoding="async" width="400" height="400">
                                 </picture>
                             </picture>
@@ -632,7 +636,7 @@
                                     <source srcset="portfolio_pics/03 (1).webp" type="image/webp">
                                     <picture>
                                         <source srcset="portfolio_pics/03 (1).webp" type="image/webp">
-                                        <img loading="lazy" decoding="async" src="portfolio_pics/03 (1).jpeg"
+                                        <img loading="lazy" decoding="async" src="portfolio_pics/03 (1).webp"
                                             alt="Gallery image 14" width="400" height="400">
                                     </picture>
                                 </picture>

@@ -38,7 +38,8 @@
     <link rel="preload" href="styles.min.css" as="style">
     <link rel="preload" href="logo.webp" as="image">
     <link rel="stylesheet" href="styles.min.css">
-    <link rel="stylesheet" href="popup-form.css">
+    <link rel="preload" href="popup-form.css" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="popup-form.css"></noscript>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",

@@ -40,7 +40,8 @@
     <link rel="preload" href="styles.min.css" as="style">
     <link rel="preload" href="logo.webp" as="image">
     <link rel="stylesheet" href="styles.min.css">
-    <link rel="stylesheet" href="popup-form.css">
+    <link rel="preload" href="popup-form.css" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="popup-form.css"></noscript>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -102,7 +103,7 @@
                             <a href="services.html" class="mega-menu-item">
                                 <picture>
                                     <source srcset="video_pro.webp" type="image/webp">
-                                    <img loading="lazy" decoding="async" src="video_pro.jpg" alt="Video Production"
+                                    <img loading="lazy" decoding="async" src="video_pro_optimized.webp" alt="Video Production"
                                         width="400" height="267">
                                 </picture>
                                 <div class="mega-item-content">
@@ -121,7 +122,7 @@
                             <a href="performance-marketing.html" class="mega-menu-item">
                                 <picture>
                                     <source srcset="pm_1.webp" type="image/webp">
-                                    <img loading="lazy" decoding="async" src="pm_1.jpg" alt="Digital Marketing"
+                                    <img loading="lazy" decoding="async" src="pm_1_optimized.webp" alt="Digital Marketing"
                                         width="400" height="225">
                                 </picture>
                                 <div class="mega-item-content">
@@ -132,7 +133,7 @@
                             <a href="media-offerings.html" class="mega-menu-item">
                                 <picture>
                                     <source srcset="OOH_banner.webp" type="image/webp">
-                                    <img loading="lazy" decoding="async" src="OOH_banner.jpg"
+                                    <img loading="lazy" decoding="async" src="OOH_banner.webp"
                                         alt="Offline Marketing (OOH/DOOH)" width="400" height="299">
                                 </picture>
                                 <div class="mega-item-content">
@@ -197,7 +198,7 @@
         .hero-bg-image {
             width: 100%;
             height: 100%;
-            background: url('digital_marketing_hero_bg.jpg') center center / cover no-repeat;
+            background: url('digital_marketing_hero_bg.webp') center center / cover no-repeat;
             opacity: 0.75;
             /* 75% opacity as requested */
         }
@@ -293,7 +294,7 @@
                         <source srcset="pm_1.webp" type="image/webp">
                         <picture>
                             <source srcset="pm_1_optimized.webp" type="image/webp">
-                            <img loading="lazy" decoding="async" src="pm_1_optimized.jpg"
+                            <img loading="lazy" decoding="async" src="pm_1_optimized.webp"
                                 alt="Performance Marketing Strategy Meeting" decoding="async" width="120" height="68">
                         </picture>
                     </picture>

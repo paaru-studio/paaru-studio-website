@@ -40,7 +40,8 @@
     <link rel="preload" href="styles.min.css" as="style">
     <link rel="preload" href="logo.webp" as="image">
     <link rel="stylesheet" href="styles.min.css">
-    <link rel="stylesheet" href="popup-form.css">
+    <link rel="preload" href="popup-form.css" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="popup-form.css"></noscript>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -183,7 +184,7 @@
         .ecommerce-hero-bg-image {
             width: 100%;
             height: 100%;
-            background: url('ecommerce_hero_bg.jpg') center center / cover no-repeat;
+            background: url('ecommerce_hero_bg.webp') center center / cover no-repeat;
             opacity: 0.75;
             /* Premium 75% visibility */
         }
@@ -306,7 +307,7 @@
                     <source srcset="e_commerce.webp" type="image/webp">
                     <picture>
                         <source srcset="e_commerce_optimized.webp" type="image/webp">
-                        <img loading="lazy" decoding="async" src="e_commerce_optimized.jpg" alt="E-commerce showcase" /
+                        <img loading="lazy" decoding="async" src="e_commerce_optimized.webp" alt="E-commerce showcase" /
                             width="400" height="229">
                     </picture>
                 </picture>
