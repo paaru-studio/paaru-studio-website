@@ -158,7 +158,16 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         if (!btn) return;
         var container = btn.closest && btn.closest('.video-embed');
         var vid = container && container.getAttribute('data-video-id');
-        if (vid) { openModal(vid); e.preventDefault(); e.stopPropagation(); }
+        if (!vid) return;
+
+        // If inline playback is requested (e.g. on watch pages)
+        if (container.getAttribute('data-inline') === 'true') {
+            container.innerHTML = `<iframe src="https://www.youtube.com/embed/${vid}?autoplay=1&rel=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+        } else {
+            openModal(vid);
+        }
+        e.preventDefault();
+        e.stopPropagation();
     });
 })();
 
