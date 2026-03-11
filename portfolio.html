@@ -28,7 +28,7 @@
         content="Explore Paaru Studio’s portfolio of TV commercials, brand films, digital ads, e‑commerce content and OOH campaigns created for leading Indian and global brands over 11+ years.">
     <meta property="twitter:image" content="https://paarustudio.com/logo.webp">
 
-    <link rel="icon" type="image/png" href="logo.webp">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="preconnect" href="https://www.youtube.com">
     <link rel="preconnect" href="https://i.ytimg.com">
     <link rel="preconnect" href="https://www.instagram.com">
@@ -1249,6 +1249,28 @@
     </a>
 
     <script src="script.min.js" defer></script>
+    <script>
+        // Video Watch Page Simulation for SEO
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const videoId = urlParams.get('v');
+            if (videoId) {
+                // Find column/item with this video
+                const videoEmbed = document.querySelector(`.video-embed[data-video-id="${videoId}"]`);
+                if (videoEmbed) {
+                    setTimeout(() => {
+                        videoEmbed.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        videoEmbed.style.outline = '4px solid var(--accent-color)';
+                        videoEmbed.style.outlineOffset = '5px';
+                        videoEmbed.style.borderRadius = '8px';
+                        // Auto-play or highlight
+                        const poster = videoEmbed.querySelector('.video-poster');
+                        if (poster) poster.click();
+                    }, 500);
+                }
+            }
+        });
+    </script>
     <script src="popup-form.js" defer></script>
 </body>
 

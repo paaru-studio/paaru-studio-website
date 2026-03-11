@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-  <!-- Home Page Videos -->
+  <!-- Hero Video on Homepage -->
   <url>
     <loc>https://paarustudio.com/</loc>
     <video:video>
       <video:thumbnail_loc>https://img.youtube.com/vi/1KmBeKsYq_0/maxresdefault.jpg</video:thumbnail_loc>
-      <video:title>Paaru Studio Hero Background Video</video:title>
-      <video:description>Professional video production services in Bengaluru (Bangalore) by Paaru Studio. High-quality TV commercials, digital ads, and corporate films.</video:description>
+      <video:title>Paaru Studio | Video Production Showcase</video:title>
+      <video:description>Professional video production services in Bengaluru (Bangalore). We create TV commercials, digital ads, and corporate films with maximum business value.</video:description>
       <video:content_loc>https://www.youtube.com/watch?v=1KmBeKsYq_0</video:content_loc>
       <video:player_loc>https://www.youtube.com/embed/1KmBeKsYq_0</video:player_loc>
       <video:duration>30</video:duration>
       <video:publication_date>2024-01-15T08:00:00+05:30</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
+  </url>
+
+  <!-- Dedicated Watch Pages (Highest Indexing Probability) -->
+  <url>
+    <loc>https://paarustudio.com/case-study-observance.html</loc>
     <video:video>
       <video:thumbnail_loc>https://img.youtube.com/vi/sVA07PZR-vc/maxresdefault.jpg</video:thumbnail_loc>
       <video:title>Observance Eye | DVC</video:title>
@@ -22,8 +27,11 @@
       <video:player_loc>https://www.youtube.com/embed/sVA07PZR-vc</video:player_loc>
       <video:duration>60</video:duration>
       <video:publication_date>2024-02-10T10:00:00+05:30</video:publication_date>
-      <video:family_friendly>yes</video:family_friendly>
     </video:video>
+  </url>
+
+  <url>
+    <loc>https://paarustudio.com/case-study-herbalife.html</loc>
     <video:video>
       <video:thumbnail_loc>https://img.youtube.com/vi/mredaaNUgUY/maxresdefault.jpg</video:thumbnail_loc>
       <video:title>Herbalife Brand Film</video:title>
@@ -32,13 +40,11 @@
       <video:player_loc>https://www.youtube.com/embed/mredaaNUgUY</video:player_loc>
       <video:duration>45</video:duration>
       <video:publication_date>2024-03-05T09:00:00+05:30</video:publication_date>
-      <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
 
-  <!-- Portfolio Page Videos -->
   <url>
-    <loc>https://paarustudio.com/portfolio.html</loc>
+    <loc>https://paarustudio.com/case-study-onsurity.html</loc>
     <video:video>
       <video:thumbnail_loc>https://img.youtube.com/vi/oouUsH0mPv0/maxresdefault.jpg</video:thumbnail_loc>
       <video:title>Onsurity | Motion Graphics</video:title>
@@ -48,6 +54,11 @@
       <video:duration>50</video:duration>
       <video:publication_date>2024-04-12T11:00:00+05:30</video:publication_date>
     </video:video>
+  </url>
+
+  <!-- Other Portfolio Videos with Unique Watch URLs -->
+  <url>
+    <loc>https://paarustudio.com/portfolio.html?v=0IxUAbQEwJQ</loc>
     <video:video>
       <video:thumbnail_loc>https://img.youtube.com/vi/0IxUAbQEwJQ/maxresdefault.jpg</video:thumbnail_loc>
       <video:title>Real Estate Walkthrough Video</video:title>
@@ -57,6 +68,10 @@
       <video:duration>150</video:duration>
       <video:publication_date>2024-05-18T12:00:00+05:30</video:publication_date>
     </video:video>
+  </url>
+
+  <url>
+    <loc>https://paarustudio.com/portfolio.html?v=fUcTTeNFn2g</loc>
     <video:video>
       <video:thumbnail_loc>https://img.youtube.com/vi/fUcTTeNFn2g/maxresdefault.jpg</video:thumbnail_loc>
       <video:title>Windowfab Product Showcase</video:title>
@@ -68,7 +83,6 @@
     </video:video>
   </url>
 
-  <!-- AI Services Page Videos -->
   <url>
     <loc>https://paarustudio.com/ai-services.html</loc>
     <video:video>
@@ -80,32 +94,8 @@
       <video:duration>40</video:duration>
       <video:publication_date>2025-01-10T09:00:00+05:30</video:publication_date>
     </video:video>
-    <video:video>
-      <video:thumbnail_loc>https://img.youtube.com/vi/cCeWcmEX7YY/maxresdefault.jpg</video:thumbnail_loc>
-      <video:title>AI Video Production</video:title>
-      <video:description>Next-generation AI video production techniques for modern brand storytelling.</video:description>
-      <video:content_loc>https://www.youtube.com/watch?v=cCeWcmEX7YY</video:content_loc>
-      <video:player_loc>https://www.youtube.com/embed/cCeWcmEX7YY</video:player_loc>
-      <video:duration>60</video:duration>
-      <video:publication_date>2025-02-15T11:00:00+05:30</video:publication_date>
-    </video:video>
   </url>
 
-  <!-- Services Page Videos -->
-  <url>
-    <loc>https://paarustudio.com/services.html</loc>
-    <video:video>
-      <video:thumbnail_loc>https://img.youtube.com/vi/S6vVIqh_sOo/maxresdefault.jpg</video:thumbnail_loc>
-      <video:title>Paaru Studio Services Overview</video:title>
-      <video:description>An overview of the TV, digital, and OOH services offered by Paaru Studio in Bengaluru (Bangalore).</video:description>
-      <video:content_loc>https://www.youtube.com/watch?v=S6vVIqh_sOo</video:content_loc>
-      <video:player_loc>https://www.youtube.com/embed/S6vVIqh_sOo</video:player_loc>
-      <video:duration>40</video:duration>
-      <video:publication_date>2024-07-01T10:00:00+05:30</video:publication_date>
-    </video:video>
-  </url>
-
-  <!-- Influencer Marketing Page Videos -->
   <url>
     <loc>https://paarustudio.com/influencer-marketing.html</loc>
     <video:video>
