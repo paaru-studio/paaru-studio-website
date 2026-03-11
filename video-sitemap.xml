@@ -83,16 +83,46 @@
     </video:video>
   </url>
 
+  <!-- AI Services Videos — Dedicated Watch Pages -->
   <url>
-    <loc>https://paarustudio.com/ai-services.html</loc>
+    <loc>https://paarustudio.com/ai-video-content-generation.html</loc>
     <video:video>
       <video:thumbnail_loc>https://img.youtube.com/vi/S6vVIqh_sOo/maxresdefault.jpg</video:thumbnail_loc>
       <video:title>AI Content Generation Showcase</video:title>
-      <video:description>Exploring the possibilities of AI-driven content creation and automation by Paaru Studio.</video:description>
+      <video:description>Exploring the power of AI in creating high-quality marketing content. Paaru Studio bridges creative imagination and technical execution using state-of-the-art AI video tools.</video:description>
       <video:content_loc>https://www.youtube.com/watch?v=S6vVIqh_sOo</video:content_loc>
       <video:player_loc>https://www.youtube.com/embed/S6vVIqh_sOo</video:player_loc>
       <video:duration>40</video:duration>
       <video:publication_date>2025-01-10T09:00:00+05:30</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+
+  <url>
+    <loc>https://paarustudio.com/ai-video-production.html</loc>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/cCeWcmEX7YY/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>AI Video Production Explained</video:title>
+      <video:description>How Paaru Studio leverages AI for more efficient video production. AI-assisted editing, character creation, and background generation for modern brands.</video:description>
+      <video:content_loc>https://www.youtube.com/watch?v=cCeWcmEX7YY</video:content_loc>
+      <video:player_loc>https://www.youtube.com/embed/cCeWcmEX7YY</video:player_loc>
+      <video:duration>60</video:duration>
+      <video:publication_date>2025-02-15T11:00:00+05:30</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+
+  <url>
+    <loc>https://paarustudio.com/ai-reel.html</loc>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/DAn4fzr0KJs/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>AI Reel — Paaru Studio</video:title>
+      <video:description>An AI-generated short reel showcasing the creative possibilities of artificial intelligence in brand storytelling and visual content production.</video:description>
+      <video:content_loc>https://www.youtube.com/watch?v=DAn4fzr0KJs</video:content_loc>
+      <video:player_loc>https://www.youtube.com/embed/DAn4fzr0KJs</video:player_loc>
+      <video:duration>30</video:duration>
+      <video:publication_date>2025-03-01T09:00:00+05:30</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
 
