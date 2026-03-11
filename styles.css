@@ -4201,7 +4201,7 @@ video {
     width: 2000px;
     height: 1200px;
     /* increased to reach further */
-    background-image: url('web page bg 4k.png');
+    background-image: url('web-page-bg-4k.webp');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center center;
@@ -4226,7 +4226,7 @@ video {
     transform: translateX(-50%);
     width: 2000px;
     height: 1200px;
-    background-image: url('web page bg 4k.png');
+    background-image: url('web-page-bg-4k.webp');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center center;
