@@ -38,9 +38,9 @@
     --container-padding: 20px;
 
     /* Unique Typography System */
-    --font-heading: 'Syne', sans-serif;
-    --font-display: 'Outfit', sans-serif;
-    --font-body: 'Plus Jakarta Sans', sans-serif;
+    --font-heading: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-display: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 @media (max-width: 900px) {
@@ -326,15 +326,14 @@ body {
 }
 
 .logo-text {
-    font-family: var(--font-heading);
     font-weight: 800;
-    font-size: 21px;
-    letter-spacing: -1.2px;
+    font-size: 20px;
+    letter-spacing: -0.6px;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     display: inline-flex;
     align-items: center;
     gap: 9px;
-    line-height: 1;
+    line-height: 1.2;
     color: #000000;
 }
 
