@@ -1,16 +1,16 @@
 RewriteEngine On
 
-# Redirect index.html to /
-RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html\ HTTP/
-RewriteRule ^index\.html$ https://paarustudio.com/ [R=301,L]
+# 1. Force HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-# Redirect services.html to video-production.html
-RewriteRule ^services\.html$ https://paarustudio.com/video-production.html [R=301,L]
-
-# Force non-www (https://paarustudio.com/)
+# 2. Force non-www (https://paarustudio.com/)
 RewriteCond %{HTTP_HOST} ^www\.paarustudio\.com [NC]
 RewriteRule ^(.*)$ https://paarustudio.com/$1 [L,R=301]
 
-# Force HTTPS
-RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://paarustudio.com%{REQUEST_URI} [L,R=301]
+# 3. Redirect index.html to Root (Avoid Duplicate Content)
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html\ HTTP/
+RewriteRule ^index\.html$ https://paarustudio.com/ [R=301,L]
+
+# 4. Redirect services.html to video-production.html
+RewriteRule ^services\.html$ https://paarustudio.com/video-production.html [R=301,L]

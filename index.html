@@ -102,6 +102,33 @@
     ]
     </script>
 
+    <script>
+        (function() {
+            var host = window.location.hostname;
+            var path = window.location.pathname;
+            var search = window.location.search;
+            var hash = window.location.hash;
+            var redirectNeeded = false;
+            var newHost = host;
+            var newPath = path;
+
+            if (host.startsWith('www.')) {
+                newHost = host.slice(4);
+                redirectNeeded = true;
+            }
+            if (path.endsWith('/index.html')) {
+                newPath = path.slice(0, -10);
+                redirectNeeded = true;
+            } else if (path === '/index.html') {
+                newPath = '/';
+                redirectNeeded = true;
+            }
+
+            if (redirectNeeded) {
+                window.location.replace('https://' + newHost + newPath + search + hash);
+            }
+        })();
+    </script>
 </head>
 
 <body class="index-page">
