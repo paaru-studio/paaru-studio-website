@@ -252,8 +252,11 @@ body {
 /* Make sure page content (page-hero) is not hidden under the fixed navbar. */
 .page-hero,
 .hero {
+    position: relative;
     padding-top: 130px;
     /* Adjusted for slimmer banner + taller navbar */
+    overflow: hidden;
+    z-index: 1;
 }
 
 
