@@ -10048,3 +10048,21 @@ html {
     border-left: 2px solid var(--accent-color) !important;
     transform: none !important;
 }
+/* Video Production Page Grid */
+.video-production-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 24px !important;
+}
+
+@media (max-width: 1024px) {
+    .video-production-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .video-production-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
