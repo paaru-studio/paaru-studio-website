@@ -185,21 +185,20 @@
     <div class="mobile-nav-backdrop" aria-hidden="true"></div>
 
     <!-- Page Header -->
+    
     <style>
-        /* Robust video background implementation for Services page */
         .service-page-hero {
-            background: #000 !important;
             position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 120px 20px 100px;
+            color: #fff;
             overflow: hidden;
+            background: #000;
         }
-
-        /* Remove default hero overlays */
-        .service-page-hero::before,
-        .service-page-hero::after {
-            display: none !important;
-            content: none !important;
-        }
-
         .video-hero-bg-container {
             position: absolute;
             top: 0;
@@ -210,35 +209,106 @@
             pointer-events: none;
             background: #000;
         }
-
         .service-page-hero .hero-bg-iframe {
             position: absolute;
             top: 50%;
             left: 50%;
             width: 100vw;
             height: 56.25vw;
-            /* 16:9 aspect ratio */
             min-height: 100vh;
             min-width: 177.77vh;
-            /* 16:9 aspect ratio */
             transform: translate(-50%, -50%) scale(1.15);
             opacity: 1;
-            /* 100% visibility for the video */
             border: none;
         }
-
         .video-hero-overlay {
             position: absolute;
             inset: 0;
-            background: linear-gradient(135deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.8) 100%);
+            background: rgba(0, 5, 15, 0.7);
             z-index: 1;
         }
-
-        .service-page-hero .container {
+        .hero-content-center {
             position: relative;
             z-index: 2;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .hero-content-center h1 {
+            font-size: 64px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+            background: linear-gradient(180deg, #fff 0%, #a0c0ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-content-center p {
+            font-size: 20px;
+            color: #d1d5db;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+        .hero-btn-pill {
+            display: inline-block;
+            background: #fff;
+            color: #000;
+            padding: 16px 36px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 16px;
+            transition: transform 0.3s;
+        }
+        .hero-btn-pill:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255,255,255,0.2);
+        }
+        .trusted-by-strip {
+            position: absolute;
+            bottom: 30px;
+            left: 0;
+            width: 100%;
+            z-index: 2;
+            text-align: center;
+            padding: 0 20px;
+        }
+        .trusted-by-text {
+            font-size: 12px;
+            color: rgba(255,255,255,0.5);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .trusted-by-text::before, .trusted-by-text::after {
+            content: "";
+            height: 1px;
+            width: 150px;
+            background: rgba(255,255,255,0.2);
+            margin: 0 15px;
+        }
+        .trusted-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            opacity: 0.8;
+            filter: grayscale(100%) brightness(200%);
+        }
+        .trusted-logos img {
+            max-height: 40px;
+            width: auto;
+            object-fit: contain;
+        }
+        @media(max-width: 768px) {
+            .hero-content-center h1 { font-size: 42px; }
+            .trusted-logos { gap: 20px; }
         }
     </style>
+
     <section class="hero service-page-hero">
         <div class="video-hero-bg-container">
             <iframe class="hero-bg-iframe" aria-hidden="true"
@@ -248,49 +318,24 @@
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
             <div class="video-hero-overlay"></div>
         </div>
-
-        <div class="container hero-split-container">
-            <div class="hero-content left-align">
-                <h1 class="hero-title ref-title">
-                    Dedicated Video Production<br>
-                    Services in Bangalore.<br>
-                    <span class="red-underline">Maximum Impact.</span>
-                </h1>
-                <p class="hero-subtitle ref-subtitle">
-                    End-to-end video commercial, digital ad, and corporate film production tailored for your brand.
-                </p>
-            </div>
-            <div class="hero-visual right-form">
-                <div class="hero-form-card">
-                    <h3>Have a project brief?</h3>
-                    <p class="form-subtitle">Get an estimate within 24-hours</p>
-                    <form class="project-form compact-hero-form" action="https://formspree.io/f/mblzqbjr" method="POST">
-                        <input type="text" name="name" placeholder="Full Name *" required>
-                        <input type="email" name="email" placeholder="Business Email *" required>
-                        <input type="tel" name="phone" placeholder="Phone *" required>
-                        <select name="service_type" required>
-                            <option value="">What do you need? *</option>
-                            <option value="video" selected>Video Production</option>
-                            <option value="photography">Photography</option>
-                            <option value="ecommerce">E-commerce Solutions</option>
-                            <option value="digital">Digital Marketing</option>
-                            <option value="other">Other</option>
-                        </select>
-                        <select name="budget">
-                            <option value="">Project Budget Range</option>
-                            <option value="under-1l">Under ₹1 Lakh</option>
-                            <option value="1-3l">₹1.00L - ₹3.00L</option>
-                            <option value="3-5l">₹3.00L - ₹5.00L</option>
-                            <option value="5-10l">₹5.00L - ₹10.00L</option>
-                            <option value="10l-plus">₹10.00L+</option>
-                        </select>
-                        <textarea name="notes" placeholder="Notes"></textarea>
-                        <button type="submit" class="cta-btn submit-btn">Get An Estimate</button>
-                    </form>
-                </div>
+        
+        <div class="container hero-content-center">
+            <h1>Video Production Services</h1>
+            <p>Recognized as a Leader in Cinematic Filmmaking and backed by elite strategic partnerships, we deliver enterprise-ready, premium video production services that scale seamlessly across departments and global campaigns.</p>
+            <a href="contact.html" class="hero-btn-pill">Consult Our Experts</a>
+        </div>
+        
+        <div class="trusted-by-strip">
+            <div class="trusted-by-text">TRUSTED BY CONGLOMERATES, ENTERPRISES AND STARTUPS ALIKE</div>
+            <div class="trusted-logos">
+                <img src="Logos/Logo_1.png" alt="Client Logo 1" height="40" loading="lazy">
+                <img src="Logos/Logo_2.png" alt="Client Logo 2" height="40" loading="lazy">
+                <img src="Logos/Logo_3.png" alt="Client Logo 3" height="40" loading="lazy">
+                <img src="Logos/sugar_fit_logo.png" alt="Sugar Fit Logo" height="40" loading="lazy">
             </div>
         </div>
     </section>
+
 
     <!-- Services Overview -->
     <style>
@@ -403,8 +448,7 @@
             }
         }
         /* Full-width yellow strip logic */
-        .yellow-strip-section {
-            background-color: #f59e0b !important;
+        .yellow-strip-section { background: linear-gradient(to bottom, #1B5FF8 0%, #000000 100%) !important;
             width: 100vw !important;
             margin-left: calc(50% - 50vw) !important;
             position: relative;
@@ -630,6 +674,81 @@
                             Watch our corporate video reel created by Paaru Studio in Bangalore.
                         </p>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .stats-section {
+            background: #000;
+            color: #fff;
+            padding: 80px 0 120px;
+        }
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .stats-header {
+            font-size: 28px;
+            font-weight: 500;
+            line-height: 1.4;
+            margin-bottom: 60px;
+            max-width: 400px;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+        .stat-item {
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .stat-number {
+            font-size: 64px;
+            font-weight: 300;
+            margin-bottom: 10px;
+            font-family: var(--font-heading, "Inter", sans-serif);
+        }
+        .stat-desc {
+            font-size: 14px;
+            color: #a0a0a0;
+            font-weight: 600;
+        }
+        @media(max-width: 768px) {
+            .stats-grid { grid-template-columns: 1fr; }
+            .stats-number { font-size: 48px; }
+        }
+    </style>
+    <section class="stats-section">
+        <div class="stats-container">
+            <div class="stats-header">Our decade long production experience, validated in numbers</div>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">300+</div>
+                    <div class="stat-desc">Video Campaigns Backed By Proven ROI</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">200+</div>
+                    <div class="stat-desc">Leading Filmmakers & Creative Directors</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">150+</div>
+                    <div class="stat-desc">Custom Ad Films Built For Enterprise Impact</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">75+</div>
+                    <div class="stat-desc">Formats Integrated Across Brand Channels</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-desc">Bespoke Documentaries Tuned To Culture</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">35+</div>
+                    <div class="stat-desc">Industries Powered By Visual Storytelling</div>
                 </div>
             </div>
         </div>
