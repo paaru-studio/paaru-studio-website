@@ -53,42 +53,7 @@
       }
     }
     </script>
-    <script type="application/ld+json">
-    [
-      {
-        "@context": "https://schema.org",
-        "@type": "VideoObject",
-        "name": "Onsurity Motion Graphics",
-        "description": "Creative motion graphics video for Onsurity Healthcare.",
-        "thumbnailUrl": "https://img.youtube.com/vi/oouUsH0mPv0/hqdefault.jpg",
-        "uploadDate": "2024-04-12T11:00:00+05:30",
-        "duration": "PT0M50S",
-        "embedUrl": "https://www.youtube.com/embed/oouUsH0mPv0",
-        "transcript": "Managing healthcare benefits should be simple. Onsurity simplifies insurance and employee wellness. From hassle-free claims to immediate support, we've got you covered. Watch how our digital platform transforms employee benefits for the modern workforce."
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "VideoObject",
-        "name": "Walkthrough Video Portfolio",
-        "description": "Premium real-estate and facility walkthrough video production.",
-        "thumbnailUrl": "https://img.youtube.com/vi/0IxUAbQEwJQ/maxresdefault.jpg",
-        "uploadDate": "2024-05-18T12:00:00+05:30",
-        "duration": "PT2M30S",
-        "embedUrl": "https://www.youtube.com/embed/0IxUAbQEwJQ",
-        "transcript": "Taking a closer look at premium facilities. Our walkthrough videos provide an immersive experience, showcasing every corner of your property with cinematic detail. We combine artistic angles with professional lighting to make your space stand out."
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "VideoObject",
-        "name": "Windowfab Ad Film",
-        "description": "Digital ad film produced for Windowfab showcasing premium windows and doors.",
-        "thumbnailUrl": "https://img.youtube.com/vi/fUcTTeNFn2g/maxresdefault.jpg",
-        "uploadDate": "2024-06-22T14:00:00+05:30",
-        "duration": "PT1M15S",
-        "transcript": "Windowfab brings elegance and durability to your home. This video shows the craftsmanship behind our premium windows and doors. With focus on thermal efficiency and sleek designs, we help you create the perfect living space that is both beautiful and functional."
-      }
-    ]
-    </script>
+    
 </head>
 
 <body class="portfolio-page">
@@ -182,7 +147,6 @@
                     <a href="portfolio.html">Portfolio</a>
                     <a href="get-started.html">Get Started</a>
                     <a href="join-team.html">Join Team</a>
-                    <a href="blog.html">Blogs</a>
                     <a href="ai-services.html" class="ai-btn"><img src="Asset 1Ai Logo Web.webp" alt="AI Services"
                             class="ai-logo-nav" width="65" height="94" loading="lazy"></a>
                     <a href="contact.html" class="cta-btn">Contact Us</a>
@@ -1217,6 +1181,7 @@
                             <a href="/">Home</a>
                             <a href="portfolio.html">Portfolio</a>
                             <a href="case-studies.html">Case Studies</a>
+                            <a href="blog.html">Blog</a>
                             <a href="join-team.html">Join Team</a>
                             <a href="contact.html">Contact</a>
                         </div>
@@ -1248,30 +1213,7 @@
         </svg>
     </a>
 
-    <script src="script.min.js" defer></script>
-    <script>
-        // Video Watch Page Simulation for SEO
-        document.addEventListener('DOMContentLoaded', () => {
-            const urlParams = new URLSearchParams(window.location.search);
-            const videoId = urlParams.get('v');
-            if (videoId) {
-                // Find column/item with this video
-                const videoEmbed = document.querySelector(`.video-embed[data-video-id="${videoId}"]`);
-                if (videoEmbed) {
-                    setTimeout(() => {
-                        videoEmbed.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                        videoEmbed.style.outline = '4px solid var(--accent-color)';
-                        videoEmbed.style.outlineOffset = '5px';
-                        videoEmbed.style.borderRadius = '8px';
-                        // Auto-play or highlight
-                        const poster = videoEmbed.querySelector('.video-poster');
-                        if (poster) poster.click();
-                    }, 500);
-                }
-            }
-        });
-    </script>
-    <script src="popup-form.js" defer></script>
+    <script src="script.min.js" defer></script><script src="popup-form.js" defer></script>
 </body>
 
 </html>
