@@ -178,7 +178,7 @@
     <section class="hero">
         <img class="hero-poster" src="hero_poster.jpg" fetchpriority="high" alt="Video Production Hero" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; z-index: -1;">
 
-        <iframe class="hero-bg-iframe"
+        <iframe class="hero-bg-iframe" aria-hidden="true"
             data-src="https://www.youtube.com/embed/1KmBeKsYq_0?autoplay=1&mute=1&controls=0&loop=1&playlist=1KmBeKsYq_0&playsinline=1&showinfo=0&rel=0&modestbranding=1&disablekb=1&iv_load_policy=3&fs=0"
             title="Hero Background Video" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -274,10 +274,68 @@
     </section>
 
     <!-- Portfolio (moved to directly after About) -->
-    <section id="portfolio" class="portfolio-section">
+    <style>
+        .portfolio-section.yellow-strip {
+            background: linear-gradient(to bottom, #f59e0b 50%, transparent 50%) !important;
+            padding: 80px 0;
+            width: 100vw;
+            margin-left: calc(50% - 50vw);
+            position: relative;
+        }
+
+        .portfolio-section.yellow-strip h2,
+        .portfolio-section.yellow-strip p {
+            color: #fff !important;
+        }
+
+        .portfolio-section.yellow-strip .underline {
+            background-color: #fff !important;
+            display: block;
+            margin: 15px auto 25px auto;
+        }
+
+        .portfolio-section.yellow-strip p.portfolio-tagline {
+            font-size: 24px;
+            font-weight: 600;
+            font-family: 'Inter', sans-serif;
+            text-transform: none;
+            margin: 0 auto;
+            max-width: 900px;
+            line-height: 1.4;
+        }
+
+        @media (max-width: 768px) {
+            .portfolio-section.yellow-strip {
+                padding: 60px 0;
+            }
+            .portfolio-section.yellow-strip p.portfolio-tagline {
+                font-size: 18px;
+                padding: 0 20px;
+            }
+        }
+    </style>
+    <section id="portfolio" class="portfolio-section yellow-strip">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header" style="height: auto; margin-bottom: 50px; overflow: visible; z-index: 10; position: relative; text-align: center;">
+                <h2>PORTFOLIO</h2>
                 <div class="underline"></div>
+                <p class="portfolio-tagline">
+                    Watch our Observance Eye ad film created by Paaru Studio in Bangalore.
+                </p>
+                <iframe src="https://www.youtube.com/embed/sVA07PZR-vc" style="display:none;" title="Observance Eye Video" aria-hidden="true"></iframe>
+                <script type="application/ld+json">
+                {
+                  "@context": "https://schema.org",
+                  "@type": "VideoObject",
+                  "name": "Observance Eye | DVC",
+                  "description": "A digital video commercial produced for Observance Eye, focusing on security and monitoring technology.",
+                  "thumbnailUrl": "https://img.youtube.com/vi/sVA07PZR-vc/maxresdefault.jpg",
+                  "uploadDate": "2024-02-10T10:00:00+05:30",
+                  "duration": "PT1M0S",
+                  "embedUrl": "https://www.youtube.com/embed/sVA07PZR-vc",
+                  "transcript": "Showcasing the Observance Eye monitoring system. The video highlights advanced security features, real-time alerts, and seamless integration for businesses. It demonstrates how technology provides peace of mind through constant vigilance and reliable data capturing."
+                }
+                </script>
             </div>
             <div class="portfolio-carousel" data-hover-enabled="1">
                 <button class="carousel-nav prev" aria-label="Previous project">‹</button>
@@ -397,10 +455,13 @@
 
             <!-- View Portfolio CTA below videos -->
             <div class="portfolio-cta" style="text-align:center;margin-top:18px;">
-                <a href="portfolio.html" class="cta-btn">View Portfolio</a>
+                <a href="portfolio.html" class="cta-btn" style="background-color: #111; color: #fff; border-color: #111;">View Portfolio</a>
             </div>
-            <!-- Reactive Image Gallery (15 varied tiles) -->
-            <section id="gallery" class="gallery-section full-bleed">
+        </div> 
+    </section>
+
+    <!-- Reactive Image Gallery (15 varied tiles) -->
+    <section id="gallery" class="gallery-section full-bleed">
                 <div class="gallery-grid">
                     <div class="gallery-item fit-auto">
                         <div class="gallery-image fit-image">
@@ -641,6 +702,47 @@
                     </div>
                 </div>
             </section>
+            <script>
+                // Animate numeric counters in gold-banner when it becomes visible.
+                (function () {
+                    var banner = document.querySelector('.gold-banner');
+                    if (!banner) return;
+                    var nums = banner.querySelectorAll('.gold-number');
+
+                    function animateEl(el) {
+                        if (el._raf) { cancelAnimationFrame(el._raf); el._raf = null; }
+                        var target = parseInt(el.getAttribute('data-target') || 0, 10) || 0;
+                        var duration = 1400;
+                        var start = null;
+                        var plusSpan = el.querySelector('.gold-plus');
+                        var suffix = plusSpan ? plusSpan.outerHTML : '';
+
+                        function step(ts) {
+                            if (!start) start = ts;
+                            var t = Math.min(1, (ts - start) / duration);
+                            var eased = 1 - Math.pow(1 - t, 3);
+                            var value = Math.floor(eased * target);
+                            el.innerHTML = value + suffix;
+                            if (t < 1) {
+                                el._raf = requestAnimationFrame(step);
+                            } else {
+                                el.innerHTML = target + suffix;
+                                el._raf = null;
+                            }
+                        }
+                        el._raf = requestAnimationFrame(step);
+                    }
+
+                    var io = new IntersectionObserver(function (entries) {
+                        entries.forEach(function (e) {
+                            if (e.isIntersecting) {
+                                nums.forEach(function (n) { animateEl(n); });
+                            }
+                        });
+                    }, { threshold: 0.35 });
+                    io.observe(banner);
+                })();
+            </script>
             <!-- Clients Section (moved below gold banner) -->
             <section id="clients" class="clients-section full-bleed">
                 <div class="container">
@@ -848,435 +950,296 @@
 
 
 
-    <!-- E-Commerce Services -->
-    <section id="ecommerce" class="ecommerce-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>E-COMMERCE SOLUTIONS</h2>
-                <div class="underline"></div>
+    <!-- High Impact Services Section (Tabs) -->
+    <style>
+        .impact-tabs-section {
+            padding: 100px 0;
+            background: #000;
+            overflow: clip;
+        }
+        .impact-tabs-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        .tab-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+        .tab-btn {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .tab-btn.active {
+            background: #fff;
+            color: #000;
+        }
+        .tab-content-wrapper {
+            position: relative;
+            min-height: 500px;
+        }
+        .tab-pane {
+            display: none;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 40px;
+            padding: 80px;
+            position: relative;
+            overflow: hidden;
+            min-height: 500px;
+        }
+        .tab-pane.active {
+            display: flex;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Vibrant Theming */
+        .pane-ecommerce { background: linear-gradient(135deg, #0056FF 0%, #002D85 100%); }
+        .pane-advertising { background: linear-gradient(135deg, #FF0080 0%, #800040 100%); }
+        .pane-ipl { background: linear-gradient(135deg, #FF6F00 0%, #A34900 100%); }
+
+        .pane-inner {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            width: 100%;
+        }
+        .pane-text {
+            flex: 1;
+            max-width: 600px;
+            color: #fff;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .pane-text h2 {
+            font-size: 56px;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 30px;
+            color: #fff !important;
+        }
+        .pane-text p {
+            font-size: 20px;
+            opacity: 0.9;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+        .tab-pane-link {
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            padding: 18px 40px;
+            border-radius: 50px;
+            width: fit-content;
+            transition: all 0.3s ease;
+        }
+        .tab-pane-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .pane-graphic {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            position: relative;
+            z-index: 1;
+        }
+        .pane-graphic img {
+            width: 100%;
+            max-width: 650px;
+            border-radius: 30px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+            transition: transform 0.8s ease;
+        }
+        .tab-pane.active .pane-graphic img {
+            transform: scale(1.05) translateY(-20px);
+        }
+        
+        @media (max-width: 1024px) {
+            .pane-inner { flex-direction: column; text-align: center; }
+            .pane-text h2 { font-size: 42px; }
+            .tab-buttons { flex-wrap: wrap; }
+            .pane-graphic { justify-content: center; margin-top: 40px; }
+            .tab-btn { padding: 10px 20px; font-size: 14px; }
+            .tab-pane { padding: 40px; min-height: auto; }
+        }
+
+        /* Light Themed Sections (Testimonials, Reviews & FAQ) */
+        .testimonials-section,
+        .reviews-section,
+        .faq-section {
+            background: #fff !important;
+            color: #000 !important;
+            padding: 100px 0;
+            position: relative;
+            z-index: 10;
+        }
+        .testimonials-section .container,
+        .reviews-section .container,
+        .faq-container {
+            max-width: 1400px; /* Full length alignment */
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        .testimonials-section h2,
+        .reviews-section h2,
+        .faq-header h2 {
+            font-size: 56px;
+            font-weight: 700;
+            margin-bottom: 80px;
+            color: #000 !important;
+            text-align: left;
+            letter-spacing: -1.5px;
+        }
+        .testimonials-section .underline {
+            background-color: #000 !important;
+            margin: 20px 0 40px 0;
+        }
+        .testimonial-text {
+            color: #000 !important;
+            font-size: 24px !important;
+            font-weight: 500;
+            line-height: 1.5;
+            font-style: italic;
+        }
+        .author-name, .author-position {
+            color: #444 !important;
+        }
+        .faq-list {
+            border-top: 1px solid #f0f0f0;
+        }
+        .faq-item {
+            background: transparent !important;
+            border: none !important;
+            border-bottom: 1px solid #f0f0f0 !important;
+            padding: 40px 0 !important;
+            border-radius: 0 !important;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 0 !important;
+            box-shadow: none !important;
+        }
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 26px;
+            font-weight: 600;
+            color: #000 !important;
+            line-height: 1.25;
+        }
+        .faq-icon {
+            font-size: 36px;
+            font-weight: 200;
+            line-height: 1;
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            color: #000;
+            margin-left: 30px;
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            font-size: 20px;
+            line-height: 1.6;
+            color: #333;
+            opacity: 0;
+        }
+        .faq-item.active .faq-answer {
+            max-height: 400px;
+            opacity: 1;
+            margin-top: 30px;
+        }
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+        @media (max-width: 768px) {
+            .faq-header h2 { font-size: 32px; }
+            .faq-question { font-size: 18px; }
+            .faq-answer { font-size: 16px; }
+            .faq-container { padding: 0 25px; }
+        }
+    </style>
+
+    <section id="services-tabs" class="impact-tabs-section">
+        <div class="impact-tabs-container">
+            <div class="tab-buttons">
+                <button class="tab-btn active" onclick="switchTab(this, 'ecommerce')">E-commerce</button>
+                <button class="tab-btn" onclick="switchTab(this, 'advertising')">Advertising & OOH</button>
+                <button class="tab-btn" onclick="switchTab(this, 'ipl')">Tata IPL Ads</button>
             </div>
-            <p class="large-text">Professional E-commerce Product Catalogue Services</p>
-            <!-- Instagram embeds: two responsive embeds side-by-side on desktop, stacked on mobile, inside a white card -->
-            <div class="instagram-card full-bleed-instagram">
-                <div class="instagram-row">
-                    <div class="instagram-embed-wrapper">
-                        <blockquote class="instagram-media" data-instgrm-captioned
-                            data-instgrm-permalink="https://www.instagram.com/p/C9McpkeyF50/?utm_source=ig_embed&amp;utm_campaign=loading"
-                            data-instgrm-version="14"
-                            style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
-                            <!-- Instagram post (left) - placeholder markup generated by Instagram -->
-                            <div style="padding:16px;">
-                                <a href="https://www.instagram.com/p/C9McpkeyF50/?utm_source=ig_embed&amp;utm_campaign=loading"
-                                    target="_blank" style="text-decoration:none;display:block;width:100%;">
-                                    <div style="padding: 19% 0"></div>
-                                    <div style="color:#c9c8cd;text-align:center;padding:8px 0 7px;">A post shared by
-                                        Paaru Studio ® (@paaru_studio)</div>
-                                </a>
-                            </div>
-                        </blockquote>
-                    </div>
 
-                    <div class="instagram-embed-wrapper">
-                        <blockquote class="instagram-media" data-instgrm-captioned
-                            data-instgrm-permalink="https://www.instagram.com/reel/DJDlKG6SVTr/?utm_source=ig_embed&amp;utm_campaign=loading"
-                            data-instgrm-version="14"
-                            style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
-                            <!-- Instagram reel (right) - placeholder markup generated by Instagram -->
-                            <div style="padding:16px;">
-                                <a href="https://www.instagram.com/reel/DJDlKG6SVTr/?utm_source=ig_embed&amp;utm_campaign=loading"
-                                    target="_blank" style="text-decoration:none;display:block;width:100%;">
-                                    <div style="padding: 12% 0"></div>
-                                    <div style="color:#c9c8cd;text-align:center;padding:8px 0 7px;">A reel shared by
-                                        Paaru Studio ® (@paaru_studio)</div>
-                                </a>
-                            </div>
-                        </blockquote>
-                    </div>
-                </div>
-            </div>
-            <!-- Explore E-commerce Services Button -->
-            <div class="ecommerce-cta" style="text-align: center; margin-top: 50px; margin-bottom: 20px;">
-                <a href="ecommerce.html" class="cta-btn">Explore E commerce Services</a>
-            </div>
-            <!-- Instagram embed script (deferred for performance) -->
-            <script>
-                (function () {
-                    var scriptLoaded = false;
-                    function loadInstagramScript() {
-                        if (scriptLoaded) return;
-                        scriptLoaded = true;
-                        var s = document.createElement('script');
-                        s.async = true;
-                        s.src = "https://www.instagram.com/embed.js";
-                        document.body.appendChild(s);
-                    }
-                    var io = new IntersectionObserver(function (entries) {
-                        if (entries[0].isIntersecting) {
-                            loadInstagramScript();
-                            io.disconnect();
-                        }
-                    }, { threshold: 0.1 });
-                    var target = document.querySelector('.instagram-card');
-                    if (target) io.observe(target);
-                })();
-            </script>
-            <script>
-                (function () {
-                    function initInstagram() {
-                        try {
-                            if (window.instgrm && window.instgrm.Embeds && typeof window.instgrm.Embeds.process === 'function') {
-                                window.instgrm.Embeds.process();
-                            }
-                        } catch (e) {/* ignore */ }
-                    }
-                    if (window.instgrm && window.instgrm.Embeds) { initInstagram(); } else { window.addEventListener('load', function () { setTimeout(initInstagram, 300); }); }
-                })();
-            </script>
-            <script>
-                // Animate numeric counters in gold-banner when it becomes visible. Pause on hover.
-                (function () {
-                    var banner = document.querySelector('.gold-banner');
-                    if (!banner) return;
-                    var nums = banner.querySelectorAll('.gold-number');
-
-                    function animateEl(el) {
-                        // cancel any existing frame
-                        if (el._raf) { cancelAnimationFrame(el._raf); el._raf = null; }
-                        var target = parseInt(el.getAttribute('data-target') || 0, 10) || 0;
-                        var duration = 1400;
-                        var start = null;
-
-                        function step(ts) {
-                            if (!start) start = ts;
-                            var t = Math.min(1, (ts - start) / duration);
-                            // easeOutCubic
-                            var eased = 1 - Math.pow(1 - t, 3);
-                            var value = Math.floor(eased * target);
-                            if (el.childNodes[0] && el.childNodes[0].nodeType === Node.TEXT_NODE) {
-                                el.childNodes[0].nodeValue = value;
-                            }
-                            if (t < 1) {
-                                el._raf = requestAnimationFrame(step);
-                            } else {
-                                // ensure final value is exact
-                                if (el.childNodes[0] && el.childNodes[0].nodeType === Node.TEXT_NODE) el.childNodes[0].nodeValue = target;
-                                el._raf = null;
-                            }
-                        }
-
-                        if (!el.childNodes[0] || el.childNodes[0].nodeType !== Node.TEXT_NODE) {
-                            el.insertBefore(document.createTextNode('0'), el.firstChild);
-                        }
-                        el._raf = requestAnimationFrame(step);
-                    }
-
-                    var io = new IntersectionObserver(function (entries) {
-                        entries.forEach(function (e) {
-                            if (e.target !== banner) return;
-                            if (e.isIntersecting) {
-                                // restart animations each time banner enters viewport
-                                nums.forEach(function (n) { animateEl(n); });
-                            } else {
-                                // cancel running animations when leaving view
-                                nums.forEach(function (n) { if (n._raf) { cancelAnimationFrame(n._raf); n._raf = null; } });
-                            }
-                        });
-                    }, { threshold: 0.35 });
-                    io.observe(banner);
-                })();
-            </script>
-            <!-- How It Works -->
-            <section id="how-it-works" class="how-it-works-section">
-                <div class="container">
-                    <div class="section-header">
-                        <h2>HOW IT WORKS</h2>
-                        <div class="underline"></div>
-                    </div>
-                    <div class="steps-container">
-                        <div class="step-item step-gradient-1">
-                            <div class="step-content">
-                                <div class="step-number">01</div>
-                                <h3>Discovery & Consultation</h3>
-                                <p>We begin by understanding your brand, goals, and target audience. Our team
-                                    conducts thorough research to create a tailored strategy.</p>
-                            </div>
+            <div class="tab-content-wrapper">
+                <!-- E-commerce Tab -->
+                <div id="ecommerce-pane" class="tab-pane active pane-ecommerce">
+                    <div class="pane-inner">
+                        <div class="pane-text">
+                            <h2>Pioneer your Store with *Visual Excellence*</h2>
+                            <p>From high-end product cinematography to automated catalogue solutions, we amplify your brand's presence on Shopify, Amazon, and beyond. Professional visual storytelling for modern commerce.</p>
+                            <a href="ecommerce.html" class="tab-pane-link" style="background:#fff; color:#0056FF;">Explore Our Solutions</a>
                         </div>
-                        <div class="step-item step-gradient-2">
-                            <div class="step-content">
-                                <div class="step-number">02</div>
-                                <h3>Concept Development</h3>
-                                <p>Our creative team develops compelling concepts and scripts that align with your
-                                    brand identity and campaign objectives.</p>
-                            </div>
-                        </div>
-                        <div class="step-item step-gradient-3">
-                            <div class="step-content">
-                                <div class="step-number">03</div>
-                                <h3>Production</h3>
-                                <p>With state-of-the-art equipment and experienced crew, we bring your vision to
-                                    life through professional production.</p>
-                            </div>
-                        </div>
-                        <div class="step-item step-gradient-4">
-                            <div class="step-content">
-                                <div class="step-number">04</div>
-                                <h3>Post-Production</h3>
-                                <p>Our expert editors add the finishing touches with editing, color grading, sound
-                                    design, and visual effects.</p>
-                            </div>
-                        </div>
-                        <div class="step-item step-gradient-5">
-                            <div class="step-content">
-                                <div class="step-number">05</div>
-                                <h3>Delivery & Distribution</h3>
-                                <p>We ensure your content reaches the right audience through strategic distribution
-                                    across appropriate channels.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-
-
-            <!-- Advertising Solutions -->
-            <section id="advertising" class="advertising-section">
-                <div class="container">
-                    <div class="section-header">
-                        <h2>ADVERTISING SOLUTIONS</h2>
-                        <div class="underline"></div>
-                    </div>
-
-                    <div class="ad-solution-wrapper">
-                        <!-- Metro Advertising -->
-                        <div class="ad-solution">
-                            <div class="ad-header">
-                                <h3>Bangalore Metro</h3>
-                                <p class="ad-subtitle">Train Interior and Exterior Advertising</p>
-                                <span class="ad-type">OOH - Out-of-Home</span>
-                            </div>
-                            <div class="ad-details">
-                                <div class="ad-spec">
-                                    <h4>Specifications</h4>
-                                    <ul>
-                                        <li>1 Train, 6 Coaches</li>
-                                        <li>6030 sq.ft coverage</li>
-                                        <li>Interior and Exterior branding</li>
-                                    </ul>
-                                </div>
-                                <div class="ad-pricing">
-                                    <p class="price-label">Contact for Prices</p>
-                                    <a href="media-offerings.html" class="contact-btn">Get Quote</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Digital Screens -->
-                        <div class="ad-solution">
-                            <div class="ad-header">
-                                <h3>Digital Screens in Malls</h3>
-                                <p class="ad-subtitle">Premium Digital Display Advertising</p>
-                                <span class="ad-type">DOOH - Digital Out-of-Home</span>
-                            </div>
-                            <div class="ad-details">
-                                <div class="ad-spec">
-                                    <h4>Reach</h4>
-                                    <ul>
-                                        <li>High-traffic mall locations</li>
-                                        <li>Dynamic content display</li>
-                                        <li>Premium visibility</li>
-                                    </ul>
-                                </div>
-                                <div class="ad-pricing">
-                                    <p class="price-label">Contact for Prices</p>
-                                    <a href="media-offerings.html" class="contact-btn">Get Quote</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Digital Touchpoints Section -->
-                    <div class="ad-solution-wrapper" style="margin-top: 40px;">
-                        <!-- Gated Societies -->
-                        <div class="ad-solution">
-                            <div class="ad-header">
-                                <h3>Gated Societies</h3>
-                                <p class="ad-subtitle">Digital Screens in Premium Residential Communities</p>
-                                <span class="ad-type">DOOH - Digital Out-of-Home</span>
-                            </div>
-                            <div class="ad-details">
-                                <div class="ad-spec">
-                                    <h4>Reach</h4>
-                                    <ul>
-                                        <li>30k+ screens</li>
-                                        <li>5M people daily</li>
-                                        <li>Premium residential touchpoints</li>
-                                        <li>High dwell time engagement</li>
-                                    </ul>
-                                </div>
-                                <div class="ad-pricing">
-                                    <p class="price-label">Contact for Prices</p>
-                                    <a href="media-offerings.html" class="contact-btn">Get Quote</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Fitness Centers -->
-                        <div class="ad-solution">
-                            <div class="ad-header">
-                                <h3>Fitness Centers</h3>
-                                <p class="ad-subtitle">Digital Displays at Gyms & Fitness Studios</p>
-                                <span class="ad-type">DOOH - Digital Out-of-Home</span>
-                            </div>
-                            <div class="ad-details">
-                                <div class="ad-spec">
-                                    <h4>Reach</h4>
-                                    <ul>
-                                        <li>350+ screens</li>
-                                        <li>2M people daily</li>
-                                        <li>Health-conscious audience</li>
-                                        <li>Extended engagement time</li>
-                                    </ul>
-                                </div>
-                                <div class="ad-pricing">
-                                    <p class="price-label">Contact for Prices</p>
-                                    <a href="media-offerings.html" class="contact-btn">Get Quote</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Co-Working & IT Parks -->
-                        <div class="ad-solution">
-                            <div class="ad-header">
-                                <h3>Co-Working & IT Parks</h3>
-                                <p class="ad-subtitle">Professional Workspace Digital Advertising</p>
-                                <span class="ad-type">DOOH - Digital Out-of-Home</span>
-                            </div>
-                            <div class="ad-details">
-                                <div class="ad-spec">
-                                    <h4>Reach</h4>
-                                    <ul>
-                                        <li>800+ screens</li>
-                                        <li>1.6M people daily</li>
-                                        <li>Professional audience</li>
-                                        <li>Tech-savvy demographic</li>
-                                    </ul>
-                                </div>
-                                <div class="ad-pricing">
-                                    <p class="price-label">Contact for Prices</p>
-                                    <a href="media-offerings.html" class="contact-btn">Get Quote</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Total Reach Summary -->
-                    <div class="touchpoints-summary">
-                        <div class="summary-stat">
-                            <div class="stat-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
-                                    <path d="M12 18h.01"></path>
-                                </svg>
-                            </div>
-                            <div class="stat-number">31k+</div>
-                            <div class="stat-label">Total Screens</div>
-                        </div>
-                        <div class="summary-stat highlight">
-                            <div class="stat-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                                    <circle cx="9" cy="7" r="4"></circle>
-                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                                </svg>
-                            </div>
-                            <div class="stat-number">8.6M</div>
-                            <div class="stat-label">Daily Audience</div>
-                        </div>
-                        <div class="summary-stat">
-                            <div class="stat-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                                    <circle cx="12" cy="10" r="3"></circle>
-                                </svg>
-                            </div>
-                            <div class="stat-number">3</div>
-                            <div class="stat-label">Touchpoint Categories</div>
-                        </div>
-                    </div>
-
-                    <!-- IPL Plans -->
-                    <div class="ad-solution featured">
-                        <div class="ad-header">
-                            <h3>TATA IPL 2026 - Digital OTT Plans</h3>
-                            <p class="ad-subtitle">Advertise during live streaming on app and website</p>
-                            <span class="ad-type">Digital OTT</span>
-                        </div>
-                        <div class="ipl-plans">
-                            <div class="plan-card">
-                                <h4>Animated L-Band Advertisement</h4>
-                                <div class="plan-specs">
-                                    <h5>Specifications</h5>
-                                    <ul>
-                                        <li>Dimensions: 1920 x 1080px</li>
-                                        <li>Horizontal Band Height: 205px</li>
-                                        <li>Vertical Band Width: 260px</li>
-                                        <li>File Type: .MOV (Video)</li>
-                                    </ul>
-                                </div>
-                                <p class="plan-price">Plans starting at INR 5 Lakh</p>
-                            </div>
-
-                            <div class="plan-card">
-                                <h4>Display Billboard Advertisement</h4>
-                                <div class="plan-specs">
-                                    <h5>Poster Image Specifications</h5>
-                                    <ulf>
-                                        <li>Mobile: 1032 x 444 px (Ratio 2.3:1)</li>
-                                        <li>Tablet: 1600 x 685 px (Ratio 2.3:1)</li>
-                                        <li>Web: 1920 x 820 px (Ratio 2.3:1)</li>
-                                        <li>Max file size: 2 MB | Format: JPEG</li>
-                                    </ulf>
-                                </div>
-                                <p class="plan-price">Plans starting at INR 5 Lakh</p>
-                            </div>
-
-                            <div class="plan-card">
-                                <h4>Display Frame Advertisement</h4>
-                                <div class="plan-specs">
-                                    <h5>Specifications</h5>
-                                    <ul>
-                                        <li>Mobile: 1200 x 628 px (Ratio 2.3:1)</li>
-                                        <li>Max file size: 2 MB</li>
-                                        <li>Format: JPEG</li>
-                                    </ul>
-                                </div>
-                                <p class="plan-price">Plans starting at INR 5 Lakh</p>
-                            </div>
-
-                            <div class="plan-card">
-                                <h4>Sports BrandTab Advertisement</h4>
-                                <div class="plan-specs">
-                                    <h5>Creative Size</h5>
-                                    <ul>
-                                        <li>1152 x 648 px [Max Size: 1 MB]</li>
-                                        <li>1008 x 504 px [Max Size: 150 KB]</li>
-                                        <li>Format: JPEG</li>
-                                    </ul>
-                                </div>
-                                <p class="plan-price">Plans starting at INR 5 Lakh</p>
-                            </div>
+                        <div class="pane-graphic">
+                            <img src="ecommerce_service_card.png" alt="E-commerce Solutions">
                         </div>
                     </div>
                 </div>
-            </section>
+
+                <!-- Advertising Tab -->
+                <div id="advertising-pane" class="tab-pane pane-advertising">
+                    <div class="pane-inner">
+                        <div class="pane-text">
+                            <h2>Amplify your Market Presence across the City</h2>
+                            <p>High-impact Bangalore Metro advertising, Digital Billboard networks, and Mall DOOH solutions. We place your brand where it can't be missed—at the heart of the capital's movement.</p>
+                            <a href="media-offerings.html" class="tab-pane-link" style="background:#fff; color:#FF0080;">View Media Offerings</a>
+                        </div>
+                        <div class="pane-graphic">
+                            <img src="advertising_service_card.png" alt="Advertising Solutions">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IPL Tab -->
+                <div id="ipl-pane" class="tab-pane pane-ipl">
+                    <div class="pane-inner">
+                        <div class="pane-text">
+                            <h2>Dominate the Stadium during *Tata IPL 2026*</h2>
+                            <p>Capture millions of eyeballs with live OTT ad placements, horizontal L-Bands, and interactive scoreboard billboards on JioCinema and beyond. Real-time sports advertising at scale.</p>
+                            <a href="media-offerings.html#ipl" class="tab-pane-link" style="background:#fff; color:#FF6F00;">View IPL Plans</a>
+                        </div>
+                        <div class="pane-graphic">
+                            <img src="ipl_lband_1.webp" alt="Tata IPL Ads">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function switchTab(btn, paneId) {
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+            
+            btn.classList.add('active');
+            document.getElementById(paneId + '-pane').classList.add('active');
+        }
+    </script>
+
+
 
             <!-- Podcast Section -->
             <section class="podcast-section full-bleed-podcast">
@@ -1391,6 +1354,76 @@
                                 our goals perfectly and executed beyond expectations.</div>
                             <div class="review-footer">
                                 <div class="review-rating">★★★★☆</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section id="faq" class="faq-section">
+                <div class="faq-container">
+                    <div class="faq-header">
+                        <h2>Frequently Asked Questions</h2>
+                    </div>
+                    <div class="faq-list">
+                        <div class="faq-item" onclick="this.classList.toggle('active')">
+                            <div class="faq-question">
+                                <span>What services does Paaru Studio offer?</span>
+                                <span class="faq-icon">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                We offer end-to-end Video Production (Commercials, Corporate Films, Social Media Content), E-commerce Solutions (Product Shoots, Cataloguing), and Media Buying (OOH/DOOH) services tailored for premium brands.
+                            </div>
+                        </div>
+
+                        <div class="faq-item" onclick="this.classList.toggle('active')">
+                            <div class="faq-question">
+                                <span>Does Paaru Studio handle end-to-end production?</span>
+                                <span class="faq-icon">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                Yes, we handle everything from research, scriptwriting, and storyboarding to professional filming, post-production, VFX, and final delivery. We ensure a seamless experience with zero ambiguity.
+                            </div>
+                        </div>
+
+                        <div class="faq-item" onclick="this.classList.toggle('active')">
+                            <div class="faq-question">
+                                <span>What is the typical turnaround time for a project?</span>
+                                <span class="faq-icon">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                Turnaround time depends on the scope, but digital ad films typically take 7-14 days from concept to final delivery. We also offer expedited schedules for specific high-priority campaigns.
+                            </div>
+                        </div>
+
+                        <div class="faq-item" onclick="this.classList.toggle('active')">
+                            <div class="faq-question">
+                                <span>Do you provide E-commerce cataloguing services?</span>
+                                <span class="faq-icon">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                Absolutely. We specialize in high-end product cinematography and automated catalogue solutions for platforms like Amazon, Shopify, and Myntra, ensuring your products stand out with visual excellence.
+                            </div>
+                        </div>
+
+                        <div class="faq-item" onclick="this.classList.toggle('active')">
+                            <div class="faq-question">
+                                <span>Where are you located and do you work globally?</span>
+                                <span class="faq-icon">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                Our head office is in Bangalore, India, but we serve clients nationwide and globally, delivering world-class visual content for diverse markets across different continents.
+                            </div>
+                        </div>
+
+                        <div class="faq-item" onclick="this.classList.toggle('active')">
+                            <div class="faq-question">
+                                <span>How can I get a quote for my project?</span>
+                                <span class="faq-icon">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                You can fill out our 'Get Started' form on the website or reach out directly at info@paarustudio.com. We typically respond with a preliminary estimate and consultation within 24 hours.
                             </div>
                         </div>
                     </div>

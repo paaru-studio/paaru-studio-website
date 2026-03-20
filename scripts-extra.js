@@ -98,9 +98,9 @@ document.addEventListener('DOMContentLoaded', function () {
         var width = cachedWidth || computeWidth();
         track.style.transform = 'translateX(' + (-index * width) + 'px)';
     }
-    function wrap(v) { var len = items().length; if (len === 0) return 0; return (v % len + len) % len; }
+    function wrap(v) { var len = items().length; if (len === 0) return 0; return Math.max(0, Math.min(v, len - 1)); }
     var isAnimating = false;
-    var autoMotion = { enabled: true, amplitude: 15, speed: 0.0012, phase: 0, rafId: null, running: false };
+    var autoMotion = { enabled: false, amplitude: 15, speed: 0.0012, phase: 0, rafId: null, running: false };
     function startAutoMotion() {
         if (!autoMotion.enabled || autoMotion.running) return;
         autoMotion.running = true;
@@ -128,24 +128,6 @@ document.addEventListener('DOMContentLoaded', function () {
     nextBtn && nextBtn.addEventListener('click', function () { index = wrap(index + 1); update(); });
     
     var viewport = carousel.querySelector('.carousel-viewport');
-    if (viewport) {
-        var hoverTicking = false;
-        viewport.addEventListener('mousemove', function (e) {
-            if (!hoverTicking) {
-                window.requestAnimationFrame(function () {
-                    var rect = viewport.getBoundingClientRect();
-                    var px = (e.clientX - rect.left) / rect.width;
-                    var slideW = cachedWidth || computeWidth();
-                    var total = slideW * items().length - rect.width;
-                    if (total <= 0) { hoverTicking = false; return; }
-                    var shift = Math.round((px - 0.5) * 2 * total * 0.6);
-                    track.style.transform = 'translateX(' + (-index * slideW + shift) + 'px)';
-                    hoverTicking = false;
-                });
-                hoverTicking = true;
-            }
-        }, { passive: true });
-        viewport.addEventListener('mouseleave', function () { update(); });
-    }
+    // Hover ticking disabled to remove cursor hover effect on videos
     setTimeout(startAutoMotion, 250);
 })();
