@@ -31,8 +31,11 @@
     <link rel="preconnect" href="https://www.youtube.com" crossorigin>
     <link rel="preconnect" href="https://i.ytimg.com" crossorigin>
     <link rel="preconnect" href="https://www.instagram.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="https://www.youtube.com">
     <link rel="dns-prefetch" href="https://i.ytimg.com">
+    <link rel="dns-prefetch" href="https://api.whatsapp.com">
 
     <!-- Critical Assets Preload -->
     <link rel="preload" href="fonts.css" as="style">
@@ -78,6 +81,9 @@
       ]
     }
     </script>
+    <style>
+        :root{--accent-color:#FF0000;--primary-bg:#000;--font-body:'Inter',-apple-system,BlinkMacSystemFont,sans-serif}.navbar{position:fixed;top:0;left:0;right:0;height:79px;background:#fff;z-index:999998;display:flex;justify-content:center;align-items:center;box-shadow:0 2px 15px rgba(0,0,0,0.08)}body{margin:0;background:#000;color:#fff;font-family:var(--font-body);overflow-x:hidden}.hero{padding-top:130px;position:relative;min-height:100vh}.top-banner{background:#111;color:#fff;height:40px;display:flex;align-items:center;justify-content:center;font-size:14px}
+    </style>
 </head>
 
 
@@ -177,6 +183,7 @@
     <!-- Hero Section -->
     <section class="hero">
         <img class="hero-poster" src="hero_poster.jpg" fetchpriority="high" alt="Video Production Hero"
+            width="1920" height="1080" decoding="async"
             style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; z-index: -1;">
 
         <iframe class="hero-bg-iframe" aria-hidden="true"
@@ -1307,7 +1314,7 @@
                                 style="background:#fff; color:#0056FF;">Explore Our Solutions</a>
                         </div>
                         <div class="pane-graphic">
-                            <img src="ecommerce_service_card.png" alt="E-commerce Solutions">
+                            <img loading="lazy" decoding="async" src="ecommerce_service_card.png" alt="E-commerce Solutions" width="400" height="400">
                         </div>
                     </div>
                 </div>
@@ -1324,7 +1331,7 @@
                                 style="background:#fff; color:#FF0080;">View Media Offerings</a>
                         </div>
                         <div class="pane-graphic">
-                            <img src="advertising_service_card.png" alt="Advertising Solutions">
+                            <img loading="lazy" decoding="async" src="advertising_service_card.png" alt="Advertising Solutions" width="400" height="400">
                         </div>
                     </div>
                 </div>
@@ -1341,7 +1348,7 @@
                                 style="background:#fff; color:#FF6F00;">View IPL Plans</a>
                         </div>
                         <div class="pane-graphic">
-                            <img src="ipl_lband_1.webp" alt="Tata IPL Ads">
+                            <img loading="lazy" decoding="async" src="ipl_lband_1.webp" alt="Tata IPL Ads" width="400" height="400">
                         </div>
                     </div>
                 </div>

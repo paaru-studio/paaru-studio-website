@@ -31,6 +31,9 @@
 
         <link rel="dns-prefetch" href="https://www.youtube.com">
     <link rel="dns-prefetch" href="https://i.ytimg.com">
+    <link rel="dns-prefetch" href="https://api.whatsapp.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
 <link rel="preload" href="fonts.css" as="style" onload="this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="fonts.css"></noscript>
@@ -56,6 +59,9 @@
     }
     </script>
 
+    <style>
+        :root{--accent-color:#FF0000;--primary-bg:#000;--font-body:'Inter',-apple-system,BlinkMacSystemFont,sans-serif}.navbar{position:fixed;top:0;left:0;right:0;height:79px;background:#fff;z-index:999998;display:flex;justify-content:center;align-items:center}body{margin:0;background:#000;color:#fff;font-family:var(--font-body);overflow-x:hidden}.hero{padding:140px 0 100px;min-height:80vh}
+    </style>
 </head>
 
 <body class="services-page ecommerce-page">
@@ -74,8 +80,8 @@
         <div class="container">
             <div class="nav-content">
                 <a href="ecommerce.html" class="logo">
-                    <img loading="lazy" decoding="async" src="logo.webp" alt="Paaru Studio Logo" class="logo-image"
-                        width="40" height="40" loading="eager">
+                    <img loading="eager" decoding="async" src="logo.webp" alt="Paaru Studio Logo" class="logo-image"
+                        width="40" height="40">
                     <span class="logo-text">
                         <span class="logo-text-static">PAARU</span>
                         <span class="logo-text-flip">
@@ -294,12 +300,12 @@
     <section class="hero service-page-hero">
         <div class="video-hero-bg-container">
             <div class="video-hero-overlay"></div>
-            <div class="hero-bg-image" style="
-                position: absolute; inset: 0;
-                background: url('ecommerce_hero_bg.webp') center center / cover no-repeat;
-                opacity: 0.6;
-                animation: kenBurns 20s ease-in-out infinite alternate;
-            "></div>
+            <img src="ecommerce_hero_bg.webp" 
+                 alt="E-commerce Product Photography Background"
+                 fetchpriority="high"
+                 decoding="async"
+                 class="hero-bg-image"
+                 style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.6; animation: kenBurns 20s ease-in-out infinite alternate;">
         </div>
         <style>
             @keyframes kenBurns {
