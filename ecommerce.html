@@ -153,23 +153,20 @@
 
     <!-- Page Header -->
     <style>
-        /* Robust background implementation for E-commerce page */
-        .ecommerce-hero {
-            background: #000 !important;
+        .service-page-hero {
             position: relative;
-            overflow: hidden;
-            padding: 200px 0 100px !important;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
+            padding: 120px 20px 100px;
+            color: #fff;
+            overflow: hidden;
+            background: #000;
         }
 
-        /* Remove default hero overlays and pseudo-elements */
-        .ecommerce-hero::before,
-        .ecommerce-hero::after {
-            display: none !important;
-            content: none !important;
-        }
-
-        .ecommerce-hero-bg-container {
+        .video-hero-bg-container {
             position: absolute;
             top: 0;
             left: 0;
@@ -180,37 +177,152 @@
             background: #000;
         }
 
-        .ecommerce-hero-bg-image {
-            width: 100%;
-            height: 100%;
-            background: url('ecommerce_hero_bg.webp') center center / cover no-repeat;
-            opacity: 0.75;
-            /* Premium 75% visibility */
+        .service-page-hero .hero-bg-iframe {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100vw;
+            height: 56.25vw;
+            min-height: 100vh;
+            min-width: 177.77vh;
+            transform: translate(-50%, -50%) scale(1.15);
+            opacity: 1;
+            border: none;
         }
 
-        .ecommerce-hero-overlay {
+        .video-hero-overlay {
             position: absolute;
             inset: 0;
-            background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.7) 100%);
+            background: rgba(0, 5, 15, 0.7);
             z-index: 1;
         }
 
-        .ecommerce-hero .container {
+        .hero-content-center {
             position: relative;
             z-index: 2;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero-content-center h1 {
+            font-size: 64px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+            background: linear-gradient(180deg, #fff 0%, #a0c0ff 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-content-center p {
+            font-size: 20px;
+            color: #d1d5db;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        .hero-btn-pill {
+            display: inline-block;
+            background: #fff;
+            color: #000;
+            padding: 16px 36px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 16px;
+            transition: transform 0.3s;
+        }
+
+        .hero-btn-pill:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+        }
+
+        .trusted-by-strip {
+            position: absolute;
+            bottom: 30px;
+            left: 0;
+            width: 100%;
+            z-index: 2;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .trusted-by-text {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.5);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .trusted-by-text::before,
+        .trusted-by-text::after {
+            content: "";
+            height: 1px;
+            width: 150px;
+            background: rgba(255, 255, 255, 0.2);
+            margin: 0 15px;
+        }
+
+        .trusted-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            opacity: 0.8;
+            filter: grayscale(100%) brightness(200%);
+        }
+
+        .trusted-logos img {
+            max-height: 40px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        @media(max-width: 768px) {
+            .hero-content-center h1 { font-size: 42px; }
+            .trusted-logos { gap: 20px; }
         }
     </style>
-    <section class="hero ecommerce-hero">
-        <div class="ecommerce-hero-bg-container">
-            <div class="ecommerce-hero-bg-image"></div>
-            <div class="ecommerce-hero-overlay"></div>
+
+    <section class="hero service-page-hero">
+        <div class="video-hero-bg-container">
+            <div class="video-hero-overlay"></div>
+            <div class="hero-bg-image" style="
+                position: absolute; inset: 0;
+                background: url('ecommerce_hero_bg.webp') center center / cover no-repeat;
+                opacity: 0.6;
+                animation: kenBurns 20s ease-in-out infinite alternate;
+            "></div>
         </div>
-        <div class="container">
-            <h1 class="page-title">
-                E-commerce Product Photography &<br>
-                Catalog Video Services in Bangalore
-            </h1>
-            <p class="page-subtitle">Professional product catalogue services for Amazon, Flipkart, and Myntra</p>
+        <style>
+            @keyframes kenBurns {
+                0%   { transform: scale(1) translate(0, 0); }
+                50%  { transform: scale(1.06) translate(-1%, -1%); }
+                100% { transform: scale(1.1) translate(1%, 1%); }
+            }
+        </style>
+
+        <div class="container hero-content-center">
+            <h1>E-commerce Content Solutions</h1>
+            <p>Elevate your online presence with professional product cataloguing, lifestyle shoots, and cinematic unboxing videos optimized for Amazon, Flipkart, and Myntra.</p>
+            <a href="contact.html" class="hero-btn-pill">Scale Your Sales</a>
+        </div>
+
+        <div class="trusted-by-strip">
+            <div class="trusted-by-text">TRUSTED BY CONGLOMERATES, ENTERPRISES AND STARTUPS ALIKE</div>
+            <div class="trusted-logos">
+                <img src="Logos/Logo_1.png" alt="Client Logo 1" height="40" loading="lazy">
+                <img src="Logos/Logo_2.png" alt="Client Logo 2" height="40" loading="lazy">
+                <img src="Logos/Logo_3.png" alt="Client Logo 3" height="40" loading="lazy">
+                <img src="Logos/sugar_fit_logo.png" alt="Sugar Fit Logo" height="40" loading="lazy">
+            </div>
         </div>
     </section>
 
@@ -297,212 +409,203 @@
         </div>
     </section>
 
-    <!-- Move: E-commerce detail block placed here so it appears directly under the page header -->
-    <div class="container">
-        <div class="ecommerce-detail about-section"
-            style="background: #0a0a0a; border-radius: 18px; position: relative; margin: 40px 0; box-shadow: 0 8px 32px rgba(0,0,0,0.45); overflow: hidden;">
-            <div class="ecommerce-image" style="position: relative; z-index: 2;">
-                <picture>
-                    <source srcset="e_commerce.webp" type="image/webp">
-                    <picture>
-                        <source srcset="e_commerce_optimized.webp" type="image/webp">
-                        <img loading="lazy" decoding="async" src="e_commerce_optimized.webp" alt="E-commerce showcase" /
-                            width="400" height="229">
-                    </picture>
-                </picture>
-            </div>
-            <div class="ecommerce-copy about-content"
-                style="max-width: 900px; margin: 0 auto; position: relative; z-index: 2; padding: 32px 24px; color: #fff;">
-                <h2 style="font-size: 48px; font-weight: 800; letter-spacing: -1px; margin-bottom: 15px; color: #fff;">
-                    AUTHORISED E-COMMERCE SERVICES PROVIDER</h2>
-                <div class="underline" style="margin-bottom: 30px;"></div>
-                <p class="large-text"
-                    style="font-size: 24px; line-height: 1.7; margin-bottom: 30px; color: #fff; font-weight: 400;">
-                    Elevate Your Brand with <span style="color: #f59e0b;">Paaru Studio</span> – Your Trusted E-commerce
-                    Partner</p>
-                <p style="font-size: 18px; color: #a0a0a0; margin-bottom: 25px; line-height: 1.8;">At <span
-                        style="color: #f59e0b;">Paaru Studio</span>, we deliver end-to-end E-commerce solutions tailored
-                    for premium brands across leading platforms. Our work consistently earns recognition, not only for
-                    driving sales but also for strengthening brand presence.</p>
-                <p style="font-size: 18px; color: #a0a0a0; margin-bottom: 25px; line-height: 1.8;">In today’s fast-paced
-                    digital ecosystem, success in business hinges on two core actions: <strong>buying and
-                        selling</strong>. While these were once limited to traditional in-store exchanges, the landscape
-                    has shifted. <strong>E-commerce has broken down all barriers</strong>—enabling global reach,
-                    seamless operations, and efficient brand positioning.</p>
-                <p style="font-size: 18px; color: #a0a0a0; margin-bottom: 25px; line-height: 1.8;">From <strong>product
-                        cataloging to brand storytelling</strong>, from <strong>inventory management</strong> to
-                    converting leads into loyal customers, E-commerce is no longer just a digital tool—it’s a business
-                    growth engine.</p>
-            </div>
-        </div>
-    </div>
+    <!-- Intro Section -->
+    <style>
+        .yellow-strip-section {
+            background: linear-gradient(to bottom, #FF0000 0%, #000000 100%) !important;
+            width: 100vw !important;
+            margin-left: calc(50% - 50vw) !important;
+            position: relative;
+            padding: 100px 0;
+            color: #fff !important;
+        }
+        .yellow-strip-section h2 { font-size: 56px; font-weight: 800; margin-bottom: 20px; }
+        .yellow-strip-section .underline { background: #fff; width: 80px; height: 4px; margin-bottom: 40px; }
+    </style>
 
-    <!-- E-Commerce Services -->
-    <section class="ecommerce-services">
+    <section class="services-overview-intro yellow-strip-section">
         <div class="container">
             <div class="section-header">
-                <h2>COMPREHENSIVE E-COMMERCE SERVICES</h2>
+                <h2>Our E-commerce Solutions</h2>
                 <div class="underline"></div>
             </div>
 
-        </div>
-
-        <div class="services-grid">
-            <div class="service-item">
-                <div class="service-banner"
-                    style="width: 100%; height: 260px; border-radius: 8px; overflow: hidden; margin-bottom: 16px;">
-                    <img loading="lazy" decoding="async" src="product_shoot_banner.webp" alt="Product Photography"
-                        style="width: 100%; height: 100%; object-fit: cover;" width="400" height="275">
+            <div class="what-we-offer-intro" style="display: flex; flex-wrap: wrap; align-items: center; gap: 80px; margin-bottom: 40px; padding: 40px 0;">
+                <div class="intro-text" style="flex: 1 1 500px;">
+                    <h3 style="font-size: 48px; margin-bottom: 30px; font-weight: 800; line-height: 1.2; letter-spacing: -1px;"> Authorized E-commerce <span style="display: block; color: rgba(255,255,255,0.7);">Service Provider</span></h3>
+                    <p style="font-size: 22px; margin-bottom: 25px; line-height: 1.5; color: #fff; font-weight: 400; opacity: 0.95;">
+                        Elevate your brand with Paaru Studio – your trusted partner for high-conversion e-commerce content. We deliver end-to-end solutions tailored for premium brands across global marketplaces.
+                    </p>
+                    <p style="font-size: 20px; line-height: 1.6; color: #fff; opacity: 0.85; font-weight: 300;">
+                        In today's fast-paced digital ecosystem, your visual content is your salesperson. From product cataloguing to brand storytelling, we help you break barriers and drive measurable business growth.
+                    </p>
                 </div>
-                <h3>Product Photography</h3>
-                <p>High-quality product shoots with professional lighting, styling, and multiple angles for e-commerce
-                    catalogs.</p>
-                <ul class="service-features">
-                    <li>White Background Shots</li>
-                    <li>Multi-angle Photography</li>
-                    <li>Detail & Close-up Shots</li>
-                    <li>Professional Lighting Setup</li>
-                    <li>Studio & On-location Shoots</li>
-                    <li>High-resolution Images</li>
-                </ul>
-            </div>
-
-            <div class="service-item">
-                <div class="service-banner"
-                    style="width: 100%; height: 260px; border-radius: 8px; overflow: hidden; margin-bottom: 16px;">
-                    <img loading="lazy" decoding="async" src="lifestyle_shoot_banner.webp" alt="Lifestyle Shoots"
-                        style="width: 100%; height: 100%; object-fit: cover;" width="400" height="600">
+                <div class="intro-video" style="flex: 1 1 300px; display: flex; justify-content: center;">
+                    <div class="reel" style="width: 100%; max-width: 315px;">
+                        <div class="video-embed" data-video-id="oO9ZeIc-aek">
+                            <button class="video-poster" aria-label="Play reel – E-commerce Product Reel by Paaru Studio Bangalore"
+                                style="background-image: url('https://i.ytimg.com/vi/oO9ZeIc-aek/maxresdefault.jpg')"></button>
+                        </div>
+                        <p style="font-size: 13px; color: #fff; margin-top: 15px; text-align: center; opacity: 0.85;">
+                            E-commerce product reel — Paaru Studio, Bangalore.
+                        </p>
+                        <script type="application/ld+json">
+                        {
+                          "@context": "https://schema.org",
+                          "@type": "VideoObject",
+                          "name": "E-commerce Product Shoot Reel – Paaru Studio Bangalore",
+                          "description": "A dynamic product shoot reel showcasing Paaru Studio's e-commerce photography, lifestyle shoots, and catalog video services for Amazon, Flipkart, and Myntra sellers in Bangalore.",
+                          "thumbnailUrl": "https://img.youtube.com/vi/oO9ZeIc-aek/maxresdefault.jpg",
+                          "uploadDate": "2024-08-01T10:00:00+05:30",
+                          "duration": "PT0M30S",
+                          "embedUrl": "https://www.youtube.com/embed/oO9ZeIc-aek",
+                          "contentUrl": "https://www.youtube.com/watch?v=oO9ZeIc-aek",
+                          "publisher": {
+                            "@type": "Organization",
+                            "name": "Paaru Studio",
+                            "url": "https://paarustudio.com"
+                          },
+                          "keywords": "ecommerce product photography bangalore, amazon product shoot, flipkart catalog video, product shoot reel"
+                        }
+                        </script>
+                    </div>
                 </div>
-                <h3>Lifestyle Shoots</h3>
-                <p>Contextual product photography showing your products in real-life settings to boost customer
-                    engagement and conversion.</p>
-                <ul class="service-features">
-                    <li>Lifestyle Photography</li>
-                    <li>Model Shoots</li>
-                    <li>Context-based Imagery</li>
-                    <li>Seasonal Themes</li>
-                    <li>Brand Storytelling</li>
-                    <li>Mood & Atmosphere</li>
-                </ul>
-            </div>
 
-            <div class="service-item">
-                <div class="service-banner"
-                    style="width: 100%; height: 260px; border-radius: 8px; overflow: hidden; margin-bottom: 16px;">
-                    <img loading="lazy" decoding="async" src="unboxing_video_banner.webp" alt="Unboxing Videos"
-                        style="width: 100%; height: 100%; object-fit: cover;" width="400" height="267">
-                </div>
-                <h3>Unboxing Videos</h3>
-                <p>Engaging unboxing video content optimized for Amazon, Flipkart, and social media platforms to drive
-                    sales.</p>
-                <ul class="service-features">
-                    <li>Professional Unboxing Videos</li>
-                    <li>Product Feature Highlights</li>
-                    <li>Close-up Details</li>
-                    <li>Engaging Narration</li>
-                    <li>Platform Optimization</li>
-                    <li>HD & 4K Quality</li>
-                </ul>
-            </div>
-
-            <div class="service-item">
-                <div class="service-banner"
-                    style="width: 100%; height: 260px; border-radius: 8px; overflow: hidden; margin-bottom: 16px;">
-                    <img loading="lazy" decoding="async" src="image_retouch_banner.webp"
-                        alt="Image Editing & Retouching" style="width: 100%; height: 100%; object-fit: cover;"
-                        width="400" height="600">
-                </div>
-                <h3>Image Editing & Retouching</h3>
-                <p>Professional image editing services to ensure your product photos meet marketplace standards and look
-                    stunning.</p>
-                <ul class="service-features">
-                    <li>Background Removal</li>
-                    <li>Color Correction</li>
-                    <li>Shadow & Reflection</li>
-                    <li>Dust & Scratch Removal</li>
-                    <li>Image Resizing</li>
-                    <li>Format Optimization</li>
-                </ul>
-            </div>
-
-            <div class="service-item">
-                <div class="service-banner"
-                    style="width: 100%; height: 260px; border-radius: 8px; overflow: hidden; margin-bottom: 16px;">
-                    <img loading="lazy" decoding="async" src="cataloge_creation_banner.webp" alt="Catalog Creation"
-                        style="width: 100%; height: 100%; object-fit: cover;" width="400" height="600">
-                </div>
-                <h3>Catalog Creation</h3>
-                <p>Complete catalog design and formatting for seamless onboarding and listing on major e-commerce
-                    platforms.</p>
-                <ul class="service-features">
-                    <li>Amazon Catalog Setup</li>
-                    <li>Flipkart Listing</li>
-                    <li>Myntra Product Upload</li>
-                    <li>SKU Management</li>
-                    <li>Product Descriptions</li>
-                    <li>Keyword Optimization</li>
-                </ul>
-            </div>
-
-            <div class="service-item">
-                <div class="service-banner"
-                    style="width: 100%; height: 260px; border-radius: 8px; overflow: hidden; margin-bottom: 16px;">
-                    <img loading="lazy" decoding="async" src="product_showcase_banner.webp"
-                        alt="Product Showcase Videos" style="width: 100%; height: 100%; object-fit: cover;" width="400"
-                        height="267">
-                </div>
-                <h3>Product Showcase Videos</h3>
-                <p>Dynamic product videos highlighting features, benefits, and usage for maximum customer engagement.
-                </p>
-                <ul class="service-features">
-                    <li>360° Product Videos</li>
-                    <li>Feature Demonstration</li>
-                    <li>How-to Videos</li>
-                    <li>Comparison Videos</li>
-                    <li>Size Guide Videos</li>
-                    <li>Brand Story Videos</li>
-                </ul>
-            </div>
-
-            <div class="service-item">
-                <div class="service-banner"
-                    style="width: 100%; height: 260px; border-radius: 8px; overflow: hidden; margin-bottom: 16px;">
-                    <img loading="lazy" decoding="async" src="infographic_design_banner.webp" alt="Infographic Design"
-                        style="width: 100%; height: 100%; object-fit: cover;" width="400" height="201">
-                </div>
-                <h3>Infographic Design</h3>
-                <p>Eye-catching infographic images that communicate product features, specifications, and benefits
-                    effectively.</p>
-                <ul class="service-features">
-                    <li>Feature Infographics</li>
-                    <li>Size Charts</li>
-                    <li>Comparison Charts</li>
-                    <li>Benefits Visualization</li>
-                    <li>Technical Specifications</li>
-                    <li>Usage Instructions</li>
-                </ul>
-            </div>
-
-            <div class="service-item">
-                <div class="service-banner"
-                    style="width: 100%; height: 260px; border-radius: 8px; overflow: hidden; margin-bottom: 16px;">
-                    <img loading="lazy" decoding="async" src="aplus_content_banner.webp" alt="A+ Content Creation"
-                        style="width: 100%; height: 100%; object-fit: cover;" width="400" height="267">
-                </div>
-                <h3>A+ Content Creation</h3>
-                <p>Premium enhanced brand content for Amazon and other platforms to improve conversion rates.</p>
-                <ul class="service-features">
-                    <li>Enhanced Brand Content</li>
-                    <li>Brand Story Pages</li>
-                    <li>Comparison Modules</li>
-                    <li>Product Feature Modules</li>
-                    <li>Banner Design</li>
-                    <li>Custom Layouts</li>
-                </ul>
             </div>
         </div>
+    </section>
 
+    <!-- Sticky Stack Services Section -->
+    <style>
+        .ecommerce-services-sticky {
+            padding: 100px 0;
+            background: #000;
+        }
 
+        @media(min-width: 768px) {
+            .ecommerce-services-grid {
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 0 !important;
+                width: 100% !important;
+            }
+
+            .ecommerce-services-grid .service-item {
+                position: sticky !important;
+                width: 100% !important;
+                max-width: 1150px !important;
+                margin: 0 auto 100px auto !important;
+                box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5) !important;
+                border-radius: 40px !important;
+                display: flex !important;
+                flex-direction: row !important;
+                align-items: center !important;
+                gap: 60px !important;
+                padding: 60px !important;
+                will-change: transform, filter;
+                color: #fff !important;
+                backface-visibility: hidden !important;
+                -webkit-font-smoothing: antialiased !important;
+            }
+
+            .ecommerce-services-grid .service-item h3 { font-size: 42px !important; margin-bottom: 20px !important; }
+            .ecommerce-services-grid .service-item p { font-size: 18px !important; opacity: 0.9 !important; }
+
+            .ecommerce-services-grid .service-item .service-banner {
+                flex: 1 1 50% !important;
+                width: 50% !important;
+                height: 100% !important;
+                min-height: 380px !important;
+                margin-bottom: 0 !important;
+            }
+
+            .ecommerce-services-grid .service-item .service-content {
+                flex: 1 1 50% !important;
+                width: 50% !important;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            /* Stacked colors */
+            .ecommerce-services-grid .service-item:nth-child(1) { top: 100px; z-index: 10; background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%) !important; color: #000 !important; }
+            .ecommerce-services-grid .service-item:nth-child(1) h3, .ecommerce-services-grid .service-item:nth-child(1) p { color: #000 !important; }
+
+            .ecommerce-services-grid .service-item:nth-child(2) { top: 130px; z-index: 20; background: linear-gradient(135deg, #FF0000 0%, #800000 100%) !important; }
+            .ecommerce-services-grid .service-item:nth-child(3) { top: 160px; z-index: 30; background: linear-gradient(135deg, #FF0080 0%, #800040 100%) !important; }
+            .ecommerce-services-grid .service-item:nth-child(4) { top: 190px; z-index: 40; background: linear-gradient(135deg, #4F46E5 0%, #312E81 100%) !important; }
+        }
+
+        @media(max-width: 767px) {
+            .ecommerce-services-grid .service-item { flex-direction: column !important; padding: 20px !important; margin-bottom: 40px; background: #111; border-radius: 20px; }
+            .ecommerce-services-grid .service-item .service-banner { width: 100% !important; min-height: 250px !important; margin-bottom: 20px !important; }
+        }
+    </style>
+
+    <section class="ecommerce-services-sticky">
+        <div class="container">
+            <div class="ecommerce-services-grid">
+                <!-- Item 1 -->
+                <div class="service-item">
+                    <div class="service-banner">
+                        <img src="product_shoot_banner.webp" alt="Product Photography" style="width:100%; height:100%; object-fit:cover; border-radius:20px;">
+                    </div>
+                    <div class="service-content">
+                        <h3>Product Photography</h3>
+                        <p>High-quality catalog shoots with professional lighting, styling, and multiple angles optimized for global marketplaces.</p>
+                        <ul class="service-features" style="list-style:none; padding:0; margin-top:20px;">
+                            <li>✓ White Background Shots</li>
+                            <li>✓ Multi-angle Views</li>
+                            <li>✓ Lifestyle Context</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="service-item">
+                    <div class="service-banner">
+                        <img src="unboxing_video_banner.webp" alt="Unboxing Videos" style="width:100%; height:100%; object-fit:cover; border-radius:20px;">
+                    </div>
+                    <div class="service-content">
+                        <h3>Unboxing Videos</h3>
+                        <p>Engaging video content that builds trust and drives conversion on Amazon, Flipkart, and social media.</p>
+                        <ul class="service-features" style="list-style:none; padding:0; margin-top:20px;">
+                            <li>✓ Feature Highlights</li>
+                            <li>✓ HD / 4K Production</li>
+                            <li>✓ Platform Optimized</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="service-item">
+                    <div class="service-banner">
+                        <img src="aplus_content_banner.webp" alt="A+ Content" style="width:100%; height:100%; object-fit:cover; border-radius:20px;">
+                    </div>
+                    <div class="service-content">
+                        <h3>A+ Content Creation</h3>
+                        <p>Premium enhanced brand content that tells your brand story and significantly boosts sales velocity.</p>
+                        <ul class="service-features" style="list-style:none; padding:0; margin-top:20px;">
+                            <li>✓ Comparison Modules</li>
+                            <li>✓ Narrative Flow</li>
+                            <li>✓ Conversion Focused</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Item 4 -->
+                <div class="service-item">
+                    <div class="service-banner">
+                        <img src="infographic_design_banner.webp" alt="Infographics" style="width:100%; height:100%; object-fit:cover; border-radius:20px;">
+                    </div>
+                    <div class="service-content">
+                        <h3>Infographic Design</h3>
+                        <p>Visual storytelling that explains complex features and dimensions through clean, high-impact graphic design.</p>
+                        <ul class="service-features" style="list-style:none; padding:0; margin-top:20px;">
+                            <li>✓ Technical Explainer</li>
+                            <li>✓ Feature Callouts</li>
+                            <li>✓ Size & Fit Guides</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -588,56 +691,111 @@
         </div>
     </section>
 
-    <!-- Process Section -->
-    <section class="process-section">
+    <!-- Process Section (Vertical Timeline) -->
+    <style>
+        .timeline-section { padding: 120px 0; background: #fff; color: #000; overflow: hidden; }
+        .timeline-main-title { font-size: 56px; font-weight: 800; text-align: left; margin-bottom: 100px; color: #000 !important; letter-spacing: -2px; }
+        .timeline-wrapper { position: relative; max-width: 1400px; margin: 0 auto; }
+        .timeline-line-bg { position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; background: #f0f0f0; transform: translateX(-50%); }
+        .timeline-line-progress { position: absolute; left: 50%; top: 0; width: 2px; background: #FF0000; transform: translateX(-50%); height: 0%; transition: height 0.1s linear; }
+        .timeline-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 150px; position: relative; z-index: 2; }
+        .timeline-col { width: 42%; }
+        .timeline-point { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; }
+        .timeline-dot { width: 14px; height: 14px; background: #e0e0e0; border-radius: 50%; transition: all 0.4s ease; }
+        .timeline-row.active .timeline-dot { background: #FF0000; box-shadow: 0 0 15px rgba(255, 0, 0, 0.4); transform: scale(1.4); }
+        .timeline-left h3 { font-size: 38px; font-weight: 700; color: #000 !important; }
+        @media (max-width: 1024px) {
+            .timeline-line-bg, .timeline-line-progress { left: 30px; transform: none; }
+            .timeline-row { flex-direction: column; align-items: flex-start; padding-left: 80px; margin-bottom: 80px; }
+            .timeline-col { width: 100%; }
+            .timeline-point { left: 30px; top: 0; transform: translate(-50%, 0); }
+        }
+    </style>
+
+    <section class="timeline-section">
         <div class="container">
-            <div class="section-header">
-                <h2>OUR PROCESS</h2>
-                <div class="underline"></div>
-            </div>
-            <div class="steps-container">
-                <div class="step-item step-gradient-1">
-                    <div class="step-content">
-                        <div class="step-number">01</div>
-                        <h3>Product Analysis</h3>
-                        <p>We analyze your products and understand your brand to create a tailored photography and
-                            content strategy.</p>
-                    </div>
+            <h2 class="timeline-main-title">How We Scale Your Brand</h2>
+            <div class="timeline-wrapper">
+                <div class="timeline-line-bg"></div>
+                <div class="timeline-line-progress"></div>
+
+                <div class="timeline-row">
+                    <div class="timeline-col timeline-left"><h3>01. Product Analysis</h3></div>
+                    <div class="timeline-point"><div class="timeline-dot"></div></div>
+                    <div class="timeline-col timeline-right"><p>We analyze your catalog and brand positioning to develop a high-impact content strategy.</p></div>
                 </div>
-                <div class="step-item step-gradient-2">
-                    <div class="step-content">
-                        <div class="step-number">02</div>
-                        <h3>Pre-Production Planning</h3>
-                        <p>Detailed planning including shot lists, styling requirements, props, and scheduling for
-                            efficient execution.</p>
-                    </div>
+                <div class="timeline-row">
+                    <div class="timeline-col timeline-left"><h3>02. Visual Planning</h3></div>
+                    <div class="timeline-point"><div class="timeline-dot"></div></div>
+                    <div class="timeline-col timeline-right"><p>Detailed pre-production including moodboards, styling requirements, and platform-specific shot lists.</p></div>
                 </div>
-                <div class="step-item step-gradient-3">
-                    <div class="step-content">
-                        <div class="step-number">03</div>
-                        <h3>Professional Shoot</h3>
-                        <p>High-quality photography and videography using professional equipment and experienced team.
-                        </p>
-                    </div>
+                <div class="timeline-row">
+                    <div class="timeline-col timeline-left"><h3>03. Premium Production</h3></div>
+                    <div class="timeline-point"><div class="timeline-dot"></div></div>
+                    <div class="timeline-col timeline-right"><p>Studio or on-location execution using state-of-the-art photography and cinematic video equipment.</p></div>
                 </div>
-                <div class="step-item step-gradient-4">
-                    <div class="step-content">
-                        <div class="step-number">04</div>
-                        <h3>Post-Production</h3>
-                        <p>Expert editing, retouching, and optimization to ensure platform compliance and visual
-                            excellence.</p>
-                    </div>
+                <div class="timeline-row">
+                    <div class="timeline-col timeline-left"><h3>04. High-End Editing</h3></div>
+                    <div class="timeline-point"><div class="timeline-dot"></div></div>
+                    <div class="timeline-col timeline-right"><p>Expert retouching, color grading, and A+ content layout design focused on conversion.</p></div>
                 </div>
-                <div class="step-item step-gradient-5">
-                    <div class="step-content">
-                        <div class="step-number">05</div>
-                        <h3>Delivery & Upload</h3>
-                        <p>Final deliverables with optional catalog upload and listing management services.</p>
-                    </div>
+                <div class="timeline-row">
+                    <div class="timeline-col timeline-left"><h3>05. Catalog Delivery</h3></div>
+                    <div class="timeline-point"><div class="timeline-dot"></div></div>
+                    <div class="timeline-col timeline-right"><p>Seamless delivery of platform-ready assets and optional catalog management services.</p></div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Scripts for animations -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.ecommerce-services-grid .service-item');
+            if (cards.length > 0 && window.innerWidth >= 768) {
+                window.addEventListener('scroll', () => {
+                    cards.forEach((card, i) => {
+                        const rect = card.getBoundingClientRect();
+                        const computedTop = parseInt(getComputedStyle(card).top);
+                        if (rect.top <= computedTop + 2 && i < cards.length - 1) {
+                            const nextCard = cards[i + 1];
+                            if (nextCard) {
+                                const nextRect = nextCard.getBoundingClientRect();
+                                const overlap = Math.max(0, rect.bottom - nextRect.top);
+                                const scale = Math.max(0.92, 1 - (overlap / window.innerHeight) * 0.3);
+                                card.style.transform = `scale(${scale}) translateZ(0)`;
+                                card.style.filter = `brightness(${Math.max(0.6, 1 - (overlap / window.innerHeight) * 1.2)})`;
+                            }
+                        } else {
+                            card.style.transform = 'scale(1) translateZ(0)';
+                            card.style.filter = 'brightness(1)';
+                        }
+                    });
+                }, { passive: true });
+            }
+
+            // Timeline Scroll
+            const wrapper = document.querySelector('.timeline-wrapper');
+            const progress = document.querySelector('.timeline-line-progress');
+            const rows = document.querySelectorAll('.timeline-row');
+            if (wrapper) {
+                window.addEventListener('scroll', () => {
+                    const rect = wrapper.getBoundingClientRect();
+                    const viewH = window.innerHeight;
+                    const startPoint = viewH * 0.5;
+                    let percent = 0;
+                    if (rect.top < startPoint) {
+                        percent = Math.max(0, Math.min(100, (startPoint - rect.top) / rect.height * 100));
+                    }
+                    if (progress) progress.style.height = percent + '%';
+                    rows.forEach(row => {
+                        if (row.getBoundingClientRect().top < startPoint + 50) row.classList.add('active');
+                        else row.classList.remove('active');
+                    });
+                }, { passive: true });
+            }
+        });
+    </script>
 
 
     <!-- Contact Section -->

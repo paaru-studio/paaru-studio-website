@@ -27,11 +27,13 @@
         content="Leading creative video agency in Bangalore with 11+ years of experience in TV, digital, and brand films.">
     <meta property="twitter:image" content="https://paarustudio.com/logo.webp">
 
-        <link rel="dns-prefetch" href="https://www.youtube.com">
+    <link rel="dns-prefetch" href="https://www.youtube.com">
     <link rel="dns-prefetch" href="https://i.ytimg.com">
     <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
-<link rel="preload" href="fonts.css" as="style" onload="this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="fonts.css"></noscript>
+    <link rel="preload" href="fonts.css" as="style" onload="this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="fonts.css">
+    </noscript>
     <link rel="preconnect" href="https://www.youtube.com">
     <link rel="preconnect" href="https://i.ytimg.com">
     <link rel="preconnect" href="https://www.instagram.com">
@@ -39,7 +41,9 @@
     <link rel="preload" href="logo.webp" as="image">
     <link rel="stylesheet" href="styles.min.css">
     <link rel="preload" href="popup-form.css" as="style" onload="this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="popup-form.css"></noscript>
+    <noscript>
+        <link rel="stylesheet" href="popup-form.css">
+    </noscript>
     <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -185,7 +189,7 @@
     <div class="mobile-nav-backdrop" aria-hidden="true"></div>
 
     <!-- Page Header -->
-    
+
     <style>
         .service-page-hero {
             position: relative;
@@ -199,6 +203,7 @@
             overflow: hidden;
             background: #000;
         }
+
         .video-hero-bg-container {
             position: absolute;
             top: 0;
@@ -209,6 +214,7 @@
             pointer-events: none;
             background: #000;
         }
+
         .service-page-hero .hero-bg-iframe {
             position: absolute;
             top: 50%;
@@ -221,33 +227,38 @@
             opacity: 1;
             border: none;
         }
+
         .video-hero-overlay {
             position: absolute;
             inset: 0;
             background: rgba(0, 5, 15, 0.7);
             z-index: 1;
         }
+
         .hero-content-center {
             position: relative;
             z-index: 2;
             max-width: 900px;
             margin: 0 auto;
         }
+
         .hero-content-center h1 {
             font-size: 64px;
             font-weight: 800;
             margin-bottom: 20px;
             letter-spacing: -1px;
-            background: linear-gradient(180deg, #fff 0%, #a0c0ff 100%);
+            background: linear-gradient(180deg, #fff 0%, #ff8888 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
         .hero-content-center p {
             font-size: 20px;
             color: #d1d5db;
             margin-bottom: 40px;
             line-height: 1.6;
         }
+
         .hero-btn-pill {
             display: inline-block;
             background: #fff;
@@ -259,10 +270,12 @@
             font-size: 16px;
             transition: transform 0.3s;
         }
+
         .hero-btn-pill:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(255,255,255,0.2);
+            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
         }
+
         .trusted-by-strip {
             position: absolute;
             bottom: 30px;
@@ -272,9 +285,10 @@
             text-align: center;
             padding: 0 20px;
         }
+
         .trusted-by-text {
             font-size: 12px;
-            color: rgba(255,255,255,0.5);
+            color: rgba(255, 255, 255, 0.5);
             letter-spacing: 2px;
             text-transform: uppercase;
             margin-bottom: 20px;
@@ -282,13 +296,16 @@
             align-items: center;
             justify-content: center;
         }
-        .trusted-by-text::before, .trusted-by-text::after {
+
+        .trusted-by-text::before,
+        .trusted-by-text::after {
             content: "";
             height: 1px;
             width: 150px;
-            background: rgba(255,255,255,0.2);
+            background: rgba(255, 255, 255, 0.2);
             margin: 0 15px;
         }
+
         .trusted-logos {
             display: flex;
             justify-content: center;
@@ -298,33 +315,51 @@
             opacity: 0.8;
             filter: grayscale(100%) brightness(200%);
         }
+
         .trusted-logos img {
             max-height: 40px;
             width: auto;
             object-fit: contain;
         }
+
         @media(max-width: 768px) {
-            .hero-content-center h1 { font-size: 42px; }
-            .trusted-logos { gap: 20px; }
+            .hero-content-center h1 {
+                font-size: 42px;
+            }
+
+            .trusted-logos {
+                gap: 20px;
+            }
         }
     </style>
 
     <section class="hero service-page-hero">
         <div class="video-hero-bg-container">
-            <iframe class="hero-bg-iframe" aria-hidden="true"
-                src="https://www.youtube.com/embed/S6vVIqh_sOo?autoplay=1&mute=1&controls=0&loop=1&playlist=S6vVIqh_sOo&playsinline=1&showinfo=0&rel=0&modestbranding=1&disablekb=1&iv_load_policy=3&fs=0"
-                title="Hero Background Video"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+            <div class="hero-bg-image" style="
+                position: absolute; inset: 0;
+                background: url('video_production_hero_bg.webp') center center / cover no-repeat;
+                opacity: 0.65;
+                animation: kenBurnsVP 22s ease-in-out infinite alternate;
+            "></div>
             <div class="video-hero-overlay"></div>
         </div>
-        
+        <style>
+            @keyframes kenBurnsVP {
+                0%   { transform: scale(1) translate(0, 0); }
+                50%  { transform: scale(1.07) translate(-1.5%, -0.5%); }
+                100% { transform: scale(1.12) translate(1%, 1.5%); }
+            }
+        </style>
+
+
         <div class="container hero-content-center">
             <h1>Video Production Services</h1>
-            <p>Recognized as a Leader in Cinematic Filmmaking and backed by elite strategic partnerships, we deliver enterprise-ready, premium video production services that scale seamlessly across departments and global campaigns.</p>
+            <p>Recognized as a Leader in Cinematic Filmmaking and backed by elite strategic partnerships, we deliver
+                enterprise-ready, premium video production services that scale seamlessly across departments and global
+                campaigns.</p>
             <a href="contact.html" class="hero-btn-pill">Consult Our Experts</a>
         </div>
-        
+
         <div class="trusted-by-strip">
             <div class="trusted-by-text">TRUSTED BY CONGLOMERATES, ENTERPRISES AND STARTUPS ALIKE</div>
             <div class="trusted-logos">
@@ -348,12 +383,13 @@
                 width: 100% !important;
                 padding-bottom: 0px;
             }
+
             .video-production-grid .service-item {
                 position: sticky !important;
                 width: 100% !important;
                 max-width: 1150px !important;
-                margin: 0 auto 100px auto !important; 
-                box-shadow: 0 40px 100px rgba(0,0,0,0.5) !important;
+                margin: 0 auto 100px auto !important;
+                box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5) !important;
                 border-radius: 40px !important;
                 display: flex !important;
                 flex-direction: row !important;
@@ -365,14 +401,17 @@
                 backface-visibility: hidden !important;
                 -webkit-font-smoothing: antialiased !important;
             }
+
             .video-production-grid .service-item h3 {
                 font-size: 42px !important;
                 margin-bottom: 20px !important;
             }
+
             .video-production-grid .service-item p {
                 font-size: 18px !important;
                 opacity: 0.9 !important;
             }
+
             .video-production-grid .service-item .service-link {
                 background: #fff !important;
                 padding: 14px 28px !important;
@@ -383,40 +422,49 @@
                 font-weight: 600 !important;
                 display: inline-block !important;
             }
-            
+
             .video-production-grid .service-item:nth-child(1) {
                 top: 100px;
                 z-index: 10;
                 background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%) !important;
                 color: #000 !important;
             }
+
             .video-production-grid .service-item:nth-child(1) h3,
             .video-production-grid .service-item:nth-child(1) p,
             .video-production-grid .service-item:nth-child(1) .service-features li {
                 color: #000 !important;
             }
+
             .video-production-grid .service-item:nth-child(1) .service-features li::before {
                 color: #000 !important;
                 opacity: 0.8 !important;
             }
-            .video-production-grid .service-item:nth-child(1) .service-link { 
+
+            .video-production-grid .service-item:nth-child(1) .service-link {
                 background: #000 !important;
-                color: #F59E0B !important; 
+                color: #F59E0B !important;
             }
-            
+
             .video-production-grid .service-item:nth-child(2) {
                 top: 130px;
                 z-index: 20;
-                background: linear-gradient(135deg, #0056FF 0%, #002D85 100%) !important;
+                background: linear-gradient(135deg, #FF0000 0%, #800000 100%) !important;
             }
-            .video-production-grid .service-item:nth-child(2) .service-link { color: #002D85 !important; }
+
+            .video-production-grid .service-item:nth-child(2) .service-link {
+                color: #800000 !important;
+            }
 
             .video-production-grid .service-item:nth-child(3) {
                 top: 160px;
                 z-index: 30;
                 background: linear-gradient(135deg, #FF0080 0%, #800040 100%) !important;
             }
-            .video-production-grid .service-item:nth-child(3) .service-link { color: #800040 !important; }
+
+            .video-production-grid .service-item:nth-child(3) .service-link {
+                color: #800040 !important;
+            }
 
             .video-production-grid .service-item .service-banner {
                 flex: 1 1 50% !important;
@@ -425,6 +473,7 @@
                 min-height: 380px !important;
                 margin-bottom: 0 !important;
             }
+
             .video-production-grid .service-item .service-content {
                 flex: 1 1 50% !important;
                 width: 50% !important;
@@ -433,37 +482,45 @@
                 justify-content: center;
             }
         }
+
         @media(max-width: 767px) {
             .video-production-grid .service-item {
                 flex-direction: column !important;
                 padding: 20px !important;
             }
+
             .video-production-grid .service-item .service-banner {
                 width: 100% !important;
                 min-height: 250px !important;
                 margin-bottom: 20px !important;
             }
+
             .video-production-grid .service-item .service-content {
                 width: 100% !important;
             }
         }
+
         /* Full-width yellow strip logic */
-        .yellow-strip-section { background: linear-gradient(to bottom, #1B5FF8 0%, #000000 100%) !important;
+        .yellow-strip-section {
+            background: linear-gradient(to bottom, #FF0000 0%, #000000 100%) !important;
             width: 100vw !important;
             margin-left: calc(50% - 50vw) !important;
             position: relative;
             padding: 80px 0;
             color: #111 !important;
         }
-        .yellow-strip-section h2, 
-        .yellow-strip-section .section-header h2, 
-        .yellow-strip-section .intro-text h3, 
+
+        .yellow-strip-section h2,
+        .yellow-strip-section .section-header h2,
+        .yellow-strip-section .intro-text h3,
         .yellow-strip-section .intro-text p {
             color: #fff !important;
         }
+
         .yellow-strip-section .underline {
             background-color: #fff !important;
         }
+
         @media (max-width: 768px) {
             .yellow-strip-section {
                 padding: 60px 0;
@@ -477,6 +534,7 @@
             color: #000;
             overflow: hidden;
         }
+
         .timeline-main-title {
             font-size: 56px;
             font-weight: 800;
@@ -485,11 +543,13 @@
             color: #000 !important;
             letter-spacing: -2px;
         }
+
         .timeline-wrapper {
             position: relative;
             max-width: 1400px;
             margin: 0 auto;
         }
+
         .timeline-line-bg {
             position: absolute;
             left: 50%;
@@ -499,16 +559,19 @@
             background: #f0f0f0;
             transform: translateX(-50%);
         }
+
         .timeline-line-progress {
             position: absolute;
             left: 50%;
             top: 0;
             width: 2px;
-            background: #0056FF;
+            background: #FF0000;
             transform: translateX(-50%);
-            height: 0%; /* Animated by JS */
+            height: 0%;
+            /* Animated by JS */
             transition: height 0.1s linear;
         }
+
         .timeline-row {
             display: flex;
             align-items: center;
@@ -517,26 +580,32 @@
             position: relative;
             z-index: 2;
         }
+
         .timeline-row:last-child {
             margin-bottom: 0;
         }
+
         .timeline-col {
             width: 42%;
         }
+
         .timeline-left {
             text-align: left;
         }
+
         .timeline-left h3 {
             font-size: 38px;
             font-weight: 700;
             color: #000 !important;
             line-height: 1.1;
         }
+
         .timeline-right p {
             font-size: 18px;
             line-height: 1.6;
             color: #444;
         }
+
         .timeline-point {
             position: absolute;
             left: 50%;
@@ -548,6 +617,7 @@
             align-items: center;
             justify-content: center;
         }
+
         .timeline-dot {
             width: 14px;
             height: 14px;
@@ -555,26 +625,54 @@
             border-radius: 50%;
             transition: all 0.4s ease;
         }
+
         .timeline-row.active .timeline-dot {
-            background: #0056FF;
-            box-shadow: 0 0 15px rgba(0, 86, 255, 0.4);
+            background: #FF0000;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
             transform: scale(1.4);
         }
 
         @media (max-width: 1024px) {
-            .timeline-line-bg, .timeline-line-progress { left: 30px; transform: none; }
-            .timeline-row { flex-direction: column; align-items: flex-start; padding-left: 80px; margin-bottom: 80px; }
-            .timeline-col { width: 100%; }
-            .timeline-point { left: 30px; top: 0; transform: translate(-50%, 0); }
-            .timeline-left h3 { font-size: 28px; margin-bottom: 15px; }
-            .timeline-main-title { font-size: 38px; margin-bottom: 60px; }
+
+            .timeline-line-bg,
+            .timeline-line-progress {
+                left: 30px;
+                transform: none;
+            }
+
+            .timeline-row {
+                flex-direction: column;
+                align-items: flex-start;
+                padding-left: 80px;
+                margin-bottom: 80px;
+            }
+
+            .timeline-col {
+                width: 100%;
+            }
+
+            .timeline-point {
+                left: 30px;
+                top: 0;
+                transform: translate(-50%, 0);
+            }
+
+            .timeline-left h3 {
+                font-size: 28px;
+                margin-bottom: 15px;
+            }
+
+            .timeline-main-title {
+                font-size: 38px;
+                margin-bottom: 60px;
+            }
         }
     </style>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const cards = document.querySelectorAll('.video-production-grid .service-item');
-            if(cards.length === 0 || window.innerWidth < 768) return;
-            
+            if (cards.length === 0 || window.innerWidth < 768) return;
+
             let ticking = false;
             window.addEventListener('scroll', () => {
                 if (!ticking) {
@@ -590,7 +688,7 @@
                                     // Scale down based on overlap amount, more visible with higher multiplier
                                     const scale = Math.max(0.92, 1 - (overlap / window.innerHeight) * 0.3);
                                     card.style.transform = `scale(${scale}) translateZ(0)`;
-                                    card.style.filter = `brightness(${Math.max(0.6, 1 - (overlap/window.innerHeight)*1.2)})`;
+                                    card.style.filter = `brightness(${Math.max(0.6, 1 - (overlap / window.innerHeight) * 1.2)})`;
                                 }
                             } else {
                                 card.style.transform = 'scale(1) translateZ(0)';
@@ -605,15 +703,15 @@
         });
 
         // Timeline Scroll Animation
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             const wrapper = document.querySelector('.timeline-wrapper');
-            if(!wrapper) return;
+            if (!wrapper) return;
             const progress = document.querySelector('.timeline-line-progress');
             const rows = document.querySelectorAll('.timeline-row');
-            
+
             const rect = wrapper.getBoundingClientRect();
             const viewH = window.innerHeight;
-            
+
             // Calculate progress based on wrapper's position relative to center of view
             const startPoint = viewH * 0.5;
             let percent = 0;
@@ -622,7 +720,7 @@
                 percent = Math.max(0, Math.min(100, (startPoint - rect.top) / (rect.height) * 100));
             }
             if (progress) progress.style.height = percent + '%';
-            
+
             rows.forEach((row) => {
                 const rowRect = row.getBoundingClientRect();
                 if (rowRect.top < startPoint + 50) {
@@ -640,39 +738,50 @@
                 <div class="underline"></div>
             </div>
 
-            <div class="what-we-offer-intro" style="display: flex; flex-wrap: wrap; align-items: center; gap: 40px; margin-bottom: 20px;">
+            <div class="what-we-offer-intro"
+                style="display: flex; flex-wrap: wrap; align-items: center; gap: 80px; margin-bottom: 40px; padding: 40px 0;">
                 <div class="intro-text" style="flex: 1 1 500px;">
-                    <h3 style="font-size: 28px; margin-bottom: 20px;">Top-Tier Corporate Video Production in Bangalore & Bengaluru</h3>
-                    <p style="margin-bottom: 15px; line-height: 1.6;">
-                        As a premier video production house in Bangalore, we specialize in high-impact storytelling that connects brands with their audiences. Our team at Paaru Studio handles every step of the filmmaking process—from creative concept and scriptwriting to filming, post-production, and final delivery for clients in Bengaluru and beyond.
+                    <h3 style="font-size: 48px; margin-bottom: 30px; font-weight: 800; line-height: 1.2; letter-spacing: -1px;"> Corporate Video Production in <span style="display: block; color: rgba(255,255,255,0.7);">Bangalore</span></h3>
+                    <p style="font-size: 22px; margin-bottom: 25px; line-height: 1.5; color: #fff; font-weight: 400; opacity: 0.95;">
+                        As a premier video production house in Bangalore, we specialize in high-impact storytelling that
+                        connects brands with their audiences. Our team at Paaru Studio handles every step of the
+                        filmmaking process—from creative concept and scriptwriting to filming, post-production, and
+                        final delivery for clients in Bengaluru and beyond.
                     </p>
-                    <p style="line-height: 1.6;">
-                        Whether you need dynamic social media reels, compelling corporate documentaries, or breathtaking commercials, our expert video production team utilizes state-of-the-art equipment and cinematic techniques to ensure maximum business value and exceptional visual quality.
+                    <p style="font-size: 20px; line-height: 1.6; color: #fff; opacity: 0.85; font-weight: 300;">
+                        Whether you need dynamic social media reels, compelling corporate documentaries, or breathtaking
+                        commercials, our expert video production team utilizes state-of-the-art equipment and cinematic
+                        techniques to ensure maximum business value and exceptional visual quality.
                     </p>
                 </div>
                 <div class="intro-video" style="flex: 1 1 300px; display: flex; justify-content: center;">
                     <div class="reel" style="width: 100%; max-width: 315px;">
                         <div class="video-embed" data-video-id="uLb9N7Otl0o">
-                            <button class="video-poster" aria-label="Corporate Video Production Reel"
+                            <button class="video-poster" aria-label="Play reel – Corporate Video Production Reel by Paaru Studio Bangalore"
                                 style="background-image: url('https://i.ytimg.com/vi/uLb9N7Otl0o/maxresdefault.jpg')"></button>
                         </div>
-                        <iframe src="https://www.youtube.com/embed/uLb9N7Otl0o" style="display:none;" title="Corporate Video Reel" aria-hidden="true"></iframe>
+                        <p style="font-size: 13px; color: #fff; margin-top: 15px; text-align: center; opacity: 0.85;">
+                            Watch our corporate video reel — Paaru Studio, Bangalore.
+                        </p>
                         <script type="application/ld+json">
                         {
                           "@context": "https://schema.org",
                           "@type": "VideoObject",
-                          "name": "Corporate Video Production Reel",
-                          "description": "Watch our corporate video reel showcasing top-tier video production by Paaru Studio in Bangalore.",
+                          "name": "Corporate Video Production Reel – Paaru Studio Bangalore",
+                          "description": "A cinematic reel showcasing high-quality corporate video production, TVC ad films, brand films, and professional filmmaking services in Bangalore by Paaru Studio.",
                           "thumbnailUrl": "https://img.youtube.com/vi/uLb9N7Otl0o/maxresdefault.jpg",
                           "uploadDate": "2024-06-01T10:00:00+05:30",
                           "duration": "PT0M45S",
                           "embedUrl": "https://www.youtube.com/embed/uLb9N7Otl0o",
-                          "transcript": "A dynamic reel showcasing high-quality corporate video production, commercial ad films, and professional filmmaking services in Bangalore."
+                          "contentUrl": "https://www.youtube.com/watch?v=uLb9N7Otl0o",
+                          "publisher": {
+                            "@type": "Organization",
+                            "name": "Paaru Studio",
+                            "url": "https://paarustudio.com"
+                          },
+                          "keywords": "corporate video production bangalore, ad film production house bangalore, brand film reel"
                         }
                         </script>
-                        <p style="font-size: 13px; color: #fff; margin-top: 15px; text-align: center; opacity: 0.85;">
-                            Watch our corporate video reel created by Paaru Studio in Bangalore.
-                        </p>
                     </div>
                 </div>
             </div>
@@ -685,11 +794,13 @@
             color: #fff;
             padding: 80px 0 120px;
         }
+
         .stats-container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
+
         .stats-header {
             font-size: 28px;
             font-weight: 500;
@@ -697,29 +808,39 @@
             margin-bottom: 60px;
             max-width: 400px;
         }
+
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 40px;
         }
+
         .stat-item {
             padding-bottom: 20px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.2);
         }
+
         .stat-number {
             font-size: 64px;
             font-weight: 300;
             margin-bottom: 10px;
             font-family: var(--font-heading, "Inter", sans-serif);
         }
+
         .stat-desc {
             font-size: 14px;
             color: #a0a0a0;
             font-weight: 600;
         }
+
         @media(max-width: 768px) {
-            .stats-grid { grid-template-columns: 1fr; }
-            .stats-number { font-size: 48px; }
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-number {
+                font-size: 48px;
+            }
         }
     </style>
     <section class="stats-section">
@@ -762,14 +883,14 @@
             </div>
             <div class="services-grid video-production-grid">
                 <div class="service-item">
-                    <div class="service-banner"
-                        style="border-radius: 8px; overflow: hidden;">
+                    <div class="service-banner" style="border-radius: 8px; overflow: hidden;">
                         <img loading="lazy" decoding="async" src="video_pro.webp" alt="TV & Digital Video Production"
                             style="width: 100%; height: 100%; object-fit: cover;" width="120" height="80">
                     </div>
                     <div class="service-content">
                         <h3>Commercials & TV Ads</h3>
-                        <p>High-end television commercials and ad films that tell your brand's story with cinematic quality and strategic impact.</p>
+                        <p>High-end television commercials and ad films that tell your brand's story with cinematic
+                            quality and strategic impact.</p>
                         <ul class="service-features">
                             <li>TV Commercials</li>
                             <li>Digital Ad Films</li>
@@ -783,14 +904,14 @@
                 </div>
 
                 <div class="service-item">
-                    <div class="service-banner"
-                        style="border-radius: 8px; overflow: hidden;">
+                    <div class="service-banner" style="border-radius: 8px; overflow: hidden;">
                         <img loading="lazy" decoding="async" src="youtube_social_media.webp" alt="Social Media Content"
                             style="width: 100%; height: 100%; object-fit: cover;" width="400" height="267">
                     </div>
                     <div class="service-content">
                         <h3>Corporate & Brand Films</h3>
-                        <p>Professional corporate videos, documentaries, and case studies designed to build trust and authority in your industry.</p>
+                        <p>Professional corporate videos, documentaries, and case studies designed to build trust and
+                            authority in your industry.</p>
                         <ul class="service-features">
                             <li>Corporate Documentaries</li>
                             <li>Company Profile Videos</li>
@@ -804,14 +925,14 @@
                 </div>
 
                 <div class="service-item">
-                    <div class="service-banner"
-                        style="border-radius: 8px; overflow: hidden;">
+                    <div class="service-banner" style="border-radius: 8px; overflow: hidden;">
                         <img loading="lazy" decoding="async" src="Podcast.webp" alt="Podcast Production"
                             style="width: 100%; height: 100%; object-fit: cover;" width="400" height="267">
                     </div>
                     <div class="service-content">
                         <h3>Video Podcasts & Interviews</h3>
-                        <p>Multi-camera video podcast production, interview setups, and content creation for YouTube and social media distribution.</p>
+                        <p>Multi-camera video podcast production, interview setups, and content creation for YouTube and
+                            social media distribution.</p>
                         <ul class="service-features">
                             <li>Video Podcast Production</li>
                             <li>Multi-cam Interviews</li>
@@ -829,81 +950,89 @@
 
     <!-- How It Works Timeline -->
     <section id="how-it-works" class="timeline-section">
-                <div class="container">
-                    <h2 class="timeline-main-title">HOW IT WORKS</h2>
-                    
-                    <div class="timeline-wrapper">
-                        <div class="timeline-line-bg"></div>
-                        <div class="timeline-line-progress"></div>
-                        
-                        <!-- Step 01 -->
-                        <div class="timeline-row">
-                            <div class="timeline-col timeline-left">
-                                <h3>Discovery &<br>Consultation</h3>
-                            </div>
-                            <div class="timeline-point">
-                                <div class="timeline-dot"></div>
-                            </div>
-                            <div class="timeline-col timeline-right">
-                                <p>We begin by understanding your brand, goals, and target audience. Our team conducts thorough research to create a tailored strategy that aligns with your specific objectives.</p>
-                            </div>
-                        </div>
+        <div class="container">
+            <h2 class="timeline-main-title">HOW IT WORKS</h2>
 
-                        <!-- Step 02 -->
-                        <div class="timeline-row">
-                            <div class="timeline-col timeline-left">
-                                <h3>Concept<br>Development</h3>
-                            </div>
-                            <div class="timeline-point">
-                                <div class="timeline-dot"></div>
-                            </div>
-                            <div class="timeline-col timeline-right">
-                                <p>Our creative team develops compelling concepts, storyboards, and scripts. We fine-tune every detail to ensure the narrative resonates with your audience and reflects your brand identity.</p>
-                            </div>
-                        </div>
+            <div class="timeline-wrapper">
+                <div class="timeline-line-bg"></div>
+                <div class="timeline-line-progress"></div>
 
-                        <!-- Step 03 -->
-                        <div class="timeline-row">
-                            <div class="timeline-col timeline-left">
-                                <h3>Professional<br>Production</h3>
-                            </div>
-                            <div class="timeline-point">
-                                <div class="timeline-dot"></div>
-                            </div>
-                            <div class="timeline-col timeline-right">
-                                <p>With state-of-the-art equipment and an experienced crew, we bring your vision to life. From cinematography to lighting and sound, we maintain the highest standards of production quality.</p>
-                            </div>
-                        </div>
-
-                        <!-- Step 04 -->
-                        <div class="timeline-row">
-                            <div class="timeline-col timeline-left">
-                                <h3>Post-Production<br>& VFX</h3>
-                            </div>
-                            <div class="timeline-point">
-                                <div class="timeline-dot"></div>
-                            </div>
-                            <div class="timeline-col timeline-right">
-                                <p>Our editors and VFX artists craft the final masterpiece. We handle color grading, sound design, motion graphics, and visual effects to create a polished, high-impact final product.</p>
-                            </div>
-                        </div>
-
-                        <!-- Step 05 -->
-                        <div class="timeline-row">
-                            <div class="timeline-col timeline-left">
-                                <h3>Delivery &<br>Launch</h3>
-                            </div>
-                            <div class="timeline-point">
-                                <div class="timeline-dot"></div>
-                            </div>
-                            <div class="timeline-col timeline-right">
-                                <p>We provide multiple formats optimized for all platforms. Our team also offers strategic advice on deployment to ensure your video achieves maximum reach and business value.</p>
-                            </div>
-                        </div>
-
+                <!-- Step 01 -->
+                <div class="timeline-row">
+                    <div class="timeline-col timeline-left">
+                        <h3>Discovery &<br>Consultation</h3>
+                    </div>
+                    <div class="timeline-point">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-col timeline-right">
+                        <p>We begin by understanding your brand, goals, and target audience. Our team conducts thorough
+                            research to create a tailored strategy that aligns with your specific objectives.</p>
                     </div>
                 </div>
-            </section>
+
+                <!-- Step 02 -->
+                <div class="timeline-row">
+                    <div class="timeline-col timeline-left">
+                        <h3>Concept<br>Development</h3>
+                    </div>
+                    <div class="timeline-point">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-col timeline-right">
+                        <p>Our creative team develops compelling concepts, storyboards, and scripts. We fine-tune every
+                            detail to ensure the narrative resonates with your audience and reflects your brand
+                            identity.</p>
+                    </div>
+                </div>
+
+                <!-- Step 03 -->
+                <div class="timeline-row">
+                    <div class="timeline-col timeline-left">
+                        <h3>Professional<br>Production</h3>
+                    </div>
+                    <div class="timeline-point">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-col timeline-right">
+                        <p>With state-of-the-art equipment and an experienced crew, we bring your vision to life. From
+                            cinematography to lighting and sound, we maintain the highest standards of production
+                            quality.</p>
+                    </div>
+                </div>
+
+                <!-- Step 04 -->
+                <div class="timeline-row">
+                    <div class="timeline-col timeline-left">
+                        <h3>Post-Production<br>& VFX</h3>
+                    </div>
+                    <div class="timeline-point">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-col timeline-right">
+                        <p>Our editors and VFX artists craft the final masterpiece. We handle color grading, sound
+                            design, motion graphics, and visual effects to create a polished, high-impact final product.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 05 -->
+                <div class="timeline-row">
+                    <div class="timeline-col timeline-left">
+                        <h3>Delivery &<br>Launch</h3>
+                    </div>
+                    <div class="timeline-point">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-col timeline-right">
+                        <p>We provide multiple formats optimized for all platforms. Our team also offers strategic
+                            advice on deployment to ensure your video achieves maximum reach and business value.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
 
 
     <!-- CTA Section -->
@@ -929,12 +1058,13 @@
                         <h3>PAARU STUDIO</h3>
                         <p>Video Production Company in Bangalore | Ad Films, BTL & OOH.</p>
                         <div class="footer-social">
-                            <a href="https://www.instagram.com/paaru_studio" target="_blank"
-                                rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
+                            <a href="https://www.instagram.com/paaru_studio" target="_blank" rel="noopener noreferrer"
+                                aria-label="Instagram">Instagram</a>
                             <a href="https://www.linkedin.com/company/paaru-studio" target="_blank"
                                 rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
                             <a href="#" aria-label="Facebook">Facebook</a>
-                                    <a href="https://www.justdial.com/Bangalore/Paaru-Studio-Nagarbhavi/080PXX80-XX80-230905213353-X4D4_BZDET" target="_blank" rel="noopener noreferrer" aria-label="Justdial">Justdial</a>
+                            <a href="https://www.justdial.com/Bangalore/Paaru-Studio-Nagarbhavi/080PXX80-XX80-230905213353-X4D4_BZDET"
+                                target="_blank" rel="noopener noreferrer" aria-label="Justdial">Justdial</a>
                         </div>
                     </div>
                     <div class="footer-nav">
