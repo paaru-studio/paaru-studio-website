@@ -1,17 +1,31 @@
-// 1. Lazy load Hero Video
+// 1. Lazy load Hero Video on Interaction
 document.addEventListener('DOMContentLoaded', function () {
     const heroFrame = document.querySelector('.hero-bg-iframe');
     const poster = document.querySelector('.hero-poster');
     if (heroFrame && poster) {
         const src = heroFrame.getAttribute('data-src');
         if (src) {
-            setTimeout(() => {
+            let hasLoaded = false;
+            const loadHeroVideo = () => {
+                if (hasLoaded) return;
+                hasLoaded = true;
                 heroFrame.setAttribute('src', src);
                 heroFrame.onload = () => {
                     heroFrame.style.opacity = '1';
                     setTimeout(() => poster.style.display = 'none', 1000);
                 };
-            }, 2000);
+            };
+            
+            const interactionEvents = ['scroll', 'mousemove', 'touchstart', 'click'];
+            const triggerLoad = () => {
+                loadHeroVideo();
+                interactionEvents.forEach(evt => window.removeEventListener(evt, triggerLoad));
+            };
+            
+            interactionEvents.forEach(evt => window.addEventListener(evt, triggerLoad, { once: true, passive: true }));
+            
+            // Fallback load after 6 seconds if no interaction
+            setTimeout(loadHeroVideo, 6000);
         }
     }
 });
