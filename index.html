@@ -1723,20 +1723,19 @@
 
 
     <!-- Structured Data Optimized for Performance -->
+    <!-- Block 1: Professional Services & Reviews -->
     <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
     {
+      "@context": "https://schema.org",
       "@type": "AdvertisingAgency",
-      "@id": "https://paarustudio.com/#agency",
+      "additionalType": "LocalBusiness",
       "name": "Paaru Studio",
       "url": "https://paarustudio.com/",
       "logo": "https://paarustudio.com/logo.webp",
       "image": "https://paarustudio.com/logo.webp",
       "telephone": "+917619413241",
       "email": "info@paarustudio.com",
-      "description": "Paaru Studio is a Bangalore based video production company and creative ad agency with 11+ years of experience in TV commercials, digital films, BTL activations, OOH and performance-driven campaigns.",
+      "description": "Paaru Studio is a Bangalore based video production company and creative ad agency with 11+ years of experience in TV commercials, digital films, BTL activations, OOH and performance-driven campaigns for brands.",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "48B, 100 Feet Road, Nagarabhavi",
@@ -1781,31 +1780,28 @@
           "reviewBody": "Extremely professional team. Paaru Studio managed our BTL event flawlessly with great coordination and quick delivery."
         }
       ],
+      "subjectOf": {
+        "@type": "VideoObject",
+        "name": "Observance Eye Digital Video Commercial",
+        "description": "Digital video commercial produced by Paaru Studio Bangalore for Observance Eye.",
+        "thumbnailUrl": "https://i.ytimg.com/vi/sVA07PZR-vc/maxresdefault.jpg",
+        "uploadDate": "2025-07-15",
+        "duration": "PT1M21S",
+        "embedUrl": "https://www.youtube.com/embed/sVA07PZR-vc",
+        "contentUrl": "https://www.youtube.com/watch?v=sVA07PZR-vc"
+      },
       "sameAs": [
         "https://www.linkedin.com/company/paaru-studio",
         "https://www.instagram.com/paaru_studio",
         "https://www.justdial.com/Bangalore/Paaru-Studio-Nagarbhavi/080PXX80-XX80-230905213353-X4D4_BZDET"
       ]
-    },
+    }
+    </script>
+
+    <!-- Block 2: Frequently Asked Questions -->
+    <script type="application/ld+json">
     {
-      "@type": "WebSite",
-      "@id": "https://paarustudio.com/#website",
-      "url": "https://paarustudio.com/",
-      "name": "Paaru Studio",
-      "publisher": { "@id": "https://paarustudio.com/#agency" }
-    },
-    {
-      "@type": "VideoObject",
-      "name": "Observance Eye Digital Video Commercial",
-      "description": "Digital video commercial produced by Paaru Studio Bangalore for Observance Eye.",
-      "thumbnailUrl": "https://i.ytimg.com/vi/sVA07PZR-vc/maxresdefault.jpg",
-      "uploadDate": "2025-07-15T00:10:08-07:00",
-      "duration": "PT1M21S",
-      "embedUrl": "https://www.youtube.com/embed/sVA07PZR-vc",
-      "contentUrl": "https://www.youtube.com/watch?v=sVA07PZR-vc",
-      "publisher": { "@id": "https://paarustudio.com/#agency" }
-    },
-    {
+      "@context": "https://schema.org",
       "@type": "FAQPage",
       "mainEntity": [
         {
@@ -1858,9 +1854,7 @@
         }
       ]
     }
-  ]
-}
-</script>
+    </script>
 
 </body>
 
