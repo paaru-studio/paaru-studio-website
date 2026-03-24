@@ -8,10 +8,7 @@ Allow: /
 # Explicitly disallow private/utility paths
 Disallow: /*.backup$
 Disallow: /*.py$
-Disallow: /*.min.css$
-Disallow: /*.min.js$
-Disallow: /script.min.js
-Disallow: /styles.min.css
+
 
 # Allow Google and Bing to index all pages
 User-agent: Googlebot
