@@ -394,28 +394,7 @@
                     Watch our Observance Eye ad film created by Paaru Studio in Bangalore.
                 </p>
 
-                <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "VideoObject",
-  "name": "Observance Eye Digital Video Commercial | Paaru Studio Bangalore",
-  "description": "A digital video commercial produced by Paaru Studio Bangalore for Observance Eye, showcasing advanced security and monitoring technology solutions for businesses.",
-  "thumbnailUrl": "https://i.ytimg.com/vi/sVA07PZR-vc/maxresdefault.jpg",
-  "uploadDate": "2025-07-15T00:10:08-07:00",
-  "duration": "PT1M21S",
-  "embedUrl": "https://www.youtube.com/embed/sVA07PZR-vc",
-  "contentUrl": "https://www.youtube.com/watch?v=sVA07PZR-vc",
-  "publisher": {
-    "@type": "Organization",
-    "name": "Paaru Studio",
-    "url": "https://paarustudio.com",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://paarustudio.com/logo.webp"
-    }
-  }
-}
-                </script>
+
             </div>
             <div class="portfolio-carousel" data-hover-enabled="1">
                 <button class="carousel-nav prev" aria-label="Previous project">‹</button>
@@ -1750,9 +1729,11 @@
   "@graph": [
     {
       "@type": "AdvertisingAgency",
+      "@id": "https://paarustudio.com/#agency",
       "name": "Paaru Studio",
       "url": "https://paarustudio.com/",
       "logo": "https://paarustudio.com/logo.webp",
+      "image": "https://paarustudio.com/logo.webp",
       "telephone": "+917619413241",
       "email": "info@paarustudio.com",
       "description": "Paaru Studio is a Bangalore based video production company and creative ad agency with 11+ years of experience in TV commercials, digital films, BTL activations, OOH and performance-driven campaigns.",
@@ -1768,6 +1749,11 @@
         "latitude": 12.9352,
         "longitude": 77.5063
       },
+      "areaServed": [
+        { "@type": "City", "name": "Bangalore" },
+        { "@type": "City", "name": "Bengaluru" },
+        { "@type": "Country", "name": "India" }
+      ],
       "openingHours": "Mo-Sa 09:00-18:00",
       "aggregateRating": {
         "@type": "AggregateRating",
@@ -1778,41 +1764,20 @@
       "review": [
         {
           "@type": "Review",
-          "author": {
-            "@type": "Person",
-            "name": "Akash Vishwakarma"
-          },
-          "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "5",
-            "bestRating": "5"
-          },
+          "author": { "@type": "Person", "name": "Akash Vishwakarma" },
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
           "reviewBody": "An excellent vendor. Video shoot came out extremely well, professional people who understand client requirements."
         },
         {
           "@type": "Review",
-          "author": {
-            "@type": "Person",
-            "name": "Smirti"
-          },
-          "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "5",
-            "bestRating": "5"
-          },
+          "author": { "@type": "Person", "name": "Smirti" },
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
           "reviewBody": "Paaru Studio delivered exceptional product visuals that perfectly matched our brand tone. Truly a creative and reliable partner."
         },
         {
           "@type": "Review",
-          "author": {
-            "@type": "Person",
-            "name": "Afroz"
-          },
-          "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "4",
-            "bestRating": "5"
-          },
+          "author": { "@type": "Person", "name": "Afroz" },
+          "reviewRating": { "@type": "Rating", "ratingValue": "4", "bestRating": "5" },
           "reviewBody": "Extremely professional team. Paaru Studio managed our BTL event flawlessly with great coordination and quick delivery."
         }
       ],
@@ -1821,6 +1786,24 @@
         "https://www.instagram.com/paaru_studio",
         "https://www.justdial.com/Bangalore/Paaru-Studio-Nagarbhavi/080PXX80-XX80-230905213353-X4D4_BZDET"
       ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://paarustudio.com/#website",
+      "url": "https://paarustudio.com/",
+      "name": "Paaru Studio",
+      "publisher": { "@id": "https://paarustudio.com/#agency" }
+    },
+    {
+      "@type": "VideoObject",
+      "name": "Observance Eye Digital Video Commercial",
+      "description": "Digital video commercial produced by Paaru Studio Bangalore for Observance Eye.",
+      "thumbnailUrl": "https://i.ytimg.com/vi/sVA07PZR-vc/maxresdefault.jpg",
+      "uploadDate": "2025-07-15T00:10:08-07:00",
+      "duration": "PT1M21S",
+      "embedUrl": "https://www.youtube.com/embed/sVA07PZR-vc",
+      "contentUrl": "https://www.youtube.com/watch?v=sVA07PZR-vc",
+      "publisher": { "@id": "https://paarustudio.com/#agency" }
     },
     {
       "@type": "FAQPage",
