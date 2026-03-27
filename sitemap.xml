@@ -90,27 +90,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
-  
-  <url>
-    <loc>https://paarustudio.com/ai-video-production</loc>
-    <lastmod>2026-03-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  
-  <url>
-    <loc>https://paarustudio.com/ai-video-content-generation</loc>
-    <lastmod>2026-03-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  
-  <url>
-    <loc>https://paarustudio.com/ai-reel</loc>
-    <lastmod>2026-03-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.65</priority>
-  </url>
 
   <!-- ===== CASE STUDIES ===== -->
 
@@ -142,27 +121,6 @@
     <priority>0.65</priority>
   </url>
   
-  <url>
-    <loc>https://paarustudio.com/case-study-herbalife</loc>
-    <lastmod>2026-03-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  
-  <url>
-    <loc>https://paarustudio.com/case-study-observance</loc>
-    <lastmod>2026-03-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  
-  <url>
-    <loc>https://paarustudio.com/case-study-onsurity</loc>
-    <lastmod>2026-03-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.65</priority>
-  </url>
-
   <!-- ===== BLOG ===== -->
 
   <url>
