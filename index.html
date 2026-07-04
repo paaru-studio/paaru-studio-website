@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Production Company in Bangalore | Paaru Studio</title>
+    <title>Video Production Company in Bangalore | Paaru Studio-Media</title>
     <meta name="description"
-        content="Paaru Studio is a Bangalore based video production company and creative ad agency with 11+ years of experience in TV commercials, digital films, BTL activations, OOH and performance-driven campaigns for brands.">
+        content="Paaru Studio-Media is a Bangalore based video production company and creative ad agency with 11+ years of experience in TV commercials, digital films, BTL activations, OOH and performance-driven campaigns for brands.">
     <meta name="keywords"
         content="video production company in bangalore, advertising agency in bangalore, tv commercial production house, btl activation agency bangalore, ooh advertising agency bangalore, brand films and digital ads, corporate video production, creative ad agency in bangalore, integrated advertising campaigns">
     <link rel="canonical" href="https://paarustudio.com/">
@@ -14,17 +14,17 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://paarustudio.com">
-    <meta property="og:title" content="Video Production Company in Bangalore | Paaru Studio">
+    <meta property="og:title" content="Video Production Company in Bangalore | Paaru Studio-Media">
     <meta property="og:description"
-        content="Paaru Studio is a Bangalore based video production company and creative ad agency with 11+ years of experience in TV commercials, digital films, BTL activations, OOH and performance-driven campaigns for brands.">
+        content="Paaru Studio-Media is a Bangalore based video production company and creative ad agency with 11+ years of experience in TV commercials, digital films, BTL activations, OOH and performance-driven campaigns for brands.">
     <meta property="og:image" content="https://paarustudio.com/logo.webp">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://paarustudio.com">
-    <meta property="twitter:title" content="Video Production Company in Bangalore | Paaru Studio">
+    <meta property="twitter:title" content="Video Production Company in Bangalore | Paaru Studio-Media">
     <meta property="twitter:description"
-        content="Paaru Studio is a Bangalore based video production company and creative ad agency with 11+ years of experience in TV commercials, digital films, BTL activations, OOH and performance-driven campaigns for brands.">
+        content="Paaru Studio-Media is a Bangalore based video production company and creative ad agency with 11+ years of experience in TV commercials, digital films, BTL activations, OOH and performance-driven campaigns for brands.">
     <meta property="twitter:image" content="https://paarustudio.com/logo.webp">
 
     <link rel="icon" type="image/png" href="favicon-96x96.png">
@@ -269,7 +269,7 @@
             <div class="about-content">
                 <div class="about-intro">
                     <p>
-                        Paaru Studio is a leading video production company in Bangalore and full-service creative agency
+                        Paaru Studio-Media is a leading video production company in Bangalore and full-service creative agency
                         with over 11+ years of experience in film production, advertising, and branded content.
                         Founded with a vision to combine powerful storytelling with strategic thinking, we help brands
                         create high-impact videos, ad films, corporate films, and digital content that connect with
@@ -282,7 +282,7 @@
                         visibility,
                         engagement, and conversions.
 
-                        At Paaru Studio, we blend creativity, technology, and market insight to deliver end-to-end
+                        At Paaru Studio-Media, we blend creativity, technology, and market insight to deliver end-to-end
                         video production services in Bangalore, ensuring every project communicates with clarity,
                         authenticity,
                         and measurable impact.
@@ -302,7 +302,7 @@
                     <div class="about-block">
                         <h3>Why Choose Us</h3>
                         <p>
-                            What sets Paaru Studio apart is our flexible approach, competitive pricing and commitment to
+                            What sets Paaru Studio-Media apart is our flexible approach, competitive pricing and commitment to
                             quality execution. Whether working with startups or established brands across Bangalore, we
                             focus on building long-term partnerships through reliability, innovation and
                             performance-driven creativity.
@@ -318,6 +318,112 @@
 
     <!-- Portfolio (moved to directly after About) -->
     <style>
+        /* Featuring Cards */
+        .featuring-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .featuring-card {
+            position: relative;
+            border-radius: 14px;
+            overflow: hidden;
+            aspect-ratio: 9 / 16;
+            background: #111;
+            cursor: pointer;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+            transition: transform 0.35s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.35s ease;
+        }
+        .featuring-card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 20px 60px rgba(255,0,0,0.3), 0 8px 24px rgba(0,0,0,0.6);
+        }
+        .featuring-card .video-poster {
+            position: absolute !important;
+            inset: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            background-size: cover;
+            background-position: center;
+            border: 0 !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            cursor: pointer;
+            display: block !important;
+        }
+        /* Hide the default play overlay buttons created by styles.min.css */
+        .featuring-card .video-poster::before,
+        .featuring-card .video-poster::after {
+            display: none !important;
+        }
+        .featuring-card:hover .video-poster {
+            transform: scale(1.06);
+            transition: transform 0.4s ease;
+        }
+        .featuring-card .feat-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.1) 50%, transparent 100%);
+            z-index: 1;
+            transition: background 0.3s ease;
+            pointer-events: none;
+        }
+        .featuring-card:hover .feat-overlay {
+            background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.2) 50%, rgba(255,0,0,0.06) 100%);
+        }
+        .featuring-card .feat-play-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.9);
+            z-index: 2;
+            width: 48px !important;
+            height: 48px !important;
+            background: rgba(255,255,255,0.92) !important;
+            border-radius: 50% !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1), background 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+            pointer-events: none;
+        }
+        .featuring-card:hover .feat-play-btn {
+            transform: translate(-50%, -50%) scale(1.1);
+            background: #fff !important;
+            box-shadow: 0 8px 32px rgba(255,0,0,0.4);
+        }
+        .featuring-card .feat-play-btn svg {
+            width: 18px !important;
+            height: 18px !important;
+            fill: #FF0000 !important;
+            margin-left: 3px !important;
+            display: block !important;
+        }
+        .featuring-card .feat-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 2;
+            background: #FF0000;
+            color: #fff;
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            padding: 3px 7px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            pointer-events: none;
+        }
+        @media (max-width: 768px) {
+            .featuring-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+        }
+
         .portfolio-section.yellow-strip {
             background: linear-gradient(to bottom, #FF0000 0%, #000000 100%) !important;
             padding: 80px 0;
@@ -391,7 +497,7 @@
                 <h2>PORTFOLIO</h2>
                 <div class="underline"></div>
                 <p class="portfolio-tagline">
-                    Watch our Observance Eye ad film created by Paaru Studio in Bangalore.
+                    Watch our Observance Eye ad film created by Paaru Studio-Media in Bangalore.
                 </p>
 
 
@@ -512,8 +618,63 @@
                 <button class="carousel-nav next" aria-label="Next project">›</button>
             </div>
 
+            <!-- FEATURING Section: New YouTube Shorts -->
+            <div style="margin-top: 60px; margin-bottom: 10px;">
+                <div style="text-align: center; margin-bottom: 36px;">
+                    <h2 style="font-size: 30px; font-weight: 900; margin-bottom: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #fff;">Featuring</h2>
+                    <div style="width: 50px; height: 3px; background: #fff; margin: 0 auto 12px; border-radius: 2px;"></div>
+                    <p style="color: rgba(255,255,255,0.55); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; margin: 0;">Latest Shorts &amp; Reels from Paaru Studio-Media</p>
+                </div>
+                <div class="featuring-grid" style="max-width: 1200px; margin: 0 auto;" aria-label="Featuring reels">
+                    <!-- Short 1 -->
+                    <div class="featuring-card video-embed" data-video-id="_nXASlZC_ao">
+                        <button class="video-poster" aria-label="Play featuring short 1"
+                            style="background-image: url('https://i.ytimg.com/vi/_nXASlZC_ao/maxresdefault.jpg');">
+                            <div class="feat-overlay"></div>
+                            <span class="feat-badge">&#9654; Short</span>
+                            <span class="feat-play-btn">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>
+                            </span>
+                        </button>
+                    </div>
+                    <!-- Short 2 -->
+                    <div class="featuring-card video-embed" data-video-id="077yokCutpU">
+                        <button class="video-poster" aria-label="Play featuring short 2"
+                            style="background-image: url('https://i.ytimg.com/vi/077yokCutpU/maxresdefault.jpg');">
+                            <div class="feat-overlay"></div>
+                            <span class="feat-badge">&#9654; Short</span>
+                            <span class="feat-play-btn">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>
+                            </span>
+                        </button>
+                    </div>
+                    <!-- Short 3 -->
+                    <div class="featuring-card video-embed" data-video-id="Dt-RoKB0s40">
+                        <button class="video-poster" aria-label="Play featuring short 3"
+                            style="background-image: url('https://i.ytimg.com/vi/Dt-RoKB0s40/maxresdefault.jpg');">
+                            <div class="feat-overlay"></div>
+                            <span class="feat-badge">&#9654; Short</span>
+                            <span class="feat-play-btn">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>
+                            </span>
+                        </button>
+                    </div>
+                    <!-- Short 4 -->
+                    <div class="featuring-card video-embed" data-video-id="j2Bir3qKFQo">
+                        <button class="video-poster" aria-label="Play featuring short 4"
+                            style="background-image: url('https://i.ytimg.com/vi/j2Bir3qKFQo/maxresdefault.jpg');">
+                            <div class="feat-overlay"></div>
+                            <span class="feat-badge">&#9654; Short</span>
+                            <span class="feat-play-btn">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
             <!-- View Portfolio CTA below videos -->
-            <div class="portfolio-cta" style="text-align:center;margin-top:18px;">
+            <div class="portfolio-cta" style="text-align:center;margin-top:48px;">
                 <a href="portfolio.html" class="cta-btn"
                     style="background-color: #111; color: #fff; border-color: #111;">View Portfolio</a>
             </div>
@@ -531,7 +692,7 @@
                             <picture>
                                 <source srcset="Image 01.webp" type="image/webp">
                                 <img loading="lazy" decoding="async" src="Image 01.webp"
-                                    alt="Product shoot by Paaru Studio Bangalore for brand campaign" width="400"
+                                    alt="Product shoot by Paaru Studio-Media Bangalore for brand campaign" width="400"
                                     height="267">
                             </picture>
                         </picture>
@@ -546,7 +707,7 @@
                             <picture>
                                 <source srcset="portfolio_pics/01.webp" type="image/webp">
                                 <img loading="lazy" decoding="async" src="portfolio_pics/01.webp"
-                                    alt="Skincare product shoot for Tribe Concepts by Paaru Studio Bangalore"
+                                    alt="Skincare product shoot for Tribe Concepts by Paaru Studio-Media Bangalore"
                                     width="100" height="100">
                             </picture>
                         </picture>
@@ -561,7 +722,7 @@
                             <picture>
                                 <source srcset="portfolio_pics/02.webp" type="image/webp">
                                 <img loading="lazy" decoding="async" src="portfolio_pics/02.webp"
-                                    alt="Skincare product shoot for Tribe Concepts by Paaru Studio Bangalore"
+                                    alt="Skincare product shoot for Tribe Concepts by Paaru Studio-Media Bangalore"
                                     width="100" height="100">
                             </picture>
                         </picture>
@@ -576,7 +737,7 @@
                             <picture>
                                 <source srcset="portfolio_pics/03.webp" type="image/webp">
                                 <img loading="lazy" decoding="async" src="portfolio_pics/03.webp"
-                                    alt="Skincare product shoot for Tribe Concepts by Paaru Studio Bangalore"
+                                    alt="Skincare product shoot for Tribe Concepts by Paaru Studio-Media Bangalore"
                                     width="100" height="100">
                             </picture>
                         </picture>
@@ -591,7 +752,7 @@
                             <picture>
                                 <source srcset="portfolio_pics/04.webp" type="image/webp">
                                 <img loading="lazy" decoding="async" src="portfolio_pics/04.webp"
-                                    alt="Skincare product shoot for Tribe Concepts by Paaru Studio Bangalore"
+                                    alt="Skincare product shoot for Tribe Concepts by Paaru Studio-Media Bangalore"
                                     width="100" height="100">
                             </picture>
                         </picture>
@@ -606,7 +767,7 @@
                             <picture>
                                 <source srcset="portfolio_pics/01.webp" type="image/webp">
                                 <img loading="lazy" decoding="async" src="portfolio_pics/01.webp"
-                                    alt="Skincare product shoot for Tribe Concepts by Paaru Studio Bangalore"
+                                    alt="Skincare product shoot for Tribe Concepts by Paaru Studio-Media Bangalore"
                                     width="100" height="100">
                             </picture>
                         </picture>
@@ -621,7 +782,7 @@
                             <picture>
                                 <source srcset="portfolio_pics/03 (1).webp" type="image/webp">
                                 <img loading="lazy" decoding="async" src="portfolio_pics/03 (1).webp"
-                                    alt="Skincare product shoot for Tribe Concepts by Paaru Studio Bangalore"
+                                    alt="Skincare product shoot for Tribe Concepts by Paaru Studio-Media Bangalore"
                                     width="100" height="100">
                             </picture>
                         </picture>
@@ -636,7 +797,7 @@
                             <picture>
                                 <source srcset="portfolio_pics/04 (1).webp" type="image/webp">
                                 <img loading="lazy" decoding="async" src="portfolio_pics/04 (1).webp"
-                                    alt="Skincare product shoot for Palmolive by Paaru Studio Bangalore" width="100"
+                                    alt="Skincare product shoot for Palmolive by Paaru Studio-Media Bangalore" width="100"
                                     height="100">
                             </picture>
                         </picture>
@@ -651,7 +812,7 @@
                             <picture>
                                 <source srcset="portfolio_pics/06.webp" type="image/webp">
                                 <img loading="lazy" decoding="async" src="portfolio_pics/06.webp"
-                                    alt="Product catalogue photography for ecommerce by Paaru Studio" width="100"
+                                    alt="Product catalogue photography for ecommerce by Paaru Studio-Media" width="100"
                                     height="100">
                             </picture>
                         </picture>
@@ -666,7 +827,7 @@
                             <picture>
                                 <source srcset="portfolio_pics/08.webp" type="image/webp">
                                 <img loading="lazy" decoding="async" src="portfolio_pics/08.webp"
-                                    alt="Product shoot for Ola by Paaru Studio Bangalore" width="100" height="100">
+                                    alt="Product shoot for Ola by Paaru Studio-Media Bangalore" width="100" height="100">
                             </picture>
                         </picture>
                     </picture>
@@ -680,7 +841,7 @@
                             <picture>
                                 <source srcset="portfolio_pics/DAS00810.webp" type="image/webp">
                                 <img loading="lazy" decoding="async" src="portfolio_pics/DAS00810.webp"
-                                    alt="Commercial product shoot for brand campaign Paaru Studio" width="100"
+                                    alt="Commercial product shoot for brand campaign Paaru Studio-Media" width="100"
                                     height="100">
                             </picture>
                         </picture>
@@ -705,7 +866,7 @@
                         <picture>
                             <source srcset="portfolio_pics/DSC00172_optimized.webp" type="image/webp">
                             <img loading="lazy" decoding="async" src="portfolio_pics/DSC00172_optimized.webp"
-                                alt="High quality product shoot for online brand by Paaru Studio" decoding="async"
+                                alt="High quality product shoot for online brand by Paaru Studio-Media" decoding="async"
                                 width="100" height="100">
                         </picture>
                     </picture>
@@ -714,7 +875,7 @@
             <div class="gallery-item fit-auto">
                 <div class="gallery-image fit-image">
                     <picture><img loading="lazy" decoding="async" src="portfolio_pics/IMG_4742.webp"
-                            alt="Ecommerce product photography for Herbalife with white background by Paaru Studio Bangalore"
+                            alt="Ecommerce product photography for Herbalife with white background by Paaru Studio-Media Bangalore"
                             width="100" height="100">
                     </picture>
                 </div>
@@ -722,7 +883,7 @@
             <div class="gallery-item fit-auto">
                 <div class="gallery-image fit-image">
                     <picture><img loading="lazy" decoding="async" src="portfolio_pics/IMG_4748.webp"
-                            alt="Ecommerce product photography for Herbalife with white background by Paaru Studio Bangalore"
+                            alt="Ecommerce product photography for Herbalife with white background by Paaru Studio-Media Bangalore"
                             width="100" height="100">
                     </picture>
                 </div>
@@ -730,7 +891,7 @@
             <div class="gallery-item fit-auto">
                 <div class="gallery-image fit-image">
                     <picture><img loading="lazy" decoding="async" src="portfolio_pics/IMG_4749.webp"
-                            alt="Ecommerce product photography for Herbalife with white background by Paaru Studio Bangalore"
+                            alt="Ecommerce product photography for Herbalife with white background by Paaru Studio-Media Bangalore"
                             width="100" height="100">
                     </picture>
                 </div>
@@ -738,7 +899,7 @@
             <div class="gallery-item fit-auto">
                 <div class="gallery-image fit-image">
                     <picture><img loading="lazy" decoding="async" src="portfolio_pics/IMG_4752.webp"
-                            alt="Ecommerce product photography for Herbalife with white background by Paaru Studio Bangalore"
+                            alt="Ecommerce product photography for Herbalife with white background by Paaru Studio-Media Bangalore"
                             width="100" height="100">
                     </picture>
                 </div>
@@ -830,53 +991,53 @@
                     <div class="clients-group">
                         <div class="client-logo client-logo--img">
                             <picture><img loading="lazy" decoding="async" src="Logos/Logo_1.webp"
-                                    alt="Paaru Studio client brand logo" width="100" height="100">
+                                    alt="Paaru Studio-Media client brand logo" width="100" height="100">
                             </picture>
                         </div>
                         <div class="client-logo client-logo--img">
                             <picture><img loading="lazy" decoding="async" src="Logos/Logo_2.webp"
-                                    alt="Paaru Studio client brand logo" width="100" height="100">
+                                    alt="Paaru Studio-Media client brand logo" width="100" height="100">
                             </picture>
                         </div>
                         <div class="client-logo client-logo--img">
                             <picture><img loading="lazy" decoding="async" src="Logos/Logo_3.webp"
-                                    alt="Paaru Studio client brand logo" width="100" height="100">
+                                    alt="Paaru Studio-Media client brand logo" width="100" height="100">
                             </picture>
                         </div>
                         <div class="client-logo client-logo--img">
                             <picture><img loading="lazy" decoding="async"
                                     src="Logos/ChatGPT Image Aug 21, 2025 at 01_00_18 PM.webp"
-                                    alt="Herbalife client of Paaru Studio" width="100" height="100">
+                                    alt="Herbalife client of Paaru Studio-Media" width="100" height="100">
                             </picture>
                         </div>
                         <div class="client-logo client-logo--img">
                             <picture><img loading="lazy" decoding="async"
                                     src="Logos/ChatGPT Image Aug 21, 2025 at 01_51_46 PM.webp"
-                                    alt="Onsurity client of Paaru Studio" width="100" height="100">
+                                    alt="Onsurity client of Paaru Studio-Media" width="100" height="100">
                             </picture>
                         </div>
                         <div class="client-logo client-logo--img">
                             <picture><img loading="lazy" decoding="async"
                                     src="Logos/ChatGPT Image Aug 21, 2025 at 02_14_37 PM.webp"
-                                    alt="Livspace client of Paaru Studio" width="100" height="100">
+                                    alt="Livspace client of Paaru Studio-Media" width="100" height="100">
                             </picture>
                         </div>
                         <div class="client-logo client-logo--img">
                             <picture><img loading="lazy" decoding="async"
                                     src="Logos/ChatGPT Image Aug 21, 2025 at 12_46_51 PM.webp"
-                                    alt="SugarFit client of Paaru Studio" width="100" height="100">
+                                    alt="SugarFit client of Paaru Studio-Media" width="100" height="100">
                             </picture>
                         </div>
                         <div class="client-logo client-logo--img">
                             <picture><img loading="lazy" decoding="async"
                                     src="Logos/ChatGPT Image Aug 21, 2025 at 12_52_24 PM.webp"
-                                    alt="Ovum Hospital client of Paaru Studio" width="100" height="100">
+                                    alt="Ovum Hospital client of Paaru Studio-Media" width="100" height="100">
                             </picture>
                         </div>
                         <div class="client-logo client-logo--img">
                             <picture><img loading="lazy" decoding="async"
                                     src="Logos/ChatGPT Image Aug 22, 2025 at 01_00_39 PM.webp"
-                                    alt="Tribe Concepts client of Paaru Studio" width="100" height="100">
+                                    alt="Tribe Concepts client of Paaru Studio-Media" width="100" height="100">
                             </picture>
                         </div>
                         <div class="client-logo client-logo--img">
@@ -896,19 +1057,19 @@
                         <div class="client-logo client-logo--img">
                             <picture><img loading="lazy" decoding="async"
                                     src="Logos/ChatGPT Image Aug 22, 2025 at 12_55_36 PM.webp"
-                                    alt="Urban Ladder client of Paaru Studio" width="100" height="100">
+                                    alt="Urban Ladder client of Paaru Studio-Media" width="100" height="100">
                             </picture>
                         </div>
                         <div class="client-logo client-logo--img">
                             <picture><img loading="lazy" decoding="async"
                                     src="Logos/ChatGPT Image Aug 22, 2025 at 12_57_54 PM.webp"
-                                    alt="Cyseck client of Paaru Studio" width="100" height="100">
+                                    alt="Cyseck client of Paaru Studio-Media" width="100" height="100">
                             </picture>
                         </div>
                         <div class="client-logo client-logo--img">
                             <picture><img loading="lazy" decoding="async"
                                     src="Logos/ChatGPT Image Aug 26, 2025 at 11_29_17 AM.webp"
-                                    alt="Simpli Axis client of Paaru Studio" width="100" height="100">
+                                    alt="Simpli Axis client of Paaru Studio-Media" width="100" height="100">
                             </picture>
                         </div>
                         <div class="client-logo client-logo--img">
@@ -920,53 +1081,53 @@
                     <div class="clients-group" aria-hidden="true">
                         <div class="client-logo client-logo--img" aria-hidden="true">
                             <picture><img loading="lazy" decoding="async" src="Logos/Logo_1.webp"
-                                    alt="Paaru Studio client brand logo" width="100" height="100">
+                                    alt="Paaru Studio-Media client brand logo" width="100" height="100">
                             </picture>
                         </div>
                         <div class="client-logo client-logo--img" aria-hidden="true">
                             <picture><img loading="lazy" decoding="async" src="Logos/Logo_2.webp"
-                                    alt="Paaru Studio client brand logo" width="100" height="100">
+                                    alt="Paaru Studio-Media client brand logo" width="100" height="100">
                             </picture>
                         </div>
                         <div class="client-logo client-logo--img" aria-hidden="true">
                             <picture><img loading="lazy" decoding="async" src="Logos/Logo_3.webp"
-                                    alt="Paaru Studio client brand logo" width="100" height="100">
+                                    alt="Paaru Studio-Media client brand logo" width="100" height="100">
                             </picture>
                         </div>
                         <div class="client-logo client-logo--img" aria-hidden="true">
                             <picture><img loading="lazy" decoding="async"
                                     src="Logos/ChatGPT Image Aug 21, 2025 at 01_00_18 PM.webp"
-                                    alt="Herbalife client of Paaru Studio" width="100" height="100">
+                                    alt="Herbalife client of Paaru Studio-Media" width="100" height="100">
                             </picture>
                         </div>
                         <div class="client-logo client-logo--img" aria-hidden="true">
                             <picture><img loading="lazy" decoding="async"
                                     src="Logos/ChatGPT Image Aug 21, 2025 at 01_51_46 PM.webp"
-                                    alt="Onsurity client of Paaru Studio" width="100" height="100">
+                                    alt="Onsurity client of Paaru Studio-Media" width="100" height="100">
                             </picture>
                         </div>
                         <div class="client-logo client-logo--img" aria-hidden="true">
                             <picture><img loading="lazy" decoding="async"
                                     src="Logos/ChatGPT Image Aug 21, 2025 at 02_14_37 PM.webp"
-                                    alt="Livspace client of Paaru Studio" width="100" height="100">
+                                    alt="Livspace client of Paaru Studio-Media" width="100" height="100">
                             </picture>
                         </div>
                         <div class="client-logo client-logo--img" aria-hidden="true">
                             <picture><img loading="lazy" decoding="async"
                                     src="Logos/ChatGPT Image Aug 21, 2025 at 12_46_51 PM.webp"
-                                    alt="SugarFit client of Paaru Studio" width="100" height="100">
+                                    alt="SugarFit client of Paaru Studio-Media" width="100" height="100">
                             </picture>
                         </div>
                         <div class="client-logo client-logo--img" aria-hidden="true">
                             <picture><img loading="lazy" decoding="async"
                                     src="Logos/ChatGPT Image Aug 21, 2025 at 12_52_24 PM.webp"
-                                    alt="Ovum Hospital client of Paaru Studio" width="100" height="100">
+                                    alt="Ovum Hospital client of Paaru Studio-Media" width="100" height="100">
                             </picture>
                         </div>
                         <div class="client-logo client-logo--img" aria-hidden="true">
                             <picture><img loading="lazy" decoding="async"
                                     src="Logos/ChatGPT Image Aug 22, 2025 at 01_00_39 PM.webp"
-                                    alt="Tribe Concepts client of Paaru Studio" width="100" height="100">
+                                    alt="Tribe Concepts client of Paaru Studio-Media" width="100" height="100">
                             </picture>
                         </div>
                         <div class="client-logo client-logo--img" aria-hidden="true">
@@ -986,19 +1147,19 @@
                         <div class="client-logo client-logo--img" aria-hidden="true">
                             <picture><img loading="lazy" decoding="async"
                                     src="Logos/ChatGPT Image Aug 22, 2025 at 12_55_36 PM.webp"
-                                    alt="Urban Ladder client of Paaru Studio" width="100" height="100">
+                                    alt="Urban Ladder client of Paaru Studio-Media" width="100" height="100">
                             </picture>
                         </div>
                         <div class="client-logo client-logo--img" aria-hidden="true">
                             <picture><img loading="lazy" decoding="async"
                                     src="Logos/ChatGPT Image Aug 22, 2025 at 12_57_54 PM.webp"
-                                    alt="Cyseck client of Paaru Studio" width="100" height="100">
+                                    alt="Cyseck client of Paaru Studio-Media" width="100" height="100">
                             </picture>
                         </div>
                         <div class="client-logo client-logo--img" aria-hidden="true">
                             <picture><img loading="lazy" decoding="async"
                                     src="Logos/ChatGPT Image Aug 26, 2025 at 11_29_17 AM.webp"
-                                    alt="Simpli Axis client of Paaru Studio" width="100" height="100">
+                                    alt="Simpli Axis client of Paaru Studio-Media" width="100" height="100">
                             </picture>
                         </div>
                         <div class="client-logo client-logo--img" aria-hidden="true">
@@ -1448,7 +1609,7 @@
     <section class="testimonials-section">
         <div class="container">
             <div class="section-header">
-                <h2>What Clients Say About <span style="color: #f59e0b;">Paaru Studio</span></h2>
+                <h2>What Clients Say About <span style="color: #f59e0b;">Paaru Studio-Media</span></h2>
                 <div class="underline"></div>
             </div>
             <div class="testimonial-card">
@@ -1492,7 +1653,7 @@
                         <div class="review-name">Smirti</div>
                         <div class="review-brand">Tribe Concepts</div>
                     </div>
-                    <div class="review-text">Paaru Studio delivered exceptional product visuals that
+                    <div class="review-text">Paaru Studio-Media delivered exceptional product visuals that
                         perfectly matched our brand’s tone. The team was patient, professional, and
                         detail-oriented throughout the shoot. Truly a creative and reliable partner!</div>
                     <div class="review-footer">
@@ -1505,7 +1666,7 @@
                         <div class="review-name">Afroz</div>
                         <div class="review-brand">LivSpace</div>
                     </div>
-                    <div class="review-text">Extremely professional team! Paaru Studio managed our BTL event
+                    <div class="review-text">Extremely professional team! Paaru Studio-Media managed our BTL event
                         flawlessly — great coordination, quality output, and quick delivery. They understood
                         our goals perfectly and executed beyond expectations.</div>
                     <div class="review-footer">
@@ -1525,7 +1686,7 @@
             <div class="faq-list">
                 <div class="faq-item" onclick="this.classList.toggle('active')">
                     <div class="faq-question">
-                        <span>What services does Paaru Studio offer?</span>
+                        <h3 style="font-size:inherit;font-weight:inherit;margin:0;color:inherit;font-family:inherit;">What services does Paaru Studio-Media offer?</h3>
                         <span class="faq-icon">+</span>
                     </div>
                     <div class="faq-answer">
@@ -1537,7 +1698,7 @@
 
                 <div class="faq-item" onclick="this.classList.toggle('active')">
                     <div class="faq-question">
-                        <span>Does Paaru Studio handle end-to-end production?</span>
+                        <h3 style="font-size:inherit;font-weight:inherit;margin:0;color:inherit;font-family:inherit;">Does Paaru Studio-Media handle end-to-end production?</h3>
                         <span class="faq-icon">+</span>
                     </div>
                     <div class="faq-answer">
@@ -1549,7 +1710,7 @@
 
                 <div class="faq-item" onclick="this.classList.toggle('active')">
                     <div class="faq-question">
-                        <span>What is the typical turnaround time for a project?</span>
+                        <h3 style="font-size:inherit;font-weight:inherit;margin:0;color:inherit;font-family:inherit;">What is the typical turnaround time for a project?</h3>
                         <span class="faq-icon">+</span>
                     </div>
                     <div class="faq-answer">
@@ -1560,7 +1721,7 @@
 
                 <div class="faq-item" onclick="this.classList.toggle('active')">
                     <div class="faq-question">
-                        <span>Do you provide E-commerce cataloguing services?</span>
+                        <h3 style="font-size:inherit;font-weight:inherit;margin:0;color:inherit;font-family:inherit;">Do you provide E-commerce cataloguing services?</h3>
                         <span class="faq-icon">+</span>
                     </div>
                     <div class="faq-answer">
@@ -1572,7 +1733,7 @@
 
                 <div class="faq-item" onclick="this.classList.toggle('active')">
                     <div class="faq-question">
-                        <span>Where are you located and do you work globally?</span>
+                        <h3 style="font-size:inherit;font-weight:inherit;margin:0;color:inherit;font-family:inherit;">Where are you located and do you work globally?</h3>
                         <span class="faq-icon">+</span>
                     </div>
                     <div class="faq-answer">
@@ -1583,13 +1744,11 @@
 
                 <div class="faq-item" onclick="this.classList.toggle('active')">
                     <div class="faq-question">
-                        <span>How can I get a quote for my project?</span>
+                        <h3 style="font-size:inherit;font-weight:inherit;margin:0;color:inherit;font-family:inherit;">How can I get a quote for my project?</h3>
                         <span class="faq-icon">+</span>
                     </div>
                     <div class="faq-answer">
-                        You can fill out our 'Get Started' form on the website or reach out directly at
-                        info@paarustudio.com. We typically respond with a preliminary estimate and consultation within
-                        24 hours.
+                        Fill out our Get Started form, call us at +917619413241, or email info@paarustudio.com. We respond within 24 hours.
                     </div>
                 </div>
             </div>
@@ -1602,7 +1761,7 @@
             <div class="container">
                 <div class="callout-inner">
                     <div class="callout-text">
-                        <h2>New to <span style="color: #f59e0b;">Paaru Studio</span>? Put us to the test for
+                        <h2>New to <span style="color: #f59e0b;">Paaru Studio-Media</span>? Put us to the test for
                             free</h2>
                         <p>Get a free ad redesign in 48 hours and see the difference we can make. No catch.
                         </p>
@@ -1653,7 +1812,7 @@
             <div class="container">
                 <div class="footer-grid">
                     <div class="footer-brand">
-                        <h3>PAARU STUDIO</h3>
+                        <h3>PAARU STUDIO-MEDIA</h3>
                         <p>Video Production Company in Bangalore | Ad Films, BTL & OOH.</p>
                         <div class="footer-social">
                             <a href="https://www.instagram.com/paaru_studio" target="_blank" rel="noopener noreferrer"
@@ -1697,7 +1856,7 @@
                     </div>
                 </div>
                 <div class="footer-bottom">
-                    <p>© Paaru Studio 2026</p>
+                    <p>© Paaru Studio-Media 2026</p>
                     <div class="footer-meta">
                         <span style="color: #64748b; font-size: 13px; margin-right: 20px;">EN / <a href="#"
                                 style="color: #64748b; text-decoration: none;">FR</a></span>
@@ -1728,7 +1887,7 @@
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
-      "name": "Paaru Studio",
+      "name": "Paaru Studio-Media",
       "url": "https://paarustudio.com/"
     }
     </script>
@@ -1739,13 +1898,32 @@
       "@context": "https://schema.org",
       "@type": "Organization",
       "additionalType": "LocalBusiness",
-      "name": "Paaru Studio",
+      "name": "Paaru Studio-Media",
       "url": "https://paarustudio.com/",
       "logo": "https://paarustudio.com/logo.webp",
       "image": "https://paarustudio.com/logo.webp",
       "telephone": "+917619413241",
       "email": "info@paarustudio.com",
-      "description": "Paaru Studio is a Bangalore based video production company and creative ad agency with 11+ years of experience in TV commercials, digital films, BTL activations, OOH and performance-driven campaigns for brands.",
+      "description": "Paaru Studio-Media is a Bangalore based video production company and creative ad agency with 11+ years of experience in TV commercials, digital films, BTL activations, OOH and performance-driven campaigns for brands.",
+      "foundingDate": "2015",
+      "knowsAbout": [
+        "Video Production",
+        "Ad Film Production",
+        "Corporate Filmmaking",
+        "Digital Out of Home Advertising (DOOH)",
+        "Out of Home Advertising (OOH)",
+        "Performance Marketing",
+        "Influencer Marketing",
+        "E-commerce Photography",
+        "BTL Activations"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+917619413241",
+        "contactType": "sales",
+        "email": "info@paarustudio.com",
+        "areaServed": "IN"
+      },
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "48B, 100 Feet Road, Nagarabhavi",
@@ -1775,13 +1953,13 @@
           "@type": "Review",
           "author": { "@type": "Person", "name": "Smirti" },
           "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-          "reviewBody": "Paaru Studio delivered exceptional product visuals that perfectly matched our brand tone. Truly a creative and reliable partner."
+          "reviewBody": "Paaru Studio-Media delivered exceptional product visuals that perfectly matched our brand tone. Truly a creative and reliable partner."
         },
         {
           "@type": "Review",
           "author": { "@type": "Person", "name": "Afroz" },
           "reviewRating": { "@type": "Rating", "ratingValue": "4", "bestRating": "5" },
-          "reviewBody": "Extremely professional team. Paaru Studio managed our BTL event flawlessly with great coordination and quick delivery."
+          "reviewBody": "Extremely professional team. Paaru Studio-Media managed our BTL event flawlessly with great coordination and quick delivery."
         }
       ],
       "sameAs": [
@@ -1798,7 +1976,7 @@
       "@context": "https://schema.org",
       "@type": "VideoObject",
       "name": "Observance Eye Digital Video Commercial",
-      "description": "Digital video commercial produced by Paaru Studio Bangalore for Observance Eye.",
+      "description": "Digital video commercial produced by Paaru Studio-Media Bangalore for Observance Eye.",
       "thumbnailUrl": "https://i.ytimg.com/vi/sVA07PZR-vc/maxresdefault.jpg",
       "uploadDate": "2025-07-15T08:00:00+08:00",
       "duration": "PT1M21S",
@@ -1815,7 +1993,7 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What services does Paaru Studio offer?",
+          "name": "What services does Paaru Studio-Media offer?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "We offer end-to-end Video Production (Commercials, Corporate Films, Social Media Content), E-commerce Solutions (Product Shoots, Cataloguing), and Media Buying (OOH/DOOH) services tailored for premium brands."
@@ -1823,7 +2001,7 @@
         },
         {
           "@type": "Question",
-          "name": "Does Paaru Studio handle end-to-end production?",
+          "name": "Does Paaru Studio-Media handle end-to-end production?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Yes, we handle everything from research, scriptwriting, and storyboarding to professional filming, post-production, VFX, and final delivery."

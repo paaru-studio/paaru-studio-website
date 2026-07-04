@@ -12,8 +12,17 @@ RewriteRule ^(.*)$ https://paarustudio.com/$1 [L,R=301]
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html\ HTTP/
 RewriteRule ^index\.html$ https://paarustudio.com/ [R=301,L]
 
-# 4. Redirect services.html to video-production.html
-RewriteRule ^services\.html$ https://paarustudio.com/video-production.html [R=301,L]
+# 4. Redirect services.html directly to clean URL video-production
+RewriteRule ^services\.html$ https://paarustudio.com/video-production [R=301,L]
+
+# 5. Redirect external requests for *.html to clean extensionless URLs (avoids duplicates)
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^\.]+)\.html\ HTTP/
+RewriteRule ^([^\.]+)\.html$ https://paarustudio.com/$1 [R=301,L]
+
+# 6. Internally route clean extensionless URLs to their physical .html files
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*?)/?$ $1.html [L]
 
 # Browser Caching
 <IfModule mod_expires.c>

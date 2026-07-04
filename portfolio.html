@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Production & Advertising Portfolio | Paaru Studio Bangalore</title>
+    <title>Video Production & Advertising Portfolio | Paaru Studio-Media Bangalore</title>
     <meta name="description"
-        content="Explore Paaru Studio’s portfolio of TV commercials, brand films, digital ads, e-commerce content and OOH campaigns created for leading Indian and global brands over 11+ years.">
+        content="Explore Paaru Studio-Media’s portfolio of TV commercials, brand films, digital ads, e-commerce content and OOH campaigns created for leading Indian and global brands over 11+ years.">
     <meta name="keywords"
         content="video production portfolio, advertising portfolio bangalore, advertising portfolio bangalore, brand film examples india, tv commercial portfolio, ecommerce content portfolio, ooh & btl campaign examples, digital ad films showcase">
     <link rel="canonical" href="https://paarustudio.com/portfolio">
@@ -14,17 +14,17 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://paarustudio.com/portfolio">
-    <meta property="og:title" content="Video Production & Advertising Portfolio | Paaru Studio Bangalore">
+    <meta property="og:title" content="Video Production & Advertising Portfolio | Paaru Studio-Media Bangalore">
     <meta property="og:description"
-        content="Explore Paaru Studio’s portfolio of TV commercials, brand films, digital ads, e-commerce content and OOH campaigns created for leading Indian and global brands over 11+ years.">
+        content="Explore Paaru Studio-Media’s portfolio of TV commercials, brand films, digital ads, e-commerce content and OOH campaigns created for leading Indian and global brands over 11+ years.">
     <meta property="og:image" content="https://paarustudio.com/logo.webp">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://paarustudio.com/portfolio">
-    <meta property="twitter:title" content="Video Production & Advertising Portfolio | Paaru Studio Bangalore">
+    <meta property="twitter:title" content="Video Production & Advertising Portfolio | Paaru Studio-Media Bangalore">
     <meta property="twitter:description"
-        content="Explore Paaru Studio’s portfolio of TV commercials, brand films, digital ads, e-commerce content and OOH campaigns created for leading Indian and global brands over 11+ years.">
+        content="Explore Paaru Studio-Media’s portfolio of TV commercials, brand films, digital ads, e-commerce content and OOH campaigns created for leading Indian and global brands over 11+ years.">
     <meta property="twitter:image" content="https://paarustudio.com/logo.webp">
 
     <link rel="dns-prefetch" href="https://www.youtube.com">
@@ -47,14 +47,36 @@
     {
       "@context": "https://schema.org",
       "@type": "CreativeWorkSeries",
-      "name": "Paaru Studio Portfolio",
-      "description": "Explore Paaru Studio’s portfolio of TV commercials, brand films, digital ads, e-commerce content and OOH campaigns created for leading Indian and global brands over 11+ years.",
+      "name": "Paaru Studio-Media Portfolio",
+      "description": "Explore Paaru Studio-Media’s portfolio of TV commercials, brand films, digital ads, e-commerce content and OOH campaigns created for leading Indian and global brands over 11+ years.",
       "creator": {
         "@type": "Organization",
-      "additionalType": "LocalBusiness",
-        "name": "Paaru Studio",
+        "additionalType": "LocalBusiness",
+        "name": "Paaru Studio-Media",
         "url": "https://paarustudio.com/",
+        "logo": "https://paarustudio.com/logo.webp",
+        "image": "https://paarustudio.com/logo.webp",
         "telephone": "+917619413241",
+        "email": "info@paarustudio.com",
+        "foundingDate": "2015",
+        "knowsAbout": [
+          "Video Production",
+          "Ad Film Production",
+          "Corporate Filmmaking",
+          "Digital Out of Home Advertising (DOOH)",
+          "Out of Home Advertising (OOH)",
+          "Performance Marketing",
+          "Influencer Marketing",
+          "E-commerce Photography",
+          "BTL Activations"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+917619413241",
+          "contactType": "sales",
+          "email": "info@paarustudio.com",
+          "areaServed": "IN"
+        },
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "48B, 100 Feet Road, Nagarabhavi",
@@ -183,6 +205,203 @@
             <div class="section-header">
                 <div class="underline"></div>
             </div>
+
+            <!-- FEATURING Section: New YouTube Shorts -->
+            <style>
+                .featuring-section {
+                    margin-bottom: 80px;
+                    padding: 0;
+                }
+                .featuring-header {
+                    text-align: center;
+                    margin-bottom: 48px;
+                }
+                .featuring-header h2 {
+                    font-size: 38px;
+                    font-weight: 900;
+                    margin-bottom: 12px;
+                    letter-spacing: 0.12em;
+                    text-transform: uppercase;
+                }
+                .featuring-header .feat-underline {
+                    width: 60px;
+                    height: 3px;
+                    background: var(--accent-color);
+                    margin: 0 auto 14px;
+                    border-radius: 2px;
+                }
+                .featuring-header p {
+                    color: rgba(255,255,255,0.5);
+                    font-size: 14px;
+                    letter-spacing: 0.08em;
+                    text-transform: uppercase;
+                    margin: 0;
+                }
+                .featuring-grid {
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    gap: 24px;
+                    max-width: 1200px;
+                    margin: 0 auto;
+                }
+                .featuring-card {
+                    position: relative;
+                    border-radius: 16px;
+                    overflow: hidden;
+                    aspect-ratio: 9 / 16;
+                    background: #111;
+                    cursor: pointer;
+                    box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+                    transition: transform 0.35s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.35s ease;
+                }
+                .featuring-card:hover {
+                    transform: translateY(-8px) scale(1.03);
+                    box-shadow: 0 20px 60px rgba(255,0,0,0.25), 0 8px 24px rgba(0,0,0,0.6);
+                }
+                .featuring-card .video-poster {
+                    position: absolute !important;
+                    inset: 0 !important;
+                    width: 100% !important;
+                    height: 100% !important;
+                    background-size: cover;
+                    background-position: center;
+                    border: 0 !important;
+                    margin: 0 !important;
+                    padding: 0 !important;
+                    cursor: pointer;
+                    display: block !important;
+                }
+                /* Hide the default play overlay buttons created by styles.min.css */
+                .featuring-card .video-poster::before,
+                .featuring-card .video-poster::after {
+                    display: none !important;
+                }
+                .featuring-card:hover .video-poster {
+                    transform: scale(1.06);
+                    transition: transform 0.4s ease;
+                }
+                .featuring-card .feat-overlay {
+                    position: absolute;
+                    inset: 0;
+                    background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.1) 50%, transparent 100%);
+                    z-index: 1;
+                    transition: background 0.3s ease;
+                    pointer-events: none;
+                }
+                .featuring-card:hover .feat-overlay {
+                    background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.2) 50%, rgba(255,0,0,0.06) 100%);
+                }
+                .featuring-card .feat-play-btn {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%) scale(0.9);
+                    z-index: 2;
+                    width: 52px !important;
+                    height: 52px !important;
+                    background: rgba(255,255,255,0.92) !important;
+                    border-radius: 50% !important;
+                    display: flex !important;
+                    align-items: center !important;
+                    justify-content: center !important;
+                    transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1), background 0.3s ease, box-shadow 0.3s ease;
+                    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+                    pointer-events: none;
+                }
+                .featuring-card:hover .feat-play-btn {
+                    transform: translate(-50%, -50%) scale(1.1);
+                    background: #fff !important;
+                    box-shadow: 0 8px 32px rgba(255,0,0,0.4);
+                }
+                .featuring-card .feat-play-btn svg {
+                    width: 20px !important;
+                    height: 20px !important;
+                    fill: #FF0000 !important;
+                    margin-left: 3px !important;
+                    display: block !important;
+                }
+                .featuring-card .feat-badge {
+                    position: absolute;
+                    top: 12px;
+                    left: 12px;
+                    z-index: 2;
+                    background: #FF0000;
+                    color: #fff;
+                    font-size: 10px;
+                    font-weight: 700;
+                    letter-spacing: 0.1em;
+                    padding: 3px 8px;
+                    border-radius: 4px;
+                    text-transform: uppercase;
+                    pointer-events: none;
+                }
+                @media (max-width: 768px) {
+                    .featuring-grid {
+                        grid-template-columns: repeat(2, 1fr);
+                        gap: 14px;
+                        max-width: 100%;
+                    }
+                }
+                @media (max-width: 480px) {
+                    .featuring-grid {
+                        grid-template-columns: repeat(2, 1fr);
+                        gap: 10px;
+                    }
+                }
+            </style>
+            <section id="featuring" class="featuring-section">
+                <div class="featuring-header">
+                    <h2>Featuring</h2>
+                    <div class="feat-underline"></div>
+                    <p>Latest Shorts &amp; Reels from Paaru Studio-Media</p>
+                </div>
+                <div class="featuring-grid">
+                    <!-- Short 1 -->
+                    <div class="featuring-card video-embed" data-video-id="_nXASlZC_ao">
+                        <button class="video-poster" aria-label="Play featuring short 1"
+                            style="background-image: url('https://i.ytimg.com/vi/_nXASlZC_ao/maxresdefault.jpg');">
+                            <div class="feat-overlay"></div>
+                            <span class="feat-badge">&#9654; Short</span>
+                            <span class="feat-play-btn">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>
+                            </span>
+                        </button>
+                    </div>
+                    <!-- Short 2 -->
+                    <div class="featuring-card video-embed" data-video-id="077yokCutpU">
+                        <button class="video-poster" aria-label="Play featuring short 2"
+                            style="background-image: url('https://i.ytimg.com/vi/077yokCutpU/maxresdefault.jpg');">
+                            <div class="feat-overlay"></div>
+                            <span class="feat-badge">&#9654; Short</span>
+                            <span class="feat-play-btn">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>
+                            </span>
+                        </button>
+                    </div>
+                    <!-- Short 3 -->
+                    <div class="featuring-card video-embed" data-video-id="Dt-RoKB0s40">
+                        <button class="video-poster" aria-label="Play featuring short 3"
+                            style="background-image: url('https://i.ytimg.com/vi/Dt-RoKB0s40/maxresdefault.jpg');">
+                            <div class="feat-overlay"></div>
+                            <span class="feat-badge">&#9654; Short</span>
+                            <span class="feat-play-btn">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>
+                            </span>
+                        </button>
+                    </div>
+                    <!-- Short 4 -->
+                    <div class="featuring-card video-embed" data-video-id="j2Bir3qKFQo">
+                        <button class="video-poster" aria-label="Play featuring short 4"
+                            style="background-image: url('https://i.ytimg.com/vi/j2Bir3qKFQo/maxresdefault.jpg');">
+                            <div class="feat-overlay"></div>
+                            <span class="feat-badge">&#9654; Short</span>
+                            <span class="feat-play-btn">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </section>
 
             <div class="portfolio-carousel">
                 <button class="carousel-nav prev" aria-label="Previous project">‹</button>
@@ -379,6 +598,50 @@
                                 <button class="video-poster" aria-label="Play reel 6"
                                     style="background-image: url('https://i.ytimg.com/vi/oO9ZeIc-aek/maxresdefault.jpg')"></button>
                             </div>
+                        </div>
+                    </div>
+
+                    <!-- Third row: Featuring 4 new YouTube Shorts -->
+                    <div class="featuring-grid" style="margin-top: 75px; max-width: 100%;" aria-label="Featuring vertical reels">
+                        <div class="featuring-card video-embed" data-video-id="_nXASlZC_ao">
+                            <button class="video-poster" aria-label="Play featuring short 1"
+                                style="background-image: url('https://i.ytimg.com/vi/_nXASlZC_ao/maxresdefault.jpg');">
+                                <div class="feat-overlay"></div>
+                                <span class="feat-badge">&#9654; Short</span>
+                                <span class="feat-play-btn">
+                                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>
+                                </span>
+                            </button>
+                        </div>
+                        <div class="featuring-card video-embed" data-video-id="077yokCutpU">
+                            <button class="video-poster" aria-label="Play featuring short 2"
+                                style="background-image: url('https://i.ytimg.com/vi/077yokCutpU/maxresdefault.jpg');">
+                                <div class="feat-overlay"></div>
+                                <span class="feat-badge">&#9654; Short</span>
+                                <span class="feat-play-btn">
+                                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>
+                                </span>
+                            </button>
+                        </div>
+                        <div class="featuring-card video-embed" data-video-id="Dt-RoKB0s40">
+                            <button class="video-poster" aria-label="Play featuring short 3"
+                                style="background-image: url('https://i.ytimg.com/vi/Dt-RoKB0s40/maxresdefault.jpg');">
+                                <div class="feat-overlay"></div>
+                                <span class="feat-badge">&#9654; Short</span>
+                                <span class="feat-play-btn">
+                                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>
+                                </span>
+                            </button>
+                        </div>
+                        <div class="featuring-card video-embed" data-video-id="j2Bir3qKFQo">
+                            <button class="video-poster" aria-label="Play featuring short 4"
+                                style="background-image: url('https://i.ytimg.com/vi/j2Bir3qKFQo/maxresdefault.jpg');">
+                                <div class="feat-overlay"></div>
+                                <span class="feat-badge">&#9654; Short</span>
+                                <span class="feat-play-btn">
+                                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>
+                                </span>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -1170,7 +1433,7 @@
             <div class="container">
                 <div class="footer-grid">
                     <div class="footer-brand">
-                        <h3>PAARU STUDIO</h3>
+                        <h3>PAARU STUDIO-MEDIA</h3>
                         <p>Video Production Company in Bangalore | Ad Films, BTL & OOH.</p>
                         <div class="footer-social">
                             <a href="https://www.instagram.com/paaru_studio" target="_blank" rel="noopener noreferrer"
@@ -1209,7 +1472,7 @@
                     </div>
                 </div>
                 <div class="footer-bottom">
-                    <p>&copy; 2026 Paaru Studio. All rights reserved.</p>
+                    <p>&copy; 2026 Paaru Studio-Media. All rights reserved.</p>
                     <div class="footer-meta">
                         <a href="#top" class="back-to-top">↑</a>
                     </div>
