@@ -516,7 +516,7 @@
             .video-production-grid .service-item:nth-child(2) {
                 top: 130px;
                 z-index: 20;
-                background: linear-gradient(135deg, #DFFF00 0%, #FFBF00 100%) !important; color: #000 !important;
+                background: linear-gradient(135deg, #ffd033 0%, #ffbf00 100%) !important; color: #000 !important;
             }
 
             .video-production-grid .service-item:nth-child(2) .service-link {
@@ -569,23 +569,28 @@
 
         /* Full-width yellow strip logic */
         .yellow-strip-section {
-            background: linear-gradient(185deg, #DFFF00 0%, #FFBF00 100%) !important;
+            background: linear-gradient(180deg, #000000 0%, #121212 100%) !important;
             width: 100vw !important;
             margin-left: calc(50% - 50vw) !important;
             position: relative;
             padding: 80px 0;
-            color: #111 !important;
+            color: #e0e0e0 !important;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         .yellow-strip-section h2,
         .yellow-strip-section .section-header h2,
-        .yellow-strip-section .intro-text h3,
+        .yellow-strip-section .intro-text h3 {
+            color: #ffbf00 !important;
+        }
+
         .yellow-strip-section .intro-text p {
-            color: #000 !important;
+            color: #e0e0e0 !important;
         }
 
         .yellow-strip-section .underline {
-            background-color: #000 !important;
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)) !important;
         }
 
         @media (max-width: 768px) {

@@ -425,11 +425,13 @@
         }
 
         .portfolio-section.yellow-strip {
-            background: linear-gradient(185deg, #DFFF00 0%, #FFBF00 100%) !important;
+            background: linear-gradient(180deg, #000000 0%, #121212 100%) !important;
             padding: 80px 0;
             width: 100vw;
             margin-left: calc(50% - 50vw);
             position: relative;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         /* New Trusted By Style */
@@ -458,13 +460,16 @@
             margin: 0 15px;
         }
 
-        .portfolio-section.yellow-strip h2,
+        .portfolio-section.yellow-strip h2 {
+            color: #ffbf00 !important;
+        }
+
         .portfolio-section.yellow-strip p {
-            color: #000 !important;
+            color: #e0e0e0 !important;
         }
 
         .portfolio-section.yellow-strip .underline {
-            background-color: #000 !important;
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)) !important;
             display: block;
             margin: 15px auto 25px auto;
         }
@@ -477,6 +482,7 @@
             margin: 0 auto;
             max-width: 900px;
             line-height: 1.4;
+            color: #e0e0e0 !important;
         }
 
         @media (max-width: 768px) {
@@ -1247,7 +1253,7 @@
 
         /* Vibrant Theming */
         .pane-ecommerce {
-            background: linear-gradient(135deg, #DFFF00 0%, #FFBF00 100%);
+            background: linear-gradient(135deg, #ffd033 0%, #ffbf00 100%);
         }
 
         .pane-advertising {
