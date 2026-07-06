@@ -629,27 +629,162 @@
             </div>
 
             <!-- Case study client badge -->
-            <div style="text-align:center; margin-bottom: 40px;">
+            <div style="text-align:center; margin-bottom: 36px;">
                 <div class="ooh-case-label">
                     <img src="Logos/logo_signeasy.webp" alt="Signeasy" loading="lazy">
                     <span>Case Study — <strong>Signeasy OOH Campaign, Bangalore 2026</strong></span>
                 </div>
             </div>
 
+            <!-- About the Client -->
+            <style>
+                .ooh-client-block {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 40px;
+                    align-items: center;
+                    background: rgba(255,255,255,0.025);
+                    border: 1px solid rgba(255,255,255,0.07);
+                    border-radius: 24px;
+                    padding: 44px 48px;
+                    margin-bottom: 56px;
+                    position: relative;
+                    overflow: hidden;
+                }
+                .ooh-client-block::before {
+                    content: '';
+                    position: absolute;
+                    top: 0; left: 0; right: 0;
+                    height: 2px;
+                    background: linear-gradient(90deg, transparent, rgba(255,191,0,0.5), transparent);
+                }
+                .ooh-client-logo-wrap {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 20px;
+                }
+                .ooh-client-logo-wrap img {
+                    height: 40px;
+                    width: auto;
+                    filter: brightness(1.15);
+                }
+                .ooh-client-tag-row {
+                    display: flex;
+                    gap: 8px;
+                    flex-wrap: wrap;
+                }
+                .ooh-client-tag {
+                    background: rgba(255,191,0,0.1);
+                    border: 1px solid rgba(255,191,0,0.25);
+                    color: #ffbf00;
+                    font-size: 11px;
+                    font-weight: 600;
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                    padding: 4px 12px;
+                    border-radius: 999px;
+                }
+                .ooh-client-quote {
+                    font-size: 18px;
+                    font-style: italic;
+                    color: rgba(255,255,255,0.75);
+                    line-height: 1.65;
+                    border-left: 3px solid #ffbf00;
+                    padding-left: 20px;
+                    margin: 0;
+                }
+                .ooh-client-copy h3 {
+                    font-size: 22px;
+                    font-weight: 800;
+                    color: #fff;
+                    margin: 0 0 14px;
+                }
+                .ooh-client-copy p {
+                    font-size: 14px;
+                    color: rgba(255,255,255,0.55);
+                    line-height: 1.75;
+                    margin: 0 0 20px;
+                }
+                .ooh-client-meta {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 14px;
+                }
+                .ooh-client-meta-item {
+                    background: rgba(255,255,255,0.04);
+                    border-radius: 10px;
+                    padding: 12px 14px;
+                }
+                .ooh-client-meta-label {
+                    font-size: 10px;
+                    color: rgba(255,255,255,0.35);
+                    text-transform: uppercase;
+                    letter-spacing: 1.2px;
+                    margin-bottom: 4px;
+                }
+                .ooh-client-meta-value {
+                    font-size: 13px;
+                    font-weight: 700;
+                    color: #fff;
+                }
+                @media (max-width: 768px) {
+                    .ooh-client-block { grid-template-columns: 1fr; padding: 28px 24px; gap: 28px; }
+                    .ooh-client-meta  { grid-template-columns: 1fr 1fr; }
+                }
+            </style>
+
+            <div class="ooh-client-block">
+                <div class="ooh-client-logo-wrap">
+                    <img src="Logos/logo_signeasy.webp" alt="Signeasy logo" loading="lazy">
+                    <div class="ooh-client-tag-row">
+                        <span class="ooh-client-tag">🇺🇸 USA Based</span>
+                        <span class="ooh-client-tag">SaaS / e-Signature</span>
+                        <span class="ooh-client-tag">Series B</span>
+                    </div>
+                    <blockquote class="ooh-client-quote">
+                        "Some tools make you Docusighhhhhh — we don't."
+                    </blockquote>
+                </div>
+                <div class="ooh-client-copy">
+                    <h3>About Signeasy</h3>
+                    <p>Signeasy is a <strong style="color:#fff;">San Francisco–based e-signature and contract management platform</strong> trusted by over 48,000 businesses in 100+ countries. Founded in 2010, the company simplifies how teams send, sign, and manage documents — eliminating the paperwork frustration that legacy tools like DocuSign are notorious for.</p>
+                    <p>As Signeasy accelerated its India growth strategy in 2026, they partnered with Paaru Studio-Media to run a high-visibility <strong style="color:#fff;">OOH awareness campaign in Bangalore</strong> — targeting the city's dense tech-professional audience in IT corridors, co-working hubs, and high-footfall road junctions.</p>
+                    <div class="ooh-client-meta">
+                        <div class="ooh-client-meta-item">
+                            <div class="ooh-client-meta-label">HQ</div>
+                            <div class="ooh-client-meta-value">San Francisco, USA</div>
+                        </div>
+                        <div class="ooh-client-meta-item">
+                            <div class="ooh-client-meta-label">Industry</div>
+                            <div class="ooh-client-meta-value">SaaS · e-Signature</div>
+                        </div>
+                        <div class="ooh-client-meta-item">
+                            <div class="ooh-client-meta-label">Campaign Goal</div>
+                            <div class="ooh-client-meta-value">Brand Awareness, India</div>
+                        </div>
+                        <div class="ooh-client-meta-item">
+                            <div class="ooh-client-meta-label">Campaign City</div>
+                            <div class="ooh-client-meta-value">Bangalore, 2026</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- 3-image mosaic (left col = small shots, right = hero wide shot) -->
             <div class="ooh-mosaic">
-                <!-- Left-top: Close-up of billboard -->
+                <!-- Left-top: billboard-only tight crop -->
                 <div class="ooh-mosaic-item sub1">
                     <picture>
-                        <source srcset="ooh_signeasy_closeup.webp" type="image/webp">
-                        <img loading="lazy" decoding="async" src="ooh_signeasy_closeup.webp"
-                            alt="Signeasy OOH billboard closeup — Sarjapur Marathahalli Road Bangalore"
-                            width="600" height="340">
+                        <source srcset="ooh_signeasy_billboard.webp" type="image/webp">
+                        <img loading="lazy" decoding="async" src="ooh_signeasy_billboard.webp"
+                            alt="Signeasy OOH billboard creative — Docusighhhhhh campaign Bangalore"
+                            width="451" height="438">
                     </picture>
                     <div class="ooh-mosaic-caption">
-                        <span class="ooh-mosaic-tag">Billboard Closeup</span>
-                        <h4>Bold Creative — High Readability at Speed</h4>
-                        <p>Witty copy designed for split-second impact at 60 km/h.</p>
+                        <span class="ooh-mosaic-tag">The Creative</span>
+                        <h4>Witty Copy, Maximum Recall</h4>
+                        <p>Humour-driven OOH designed for split-second impact at 60 km/h.</p>
                     </div>
                 </div>
 
