@@ -19,12 +19,18 @@
     color: #000000 !important;
 }
 
-/* 2. Contact Us Button — scrolled state only (golden navbar needs black button for contrast) */
-/* Default white navbar: golden gradient (matches deployed site original) */
+/* 2. Contact Us & Hero CTA Buttons — matching live site golden gradient */
+.hero-cta,
+.about-cta,
+.contact-btn,
 .nav-links .cta-btn {
-    background: linear-gradient(90deg, #ffd033, #ffbf00) !important;
-    color: #0a0a0a !important;
+    background: linear-gradient(135deg, #ffd033, #ffbf00) !important;
+    color: #ffffff !important;
     font-weight: 700 !important;
+}
+
+.nav-links .cta-btn {
+    color: #0a0a0a !important;
     padding: 8px 18px !important;
     border-radius: 999px !important;
     border: none !important;
