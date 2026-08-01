@@ -1,3 +1,32 @@
+# Force www → non-www (keep existing)
 https://www.paarustudio.com/*  https://paarustudio.com/:splat  301!
-/index.html  /  301!
-/services.html  /video-production  301!
+
+# .html → clean URL redirects (301! forces redirect even when .html file exists)
+/index.html                              /                                        301!
+/get-started.html                        /get-started                             301!
+/contact.html                            /contact                                 301!
+/video-production.html                   /video-production                        301!
+/portfolio.html                          /portfolio                               301!
+/ecommerce.html                          /ecommerce                               301!
+/performance-marketing.html              /performance-marketing                   301!
+/social-media-marketing.html             /social-media-marketing                  301!
+/influencer-marketing.html               /influencer-marketing                    301!
+/media-offerings.html                    /media-offerings                         301!
+/ai-services.html                        /ai-services                             301!
+/ai-video-production.html                /ai-video-production                     301!
+/case-studies.html                       /case-studies                            301!
+/case-study-japfa.html                   /case-study-japfa                        301!
+/case-study-calvin-klein.html            /case-study-calvin-klein                 301!
+/case-study-giva.html                    /case-study-giva                         301!
+/blog.html                               /blog                                    301!
+/blog-video-production-bangalore.html    /blog-video-production-bangalore         301!
+/blog-corporate-videos.html              /blog-corporate-videos                   301!
+/blog-explainer-videos.html              /blog-explainer-videos                   301!
+/blog-video-production-essentials.html   /blog-video-production-essentials        301!
+/blog-viral-video-marketing.html         /blog-viral-video-marketing              301!
+/blog-animated-educational-videos.html   /blog-animated-educational-videos        301!
+/join-team.html                          /join-team                               301!
+/privacy-policy.html                     /privacy-policy                          301!
+
+# Legacy redirect (keep existing)
+/services.html                           /video-production                        301!

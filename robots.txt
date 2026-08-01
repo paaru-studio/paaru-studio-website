@@ -1,34 +1,13 @@
-# robots.txt for paarustudio.com
-# Updated: 2026-02-28
-
-# Allow all well-behaved crawlers full access
 User-agent: *
 Allow: /
 
-# Explicitly disallow private/utility paths
-Disallow: /*.backup$
-Disallow: /*.py$
+# Block non-public / utility paths
+Disallow: /popup-form.css
+Disallow: /*.css$
 
+# Allow CSS & JS so Googlebot can render the site fully
+Allow: /styles.min.css
+Allow: /fonts.css
+Allow: /custom-overrides.css
 
-# Allow Google and Bing to index all pages
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-# Allow Google Image crawler
-User-agent: Googlebot-Image
-Allow: /
-
-# Allow Google Video crawler
-User-agent: Googlebot-Video
-Allow: /
-
-# Allow AdsBot for ad-quality checks
-User-agent: AdsBot-Google
-Allow: /
-
-# Sitemap location
 Sitemap: https://paarustudio.com/sitemap.xml
-Sitemap: https://paarustudio.com/video-sitemap.xml
