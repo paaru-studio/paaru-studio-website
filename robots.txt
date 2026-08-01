@@ -1,13 +1,13 @@
 User-agent: *
 Allow: /
 
-# Block non-public / utility paths
-Disallow: /popup-form.css
-Disallow: /*.css$
+# Block unnecessary utility scripts if needed
+Disallow: /*.py$
+Disallow: /*.log$
 
-# Allow CSS & JS so Googlebot can render the site fully
-Allow: /styles.min.css
-Allow: /fonts.css
-Allow: /custom-overrides.css
+# Allow full crawling of all assets (CSS, JS, WebP images) for complete mobile rendering
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.webp$
 
 Sitemap: https://paarustudio.com/sitemap.xml

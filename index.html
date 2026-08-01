@@ -111,6 +111,260 @@
 
 
 <body class="index-page">
+
+    <!-- ========== CINEMATIC INTRO OVERLAY ========== -->
+    <div id="ps-intro" aria-hidden="true">
+        <!-- Camera HUD Top -->
+        <div class="ps-hud ps-hud-top">
+            <div class="ps-hud-left">
+                <span class="ps-rec-dot"></span>
+                <span class="ps-rec-label">REC</span>
+            </div>
+            <div class="ps-hud-center">
+                <span id="ps-timecode">00:00:00</span>
+            </div>
+            <div class="ps-hud-right">
+                <span class="ps-battery">&#9646;&#9646;&#9646;&#9646;</span>
+            </div>
+        </div>
+
+        <!-- Corner Brackets -->
+        <div class="ps-corner ps-corner-tl"></div>
+        <div class="ps-corner ps-corner-tr"></div>
+        <div class="ps-corner ps-corner-bl"></div>
+        <div class="ps-corner ps-corner-br"></div>
+
+        <!-- Center Content -->
+        <div class="ps-intro-content">
+            <img src="logo.webp" alt="Paaru Studio Logo" class="ps-intro-logo" width="90" height="90">
+            <div class="ps-intro-brand">
+                <span class="ps-brand-char" style="--i:0">P</span><span class="ps-brand-char" style="--i:1">A</span><span class="ps-brand-char" style="--i:2">A</span><span class="ps-brand-char" style="--i:3">R</span><span class="ps-brand-char" style="--i:4">U</span><span class="ps-brand-char ps-brand-space"> </span><span class="ps-brand-char" style="--i:6">S</span><span class="ps-brand-char" style="--i:7">T</span><span class="ps-brand-char" style="--i:8">U</span><span class="ps-brand-char" style="--i:9">D</span><span class="ps-brand-char" style="--i:10">I</span><span class="ps-brand-char" style="--i:11">O</span><span class="ps-brand-dash">-</span><span class="ps-brand-char" style="--i:13">M</span><span class="ps-brand-char" style="--i:14">E</span><span class="ps-brand-char" style="--i:15">D</span><span class="ps-brand-char" style="--i:16">I</span><span class="ps-brand-char" style="--i:17">A</span>
+            </div>
+            <div class="ps-intro-divider"></div>
+            <div class="ps-intro-tagline">Agency of possibilities</div>
+        </div>
+
+        <!-- Camera HUD Bottom -->
+        <div class="ps-hud ps-hud-bottom">
+            <div class="ps-hud-left"><span>ISO 400</span></div>
+            <div class="ps-hud-center"><span class="ps-scan-line"></span></div>
+            <div class="ps-hud-right"><span class="ps-badge">4K</span><span class="ps-badge">HD</span></div>
+        </div>
+    </div>
+    <!-- ========== END INTRO ========== -->
+
+    <style>
+    /* ===== CINEMATIC INTRO STYLES ===== */
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300;1,400;1,500;1,600&family=Playfair+Display:ital@1&display=swap');
+
+    #ps-intro {
+        position: fixed;
+        inset: 0;
+        z-index: 999999;
+        background: #000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: opacity 0.7s ease, transform 0.7s ease;
+        overflow: hidden;
+    }
+    #ps-intro.ps-fade-out {
+        opacity: 0;
+        transform: scale(1.04);
+        pointer-events: none;
+    }
+
+    /* HUD bars */
+    .ps-hud {
+        position: absolute;
+        left: 0; right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 18px 28px;
+        font-family: 'Courier New', monospace;
+        font-size: 12px;
+        letter-spacing: 0.12em;
+        color: rgba(255,255,255,0.75);
+        text-transform: uppercase;
+    }
+    .ps-hud-top  { top: 0; }
+    .ps-hud-bottom { bottom: 0; }
+    .ps-hud-left, .ps-hud-center, .ps-hud-right {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    /* REC indicator */
+    .ps-rec-dot {
+        width: 8px; height: 8px;
+        border-radius: 50%;
+        background: #ff3333;
+        animation: ps-blink 1s step-start infinite;
+        display: inline-block;
+    }
+    @keyframes ps-blink {
+        0%,100%{opacity:1} 50%{opacity:0}
+    }
+    .ps-rec-label { color: #fff; font-weight: 700; font-size: 11px; }
+
+    /* Battery */
+    .ps-battery { color: #ffbf00; letter-spacing: 1px; font-size: 10px; }
+
+    /* Badges */
+    .ps-badge {
+        border: 1px solid rgba(255,191,0,0.8);
+        color: #ffbf00;
+        padding: 1px 6px;
+        font-size: 10px;
+        border-radius: 2px;
+        font-weight: 700;
+    }
+
+    /* Corner Brackets */
+    .ps-corner {
+        position: absolute;
+        width: 36px; height: 36px;
+        border-color: #ffbf00;
+        border-style: solid;
+        border-width: 0;
+    }
+    .ps-corner-tl { top: 56px; left: 28px; border-top-width: 2px; border-left-width: 2px; }
+    .ps-corner-tr { top: 56px; right: 28px; border-top-width: 2px; border-right-width: 2px; }
+    .ps-corner-bl { bottom: 56px; left: 28px; border-bottom-width: 2px; border-left-width: 2px; }
+    .ps-corner-br { bottom: 56px; right: 28px; border-bottom-width: 2px; border-right-width: 2px; }
+
+    /* Center content */
+    .ps-intro-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        text-align: center;
+    }
+
+    /* Logo */
+    .ps-intro-logo {
+        width: 80px; height: 80px;
+        object-fit: contain;
+        filter: brightness(0) invert(1);
+        opacity: 0;
+        animation: ps-logo-in 0.6s ease forwards 0.2s;
+    }
+    @keyframes ps-logo-in {
+        from { opacity:0; transform:scale(0.85); }
+        to   { opacity:1; transform:scale(1); }
+    }
+
+    /* Brand name letter reveal */
+    .ps-intro-brand {
+        display: flex;
+        align-items: baseline;
+        gap: 0;
+        font-family: 'Inter', 'Arial Black', sans-serif;
+        font-size: clamp(28px, 5vw, 60px);
+        font-weight: 900;
+        color: #fff;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+    }
+    .ps-brand-space { width: 0.35em; display: inline-block; }
+    .ps-brand-dash {
+        color: #ffbf00;
+        font-weight: 900;
+        margin: 0 1px;
+        opacity: 0;
+        animation: ps-char-in 0.35s ease forwards;
+        animation-delay: calc(0.55s + 12 * 0.055s);
+    }
+    .ps-brand-char {
+        opacity: 0;
+        display: inline-block;
+        animation: ps-char-in 0.35s ease forwards;
+        animation-delay: calc(0.5s + var(--i, 0) * 0.055s);
+    }
+    @keyframes ps-char-in {
+        from { opacity:0; transform: translateY(12px); }
+        to   { opacity:1; transform: translateY(0); }
+    }
+
+    /* Tagline */
+    .ps-intro-tagline {
+        font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+        font-size: clamp(20px, 3.2vw, 42px);
+        font-weight: 500;
+        font-style: italic;
+        color: transparent;
+        background: linear-gradient(90deg,
+            rgba(255,191,0,0.5) 0%,
+            #ffdf80 30%,
+            #ffbf00 50%,
+            #ffdf80 70%,
+            rgba(255,191,0,0.5) 100%);
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        background-clip: text;
+        letter-spacing: 0.06em;
+        text-transform: none;
+        opacity: 0;
+        animation:
+            ps-tag-in 0.8s cubic-bezier(0.22,1,0.36,1) forwards 1.55s,
+            ps-shimmer 2.5s linear infinite 1.55s;
+    }
+    @keyframes ps-tag-in {
+        from { opacity:0; transform: translateY(10px) skewX(-3deg); }
+        to   { opacity:1; transform: translateY(0) skewX(0deg); }
+    }
+    @keyframes ps-shimmer {
+        0%   { background-position: 200% center; }
+        100% { background-position: -200% center; }
+    }
+
+    /* Tagline divider line */
+    .ps-intro-divider {
+        width: 0;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, #ffbf00, transparent);
+        opacity: 0;
+        animation: ps-divider-in 0.6s ease forwards 1.4s;
+        margin: 0 auto;
+    }
+    @keyframes ps-divider-in {
+        from { width: 0; opacity: 0; }
+        to   { width: 180px; opacity: 0.7; }
+    }
+
+    /* Scan line pulse */
+    .ps-scan-line {
+        display: block;
+        width: 80px; height: 1px;
+        background: linear-gradient(90deg, transparent, #ffbf00, transparent);
+        animation: ps-scan 1.2s ease-in-out infinite;
+    }
+    @keyframes ps-scan {
+        0%,100%{opacity:0.3;transform:scaleX(0.5)}
+        50%{opacity:1;transform:scaleX(1)}
+    }
+
+    /* Page hidden until intro done */
+    body.ps-intro-active .top-banner,
+    body.ps-intro-active nav,
+    body.ps-intro-active section,
+    body.ps-intro-active footer,
+    body.ps-intro-active main {
+        visibility: hidden;
+    }
+    body.ps-intro-done .top-banner,
+    body.ps-intro-done nav,
+    body.ps-intro-done section,
+    body.ps-intro-done footer,
+    body.ps-intro-done main {
+        visibility: visible;
+    }
+    </style>
+
     <!-- Top Banner -->
     <div class="top-banner">
         <div class="container">
@@ -1621,6 +1875,7 @@
 
             btn.classList.add('active');
             document.getElementById(paneId + '-pane').classList.add('active');
+        }
     </script>
 
 
@@ -2125,6 +2380,44 @@
         }
       ]
     }
+    </script>
+
+    <!-- ===== INTRO CONTROLLER SCRIPT ===== -->
+    <script>
+    (function() {
+        var intro = document.getElementById('ps-intro');
+        if (!intro) return;
+
+        // Prevent scrolling during intro
+        document.body.classList.add('ps-intro-active');
+        document.documentElement.style.overflow = 'hidden';
+
+        // Timecode animation
+        var tcEl = document.getElementById('ps-timecode');
+        var startMs = Date.now();
+        var tcInterval = setInterval(function() {
+            var elapsed = Date.now() - startMs;
+            var cs = Math.floor((elapsed % 1000) / 10);
+            var ss = Math.floor(elapsed / 1000) % 60;
+            var mm = Math.floor(elapsed / 60000);
+            tcEl.textContent =
+                (mm < 10 ? '0' : '') + mm + ':' +
+                (ss < 10 ? '0' : '') + ss + ':' +
+                (cs < 10 ? '0' : '') + cs;
+        }, 33);
+
+        // After 2.5s: fade out intro, reveal page
+        setTimeout(function() {
+            clearInterval(tcInterval);
+            intro.classList.add('ps-fade-out');
+            document.documentElement.style.overflow = '';
+            document.body.classList.remove('ps-intro-active');
+            document.body.classList.add('ps-intro-done');
+            setTimeout(function() {
+                intro.style.display = 'none';
+            }, 750);
+        }, 2500);
+    })();
     </script>
 
 </body>
