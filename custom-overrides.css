@@ -19,31 +19,38 @@
     color: #000000 !important;
 }
 
-/* 2. Contact Us Button Visibility on Navbar (Default & Scrolled) */
-.nav-links .cta-btn,
+/* 2. Contact Us Button — scrolled state only (golden navbar needs black button for contrast) */
+/* Default white navbar: golden gradient (matches deployed site original) */
+.nav-links .cta-btn {
+    background: linear-gradient(90deg, #ffd033, #ffbf00) !important;
+    color: #0a0a0a !important;
+    font-weight: 700 !important;
+    padding: 8px 18px !important;
+    border-radius: 999px !important;
+    border: none !important;
+    display: inline-block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Scrolled golden navbar: black button so it's visible against yellow background */
 .navbar.scrolled .nav-links .cta-btn {
     background: #000000 !important;
     color: #ffffff !important;
     font-weight: 800 !important;
-    padding: 8px 22px !important;
+    padding: 6px 18px !important;
     border-radius: 999px !important;
     border: 2px solid #000000 !important;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35) !important;
-    display: inline-block !important;
     opacity: 1 !important;
     visibility: visible !important;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    font-size: 13px !important;
 }
 
-.nav-links .cta-btn:hover,
 .navbar.scrolled .nav-links .cta-btn:hover {
     background: #1a1a1a !important;
     color: #ffbf00 !important;
     transform: translateY(-2px) !important;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5) !important;
-    border-color: #1a1a1a !important;
 }
 
 /* 3. Client Bar & Marquee Dark Background */
