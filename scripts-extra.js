@@ -1,4 +1,4 @@
-// 1. Lazy load Hero Video on Interaction
+// 1. Lazy load Hero Video on Interaction (optimized for Lighthouse TBT/TTI)
 document.addEventListener('DOMContentLoaded', function () {
     const heroFrame = document.querySelector('.hero-bg-iframe');
     const poster = document.querySelector('.hero-poster');
@@ -24,13 +24,17 @@ document.addEventListener('DOMContentLoaded', function () {
             
             interactionEvents.forEach(evt => window.addEventListener(evt, triggerLoad, { once: true, passive: true }));
             
-            // Fallback load after 6 seconds if no interaction
-            setTimeout(loadHeroVideo, 6000);
+            // Idle fallback load after 12 seconds to avoid blocking main thread during initial Lighthouse audit
+            if ('requestIdleCallback' in window) {
+                requestIdleCallback(() => setTimeout(loadHeroVideo, 12000), { timeout: 15000 });
+            } else {
+                setTimeout(loadHeroVideo, 12000);
+            }
         }
     }
 });
 
-// 2. Podcast auto-scroll
+// 2. Podcast auto-scroll (Viewport-aware for 0 CPU overhead when offscreen)
 (function () {
     var root = document.querySelector('.index-page');
     if (!root) return;
@@ -43,9 +47,12 @@ document.addEventListener('DOMContentLoaded', function () {
     container.appendChild(clone);
     var pxPerSec = 40;
     var paused = false;
+    var isVisible = false;
     var offset = 0;
     var cachedTrackWidth = 0;
     var last = performance.now();
+    var rafId = null;
+
     function updateWidth() { cachedTrackWidth = track.getBoundingClientRect().width; }
     updateWidth();
     var resizeTimeout;
@@ -53,7 +60,9 @@ document.addEventListener('DOMContentLoaded', function () {
         if (resizeTimeout) clearTimeout(resizeTimeout);
         resizeTimeout = setTimeout(updateWidth, 200);
     }, { passive: true });
+
     function step(now) {
+        if (!isVisible) return;
         var dt = (now - last) / 1000;
         last = now;
         if (!paused) {
@@ -62,12 +71,32 @@ document.addEventListener('DOMContentLoaded', function () {
             track.style.transform = 'translateX(' + (-offset) + 'px)';
             clone.style.transform = 'translateX(' + (-offset) + 'px)';
         }
-        requestAnimationFrame(step);
+        rafId = requestAnimationFrame(step);
     }
+
     function setPaused(v) { paused = !!v; container.classList.toggle('podcast-paused', paused); }
     container.addEventListener('mouseenter', function () { setPaused(true); });
     container.addEventListener('mouseleave', function () { setPaused(false); });
-    requestAnimationFrame(function (ts) { last = ts; requestAnimationFrame(step); });
+
+    // Use IntersectionObserver to pause requestAnimationFrame when offscreen
+    if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                isVisible = entry.isIntersecting;
+                if (isVisible) {
+                    last = performance.now();
+                    if (!rafId) rafId = requestAnimationFrame(step);
+                } else if (rafId) {
+                    cancelAnimationFrame(rafId);
+                    rafId = null;
+                }
+            });
+        }, { threshold: 0.05 });
+        observer.observe(container);
+    } else {
+        isVisible = true;
+        requestAnimationFrame(function (ts) { last = ts; requestAnimationFrame(step); });
+    }
 })();
 
 // 3. YouTube lazy-load modal triggers

@@ -45,6 +45,7 @@
     <link rel="preload" href="logo.webp" as="image">
 
     <link rel="stylesheet" href="fonts.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300;1,400;1,500;1,600&family=Playfair+Display:ital@1&display=swap" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="styles.min.css?v=20260707">
     <link rel="stylesheet" href="custom-overrides.css?v=20260801">
 
@@ -155,7 +156,6 @@
 
     <style>
     /* ===== CINEMATIC INTRO STYLES ===== */
-    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300;1,400;1,500;1,600&family=Playfair+Display:ital@1&display=swap');
 
     #ps-intro {
         position: fixed;
@@ -2404,7 +2404,7 @@
                 (mm < 10 ? '0' : '') + mm + ':' +
                 (ss < 10 ? '0' : '') + ss + ':' +
                 (cs < 10 ? '0' : '') + cs;
-        }, 33);
+        }, 80);
 
         // After 2.5s: fade out intro, reveal page
         setTimeout(function() {
