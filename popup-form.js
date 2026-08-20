@@ -19,7 +19,13 @@
     });
   }
 
-  // wait for DOM ready
+  // wait for DOM ready & main thread idle
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', schedule); else schedule();
-  function schedule(){ setTimeout(function(){ createPopup(); }, 5000); }
+  function schedule(){ 
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(function(){ setTimeout(createPopup, 12000); }, { timeout: 15000 });
+    } else {
+      setTimeout(createPopup, 12000);
+    }
+  }
 })();
