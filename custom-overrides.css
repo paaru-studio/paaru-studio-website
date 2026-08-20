@@ -6,7 +6,10 @@
     box-shadow: 0 6px 24px rgba(0, 0, 0, 0.4) !important;
 }
 
-.navbar.scrolled .nav-links a {
+/* Target ONLY top-level nav items for black text on yellow navbar */
+.navbar.scrolled .nav-links > a,
+.navbar.scrolled .nav-links > li > a,
+.navbar.scrolled .nav-dropdown-toggle {
     color: #000000 !important;
     font-weight: 700 !important;
 }
@@ -17,6 +20,44 @@
 
 .navbar.scrolled .dropdown-arrow {
     color: #000000 !important;
+}
+
+/* Dropdown Menus (Services & Media) — Dark background with bright white/gold text */
+.nav-dropdown-menu,
+.dropdown-menu,
+.mega-menu {
+    background: #0d0d0d !important;
+    border: 1px solid rgba(255, 191, 0, 0.35) !important;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.85) !important;
+    border-radius: 14px !important;
+    padding: 10px 0 !important;
+}
+
+.nav-dropdown-menu a,
+.dropdown-menu a,
+.mega-menu a,
+.mega-menu-item,
+.navbar.scrolled .nav-dropdown-menu a,
+.navbar.scrolled .dropdown-menu a,
+.navbar.scrolled .mega-menu a,
+.navbar.scrolled .mega-menu-item {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    padding: 10px 18px !important;
+    display: block !important;
+    transition: background 0.2s ease, color 0.2s ease !important;
+}
+
+.nav-dropdown-menu a:hover,
+.dropdown-menu a:hover,
+.mega-menu a:hover,
+.mega-menu-item:hover,
+.navbar.scrolled .nav-dropdown-menu a:hover,
+.navbar.scrolled .dropdown-menu a:hover,
+.navbar.scrolled .mega-menu a:hover,
+.navbar.scrolled .mega-menu-item:hover {
+    color: #ffbf00 !important;
+    background: rgba(255, 191, 0, 0.15) !important;
 }
 
 /* 2. Contact Us & Hero CTA Buttons — matching live site golden gradient */
