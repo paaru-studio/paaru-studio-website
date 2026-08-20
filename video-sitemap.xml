@@ -16,9 +16,24 @@
     </video:video>
   </url>
 
-  <!-- Dedicated Watch Pages (Highest Indexing Probability) -->
+  <!-- Video Production Core Service Page -->
   <url>
-    <loc>https://paarustudio.com/case-study-observance.html</loc>
+    <loc>https://paarustudio.com/video-production</loc>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/1KmBeKsYq_0/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Corporate Video Production Services Bangalore — Paaru Studio-Media</video:title>
+      <video:description>End-to-end corporate video production, ad films, TV commercials, and brand films by Paaru Studio-Media Bangalore.</video:description>
+      <video:content_loc>https://www.youtube.com/watch?v=1KmBeKsYq_0</video:content_loc>
+      <video:player_loc>https://www.youtube.com/embed/1KmBeKsYq_0</video:player_loc>
+      <video:duration>30</video:duration>
+      <video:publication_date>2024-01-15T08:00:00+05:30</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+
+  <!-- Dedicated Watch Pages (Clean URLs for Maximum Indexing) -->
+  <url>
+    <loc>https://paarustudio.com/case-study-observance</loc>
     <video:video>
       <video:thumbnail_loc>https://img.youtube.com/vi/sVA07PZR-vc/maxresdefault.jpg</video:thumbnail_loc>
       <video:title>Observance Eye | DVC</video:title>
@@ -31,7 +46,7 @@
   </url>
 
   <url>
-    <loc>https://paarustudio.com/case-study-herbalife.html</loc>
+    <loc>https://paarustudio.com/case-study-herbalife</loc>
     <video:video>
       <video:thumbnail_loc>https://img.youtube.com/vi/mredaaNUgUY/maxresdefault.jpg</video:thumbnail_loc>
       <video:title>Herbalife Brand Film</video:title>
@@ -44,7 +59,7 @@
   </url>
 
   <url>
-    <loc>https://paarustudio.com/case-study-onsurity.html</loc>
+    <loc>https://paarustudio.com/case-study-onsurity</loc>
     <video:video>
       <video:thumbnail_loc>https://img.youtube.com/vi/oouUsH0mPv0/maxresdefault.jpg</video:thumbnail_loc>
       <video:title>Onsurity | Motion Graphics</video:title>
@@ -56,9 +71,9 @@
     </video:video>
   </url>
 
-  <!-- Other Portfolio Videos with Unique Watch URLs -->
+  <!-- Portfolio Videos with Clean URLs -->
   <url>
-    <loc>https://paarustudio.com/portfolio.html?v=0IxUAbQEwJQ</loc>
+    <loc>https://paarustudio.com/portfolio?v=0IxUAbQEwJQ</loc>
     <video:video>
       <video:thumbnail_loc>https://img.youtube.com/vi/0IxUAbQEwJQ/maxresdefault.jpg</video:thumbnail_loc>
       <video:title>Real Estate Walkthrough Video</video:title>
@@ -71,7 +86,7 @@
   </url>
 
   <url>
-    <loc>https://paarustudio.com/portfolio.html?v=fUcTTeNFn2g</loc>
+    <loc>https://paarustudio.com/portfolio?v=fUcTTeNFn2g</loc>
     <video:video>
       <video:thumbnail_loc>https://img.youtube.com/vi/fUcTTeNFn2g/maxresdefault.jpg</video:thumbnail_loc>
       <video:title>Windowfab Product Showcase</video:title>
@@ -83,9 +98,9 @@
     </video:video>
   </url>
 
-  <!-- AI Services Videos — Dedicated Watch Pages -->
+  <!-- AI Services Videos -->
   <url>
-    <loc>https://paarustudio.com/ai-video-content-generation.html</loc>
+    <loc>https://paarustudio.com/ai-video-content-generation</loc>
     <video:video>
       <video:thumbnail_loc>https://img.youtube.com/vi/S6vVIqh_sOo/maxresdefault.jpg</video:thumbnail_loc>
       <video:title>AI Content Generation Showcase</video:title>
@@ -99,7 +114,7 @@
   </url>
 
   <url>
-    <loc>https://paarustudio.com/ai-video-production.html</loc>
+    <loc>https://paarustudio.com/ai-video-production</loc>
     <video:video>
       <video:thumbnail_loc>https://img.youtube.com/vi/cCeWcmEX7YY/maxresdefault.jpg</video:thumbnail_loc>
       <video:title>AI Video Production Explained</video:title>
@@ -113,7 +128,7 @@
   </url>
 
   <url>
-    <loc>https://paarustudio.com/ai-reel.html</loc>
+    <loc>https://paarustudio.com/ai-reel</loc>
     <video:video>
       <video:thumbnail_loc>https://img.youtube.com/vi/DAn4fzr0KJs/maxresdefault.jpg</video:thumbnail_loc>
       <video:title>AI Reel — Paaru Studio</video:title>
@@ -127,7 +142,7 @@
   </url>
 
   <url>
-    <loc>https://paarustudio.com/influencer-marketing.html</loc>
+    <loc>https://paarustudio.com/influencer-marketing</loc>
     <video:video>
       <video:thumbnail_loc>https://img.youtube.com/vi/J34Oln5MXAw/maxresdefault.jpg</video:thumbnail_loc>
       <video:title>Influencer Marketing Agency Showcase</video:title>
