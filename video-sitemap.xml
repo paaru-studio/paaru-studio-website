@@ -73,7 +73,7 @@
 
   <!-- Portfolio Videos with Clean URLs -->
   <url>
-    <loc>https://paarustudio.com/portfolio?v=0IxUAbQEwJQ</loc>
+    <loc>https://paarustudio.com/portfolio</loc>
     <video:video>
       <video:thumbnail_loc>https://img.youtube.com/vi/0IxUAbQEwJQ/maxresdefault.jpg</video:thumbnail_loc>
       <video:title>Real Estate Walkthrough Video</video:title>
@@ -86,7 +86,7 @@
   </url>
 
   <url>
-    <loc>https://paarustudio.com/portfolio?v=fUcTTeNFn2g</loc>
+    <loc>https://paarustudio.com/portfolio</loc>
     <video:video>
       <video:thumbnail_loc>https://img.youtube.com/vi/fUcTTeNFn2g/maxresdefault.jpg</video:thumbnail_loc>
       <video:title>Windowfab Product Showcase</video:title>

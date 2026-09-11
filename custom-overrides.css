@@ -186,3 +186,184 @@
 .faq-answer {
     color: rgba(255, 255, 255, 0.85) !important;
 }
+
+/* 5. Homepage Hero Tagline Subheadline & Contextual Internal Linking Navigation */
+.hero-tagline-subheadline {
+    font-family: var(--font-heading);
+    font-size: 26px;
+    font-weight: 800;
+    line-height: 1.25;
+    color: #ffffff;
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+}
+
+.hero-tagline-subheadline span.red-underline {
+    border-bottom: 4px solid #ffbf00;
+    padding-bottom: 4px;
+}
+
+@media (max-width: 900px) {
+    .hero-tagline-subheadline {
+        font-size: 22px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-tagline-subheadline {
+        font-size: 19px;
+    }
+}
+
+.home-services-nav {
+    margin-top: 55px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.home-services-nav-title {
+    text-align: center;
+    font-size: 24px;
+    color: #ffbf00;
+    margin-bottom: 26px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 800;
+}
+
+.home-services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.service-nav-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 191, 0, 0.22);
+    border-radius: 12px;
+    padding: 22px 24px;
+    text-decoration: none;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-nav-card:hover {
+    background: rgba(255, 191, 0, 0.08);
+    border-color: #ffbf00;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(255, 191, 0, 0.15);
+}
+
+.service-nav-card h4 {
+    color: #ffffff;
+    font-size: 17px;
+    margin-bottom: 8px;
+    font-weight: 700;
+    line-height: 1.35;
+    transition: color 0.2s ease;
+}
+
+.service-nav-card:hover h4 {
+    color: #ffbf00;
+}
+
+.service-nav-card p {
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 13.5px;
+    line-height: 1.55;
+    margin: 0;
+}
+
+.service-nav-card.featured-portfolio {
+    grid-column: 1 / -1;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(255, 191, 0, 0.1), rgba(255, 255, 255, 0.03));
+    border-color: rgba(255, 191, 0, 0.4);
+    padding: 24px 30px;
+}
+
+.service-nav-card.featured-portfolio h4 {
+    color: #ffbf00;
+    font-size: 19px;
+}
+
+/* 6. 3D Golden "Ai" Navbar Text — replaces img logo */
+.ai-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-decoration: none !important;
+    padding: 0 6px !important;
+    line-height: 1 !important;
+}
+
+.ai-3d-text {
+    font-family: 'Inter', 'Outfit', 'Arial Black', sans-serif;
+    font-size: 23px;
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: -0.5px;
+    line-height: 1;
+    display: inline-block;
+    user-select: none;
+
+    /* Bright gold face colour */
+    color: #FFD700;
+
+    /* Stacked text-shadow = true 3D depth effect */
+    text-shadow:
+        0  1px 0  #e6ac00,
+        0  2px 0  #cc9900,
+        0  3px 0  #b38600,
+        0  4px 0  #997300,
+        0  5px 0  #806000,
+        0  6px 12px rgba(0, 0, 0, 0.65),
+        0  0px 6px  rgba(255, 215, 0, 0.4);
+
+    transition: text-shadow 0.2s ease, transform 0.2s ease, color 0.2s ease;
+}
+
+.ai-btn:hover .ai-3d-text {
+    color: #ffe033;
+    text-shadow:
+        0  1px 0  #e6ac00,
+        0  2px 0  #cc9900,
+        0  3px 0  #b38600,
+        0  4px 0  #997300,
+        0  5px 0  #806000,
+        0  6px 0  #674d00,
+        0  7px 16px rgba(0, 0, 0, 0.7),
+        0  0px 10px rgba(255, 215, 0, 0.55);
+    transform: translateY(-1px) scale(1.1);
+}
+
+/* On scrolled yellow navbar: dark gold so it contrasts against yellow bg */
+.navbar.scrolled .ai-btn .ai-3d-text {
+    color: #3d2800;
+    text-shadow:
+        0  1px 0  #2a1c00,
+        0  2px 0  #1a1000,
+        0  3px 6px rgba(0, 0, 0, 0.35),
+        0  0px 4px rgba(255, 255, 255, 0.15);
+}
+
+.navbar.scrolled .ai-btn:hover .ai-3d-text {
+    color: #1a1000;
+    text-shadow:
+        0  1px 0  #0d0800,
+        0  2px 0  #000000,
+        0  3px 8px rgba(0, 0, 0, 0.45);
+    transform: translateY(-1px) scale(1.1);
+}
+
+/* 7. AI Creations 3-col grid — responsive collapse */
+@media (max-width: 900px) {
+    .ai-media-grid[style*="repeat(3"] {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+

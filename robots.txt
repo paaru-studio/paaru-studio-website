@@ -1,14 +1,5 @@
 User-agent: *
 Allow: /
 
-# Block unnecessary utility scripts if needed
-Disallow: /*.py$
-Disallow: /*.log$
-
-# Allow full crawling of all assets (CSS, JS, WebP images) for complete mobile rendering
-Allow: /*.css$
-Allow: /*.js$
-Allow: /*.webp$
-
 Sitemap: https://paarustudio.com/sitemap.xml
 Sitemap: https://paarustudio.com/video-sitemap.xml

@@ -1,5 +1,7 @@
-# Force www → non-www (keep existing)
+# Force www → non-www (HTTPS & HTTP)
 https://www.paarustudio.com/*  https://paarustudio.com/:splat  301!
+http://www.paarustudio.com/*   https://paarustudio.com/:splat  301!
+http://paarustudio.com/*       https://paarustudio.com/:splat  301!
 
 # .html → clean URL redirects (301! forces redirect even when .html file exists)
 /index.html                              /                                        301!
@@ -14,10 +16,15 @@ https://www.paarustudio.com/*  https://paarustudio.com/:splat  301!
 /media-offerings.html                    /media-offerings                         301!
 /ai-services.html                        /ai-services                             301!
 /ai-video-production.html                /ai-video-production                     301!
+/ai-video-content-generation.html        /ai-video-content-generation             301!
+/ai-reel.html                            /ai-reel                                 301!
 /case-studies.html                       /case-studies                            301!
 /case-study-japfa.html                   /case-study-japfa                        301!
 /case-study-calvin-klein.html            /case-study-calvin-klein                 301!
 /case-study-giva.html                    /case-study-giva                         301!
+/case-study-herbalife.html               /case-study-herbalife                    301!
+/case-study-observance.html              /case-study-observance                   301!
+/case-study-onsurity.html                /case-study-onsurity                     301!
 /blog.html                               /blog                                    301!
 /blog-video-production-bangalore.html    /blog-video-production-bangalore         301!
 /blog-corporate-videos.html              /blog-corporate-videos                   301!
@@ -30,3 +37,8 @@ https://www.paarustudio.com/*  https://paarustudio.com/:splat  301!
 
 # Legacy redirect (keep existing)
 /services.html                           /video-production                        301!
+
+# Service subpath aliases
+/corporate-video-production              /video-production#corporate-video-production  301!
+/brand-film-production                   /video-production#brand-film-production       301!
+/ad-film-production                      /video-production#ad-film-production          301!
