@@ -290,74 +290,89 @@
     font-size: 19px;
 }
 
-/* 6. 3D Golden "Ai" Navbar Text — replaces img logo */
+/* 6. "Ai" Navbar Button — pill shape like Contact Us, inverted dark+gold scheme */
 .ai-btn {
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
     text-decoration: none !important;
-    padding: 0 6px !important;
-    line-height: 1 !important;
+
+    /* Pill shape matching .cta-btn */
+    padding: 8px 16px !important;
+    border-radius: 999px !important;
+
+    /* Inverted: dark background, gold border */
+    background: rgba(10, 10, 10, 0.85) !important;
+    border: 1.5px solid #FFD700 !important;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.2) !important;
+
+    transition: background 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease, border-color 0.2s ease !important;
+}
+
+.ai-btn:hover {
+    background: rgba(25, 20, 0, 0.95) !important;
+    border-color: #ffe033 !important;
+    box-shadow: 0 0 18px rgba(255, 215, 0, 0.4), 0 4px 14px rgba(0, 0, 0, 0.5) !important;
+    transform: translateY(-1px) !important;
 }
 
 .ai-3d-text {
     font-family: 'Inter', 'Outfit', 'Arial Black', sans-serif;
-    font-size: 23px;
-    font-weight: 900;
-    font-style: italic;
-    letter-spacing: -0.5px;
+    font-size: 14px;
+    font-weight: 800;
+    font-style: normal;
+    letter-spacing: 0.5px;
     line-height: 1;
     display: inline-block;
     user-select: none;
 
-    /* Bright gold face colour */
+    /* Gold face */
     color: #FFD700;
 
-    /* Stacked text-shadow = true 3D depth effect */
+    /* 3D depth via stacked text-shadow */
     text-shadow:
-        0  1px 0  #e6ac00,
-        0  2px 0  #cc9900,
-        0  3px 0  #b38600,
-        0  4px 0  #997300,
-        0  5px 0  #806000,
-        0  6px 12px rgba(0, 0, 0, 0.65),
-        0  0px 6px  rgba(255, 215, 0, 0.4);
+        0  1px 0  #b38600,
+        0  2px 0  #997300,
+        0  3px 6px rgba(0, 0, 0, 0.55),
+        0  0px 5px rgba(255, 215, 0, 0.35);
 
-    transition: text-shadow 0.2s ease, transform 0.2s ease, color 0.2s ease;
+    transition: text-shadow 0.2s ease, color 0.2s ease;
 }
 
 .ai-btn:hover .ai-3d-text {
     color: #ffe033;
     text-shadow:
-        0  1px 0  #e6ac00,
-        0  2px 0  #cc9900,
-        0  3px 0  #b38600,
-        0  4px 0  #997300,
-        0  5px 0  #806000,
-        0  6px 0  #674d00,
-        0  7px 16px rgba(0, 0, 0, 0.7),
-        0  0px 10px rgba(255, 215, 0, 0.55);
-    transform: translateY(-1px) scale(1.1);
+        0  1px 0  #cc9900,
+        0  2px 0  #997300,
+        0  3px 0  #7a5c00,
+        0  4px 10px rgba(0, 0, 0, 0.6),
+        0  0px 8px rgba(255, 215, 0, 0.5);
 }
 
-/* On scrolled yellow navbar: dark gold so it contrasts against yellow bg */
+/* Scrolled yellow navbar: flip to dark pill with white/dark text so it stands out */
+.navbar.scrolled .ai-btn {
+    background: #000000 !important;
+    border-color: #000000 !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35) !important;
+}
+
+.navbar.scrolled .ai-btn:hover {
+    background: #1a1a1a !important;
+    border-color: #333 !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5) !important;
+}
+
 .navbar.scrolled .ai-btn .ai-3d-text {
-    color: #3d2800;
+    color: #FFD700;
     text-shadow:
-        0  1px 0  #2a1c00,
-        0  2px 0  #1a1000,
-        0  3px 6px rgba(0, 0, 0, 0.35),
-        0  0px 4px rgba(255, 255, 255, 0.15);
+        0  1px 0  #b38600,
+        0  2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .navbar.scrolled .ai-btn:hover .ai-3d-text {
-    color: #1a1000;
-    text-shadow:
-        0  1px 0  #0d0800,
-        0  2px 0  #000000,
-        0  3px 8px rgba(0, 0, 0, 0.45);
-    transform: translateY(-1px) scale(1.1);
+    color: #ffe033;
 }
+
 
 /* 7. AI Creations 3-col grid — responsive collapse */
 @media (max-width: 900px) {
