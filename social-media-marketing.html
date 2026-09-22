@@ -51,24 +51,47 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Service",
-      "name": "Social Media Marketing",
-      "description": "Strategic social media growth and content creation on Instagram, YouTube, and LinkedIn.",
-      "provider": {
-        "@type": "Organization",
-      "additionalType": "LocalBusiness",
-        "name": "Paaru Studio-Media",
-        "url": "https://paarustudio.com/",
-        "telephone": "+917619413241",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "48B, 100 Feet Road, Nagarabhavi",
-          "addressLocality": "Bangalore",
-          "addressRegion": "Karnataka",
-          "postalCode": "560072",
-          "addressCountry": "IN"
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://paarustudio.com/social-media-marketing#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://paarustudio.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Social Media Marketing",
+              "item": "https://paarustudio.com/social-media-marketing"
+            }
+          ]
+        },
+        {
+          "@type": "Service",
+          "@id": "https://paarustudio.com/social-media-marketing#service",
+          "name": "Social Media Marketing",
+          "description": "Strategic social media growth, organic community management, and short-form video content creation on Instagram, YouTube, and LinkedIn in Bangalore.",
+          "provider": {
+            "@type": "Organization",
+            "additionalType": "LocalBusiness",
+            "name": "Paaru Studio-Media",
+            "url": "https://paarustudio.com/",
+            "telephone": "+917619413241",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "48B, 100 Feet Road, Nagarabhavi",
+              "addressLocality": "Bangalore",
+              "addressRegion": "Karnataka",
+              "postalCode": "560072",
+              "addressCountry": "IN"
+            }
+          }
         }
-      }
+      ]
     }
     </script>
 
@@ -211,6 +234,10 @@
         </div>
         <div class="container hero-split-container">
             <div class="hero-content left-align">
+                <nav aria-label="Breadcrumb" style="margin-bottom: 20px; font-size: 14px; color: var(--text-secondary, #9ca3af);">
+                    <a href="/" style="color: var(--text-secondary, #9ca3af); text-decoration: none;">Home</a> &gt; 
+                    <span style="color: var(--accent-color, #ffbf00);">Social Media Marketing</span>
+                </nav>
                 <h1 class="hero-title ref-title">
                     Engaging Social Media Marketing<br>
                     in Bangalore. Zero Silence.<br>

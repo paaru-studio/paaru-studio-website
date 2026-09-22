@@ -49,6 +49,45 @@
         <link rel="stylesheet" href="popup-form.css">
     </noscript>
     </noscript>
+
+    <!-- Structured Data: WebPage + BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://paarustudio.com/join-team.html",
+          "url": "https://paarustudio.com/join-team.html",
+          "name": "Careers at Paaru Studio-Media | Join Our Creative Team",
+          "description": "Join the Paaru Studio-Media team in Bangalore. We're looking for creative video producers, editors, directors, and marketing professionals passionate about storytelling.",
+          "isPartOf": {"@id": "https://paarustudio.com/"},
+          "publisher": {
+            "@type": "Organization",
+            "name": "Paaru Studio-Media",
+            "url": "https://paarustudio.com"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://paarustudio.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Careers",
+              "item": "https://paarustudio.com/join-team.html"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
 </head>
 
 <body id="top" class="services-page">
@@ -153,6 +192,12 @@
     <!-- Page Header -->
     <section class="page-hero">
         <div class="container">
+            <nav class="ps-breadcrumb" aria-label="Breadcrumb">
+                <ol>
+                    <li><a href="index.html">Home</a></li>
+                    <li aria-current="page">Careers</li>
+                </ol>
+            </nav>
             <h1 class="page-title">Join Our <span class="gradient-text">Team</span></h1>
             <p class="page-subtitle">Be part of something extraordinary</p>
         </div>

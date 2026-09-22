@@ -51,46 +51,69 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "CreativeWorkSeries",
-      "name": "Paaru Studio-Media Portfolio",
-      "description": "Explore Paaru Studio-Media’s portfolio of TV commercials, brand films, digital ads, e-commerce content and OOH campaigns created for leading Indian and global brands over 11+ years.",
-      "creator": {
-        "@type": "Organization",
-        "additionalType": "LocalBusiness",
-        "name": "Paaru Studio-Media",
-        "url": "https://paarustudio.com/",
-        "logo": "https://paarustudio.com/logo.webp",
-        "image": "https://paarustudio.com/logo.webp",
-        "telephone": "+917619413241",
-        "email": "info@paarustudio.com",
-        "foundingDate": "2015",
-        "knowsAbout": [
-          "Video Production",
-          "Ad Film Production",
-          "Corporate Filmmaking",
-          "Digital Out of Home Advertising (DOOH)",
-          "Out of Home Advertising (OOH)",
-          "Performance Marketing",
-          "Influencer Marketing",
-          "E-commerce Photography",
-          "BTL Activations"
-        ],
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+917619413241",
-          "contactType": "sales",
-          "email": "info@paarustudio.com",
-          "areaServed": "IN"
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://paarustudio.com/portfolio#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://paarustudio.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Portfolio",
+              "item": "https://paarustudio.com/portfolio"
+            }
+          ]
         },
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "48B, 100 Feet Road, Nagarabhavi",
-          "addressLocality": "Bangalore",
-          "addressRegion": "Karnataka",
-          "postalCode": "560072",
-          "addressCountry": "IN"
+        {
+          "@type": "CreativeWorkSeries",
+          "@id": "https://paarustudio.com/portfolio#series",
+          "name": "Paaru Studio-Media Portfolio",
+          "description": "Explore Paaru Studio-Media’s portfolio of TV commercials, brand films, digital ads, e-commerce content and OOH campaigns created for leading Indian and global brands over 11+ years.",
+          "creator": {
+            "@type": "Organization",
+            "additionalType": "LocalBusiness",
+            "name": "Paaru Studio-Media",
+            "url": "https://paarustudio.com/",
+            "logo": "https://paarustudio.com/logo.webp",
+            "image": "https://paarustudio.com/logo.webp",
+            "telephone": "+917619413241",
+            "email": "info@paarustudio.com",
+            "foundingDate": "2015",
+            "knowsAbout": [
+              "Video Production",
+              "Ad Film Production",
+              "Corporate Filmmaking",
+              "Digital Out of Home Advertising (DOOH)",
+              "Out of Home Advertising (OOH)",
+              "Performance Marketing",
+              "Influencer Marketing",
+              "E-commerce Photography",
+              "BTL Activations"
+            ],
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+917619413241",
+              "contactType": "sales",
+              "email": "info@paarustudio.com",
+              "areaServed": "IN"
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "48B, 100 Feet Road, Nagarabhavi",
+              "addressLocality": "Bangalore",
+              "addressRegion": "Karnataka",
+              "postalCode": "560072",
+              "addressCountry": "IN"
+            }
+          }
         }
-      }
+      ]
     }
     </script>
 
@@ -219,6 +242,10 @@
     <!-- Page Header -->
     <section class="page-hero">
         <div class="container">
+            <nav aria-label="Breadcrumb" style="margin-bottom: 20px; font-size: 14px; color: var(--text-secondary, #9ca3af); text-align: center;">
+                <a href="/" style="color: var(--text-secondary, #9ca3af); text-decoration: none;">Home</a> &gt; 
+                <span style="color: var(--accent-color, #ffbf00);">Portfolio</span>
+            </nav>
             <h1 class="page-title">Video Production & Advertising Work for <span class="gradient-text">Brands We’ve
                     Helped Grow</span></h1>
             <p style="max-width: 800px; margin: 20px auto 0; text-align: center; color: var(--text-secondary); font-size: 17px; line-height: 1.6;">

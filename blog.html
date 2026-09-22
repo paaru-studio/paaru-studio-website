@@ -48,7 +48,92 @@
     <noscript>
         <link rel="stylesheet" href="popup-form.css">
     </noscript>
-    </noscript>
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://paarustudio.com/blog#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://paarustudio.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://paarustudio.com/blog"
+            }
+          ]
+        },
+        {
+          "@type": "Blog",
+          "@id": "https://paarustudio.com/blog#blog",
+          "name": "Paaru Studio-Media Insights & Production Blog",
+          "description": "Expert guides, industry insights, and creative strategies on commercial video production, brand films, and performance marketing from Paaru Studio-Media in Bangalore.",
+          "url": "https://paarustudio.com/blog",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Paaru Studio-Media",
+            "url": "https://paarustudio.com/",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://paarustudio.com/logo.webp"
+            }
+          },
+          "blogPost": [
+            {
+              "@type": "BlogPosting",
+              "headline": "Top Video Production Companies in Bangalore",
+              "url": "https://paarustudio.com/blog-video-production-bangalore",
+              "datePublished": "2024-03-15",
+              "image": "https://paarustudio.com/blog_thumb_1.webp"
+            },
+            {
+              "@type": "BlogPosting",
+              "headline": "The Power of Corporate Videos in Modern Business",
+              "url": "https://paarustudio.com/blog-corporate-videos",
+              "datePublished": "2024-03-20",
+              "image": "https://paarustudio.com/blog_thumb_2.webp"
+            },
+            {
+              "@type": "BlogPosting",
+              "headline": "Why Explainer Videos Are Essential for Your Business",
+              "url": "https://paarustudio.com/blog-explainer-videos",
+              "datePublished": "2024-03-25",
+              "image": "https://paarustudio.com/blog_thumb_3.webp"
+            },
+            {
+              "@type": "BlogPosting",
+              "headline": "Viral Video Marketing: How to Create Shareable Content",
+              "url": "https://paarustudio.com/blog-viral-video-marketing",
+              "datePublished": "2024-04-01",
+              "image": "https://paarustudio.com/blog_thumb_4.webp"
+            },
+            {
+              "@type": "BlogPosting",
+              "headline": "The Impact of Animated Educational Videos on Learning",
+              "url": "https://paarustudio.com/blog-animated-educational-videos",
+              "datePublished": "2024-04-05",
+              "image": "https://paarustudio.com/blog_thumb_5.webp"
+            },
+            {
+              "@type": "BlogPosting",
+              "headline": "Essential Video Production Equipment for High-Quality Videos",
+              "url": "https://paarustudio.com/blog-video-production-essentials",
+              "datePublished": "2024-04-10",
+              "image": "https://paarustudio.com/blog_thumb_6.webp"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
 </head>
 
 <body id="top" class="services-page">
@@ -152,6 +237,13 @@
     <!-- Page Hero -->
     <section class="page-hero">
         <div class="container">
+            <nav aria-label="Breadcrumb" style="margin-bottom: 20px; font-size: 14px; color: var(--text-secondary, #9ca3af);">
+                <ol style="list-style:none;padding:0;margin:0;display:flex;align-items:center;gap:8px;">
+                    <li><a href="index.html" style="color:var(--text-secondary,#9ca3af);text-decoration:none;">Home</a></li>
+                    <li style="opacity:0.5;">›</li>
+                    <li style="color:var(--text-primary,#fff);" aria-current="page">Blog</li>
+                </ol>
+            </nav>
             <h1 class="page-title">OUR <span class="gradient-text">BLOG</span></h1>
             <p class="page-subtitle">Industry insights, production tips, and creative perspectives from the Paaru Studio-Media
                 team.</p>

@@ -48,6 +48,45 @@
         <link rel="stylesheet" href="popup-form.css">
     </noscript>
     </noscript>
+
+    <!-- Structured Data: WebPage + BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://paarustudio.com/privacy-policy.html",
+          "url": "https://paarustudio.com/privacy-policy.html",
+          "name": "Privacy Policy | Paaru Studio-Media",
+          "description": "Paaru Studio-Media's Privacy Policy. Learn how we collect, use, and protect your personal information as a professional video production studio based in Bangalore, India.",
+          "isPartOf": {"@id": "https://paarustudio.com/"},
+          "publisher": {
+            "@type": "Organization",
+            "name": "Paaru Studio-Media",
+            "url": "https://paarustudio.com"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://paarustudio.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Privacy Policy",
+              "item": "https://paarustudio.com/privacy-policy.html"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
 </head>
 
 <body id="top" class="privacy-policy-page services-page">
@@ -150,6 +189,12 @@
     <!-- Privacy Policy Content -->
     <section class="page-hero">
         <div class="container">
+            <nav class="ps-breadcrumb" aria-label="Breadcrumb">
+                <ol>
+                    <li><a href="index.html">Home</a></li>
+                    <li aria-current="page">Privacy Policy</li>
+                </ol>
+            </nav>
             <h1 class="page-title">PRIVACY <span class="gradient-text">POLICY</span></h1>
             <p class="page-subtitle">Your privacy is important to us</p>
         </div>

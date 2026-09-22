@@ -526,6 +526,88 @@
             }
         }
     </style>
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ContactPage",
+          "@id": "https://paarustudio.com/contact#webpage",
+          "url": "https://paarustudio.com/contact",
+          "name": "Contact Paaru Studio-Media | Bangalore Creative Agency",
+          "description": "Get in touch with Paaru Studio-Media, premier video production and creative ad agency in Bangalore. Book a consultation or studio visit.",
+          "breadcrumb": {
+            "@id": "https://paarustudio.com/contact#breadcrumb"
+          },
+          "mainEntity": {
+            "@id": "https://paarustudio.com/#organization"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://paarustudio.com/contact#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://paarustudio.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Contact Us",
+              "item": "https://paarustudio.com/contact"
+            }
+          ]
+        },
+        {
+          "@type": ["ProfessionalService", "LocalBusiness"],
+          "@id": "https://paarustudio.com/#organization",
+          "name": "Paaru Studio-Media",
+          "alternateName": ["Paaru Studio", "Paaru Studio Media"],
+          "url": "https://paarustudio.com/",
+          "logo": "https://paarustudio.com/logo.webp",
+          "image": "https://paarustudio.com/logo.webp",
+          "telephone": "+917619413241",
+          "email": "info@paarustudio.com",
+          "priceRange": "₹₹ - ₹₹₹₹",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "48B, 100 Feet Road, Nagarabhavi",
+            "addressLocality": "Bangalore",
+            "addressRegion": "Karnataka",
+            "postalCode": "560072",
+            "addressCountry": "IN"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 12.9592,
+            "longitude": 77.5028
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+              "opens": "09:30",
+              "closes": "19:00"
+            }
+          ],
+          "areaServed": [
+            { "@type": "City", "name": "Bangalore" },
+            { "@type": "City", "name": "Bengaluru" },
+            { "@type": "Country", "name": "India" }
+          ],
+          "sameAs": [
+            "https://www.linkedin.com/company/paaru-studio",
+            "https://www.instagram.com/paaru_studio",
+            "https://www.justdial.com/Bangalore/Paaru-Studio-Nagarbhavi/080PXX80-XX80-230905213353-X4D4_BZDET"
+          ]
+        }
+      ]
+    }
+    </script>
 </head>
 
 <body id="top" class="contact-page">
@@ -625,6 +707,10 @@
         <div class="contact-hero-container">
             <!-- Left Info Column -->
             <div class="contact-hero-left">
+                <nav aria-label="Breadcrumb" style="margin-bottom: 20px; font-size: 14px; color: var(--text-secondary, #9ca3af);">
+                    <a href="/" style="color: var(--text-secondary, #9ca3af); text-decoration: none;">Home</a> &gt; 
+                    <span style="color: var(--accent-color, #ffbf00);">Contact Us</span>
+                </nav>
                 <h1>We're Your One-Stop<br>Digital Partner</h1>
                 <p class="lead">From cinematic brand films to cutting-edge digital marketing, we transform your vision into measurable business value. Tell us about your project.</p>
                 

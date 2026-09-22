@@ -51,24 +51,95 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Service",
-      "name": "Influencer Marketing",
-      "description": "Paaru Studio-Media is a full-stack Bangalore-based influencer marketing agency connecting brands with micro, nano and celebrity influencers.",
-      "provider": {
-        "@type": "Organization",
-      "additionalType": "LocalBusiness",
-        "name": "Paaru Studio-Media",
-        "url": "https://paarustudio.com/",
-        "telephone": "+917619413241",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "48B, 100 Feet Road, Nagarabhavi",
-          "addressLocality": "Bangalore",
-          "addressRegion": "Karnataka",
-          "postalCode": "560072",
-          "addressCountry": "IN"
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://paarustudio.com/influencer-marketing#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://paarustudio.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Influencer Marketing",
+              "item": "https://paarustudio.com/influencer-marketing"
+            }
+          ]
+        },
+        {
+          "@type": "Service",
+          "@id": "https://paarustudio.com/influencer-marketing#service",
+          "name": "Influencer Marketing Agency",
+          "description": "Paaru Studio-Media is a full-stack Bangalore-based influencer marketing agency connecting brands with micro, nano, and celebrity influencers for high-impact brand campaigns.",
+          "provider": {
+            "@type": "Organization",
+            "additionalType": "LocalBusiness",
+            "name": "Paaru Studio-Media",
+            "url": "https://paarustudio.com/",
+            "telephone": "+917619413241",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "48B, 100 Feet Road, Nagarabhavi",
+              "addressLocality": "Bangalore",
+              "addressRegion": "Karnataka",
+              "postalCode": "560072",
+              "addressCountry": "IN"
+            }
+          }
+        },
+        {
+          "@type": "VideoObject",
+          "@id": "https://paarustudio.com/influencer-marketing#video",
+          "name": "Creator & Influencer Campaigns — Paaru Studio-Media",
+          "description": "Showcase of creator campaigns, influencer collaborations, and brand partnerships produced in Bangalore by Paaru Studio-Media.",
+          "thumbnailUrl": "https://i.ytimg.com/vi/J34Oln5MXAw/maxresdefault.jpg",
+          "uploadDate": "2024-05-10T10:00:00+05:30",
+          "embedUrl": "https://www.youtube.com/embed/J34Oln5MXAw",
+          "contentUrl": "https://www.youtube.com/watch?v=J34Oln5MXAw"
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://paarustudio.com/influencer-marketing#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How do you select and vet influencers in Bangalore and across India?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We evaluate creators through deep data analysis: real engagement ratios, audience demographics, follower location distribution, comment sentiment, and historical brand sponsorship performance."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Which tiers of content creators do you work with?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We manage campaigns across all creator tiers: hyper-niche nano creators (10k-50k) for grassroots credibility, micro-influencers (50k-250k) for high engagement, and macro/celebrity talents for mass market awareness."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you manage creator briefing, contracts, and deliverable approvals?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Our Bangalore agency handles the complete influencer lifecycle: negotiating deliverables, drafting watertight usage agreements, creative storyboarding, pre-post QC, and ASCI compliance disclosure adherence."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can influencer content be boosted through paid advertising (Partnership Ads)?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, we secure paid advertising licensing rights so your brand can run Meta Partnership Ads and YouTube Ads directly through creator handles, combining organic trust with targeted paid precision."
+              }
+            }
+          ]
         }
-      }
+      ]
     }
     </script>
 
@@ -199,6 +270,10 @@
             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
         <div class="container hero-split-container">
             <div class="hero-content left-align">
+                <nav aria-label="Breadcrumb" style="margin-bottom: 20px; font-size: 14px; color: var(--text-secondary, #9ca3af);">
+                    <a href="/" style="color: var(--text-secondary, #9ca3af); text-decoration: none;">Home</a> &gt; 
+                    <span style="color: var(--accent-color, #ffbf00);">Influencer Marketing</span>
+                </nav>
                 <h1 class="hero-title ref-title">
                     Influencer Marketing<br>
                     Agency for High-Impact<br>

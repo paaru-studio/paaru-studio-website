@@ -44,26 +44,68 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "ItemList",
-      "name": "Paaru Studio-Media Case Studies",
-      "itemListElement": [
+      "@graph": [
         {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Japfa Performance Marketing",
-          "url": "https://paarustudio.com/case-study-japfa"
+          "@type": "BreadcrumbList",
+          "@id": "https://paarustudio.com/case-studies#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://paarustudio.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Case Studies",
+              "item": "https://paarustudio.com/case-studies"
+            }
+          ]
         },
         {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Calvin Klein Brand Campaign",
-          "url": "https://paarustudio.com/case-study-calvin-klein"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "GIVA E-Commerce Growth",
-          "url": "https://paarustudio.com/case-study-giva"
+          "@type": "ItemList",
+          "@id": "https://paarustudio.com/case-studies#itemlist",
+          "name": "Paaru Studio-Media Client Case Studies & Success Stories",
+          "description": "Explore client case studies in commercial video production, performance marketing, and creative advertising by Paaru Studio-Media in Bangalore.",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Japfa Best — Performance Marketing",
+              "url": "https://paarustudio.com/case-study-japfa"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Calvin Klein — Brand Campaign & Visual Design",
+              "url": "https://paarustudio.com/case-study-calvin-klein"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "GIVA — E-Commerce Growth & Content",
+              "url": "https://paarustudio.com/case-study-giva"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "name": "Herbalife — Cinematic Brand Film",
+              "url": "https://paarustudio.com/case-study-herbalife"
+            },
+            {
+              "@type": "ListItem",
+              "position": 5,
+              "name": "Observance Eye — Digital Commercial",
+              "url": "https://paarustudio.com/case-study-observance"
+            },
+            {
+              "@type": "ListItem",
+              "position": 6,
+              "name": "Onsurity — Motion Graphics Explainer",
+              "url": "https://paarustudio.com/case-study-onsurity"
+            }
+          ]
         }
       ]
     }
@@ -172,6 +214,10 @@
     <!-- Page Header -->
     <section class="page-hero">
         <div class="container">
+            <nav aria-label="Breadcrumb" style="margin-bottom: 20px; font-size: 14px; color: var(--text-secondary, #9ca3af); text-align: center;">
+                <a href="/" style="color: var(--text-secondary, #9ca3af); text-decoration: none;">Home</a> &gt; 
+                <span style="color: var(--accent-color, #ffbf00);">Case Studies</span>
+            </nav>
             <h1 class="page-title">CASE <span class="gradient-text">STUDIES</span></h1>
             <p class="page-subtitle">Real Results, Real Impact - Discover How We've Helped Brands Achieve Their Goals
             </p>

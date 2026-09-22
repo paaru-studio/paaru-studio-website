@@ -51,24 +51,85 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Service",
-      "name": "Performance Marketing",
-      "description": "Scale revenue with Paaru Studio-Media’s performance marketing services – ROI-driven Google Ads, Meta ads, LinkedIn campaigns, landing page optimization and full-funnel tracking for growing brands.",
-      "provider": {
-        "@type": "Organization",
-      "additionalType": "LocalBusiness",
-        "name": "Paaru Studio-Media",
-        "url": "https://paarustudio.com/",
-        "telephone": "+917619413241",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "48B, 100 Feet Road, Nagarabhavi",
-          "addressLocality": "Bangalore",
-          "addressRegion": "Karnataka",
-          "postalCode": "560072",
-          "addressCountry": "IN"
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://paarustudio.com/performance-marketing#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://paarustudio.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Performance Marketing",
+              "item": "https://paarustudio.com/performance-marketing"
+            }
+          ]
+        },
+        {
+          "@type": "Service",
+          "@id": "https://paarustudio.com/performance-marketing#service",
+          "name": "Performance Marketing Services",
+          "description": "Scale revenue with Paaru Studio-Media’s performance marketing services – ROI-driven Google Ads, Meta ads, LinkedIn campaigns, landing page optimization and full-funnel tracking for growing brands in Bangalore.",
+          "provider": {
+            "@type": "Organization",
+            "additionalType": "LocalBusiness",
+            "name": "Paaru Studio-Media",
+            "url": "https://paarustudio.com/",
+            "telephone": "+917619413241",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "48B, 100 Feet Road, Nagarabhavi",
+              "addressLocality": "Bangalore",
+              "addressRegion": "Karnataka",
+              "postalCode": "560072",
+              "addressCountry": "IN"
+            }
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://paarustudio.com/performance-marketing#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What ad platforms does your Bangalore performance marketing agency manage?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We build and optimize multi-channel campaigns across Google Ads (Search, Performance Max, Display, YouTube), Meta Ads (Facebook & Instagram), LinkedIn Ads for B2B client acquisition, and sponsored marketplace ads on Amazon and Flipkart."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How do you track conversions and measure ROAS accurately?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We set up privacy-compliant server-side tracking (Meta Conversions API, Google Tag Manager Server Container, GA4) alongside customized first-party attribution dashboards to track CAC, ROAS, blended payback periods, and qualified revenue pipelines."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What minimum ad spend budget do you recommend for performance marketing?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We typically partner with brands investing ₹1,00,000 to ₹25,00,000+ monthly in media spend. Every engagement includes in-house ad creative generation, video hooks, landing page split testing, and active bid and audience optimization."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you produce high-converting ad creative and video hooks in-house?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. As an established video production house in Bangalore with 11+ years of commercial experience, our creative directors produce high-converting UGC videos, cinematic 3D product visuals, and rapid creative variants designed explicitly for performance testing."
+              }
+            }
+          ]
         }
-      }
+      ]
     }
     </script>
 
@@ -237,6 +298,10 @@
         </div>
         <div class="container hero-split-container">
             <div class="hero-content left-align">
+                <nav aria-label="Breadcrumb" style="margin-bottom: 20px; font-size: 14px; color: var(--text-secondary, #9ca3af);">
+                    <a href="/" style="color: var(--text-secondary, #9ca3af); text-decoration: none;">Home</a> &gt; 
+                    <span style="color: var(--accent-color, #ffbf00);">Performance Marketing</span>
+                </nav>
                 <h1 class="hero-title ref-title">
                     Performance Marketing Agency in Bangalore<br>
                     Focused on ROI and Growth
