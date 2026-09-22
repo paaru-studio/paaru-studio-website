@@ -381,4 +381,126 @@
     }
 }
 
+/* 8. Ask AI Section in Footer */
+.ask-ai-section {
+    background: linear-gradient(180deg, rgba(26, 26, 26, 0.75), rgba(15, 23, 42, 0.95));
+    border: 1px solid rgba(255, 191, 0, 0.25);
+    border-radius: 20px;
+    padding: 36px 32px;
+    margin-bottom: 50px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.ask-ai-header {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 28px;
+}
+
+.ask-ai-pill-label {
+    display: inline-block;
+    padding: 4px 14px;
+    border-radius: 999px;
+    background: rgba(255, 191, 0, 0.12);
+    border: 1px solid rgba(255, 191, 0, 0.3);
+    color: #ffbf00;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.ask-ai-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 10px 0;
+    letter-spacing: -0.5px;
+    line-height: 1.25;
+}
+
+.ask-ai-subtitle {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #94a3b8;
+    margin: 0;
+}
+
+.ask-ai-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: center;
+    align-items: center;
+}
+
+.ask-ai-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    background: #000000;
+    color: #ffffff !important;
+    padding: 10px 22px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1.5px solid rgba(255, 191, 0, 0.45);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ask-ai-btn:hover {
+    background: #ffbf00;
+    color: #000000 !important;
+    border-color: #ffbf00;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(255, 191, 0, 0.35);
+}
+
+.ask-ai-btn .ai-btn-icon {
+    width: 17px;
+    height: 17px;
+    flex-shrink: 0;
+    color: #ffbf00;
+    transition: color 0.3s ease;
+}
+
+.ask-ai-btn:hover .ai-btn-icon {
+    color: #000000;
+}
+
+.ask-ai-btn .ai-btn-arrow {
+    font-size: 13px;
+    opacity: 0.7;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.ask-ai-btn:hover .ai-btn-arrow {
+    transform: translate(2px, -2px);
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .ask-ai-section {
+        padding: 28px 20px;
+        margin-bottom: 36px;
+    }
+    .ask-ai-title {
+        font-size: 22px;
+    }
+    .ask-ai-subtitle {
+        font-size: 13px;
+    }
+    .ask-ai-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+    .ask-ai-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
 
