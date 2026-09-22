@@ -2,7 +2,7 @@
 """Local dev server with clean URL support (no .html extension needed)."""
 import http.server, os, sys
 
-PORT = 3000
+PORT = int(sys.argv[1]) if len(sys.argv) > 1 else int(os.environ.get('PORT', 8080))
 DIRECTORY = os.path.dirname(os.path.abspath(__file__))
 
 class CleanURLHandler(http.server.SimpleHTTPRequestHandler):
@@ -38,6 +38,8 @@ class CleanURLHandler(http.server.SimpleHTTPRequestHandler):
             return super().do_GET()
 
         return super().do_GET()
+
+    do_HEAD = do_GET
 
     def log_message(self, fmt, *args):
         print(fmt % args)
