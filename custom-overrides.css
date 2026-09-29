@@ -503,4 +503,66 @@
     }
 }
 
+/* Platform Grid & Cards (Used in E-Commerce, Video Production & AI Services) */
+.platform-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    margin-top: 40px;
+}
+
+.platform-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 191, 0, 0.22);
+    border-radius: 16px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.platform-card:hover {
+    transform: translateY(-5px);
+    border-color: #ffbf00;
+    box-shadow: 0 10px 30px rgba(255, 191, 0, 0.12);
+}
+
+.platform-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 12px;
+    line-height: 1.35;
+}
+
+.platform-card p {
+    font-size: 14.5px;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.7;
+    margin-bottom: 16px;
+}
+
+.platform-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.platform-card ul li {
+    font-size: 13.5px;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.8;
+    position: relative;
+    padding-left: 20px;
+}
+
+.platform-card ul li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #ffbf00;
+    font-weight: bold;
+}
+
 

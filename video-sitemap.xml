@@ -20,13 +20,13 @@
   <url>
     <loc>https://paarustudio.com/video-production</loc>
     <video:video>
-      <video:thumbnail_loc>https://img.youtube.com/vi/1KmBeKsYq_0/maxresdefault.jpg</video:thumbnail_loc>
-      <video:title>Corporate Video Production Services Bangalore — Paaru Studio-Media</video:title>
-      <video:description>End-to-end corporate video production, ad films, TV commercials, and brand films by Paaru Studio-Media Bangalore.</video:description>
-      <video:content_loc>https://www.youtube.com/watch?v=1KmBeKsYq_0</video:content_loc>
-      <video:player_loc>https://www.youtube.com/embed/1KmBeKsYq_0</video:player_loc>
-      <video:duration>30</video:duration>
-      <video:publication_date>2024-01-15T08:00:00+05:30</video:publication_date>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/uLb9N7Otl0o/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Corporate Video Production Reel — Paaru Studio-Media Bangalore</video:title>
+      <video:description>A cinematic reel showcasing high-quality corporate video production, TVC ad films, brand films, and professional filmmaking services in Bangalore by Paaru Studio-Media.</video:description>
+      <video:content_loc>https://www.youtube.com/watch?v=uLb9N7Otl0o</video:content_loc>
+      <video:player_loc>https://www.youtube.com/embed/uLb9N7Otl0o</video:player_loc>
+      <video:duration>46</video:duration>
+      <video:publication_date>2025-11-02T22:38:37+08:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -71,7 +71,7 @@
     </video:video>
   </url>
 
-  <!-- Portfolio Videos with Clean URLs -->
+  <!-- Portfolio Videos with Single Clean Canonical URL -->
   <url>
     <loc>https://paarustudio.com/portfolio</loc>
     <video:video>
@@ -83,10 +83,6 @@
       <video:duration>150</video:duration>
       <video:publication_date>2024-05-18T12:00:00+05:30</video:publication_date>
     </video:video>
-  </url>
-
-  <url>
-    <loc>https://paarustudio.com/portfolio</loc>
     <video:video>
       <video:thumbnail_loc>https://img.youtube.com/vi/fUcTTeNFn2g/maxresdefault.jpg</video:thumbnail_loc>
       <video:title>Windowfab Product Showcase</video:title>
@@ -98,7 +94,32 @@
     </video:video>
   </url>
 
-  <!-- AI Services Videos -->
+  <!-- AI Services Hub Page -->
+  <url>
+    <loc>https://paarustudio.com/ai-services</loc>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/S6vVIqh_sOo/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>AI Content Generation Showcase — Paaru Studio</video:title>
+      <video:description>Next-generation generative AI content creation, automated workflows, and cinematic storytelling in Bangalore.</video:description>
+      <video:content_loc>https://www.youtube.com/watch?v=S6vVIqh_sOo</video:content_loc>
+      <video:player_loc>https://www.youtube.com/embed/S6vVIqh_sOo</video:player_loc>
+      <video:duration>40</video:duration>
+      <video:publication_date>2025-01-10T09:00:00+05:30</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/cCeWcmEX7YY/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>AI Video Production Explained — Paaru Studio</video:title>
+      <video:description>How Paaru Studio leverages AI for more efficient video production, character generation, and visual effects.</video:description>
+      <video:content_loc>https://www.youtube.com/watch?v=cCeWcmEX7YY</video:content_loc>
+      <video:player_loc>https://www.youtube.com/embed/cCeWcmEX7YY</video:player_loc>
+      <video:duration>60</video:duration>
+      <video:publication_date>2025-02-15T11:00:00+05:30</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+
+  <!-- AI Services Sub-Pages -->
   <url>
     <loc>https://paarustudio.com/ai-video-content-generation</loc>
     <video:video>

@@ -15,6 +15,10 @@ RewriteRule ^index\.html$ https://paarustudio.com/ [R=301,L]
 # 4. Redirect services.html directly to clean URL video-production
 RewriteRule ^services\.html$ https://paarustudio.com/video-production [R=301,L]
 
+# 4b. Strip ?v= query parameter from /portfolio and 301 redirect to clean URL
+RewriteCond %{QUERY_STRING} (^|&)v= [NC]
+RewriteRule ^portfolio(\.html)?/?$ https://paarustudio.com/portfolio? [R=301,L]
+
 # 5. Redirect external requests for *.html to clean extensionless URLs (avoids duplicates)
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^\.]+)\.html\ HTTP/
 RewriteRule ^([^\.]+)\.html$ https://paarustudio.com/$1 [R=301,L]
