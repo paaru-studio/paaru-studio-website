@@ -378,10 +378,11 @@
     content: "";
     pointer-events: none;
     position: absolute;
-    inset-inline-start: 50%;
-    inset-block-start: 50%;
+    top: 50%;
+    left: 50%;
     translate: -50% -50%;
-    z-index: -1;
+    /* z-index MUST stay positive so overflow:hidden clips it — negative z-index breaks clipping */
+    z-index: 0;
     --size: calc(100% - 4px);
     --position: 2px;
     --space: calc(var(--position) * 2);
@@ -413,10 +414,11 @@
     content: "";
     pointer-events: none;
     position: absolute;
-    inset-inline-start: 50%;
-    inset-block-start: 50%;
+    top: 50%;
+    left: 50%;
     translate: -50% -50%;
-    z-index: -1;
+    /* Positive z-index to stay inside overflow:hidden clip */
+    z-index: 0;
     width: 100%;
     aspect-ratio: 1;
     background: linear-gradient(-50deg, transparent, rgba(255, 191, 0, 0.55), transparent);
@@ -425,10 +427,10 @@
     animation: ai-btn-shimmer 3s linear infinite paused;
 }
 
-/* Label span — z-index above pseudo layers */
+/* Label span — sits ABOVE the effect layers */
 .ai-explore-btn > span {
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
 /* Breathing inner glow on the label span */
@@ -436,8 +438,8 @@
     content: "";
     pointer-events: none;
     position: absolute;
-    inset-inline-start: 50%;
-    inset-block-start: 50%;
+    top: 50%;
+    left: 50%;
     translate: -50% -50%;
     --size: calc(100% + 1rem);
     width: var(--size);
