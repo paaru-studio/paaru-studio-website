@@ -290,155 +290,207 @@
     font-size: 19px;
 }
 
-/* 6. "Explore Ai" Navbar Button — Framer Aqua Gradient Component (https://framer.com/m/Button-528OkA.js@SXxNthtIfU6bJjEVMPre) */
-.ai-explore-btn,
-.ai-btn {
+/* 6. "Explore Ai" Navbar Button — Framer HyperiuxShinyButton (https://framer.com/m/HyperiuxShinyButton-q1SkGW.js) */
+
+/* @property registrations for animatable custom properties */
+@property --ai-btn-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+@property --ai-btn-angle-offset {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+@property --ai-btn-arc {
+    syntax: "<percentage>";
+    initial-value: 6%;
+    inherits: false;
+}
+@property --ai-btn-shine {
+    syntax: "<color>";
+    initial-value: #ffbf00;
+    inherits: false;
+}
+
+@keyframes ai-btn-spin {
+    to { --ai-btn-angle: 360deg; }
+}
+@keyframes ai-btn-shimmer {
+    to { rotate: 360deg; }
+}
+@keyframes ai-btn-breathe {
+    from, to { scale: 1; }
+    50% { scale: 1.2; }
+}
+
+.ai-explore-btn {
+    /* Layout */
     position: relative !important;
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    height: 38px !important;
-    padding: 0 18px !important;
-    border-radius: 999px !important;
-    text-decoration: none !important;
-    user-select: none !important;
-    cursor: pointer !important;
     isolation: isolate !important;
     overflow: hidden !important;
-    box-sizing: border-box !important;
-    background: linear-gradient(180deg, rgba(133, 219, 249, 0.96), rgba(66, 190, 238, 0.95)) !important;
-    border: 2px solid rgba(133, 219, 249, 0.9) !important;
-    box-shadow: 0 2px 8px rgba(38, 178, 231, 0.3), 0 0 16px rgba(52, 186, 240, 0.25) !important;
-    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s ease, border-color 0.25s ease !important;
-}
-
-.ai-explore-btn .ai-btn-bg,
-.ai-btn .ai-btn-bg {
-    position: absolute;
-    inset: 0px;
-    border-radius: inherit;
-    background-color: #BFE9F6;
-    background-image:
-        radial-gradient(ellipse 55% 75% at 50% 55%, rgba(52, 186, 240, 0.98) 0%, rgba(52, 186, 240, 0.98) 25%, transparent 70%),
-        radial-gradient(ellipse 50% 75% at 20% 35%, rgba(93, 210, 248, 0.9) 0%, transparent 70%),
-        radial-gradient(ellipse 50% 80% at 80% 35%, rgba(211, 241, 249, 0.92) 0%, transparent 70%),
-        linear-gradient(180deg, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 50%, rgba(30, 175, 229, 0.15) 100%);
-    pointer-events: none;
-    z-index: 1;
-}
-
-.ai-explore-btn .ai-btn-highlight-tl,
-.ai-btn .ai-btn-highlight-tl {
-    position: absolute;
-    width: 32px;
-    height: 32px;
-    left: -8px;
-    top: -12px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.95);
-    filter: blur(3px);
-    pointer-events: none;
-    z-index: 2;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.ai-explore-btn .ai-btn-highlight-br,
-.ai-btn .ai-btn-highlight-br {
-    position: absolute;
-    width: 32px;
-    height: 32px;
-    right: -8px;
-    bottom: -12px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.95);
-    filter: blur(3px);
-    pointer-events: none;
-    z-index: 2;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.ai-explore-btn .ai-btn-content,
-.ai-btn .ai-btn-content {
-    position: relative;
-    z-index: 10;
-    display: inline-flex;
-    align-items: center;
-    gap: 7px;
-    color: #ffffff !important;
-    pointer-events: none;
-}
-
-.ai-explore-btn .ai-btn-text,
-.ai-btn .ai-btn-text {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+    cursor: pointer !important;
+    text-decoration: none !important;
+    user-select: none !important;
+    /* Size */
+    height: 36px !important;
+    padding: 0 20px !important;
+    border-radius: 999px !important;
+    /* Typography */
+    font-family: 'Inter', system-ui, sans-serif !important;
     font-size: 13.5px !important;
     font-weight: 600 !important;
     letter-spacing: 0.2px !important;
-    color: #ffffff !important;
     line-height: 1 !important;
-    text-shadow: 0 1px 3px rgba(10, 60, 90, 0.5) !important;
     white-space: nowrap !important;
+    color: #ffffff !important;
+    /* Rotating border via conic-gradient */
+    border: 1px solid transparent !important;
+    background:
+        linear-gradient(#000000, #000000) padding-box,
+        conic-gradient(
+            from calc(var(--ai-btn-angle) - var(--ai-btn-angle-offset)),
+            transparent,
+            #ffbf00 var(--ai-btn-arc),
+            var(--ai-btn-shine) calc(var(--ai-btn-arc) * 2),
+            #ffbf00 calc(var(--ai-btn-arc) * 3),
+            transparent calc(var(--ai-btn-arc) * 4)
+        ) border-box !important;
+    box-shadow: inset 0 0 0 1px rgba(255, 191, 0, 0.15) !important;
+    /* Transitions for hover state changes */
+    transition:
+        --ai-btn-angle-offset 0.8s cubic-bezier(0.25, 1, 0.5, 1),
+        --ai-btn-arc 0.8s cubic-bezier(0.25, 1, 0.5, 1),
+        --ai-btn-shine 0.8s cubic-bezier(0.25, 1, 0.5, 1) !important;
+    /* Spin animation (only when hovered — see :hover rule) */
+    animation:
+        ai-btn-spin 3s linear infinite paused,
+        ai-btn-spin 7.5s linear infinite reverse paused;
+    animation-composition: add;
 }
 
-.ai-explore-btn .ai-btn-icon,
-.ai-btn .ai-btn-icon {
-    width: 14px;
-    height: 14px;
-    stroke: #ffffff !important;
-    stroke-width: 2.6 !important;
-    flex-shrink: 0;
-    display: block;
-    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
-    filter: drop-shadow(0 1px 2px rgba(10, 60, 90, 0.5));
+/* Speckle dot-pattern layer (::before) */
+.ai-explore-btn::before {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    inset-inline-start: 50%;
+    inset-block-start: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    --size: calc(100% - 4px);
+    --position: 2px;
+    --space: calc(var(--position) * 2);
+    width: var(--size);
+    height: var(--size);
+    background: radial-gradient(
+        circle at var(--position) var(--position),
+        rgba(255,255,255,0.65) calc(var(--position) / 4),
+        transparent 0
+    ) padding-box;
+    background-size: var(--space) var(--space);
+    background-repeat: space;
+    mask-image: conic-gradient(
+        from calc(var(--ai-btn-angle) + 45deg),
+        black,
+        transparent 10% 90%,
+        black
+    );
+    border-radius: inherit;
+    opacity: 0.35;
+    animation:
+        ai-btn-spin 3s linear infinite paused,
+        ai-btn-spin 7.5s linear infinite reverse paused;
+    animation-composition: add;
+}
+
+/* Sheen shimmer layer (::after) */
+.ai-explore-btn::after {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    inset-inline-start: 50%;
+    inset-block-start: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    width: 100%;
+    aspect-ratio: 1;
+    background: linear-gradient(-50deg, transparent, rgba(255, 191, 0, 0.55), transparent);
+    mask-image: radial-gradient(circle at bottom, transparent 40%, black);
+    opacity: 0.5;
+    animation: ai-btn-shimmer 3s linear infinite paused;
+}
+
+/* Label span — z-index above pseudo layers */
+.ai-explore-btn > span {
+    position: relative;
+    z-index: 1;
+}
+
+/* Breathing inner glow on the label span */
+.ai-explore-btn > span::before {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    inset-inline-start: 50%;
+    inset-block-start: 50%;
+    translate: -50% -50%;
+    --size: calc(100% + 1rem);
+    width: var(--size);
+    height: var(--size);
+    box-shadow: inset 0 -1ex 2rem 4px #ffbf00;
+    opacity: 0;
+    transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+    animation: ai-btn-breathe 4.5s linear infinite;
+}
+
+/* HOVER: activate animations & widen arc */
+.ai-explore-btn:hover {
+    --ai-btn-arc: 20% !important;
+    --ai-btn-angle-offset: 95deg !important;
+    --ai-btn-shine: #ffd966 !important;
+    transform: translateY(-1px) !important;
 }
 
 .ai-explore-btn:hover,
-.ai-btn:hover {
-    transform: translateY(-2px) scale(1.025) !important;
-    box-shadow: 0 4px 18px rgba(38, 178, 231, 0.55), 0 0 24px rgba(93, 210, 248, 0.45) !important;
-    border-color: #ffffff !important;
+.ai-explore-btn:hover::before,
+.ai-explore-btn:hover::after {
+    animation-play-state: running !important;
 }
 
-.ai-explore-btn:hover .ai-btn-highlight-tl,
-.ai-btn:hover .ai-btn-highlight-tl {
-    transform: translate(3px, 2px) scale(1.2);
+.ai-explore-btn:hover > span::before {
     opacity: 1;
 }
 
-.ai-explore-btn:hover .ai-btn-highlight-br,
-.ai-btn:hover .ai-btn-highlight-br {
-    transform: translate(-3px, -2px) scale(1.2);
-    opacity: 1;
+.ai-explore-btn:active {
+    translate: 0 1px !important;
+    transform: none !important;
 }
 
-.ai-explore-btn:hover .ai-btn-icon,
-.ai-btn:hover .ai-btn-icon {
-    transform: translateY(-2px) scale(1.1);
-}
-
-.ai-explore-btn:active,
-.ai-btn:active {
-    transform: translateY(0) scale(0.98) !important;
-}
-
-/* Scrolled navbar variant */
-.navbar.scrolled .ai-explore-btn,
-.navbar.scrolled .ai-btn {
-    height: 32px !important;
-    padding: 0 14px !important;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25), 0 0 12px rgba(38, 178, 231, 0.4) !important;
-    border-color: rgba(255, 255, 255, 0.9) !important;
-}
-
-.navbar.scrolled .ai-explore-btn .ai-btn-text,
-.navbar.scrolled .ai-btn .ai-btn-text {
+/* Scrolled navbar — slightly smaller */
+.navbar.scrolled .ai-explore-btn {
+    height: 30px !important;
+    padding: 0 15px !important;
     font-size: 12.5px !important;
 }
 
-.navbar.scrolled .ai-explore-btn .ai-btn-icon,
-.navbar.scrolled .ai-btn .ai-btn-icon {
-    width: 12px;
-    height: 12px;
+/* Respect reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+    .ai-explore-btn,
+    .ai-explore-btn::before,
+    .ai-explore-btn::after {
+        animation: none !important;
+    }
+    .ai-explore-btn:hover > span::before {
+        opacity: 0;
+    }
+    .ai-explore-btn {
+        transition: none !important;
+    }
 }
 
 /* 6b. Hero Breadcrumbs Theme Fix — eliminates decimal numbers, left offset & blue links */
