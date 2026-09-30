@@ -290,88 +290,232 @@
     font-size: 19px;
 }
 
-/* 6. "Ai" Navbar Button — pill shape like Contact Us, inverted dark+gold scheme */
+/* 6. "Explore Ai" Navbar Button — Framer Aqua Gradient Component (https://framer.com/m/Button-528OkA.js@SXxNthtIfU6bJjEVMPre) */
+.ai-explore-btn,
 .ai-btn {
+    position: relative !important;
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    text-decoration: none !important;
-
-    /* Pill shape matching .cta-btn */
-    padding: 8px 16px !important;
+    height: 38px !important;
+    padding: 0 18px !important;
     border-radius: 999px !important;
-
-    /* Inverted: dark background, gold border */
-    background: rgba(10, 10, 10, 0.85) !important;
-    border: 1.5px solid #FFD700 !important;
-    box-shadow: 0 0 10px rgba(255, 215, 0, 0.2) !important;
-
-    transition: background 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease, border-color 0.2s ease !important;
+    text-decoration: none !important;
+    user-select: none !important;
+    cursor: pointer !important;
+    isolation: isolate !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+    background: linear-gradient(180deg, rgba(133, 219, 249, 0.96), rgba(66, 190, 238, 0.95)) !important;
+    border: 2px solid rgba(133, 219, 249, 0.9) !important;
+    box-shadow: 0 2px 8px rgba(38, 178, 231, 0.3), 0 0 16px rgba(52, 186, 240, 0.25) !important;
+    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s ease, border-color 0.25s ease !important;
 }
 
+.ai-explore-btn .ai-btn-bg,
+.ai-btn .ai-btn-bg {
+    position: absolute;
+    inset: 0px;
+    border-radius: inherit;
+    background-color: #BFE9F6;
+    background-image:
+        radial-gradient(ellipse 55% 75% at 50% 55%, rgba(52, 186, 240, 0.98) 0%, rgba(52, 186, 240, 0.98) 25%, transparent 70%),
+        radial-gradient(ellipse 50% 75% at 20% 35%, rgba(93, 210, 248, 0.9) 0%, transparent 70%),
+        radial-gradient(ellipse 50% 80% at 80% 35%, rgba(211, 241, 249, 0.92) 0%, transparent 70%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 50%, rgba(30, 175, 229, 0.15) 100%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.ai-explore-btn .ai-btn-highlight-tl,
+.ai-btn .ai-btn-highlight-tl {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: -8px;
+    top: -12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.95);
+    filter: blur(3px);
+    pointer-events: none;
+    z-index: 2;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.ai-explore-btn .ai-btn-highlight-br,
+.ai-btn .ai-btn-highlight-br {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    right: -8px;
+    bottom: -12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.95);
+    filter: blur(3px);
+    pointer-events: none;
+    z-index: 2;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.ai-explore-btn .ai-btn-content,
+.ai-btn .ai-btn-content {
+    position: relative;
+    z-index: 10;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: #ffffff !important;
+    pointer-events: none;
+}
+
+.ai-explore-btn .ai-btn-text,
+.ai-btn .ai-btn-text {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+    font-size: 13.5px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.2px !important;
+    color: #ffffff !important;
+    line-height: 1 !important;
+    text-shadow: 0 1px 3px rgba(10, 60, 90, 0.5) !important;
+    white-space: nowrap !important;
+}
+
+.ai-explore-btn .ai-btn-icon,
+.ai-btn .ai-btn-icon {
+    width: 14px;
+    height: 14px;
+    stroke: #ffffff !important;
+    stroke-width: 2.6 !important;
+    flex-shrink: 0;
+    display: block;
+    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+    filter: drop-shadow(0 1px 2px rgba(10, 60, 90, 0.5));
+}
+
+.ai-explore-btn:hover,
 .ai-btn:hover {
-    background: rgba(25, 20, 0, 0.95) !important;
-    border-color: #ffe033 !important;
-    box-shadow: 0 0 18px rgba(255, 215, 0, 0.4), 0 4px 14px rgba(0, 0, 0, 0.5) !important;
-    transform: translateY(-1px) !important;
+    transform: translateY(-2px) scale(1.025) !important;
+    box-shadow: 0 4px 18px rgba(38, 178, 231, 0.55), 0 0 24px rgba(93, 210, 248, 0.45) !important;
+    border-color: #ffffff !important;
 }
 
-.ai-3d-text {
-    font-family: 'Inter', 'Outfit', 'Arial Black', sans-serif;
-    font-size: 14px;
-    font-weight: 800;
-    font-style: normal;
-    letter-spacing: 0.5px;
-    line-height: 1;
-    display: inline-block;
-    user-select: none;
-
-    /* Gold face */
-    color: #FFD700;
-
-    /* 3D depth via stacked text-shadow */
-    text-shadow:
-        0  1px 0  #b38600,
-        0  2px 0  #997300,
-        0  3px 6px rgba(0, 0, 0, 0.55),
-        0  0px 5px rgba(255, 215, 0, 0.35);
-
-    transition: text-shadow 0.2s ease, color 0.2s ease;
+.ai-explore-btn:hover .ai-btn-highlight-tl,
+.ai-btn:hover .ai-btn-highlight-tl {
+    transform: translate(3px, 2px) scale(1.2);
+    opacity: 1;
 }
 
-.ai-btn:hover .ai-3d-text {
-    color: #ffe033;
-    text-shadow:
-        0  1px 0  #cc9900,
-        0  2px 0  #997300,
-        0  3px 0  #7a5c00,
-        0  4px 10px rgba(0, 0, 0, 0.6),
-        0  0px 8px rgba(255, 215, 0, 0.5);
+.ai-explore-btn:hover .ai-btn-highlight-br,
+.ai-btn:hover .ai-btn-highlight-br {
+    transform: translate(-3px, -2px) scale(1.2);
+    opacity: 1;
 }
 
-/* Scrolled yellow navbar: flip to dark pill with white/dark text so it stands out */
+.ai-explore-btn:hover .ai-btn-icon,
+.ai-btn:hover .ai-btn-icon {
+    transform: translateY(-2px) scale(1.1);
+}
+
+.ai-explore-btn:active,
+.ai-btn:active {
+    transform: translateY(0) scale(0.98) !important;
+}
+
+/* Scrolled navbar variant */
+.navbar.scrolled .ai-explore-btn,
 .navbar.scrolled .ai-btn {
-    background: #000000 !important;
-    border-color: #000000 !important;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35) !important;
+    height: 32px !important;
+    padding: 0 14px !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25), 0 0 12px rgba(38, 178, 231, 0.4) !important;
+    border-color: rgba(255, 255, 255, 0.9) !important;
 }
 
-.navbar.scrolled .ai-btn:hover {
-    background: #1a1a1a !important;
-    border-color: #333 !important;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5) !important;
+.navbar.scrolled .ai-explore-btn .ai-btn-text,
+.navbar.scrolled .ai-btn .ai-btn-text {
+    font-size: 12.5px !important;
 }
 
-.navbar.scrolled .ai-btn .ai-3d-text {
-    color: #FFD700;
-    text-shadow:
-        0  1px 0  #b38600,
-        0  2px 4px rgba(0, 0, 0, 0.3);
+.navbar.scrolled .ai-explore-btn .ai-btn-icon,
+.navbar.scrolled .ai-btn .ai-btn-icon {
+    width: 12px;
+    height: 12px;
 }
 
-.navbar.scrolled .ai-btn:hover .ai-3d-text {
-    color: #ffe033;
+/* 6b. Hero Breadcrumbs Theme Fix — eliminates decimal numbers, left offset & blue links */
+.ps-breadcrumb,
+nav[aria-label="Breadcrumb"] {
+    margin-bottom: 20px !important;
+    font-size: 14px !important;
+    color: var(--text-secondary, #9ca3af) !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
 }
+
+.blog-article-hero .ps-breadcrumb,
+.blog-article-hero nav[aria-label="Breadcrumb"] {
+    justify-content: flex-start !important;
+    text-align: left !important;
+}
+
+.ps-breadcrumb ol,
+nav[aria-label="Breadcrumb"] ol {
+    list-style: none !important;
+    list-style-type: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: inline-flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+}
+
+.blog-article-hero .ps-breadcrumb ol,
+.blog-article-hero nav[aria-label="Breadcrumb"] ol {
+    justify-content: flex-start !important;
+}
+
+.ps-breadcrumb li,
+nav[aria-label="Breadcrumb"] li {
+    list-style: none !important;
+    list-style-type: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    color: var(--text-secondary, #9ca3af) !important;
+    font-size: 14px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.ps-breadcrumb li:not(:last-child)::after,
+nav[aria-label="Breadcrumb"] li:not(:last-child)::after {
+    content: "›" !important;
+    margin-left: 8px !important;
+    opacity: 0.5 !important;
+    color: var(--text-secondary, #9ca3af) !important;
+}
+
+.ps-breadcrumb a,
+nav[aria-label="Breadcrumb"] a {
+    color: var(--text-secondary, #9ca3af) !important;
+    text-decoration: none !important;
+    transition: color 0.2s ease !important;
+}
+
+.ps-breadcrumb a:hover,
+nav[aria-label="Breadcrumb"] a:hover {
+    color: var(--accent-color, #ffbf00) !important;
+}
+
+.ps-breadcrumb li[aria-current="page"],
+nav[aria-label="Breadcrumb"] li[aria-current="page"] {
+    color: var(--accent-color, #ffbf00) !important;
+    font-weight: 600 !important;
+}
+
 
 
 /* 7. AI Creations 3-col grid — responsive collapse */
