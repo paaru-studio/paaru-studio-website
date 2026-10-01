@@ -136,6 +136,12 @@
       ]
     }
     </script>
+
+    <!-- Performance Resource Hints -->
+    <link rel="dns-prefetch" href="https://widget.clutch.co">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://connect.facebook.net">
+
 </head>
 
 <body id="top" class="services-page">
@@ -177,7 +183,7 @@
                                     <picture>
                                         <source srcset="video_pro.webp" type="image/webp">
                                         <img src="video_pro_optimized.webp" alt="Video Production" width="7990"
-                                            height="5327" loading="lazy">
+                                            height="5327" loading="lazy" decoding="async">
                                     </picture>
                                 </picture>
                                 <div class="mega-item-content">
@@ -188,7 +194,7 @@
                             <a href="/ecommerce" class="mega-menu-item">
                                 <picture>
                                     <source srcset="shopify_img.webp" type="image/webp"><img src="shopify_img.webp"
-                                        alt="E-commerce Solutions" width="1024" height="1024" loading="lazy">
+                                        alt="E-commerce Solutions" width="1024" height="1024" loading="lazy" decoding="async">
                                 </picture>
                                 <div class="mega-item-content">
                                     <h4>E-commerce Solutions</h4>
@@ -201,7 +207,7 @@
                                     <picture>
                                         <source srcset="pm_1.webp" type="image/webp">
                                         <img src="pm_1_optimized.webp" alt="Digital Marketing" width="6629"
-                                            height="3729" loading="lazy">
+                                            height="3729" loading="lazy" decoding="async">
                                     </picture>
                                 </picture>
                                 <div class="mega-item-content">
@@ -215,7 +221,7 @@
                                     <picture>
                                         <source srcset="OOH_banner.webp" type="image/webp">
                                         <img src="OOH_banner.webp" alt="Offline Marketing (OOH/DOOH)" width="1170"
-                                            height="876" loading="lazy">
+                                            height="876" loading="lazy" decoding="async">
                                     </picture>
                                 </picture>
                                 <div class="mega-item-content">
@@ -427,7 +433,24 @@
 
     <script src="script.min.js" defer></script>
     <script src="popup-form.js" defer></script>
-    <script type="text/javascript" src="https://widget.clutch.co/static/js/widget.js" defer></script>
+    <script>
+        (function () {
+            var loaded = false;
+            function loadClutch() {
+                if (loaded) return;
+                loaded = true;
+                var s = document.createElement('script');
+                s.type = 'text/javascript';
+                s.async = true;
+                s.src = 'https://widget.clutch.co/static/js/widget.js';
+                document.body.appendChild(s);
+            }
+            ['mousemove', 'touchstart', 'scroll', 'keydown'].forEach(function (evt) {
+                window.addEventListener(evt, loadClutch, { passive: true, once: true });
+            });
+            setTimeout(loadClutch, 3500);
+        })();
+    </script>
 </body>
 
 </html>

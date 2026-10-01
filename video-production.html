@@ -161,6 +161,12 @@
             min-height: 80vh
         }
     </style>
+
+    <!-- Performance Resource Hints -->
+    <link rel="dns-prefetch" href="https://widget.clutch.co">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://connect.facebook.net">
+
 </head>
 
 <body id="top" class="services-page">
@@ -1561,7 +1567,24 @@
   ]
 }
 </script>
-    <script type="text/javascript" src="https://widget.clutch.co/static/js/widget.js" defer></script>
+    <script>
+        (function () {
+            var loaded = false;
+            function loadClutch() {
+                if (loaded) return;
+                loaded = true;
+                var s = document.createElement('script');
+                s.type = 'text/javascript';
+                s.async = true;
+                s.src = 'https://widget.clutch.co/static/js/widget.js';
+                document.body.appendChild(s);
+            }
+            ['mousemove', 'touchstart', 'scroll', 'keydown'].forEach(function (evt) {
+                window.addEventListener(evt, loadClutch, { passive: true, once: true });
+            });
+            setTimeout(loadClutch, 3500);
+        })();
+    </script>
 </body>
 
 </html>

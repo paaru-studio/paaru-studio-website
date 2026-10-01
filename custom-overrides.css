@@ -7,8 +7,8 @@
 }
 
 /* Target ONLY top-level nav items for black text on yellow navbar */
-.navbar.scrolled .nav-links > a,
-.navbar.scrolled .nav-links > li > a,
+.navbar.scrolled .nav-links>a,
+.navbar.scrolled .nav-links>li>a,
 .navbar.scrolled .nav-dropdown-toggle {
     color: #000000 !important;
     font-weight: 700 !important;
@@ -334,8 +334,8 @@
 /* Label text — MUST stay 100% white in all states */
 .ai-explore-btn span,
 .nav-links .ai-explore-btn span,
-.navbar.scrolled .nav-links > a.ai-explore-btn,
-.navbar.scrolled .nav-links > a.ai-explore-btn span {
+.navbar.scrolled .nav-links>a.ai-explore-btn,
+.navbar.scrolled .nav-links>a.ai-explore-btn span {
     color: #ffffff !important;
     font-weight: 700 !important;
     position: relative !important;
@@ -352,7 +352,7 @@
 }
 
 /* Scrolled Navbar (Yellow Header) — Black dotted pill button with crisp white text */
-.navbar.scrolled .nav-links > a.ai-explore-btn,
+.navbar.scrolled .nav-links>a.ai-explore-btn,
 .navbar.scrolled .nav-links .ai-explore-btn,
 .navbar.scrolled .ai-explore-btn {
     background: #000000 !important;
@@ -364,21 +364,21 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
 }
 
-.navbar.scrolled .nav-links > a.ai-explore-btn span,
+.navbar.scrolled .nav-links>a.ai-explore-btn span,
 .navbar.scrolled .nav-links .ai-explore-btn span,
 .navbar.scrolled .ai-explore-btn span {
     color: #ffffff !important;
     font-weight: 700 !important;
 }
 
-.navbar.scrolled .nav-links > a.ai-explore-btn:hover,
+.navbar.scrolled .nav-links>a.ai-explore-btn:hover,
 .navbar.scrolled .nav-links .ai-explore-btn:hover,
 .navbar.scrolled .ai-explore-btn:hover {
     background: #1a1a1a !important;
     border-color: #000000 !important;
 }
 
-.navbar.scrolled .nav-links > a.ai-explore-btn:hover span,
+.navbar.scrolled .nav-links>a.ai-explore-btn:hover span,
 .navbar.scrolled .nav-links .ai-explore-btn:hover span,
 .navbar.scrolled .ai-explore-btn:hover span {
     color: #ffbf00 !important;
@@ -574,16 +574,20 @@ nav[aria-label="Breadcrumb"] li[aria-current="page"] {
         padding: 28px 20px;
         margin-bottom: 36px;
     }
+
     .ask-ai-title {
         font-size: 22px;
     }
+
     .ask-ai-subtitle {
         font-size: 13px;
     }
+
     .ask-ai-actions {
         flex-direction: column;
         width: 100%;
     }
+
     .ask-ai-btn {
         width: 100%;
         justify-content: center;
@@ -657,7 +661,8 @@ nav[aria-label="Breadcrumb"] li[aria-current="page"] {
    ========================================================================== */
 
 /* 1. Prevent Horizontal Overflow & Layout Jumps on Mobile */
-html, body {
+html,
+body {
     max-width: 100vw !important;
     overflow-x: hidden !important;
     -webkit-overflow-scrolling: touch;
@@ -665,6 +670,7 @@ html, body {
 
 /* 2. Mobile Touch Targets (Minimum 44px for Google Lighthouse Mobile Accessibility) */
 @media (max-width: 768px) {
+
     button,
     .cta-btn,
     .book-now-btn,
@@ -681,7 +687,7 @@ html, body {
         justify-content: center !important;
         touch-action: manipulation;
     }
-    
+
     .mobile-menu-btn {
         min-width: 44px !important;
         min-height: 44px !important;
@@ -710,7 +716,8 @@ html, body {
         height: auto !important;
         min-height: auto !important;
         overflow: visible !important;
-        padding-top: 85px !important; /* Fixed navbar is 60px; gives 25px top clearance */
+        padding-top: 85px !important;
+        /* Fixed navbar is 60px; gives 25px top clearance */
         padding-bottom: 50px !important;
         position: relative !important;
         z-index: 1 !important;
@@ -796,7 +803,8 @@ html, body {
     .compact-hero-form textarea {
         padding: 10px 12px !important;
         margin-bottom: 10px !important;
-        font-size: 16px !important; /* Prevents iOS Safari auto-zoom layout jumps */
+        font-size: 16px !important;
+        /* Prevents iOS Safari auto-zoom layout jumps */
         border-radius: 8px !important;
         width: 100% !important;
         box-sizing: border-box !important;
@@ -842,5 +850,188 @@ html, body {
     }
 }
 
+/* ===== AI SERVICES PAGE & PIPELINE TIMELINE FIXES ===== */
 
+/* 1. Reset video-title inside video-embed so it never distorts as a pill */
+.video-embed {
+    position: relative !important;
+    padding-bottom: 56.25% !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    border-radius: 12px !important;
+    background: #000000 !important;
+}
 
+.video-embed .video-poster {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background-size: cover !important;
+    background-position: center !important;
+    border: none !important;
+    cursor: pointer !important;
+}
+
+.video-embed .video-title {
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    top: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    padding: 10px 14px !important;
+    background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.88) 100%) !important;
+    color: #ffffff !important;
+    font-size: 13.5px !important;
+    font-weight: 600 !important;
+    border-radius: 0 !important;
+    border: none !important;
+    text-align: left !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    box-shadow: none !important;
+    line-height: 1.35 !important;
+    z-index: 3 !important;
+}
+
+/* 2. Timeline Pipeline Section Architecture (Fixes Overlapping Step Headings) */
+.timeline-section {
+    padding: 90px 0 !important;
+    background: #111111 !important;
+    position: relative !important;
+    clear: both !important;
+}
+
+.timeline-main-title {
+    text-align: center !important;
+    font-size: clamp(26px, 4vw, 40px) !important;
+    color: #ffffff !important;
+    font-weight: 800 !important;
+    margin-bottom: 50px !important;
+}
+
+.timeline-wrapper {
+    position: relative !important;
+    max-width: 1100px !important;
+    margin: 40px auto 0 !important;
+    padding: 20px 0 !important;
+}
+
+.timeline-line-bg {
+    position: absolute !important;
+    left: 50% !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    width: 2px !important;
+    background: rgba(255, 255, 255, 0.12) !important;
+    transform: translateX(-50%) !important;
+}
+
+.timeline-line-progress {
+    position: absolute !important;
+    left: 50% !important;
+    top: 0 !important;
+    width: 2px !important;
+    background: #ffbf00 !important;
+    transform: translateX(-50%) !important;
+    height: 100% !important;
+}
+
+.timeline-row {
+    display: flex !important;
+    align-items: flex-start !important;
+    justify-content: space-between !important;
+    margin-bottom: 60px !important;
+    position: relative !important;
+    z-index: 2 !important;
+    width: 100% !important;
+    clear: both !important;
+}
+
+.timeline-row:last-child {
+    margin-bottom: 0 !important;
+}
+
+.timeline-col {
+    width: 44% !important;
+    box-sizing: border-box !important;
+}
+
+.timeline-left {
+    text-align: right !important;
+    padding-right: 30px !important;
+}
+
+.timeline-right {
+    text-align: left !important;
+    padding-left: 30px !important;
+}
+
+.timeline-center {
+    position: absolute !important;
+    left: 50% !important;
+    top: 8px !important;
+    transform: translateX(-50%) !important;
+    z-index: 3 !important;
+}
+
+.timeline-dot {
+    width: 16px !important;
+    height: 16px !important;
+    background: #ffbf00 !important;
+    border-radius: 50% !important;
+    box-shadow: 0 0 15px rgba(255, 191, 0, 0.6) !important;
+}
+
+.timeline-left h3 {
+    font-size: 22px !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+    line-height: 1.35 !important;
+    margin: 0 0 8px 0 !important;
+}
+
+.timeline-right p {
+    font-size: 15px !important;
+    line-height: 1.65 !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+    margin: 0 !important;
+}
+
+@media (max-width: 900px) {
+    .timeline-line-bg,
+    .timeline-line-progress {
+        left: 20px !important;
+        transform: none !important;
+    }
+
+    .timeline-row {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        padding-left: 50px !important;
+        margin-bottom: 40px !important;
+    }
+
+    .timeline-col {
+        width: 100% !important;
+    }
+
+    .timeline-left {
+        text-align: left !important;
+        padding-right: 0 !important;
+        margin-bottom: 8px !important;
+    }
+
+    .timeline-right {
+        padding-left: 0 !important;
+    }
+
+    .timeline-center {
+        left: 20px !important;
+        top: 4px !important;
+    }
+}
