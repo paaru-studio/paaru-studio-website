@@ -55,7 +55,8 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300;1,400;1,500;1,600&family=Playfair+Display:ital@1&display=swap"
         media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="styles.min.css?v=20260707">
+    <link rel="preload" href="styles.min.css?v=20260707" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="styles.min.css?v=20260707"></noscript>
     <link rel="stylesheet" href="custom-overrides.css?v=20260801">
 
     <link rel="preload" href="popup-form.css" as="style" onload="this.rel='stylesheet'">
@@ -132,31 +133,31 @@
     <div id="ps-intro" aria-hidden="true">
         <!-- Background TickerScroll Marquee Wall -->
         <div class="ticker-scroll-wrapper">
-            <!-- Row 1: Left to Right -->
+            <!-- Row 1: Left to Right (first 2 images eager for paint, rest lazy) -->
             <div class="ticker-scroll-row row-left">
                 <div class="ticker-scroll-track">
                     <div class="ticker-item"><img src="Fashion_img_01.webp" alt="Fashion Shoot" width="220" height="260"
-                            loading="eager" decoding="async"></div>
+                            loading="eager" decoding="async" fetchpriority="low"></div>
                     <div class="ticker-item"><img src="dooh_ad_1_optimized.webp" alt="DOOH Advertising" width="220"
-                            height="260" loading="eager" decoding="async"></div>
+                            height="260" loading="eager" decoding="async" fetchpriority="low"></div>
                     <div class="ticker-item"><img src="ai-image1.webp" alt="AI Media Production" width="220"
-                            height="260" loading="eager" decoding="async"></div>
+                            height="260" loading="lazy" decoding="async"></div>
                     <div class="ticker-item"><img src="btl_activity_01.webp" alt="BTL Activation" width="220"
-                            height="260" loading="eager" decoding="async"></div>
+                            height="260" loading="lazy" decoding="async"></div>
                     <div class="ticker-item"><img src="social_media_01_optimized.webp" alt="Social Media Campaign"
-                            width="220" height="260" loading="eager" decoding="async"></div>
+                            width="220" height="260" loading="lazy" decoding="async"></div>
 
                     <!-- Duplicated for Infinite Loop -->
-                    <div class="ticker-item"><img src="Fashion_img_01.webp" alt="Fashion Shoot" width="220" height="260"
-                            loading="eager" decoding="async"></div>
-                    <div class="ticker-item"><img src="dooh_ad_1_optimized.webp" alt="DOOH Advertising" width="220"
-                            height="260" loading="eager" decoding="async"></div>
-                    <div class="ticker-item"><img src="ai-image1.webp" alt="AI Media Production" width="220"
-                            height="260" loading="eager" decoding="async"></div>
-                    <div class="ticker-item"><img src="btl_activity_01.webp" alt="BTL Activation" width="220"
-                            height="260" loading="eager" decoding="async"></div>
-                    <div class="ticker-item"><img src="social_media_01_optimized.webp" alt="Social Media Campaign"
-                            width="220" height="260" loading="eager" decoding="async"></div>
+                    <div class="ticker-item"><img src="Fashion_img_01.webp" alt="" width="220" height="260"
+                            loading="lazy" decoding="async" aria-hidden="true"></div>
+                    <div class="ticker-item"><img src="dooh_ad_1_optimized.webp" alt="" width="220"
+                            height="260" loading="lazy" decoding="async" aria-hidden="true"></div>
+                    <div class="ticker-item"><img src="ai-image1.webp" alt="" width="220"
+                            height="260" loading="lazy" decoding="async" aria-hidden="true"></div>
+                    <div class="ticker-item"><img src="btl_activity_01.webp" alt="" width="220"
+                            height="260" loading="lazy" decoding="async" aria-hidden="true"></div>
+                    <div class="ticker-item"><img src="social_media_01_optimized.webp" alt=""
+                            width="220" height="260" loading="lazy" decoding="async" aria-hidden="true"></div>
                 </div>
             </div>
 
@@ -164,27 +165,27 @@
             <div class="ticker-scroll-row row-right">
                 <div class="ticker-scroll-track">
                     <div class="ticker-item"><img src="product_shoot_banner.webp" alt="Product Photography" width="220"
-                            height="260" loading="eager" decoding="async"></div>
+                            height="260" loading="lazy" decoding="async"></div>
                     <div class="ticker-item"><img src="ooh_signeasy_billboard.webp" alt="OOH Billboard" width="220"
-                            height="260" loading="eager" decoding="async"></div>
+                            height="260" loading="lazy" decoding="async"></div>
                     <div class="ticker-item"><img src="influencer_1.webp" alt="Influencer Campaign" width="220"
-                            height="260" loading="eager" decoding="async"></div>
+                            height="260" loading="lazy" decoding="async"></div>
                     <div class="ticker-item"><img src="japfa_hero.webp" alt="Brand Ad Film" width="220" height="260"
-                            loading="eager" decoding="async"></div>
+                            loading="lazy" decoding="async"></div>
                     <div class="ticker-item"><img src="hero_poster.webp" alt="Video Production" width="220" height="260"
-                            loading="eager" decoding="async"></div>
+                            loading="lazy" decoding="async"></div>
 
                     <!-- Duplicated for Infinite Loop -->
-                    <div class="ticker-item"><img src="product_shoot_banner.webp" alt="Product Photography" width="220"
-                            height="260" loading="eager" decoding="async"></div>
-                    <div class="ticker-item"><img src="ooh_signeasy_billboard.webp" alt="OOH Billboard" width="220"
-                            height="260" loading="eager" decoding="async"></div>
-                    <div class="ticker-item"><img src="influencer_1.webp" alt="Influencer Campaign" width="220"
-                            height="260" loading="eager" decoding="async"></div>
-                    <div class="ticker-item"><img src="japfa_hero.webp" alt="Brand Ad Film" width="220" height="260"
-                            loading="eager" decoding="async"></div>
-                    <div class="ticker-item"><img src="hero_poster.webp" alt="Video Production" width="220" height="260"
-                            loading="eager" decoding="async"></div>
+                    <div class="ticker-item"><img src="product_shoot_banner.webp" alt="" width="220"
+                            height="260" loading="lazy" decoding="async" aria-hidden="true"></div>
+                    <div class="ticker-item"><img src="ooh_signeasy_billboard.webp" alt="" width="220"
+                            height="260" loading="lazy" decoding="async" aria-hidden="true"></div>
+                    <div class="ticker-item"><img src="influencer_1.webp" alt="" width="220"
+                            height="260" loading="lazy" decoding="async" aria-hidden="true"></div>
+                    <div class="ticker-item"><img src="japfa_hero.webp" alt="" width="220" height="260"
+                            loading="lazy" decoding="async" aria-hidden="true"></div>
+                    <div class="ticker-item"><img src="hero_poster.webp" alt="" width="220" height="260"
+                            loading="lazy" decoding="async" aria-hidden="true"></div>
                 </div>
             </div>
 
@@ -192,27 +193,27 @@
             <div class="ticker-scroll-row row-left">
                 <div class="ticker-scroll-track">
                     <div class="ticker-item"><img src="lifestyle_shoot_banner.webp" alt="Lifestyle Shoot" width="220"
-                            height="260" loading="eager" decoding="async"></div>
+                            height="260" loading="lazy" decoding="async"></div>
                     <div class="ticker-item"><img src="creative_design_optimized.webp" alt="Creative Design" width="220"
-                            height="260" loading="eager" decoding="async"></div>
+                            height="260" loading="lazy" decoding="async"></div>
                     <div class="ticker-item"><img src="metro_ad_1.webp" alt="Metro Media Ad" width="220" height="260"
-                            loading="eager" decoding="async"></div>
+                            loading="lazy" decoding="async"></div>
                     <div class="ticker-item"><img src="dooh_coworking_1.webp" alt="Coworking DOOH" width="220"
-                            height="260" loading="eager" decoding="async"></div>
+                            height="260" loading="lazy" decoding="async"></div>
                     <div class="ticker-item"><img src="aplus_content_banner.webp" alt="Amazon A+ Content" width="220"
-                            height="260" loading="eager" decoding="async"></div>
+                            height="260" loading="lazy" decoding="async"></div>
 
                     <!-- Duplicated for Infinite Loop -->
-                    <div class="ticker-item"><img src="lifestyle_shoot_banner.webp" alt="Lifestyle Shoot" width="220"
-                            height="260" loading="eager" decoding="async"></div>
-                    <div class="ticker-item"><img src="creative_design_optimized.webp" alt="Creative Design" width="220"
-                            height="260" loading="eager" decoding="async"></div>
-                    <div class="ticker-item"><img src="metro_ad_1.webp" alt="Metro Media Ad" width="220" height="260"
-                            loading="eager" decoding="async"></div>
-                    <div class="ticker-item"><img src="dooh_coworking_1.webp" alt="Coworking DOOH" width="220"
-                            height="260" loading="eager" decoding="async"></div>
-                    <div class="ticker-item"><img src="aplus_content_banner.webp" alt="Amazon A+ Content" width="220"
-                            height="260" loading="eager" decoding="async"></div>
+                    <div class="ticker-item"><img src="lifestyle_shoot_banner.webp" alt="" width="220"
+                            height="260" loading="lazy" decoding="async" aria-hidden="true"></div>
+                    <div class="ticker-item"><img src="creative_design_optimized.webp" alt="" width="220"
+                            height="260" loading="lazy" decoding="async" aria-hidden="true"></div>
+                    <div class="ticker-item"><img src="metro_ad_1.webp" alt="" width="220" height="260"
+                            loading="lazy" decoding="async" aria-hidden="true"></div>
+                    <div class="ticker-item"><img src="dooh_coworking_1.webp" alt="" width="220"
+                            height="260" loading="lazy" decoding="async" aria-hidden="true"></div>
+                    <div class="ticker-item"><img src="aplus_content_banner.webp" alt="" width="220"
+                            height="260" loading="lazy" decoding="async" aria-hidden="true"></div>
                 </div>
             </div>
 
@@ -220,27 +221,27 @@
             <div class="ticker-scroll-row row-right">
                 <div class="ticker-scroll-track">
                     <div class="ticker-item"><img src="Fashion_img_01.webp" alt="Fashion Shoot" width="220" height="260"
-                            loading="eager" decoding="async"></div>
+                            loading="lazy" decoding="async"></div>
                     <div class="ticker-item"><img src="product_shoot_banner.webp" alt="Product Photography" width="220"
-                            height="260" loading="eager" decoding="async"></div>
+                            height="260" loading="lazy" decoding="async"></div>
                     <div class="ticker-item"><img src="ai-image1.webp" alt="AI Media Production" width="220"
-                            height="260" loading="eager" decoding="async"></div>
+                            height="260" loading="lazy" decoding="async"></div>
                     <div class="ticker-item"><img src="dooh_ad_1_optimized.webp" alt="DOOH Advertising" width="220"
-                            height="260" loading="eager" decoding="async"></div>
+                            height="260" loading="lazy" decoding="async"></div>
                     <div class="ticker-item"><img src="btl_activity_01.webp" alt="BTL Activation" width="220"
-                            height="260" loading="eager" decoding="async"></div>
+                            height="260" loading="lazy" decoding="async"></div>
 
                     <!-- Duplicated for Infinite Loop -->
-                    <div class="ticker-item"><img src="Fashion_img_01.webp" alt="Fashion Shoot" width="220" height="260"
-                            loading="eager" decoding="async"></div>
-                    <div class="ticker-item"><img src="product_shoot_banner.webp" alt="Product Photography" width="220"
-                            height="260" loading="eager" decoding="async"></div>
-                    <div class="ticker-item"><img src="ai-image1.webp" alt="AI Media Production" width="220"
-                            height="260" loading="eager" decoding="async"></div>
-                    <div class="ticker-item"><img src="dooh_ad_1_optimized.webp" alt="DOOH Advertising" width="220"
-                            height="260" loading="eager" decoding="async"></div>
-                    <div class="ticker-item"><img src="btl_activity_01.webp" alt="BTL Activation" width="220"
-                            height="260" loading="eager" decoding="async"></div>
+                    <div class="ticker-item"><img src="Fashion_img_01.webp" alt="" width="220" height="260"
+                            loading="lazy" decoding="async" aria-hidden="true"></div>
+                    <div class="ticker-item"><img src="product_shoot_banner.webp" alt="" width="220"
+                            height="260" loading="lazy" decoding="async" aria-hidden="true"></div>
+                    <div class="ticker-item"><img src="ai-image1.webp" alt="" width="220"
+                            height="260" loading="lazy" decoding="async" aria-hidden="true"></div>
+                    <div class="ticker-item"><img src="dooh_ad_1_optimized.webp" alt="" width="220"
+                            height="260" loading="lazy" decoding="async" aria-hidden="true"></div>
+                    <div class="ticker-item"><img src="btl_activity_01.webp" alt="" width="220"
+                            height="260" loading="lazy" decoding="async" aria-hidden="true"></div>
                 </div>
             </div>
         </div>

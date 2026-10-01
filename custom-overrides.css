@@ -852,7 +852,26 @@ body {
 
 /* ===== AI SERVICES PAGE & PIPELINE TIMELINE FIXES ===== */
 
-/* 1. Reset video-title inside video-embed so it never distorts as a pill */
+/* ─────────────────────────────────────────────────────────
+   1. VIDEO EMBED CONTEXT-AWARE LAYOUT
+   
+   Three distinct use cases in this site:
+
+   A) .video-embed-wrapper > .video-embed (AI showcase 3-col grid):
+      The wrapper is a CARD (has padding, border, bg). The .video-embed
+      inside is a SELF-CONTAINED 16:9 box (position:relative, padding-bottom:56.25%).
+      → .video-embed: position:relative; padding-bottom:56.25%; height:0
+      
+   B) .reel > .video-embed (reels 5-col grid):
+      The .reel container defines width, and .video-embed must be 9:16 portrait.
+      → .video-embed: position:relative; padding-bottom:177.78%; height:0
+
+   C) .portfolio-image > .video-embed (portfolio carousel):
+      Parent .portfolio-image has an explicit fixed height. Video fills it.
+      → .video-embed: position:absolute; inset:0
+───────────────────────────────────────────────────────── */
+
+/* A) Default: video-embed is a self-contained 16:9 ratio box */
 .video-embed {
     position: relative !important;
     padding-bottom: 56.25% !important;
@@ -862,6 +881,30 @@ body {
     background: #000000 !important;
 }
 
+/* B) Reels: portrait 9:16 (padding-bottom = 100% * 16/9 = 177.78%) */
+.reel .video-embed {
+    position: relative !important;
+    width: 100% !important;
+    height: 0 !important;
+    padding-bottom: 177.78% !important;
+    overflow: hidden !important;
+    border-radius: 12px !important;
+    background: #000000 !important;
+}
+
+/* C) Portfolio carousel: parent has explicit height, fill absolutely */
+.portfolio-image .video-embed {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    padding-bottom: 0 !important;
+    overflow: hidden !important;
+    border-radius: 14px !important;
+    background: #000000 !important;
+}
+
+/* Shared: poster fills the ratio box */
 .video-embed .video-poster {
     position: absolute !important;
     top: 0 !important;
@@ -874,6 +917,7 @@ body {
     cursor: pointer !important;
 }
 
+/* Shared: title bar at bottom of the ratio box */
 .video-embed .video-title {
     position: absolute !important;
     bottom: 0 !important;
@@ -898,7 +942,21 @@ body {
     z-index: 3 !important;
 }
 
-/* 2. Timeline Pipeline Section Architecture (Fixes Overlapping Step Headings) */
+/* ─────────────────────────────────────────────────────────
+   2. AI SERVICES HERO h1 — reset gradient from base styles.min.css
+   styles.min.css sets .ai-hero-content h1 to a pink→gold gradient.
+   The new hero uses a plain white h1 with inline styles, reset here.
+───────────────────────────────────────────────────────── */
+.ai-hero .ai-hero-content h1,
+.ai-hero-content h1 {
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    background-clip: unset !important;
+    -webkit-text-fill-color: #ffffff !important;
+    color: #ffffff !important;
+}
+
+/* 3. Timeline Pipeline Section Architecture (Fixes Overlapping Step Headings) */
 .timeline-section {
     padding: 90px 0 !important;
     background: #111111 !important;
