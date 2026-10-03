@@ -2717,25 +2717,40 @@
       "@type": "WebSite",
       "name": "Paaru Studio-Media",
       "alternateName": ["Paaru Studio", "Paaru Studio Media"],
-      "url": "https://paarustudio.com/"
+      "url": "https://paarustudio.com/",
+      "publisher": {
+        "@id": "https://paarustudio.com/#organization"
+      }
     }
     </script>
 
-    <!-- Block 1: Professional Services & Reviews -->
+    <!-- Block 1: Professional Services & Organization -->
+    <!-- TODO(owner): Confirm official title for founder Sadanand B Sakkarshetty (e.g. Founder & Creative Director) -->
+    <!-- TODO(owner): Add priceRange (e.g. ₹₹₹) once provided -->
+    <!-- TODO(owner): Restore aggregateRating and reviews to schema only from verified Google Business Profile or Clutch ratings -->
+    <!-- TODO(owner): Add YouTube, Facebook, and Clutch profile URLs to sameAs once verified profile links are available -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
+      "@type": "ProfessionalService",
       "additionalType": "LocalBusiness",
+      "@id": "https://paarustudio.com/#organization",
       "name": "Paaru Studio-Media",
       "url": "https://paarustudio.com/",
       "logo": "https://paarustudio.com/logo.webp",
       "image": "https://paarustudio.com/logo.webp",
       "telephone": "+917619413241",
       "email": "info@paarustudio.com",
-      "description": "Paaru Studio-Media is a Bangalore based video production company and creative ad agency with 11+ years of experience in TV commercials, digital films, BTL activations, OOH and performance-driven campaigns for brands.",
+      "hasMap": "https://maps.google.com/?q=48B,+100+Feet+Road,+Nagarabhavi,+Bengaluru+560072",
+      "founder": {
+        "@type": "Person",
+        "name": "Sadanand B Sakkarshetty"
+      },
+      "description": "Paaru Studio-Media is a Bengaluru-based creative and advertising agency with 11+ years of experience in TV commercials, digital ad films, BTL activations, OOH/DOOH media, and performance-driven campaigns.",
       "foundingDate": "2015",
       "knowsAbout": [
+        "Creative Strategy",
+        "Advertising Campaigns",
         "Video Production",
         "Ad Film Production",
         "Corporate Filmmaking",
@@ -2756,40 +2771,28 @@
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "48B, 100 Feet Road, Nagarabhavi",
-        "addressLocality": "Bangalore",
+        "addressLocality": "Bengaluru",
+        "addressRegion": "Karnataka",
         "postalCode": "560072",
         "addressCountry": "IN"
       },
-      "areaServed": [
-        { "@type": "City", "name": "Bangalore" },
-        { "@type": "City", "name": "Bengaluru" },
-        { "@type": "Country", "name": "India" }
-      ],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "bestRating": "5",
-        "ratingCount": "3"
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 12.9592,
+        "longitude": 77.5028
       },
-      "review": [
+      "openingHoursSpecification": [
         {
-          "@type": "Review",
-          "author": { "@type": "Person", "name": "Akash Vishwakarma" },
-          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-          "reviewBody": "An excellent vendor. Video shoot came out extremely well, professional people who understand client requirements."
-        },
-        {
-          "@type": "Review",
-          "author": { "@type": "Person", "name": "Smirti" },
-          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-          "reviewBody": "Paaru Studio-Media delivered exceptional product visuals that perfectly matched our brand tone. Truly a creative and reliable partner."
-        },
-        {
-          "@type": "Review",
-          "author": { "@type": "Person", "name": "Afroz" },
-          "reviewRating": { "@type": "Rating", "ratingValue": "4", "bestRating": "5" },
-          "reviewBody": "Extremely professional team. Paaru Studio-Media managed our BTL event flawlessly with great coordination and quick delivery."
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          "opens": "09:30",
+          "closes": "19:00"
         }
+      ],
+      "areaServed": [
+        { "@type": "City", "name": "Bengaluru" },
+        { "@type": "City", "name": "Bangalore" },
+        { "@type": "Country", "name": "India" }
       ],
       "sameAs": [
         "https://www.linkedin.com/company/paaru-studio",
@@ -2800,6 +2803,7 @@
     </script>
 
     <!-- Block 1.5: Video Structured Data -->
+    <!-- TODO(owner): Confirm real YouTube upload date for Observance Eye digital video commercial (sVA07PZR-vc) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -2807,7 +2811,7 @@
       "name": "Observance Eye Digital Video Commercial",
       "description": "Digital video commercial produced by Paaru Studio-Media Bangalore for Observance Eye.",
       "thumbnailUrl": "https://i.ytimg.com/vi/sVA07PZR-vc/maxresdefault.jpg",
-      "uploadDate": "2025-07-15T08:00:00+08:00",
+      "uploadDate": "2025-07-15T08:00:00+05:30",
       "duration": "PT1M21S",
       "embedUrl": "https://www.youtube.com/embed/sVA07PZR-vc",
       "contentUrl": "https://www.youtube.com/watch?v=sVA07PZR-vc"
@@ -2822,10 +2826,90 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What services does Paaru Studio-Media offer?",
+          "name": "What does a creative and advertising agency do?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "We offer end-to-end Video Production (Commercials, Corporate Films, Social Media Content), E-commerce Solutions (Product Shoots, Cataloguing), and Media Buying (OOH/DOOH) services tailored for premium brands."
+            "text": "A creative and advertising agency develops strategic brand positioning, produces compelling visual campaigns, and executes multi-channel marketing to drive business growth. This includes scripting and producing ad films, managing digital performance ads, coordinating influencer collaborations, designing creative brand assets, and deploying outdoor billboards and digital transit media across target markets."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I choose an advertising agency in Bengaluru?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Choose an advertising agency based on demonstrated portfolio depth, cross-channel execution capabilities, local market familiarity, and transparent project communication. Evaluate their track record across both commercial video production and multi-platform media buying. The ideal partner should align with your brand objectives, respect your production timelines, and deliver measurable performance outcomes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does an ad film cost in Bengaluru?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ad film production costs in Bengaluru depend on project scope, concept complexity, cast requirements, crew size, location scouting, equipment tier, and post-production demands like animation or VFX. Rather than fixed rates, budgets reflect custom creative requirements for each brand. We assess your specific objectives and deliver a transparent, itemized commercial quote."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does an ad film take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An ad film typically takes 7 to 14 days from initial creative concept approval to final edited master delivery. The exact timeframe varies depending on pre-production planning, filming schedule, cast availability, and advanced post-production requirements such as color grading and sound design. Expedited delivery schedules are available for time-sensitive brand launches."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is OOH and DOOH advertising, and where can I advertise in Bengaluru?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Out-of-Home (OOH) covers static physical billboards, while Digital Out-of-Home (DOOH) uses dynamic digital screens in high-traffic urban areas. In Bengaluru, we deploy outdoor and transit placements across prime arterial routes, tech parks, co-working spaces, and premium residential hubs including Indiranagar, Koramangala, Whitefield, Outer Ring Road, MG Road, and Electronic City."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you handle Bangalore Metro and mall advertising?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we manage both Namma Metro transit advertising and prime shopping mall media installations across Bengaluru. Metro branding includes train wraps, in-train displays, and high-visibility station static and digital signages. Mall advertising encompasses digital kiosks, atrium banners, food court screens, and experiential on-ground activations in major commercial destinations citywide."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you run influencer marketing campaigns?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we run end-to-end influencer marketing campaigns tailored to your target audience and industry vertical. Our team manages creator discovery, contract negotiations, creative briefing, content production supervision, campaign rollout, and performance analytics. We partner with nano, micro, macro, and celebrity creators across Bengaluru and pan-India to drive authentic engagement and conversions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you do e-commerce content for Amazon, Flipkart and Shopify?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we produce conversion-driven e-commerce visual assets optimized specifically for Amazon, Flipkart, Shopify, and Myntra. Our studio delivers professional tabletop and lifestyle product photography, Amazon A+ enhanced brand content, infographics, and short-form demonstration videos compliant with platform-specific listing guidelines to elevate search rankings and sales conversions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you work with startups as well as large brands?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we collaborate with early-stage venture-backed startups, mid-market challengers, and large legacy enterprises alike. Whether you are bootstrapping an initial product launch video, executing a citywide outdoor blitz, or scaling digital customer acquisition campaigns, we adapt our creative workflows and production scale to match your business stage and growth objectives."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where is your office, and do you work outside Bengaluru?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our primary studio is located at 48B, 100 Feet Road, Nagarabhavi, Bengaluru 560072, Karnataka. While our creative headquarters is rooted in Bengaluru, we regularly handle commercial video shoots, influencer campaigns, and media deployment projects for clients across India as well as overseas international brand partners."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I get an estimate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can request an estimate by submitting your project brief through our online form at /get-started, calling +917619413241, or emailing info@paarustudio.com. Provide your timeline, target deliverables, and campaign goals. Our team evaluates your specifications and responds with a detailed scope of work within 24 hours."
           }
         },
         {
@@ -2833,39 +2917,7 @@
           "name": "Does Paaru Studio-Media handle end-to-end production?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, we handle everything from research, scriptwriting, and storyboarding to professional filming, post-production, VFX, and final delivery."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the typical turnaround time for a project?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Digital ad films typically take 7-14 days from concept to final delivery. We also offer expedited schedules for high-priority campaigns."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do you provide E-commerce cataloguing services?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. We specialize in high-end product cinematography and automated catalogue solutions for platforms like Amazon, Shopify, and Myntra."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Where are you located and do you work globally?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Our head office is in Bangalore at 48B, 100 Feet Road, Nagarabhavi - 560072. We serve clients nationwide and globally."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How can I get a quote for my project?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Fill out our Get Started form or email info@paarustudio.com. We respond within 24 hours."
+            "text": "Yes, we manage complete end-to-end production in-house from preliminary concept development and scriptwriting to post-production delivery. Our scope covers storyboarding, casting, location permits, cinematography, sound design, visual effects, and format adaptations for cinema, television, social media, and digital out-of-home platforms without requiring third-party handoffs."
           }
         }
       ]
