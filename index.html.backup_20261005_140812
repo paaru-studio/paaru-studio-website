@@ -44,28 +44,24 @@
     <link rel="manifest" href="site.webmanifest">
     <link rel="preconnect" href="https://www.youtube.com" crossorigin>
     <link rel="preconnect" href="https://i.ytimg.com" crossorigin>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://formspree.io" crossorigin>
     <link rel="dns-prefetch" href="https://www.youtube.com">
     <link rel="dns-prefetch" href="https://i.ytimg.com">
     <link rel="dns-prefetch" href="https://api.whatsapp.com">
-    <link rel="dns-prefetch" href="https://widget.clutch.co">
-    <link rel="dns-prefetch" href="https://maps.google.com">
 
     <!-- Critical Assets Preload -->
     <link rel="preload" href="fonts.css" as="style">
     <link rel="preload" href="hero_poster.webp" as="image" fetchpriority="high" type="image/webp">
-    <link rel="preload" href="logo.webp" as="image" fetchpriority="high">
+    <link rel="preload" href="logo.webp" as="image">
 
     <link rel="stylesheet" href="fonts.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="fonts.css"></noscript>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300;1,400;1,500;1,600&family=Playfair+Display:ital@1&display=swap"
         media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300;1,400;1,500;1,600&family=Playfair+Display:ital@1&display=swap"></noscript>
     <link rel="stylesheet" href="styles.min.css?v=20260707">
-    <link rel="stylesheet" href="custom-overrides.css?v=20260920">
+    <link rel="stylesheet" href="custom-overrides.css?v=20260801">
 
     <link rel="preload" href="popup-form.css" as="style" onload="this.rel='stylesheet'">
     <noscript>
@@ -128,6 +124,7 @@
     </style>
 
     <!-- Performance Resource Hints -->
+    <link rel="dns-prefetch" href="https://widget.clutch.co">
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
     <link rel="dns-prefetch" href="https://connect.facebook.net">
 
@@ -497,7 +494,7 @@
         <div class="container">
             <div class="nav-content">
                 <a href="/" class="logo">
-                    <img loading="eager" fetchpriority="high" decoding="async" src="logo.webp" alt="Paaru Studio Logo" class="logo-image"
+                    <img loading="lazy" decoding="async" src="logo.webp" alt="Paaru Studio Logo" class="logo-image"
                         width="40" height="40">
                     <span class="logo-text">
                         <span class="logo-text-static">PAARU</span>
@@ -2101,7 +2098,7 @@
 
             <div class="tab-content-wrapper">
                 <!-- E-commerce Tab -->
-                <div class="tab-pane active pane-ecommerce" id="ecommerce-pane">
+                <div id="ecommerce-pane" class="tab-pane active pane-ecommerce">
                     <div class="pane-inner">
                         <div class="pane-text">
                             <h2>Pioneer your Store with *Visual Excellence*</h2>
@@ -2112,11 +2109,8 @@
                                 Our Solutions</a>
                         </div>
                         <div class="pane-graphic">
-                            <picture>
-                                <source srcset="ecommerce_service_card.png" type="image/png">
-                                <img loading="lazy" decoding="async" src="ecommerce_service_card.png"
-                                    alt="E-commerce Solutions" width="400" height="400">
-                            </picture>
+                            <img loading="lazy" decoding="async" src="ecommerce_service_card.png"
+                                alt="E-commerce Solutions" width="400" height="400">
                         </div>
                     </div>
                 </div>
@@ -2577,8 +2571,7 @@
 
                 <div class="contact-col contact-right" style="overflow: hidden; border-radius: 12px; border: 1px solid rgba(255, 191, 0, 0.2);">
                     <iframe title="Paaru Studio-Media Office Location in Nagarabhavi, Bengaluru"
-                        data-src="https://maps.google.com/maps?q=48B%2C%20100%20Feet%20Road%2C%20Nagarabhavi%2C%20Bengaluru%20560072&amp;output=embed"
-                        src="about:blank"
+                        src="https://maps.google.com/maps?q=48B%2C%20100%20Feet%20Road%2C%20Nagarabhavi%2C%20Bengaluru%20560072&amp;output=embed"
                         width="100%" height="180" style="border: 0; display: block;" allowfullscreen=""
                         loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
@@ -3003,29 +2996,6 @@
                 window.addEventListener(evt, loadClutch, { passive: true, once: true });
             });
             setTimeout(loadClutch, 3500);
-        })();
-    </script>
-    <!-- Lazy load Google Maps iframe when contact section visible -->
-    <script>
-        (function () {
-            var mapFrame = document.querySelector('.contact-col.contact-right iframe[data-src]');
-            if (!mapFrame || !('IntersectionObserver' in window)) {
-                if (mapFrame && mapFrame.getAttribute('data-src')) {
-                    mapFrame.src = mapFrame.getAttribute('data-src');
-                }
-                return;
-            }
-            var mapObserver = new IntersectionObserver(function (entries) {
-                entries.forEach(function (entry) {
-                    if (entry.isIntersecting) {
-                        var frame = entry.target;
-                        var src = frame.getAttribute('data-src');
-                        if (src) frame.src = src;
-                        mapObserver.unobserve(frame);
-                    }
-                });
-            }, { rootMargin: '200px 0px', threshold: 0.01 });
-            mapObserver.observe(mapFrame);
         })();
     </script>
 </body>

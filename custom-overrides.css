@@ -1035,3 +1035,815 @@ body {
         top: 4px !important;
     }
 }
+
+/* =====================================================================
+   FINAL PERFORMANCE AUDIT — VISUAL POLISH & LIGHTHOUSE OPTIMIZATION
+   v2026.10.05 – Paaru Studio-Media
+   ===================================================================== */
+
+/* 1. CLS Prevention: Aspect-ratio locks for all lazy-loaded images */
+.portfolio-image,
+.reel .video-embed,
+.featuring-card {
+    contain: layout style;
+}
+
+.gallery-item.fit-auto {
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+}
+
+.gallery-image.fit-image img {
+    aspect-ratio: unset !important;
+}
+
+/* 2. Compositor-layer promotion for animated elements (reduces main-thread paint) */
+.ticker-scroll-track {
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+.navbar {
+    will-change: background, box-shadow, border-radius;
+}
+
+.carousel-track {
+    will-change: transform;
+}
+
+.podcast-track {
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+/* 3. Premium Hero Form Card Redesign */
+.hero-form-card {
+    background: #ffffff;
+    border-radius: 20px !important;
+    padding: 32px !important;
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(255, 191, 0, 0.12) !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-form-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #ffd033, #ffbf00, #ff9800);
+    border-radius: 20px 20px 0 0;
+}
+
+.hero-form-card h3 {
+    font-size: 22px !important;
+    font-weight: 800 !important;
+    color: #0a0a0a !important;
+    margin-bottom: 6px !important;
+    letter-spacing: -0.5px;
+}
+
+.hero-form-card p.form-subtitle {
+    font-size: 13.5px !important;
+    color: #666 !important;
+    margin-bottom: 22px !important;
+    font-weight: 500 !important;
+}
+
+.compact-hero-form input,
+.compact-hero-form select,
+.compact-hero-form textarea {
+    border: 1.5px solid #e8e8e8 !important;
+    border-radius: 10px !important;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+    font-size: 14px !important;
+    color: #111 !important;
+}
+
+.compact-hero-form input:focus,
+.compact-hero-form select:focus,
+.compact-hero-form textarea:focus {
+    border-color: #ffbf00 !important;
+    box-shadow: 0 0 0 3px rgba(255, 191, 0, 0.15) !important;
+    outline: none !important;
+}
+
+.compact-hero-form .cta-btn.submit-btn {
+    background: linear-gradient(135deg, #ffd033, #ffbf00) !important;
+    color: #0a0a0a !important;
+    font-weight: 800 !important;
+    font-size: 15px !important;
+    border-radius: 10px !important;
+    letter-spacing: 0.3px;
+    box-shadow: 0 6px 20px rgba(255, 191, 0, 0.35) !important;
+    transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+}
+
+.compact-hero-form .cta-btn.submit-btn:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 10px 28px rgba(255, 191, 0, 0.5) !important;
+}
+
+/* 4. Premium Gold Stats Banner */
+.gold-banner {
+    background: linear-gradient(135deg, #0a0a0a 0%, #111111 100%);
+    border-top: 1px solid rgba(255, 191, 0, 0.15);
+    border-bottom: 1px solid rgba(255, 191, 0, 0.15);
+}
+
+.gold-banner-inner {
+    padding: 60px 0;
+}
+
+.gold-blocks {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    align-items: center;
+}
+
+.gold-block {
+    text-align: center;
+    position: relative;
+}
+
+.gold-block:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 50px;
+    background: rgba(255, 191, 0, 0.25);
+}
+
+.gold-number {
+    font-size: 64px;
+    font-weight: 900;
+    color: #ffbf00;
+    line-height: 1;
+    letter-spacing: -2px;
+    font-family: var(--font-heading);
+}
+
+.gold-plus {
+    font-size: 42px;
+    font-weight: 900;
+    color: #ffbf00;
+}
+
+.gold-label {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.65);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+    .gold-blocks {
+        gap: 40px;
+    }
+    .gold-number {
+        font-size: 44px;
+    }
+    .gold-block:not(:last-child)::after {
+        right: -20px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gold-blocks {
+        gap: 0;
+        justify-content: space-around;
+    }
+    .gold-block:not(:last-child)::after {
+        display: none;
+    }
+    .gold-number {
+        font-size: 36px;
+    }
+}
+
+/* 5. Premium Case Study & Blog Card Hover States */
+.case-card:hover,
+.blog-card:hover {
+    transform: translateY(-6px) !important;
+    border-color: rgba(255, 191, 0, 0.55) !important;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 191, 0, 0.2) !important;
+}
+
+.case-card a img:hover,
+.blog-card a img:hover {
+    transform: scale(1.05) !important;
+}
+
+/* 6. Review Cards Visual Polish */
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+    .reviews-grid {
+        grid-template-columns: 1fr;
+        max-width: 480px;
+    }
+}
+
+.review-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 32px;
+    border: 1px solid #f0f0f0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: relative;
+    overflow: hidden;
+}
+
+.review-card::before {
+    content: '"';
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    font-size: 80px;
+    color: rgba(255, 191, 0, 0.12);
+    font-family: Georgia, serif;
+    line-height: 1;
+    pointer-events: none;
+}
+
+.review-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+    border-color: rgba(255, 191, 0, 0.35);
+}
+
+.review-header {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.review-name {
+    font-weight: 700;
+    font-size: 16px;
+    color: #0a0a0a;
+}
+
+.review-brand {
+    font-size: 13px;
+    color: #888;
+    font-weight: 500;
+}
+
+.review-text {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #333;
+    flex-grow: 1;
+}
+
+.review-footer {
+    margin-top: 8px;
+}
+
+.review-rating {
+    color: #ffbf00;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+/* 7. Testimonial Card Visual Enhancement */
+.testimonials-section {
+    padding: 100px 0;
+}
+
+.testimonial-card {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 50px;
+    background: #fafafa;
+    border-radius: 24px;
+    border: 1px solid #f0f0f0;
+    position: relative;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
+}
+
+.testimonial-card::before {
+    content: '"';
+    position: absolute;
+    top: -30px;
+    left: 40px;
+    font-size: 120px;
+    color: #ffbf00;
+    font-family: Georgia, serif;
+    line-height: 1;
+    opacity: 0.3;
+}
+
+.testimonial-text {
+    font-size: 22px !important;
+    line-height: 1.65 !important;
+    position: relative;
+    z-index: 1;
+}
+
+/* 8. Section Dividers Enhancement */
+.section-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, rgba(255, 191, 0, 0.15) 30%, rgba(255, 191, 0, 0.25) 50%, rgba(255, 191, 0, 0.15) 70%, transparent 100%);
+    margin: 0;
+    border: none;
+}
+
+/* 9. Podcast Section Visual Polish */
+.podcast-section.full-bleed-podcast {
+    background: linear-gradient(180deg, #000 0%, #0a0a0a 100%);
+    padding: 80px 0 60px;
+}
+
+.podcast-copy.centered {
+    text-align: center;
+    padding: 0 20px 40px;
+}
+
+.podcast-copy.centered h2 {
+    font-size: 42px;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -1px;
+    margin-bottom: 12px;
+}
+
+.podcast-copy.centered p {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.65);
+    margin-bottom: 32px;
+}
+
+.podcast-ctas {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.podcast-ctas .cta-btn {
+    padding: 14px 32px !important;
+    border-radius: 999px !important;
+    font-weight: 700 !important;
+    font-size: 15px !important;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+}
+
+.podcast-ctas .cta-btn:hover {
+    transform: translateY(-3px) !important;
+}
+
+.podcast-ctas .cta-btn.secondary {
+    background: transparent !important;
+    color: #ffffff !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.25) !important;
+}
+
+.podcast-ctas .cta-btn.secondary:hover {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* 10. Contact Callout Section Redesign */
+.contact-callout.full-bleed {
+    background: linear-gradient(135deg, #ffd033 0%, #ffbf00 50%, #ff9800 100%);
+    padding: 60px 0;
+    margin: 0;
+}
+
+.callout-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.callout-text h2 {
+    font-size: 36px !important;
+    font-weight: 800 !important;
+    color: #0a0a0a !important;
+    letter-spacing: -0.5px;
+    margin-bottom: 8px !important;
+}
+
+.callout-text p {
+    font-size: 17px;
+    color: rgba(0, 0, 0, 0.72) !important;
+    margin: 0;
+}
+
+.callout-cta .cta-btn.large {
+    background: #0a0a0a !important;
+    color: #ffbf00 !important;
+    padding: 16px 40px !important;
+    border-radius: 999px !important;
+    font-size: 16px !important;
+    font-weight: 800 !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35) !important;
+    transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+    white-space: nowrap;
+}
+
+.callout-cta .cta-btn.large:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.45) !important;
+    background: #1a1a1a !important;
+}
+
+@media (max-width: 768px) {
+    .callout-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+    .callout-text h2 {
+        font-size: 26px !important;
+    }
+}
+
+/* 11. Contact Band Visual Improvements */
+.contact-band.full-bleed {
+    background: #0a0a0a;
+    padding: 60px 0 40px;
+}
+
+.contact-band-inner {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1.2fr;
+    gap: 40px;
+    align-items: center;
+}
+
+@media (max-width: 900px) {
+    .contact-band-inner {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+.contact-phone {
+    font-size: 28px;
+    font-weight: 800;
+    color: #ffbf00 !important;
+    letter-spacing: -0.5px;
+    margin: 8px 0 !important;
+}
+
+.contact-email a {
+    color: rgba(255, 255, 255, 0.8) !important;
+    text-decoration: none !important;
+    font-size: 15px;
+    transition: color 0.2s ease;
+}
+
+.contact-email a:hover {
+    color: #ffbf00 !important;
+}
+
+/* 12. Footer Visual Polish */
+.footer {
+    background: #080808;
+}
+
+.footer-cta {
+    background: #111;
+    padding: 50px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.footer-cta h2 {
+    font-size: 42px;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -1px;
+    margin: 0;
+}
+
+.footer-cta-link {
+    color: #ffbf00;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.footer-cta-link:hover {
+    opacity: 0.8;
+}
+
+.footer-main {
+    padding: 60px 0 40px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 2fr;
+    gap: 60px;
+    margin-bottom: 50px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+@media (max-width: 900px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .footer-cta h2 {
+        font-size: 28px;
+    }
+}
+
+.footer-brand h3 {
+    font-size: 18px;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.footer-brand p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.55);
+    line-height: 1.7;
+    margin-bottom: 24px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.footer-social a {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.55);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+    padding: 6px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 999px;
+}
+
+.footer-social a:hover {
+    color: #ffbf00;
+    border-color: rgba(255, 191, 0, 0.4);
+}
+
+.footer-nav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+@media (max-width: 768px) {
+    .footer-nav {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+}
+
+.footer-col h4 {
+    font-size: 11px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+}
+
+.footer-col a {
+    display: block;
+    font-size: 13.5px;
+    color: rgba(255, 255, 255, 0.65);
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: color 0.2s ease, padding-left 0.2s ease;
+    font-weight: 500;
+}
+
+.footer-col a:hover {
+    color: #ffbf00;
+    padding-left: 4px;
+}
+
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.35);
+    margin: 0;
+}
+
+.back-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    font-size: 18px;
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.back-to-top:hover {
+    background: rgba(255, 191, 0, 0.12);
+    border-color: rgba(255, 191, 0, 0.35);
+    color: #ffbf00;
+}
+
+/* 13. WhatsApp Float Button Enhancement */
+.whatsapp-float {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    width: 56px;
+    height: 56px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 24px rgba(37, 211, 102, 0.4);
+    z-index: 9000;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+    will-change: transform;
+}
+
+.whatsapp-float svg {
+    width: 30px;
+    height: 30px;
+    fill: #ffffff;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.12) translateY(-2px);
+    box-shadow: 0 12px 36px rgba(37, 211, 102, 0.55);
+}
+
+/* 14. Performance: Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    .ticker-scroll-track,
+    .carousel-track,
+    .podcast-track,
+    .featuring-card,
+    .service-item,
+    .gallery-item {
+        animation: none !important;
+        transition: none !important;
+        will-change: auto !important;
+    }
+    
+    .hero-content {
+        transform: none !important;
+        opacity: 1 !important;
+    }
+}
+
+/* 15. Smooth scroll behavior and text rendering */
+html {
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* 16. Image rendering optimization */
+img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}
+
+img[loading="lazy"] {
+    image-rendering: auto;
+}
+
+/* 17. Content visibility for off-screen sections (improves rendering performance) */
+@supports (content-visibility: auto) {
+    #blog-preview,
+    .faq-section,
+    .contact-section {
+        content-visibility: auto;
+        contain-intrinsic-size: 0 500px;
+    }
+}
+
+/* 18. Tab pane image aspect ratio lock (prevent CLS) */
+.pane-graphic img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+/* 19. Portfolio carousel CLS fix */
+.portfolio-image {
+    aspect-ratio: 16 / 9;
+    height: auto !important;
+}
+
+@media (max-width: 800px) {
+    .portfolio-image {
+        aspect-ratio: 16 / 10;
+    }
+}
+
+/* 20. Services Tab buttons – better mobile spacing */
+@media (max-width: 600px) {
+    .tab-buttons {
+        gap: 10px !important;
+        padding: 0 16px;
+    }
+    .tab-btn {
+        padding: 10px 16px !important;
+        font-size: 13px !important;
+        flex: 1;
+        text-align: center;
+    }
+    .tab-pane {
+        padding: 30px 20px !important;
+        border-radius: 20px !important;
+    }
+    .pane-text h2 {
+        font-size: 28px !important;
+    }
+}
+
+/* 21. Intro Overlay — ensure it never blocks LCP after first session */
+body.ps-intro-done #ps-intro {
+    display: none !important;
+    pointer-events: none !important;
+}
+
+/* 22. Font Loading CLS Prevention — reserve space for custom fonts */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300 900;
+    font-display: swap;
+    src: local('Inter');
+}
+
+/* 23. Card hover micro-animations - consistent across site */
+.case-card,
+.blog-card {
+    will-change: transform;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease, border-color 0.3s ease !important;
+}
+
+/* 24. Blog preview section enhancements */
+#blog-preview {
+    position: relative;
+}
+
+#blog-preview::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 191, 0, 0.2), transparent);
+}
+
+/* 25. Ensure form inputs don't cause CLS on iOS Safari */
+input, select, textarea {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    padding-right: 36px !important;
+}
