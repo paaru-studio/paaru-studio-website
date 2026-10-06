@@ -637,47 +637,425 @@
 
     <div class="section-divider"></div>
 
-    <!-- About Section -->
+    <!-- About Section (Modern Editorial & Motion Redesign) -->
+    <style>
+        /* ===== MODERN ABOUT SECTION STYLES & ELEGANT MOTION ===== */
+        .about-section {
+            position: relative;
+            padding: 110px 0 80px;
+            background: #08080a;
+            overflow: hidden;
+        }
+
+        /* Ambient soft radial glow behind about section */
+        .about-section::before {
+            content: '';
+            position: absolute;
+            top: -80px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 850px;
+            height: 480px;
+            background: radial-gradient(circle, rgba(255, 191, 0, 0.08) 0%, rgba(255, 191, 0, 0.015) 50%, transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .about-section .container {
+            position: relative;
+            z-index: 1;
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Modern Eyebrow Badge */
+        .about-eyebrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 18px;
+        }
+
+        .about-pill-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 7px 18px;
+            background: rgba(255, 191, 0, 0.06);
+            border: 1px solid rgba(255, 191, 0, 0.22);
+            border-radius: 999px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #ffbf00;
+            backdrop-filter: blur(8px);
+        }
+
+        .about-pill-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #ffbf00;
+            box-shadow: 0 0 10px #ffbf00;
+            animation: aboutPulseDot 2.2s infinite ease-in-out;
+        }
+
+        @keyframes aboutPulseDot {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.35; transform: scale(0.75); }
+        }
+
+        /* Section Header & Title */
+        .about-section .section-header {
+            text-align: center;
+            max-width: 960px;
+            margin: 0 auto 44px;
+        }
+
+        .about-section .about-tagline.modern-about-title {
+            font-size: clamp(28px, 4vw, 44px) !important;
+            font-weight: 800 !important;
+            line-height: 1.25 !important;
+            letter-spacing: -0.02em !important;
+            color: #ffffff !important;
+            margin: 0 0 16px !important;
+            text-transform: none !important;
+            -webkit-text-fill-color: #ffffff !important;
+            font-family: var(--font-heading, "Montserrat", sans-serif) !important;
+        }
+
+        .about-section .about-tagline.modern-about-title .gold-accent {
+            background: linear-gradient(135deg, #ffffff 15%, #ffbf00 85%) !important;
+            -webkit-background-clip: text !important;
+            -webkit-text-fill-color: transparent !important;
+            display: inline-block !important;
+        }
+
+        /* Lead Brand Story Card (Glassmorphic) */
+        .about-story-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 40px 48px;
+            margin-bottom: 32px;
+            backdrop-filter: blur(16px);
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+            position: relative;
+            overflow: hidden;
+            transition: border-color 0.4s ease, transform 0.4s ease;
+        }
+
+        .about-story-card:hover {
+            border-color: rgba(255, 191, 0, 0.28);
+            transform: translateY(-2px);
+        }
+
+        .about-story-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 191, 0, 0.45), transparent);
+        }
+
+        .about-story-card p {
+            font-size: 16.5px;
+            line-height: 1.85;
+            color: rgba(255, 255, 255, 0.82);
+            margin: 0;
+            font-weight: 400;
+            text-align: center;
+        }
+
+        .about-link {
+            color: #ffbf00;
+            text-decoration: none;
+            font-weight: 600;
+            position: relative;
+            transition: color 0.25s ease;
+            white-space: nowrap;
+        }
+
+        .about-link::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: #ffbf00;
+            transform: scaleX(0.85);
+            transform-origin: left;
+            transition: transform 0.25s ease, background-color 0.25s ease;
+        }
+
+        .about-link:hover {
+            color: #ffe066;
+        }
+
+        .about-link:hover::after {
+            transform: scaleX(1);
+            background: #ffe066;
+        }
+
+        /* Dual Bento Cards */
+        .about-bento-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-bottom: 56px;
+        }
+
+        .about-bento-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: 18px;
+            padding: 36px 36px 32px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .about-bento-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 191, 0, 0.35);
+            box-shadow: 0 20px 40px -12px rgba(255, 191, 0, 0.08), 0 10px 24px -8px rgba(0, 0, 0, 0.6);
+        }
+
+        .about-bento-card-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 18px;
+        }
+
+        .about-card-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: rgba(255, 191, 0, 0.08);
+            border: 1px solid rgba(255, 191, 0, 0.22);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffbf00;
+            flex-shrink: 0;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .about-bento-card:hover .about-card-icon {
+            transform: scale(1.08) rotate(4deg);
+            background: rgba(255, 191, 0, 0.16);
+        }
+
+        .about-bento-card h3 {
+            font-size: 22px;
+            font-weight: 700;
+            color: #ffffff;
+            margin: 0;
+            letter-spacing: -0.01em;
+            font-family: var(--font-heading, "Montserrat", sans-serif);
+        }
+
+        .about-bento-card p {
+            font-size: 15px;
+            line-height: 1.75;
+            color: rgba(255, 255, 255, 0.72);
+            margin: 0 0 22px;
+            font-weight: 400;
+        }
+
+        /* Micro-feature pills inside bento cards */
+        .about-pill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: auto;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .about-pill-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 12px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.85);
+            transition: all 0.25s ease;
+        }
+
+        .about-pill-item:hover {
+            background: rgba(255, 191, 0, 0.08);
+            border-color: rgba(255, 191, 0, 0.3);
+            color: #ffbf00;
+            transform: translateY(-2px);
+        }
+
+        .about-pill-item svg {
+            color: #ffbf00;
+            flex-shrink: 0;
+        }
+
+        /* Subtle scroll animation classes */
+        .about-reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+            will-change: opacity, transform;
+        }
+
+        .about-reveal.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .about-reveal {
+                opacity: 1 !important;
+                transform: none !important;
+                transition: none !important;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .about-bento-grid {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+            .about-story-card {
+                padding: 28px 20px;
+            }
+            .about-story-card p {
+                text-align: left;
+                font-size: 15px;
+            }
+            .about-bento-card {
+                padding: 26px 20px;
+            }
+            .about-section {
+                padding: 70px 0 50px;
+            }
+        }
+    </style>
+
     <section id="about" class="about-section">
         <div class="container">
-            <div class="section-header">
-                <h2 class="about-tagline">About Paaru Studio-Media: Creative &amp; Advertising Agency in Bengaluru</h2>
-                <div class="underline"></div>
+            <div class="section-header about-reveal">
+                <div class="about-eyebrow">
+                    <span class="about-pill-badge">
+                        <span class="about-pill-dot"></span>
+                        Full-Service Agency &bull; Bengaluru
+                    </span>
+                </div>
+                <h2 class="about-tagline modern-about-title">About Paaru Studio-Media: <span class="gold-accent">Creative &amp; Advertising Agency in Bengaluru</span></h2>
             </div>
+
             <div class="about-content">
-                <div class="about-intro">
+                <!-- Main Narrative Hero Card -->
+                <div class="about-story-card about-reveal" style="transition-delay: 0.1s;">
                     <p>
                         Based in Bengaluru, Paaru Studio-Media is a full-service creative agency in Bengaluru and advertising agency in Bengaluru founded
                         in 2015 with over 11 years of business experience crafting visual stories that scale. We
-                        specialize in end-to-end ad films, <a href="/video-production">video production</a>, television commercials, corporate films,
-                        and <a href="/performance-marketing">performance marketing</a> campaigns, alongside high-visibility <a href="/media-offerings">OOH and DOOH media offerings</a>
+                        specialize in end-to-end ad films, <a href="/video-production" class="about-link">video production</a>, television commercials, corporate films,
+                        and <a href="/performance-marketing" class="about-link">performance marketing</a> campaigns, alongside high-visibility <a href="/media-offerings" class="about-link">OOH and DOOH media offerings</a>
                         across Bengaluru and South India. Combining cinematic filmmaking with data-backed brand
                         strategy, our in-house team engineers high-converting campaigns designed to maximize reach,
                         engagement, and measurable business growth.
                     </p>
                 </div>
-                <div class="about-grid">
-                    <div class="about-block">
-                        <h3>Our Expertise</h3>
-                        <p>
-                            As a leading creative agency in Bengaluru, our capabilities range from cinematic brand films and TV commercials to integrated advertising campaigns, BTL
-                            activation, <a href="/influencer-marketing">influencer marketing</a>, and outdoor media solutions. As an advertising agency in Bengaluru, our team brings together creative thinkers,
-                            filmmakers and marketing strategists under one roof. We combine production excellence with
-                            data-driven insight to create campaigns that not only look powerful but also deliver
-                            measurable results.
-                        </p>
+
+                <!-- Dual Bento Feature Cards -->
+                <div class="about-bento-grid">
+                    <!-- Bento Card 1: Our Expertise -->
+                    <div class="about-bento-card about-reveal" style="transition-delay: 0.2s;">
+                        <div>
+                            <div class="about-bento-card-header">
+                                <div class="about-card-icon">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect><line x1="7" y1="2" x2="7" y2="22"></line><line x1="17" y1="2" x2="17" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line><line x1="2" y1="7" x2="7" y2="7"></line><line x1="2" y1="17" x2="7" y2="17"></line><line x1="17" y1="17" x2="22" y2="17"></line><line x1="17" y1="7" x2="22" y2="7"></line></svg>
+                                </div>
+                                <h3>Our Expertise</h3>
+                            </div>
+                            <p>
+                                As a leading creative agency in Bengaluru, our capabilities range from cinematic brand films and TV commercials to integrated advertising campaigns, BTL
+                                activation, <a href="/influencer-marketing" class="about-link">influencer marketing</a>, and outdoor media solutions. As an advertising agency in Bengaluru, our team brings together creative thinkers,
+                                filmmakers and marketing strategists under one roof. We combine production excellence with
+                                data-driven insight to create campaigns that not only look powerful but also deliver
+                                measurable results.
+                            </p>
+                        </div>
+                        <div class="about-pill-list">
+                            <span class="about-pill-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg> Cinematic Ad Films</span>
+                            <span class="about-pill-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg> Influencer Collaborations</span>
+                            <span class="about-pill-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg> OOH &amp; Transit Media</span>
+                            <span class="about-pill-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg> BTL Activations</span>
+                        </div>
                     </div>
-                    <div class="about-block">
-                        <h3>Why Choose Us</h3>
-                        <p>
-                            What sets Paaru Studio-Media apart is our flexible approach, competitive pricing and
-                            commitment to
-                            quality execution. Whether working with startups or established brands across Bengaluru, our advertising agency in Bengaluru
-                            focuses on building long-term partnerships through reliability, innovation and
-                            performance-driven creativity.
-                        </p>
+
+                    <!-- Bento Card 2: Why Choose Us -->
+                    <div class="about-bento-card about-reveal" style="transition-delay: 0.3s;">
+                        <div>
+                            <div class="about-bento-card-header">
+                                <div class="about-card-icon">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+                                </div>
+                                <h3>Why Choose Us</h3>
+                            </div>
+                            <p>
+                                What sets Paaru Studio-Media apart is our flexible approach, competitive pricing and
+                                commitment to
+                                quality execution. Whether working with startups or established brands across Bengaluru, our advertising agency in Bengaluru
+                                focuses on building long-term partnerships through reliability, innovation and
+                                performance-driven creativity.
+                            </p>
+                        </div>
+                        <div class="about-pill-list">
+                            <span class="about-pill-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg> 11+ Years Experience</span>
+                            <span class="about-pill-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg> End-to-End In-House Crew</span>
+                            <span class="about-pill-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg> Data-Backed ROI Focus</span>
+                            <span class="about-pill-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg> Rapid Project Delivery</span>
+                        </div>
                     </div>
                 </div>
+
+                <script>
+                    (function() {
+                        function initAboutAnimations() {
+                            var elements = document.querySelectorAll('#about .about-reveal');
+                            if (!elements.length) return;
+                            if (!('IntersectionObserver' in window)) {
+                                elements.forEach(function(el) { el.classList.add('is-visible'); });
+                                return;
+                            }
+                            var observer = new IntersectionObserver(function(entries) {
+                                entries.forEach(function(entry) {
+                                    if (entry.isIntersecting) {
+                                        entry.target.classList.add('is-visible');
+                                        observer.unobserve(entry.target);
+                                    }
+                                });
+                            }, { threshold: 0.15 });
+                            elements.forEach(function(el) { observer.observe(el); });
+                        }
+                        if (document.readyState === 'loading') {
+                            document.addEventListener('DOMContentLoaded', initAboutAnimations);
+                        } else {
+                            initAboutAnimations();
+                        }
+                    })();
+                </script>
 
                 <!-- Contextual Services & Portfolio Navigation -->
                 <div class="home-services-nav">
