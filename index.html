@@ -610,12 +610,13 @@
                         <input type="text" name="name" placeholder="Full Name *" required>
                         <input type="email" name="email" placeholder="Business Email *" required>
                         <input type="tel" name="phone" placeholder="Phone *" required>
-                        <select name="service_type" required>
-                            <option value="">What do you need? *</option>
-                            <option value="video" selected>Video Production</option>
+                        <select name="service_type" required onchange="this.style.color='#111111'">
+                            <option value="" disabled selected hidden>Looking for? *</option>
+                            <option value="video">Video Production</option>
                             <option value="photography">Photography</option>
                             <option value="ecommerce">E-commerce Solutions</option>
                             <option value="digital">Digital Marketing</option>
+                            <option value="ooh">OOH / DOOH Media</option>
                             <option value="other">Other</option>
                         </select>
                         <select name="budget">
@@ -640,114 +641,171 @@
     <!-- About Section -->
     <section id="about" class="about-section">
         <div class="container">
-            <div class="section-header">
-                <h2 class="about-tagline">About Paaru Studio-Media: Creative &amp; Advertising Agency in Bengaluru</h2>
-                <div class="underline"></div>
+            <div class="about-eyebrow">
+                <span class="about-pill-badge">
+                    <span class="about-pill-dot"></span>
+                    Full-Service Creative &amp; Production Agency
+                </span>
             </div>
-            <div class="about-content">
-                <div class="about-intro">
-                    <p>
-                        Based in Bengaluru, Paaru Studio-Media is a full-service creative agency in Bengaluru and advertising agency in Bengaluru founded
-                        in 2015 with over 11 years of business experience crafting visual stories that scale. We
-                        specialize in end-to-end ad films, <a href="/video-production">video production</a>, television commercials, corporate films,
-                        and <a href="/performance-marketing">performance marketing</a> campaigns, alongside high-visibility <a href="/media-offerings">OOH and DOOH media offerings</a>
-                        across Bengaluru and South India. Combining cinematic filmmaking with data-backed brand
-                        strategy, our in-house team engineers high-converting campaigns designed to maximize reach,
-                        engagement, and measurable business growth.
-                    </p>
+            <div class="section-header">
+                <h2 class="about-tagline">
+                    About Paaru Studio-Media: <span class="gold-accent">Creative &amp; Advertising Agency</span> in Bengaluru
+                </h2>
+                <p class="about-lead-text">
+                    Founded in 2015 with over 11 years of business experience, Paaru Studio-Media unites cinematic storytelling with data-backed brand strategy to craft campaigns that scale.
+                </p>
+            </div>
+
+            <!-- Stats Ribbon -->
+            <div class="about-stats-ribbon">
+                <div class="about-stat-card">
+                    <div class="about-stat-number">11+</div>
+                    <div class="about-stat-label">Years Experience</div>
                 </div>
-                <div class="about-grid">
-                    <div class="about-block">
-                        <h3>Our Expertise</h3>
-                        <p>
-                            As a leading creative agency in Bengaluru, our capabilities range from cinematic brand films and TV commercials to integrated advertising campaigns, BTL
-                            activation, <a href="/influencer-marketing">influencer marketing</a>, and outdoor media solutions. As an advertising agency in Bengaluru, our team brings together creative thinkers,
-                            filmmakers and marketing strategists under one roof. We combine production excellence with
-                            data-driven insight to create campaigns that not only look powerful but also deliver
-                            measurable results.
-                        </p>
+                <div class="about-stat-card">
+                    <div class="about-stat-number">500+</div>
+                    <div class="about-stat-label">Brand Films &amp; Projects</div>
+                </div>
+                <div class="about-stat-card">
+                    <div class="about-stat-number">Pan-India</div>
+                    <div class="about-stat-label">OOH &amp; Digital Reach</div>
+                </div>
+                <div class="about-stat-card">
+                    <div class="about-stat-number">100%</div>
+                    <div class="about-stat-label">In-House Production</div>
+                </div>
+            </div>
+
+            <!-- Bento Content Cards -->
+            <div class="about-bento-grid">
+                <div class="about-card about-bento-full">
+                    <div class="about-card-header">
+                        <div class="about-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20"/><path d="M20 12v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8"/><path d="m4 8 16-4"/><path d="m2 12 18-5"/></svg>
+                        </div>
+                        <h3>The Agency &amp; Vision</h3>
                     </div>
-                    <div class="about-block">
-                        <h3>Why Choose Us</h3>
-                        <p>
-                            What sets Paaru Studio-Media apart is our flexible approach, competitive pricing and
-                            commitment to
-                            quality execution. Whether working with startups or established brands across Bengaluru, our advertising agency in Bengaluru
-                            focuses on building long-term partnerships through reliability, innovation and
-                            performance-driven creativity.
-                        </p>
+                    <p>
+                        Based in Bengaluru, Paaru Studio-Media is a full-service creative agency in Bengaluru and advertising agency in Bengaluru founded in 2015 with over 11 years of business experience crafting visual stories that scale. We specialize in end-to-end ad films, <a href="/video-production">video production</a>, television commercials, corporate films, and <a href="/performance-marketing">performance marketing</a> campaigns, alongside high-visibility <a href="/media-offerings">OOH and DOOH media offerings</a> across Bengaluru and South India. Combining cinematic filmmaking with data-backed brand strategy, our in-house team engineers high-converting campaigns designed to maximize reach, engagement, and measurable business growth.
+                    </p>
+                    <div class="about-tags">
+                        <span class="about-tag">Ad Films &amp; TVCs</span>
+                        <span class="about-tag">Corporate Filmmaking</span>
+                        <span class="about-tag">OOH &amp; DOOH Media</span>
+                        <span class="about-tag">Performance Marketing</span>
                     </div>
                 </div>
 
-                <!-- Contextual Services & Portfolio Navigation -->
-                <div class="home-services-nav">
-                    <h3 class="home-services-nav-title">
-                        Core Production Capabilities &amp; Advertising Solutions
-                    </h3>
-                    <div class="home-services-grid">
-                        <a href="/video-production" class="service-nav-card">
-                            <div>
-                                <h4>Corporate Video Production &amp; Commercials</h4>
-                                <p>High-end corporate video production services in Bangalore, TV commercials, company
-                                    documentaries, and brand films crafted with cinematic impact.</p>
-                            </div>
-                        </a>
-                        <a href="/ecommerce" class="service-nav-card">
-                            <div>
-                                <h4>E-Commerce Content &amp; Product Shoots</h4>
-                                <p>Conversion-driven product photography, catalog videos, unboxing films, and
-                                    Amazon/Flipkart A+ content optimization for digital brands.</p>
-                            </div>
-                        </a>
-                        <a href="/performance-marketing" class="service-nav-card">
-                            <div>
-                                <h4>Performance Marketing &amp; Paid Media Ads</h4>
-                                <p>ROI-driven Google Ads, Meta PPC advertising campaigns, conversion funnels, and
-                                    tracking setups engineered for high-intent customer acquisition.</p>
-                            </div>
-                        </a>
-                        <a href="/media-offerings" class="service-nav-card">
-                            <div>
-                                <h4>OOH &amp; DOOH Offline Advertising</h4>
-                                <p>Bangalore Metro train wraps, prominent street billboards, residential and mall DOOH
-                                    networks, plus live Tata IPL digital streaming advertising.</p>
-                            </div>
-                        </a>
-                        <a href="/social-media-marketing" class="service-nav-card">
-                            <div>
-                                <h4>Social Media Marketing &amp; Content Strategy</h4>
-                                <p>Brand narrative development, Instagram reels, YouTube marketing, and organic social
-                                    growth campaigns that connect authentically with audiences.</p>
-                            </div>
-                        </a>
-                        <a href="/influencer-marketing" class="service-nav-card">
-                            <div>
-                                <h4>Influencer Marketing &amp; Creator Collaborations</h4>
-                                <p>Full-stack influencer marketing connecting brands with trusted micro, macro, and
-                                    celebrity creators across Bangalore and India.</p>
-                            </div>
-                        </a>
-                        <a href="/ai-video-production" class="service-nav-card">
-                            <div>
-                                <h4>AI Video Production &amp; Virtual Filmmaking</h4>
-                                <p>Next-gen hybrid filmmaking combining creative direction with generative AI for rapid
-                                    VFX, virtual sets, and accelerated campaign turnarounds.</p>
-                            </div>
-                        </a>
-                        <div class="service-nav-card featured-portfolio"
-                            style="display: flex; flex-direction: column; justify-content: space-between;">
-                            <div>
-                                <h4><a href="/portfolio" style="color: inherit; text-decoration: none;">Explore Our 50+
-                                        Brand Films &amp; Video Production Portfolio →</a></h4>
-                                <p>Discover ad campaigns and case studies produced for leading brands, including our <a
-                                        href="/case-study-herbalife"
-                                        style="color: var(--accent-color, #ffbf00); text-decoration: underline; font-weight: 600;">Herbalife
-                                        brand film</a>, <a href="/case-study-observance"
-                                        style="color: var(--accent-color, #ffbf00); text-decoration: underline; font-weight: 600;">Observance
-                                        Eye commercial</a>, and <a href="/case-study-onsurity"
-                                        style="color: var(--accent-color, #ffbf00); text-decoration: underline; font-weight: 600;">Onsurity
-                                        showcase</a>.</p>
-                            </div>
+                <div class="about-card">
+                    <div class="about-card-header">
+                        <div class="about-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        </div>
+                        <h3>Our Expertise</h3>
+                    </div>
+                    <p>
+                        As a leading creative agency in Bengaluru, our capabilities range from cinematic brand films and TV commercials to integrated advertising campaigns, BTL activation, <a href="/influencer-marketing">influencer marketing</a>, and outdoor media solutions. As an advertising agency in Bengaluru, our team brings together creative thinkers, filmmakers and marketing strategists under one roof. We combine production excellence with data-driven insight to create campaigns that deliver measurable results.
+                    </p>
+                </div>
+
+                <div class="about-card">
+                    <div class="about-card-header">
+                        <div class="about-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        </div>
+                        <h3>Why Choose Us</h3>
+                    </div>
+                    <p>
+                        What sets Paaru Studio-Media apart is our flexible approach, competitive pricing and commitment to quality execution. Whether working with startups or established brands across Bengaluru, our advertising agency in Bengaluru focuses on building long-term partnerships through reliability, innovation and performance-driven creativity.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Contextual Services & Portfolio Navigation -->
+            <div class="home-services-nav">
+                <h3 class="home-services-nav-title">
+                    Core Production Capabilities &amp; Advertising Solutions
+                </h3>
+                <div class="home-services-grid">
+                    <a href="/video-production" class="service-nav-card">
+                        <div class="service-nav-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 8-6 4 6 4V8Z"/><rect width="14" height="12" x="2" y="6" rx="2"/></svg>
+                        </div>
+                        <div>
+                            <h4>Corporate Video Production &amp; Commercials</h4>
+                            <p>High-end corporate video production services in Bangalore, TV commercials, company documentaries, and brand films crafted with cinematic impact.</p>
+                        </div>
+                    </a>
+                    <a href="/ecommerce" class="service-nav-card">
+                        <div class="service-nav-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m14.31 8 5.74 9.94"/><path d="M9.69 8h11.48"/><path d="m7.38 12 5.74-9.94"/><path d="M9.69 16 3.95 6.06"/><path d="M14.31 16H2.83"/><path d="m16.62 12-5.74 9.94"/></svg>
+                        </div>
+                        <div>
+                            <h4>E-Commerce Content &amp; Product Shoots</h4>
+                            <p>Conversion-driven product photography, catalog videos, unboxing films, and Amazon/Flipkart A+ content optimization for digital brands.</p>
+                        </div>
+                    </a>
+                    <a href="/performance-marketing" class="service-nav-card">
+                        <div class="service-nav-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+                        </div>
+                        <div>
+                            <h4>Performance Marketing &amp; Paid Media Ads</h4>
+                            <p>ROI-driven Google Ads, Meta PPC advertising campaigns, conversion funnels, and tracking setups engineered for high-intent customer acquisition.</p>
+                        </div>
+                    </a>
+                    <a href="/media-offerings" class="service-nav-card">
+                        <div class="service-nav-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="12" x="2" y="3" rx="2"/><path d="M7 15v6"/><path d="M17 15v6"/><path d="M4 21h16"/></svg>
+                        </div>
+                        <div>
+                            <h4>OOH &amp; DOOH Offline Advertising</h4>
+                            <p>Bangalore Metro train wraps, prominent street billboards, residential and mall DOOH networks, plus live Tata IPL digital streaming advertising.</p>
+                        </div>
+                    </a>
+                    <a href="/social-media-marketing" class="service-nav-card">
+                        <div class="service-nav-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg>
+                        </div>
+                        <div>
+                            <h4>Social Media Marketing &amp; Content Strategy</h4>
+                            <p>Brand narrative development, Instagram reels, YouTube marketing, and organic social growth campaigns that connect authentically with audiences.</p>
+                        </div>
+                    </a>
+                    <a href="/influencer-marketing" class="service-nav-card">
+                        <div class="service-nav-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        </div>
+                        <div>
+                            <h4>Influencer Marketing &amp; Creator Collaborations</h4>
+                            <p>Full-stack influencer marketing connecting brands with trusted micro, macro, and celebrity creators across Bangalore and India.</p>
+                        </div>
+                    </a>
+                    <a href="/ai-video-production" class="service-nav-card">
+                        <div class="service-nav-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/><path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/></svg>
+                        </div>
+                        <div>
+                            <h4>AI Video Production &amp; Virtual Filmmaking</h4>
+                            <p>Next-gen hybrid filmmaking combining creative direction with generative AI for rapid VFX, virtual sets, and accelerated campaign turnarounds.</p>
+                        </div>
+                    </a>
+                    <div class="service-nav-card featured-portfolio"
+                        style="display: flex; flex-direction: column; justify-content: space-between;">
+                        <div class="service-nav-icon" style="margin: 0 auto 14px;">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                        </div>
+                        <div>
+                            <h4><a href="/portfolio" style="color: inherit; text-decoration: none;">Explore Our 50+
+                                    Brand Films &amp; Video Production Portfolio →</a></h4>
+                            <p>Discover ad campaigns and case studies produced for leading brands, including our <a
+                                    href="/case-study-herbalife"
+                                    style="color: var(--accent-color, #ffbf00); text-decoration: underline; font-weight: 600;">Herbalife
+                                    brand film</a>, <a href="/case-study-observance"
+                                    style="color: var(--accent-color, #ffbf00); text-decoration: underline; font-weight: 600;">Observance
+                                    Eye commercial</a>, and <a href="/case-study-onsurity"
+                                    style="color: var(--accent-color, #ffbf00); text-decoration: underline; font-weight: 600;">Onsurity
+                                    showcase</a>.</p>
                         </div>
                     </div>
                 </div>
@@ -2415,7 +2473,7 @@
                         <span class="faq-icon">+</span>
                     </div>
                     <div class="faq-answer">
-                        Our primary studio is located at 48B, 100 Feet Road, Nagarabhavi, Bengaluru 560072, Karnataka. While our creative headquarters is rooted in Bengaluru, we regularly handle commercial video shoots, influencer campaigns, and media deployment projects for clients across India as well as overseas international brand partners.
+                        Our primary studio is located at 48 B, 100 Feet Road, D-Group Layout, Annapurneshwari Nagar, Bengaluru 560091, Karnataka. While our creative headquarters is rooted in Bengaluru, we regularly handle commercial video shoots, influencer campaigns, and media deployment projects for clients across India as well as overseas international brand partners.
                     </div>
                 </div>
 
@@ -2569,15 +2627,15 @@
                     <div class="city-row">
                         <div class="city">
                             <div class="city-code">Bengaluru</div>
-                            <div class="city-address">48B, 100 Feet Road, Nagarabhavi, Bengaluru 560072<br>India
+                            <div class="city-address">48 B, 100 Feet Road, D-Group Layout, Annapurneshwari Nagar, Bengaluru 560091<br>Karnataka, India
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="contact-col contact-right" style="overflow: hidden; border-radius: 12px; border: 1px solid rgba(255, 191, 0, 0.2);">
-                    <iframe title="Paaru Studio-Media Office Location in Nagarabhavi, Bengaluru"
-                        data-src="https://maps.google.com/maps?q=48B%2C%20100%20Feet%20Road%2C%20Nagarabhavi%2C%20Bengaluru%20560072&amp;output=embed"
+                    <iframe title="Paaru Studio-Media Office Location in Bengaluru"
+                        data-src="https://maps.google.com/maps?q=Paaru+Studio-Media,+48+B,+100+feet+road,+D-Group+Layout,+Srigandhadkaval,+Annapurneshwari+Nagar,+Bengaluru,+Karnataka+560091&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
                         src="about:blank"
                         width="100%" height="180" style="border: 0; display: block;" allowfullscreen=""
                         loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -2753,7 +2811,7 @@
       "image": "https://paarustudio.com/logo.webp",
       "telephone": "+917619413241",
       "email": "info@paarustudio.com",
-      "hasMap": "https://maps.google.com/?q=48B,+100+Feet+Road,+Nagarabhavi,+Bengaluru+560072",
+      "hasMap": "https://www.google.com/maps/place/Paaru+Studio-Media+%7C+Video+Production+%26+Creative+Agency+in+Bangalore/@12.9779878,77.4995651,17z/data=!4m6!3m5!1s0x3bae3fc97e146493:0xc0b061f75cc1c3d6!8m2!3d12.9779878!4d77.4995651!16s%2Fg%2F11w4_vvh6v",
       "founder": {
         "@type": "Person",
         "name": "Sadanand B Sakkarshetty"
@@ -2782,16 +2840,16 @@
       },
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "48B, 100 Feet Road, Nagarabhavi",
+        "streetAddress": "48 B, 100 Feet Road, D-Group Layout, Annapurneshwari Nagar",
         "addressLocality": "Bengaluru",
         "addressRegion": "Karnataka",
-        "postalCode": "560072",
+        "postalCode": "560091",
         "addressCountry": "IN"
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": 12.9592,
-        "longitude": 77.5028
+        "latitude": 12.9779878,
+        "longitude": 77.4995651
       },
       "openingHoursSpecification": [
         {
@@ -2913,7 +2971,7 @@
           "name": "Where is your office, and do you work outside Bengaluru?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Our primary studio is located at 48B, 100 Feet Road, Nagarabhavi, Bengaluru 560072, Karnataka. While our creative headquarters is rooted in Bengaluru, we regularly handle commercial video shoots, influencer campaigns, and media deployment projects for clients across India as well as overseas international brand partners."
+            "text": "Our primary studio is located at 48 B, 100 Feet Road, D-Group Layout, Annapurneshwari Nagar, Bengaluru 560091, Karnataka. While our creative headquarters is rooted in Bengaluru, we regularly handle commercial video shoots, influencer campaigns, and media deployment projects for clients across India as well as overseas international brand partners."
           }
         },
         {
