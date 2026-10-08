@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (src) {
             let hasLoaded = false;
             const loadHeroVideo = () => {
+                if (window.innerWidth <= 768) return;
                 if (hasLoaded) return;
                 hasLoaded = true;
                 heroFrame.setAttribute('src', src);

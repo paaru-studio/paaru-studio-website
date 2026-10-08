@@ -705,8 +705,9 @@ body {
         border-radius: 8px !important;
     }
 
-    /* 4. Total Blocking Time (TBT) Optimization: Hide heavy YouTube Iframe on Mobile */
-    .hero-bg-iframe {
+    /* 4. Total Blocking Time (TBT) Optimization: Hide heavy YouTube Iframe & Intro Marquee on Mobile */
+    .hero-bg-iframe,
+    #ps-intro {
         display: none !important;
     }
 

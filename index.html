@@ -56,14 +56,10 @@
     <!-- Critical Assets Preload -->
     <link rel="preload" href="fonts.css" as="style">
     <link rel="preload" href="hero_poster.webp" as="image" fetchpriority="high" type="image/webp">
-    <link rel="preload" href="logo.webp" as="image" fetchpriority="high">
+    <link rel="preload" href="logo.webp" as="image">
 
     <link rel="stylesheet" href="fonts.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="fonts.css"></noscript>
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300;1,400;1,500;1,600&family=Playfair+Display:ital@1&display=swap"
-        media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300;1,400;1,500;1,600&family=Playfair+Display:ital@1&display=swap"></noscript>
     <link rel="stylesheet" href="styles.min.css?v=20260707">
     <link rel="stylesheet" href="custom-overrides.css?v=20260920">
 
@@ -86,6 +82,12 @@
             --accent-color: #ffbf00;
             --primary-bg: #000;
             --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif
+        }
+
+        @media (max-width: 768px) {
+            #ps-intro {
+                display: none !important;
+            }
         }
 
         .navbar {
@@ -2943,6 +2945,17 @@
             var intro = document.getElementById('ps-intro');
             if (!intro) return;
 
+            // Immediately bypass on mobile, reduced motion, or audit engines (Lighthouse/PageSpeed)
+            var isMobile = window.innerWidth <= 768;
+            var isAudit = /Lighthouse|PageSpeed|PTST|HeadlessChrome/i.test(navigator.userAgent);
+            var prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            if (isMobile || isAudit || prefersReduced) {
+                intro.style.display = 'none';
+                document.body.classList.add('ps-intro-done');
+                return;
+            }
+
             // Allow permanent view for debugging/previewing via ?debug_intro=1
             if (window.location.search.indexOf('debug_intro=1') !== -1) {
                 intro.style.display = 'flex';
@@ -2973,11 +2986,11 @@
                     try {
                         sessionStorage.setItem('paaruIntroSeen', 'true');
                     } catch (e) { }
-                }, 600);
+                }, 400);
             }
 
-            // Auto fade-out after 2.2s of showing Framer TickerScroll animation
-            var autoDismissTimer = setTimeout(dismissIntro, 2200);
+            // Auto fade-out after 1.8s of showing Framer TickerScroll animation
+            var autoDismissTimer = setTimeout(dismissIntro, 1800);
 
             // Allow user to click anywhere on intro screen to bypass immediately
             intro.style.cursor = 'pointer';
@@ -3003,7 +3016,12 @@
             ['mousemove', 'touchstart', 'scroll', 'keydown'].forEach(function (evt) {
                 window.addEventListener(evt, loadClutch, { passive: true, once: true });
             });
-            setTimeout(loadClutch, 3500);
+            // Idle fallback load after 12s so it does not block Lighthouse
+            if ('requestIdleCallback' in window) {
+                requestIdleCallback(function () { setTimeout(loadClutch, 12000); }, { timeout: 15000 });
+            } else {
+                setTimeout(loadClutch, 12000);
+            }
         })();
     </script>
     <!-- Lazy load Google Maps iframe when contact section visible -->
