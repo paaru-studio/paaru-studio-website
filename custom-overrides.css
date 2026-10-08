@@ -1049,14 +1049,6 @@ body {
     contain: layout style;
 }
 
-.gallery-item.fit-auto {
-    aspect-ratio: 1 / 1;
-    overflow: hidden;
-}
-
-.gallery-image.fit-image img {
-    aspect-ratio: unset !important;
-}
 
 /* 2. Compositor-layer promotion for animated elements (reduces main-thread paint) */
 .ticker-scroll-track {
