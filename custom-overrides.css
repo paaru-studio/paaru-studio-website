@@ -1552,9 +1552,25 @@ body {
     color: #ffbf00 !important;
 }
 
-/* 12. Footer Visual Polish */
-.footer {
+/* 12. Footer Visual Polish & Scroll Stability (Prevents section skipping/jumping) */
+.footer,
+.footer.will-animate,
+.footer.revealed {
     background: #080808;
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+}
+
+.contact-section {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+}
+
+.clutch-widget {
+    min-height: 40px;
+    display: block;
 }
 
 .footer-cta {
