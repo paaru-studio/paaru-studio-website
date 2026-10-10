@@ -4,7 +4,7 @@
   <!-- Core Pages -->
   <url>
     <loc>https://paarustudio.com/</loc>
-    <lastmod>2026-09-29</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -144,9 +144,27 @@
   <!-- Blog & Articles -->
   <url>
     <loc>https://paarustudio.com/blog</loc>
-    <lastmod>2026-09-29</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://paarustudio.com/blog-creative-agency-vs-ad-agency-trends</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://paarustudio.com/blog-ai-in-advertising-and-production</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://paarustudio.com/blog-modern-advertising-trends-2026</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://paarustudio.com/blog-video-production-bangalore</loc>

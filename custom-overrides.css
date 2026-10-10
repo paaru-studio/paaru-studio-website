@@ -1,5 +1,81 @@
 /* Global Overrides for Navbar, Contact Us Button & Client Marquee Dark Mode */
 
+/* --- High-Clarity, Stark-Contrast Navbar Logo --- */
+.navbar .logo,
+.logo {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    text-decoration: none !important;
+}
+
+/* On desktop white navbar (unscrolled), PAARU STUDIO must be stark, bold, crisp black */
+.navbar .logo-text,
+.logo .logo-text,
+.logo-text {
+    color: #000000 !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.5px !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+    text-rendering: optimizeLegibility !important;
+}
+
+.navbar .logo-text-static,
+.logo-text-static {
+    color: #000000 !important;
+}
+
+.navbar .flip-word,
+.flip-word {
+    color: #000000 !important;
+}
+
+/* Scrolled golden navbar */
+.navbar.scrolled .logo-text,
+.navbar.scrolled .logo-text-static,
+.navbar.scrolled .flip-word {
+    color: #000000 !important;
+}
+
+/* Crystal-clear, razor-sharp logo badge */
+.navbar .logo-image,
+.logo .logo-image,
+.logo-image {
+    width: 44px !important;
+    height: 44px !important;
+    border-radius: 50% !important;
+    object-fit: contain !important;
+    image-rendering: -webkit-optimize-contrast !important;
+    image-rendering: crisp-edges !important;
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.12)) !important;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.navbar .logo:hover .logo-image,
+.logo:hover .logo-image {
+    transform: scale(1.06) !important;
+}
+
+.navbar.scrolled .logo-image {
+    width: 38px !important;
+    height: 38px !important;
+}
+
+/* Mobile navbar contrast handling */
+@media (max-width: 900px) {
+    .navbar:not(.scrolled) .logo-text,
+    .navbar:not(.scrolled) .logo-text-static,
+    .navbar:not(.scrolled) .flip-word {
+        color: #ffffff !important;
+    }
+    .navbar.scrolled .logo-text,
+    .navbar.scrolled .logo-text-static,
+    .navbar.scrolled .flip-word {
+        color: #000000 !important;
+    }
+}
+
 /* 1. Scrolled Navbar Contrast & Design */
 .navbar.scrolled {
     background: linear-gradient(180deg, rgba(255, 191, 0, 0.98), rgba(255, 180, 0, 0.95)) !important;
