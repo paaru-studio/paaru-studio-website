@@ -38,17 +38,15 @@
     color: #000000 !important;
 }
 
-/* Crystal-clear, razor-sharp logo badge */
+/* Crystal-clear, smooth original logo badge */
 .navbar .logo-image,
 .logo .logo-image,
 .logo-image {
     width: 44px !important;
     height: 44px !important;
-    border-radius: 50% !important;
     object-fit: contain !important;
-    image-rendering: -webkit-optimize-contrast !important;
-    image-rendering: crisp-edges !important;
-    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.12)) !important;
+    border-radius: 50% !important;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.10)) !important;
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
