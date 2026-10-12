@@ -2044,3 +2044,195 @@ select {
     background-position: right 12px center;
     padding-right: 36px !important;
 }
+
+/* ==========================================================================
+   26. INDEX PAGE PORTFOLIO CAROUSEL
+   - Reduced all videos by 25%
+   - Continuous circular wrap animation
+   - Stop motion when hovered over them
+   ========================================================================== */
+
+/* 25% Reduction in Video Dimensions:
+   Original width was flex: 0 0 100%; max-width: 150%.
+   150% * 0.75 = 112.5% width. Locked 16:9 aspect ratio automatically scales height down 25%. */
+.index-page #portfolio .portfolio-item {
+    flex: 0 0 112.5% !important;
+    max-width: 112.5% !important;
+    width: 112.5% !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+    transform: none !important;
+    flex-shrink: 0 !important;
+}
+
+@media (max-width: 900px) {
+    .index-page #portfolio .portfolio-item {
+        flex: 0 0 68% !important;
+        max-width: 68% !important;
+        width: 68% !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .index-page #portfolio .portfolio-item {
+        flex: 0 0 72% !important;
+        max-width: 72% !important;
+        width: 72% !important;
+    }
+}
+
+/* Image container with 25% reduced height & smooth corners */
+.index-page #portfolio .portfolio-image {
+    aspect-ratio: 16 / 9 !important;
+    height: auto !important;
+    border-radius: 18px !important;
+    overflow: hidden !important;
+    background: #0d0d10 !important;
+    box-shadow: 0 14px 38px rgba(0, 0, 0, 0.6) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease !important;
+}
+
+/* Circular wrap cylindrical viewport without side gradient overlay */
+.index-page #portfolio .carousel-viewport {
+    overflow: hidden !important;
+    width: 100vw !important;
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: calc(50% - 50vw) !important;
+    padding: 24px 0 !important;
+    -webkit-mask-image: none !important;
+    mask-image: none !important;
+    cursor: grab !important;
+    user-select: none !important;
+    -webkit-user-select: none !important;
+    touch-action: pan-y !important;
+}
+
+.index-page #portfolio .carousel-viewport.is-dragging {
+    cursor: grabbing !important;
+}
+
+/* Continuous Circular Wrap Animation (Fallback if JS is initializing) - 50% faster (26.67s instead of 40s) */
+.index-page #portfolio .carousel-track {
+    display: flex !important;
+    gap: 24px !important;
+    width: max-content !important;
+    align-items: center !important;
+    will-change: transform !important;
+    animation: portfolioCircularWrap 26.67s linear infinite !important;
+    padding: 0 !important;
+    transform: none;
+}
+
+/* When JS circular wrap controller is active, disable CSS keyframe animation for smooth JS drag/sweep */
+.index-page #portfolio .portfolio-carousel.js-circular-wrap .carousel-track {
+    animation: none !important;
+}
+
+@keyframes portfolioCircularWrap {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* STOP MOTION WHEN HOVERED OVER THEM */
+.index-page #portfolio .portfolio-carousel:hover .carousel-track,
+.index-page #portfolio .carousel-track:hover,
+.index-page #portfolio .portfolio-item:hover,
+.index-page #portfolio .portfolio-carousel:active .carousel-track {
+    animation-play-state: paused !important;
+}
+
+/* Hover micro-elevation for individual video */
+.index-page #portfolio .portfolio-item:hover .portfolio-image {
+    transform: scale(1.035) !important;
+    border-color: rgba(255, 191, 0, 0.45) !important;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.8), 0 0 30px rgba(255, 191, 0, 0.2) !important;
+}
+
+/* Reset scale override from legacy stylesheet */
+.index-page #portfolio .carousel-track .portfolio-item+.portfolio-item {
+    transform: none !important;
+}
+
+/* Clean video title styling */
+.index-page #portfolio .video-title {
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    letter-spacing: -0.3px !important;
+    color: #ffffff !important;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.85) 100%) !important;
+}
+
+/* Relative positioning for portfolio carousel wrapper */
+.index-page #portfolio .portfolio-carousel {
+    position: relative !important;
+    width: 100vw !important;
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: calc(50% - 50vw) !important;
+}
+
+/* Apple-grade frosted glass manual sweep buttons */
+.index-page #portfolio .carousel-nav {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    width: 52px !important;
+    height: 52px !important;
+    border-radius: 50% !important;
+    background: rgba(14, 14, 18, 0.78) !important;
+    backdrop-filter: blur(18px) !important;
+    -webkit-backdrop-filter: blur(18px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.16) !important;
+    color: #ffffff !important;
+    font-size: 28px !important;
+    font-weight: 300 !important;
+    line-height: 1 !important;
+    cursor: pointer !important;
+    z-index: 30 !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.2) !important;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background 0.25s ease, border-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease !important;
+    user-select: none !important;
+    -webkit-user-select: none !important;
+}
+
+.index-page #portfolio .carousel-nav:hover {
+    background: rgba(22, 22, 28, 0.95) !important;
+    border-color: rgba(255, 191, 0, 0.8) !important;
+    color: #ffbf00 !important;
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.75), 0 0 25px rgba(255, 191, 0, 0.45) !important;
+    transform: translateY(-50%) scale(1.1) !important;
+}
+
+.index-page #portfolio .carousel-nav:active {
+    transform: translateY(-50%) scale(0.95) !important;
+}
+
+.index-page #portfolio .carousel-nav.prev {
+    left: 24px !important;
+}
+
+.index-page #portfolio .carousel-nav.next {
+    right: 24px !important;
+}
+
+@media (max-width: 768px) {
+    .index-page #portfolio .carousel-nav {
+        width: 44px !important;
+        height: 44px !important;
+        font-size: 24px !important;
+    }
+    .index-page #portfolio .carousel-nav.prev {
+        left: 12px !important;
+    }
+    .index-page #portfolio .carousel-nav.next {
+        right: 12px !important;
+    }
+}
