@@ -1749,7 +1749,7 @@ body {
 .footer-brand h3 {
     font-size: 18px;
     font-weight: 800;
-    color: #ffffff;
+    color: hsl(49, 100%, 50%);
     letter-spacing: 1px;
     margin-bottom: 12px;
 }
