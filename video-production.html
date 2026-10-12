@@ -887,7 +887,7 @@
     <noscript>
         <link rel="stylesheet" href="styles.min.css?v=20260707">
     </noscript>
-    <link rel="stylesheet" href="custom-overrides.css?v=20261010-logo">
+    <link rel="stylesheet" href="custom-overrides.css?v=20261013-grids">
     <link rel="preload" href="popup-form.css" as="style" onload="this.rel='stylesheet'">
     <noscript>
         <link rel="stylesheet" href="popup-form.css">
@@ -2114,6 +2114,295 @@
     </section>
 
     <div class="section-divider"></div>
+
+    <style>
+        /* 8 Production Disciplines Bento Grid */
+        .services-bento-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 1200px) {
+            .services-bento-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .services-bento-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+        }
+
+        .service-bento-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.09);
+            border-radius: 24px;
+            padding: 32px 28px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-bento-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 191, 0, 0.4), transparent);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .service-bento-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(255, 191, 0, 0.45);
+            background: rgba(255, 255, 255, 0.05);
+            box-shadow: 0 24px 50px rgba(0, 0, 0, 0.75), 0 0 32px rgba(255, 191, 0, 0.12);
+        }
+
+        .service-bento-card:hover::before {
+            opacity: 1;
+        }
+
+        .service-bento-card .card-badge {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--accent-color, #ffbf00);
+            margin-bottom: 12px;
+        }
+
+        .service-bento-card h3 {
+            font-size: 22px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 12px;
+            line-height: 1.25;
+            letter-spacing: -0.3px;
+        }
+
+        .service-bento-card p {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.68);
+            line-height: 1.6;
+            margin-bottom: 22px;
+        }
+
+        .service-bento-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 28px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .service-bento-card ul li {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.85);
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            line-height: 1.5;
+        }
+
+        .service-bento-card ul li::before {
+            content: '✓';
+            color: var(--accent-color, #ffbf00);
+            font-weight: 700;
+            font-size: 13px;
+            flex-shrink: 0;
+        }
+
+        .service-bento-card .card-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            color: #ffffff;
+            font-size: 13.5px;
+            font-weight: 600;
+            text-decoration: none;
+            width: fit-content;
+            margin-top: auto;
+            transition: all 0.3s ease;
+        }
+
+        .service-bento-card:hover .card-btn {
+            background: var(--accent-color, #ffbf00);
+            color: #000000;
+            border-color: var(--accent-color, #ffbf00);
+            box-shadow: 0 6px 20px rgba(255, 191, 0, 0.35);
+            transform: translateX(4px);
+        }
+
+        /* Technical Infrastructure Spec Sheet Grid */
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 36px;
+        }
+
+        @media (max-width: 1024px) {
+            .specs-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 18px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .specs-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+        }
+
+        .specs-card {
+            background: rgba(255, 255, 255, 0.028);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 22px;
+            padding: 28px 24px;
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .specs-card:hover {
+            border-color: rgba(255, 191, 0, 0.4);
+            background: rgba(255, 255, 255, 0.05);
+            transform: translateY(-4px);
+            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.65), 0 0 24px rgba(255, 191, 0, 0.1);
+        }
+
+        .specs-card h4 {
+            font-size: 17px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            letter-spacing: -0.2px;
+        }
+
+        .specs-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .specs-card ul li {
+            font-size: 13.5px;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.5;
+            position: relative;
+            padding-left: 18px;
+        }
+
+        .specs-card ul li::before {
+            content: '•';
+            position: absolute;
+            left: 2px;
+            color: var(--accent-color, #ffbf00);
+            font-size: 18px;
+            line-height: 1;
+        }
+
+        /* Broadcast & Distribution Platforms Grid */
+        .platform-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 36px;
+        }
+
+        @media (max-width: 960px) {
+            .platform-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+
+        .platform-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+            padding: 34px 28px;
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+        }
+
+        .platform-card:hover {
+            border-color: rgba(255, 191, 0, 0.4);
+            background: rgba(255, 255, 255, 0.05);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 48px rgba(0, 0, 0, 0.7), 0 0 28px rgba(255, 191, 0, 0.1);
+        }
+
+        .platform-card h3 {
+            font-size: 21px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 12px;
+            letter-spacing: -0.3px;
+        }
+
+        .platform-card p {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.68);
+            line-height: 1.6;
+            margin-bottom: 22px;
+        }
+
+        .platform-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .platform-card ul li {
+            font-size: 13.5px;
+            color: rgba(255, 255, 255, 0.85);
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            line-height: 1.5;
+        }
+
+        .platform-card ul li::before {
+            content: '✓';
+            color: var(--accent-color, #ffbf00);
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+    </style>
 
     <!-- Complete 8-Part Video Production Services Bento Grid -->
     <section id="services-all" class="apple-section" style="padding: 100px 0; background: #000;">
