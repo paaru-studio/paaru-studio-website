@@ -81,7 +81,7 @@
 #### Media Offerings (media-offerings.html):
 - Bengaluru Metro advertising details
 - Digital screens in malls
-- TATA IPL 2026 (4 advertising packages)
+- TATA IPL 2027 (4 advertising packages)
 - Additional media options (Transit, Buildings, Airport, TV, Radio, Print)
 - Why Choose Us section
 
@@ -205,7 +205,7 @@ All content from paarustudio.com has been included:
 - All service descriptions
 - Bengaluru Metro specifications
 - Digital screen details
-- TATA IPL 2026 plans (all 4 types)
+- TATA IPL 2027 plans (all 4 types)
 - Client names
 - Testimonials
 - Contact information

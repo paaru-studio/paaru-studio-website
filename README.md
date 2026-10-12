@@ -17,7 +17,7 @@ A modern, sleek website redesign for Paaru Studio with design inspiration from B
 - All advertising solutions including:
   - Bengaluru Metro advertising
   - Digital screens in malls
-  - TATA IPL 2026 OTT plans
+  - TATA IPL 2027 OTT plans
   - Podcast production services
 - Client testimonials
 - Contact section
