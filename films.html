@@ -302,8 +302,16 @@
             grid-column: span 4;
         }
 
+        .bento-col-5 {
+            grid-column: span 5;
+        }
+
         .bento-col-6 {
             grid-column: span 6;
+        }
+
+        .bento-col-7 {
+            grid-column: span 7;
         }
 
         .bento-col-8 {
@@ -317,7 +325,9 @@
         @media (max-width: 960px) {
 
             .bento-col-4,
+            .bento-col-5,
             .bento-col-6,
+            .bento-col-7,
             .bento-col-8 {
                 grid-column: span 12;
             }
@@ -685,38 +695,78 @@
 
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="apple-container"
-            style="width: 100%; display: flex; align-items: center; justify-content: space-between;">
-            <a href="/" class="logo" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
-                <img loading="eager" decoding="async" src="logo.webp" alt="Paaru Studio Logo" class="logo-image"
-                    width="40" height="40">
-                <span class="logo-text" style="font-weight: 800; font-size: 20px; color: #000;">
-                    PAARU STUDIO
-                </span>
-            </a>
-            <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false"
-                style="background: none; border: none; font-size: 24px; color: inherit; cursor: pointer;">☰</button>
-            <div class="nav-links" style="display: flex; align-items: center; gap: 24px;">
-                <a href="/" style="text-decoration: none; color: inherit; font-size: 14px; font-weight: 500;">Home</a>
-                <div class="nav-dropdown">
-                    <a href="/video-production" class="nav-dropdown-toggle"
-                        style="text-decoration: none; color: inherit; font-size: 14px; font-weight: 600;">Video
-                        Production <span class="dropdown-arrow">▾</span></a>
-                    <div class="nav-dropdown-menu" style="min-width: 280px;">
-                        <a href="/video-production">All Video Services (Overview)</a>
-                        <a href="/films" style="color: var(--accent-color); font-weight: 700;">TVCs, DVCs
-                            &amp; UGC Videos</a>
-                        <a href="/corporate-video-production">Corporate Video Production</a>
-                        <a href="/motion-graphics-animation">Motion Graphics &amp; Animation</a>
+        <div class="container">
+            <div class="nav-content">
+                <a href="/" class="logo">
+                    <img loading="eager" decoding="async" src="logo.webp" alt="Paaru Studio Logo" class="logo-image"
+                        width="40" height="40">
+                    <span class="logo-text">
+                        <span class="logo-text-static">PAARU</span>
+                        <span class="logo-text-flip">
+                            <span class="flip-word">STUDIO</span>
+                            <span class="flip-word">MEDIA</span>
+                        </span>
+                    </span>
+                </a>
+                <!-- Mobile menu button (visible on small screens) -->
+                <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">☰</button>
+                <div class="nav-links">
+                    <a href="/">Home</a>
+                    <div class="nav-dropdown">
+                        <a href="/video-production" class="nav-dropdown-toggle">Services <span
+                                class="dropdown-arrow">▾</span></a>
+                        <div class="nav-dropdown-menu mega-menu">
+                            <a href="/video-production" class="mega-menu-item">
+                                <img loading="lazy" decoding="async" src="video_pro.webp" alt="Video Production"
+                                    width="120" height="80">
+                                <div class="mega-item-content">
+                                    <h4>Video Production</h4>
+                                    <p>TVCs, Digital Ads, Corporate films. End-to-end video solutions.</p>
+                                </div>
+                            </a>
+                            <a href="/ecommerce" class="mega-menu-item">
+                                <img loading="lazy" decoding="async" src="shopify_img.webp" alt="E-commerce Solutions"
+                                    width="120" height="120">
+                                <div class="mega-item-content">
+                                    <h4>E-commerce Solutions</h4>
+                                    <p>Boost your online sales with tailored e-commerce strategies.</p>
+                                </div>
+                            </a>
+                            <a href="/performance-marketing" class="mega-menu-item">
+                                <img loading="lazy" decoding="async" src="pm_1.webp" alt="Digital Marketing" width="120"
+                                    height="68">
+                                <div class="mega-item-content">
+                                    <h4>Digital Marketing</h4>
+                                    <p>Data-driven performance and social media campaigns.</p>
+                                </div>
+                            </a>
+                            <a href="/media-offerings" class="mega-menu-item">
+                                <img loading="lazy" decoding="async" src="OOH_banner.webp"
+                                    alt="Offline Marketing (OOH/DOOH)" width="120" height="90">
+                                <div class="mega-item-content">
+                                    <h4>Offline Marketing</h4>
+                                    <p>High-impact outdoor and digital out-of-home advertising.</p>
+                                </div>
+                            </a>
+                        </div>
                     </div>
+
+                    <div class="nav-dropdown">
+                        <a href="/media-offerings" class="nav-dropdown-toggle">Media <span
+                                class="dropdown-arrow">▾</span></a>
+                        <div class="nav-dropdown-menu">
+                            <a href="/media-offerings">Media Offerings (OOH &amp; DOOH)</a>
+                            <a href="/performance-marketing">Performance Marketing</a>
+                            <a href="/social-media-marketing">Social Media Marketing</a>
+                            <a href="/influencer-marketing">Influencer Marketing</a>
+                        </div>
+                    </div>
+                    <a href="/portfolio">Portfolio</a>
+                    <a href="/get-started">Get Started</a>
+                    <a href="/join-team">Join Team</a>
+                    <a href="/ai-services" class="ai-explore-btn" aria-label="Explore Ai"><span>Explore Ai</span></a>
+                    <a href="/contact" class="cta-btn">Contact Us</a>
                 </div>
-                <a href="/portfolio"
-                    style="text-decoration: none; color: inherit; font-size: 14px; font-weight: 500;">Portfolio</a>
-                <a href="/case-studies"
-                    style="text-decoration: none; color: inherit; font-size: 14px; font-weight: 500;">Case Studies</a>
-                <a href="/contact" class="cta-btn"
-                    style="padding: 8px 20px; border-radius: 999px; background: #000; color: #fff; text-decoration: none; font-weight: 700; font-size: 13px;">Contact
-                    Us</a>
             </div>
         </div>
     </nav>
@@ -1182,70 +1232,109 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer full-bleed"
-        style="background: #000; border-top: 1px solid rgba(255,255,255,0.08); padding: 80px 0 40px;">
-        <div class="apple-container">
-            <div
-                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; margin-bottom: 60px;">
-                <div>
-                    <h3 style="font-size: 20px; font-weight: 800; color: #fff; margin-bottom: 14px;">PAARU STUDIO-MEDIA
-                    </h3>
-                    <p style="color: var(--text-muted); font-size: 14px; line-height: 1.6;">Full-service commercial
-                        filmmaking, TVC ad agency, and digital video production company in Bengaluru, Karnataka.</p>
-                </div>
-                <div>
-                    <h4
-                        style="font-size: 14px; font-weight: 700; color: var(--accent-color); text-transform: uppercase; margin-bottom: 14px; letter-spacing: 1px;">
-                        Video Services</h4>
-                    <p style="margin-bottom: 8px;"><a href="/video-production"
-                            style="color: rgba(255,255,255,0.7); text-decoration: none; font-size: 14px;">Complete Video
-                            Services</a></p>
-                    <p style="margin-bottom: 8px;"><a href="/films"
-                            style="color: #fff; text-decoration: none; font-size: 14px; font-weight: 600;">TVCs, DVCs
-                            &amp; UGC</a></p>
-                    <p style="margin-bottom: 8px;"><a href="/corporate-video-production"
-                            style="color: rgba(255,255,255,0.7); text-decoration: none; font-size: 14px;">Corporate
-                            Video Production</a></p>
-                    <p style="margin-bottom: 8px;"><a href="/motion-graphics-animation"
-                            style="color: rgba(255,255,255,0.7); text-decoration: none; font-size: 14px;">Motion
-                            Graphics &amp; Animation</a></p>
-                </div>
-                <div>
-                    <h4
-                        style="font-size: 14px; font-weight: 700; color: var(--accent-color); text-transform: uppercase; margin-bottom: 14px; letter-spacing: 1px;">
-                        Company</h4>
-                    <p style="margin-bottom: 8px;"><a href="/"
-                            style="color: rgba(255,255,255,0.7); text-decoration: none; font-size: 14px;">Home</a></p>
-                    <p style="margin-bottom: 8px;"><a href="/portfolio"
-                            style="color: rgba(255,255,255,0.7); text-decoration: none; font-size: 14px;">Portfolio</a>
-                    </p>
-                    <p style="margin-bottom: 8px;"><a href="/case-studies"
-                            style="color: rgba(255,255,255,0.7); text-decoration: none; font-size: 14px;">Case
-                            Studies</a></p>
-                    <p style="margin-bottom: 8px;"><a href="/contact"
-                            style="color: rgba(255,255,255,0.7); text-decoration: none; font-size: 14px;">Contact Us</a>
-                    </p>
-                </div>
-                <div>
-                    <h4
-                        style="font-size: 14px; font-weight: 700; color: var(--accent-color); text-transform: uppercase; margin-bottom: 14px; letter-spacing: 1px;">
-                        Headquarters</h4>
-                    <p style="color: var(--text-muted); font-size: 13.5px; line-height: 1.6;">
-                        48 B, 100 Feet Road, D-Group Layout, Annapurneshwari Nagar, Bengaluru, Karnataka 560091<br>
-                        Phone: +91 76194 13241<br>
-                        Email: info@paarustudio.com
-                    </p>
-                </div>
+    <footer class="footer full-bleed">
+        <div class="footer-cta">
+            <div class="container">
+                <h2>Looking to drive results? <a href="/get-started" class="footer-cta-link">Let's chat →</a></h2>
             </div>
-            <div
-                style="border-top: 1px solid rgba(255,255,255,0.06); padding-top: 30px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
-                <p style="color: var(--text-muted); font-size: 13px;">&copy; 2026 Paaru Studio-Media. All rights
-                    reserved.</p>
-                <div style="display: flex; gap: 20px;">
-                    <a href="/privacy-policy"
-                        style="color: var(--text-muted); font-size: 13px; text-decoration: none;">Privacy Policy</a>
-                    <a href="#top" style="color: var(--accent-color); font-size: 13px; text-decoration: none;">Back to
-                        top ↑</a>
+        </div>
+        <div class="footer-main">
+            <div class="container">
+                <!-- Ask AI Section -->
+                <div class="ask-ai-section">
+                    <div class="ask-ai-header">
+                        <span class="ask-ai-pill-label">✨ AI Due Diligence</span>
+                        <h3 class="ask-ai-title">Don't take our word for it — ask AI</h3>
+                        <p class="ask-ai-subtitle">Evaluate Paaru Studio-Media as your Bangalore video production partner with instant, pre-filled prompts across leading AI assistants.</p>
+                    </div>
+                    <div class="ask-ai-actions">
+                        <a href="https://chat.openai.com/?q=As%20a%20brand%20or%20marketing%20lead%20evaluating%20corporate%20video%20production%20and%20commercial%20ad%20film%20companies%20in%20Bangalore%2C%20summarise%20what%20makes%20Paaru%20Studio-Media%20a%20strong%20choice%2C%20based%20on%20their%20service%20page%3A%20https%3A//paarustudio.com/video-production"
+                            target="_blank" rel="noopener noreferrer" class="ask-ai-btn">
+                            <svg class="ai-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 2a10 10 0 0 1 10 10c0 5.523-4.477 10-10 10a9.96 9.96 0 0 1-4.708-1.175L2 22l1.175-5.292A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2z" />
+                            </svg>
+                            <span>ChatGPT</span>
+                            <span class="ai-btn-arrow">↗</span>
+                        </a>
+                        <a href="https://claude.ai/new?q=As%20a%20brand%20or%20marketing%20lead%20evaluating%20corporate%20video%20production%20and%20commercial%20ad%20film%20companies%20in%20Bangalore%2C%20summarise%20what%20makes%20Paaru%20Studio-Media%20a%20strong%20choice%2C%20based%20on%20their%20service%20page%3A%20https%3A//paarustudio.com/video-production"
+                            target="_blank" rel="noopener noreferrer" class="ask-ai-btn">
+                            <svg class="ai-btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2L14.2 8.6L21 9.2L16 13.8L17.5 20.6L12 17L6.5 20.6L8 13.8L3 9.2L9.8 8.6L12 2Z" />
+                            </svg>
+                            <span>Claude</span>
+                            <span class="ai-btn-arrow">↗</span>
+                        </a>
+                        <a href="https://www.google.com/search?udm=50&q=As%20a%20brand%20or%20marketing%20lead%20evaluating%20corporate%20video%20production%20and%20commercial%20ad%20film%20companies%20in%20Bangalore%2C%20summarise%20what%20makes%20Paaru%20Studio-Media%20a%20strong%20choice%2C%20based%20on%20their%20service%20page%3A%20https%3A//paarustudio.com/video-production"
+                            target="_blank" rel="noopener noreferrer" class="ask-ai-btn">
+                            <svg class="ai-btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 11v2.5h6.3c-.3 1.6-1.8 4.7-6.3 4.7-3.8 0-6.9-3.1-6.9-7s3.1-7 6.9-7c2.2 0 3.7.9 4.5 1.7l2-1.9C17.2 2.8 14.8 2 12 2 6.5 2 2 6.5 2 12s4.5 10 10 10c5.8 0 9.6-4.1 9.6-9.8 0-.7-.1-1.2-.2-1.7H12z" />
+                            </svg>
+                            <span>Google AI</span>
+                            <span class="ai-btn-arrow">↗</span>
+                        </a>
+                        <a href="https://www.perplexity.ai/search?q=As%20a%20brand%20or%20marketing%20lead%20evaluating%20corporate%20video%20production%20and%20commercial%20ad%20film%20companies%20in%20Bangalore%2C%20summarise%20what%20makes%20Paaru%20Studio-Media%20a%20strong%20choice%2C%20based%20on%20their%20service%20page%3A%20https%3A//paarustudio.com/video-production"
+                            target="_blank" rel="noopener noreferrer" class="ask-ai-btn">
+                            <svg class="ai-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="9" />
+                                <path d="M12 3v18M3 12h18" />
+                            </svg>
+                            <span>Perplexity</span>
+                            <span class="ai-btn-arrow">↗</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <h3>PAARU STUDIO-MEDIA</h3>
+                        <p>Video Production Company in Bangalore | Ad Films, BTL &amp; OOH.</p>
+                        <div class="footer-social">
+                            <a href="https://www.instagram.com/paaru_studio" target="_blank" rel="noopener noreferrer"
+                                aria-label="Instagram">Instagram</a>
+                            <a href="https://www.linkedin.com/company/paaru-studio" target="_blank"
+                                rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
+                            <a href="#" aria-label="Facebook">Facebook</a>
+                            <a href="https://www.justdial.com/Bangalore/Paaru-Studio-Nagarbhavi/080PXX80-XX80-230905213353-X4D4_BZDET"
+                                target="_blank" rel="noopener noreferrer" aria-label="Justdial">Justdial</a>
+                        </div>
+                    </div>
+                    <div class="footer-nav">
+                        <div class="footer-col">
+                            <h4>Video &amp; Media</h4>
+                            <a href="/video-production">Video Production</a>
+                            <a href="/films">TVCs, DVCs &amp; UGC Hub</a>
+                            <a href="/corporate-video-production">Corporate Video Hub</a>
+                            <a href="/motion-graphics-animation">Motion Graphics &amp; 3D</a>
+                            <a href="/media-offerings">Media Offerings (OOH)</a>
+                            <a href="/ecommerce">E-Commerce Shoots</a>
+                        </div>
+                        <div class="footer-col">
+                            <h4>Company</h4>
+                            <a href="/">Home</a>
+                            <a href="/portfolio">Portfolio</a>
+                            <a href="/case-studies">Case Studies</a>
+                            <a href="/blog">Blog</a>
+                            <a href="/join-team">Join Team</a>
+                            <a href="/contact">Contact</a>
+                        </div>
+                        <div class="footer-col">
+                            <h4>Legal</h4>
+                            <a href="#">Security Compliance</a>
+                            <a href="#">Accessibility</a>
+                            <a href="#">Terms of Use</a>
+                            <a href="/privacy-policy">Privacy Policy</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="clutch-widget" data-url="https://widget.clutch.co" data-widget-type="1" data-height="40"
+                        data-nofollow="true" data-expandifr="true" data-clutchcompany-id="2732402">
+                    </div>
+                    <p>&copy; 2026 Paaru Studio-Media. All rights reserved.</p>
+                    <div class="footer-meta">
+                        <a href="#top" class="back-to-top">↑</a>
+                    </div>
                 </div>
             </div>
         </div>
