@@ -39,11 +39,15 @@ http://paarustudio.com/*       https://paarustudio.com/:splat  301!
 /blog-animated-educational-videos.html   /blog-animated-educational-videos        301!
 /join-team.html                          /join-team                               301!
 /privacy-policy.html                     /privacy-policy                          301!
+/tvc-dvc-ugc-videos.html                 /tvc-dvc-ugc-videos                      301!
+/corporate-video-production.html         /corporate-video-production              301!
+/motion-graphics-animation.html          /motion-graphics-animation               301!
+/commercial-films.html                   /tvc-dvc-ugc-videos                      301!
+/commercial-films                        /tvc-dvc-ugc-videos                      301!
 
 # Legacy redirect (keep existing)
 /services.html                           /video-production                        301!
 
 # Service subpath aliases
-/corporate-video-production              /video-production#corporate-video-production  301!
 /brand-film-production                   /video-production#brand-film-production       301!
 /ad-film-production                      /video-production#ad-film-production          301!

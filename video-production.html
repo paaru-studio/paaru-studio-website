@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Video Production Company in Bangalore | Paaru Studio-Media</title>
     <meta name="description"
-        content="Bangalore video production company crafting TVCs, brand films, corporate videos, and digital ads. Over 300+ campaigns delivered. Get a free project quote.">
+        content="Bengaluru-based full-service commercial video production company crafting broadcast TVCs, high-conversion DVCs, brand films, corporate videos, UGC reels, product cinematography, animated explainers, and motion graphics.">
     <link rel="canonical" href="https://paarustudio.com/video-production">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:site_name" content="Paaru Studio-Media">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://paarustudio.com/video-production">
-    <meta property="og:title" content="Video Production Company in Bangalore | Paaru Studio-Media">
+    <meta property="og:title" content="Video Production Company in Bengaluru | Paaru Studio-Media">
     <meta property="og:description"
-        content="Bangalore video production company crafting TVCs, brand films, corporate videos, and digital ads. Over 300+ campaigns delivered. Get a free project quote.">
+        content="From national broadcast TVCs and OTT digital ads to corporate films, creator UGC reels, product shoots, and 3D motion graphics. Explore complete video production services in Bangalore.">
     <meta property="og:image" content="https://paarustudio.com/og-image.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="627">
@@ -25,9 +25,9 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://paarustudio.com/video-production">
-    <meta property="twitter:title" content="Video Production Company in Bangalore | Paaru Studio-Media">
+    <meta property="twitter:title" content="Video Production Company in Bengaluru | Paaru Studio-Media">
     <meta property="twitter:description"
-        content="Bangalore video production company crafting TVCs, brand films, corporate videos, and digital ads. Over 300+ campaigns delivered. Get a free project quote.">
+        content="Broadcast TVCs, digital ads (DVCs), corporate films, UGC creator reels, and 3D animation crafted with cinema precision.">
     <meta name="twitter:image" content="https://paarustudio.com/og-image.jpg">
     <meta property="twitter:image" content="https://paarustudio.com/og-image.jpg">
 
@@ -1111,276 +1111,512 @@
     <!-- Page Header -->
 
     <style>
-        .service-page-hero {
-            position: relative;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 120px 20px 100px;
-            color: #fff;
-            overflow: hidden;
-            background: #000;
+        /* Apple-Inspired Design System & Complete Video Production Styles */
+        :root {
+            --primary-bg: #000000;
+            --secondary-bg: #09090b;
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --card-border: rgba(255, 255, 255, 0.08);
+            --text-primary: #ffffff;
+            --text-secondary: #a1a1aa;
+            --text-muted: #71717a;
+            --accent-color: #FFBF00;
+            --accent-glow: rgba(255, 191, 0, 0.25);
+            --font-heading: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
 
-        .video-hero-bg-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-            pointer-events: none;
-            background: #000;
-        }
-
-        .service-page-hero .hero-bg-iframe {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 100vw;
-            height: 56.25vw;
-            min-height: 100vh;
-            min-width: 177.77vh;
-            transform: translate(-50%, -50%) scale(1.15);
-            opacity: 1;
-            border: none;
-        }
-
-        .video-hero-overlay {
-            position: absolute;
-            inset: 0;
-            background: rgba(0, 5, 15, 0.7);
-            z-index: 1;
-        }
-
-        .hero-content-center {
-            position: relative;
-            z-index: 2;
-            max-width: 900px;
+        .apple-container {
+            max-width: 1240px;
             margin: 0 auto;
+            padding: 0 24px;
         }
 
-        .hero-content-center h1 {
-            font-size: 64px;
+        /* Glassmorphic Pill Badge */
+        .apple-pill-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--accent-color);
+            margin-bottom: 24px;
+        }
+
+        .apple-pill-badge .dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--accent-color);
+            box-shadow: 0 0 8px var(--accent-color);
+            animation: pulseAppleDot 2s infinite;
+        }
+
+        @keyframes pulseAppleDot {
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.4;
+                transform: scale(0.85);
+            }
+        }
+
+        /* Apple Hero Section */
+        .apple-master-hero {
+            position: relative;
+            padding: 160px 0 100px;
+            text-align: center;
+            overflow: hidden;
+            background: radial-gradient(circle at 50% 20%, rgba(255, 191, 0, 0.09) 0%, rgba(0, 0, 0, 0) 70%), #000000;
+        }
+
+        .apple-hero-title {
+            font-size: clamp(38px, 6vw, 76px);
             font-weight: 800;
-            margin-bottom: 20px;
-            letter-spacing: -1px;
-            background: linear-gradient(180deg, #fff 0%, #ff8888 100%);
+            letter-spacing: -2px;
+            line-height: 1.05;
+            margin-bottom: 24px;
+            background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0.72) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        .hero-content-center p {
-            font-size: 20px;
-            color: #d1d5db;
-            margin-bottom: 40px;
+        .apple-hero-title span.highlight {
+            background: linear-gradient(135deg, #FFBF00 0%, #ffdf70 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .apple-hero-sub {
+            font-size: clamp(17px, 2vw, 22px);
+            color: var(--text-secondary);
+            max-width: 860px;
+            margin: 0 auto 36px;
             line-height: 1.6;
+            font-weight: 400;
         }
 
-        .hero-btn-pill {
-            display: inline-block;
-            background: #fff;
-            color: #000;
-            padding: 16px 36px;
-            border-radius: 50px;
-            font-weight: 700;
-            text-decoration: none;
-            font-size: 16px;
-            transition: transform 0.3s;
-        }
-
-        .hero-btn-pill:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
-        }
-
-        .trusted-by-strip {
-            position: absolute;
-            bottom: 30px;
-            left: 0;
-            width: 100%;
-            z-index: 2;
-            text-align: center;
-            padding: 0 20px;
-        }
-
-        .trusted-by-text {
-            font-size: 12px;
-            color: rgba(255, 255, 255, 0.5);
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin-bottom: 20px;
+        .apple-btn-group {
             display: flex;
             align-items: center;
             justify-content: center;
-        }
-
-        .trusted-by-text::before,
-        .trusted-by-text::after {
-            content: "";
-            height: 1px;
-            width: 150px;
-            background: rgba(255, 255, 255, 0.2);
-            margin: 0 15px;
-        }
-
-        .trusted-logos {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 40px;
+            gap: 16px;
             flex-wrap: wrap;
-            opacity: 0.8;
-            filter: grayscale(100%) brightness(200%);
+            margin-bottom: 48px;
         }
 
-        .trusted-logos img {
-            max-height: 40px;
-            width: auto;
-            object-fit: contain;
+        .apple-btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #ffffff;
+            color: #000000;
+            padding: 15px 32px;
+            border-radius: 999px;
+            font-weight: 600;
+            font-size: 15px;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 4px 20px rgba(255, 255, 255, 0.15);
         }
 
-        @media(max-width: 768px) {
-            .hero-content-center h1 {
-                font-size: 42px;
-            }
+        .apple-btn-primary:hover {
+            transform: scale(1.03);
+            background: var(--accent-color);
+            color: #000;
+            box-shadow: 0 6px 24px var(--accent-glow);
+        }
 
-            .trusted-logos {
-                gap: 20px;
+        .apple-btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.06);
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 15px 30px;
+            border-radius: 999px;
+            font-weight: 500;
+            font-size: 15px;
+            text-decoration: none;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .apple-btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: rgba(255, 255, 255, 0.3);
+            transform: scale(1.02);
+        }
+
+        /* Apple Spec Strip */
+        .apple-spec-strip {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            padding: 18px 28px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 999px;
+            max-width: fit-content;
+            margin: 0 auto;
+            backdrop-filter: blur(16px);
+        }
+
+        .spec-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .spec-item strong {
+            color: #ffffff;
+        }
+
+        .spec-divider {
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Apple Specialized Hub Banner */
+        .apple-hubs-banner {
+            background: #000000;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 18px 0;
+            position: sticky;
+            top: 79px;
+            z-index: 99;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+
+        .apple-hubs-list {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .hub-pill {
+            padding: 9px 20px;
+            border-radius: 999px;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            transition: all 0.25s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .hub-pill.active {
+            background: var(--accent-color);
+            color: #000000;
+        }
+
+        .hub-pill.secondary {
+            background: rgba(255, 255, 255, 0.05);
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .hub-pill.secondary:hover {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: rgba(255, 191, 0, 0.4);
+            color: var(--accent-color);
+        }
+
+        /* 3 Dedicated Domain Bento Cards */
+        .domain-bento-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 960px) {
+            .domain-bento-grid {
+                grid-template-columns: 1fr;
             }
+        }
+
+        .domain-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 28px;
+            padding: 36px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            backdrop-filter: blur(12px);
+        }
+
+        .domain-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 191, 0, 0.4);
+            box-shadow: 0 24px 48px rgba(0, 0, 0, 0.7), 0 0 32px rgba(255, 191, 0, 0.1);
+        }
+
+        .domain-card-badge {
+            font-size: 11px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: 12px;
+        }
+
+        .domain-card h3 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 14px;
+            line-height: 1.25;
+        }
+
+        .domain-card p {
+            font-size: 14.5px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+
+        .domain-card-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #000;
+            background: #fff;
+            padding: 12px 24px;
+            border-radius: 999px;
+            font-weight: 600;
+            font-size: 13.5px;
+            text-decoration: none;
+            width: fit-content;
+            transition: all 0.3s ease;
+        }
+
+        .domain-card:hover .domain-card-link {
+            background: var(--accent-color);
+            color: #000;
+            transform: translateX(4px);
+        }
+
+        .apple-section {
+            padding: 90px 0;
+            position: relative;
         }
     </style>
 
-    <section class="hero service-page-hero">
-        <div class="video-hero-bg-container">
-            <img src="video_production_hero_bg.webp" alt="Cinematic Video Production Background" fetchpriority="high"
-                width="1920" height="1080" decoding="async" decoding="async" class="hero-bg-image"
-                style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.65; animation: kenBurnsVP 22s ease-in-out infinite alternate;">
-            <div class="video-hero-overlay"></div>
-        </div>
-        <style>
-            @keyframes kenBurnsVP {
-                0% {
-                    transform: scale(1) translate(0, 0);
-                }
-
-                50% {
-                    transform: scale(1.07) translate(-1.5%, -0.5%);
-                }
-
-                100% {
-                    transform: scale(1.12) translate(1%, 1.5%);
-                }
-            }
-        </style>
-
-
-        <div class="container hero-content-center">
-            <nav aria-label="Breadcrumb" style="margin-bottom: 16px; font-size: 14px; color: rgba(255,255,255,0.6);">
-                <ol style="list-style:none;padding:0;margin:0;display:flex;align-items:center;gap:8px;">
+    <!-- Master Apple-Style Hero -->
+    <header class="apple-master-hero">
+        <div class="apple-container">
+            <nav aria-label="Breadcrumb" style="margin-bottom: 20px; font-size: 13px; color: rgba(255,255,255,0.5);">
+                <ol
+                    style="list-style:none;padding:0;margin:0;display:flex;align-items:center;justify-content:center;gap:8px;">
                     <li><a href="/" style="color:rgba(255,255,255,0.6);text-decoration:none;">Home</a></li>
                     <li style="opacity:0.5;">›</li>
                     <li style="color:#fff;" aria-current="page">Video Production</li>
                 </ol>
             </nav>
-            <h1>Video Production Services in Bangalore</h1>
-            <p>Recognized as a Leader in Cinematic Filmmaking and backed by elite strategic partnerships, we deliver
-                enterprise-ready, premium video production services that scale seamlessly across departments and global
-                campaigns.</p>
-            <a href="/contact" class="hero-btn-pill">Consult Our Experts</a>
-        </div>
 
-        <div class="trusted-by-strip">
-            <div class="trusted-by-text">TRUSTED BY CONGLOMERATES, ENTERPRISES AND STARTUPS ALIKE</div>
-            <div class="trusted-logos">
-                <img src="Logos/Logo_1.png" alt="Onsurity client of Paaru Studio-Media" width="140" height="40"
-                    loading="lazy" decoding="async">
-                <img src="Logos/Logo_2.png" alt="Windowfab client of Paaru Studio-Media" width="140" height="40"
-                    loading="lazy" decoding="async">
-                <img src="toyota_logo.png" alt="Toyota client of Paaru Studio-Media" width="120" height="40"
-                    loading="lazy" decoding="async">
-                <img src="Logos/sugar_fit_logo.png" alt="Sugar Fit client of Paaru Studio-Media Bangalore" width="120"
-                    height="40" loading="lazy" decoding="async" loading="lazy">
+            <div class="apple-pill-badge">
+                <span class="dot"></span> Video Production Services &bull; Bengaluru
+            </div>
+
+            <h1 class="apple-hero-title">
+                Cinema-Grade Craft.<br>
+                <span class="highlight">Every Screen. Every Story.</span>
+            </h1>
+
+            <p class="apple-hero-sub">
+                From national broadcast television commercials (TVCs) and digital video ads (DVCs) to authoritative
+                corporate films,
+                authentic creator UGC reels, luxury 3D product cinematography, and high-octane motion graphics.
+                Paaru Studio-Media brings 11+ years of commercial filmmaking mastery to your brand.
+            </p>
+
+            <div class="apple-btn-group">
+                <a href="/contact" class="apple-btn-primary">Consult Our Production Team →</a>
+                <a href="#services-all" class="apple-btn-secondary">Explore All 8 Formats ↓</a>
+                <a href="/portfolio" class="apple-btn-secondary">View 4K Showreel</a>
+            </div>
+
+            <!-- Apple Spec Strip -->
+            <div class="apple-spec-strip">
+                <div class="spec-item"><strong>ARRI &amp; RED</strong> 8K Sensors</div>
+                <div class="spec-divider"></div>
+                <div class="spec-item"><strong>300+</strong> Commercial Campaigns</div>
+                <div class="spec-divider"></div>
+                <div class="spec-item"><strong>100% ASCI</strong> Broadcast Cleared</div>
+                <div class="spec-divider"></div>
+                <div class="spec-item"><strong>48-Hour</strong> Fast-Track Post Pipeline</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Apple Specialized Hub Navigation Dock -->
+    <nav class="apple-hubs-banner" aria-label="Video Services Sub-navigation">
+        <div class="apple-container">
+            <div class="apple-hubs-list">
+                <span
+                    style="font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; margin-right: 6px;">Specialized
+                    Hubs:</span>
+                <a href="/video-production" class="hub-pill active">Complete Services (Overview)</a>
+                <a href="/tvc-dvc-ugc-videos" class="hub-pill secondary">TVCs, DVCs &amp; UGC Hub ↗</a>
+                <a href="/corporate-video-production" class="hub-pill secondary">Corporate Video Hub ↗</a>
+                <a href="/motion-graphics-animation" class="hub-pill secondary">Motion Graphics &amp; 3D Hub ↗</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Client Trust Marquee Strip -->
+    <section style="padding: 40px 0; background: #050505; border-bottom: 1px solid rgba(255,255,255,0.06);">
+        <div class="apple-container" style="text-align: center;">
+            <p
+                style="font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 20px;">
+                TRUSTED BY LEADING ENTERPRISES, STARTUPS &amp; CONSUMER DISRUPTORS
+            </p>
+            <div
+                style="display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap; opacity: 0.8; filter: grayscale(100%) brightness(190%);">
+                <img src="toyota_logo.png" alt="Toyota client of Paaru Studio-Media" width="110" height="36"
+                    loading="lazy">
+                <img src="marriott_logo.png" alt="Marriott client of Paaru Studio-Media" width="100" height="36"
+                    loading="lazy">
+                <img src="Logos/Logo_1.png" alt="Onsurity client of Paaru Studio-Media" width="130" height="36"
+                    loading="lazy">
+                <img src="Logos/Logo_2.png" alt="Windowfab client of Paaru Studio-Media" width="130" height="36"
+                    loading="lazy">
+                <img src="Logos/sugar_fit_logo.png" alt="Sugar Fit client of Paaru Studio-Media" width="110" height="36"
+                    loading="lazy">
+                <img src="itc_logo.png" alt="ITC client of Paaru Studio-Media" width="90" height="36" loading="lazy">
             </div>
         </div>
     </section>
 
-    <div class="section-divider"></div>
-
-    <!-- Video Production Introduction Section -->
-    <section class="vp-intro-section" style="padding: 90px 0 70px; background: var(--primary-bg, #000);">
-        <div class="container" style="max-width: 1150px; margin: 0 auto; padding: 0 20px;">
-            <div class="vp-intro-header" style="text-align: center; margin-bottom: 40px;">
-                <p
-                    style="color: var(--accent-color, #ffbf00); font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 2.5px; margin-bottom: 12px;">
-                    Full-Service Video Production Agency in Bangalore
-                </p>
+    <!-- Featured 3 Specialized Hubs (Apple Bento Feature Showcase) -->
+    <section class="apple-section" style="padding: 80px 0;">
+        <div class="apple-container">
+            <div style="text-align: center; max-width: 800px; margin: 0 auto 50px;">
+                <div class="apple-pill-badge"><span class="dot"></span> Dedicated Production Studios</div>
                 <h2
-                    style="color: #fff; font-size: clamp(28px, 4vw, 42px); font-weight: 800; line-height: 1.25; margin-bottom: 18px; letter-spacing: -0.5px;">
-                    End-to-End Cinematic Filmmaking &amp; Commercial Video Production
+                    style="font-size: clamp(28px, 4vw, 44px); font-weight: 800; color: #fff; letter-spacing: -1px; margin-bottom: 14px;">
+                    Explore Our Specialized Production Hubs
                 </h2>
-                <div class="underline"
-                    style="margin: 0 auto; background-color: var(--accent-color, #ffbf00); width: 60px; height: 3px;">
-                </div>
+                <p style="color: var(--text-secondary); font-size: 16px;">
+                    Tailored creative directors, specialized camera packages, and distinct post-production pipelines
+                    built for specific commercial outcomes.
+                </p>
             </div>
-            <div class="vp-intro-body"
-                style="color: rgba(255, 255, 255, 0.85); font-size: 17px; line-height: 1.85; max-width: 1020px; margin: 0 auto;">
-                <p style="margin-bottom: 22px;">
-                    As a <strong>video production company in Bangalore</strong>, Paaru Studio-Media
-                    serves visionary enterprise leaders, hyper-growth tech startups, consumer goods manufacturers, and
-                    ambitious direct-to-consumer brands throughout India. Backed by 11+ years of proven commercial
-                    filmmaking expertise, our Bangalore video production agency transforms core brand propositions into
-                    cinematic visual narratives that command audience focus, cultivate trust, and drive measurable
-                    market expansion.
-                </p>
-                <p style="margin-bottom: 22px;">
-                    Our comprehensive in-house production capabilities span every stage of the professional filmmaking
-                    continuum. During <strong>pre-production</strong>, our strategists, creative directors, and
-                    screenwriters develop resonant concepts, detailed storyboards, shooting scripts, and visual
-                    moodboards, while managing casting calls, talent contracts, location scouting across Karnataka, and
-                    production styling. When moving into <strong>filming</strong>, our seasoned cinematographers and
-                    gaffers operate high-end 4K, 6K, and 8K cinema cameras (including RED, ARRI, and Sony FX series),
-                    specialized lighting packages, camera gimbals, cranes, and location acoustic capture to secure
-                    pristine production value.
-                </p>
-                <p style="margin-bottom: 22px;">
-                    Our state-of-the-art <strong>post-production</strong> infrastructure handles precision offline
-                    assembly, narrative pacing, and multi-track audio engineering. Dedicated colorists execute
-                    studio-grade color grading to establish unique mood and visual depth, while our <strong>VFX</strong>
-                    and CGI artists integrate photorealistic visual effects, 2D and 3D motion graphics, kinetic
-                    typography, and digital cleanup. Through a standardized <strong>digital delivery</strong> pipeline,
-                    we deliver flawless masters across broadcast television, OTT platforms, YouTube 4K, and 9:16
-                    vertical cuts optimized for Instagram Reels and digital ad campaigns.
-                </p>
-                <p style="margin-bottom: 0;">
-                    Whether your roadmap requires high-stakes <a href="#corporate-video-production"
-                        style="color: var(--accent-color, #ffbf00); text-decoration: underline; font-weight: 600;">corporate
-                        video production</a>, an emotionally powerful <a href="#brand-film-production"
-                        style="color: var(--accent-color, #ffbf00); text-decoration: underline; font-weight: 600;">brand
-                        film production</a>, or high-impact <a href="#ad-film-production"
-                        style="color: var(--accent-color, #ffbf00); text-decoration: underline; font-weight: 600;">ad
-                        film production in Bangalore</a>, our creative crew ensures seamless delivery from brief to
-                    broadcast. Review our comprehensive <a href="/blog-explainer-videos"
-                        style="color: var(--accent-color, #ffbf00); text-decoration: underline; font-weight: 600;">explainer
-                        video production guide</a>, explore client productions including the <a
-                        href="/case-study-herbalife"
-                        style="color: var(--accent-color, #ffbf00); text-decoration: underline; font-weight: 600;">Herbalife
-                        brand film</a>, the <a href="/case-study-observance"
-                        style="color: var(--accent-color, #ffbf00); text-decoration: underline; font-weight: 600;">Observance
-                        Eye ad film</a>, and the <a href="/case-study-onsurity"
-                        style="color: var(--accent-color, #ffbf00); text-decoration: underline; font-weight: 600;">Onsurity
-                        motion graphics showcase</a>, or discover our next-generation <a href="/ai-video-production"
-                        style="color: var(--accent-color, #ffbf00); text-decoration: underline; font-weight: 600;">AI
-                        video production</a> workflows. Explore our <a href="/portfolio"
-                        style="color: var(--accent-color, #ffbf00); text-decoration: underline; font-weight: 600;">creative
-                        portfolio</a>, explore real ROI metrics across our <a href="/case-studies"
-                        style="color: var(--accent-color, #ffbf00); text-decoration: underline; font-weight: 600;">client
-                        case studies</a>, or <a href="/contact"
-                        style="color: var(--accent-color, #ffbf00); text-decoration: underline; font-weight: 600;">contact
-                        our Bangalore production team</a> to schedule a creative consultation.
-                </p>
+
+            <div class="domain-bento-grid">
+                <!-- Hub 1 -->
+                <div class="domain-card"
+                    style="background: radial-gradient(circle at top left, rgba(255,191,0,0.08) 0%, rgba(255,255,255,0.02) 60%);">
+                    <div>
+                        <div class="domain-card-badge">BROADCAST &amp; CREATOR REELS</div>
+                        <h3>TVCs, DVCs &amp; UGC Videos</h3>
+                        <p>
+                            From national 60-second broadcast television commercials (TVCs) with ASCI clearance to
+                            high-retention OTT digital ads (DVCs)
+                            and viral, high-converting vertical creator UGC reels for Meta and TikTok.
+                        </p>
+                        <ul class="bento-features" style="list-style: none; padding: 0; margin-bottom: 28px;">
+                            <li style="margin-bottom: 8px; font-size: 13.5px; color: rgba(255,255,255,0.85);">✓ National
+                                satellite broadcast standards (Star, Sony, Zee)</li>
+                            <li style="margin-bottom: 8px; font-size: 13.5px; color: rgba(255,255,255,0.85);">✓
+                                Connected TV (CTV) &amp; unskippable YouTube spots</li>
+                            <li style="margin-bottom: 8px; font-size: 13.5px; color: rgba(255,255,255,0.85);">✓ Native
+                                9:16 vertical creator storytelling with 3-second hooks</li>
+                            <li style="margin-bottom: 8px; font-size: 13.5px; color: rgba(255,255,255,0.85);">✓
+                                High-volume creative variant batches for paid media</li>
+                        </ul>
+                    </div>
+                    <a href="/tvc-dvc-ugc-videos" class="domain-card-link">
+                        Explore TVC, DVC &amp; UGC Hub →
+                    </a>
+                </div>
+
+                <!-- Hub 2 -->
+                <div class="domain-card"
+                    style="background: radial-gradient(circle at top left, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.02) 60%);">
+                    <div>
+                        <div class="domain-card-badge">ENTERPRISE AUTHORITY</div>
+                        <h3>Corporate Video Production</h3>
+                        <p>
+                            Cinematic company profiles, executive leadership interviews, investor pitch films, customer
+                            success case studies,
+                            and employer branding videos trusted by Bengaluru's tech leaders and multinational
+                            conglomerates.
+                        </p>
+                        <ul class="bento-features" style="list-style: none; padding: 0; margin-bottom: 28px;">
+                            <li style="margin-bottom: 8px; font-size: 13.5px; color: rgba(255,255,255,0.85);">✓ 100%
+                                strict NDA protocols for confidential R&amp;D</li>
+                            <li style="margin-bottom: 8px; font-size: 13.5px; color: rgba(255,255,255,0.85);">✓
+                                Discreet, multi-cam cinema filming inside active tech parks</li>
+                            <li style="margin-bottom: 8px; font-size: 13.5px; color: rgba(255,255,255,0.85);">✓
+                                Executive teleprompter facilitation &amp; media coaching</li>
+                            <li style="margin-bottom: 8px; font-size: 13.5px; color: rgba(255,255,255,0.85);">✓
+                                Turnaround roadshow reels for investor AGMs</li>
+                        </ul>
+                    </div>
+                    <a href="/corporate-video-production" class="domain-card-link">
+                        Explore Corporate Video Hub →
+                    </a>
+                </div>
+
+                <!-- Hub 3 -->
+                <div class="domain-card"
+                    style="background: radial-gradient(circle at top left, rgba(255,191,0,0.08) 0%, rgba(255,255,255,0.02) 60%);">
+                    <div>
+                        <div class="domain-card-badge">CGI, VFX &amp; 3D RENDERING</div>
+                        <h3>Motion Graphics &amp; Animation</h3>
+                        <p>
+                            High-impact animated explainer videos, photorealistic 3D product CGI, kinetic typography,
+                            and broadcast visual effects
+                            that turn complex SaaS architectures and technical hardware into intuitive visual
+                            experiences.
+                        </p>
+                        <ul class="bento-features" style="list-style: none; padding: 0; margin-bottom: 28px;">
+                            <li style="margin-bottom: 8px; font-size: 13.5px; color: rgba(255,255,255,0.85);">✓
+                                60-second high-conversion explainer framework</li>
+                            <li style="margin-bottom: 8px; font-size: 13.5px; color: rgba(255,255,255,0.85);">✓ CAD to
+                                photorealistic 3D product modeling (C4D/Blender)</li>
+                            <li style="margin-bottom: 8px; font-size: 13.5px; color: rgba(255,255,255,0.85);">✓
+                                Isometric SaaS UI/UX interface screencasts</li>
+                            <li style="margin-bottom: 8px; font-size: 13.5px; color: rgba(255,255,255,0.85);">✓
+                                Broadcast title sequences &amp; dynamic kinetic typography</li>
+                        </ul>
+                    </div>
+                    <a href="/motion-graphics-animation" class="domain-card-link">
+                        Explore Motion Graphics Hub →
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -1754,7 +1990,10 @@
     <section class="services-overview-intro yellow-strip-section">
         <div class="container">
             <div class="section-header">
-                <h2>Our Video Production Services</h2>
+                <p
+                    style="color: var(--accent-color, #ffbf00); font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px;">
+                    Full-Spectrum Video Production House</p>
+                <h2>Video Production Services</h2>
                 <div class="underline"></div>
             </div>
 
@@ -1762,31 +2001,31 @@
                 style="display: flex; flex-wrap: wrap; align-items: center; gap: 80px; margin-bottom: 40px; padding: 40px 0;">
                 <div class="intro-text" style="flex: 1 1 500px;">
                     <h3
-                        style="font-size: 48px; margin-bottom: 30px; font-weight: 800; line-height: 1.2; letter-spacing: -1px;">
-                        Corporate Video Production in <span
-                            style="display: block; color: rgba(255,255,255,0.7);">Bangalore</span></h3>
+                        style="font-size: 44px; margin-bottom: 25px; font-weight: 800; line-height: 1.2; letter-spacing: -1px;">
+                        Video Production in <span style="display: block; color: rgba(255,255,255,0.7);">Bangalore &amp;
+                            Pan-India</span></h3>
                     <p
-                        style="font-size: 22px; margin-bottom: 25px; line-height: 1.5; color: #fff; font-weight: 400; opacity: 0.95;">
-                        As a premier video production house in Bangalore, we specialize in high-impact storytelling that
-                        connects brands with their audiences. Our team at Paaru Studio-Media handles every step of the
-                        filmmaking process—from creative concept and scriptwriting to filming, post-production, and
-                        final delivery for clients in Bengaluru and beyond.
+                        style="font-size: 20px; margin-bottom: 20px; line-height: 1.6; color: #fff; font-weight: 400; opacity: 0.95;">
+                        As a premier commercial video production house in Bangalore, we specialize in high-impact visual
+                        storytelling across all business dimensions. From high-octane national TVCs and high-conversion
+                        OTT DVCs to enterprise corporate films, authentic creator UGC reels, luxury 3D product
+                        cinematography, and 2D/3D animated motion graphics.
                     </p>
-                    <p style="font-size: 20px; line-height: 1.6; color: #fff; opacity: 0.85; font-weight: 300;">
-                        Whether you need dynamic social media reels, compelling corporate documentaries, or breathtaking
-                        commercials, our expert video production team utilizes state-of-the-art equipment and cinematic
-                        techniques to ensure maximum business value and exceptional visual quality.
+                    <p style="font-size: 18px; line-height: 1.6; color: #fff; opacity: 0.85; font-weight: 300;">
+                        Our unified team handles every milestone—creative ideation, ASCI script compliance, talent
+                        casting, cinema-package filming, high-end CGI, DaVinci Resolve color grading, and multi-platform
+                        omnichannel mastering.
                     </p>
                 </div>
                 <div class="intro-video" style="flex: 1 1 300px; display: flex; justify-content: center;">
                     <div class="reel" style="width: 100%; max-width: 315px;">
                         <div class="video-embed" data-video-id="uLb9N7Otl0o">
                             <button class="video-poster"
-                                aria-label="Play reel – Corporate Video Production Reel by Paaru Studio-Media Bangalore"
+                                aria-label="Play reel – Commercial Video Production Reel by Paaru Studio-Media Bangalore"
                                 style="background-image: url('https://i.ytimg.com/vi/uLb9N7Otl0o/maxresdefault.jpg')"></button>
                         </div>
                         <p style="font-size: 13px; color: #fff; margin-top: 15px; text-align: center; opacity: 0.85;">
-                            Watch our corporate video reel — Paaru Studio-Media, Bangalore.
+                            Watch our master commercial reel — Paaru Studio-Media, Bangalore.
                         </p>
 
                     </div>
@@ -1885,612 +2124,706 @@
 
     <div class="section-divider"></div>
 
-    <section class="services-overview-grid" style="padding: 100px 0 80px; background: var(--primary-bg, #000);">
-        <div class="container">
-            <div class="section-header" style="text-align: center; margin-bottom: 60px;">
-                <h2 style="color: #fff;">Types of Video Production We Specialize In</h2>
-                <div class="underline" style="margin: 15px auto 0; background-color: var(--accent-color);"></div>
+    <!-- Complete 8-Part Video Production Services Bento Grid -->
+    <section id="services-all" class="apple-section" style="padding: 100px 0; background: #000;">
+        <div class="apple-container">
+            <div style="text-align: center; max-width: 820px; margin: 0 auto 50px;">
+                <div class="apple-pill-badge"><span class="dot"></span> 8 Production Disciplines</div>
+                <h2
+                    style="font-size: clamp(30px, 4.5vw, 48px); font-weight: 800; color: #fff; letter-spacing: -1.5px; margin-bottom: 16px; line-height: 1.15;">
+                    Every Video Format.<br><span style="color: var(--accent-color, #ffbf00);">Engineered for Maximum
+                        Commercial Impact.</span>
+                </h2>
+                <p style="color: var(--text-secondary, rgba(255,255,255,0.7)); font-size: 16.5px; line-height: 1.6;">
+                    Whether launching on national satellite television, dominating OTT streaming, engaging
+                    high-converting vertical feeds, or winning enterprise boardrooms — our technical and creative teams
+                    deliver turnkey excellence.
+                </p>
             </div>
-            <div class="services-grid video-production-grid">
-                <div id="ad-film-production" class="service-item">
-                    <div class="service-banner" style="border-radius: 8px; overflow: hidden;">
-                        <img loading="lazy" decoding="async" src="video_pro.webp"
-                            alt="TV commercials and digital ad film production by Paaru Studio-Media Bangalore"
-                            style="width: 100%; height: 100%; object-fit: cover;" width="120" height="80">
-                    </div>
-                    <div class="service-content">
-                        <h3>Commercials &amp; TV Ad Films</h3>
-                        <p>Cinematic television commercials and high-conversion digital video ads engineered for
-                            broadcast television and OTT streaming distribution. From concept scripting and celebrity
-                            casting to cinema camera packages and broadcast compliance, we produce ad films that
-                            maximize brand recall.</p>
-                        <ul class="service-features">
-                            <li>Broadcast TV Commercials (TVCs)</li>
-                            <li>Digital Ad Films &amp; YouTube Bumpers</li>
-                            <li>High-Impact Product Launch Films</li>
-                            <li>Brand Campaign Anthems</li>
-                            <li>Scriptwriting, Storyboarding &amp; Clearances</li>
-                            <li>Cinema-Grade Post-Production &amp; VFX</li>
+
+            <div class="services-bento-grid">
+                <!-- 1. TVCs -->
+                <div class="service-bento-card">
+                    <div>
+                        <span class="card-badge">BROADCAST ADVERTISING</span>
+                        <h3>Television Commercials (TVCs)</h3>
+                        <p>High-concept broadcast ad films designed for national networks and regional satellite
+                            channels across India with stringent standards compliance.</p>
+                        <ul>
+                            <li>ASCI advertising code &amp; legal clearances</li>
+                            <li>Full-frame 8K/4K cinema camera packages</li>
+                            <li>EBU R128 loudness normalization (-24 LKFS)</li>
+                            <li>ProRes 4444 / 422 HQ broadcast delivery</li>
+                            <li>Pan-India multilingual adaptations &amp; dubbing</li>
                         </ul>
-                        <a href="/portfolio" class="service-link">View Ad Portfolio →</a>
                     </div>
+                    <a href="/tvc-dvc-ugc-videos" class="card-btn">Explore TVC Production →</a>
                 </div>
 
-                <div id="corporate-video-production" class="service-item">
-                    <div class="service-banner" style="border-radius: 8px; overflow: hidden;">
-                        <img loading="lazy" decoding="async" src="youtube_social_media.webp"
-                            alt="Corporate brand films and company profile video production Bangalore"
-                            style="width: 100%; height: 100%; object-fit: cover;" width="400" height="267">
-                    </div>
-                    <div class="service-content">
-                        <h3>Corporate Video Production</h3>
-                        <p>Authoritative corporate films, leadership profiles, and investor videos tailored for
-                            Bengaluru's technology enterprises, multinational conglomerates, and fast-scaling
-                            organizations. Designed to build credibility, inspire stakeholders, and attract top-tier
-                            talent.</p>
-                        <ul class="service-features">
-                            <li>Corporate Documentaries &amp; Company Profiles</li>
-                            <li>Executive Leadership &amp; Founder Stories</li>
-                            <li>Investor Presentations &amp; Annual Reports</li>
-                            <li>Client Testimonials &amp; Case Study Films</li>
-                            <li>Internal Communication &amp; Global Onboarding</li>
-                            <li>Corporate Event Coverage &amp; Summit Recaps</li>
+                <!-- 2. DVCs -->
+                <div class="service-bento-card">
+                    <div>
+                        <span class="card-badge">OTT &amp; CONNECTED TV</span>
+                        <h3>Digital Video Commercials (DVCs)</h3>
+                        <p>High-bitrate, narrative-driven digital ads optimized for Disney+ Hotstar, JioCinema, SonyLIV,
+                            YouTube, and connected smart TVs.</p>
+                        <ul>
+                            <li>Non-skippable 15s &amp; 30s narrative hooks</li>
+                            <li>Ultra-HD 4K HDR master exports</li>
+                            <li>Targeted demographic messaging &amp; cutdowns</li>
+                            <li>High-conversion call-to-action integration</li>
+                            <li>Multi-platform streaming bitrate compliance</li>
                         </ul>
-                        <a href="/portfolio" class="service-link">View Corporate Reel →</a>
                     </div>
+                    <a href="/tvc-dvc-ugc-videos" class="card-btn">Explore DVC Production →</a>
                 </div>
 
-                <div id="brand-film-production" class="service-item">
-                    <div class="service-banner" style="border-radius: 8px; overflow: hidden;">
-                        <img loading="lazy" decoding="async" src="lifestyle_shoot_banner.webp"
-                            alt="Cinematic brand film production and visual storytelling by Paaru Studio-Media"
-                            style="width: 100%; height: 100%; object-fit: cover;" width="400" height="267">
+                <!-- 3. UGC Videos -->
+                <div class="service-bento-card">
+                    <div>
+                        <span class="card-badge">SOCIAL &amp; PERFORMANCE ROAS</span>
+                        <h3>UGC &amp; Creator Video Ads</h3>
+                        <p>Authentic, thumb-stopping vertical videos produced with vetted creators to slash Customer
+                            Acquisition Cost (CAC) on Meta and TikTok.</p>
+                        <ul>
+                            <li>Native 9:16 vertical smartphone format</li>
+                            <li>3-second psychological hook retention</li>
+                            <li>Rapid batch delivery (10–25 variants/sprint)</li>
+                            <li>A/B testing creative variations for ads</li>
+                            <li>Conversion-engineered unboxings &amp; reviews</li>
+                        </ul>
                     </div>
-                    <div class="service-content">
+                    <a href="/tvc-dvc-ugc-videos" class="card-btn">Explore UGC Video Hub →</a>
+                </div>
+
+                <!-- 4. Corporate Video Production -->
+                <div class="service-bento-card">
+                    <div>
+                        <span class="card-badge">ENTERPRISE &amp; LEADERSHIP</span>
+                        <h3>Corporate Films &amp; Documentaries</h3>
+                        <p>Authoritative corporate films, leadership interviews, and investor presentations tailored for
+                            tech enterprises, MNCs, and fast-scaling organizations.</p>
+                        <ul>
+                            <li>100% strict NDA protocols for confidential IP</li>
+                            <li>Multi-camera cinema filming in active tech parks</li>
+                            <li>Executive teleprompter facilitation &amp; media prep</li>
+                            <li>Investor pitch films &amp; AGM roadshow reels</li>
+                            <li>Client case studies &amp; employer branding</li>
+                        </ul>
+                    </div>
+                    <a href="/corporate-video-production" class="card-btn">Explore Corporate Hub →</a>
+                </div>
+
+                <!-- 5. Brand Films & Anthems -->
+                <div class="service-bento-card">
+                    <div>
+                        <span class="card-badge">BRAND STORYTELLING</span>
                         <h3>Brand Films &amp; Cinematic Anthems</h3>
-                        <p>Emotion-driven brand anthems and cinematic short films that define your core identity. We
-                            craft visually compelling narratives grounded in cultural nuance, human emotion, and
-                            distinct aesthetic direction that transform casual viewers into loyal brand advocates.</p>
-                        <ul class="service-features">
-                            <li>Cinematic Brand Anthems &amp; Manifestos</li>
-                            <li>Heritage &amp; Mission Storytelling</li>
-                            <li>Culture &amp; Philosophy Showcases</li>
-                            <li>Bespoke Documentary Storytelling</li>
-                            <li>Cinematic Location Direction</li>
-                            <li>Custom Audio Scoring &amp; Sound Design</li>
+                        <p>Emotion-driven manifestos and cinematic short films that articulate your core brand identity
+                            and transform casual viewers into advocates.</p>
+                        <ul>
+                            <li>Deep narrative development &amp; scriptwriting</li>
+                            <li>Artistic location scouting across India</li>
+                            <li>Bespoke orchestral scoring &amp; sound design</li>
+                            <li>ACES color management &amp; film emulation</li>
+                            <li>High emotional resonance storytelling</li>
                         </ul>
-                        <a href="/portfolio" class="service-link">View Brand Films →</a>
                     </div>
+                    <a href="/portfolio" class="card-btn">View Brand Showreel →</a>
+                </div>
+
+                <!-- 6. Product Cinematography -->
+                <div class="service-bento-card">
+                    <div>
+                        <span class="card-badge">E-COMMERCE &amp; LUXURY</span>
+                        <h3>Product Videos &amp; D2C Shoots</h3>
+                        <p>Precision 360-degree turntable cinematography, macro liquid effects, and dynamic feature
+                            walkthroughs optimized for Amazon, Shopify, and quick-commerce.</p>
+                        <ul>
+                            <li>360° motorized robotic camera moves</li>
+                            <li>Macro probe lens &amp; 120fps high-speed capture</li>
+                            <li>Acoustic-treated studio tabletop soundstage</li>
+                            <li>Amazon A+ video optimization &amp; cutdowns</li>
+                            <li>Interactive feature demonstrations</li>
+                        </ul>
+                    </div>
+                    <a href="/ecommerce" class="card-btn">Explore Product Shoots →</a>
+                </div>
+
+                <!-- 7. Animated Explainers -->
+                <div class="service-bento-card">
+                    <div>
+                        <span class="card-badge">SAAS &amp; FINTECH EXPLAINERS</span>
+                        <h3>2D &amp; 3D Animated Explainers</h3>
+                        <p>Clear, engaging animated explainer videos that translate complex software platforms, FinTech
+                            architectures, and B2B workflows into intuitive visuals.</p>
+                        <ul>
+                            <li>60-second high-conversion script architecture</li>
+                            <li>Isometric SaaS UI/UX interface screencasts</li>
+                            <li>Custom vector illustration &amp; character animation</li>
+                            <li>Broadcast voiceover casting in 12+ languages</li>
+                            <li>High-retention visual metaphors</li>
+                        </ul>
+                    </div>
+                    <a href="/motion-graphics-animation" class="card-btn">Explore Animated Videos →</a>
+                </div>
+
+                <!-- 8. Motion Graphics & VFX -->
+                <div class="service-bento-card">
+                    <div>
+                        <span class="card-badge">CGI &amp; VISUAL EFFECTS</span>
+                        <h3>Motion Graphics &amp; 3D CGI</h3>
+                        <p>Photorealistic 3D product CGI rendered from CAD files, broadcast title packages, kinetic
+                            typography, and seamless visual effects compositing.</p>
+                        <ul>
+                            <li>Cinema 4D, Blender, Redshift &amp; Octane pipelines</li>
+                            <li>CAD to photorealistic 3D product rendering</li>
+                            <li>Kinetic typography for muted social autoplay</li>
+                            <li>Green screen chroma keying &amp; clean-up</li>
+                            <li>Broadcast title sequences &amp; 3D logo reveals</li>
+                        </ul>
+                    </div>
+                    <a href="/motion-graphics-animation" class="card-btn">Explore Motion Graphics →</a>
                 </div>
             </div>
 
-            <!-- Specialized Video Production Formats Grid -->
-            <div class="video-formats-grid"
-                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; margin-top: 50px;">
-                <div class="format-card"
-                    style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,191,0,0.22); border-radius: 16px; padding: 32px; display: flex; flex-direction: column; justify-content: space-between; transition: all 0.3s ease;">
-                    <div>
-                        <h4
-                            style="color: #fff; font-size: 20px; font-weight: 700; margin-bottom: 12px; line-height: 1.35;">
-                            Product Videos &amp; E-Commerce Shoots</h4>
-                        <p
-                            style="color: rgba(255,255,255,0.75); font-size: 14.5px; line-height: 1.7; margin-bottom: 16px;">
-                            High-definition 360-degree product cinematography, feature walkthroughs, and unboxing reels
-                            tailored for Amazon, Shopify, Flipkart, and digital performance advertising funnels.
-                            Engineered to clarify product utility, answer buyer questions, and boost conversion rates.
-                        </p>
-                        <ul
-                            style="color: rgba(255,255,255,0.7); font-size: 13.5px; line-height: 1.7; padding-left: 20px; margin-bottom: 20px;">
-                            <li>360° product cinematography</li>
-                            <li>Macro detail capture &amp; studio lighting</li>
-                            <li>Unboxing &amp; lifestyle usage demos</li>
-                            <li>Amazon A+ video optimization</li>
-                        </ul>
-                    </div>
-                    <a href="/ecommerce"
-                        style="color: var(--accent-color, #ffbf00); text-decoration: none; font-weight: 700; font-size: 14px;">Explore
-                        E-Commerce Shoots →</a>
+            <!-- Apple Pro Cinema Tech Specs -->
+            <div style="margin-top: 80px; padding-top: 60px; border-top: 1px solid rgba(255,255,255,0.08);">
+                <div style="text-align: center; max-width: 700px; margin: 0 auto 40px;">
+                    <div class="apple-pill-badge"><span class="dot"></span> Technical Infrastructure</div>
+                    <h3
+                        style="font-size: clamp(24px, 3.5vw, 36px); font-weight: 800; color: #fff; letter-spacing: -0.5px; margin-bottom: 10px;">
+                        The Pro Production Spec Sheet
+                    </h3>
+                    <p style="color: var(--text-secondary); font-size: 15px;">
+                        We shoot exclusively on certified cinema equipment and master in calibrated post-production
+                        suites.
+                    </p>
                 </div>
 
-                <div class="format-card"
-                    style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,191,0,0.22); border-radius: 16px; padding: 32px; display: flex; flex-direction: column; justify-content: space-between; transition: all 0.3s ease;">
-                    <div>
-                        <h4
-                            style="color: #fff; font-size: 20px; font-weight: 700; margin-bottom: 12px; line-height: 1.35;">
-                            Explainer Videos &amp; 2D/3D Animation</h4>
-                        <p
-                            style="color: rgba(255,255,255,0.75); font-size: 14.5px; line-height: 1.7; margin-bottom: 16px;">
-                            Engaging animated explainer videos and technical motion graphics that translate complex
-                            software architectures, FinTech workflows, B2B services, and hardware products into clear,
-                            easily digestible visual walkthroughs that convert prospects across landing pages.
-                        </p>
-                        <ul
-                            style="color: rgba(255,255,255,0.7); font-size: 13.5px; line-height: 1.7; padding-left: 20px; margin-bottom: 20px;">
-                            <li>2D &amp; 3D character animation</li>
-                            <li>SaaS platform walkthroughs</li>
-                            <li>Infographic &amp; kinetic typography</li>
-                            <li>Broadcast voiceover recording</li>
+                <div class="specs-grid">
+                    <div class="specs-card">
+                        <h4>🎥 Cinema Camera Packages</h4>
+                        <ul>
+                            <li>ARRI Alexa Mini LF Large-Format</li>
+                            <li>RED V-Raptor 8K VV &amp; Komodo 6K</li>
+                            <li>Sony FX6 &amp; FX9 Full-Frame Cinema</li>
+                            <li>DJI Ronin 4D 4-Axis Cinema Rig</li>
+                            <li>Certified 4K/5.1K Aerial Cinema Drone</li>
                         </ul>
                     </div>
-                    <div style="display: flex; flex-direction: column; gap: 8px;">
-                        <a href="/portfolio"
-                            style="color: var(--accent-color, #ffbf00); text-decoration: none; font-weight: 700; font-size: 14px;">View
-                            Animated Portfolio →</a>
-                        <a href="/blog-explainer-videos"
-                            style="color: rgba(255,255,255,0.7); text-decoration: underline; font-size: 13px;">Explainer
-                            Video Guide for Modern Brands →</a>
-                    </div>
-                </div>
 
-                <div class="format-card"
-                    style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,191,0,0.22); border-radius: 16px; padding: 32px; display: flex; flex-direction: column; justify-content: space-between; transition: all 0.3s ease;">
-                    <div>
-                        <h4
-                            style="color: #fff; font-size: 20px; font-weight: 700; margin-bottom: 12px; line-height: 1.35;">
-                            Video Podcasts &amp; Multi-Cam Interviews</h4>
-                        <p
-                            style="color: rgba(255,255,255,0.75); font-size: 14.5px; line-height: 1.7; margin-bottom: 16px;">
-                            Studio-grade video podcast production, executive fireside chats, and panel discussions
-                            filmed in acoustic-treated studio environments with broadcast microphones, multi-angle 4K
-                            switching, and short-form social cutdowns for YouTube and LinkedIn.
-                        </p>
-                        <ul
-                            style="color: rgba(255,255,255,0.7); font-size: 13.5px; line-height: 1.7; padding-left: 20px; margin-bottom: 20px;">
-                            <li>Multi-camera studio filming</li>
-                            <li>Broadcast acoustic recording</li>
-                            <li>Full episodic podcast editing</li>
-                            <li>Social bite-sized cutdowns</li>
+                    <div class="specs-card">
+                        <h4>🔍 Cinema Optics &amp; Glass</h4>
+                        <ul>
+                            <li>Cooke Anamorphic /i Full Frame Plus</li>
+                            <li>Zeiss Supreme Prime T1.5 Lens Set</li>
+                            <li>Angénieux EZ Cine Zoom Packages</li>
+                            <li>Laowa 24mm f/14 2X Macro Probe</li>
+                            <li>Tilta Mirage Matte Boxes &amp; VNDs</li>
                         </ul>
                     </div>
-                    <a href="/#podcast-episodes"
-                        style="color: var(--accent-color, #ffbf00); text-decoration: none; font-weight: 700; font-size: 14px;">Listen
-                        &amp; Watch Episodes →</a>
+
+                    <div class="specs-card">
+                        <h4>🎨 Color Science &amp; Finishing</h4>
+                        <ul>
+                            <li>ACES 1.3 Color-Managed Workflow</li>
+                            <li>DaVinci Resolve Studio 19 Advanced</li>
+                            <li>Apple ProRes 4444 XQ &amp; Avid DNxHR</li>
+                            <li>Calibrated Flanders Scientific OLED</li>
+                            <li>Full DCI-P3 &amp; Rec. 2020 HDR Delivery</li>
+                        </ul>
+                    </div>
+
+                    <div class="specs-card">
+                        <h4>🎙️ Sound &amp; Broadcast Audio</h4>
+                        <ul>
+                            <li>Sound Devices 833 8-Track Field Recorder</li>
+                            <li>Sennheiser MKH 416 &amp; DPA 4060 Lavs</li>
+                            <li>EBU R128 (-24 LKFS) &amp; -14 LUFS Mastering</li>
+                            <li>Dolby Atmos &amp; 5.1 Surround Mixing</li>
+                            <li>Acoustic-Treated Voiceover Soundstage</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="section-divider"></div>
+    </section>
 
-        <!-- Broadcast & Distribution Platforms (Adopted from High-Ranking E-Commerce Architecture) -->
-        <section class="broadcast-platforms-section" style="padding: 90px 0; background: #0a0a0a;">
+    <div class="section-divider"></div>
+
+    <!-- Broadcast & Distribution Platforms (Adopted from High-Ranking E-Commerce Architecture) -->
+    <section class="broadcast-platforms-section" style="padding: 90px 0; background: #0a0a0a;">
+        <div class="container">
+            <div class="section-header" style="text-align: center; margin-bottom: 40px;">
+                <p
+                    style="color: var(--accent-color, #ffbf00); font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px;">
+                    Omnichannel Reach</p>
+                <h2
+                    style="font-size: clamp(28px, 4vw, 42px); color: #fff; font-weight: 800; line-height: 1.25; margin-bottom: 16px;">
+                    BROADCAST &amp; DISTRIBUTION EXPERTISE</h2>
+                <p style="color: rgba(255,255,255,0.75); font-size: 16px; max-width: 780px; margin: 0 auto;">From
+                    Indian satellite television clearances to ultra-targeted vertical digital ads, our technical
+                    team packages every production master to satisfy stringent broadcast and platform delivery
+                    benchmarks.</p>
+                <div class="underline"
+                    style="margin: 20px auto 0; background-color: var(--accent-color, #ffbf00); width: 60px; height: 3px;">
+                </div>
+            </div>
+            <div class="platform-grid">
+                <div class="platform-card">
+                    <h3>Television Commercials (TVCs)</h3>
+                    <p>Broadcast-ready commercial ad film production designed for national networks and regional
+                        satellite channels across India.</p>
+                    <ul>
+                        <li>ASCI advertising code &amp; legal clearances</li>
+                        <li>Apple ProRes 422 HQ &amp; 4444 delivery</li>
+                        <li>EBU R128 loudness normalization (-24 LKFS)</li>
+                        <li>Regional linguistic adaptations &amp; dubbing</li>
+                        <li>Stereo &amp; 5.1 surround sound mastering</li>
+                    </ul>
+                </div>
+                <div class="platform-card">
+                    <h3>OTT &amp; Connected TV (CTV)</h3>
+                    <p>High-bitrate cinematic ad creative optimized for Disney+ Hotstar, JioCinema, SonyLIV, and
+                        smart TV streaming audiences.</p>
+                    <ul>
+                        <li>4K Ultra-HD HDR master exports</li>
+                        <li>Non-skippable 15s &amp; 30s narrative hooks</li>
+                        <li>Premium visual effects (VFX) &amp; CGI grading</li>
+                        <li>Targeted demographic messaging</li>
+                        <li>Multi-platform streaming compliance</li>
+                    </ul>
+                </div>
+                <div class="platform-card">
+                    <h3>Digital Ads &amp; Social Feeds</h3>
+                    <p>Thumb-stopping vertical video cutdowns engineered for Meta (Instagram/Facebook), YouTube
+                        Shorts, and LinkedIn performance campaigns.</p>
+                    <ul>
+                        <li>Native 9:16 vertical &amp; 1:1 square cutdowns</li>
+                        <li>3-second hook retention architecture</li>
+                        <li>Kinetic typography for muted autoplay</li>
+                        <li>Rapid A/B creative testing variants</li>
+                        <li>Integrated conversion tracking calls-to-action</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- How It Works Timeline -->
+    <section id="how-it-works" class="timeline-section">
+        <div class="container">
+            <h2 class="timeline-main-title">HOW IT WORKS</h2>
+
+            <div class="timeline-wrapper">
+                <div class="timeline-line-bg"></div>
+                <div class="timeline-line-progress"></div>
+
+                <!-- Step 01 -->
+                <div class="timeline-row">
+                    <div class="timeline-col timeline-left">
+                        <h3>Discovery &<br>Consultation</h3>
+                    </div>
+                    <div class="timeline-point">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-col timeline-right">
+                        <p>We begin by understanding your brand, goals, and target audience. Our team conducts
+                            thorough
+                            research to create a tailored strategy that aligns with your specific objectives.</p>
+                    </div>
+                </div>
+
+                <!-- Step 02 -->
+                <div class="timeline-row">
+                    <div class="timeline-col timeline-left">
+                        <h3>Concept<br>Development</h3>
+                    </div>
+                    <div class="timeline-point">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-col timeline-right">
+                        <p>Our creative team develops compelling concepts, storyboards, and scripts. We fine-tune
+                            every
+                            detail to ensure the narrative resonates with your audience and reflects your brand
+                            identity.</p>
+                    </div>
+                </div>
+
+                <!-- Step 03 -->
+                <div class="timeline-row">
+                    <div class="timeline-col timeline-left">
+                        <h3>Professional<br>Production</h3>
+                    </div>
+                    <div class="timeline-point">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-col timeline-right">
+                        <p>With state-of-the-art equipment and an experienced crew, we bring your vision to life.
+                            From
+                            cinematography to lighting and sound, we maintain the highest standards of production
+                            quality.</p>
+                    </div>
+                </div>
+
+                <!-- Step 04 -->
+                <div class="timeline-row">
+                    <div class="timeline-col timeline-left">
+                        <h3>Post-Production<br>& VFX</h3>
+                    </div>
+                    <div class="timeline-point">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-col timeline-right">
+                        <p>Our editors and VFX artists craft the final masterpiece. We handle color grading, sound
+                            design, motion graphics, and visual effects to create a polished, high-impact final
+                            product.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 05 -->
+                <div class="timeline-row">
+                    <div class="timeline-col timeline-left">
+                        <h3>Delivery &<br>Launch</h3>
+                    </div>
+                    <div class="timeline-point">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-col timeline-right">
+                        <p>We provide multiple formats optimized for all platforms. Our team also offers strategic
+                            advice on deployment to ensure your video achieves maximum reach and business value.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <div class="section-divider"></div>
+
+    <section id="faq" class="faq-section">
+        <div class="faq-container">
+            <div class="faq-header">
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-list">
+
+                <div class="faq-item" onclick="this.classList.toggle('active')">
+                    <div class="faq-question">
+                        <h3 style="font-size:inherit;font-weight:inherit;margin:0;color:inherit;font-family:inherit;">
+                            How much does corporate video production or ad film making cost in Bangalore?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Commercial video production pricing in Bangalore typically ranges from ₹1,00,000 for focused
+                        digital promo videos and executive interviews to ₹3,50,000 – ₹15,00,000+ for large-scale
+                        television commercials, multi-location brand films, and high-VFX 3D product launches. Total
+                        costs depend directly on crew size, cinema camera configurations, location permits across
+                        Bengaluru, talent casting, set design, and the level of post-production required. We provide
+                        transparent, itemized production budgets within 24 hours of your initial creative briefing.
+                    </div>
+                </div>
+
+                <div class="faq-item" onclick="this.classList.toggle('active')">
+                    <div class="faq-question">
+                        <h3 style="font-size:inherit;font-weight:inherit;margin:0;color:inherit;font-family:inherit;">
+                            How long does the video production process typically take from script to delivery?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Turnaround timelines depend on production complexity. A corporate profile, customer
+                        testimonial, or social media campaign typically requires 10 to 18 business days from kickoff
+                        through final delivery. Larger commercial TVCs and multi-location brand films normally run 3
+                        to 5 weeks to accommodate script iterations, casting calls, location scouting across
+                        Karnataka, and detailed VFX mastering. For time-sensitive product launches and press
+                        announcements, we also offer an expedited production track with dedicated daily edits.
+                    </div>
+                </div>
+
+                <div class="faq-item" onclick="this.classList.toggle('active')">
+                    <div class="faq-question">
+                        <h3 style="font-size:inherit;font-weight:inherit;margin:0;color:inherit;font-family:inherit;">
+                            What sets Paaru Studio-Media apart from other video production companies in Bangalore?
+                        </h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Unlike conventional agencies that outsource technical execution or single-discipline
+                        production shops with limited strategic foresight, Paaru Studio-Media pairs in-house
+                        creative directors and screenwriters with our own cinema-grade camera packages, lighting
+                        gear, and editing suites. This unified model guarantees visual coherence, faster revision
+                        cycles, broadcast-grade QC, and competitive pricing without middleman markups. Our 11+ years
+                        of commercial production experience in Bangalore spans Fortune 500 enterprises, tech
+                        unicorns, and direct-to-consumer disruptors.
+                    </div>
+                </div>
+
+                <div class="faq-item" onclick="this.classList.toggle('active')">
+                    <div class="faq-question">
+                        <h3 style="font-size:inherit;font-weight:inherit;margin:0;color:inherit;font-family:inherit;">
+                            Do you handle end-to-end creative ideation, scriptwriting, and location scouting in
+                            Bangalore?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Yes, our production team oversees every milestone from raw creative spark to final master
+                        delivery. If you begin with just an open concept or business goal, our screenwriters craft
+                        compelling shooting scripts, visual moodboards, and scene-by-scene storyboards. We also
+                        manage talent auditions, SAG/artist contracts, art direction, and municipal filming permits
+                        across tech parks, industrial complexes, studio soundstages, and heritage outdoor settings
+                        throughout Bangalore.
+                    </div>
+                </div>
+
+                <div class="faq-item" onclick="this.classList.toggle('active')">
+                    <div class="faq-question">
+                        <h3 style="font-size:inherit;font-weight:inherit;margin:0;color:inherit;font-family:inherit;">
+                            What camera systems, lighting gear, and sound equipment does your production crew use?
+                        </h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        We shoot exclusively on industry-standard digital cinema platforms, including RED Digital
+                        Cinema (V-Raptor, Komodo), ARRI Alexa Mini LF, and Sony FX6/FX9 systems paired with high-end
+                        cinema prime lenses (Cooke, Zeiss, Sigma Cine). Our technical arsenal includes Aputure and
+                        ARRI lighting grids, Ronin 2 and RS3 Pro motorized gimbals, dolly tracks, jib cranes,
+                        certified aerial drone cinematography, and Sennheiser/Sound Devices wireless multitrack
+                        acoustic field recorders.
+                    </div>
+                </div>
+
+                <div class="faq-item" onclick="this.classList.toggle('active')">
+                    <div class="faq-question">
+                        <h3 style="font-size:inherit;font-weight:inherit;margin:0;color:inherit;font-family:inherit;">
+                            Can you deliver vertical video cutdowns optimized for Instagram Reels, YouTube Shorts,
+                            and LinkedIn?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Every production package includes multi-format digital deliveries. Alongside primary 16:9
+                        widescreen 4K masters for YouTube and broadcast, our post-production editors export native
+                        9:16 vertical cutdowns, 1:1 square edits, and 4:5 social teasers with burned-in kinetic
+                        typography and platform-specific audio loudness normalization (-14 LUFS). This ensures
+                        maximum audience retention across organic feeds and paid social ad campaigns.
+                    </div>
+                </div>
+
+                <div class="faq-item" onclick="this.classList.toggle('active')">
+                    <div class="faq-question">
+                        <h3 style="font-size:inherit;font-weight:inherit;margin:0;color:inherit;font-family:inherit;">
+                            Do you assist with broadcast clearances and OTT technical compliance for TV commercials?
+                        </h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Yes. When producing television commercials (TVCs) and OTT advertisements for networks like
+                        Disney+ Hotstar, SonyLIV, JioCinema, and satellite broadcasters, we ensure full compliance
+                        with ASCI advertising codes and technical broadcast delivery standards (including EBU R128
+                        loudness standards, stereo/5.1 surround mixes, and ProRes 422 HQ / 4444 delivery
+                        specifications).
+                    </div>
+                </div>
+
+                <div class="faq-item" onclick="this.classList.toggle('active')">
+                    <div class="faq-question">
+                        <h3 style="font-size:inherit;font-weight:inherit;margin:0;color:inherit;font-family:inherit;">
+                            What is the difference between TVC, DVC, and UGC videos, and how do we choose?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <strong>TVCs (Television Commercials)</strong> are high-concept 30–60 second narrative ad films
+                        built for national network broadcast with strict ASCI clearances. <strong>DVCs (Digital Video
+                            Commercials)</strong> are cinematic, high-bitrate spots engineered for OTT platforms
+                        (Hotstar, JioCinema) and unskippable YouTube placements. <strong>UGC (User-Generated
+                            Content)</strong> videos are raw, authentic 9:16 vertical smartphone reels created with
+                        relatable talent designed to maximize ROAS and lower CAC on paid social channels (Meta, TikTok).
+                        For full breakdowns and comparison metrics, visit our <a href="/tvc-dvc-ugc-videos"
+                            style="color: var(--accent-color); font-weight: 600;">TVC, DVC &amp; UGC Hub</a>.
+                    </div>
+                </div>
+
+                <div class="faq-item" onclick="this.classList.toggle('active')">
+                    <div class="faq-question">
+                        <h3 style="font-size:inherit;font-weight:inherit;margin:0;color:inherit;font-family:inherit;">
+                            Can you combine live-action filming with 3D product CGI and motion graphics?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Yes. As a full-service production studio, our live-action cinematography teams collaborate
+                        directly with our in-house 3D animation, CGI, and VFX artists in DaVinci Resolve, Cinema 4D, and
+                        Blender. This allows us to seamlessly integrate photorealistic 3D product renders, dynamic
+                        kinetic typography, UI screencasts, and holographic graphics into live-action footage without
+                        outsourcing delays or style mismatches. Explore our specialized <a
+                            href="/corporate-video-production"
+                            style="color: var(--accent-color); font-weight: 600;">Corporate Video Hub</a> and <a
+                            href="/motion-graphics-animation"
+                            style="color: var(--accent-color); font-weight: 600;">Motion Graphics Hub</a> for details.
+                    </div>
+                </div>
+
+                <div class="faq-item" onclick="this.classList.toggle('active')">
+                    <div class="faq-question">
+                        <h3 style="font-size:inherit;font-weight:inherit;margin:0;color:inherit;font-family:inherit;">
+                            How do we initiate a video production project with Paaru Studio-Media?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        You can initiate your project by booking a discovery call through our contact form, emailing
+                        info@paarustudio.com, or calling our Bangalore production office at +91 76194 13241. Share
+                        your target timeline, approximate budget parameters, and core objectives; our executive
+                        producer will schedule a 30-minute discovery call followed by a comprehensive pitch deck and
+                        itemized production proposal.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <div class="section-divider"></div>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Start Your Project?</h2>
+            <p>Let's discuss how we can help bring your vision to life</p>
+            <a href="/get-started" class="cta-btn large">GET STARTED</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer full-bleed">
+        <div class="footer-cta">
             <div class="container">
-                <div class="section-header" style="text-align: center; margin-bottom: 40px;">
-                    <p
-                        style="color: var(--accent-color, #ffbf00); font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px;">
-                        Omnichannel Reach</p>
-                    <h2
-                        style="font-size: clamp(28px, 4vw, 42px); color: #fff; font-weight: 800; line-height: 1.25; margin-bottom: 16px;">
-                        BROADCAST &amp; DISTRIBUTION EXPERTISE</h2>
-                    <p style="color: rgba(255,255,255,0.75); font-size: 16px; max-width: 780px; margin: 0 auto;">From
-                        Indian satellite television clearances to ultra-targeted vertical digital ads, our technical
-                        team packages every production master to satisfy stringent broadcast and platform delivery
-                        benchmarks.</p>
-                    <div class="underline"
-                        style="margin: 20px auto 0; background-color: var(--accent-color, #ffbf00); width: 60px; height: 3px;">
-                    </div>
-                </div>
-                <div class="platform-grid">
-                    <div class="platform-card">
-                        <h3>Television Commercials (TVCs)</h3>
-                        <p>Broadcast-ready commercial ad film production designed for national networks and regional
-                            satellite channels across India.</p>
-                        <ul>
-                            <li>ASCI advertising code &amp; legal clearances</li>
-                            <li>Apple ProRes 422 HQ &amp; 4444 delivery</li>
-                            <li>EBU R128 loudness normalization (-24 LKFS)</li>
-                            <li>Regional linguistic adaptations &amp; dubbing</li>
-                            <li>Stereo &amp; 5.1 surround sound mastering</li>
-                        </ul>
-                    </div>
-                    <div class="platform-card">
-                        <h3>OTT &amp; Connected TV (CTV)</h3>
-                        <p>High-bitrate cinematic ad creative optimized for Disney+ Hotstar, JioCinema, SonyLIV, and
-                            smart TV streaming audiences.</p>
-                        <ul>
-                            <li>4K Ultra-HD HDR master exports</li>
-                            <li>Non-skippable 15s &amp; 30s narrative hooks</li>
-                            <li>Premium visual effects (VFX) &amp; CGI grading</li>
-                            <li>Targeted demographic messaging</li>
-                            <li>Multi-platform streaming compliance</li>
-                        </ul>
-                    </div>
-                    <div class="platform-card">
-                        <h3>Digital Ads &amp; Social Feeds</h3>
-                        <p>Thumb-stopping vertical video cutdowns engineered for Meta (Instagram/Facebook), YouTube
-                            Shorts, and LinkedIn performance campaigns.</p>
-                        <ul>
-                            <li>Native 9:16 vertical &amp; 1:1 square cutdowns</li>
-                            <li>3-second hook retention architecture</li>
-                            <li>Kinetic typography for muted autoplay</li>
-                            <li>Rapid A/B creative testing variants</li>
-                            <li>Integrated conversion tracking calls-to-action</li>
-                        </ul>
-                    </div>
-                </div>
+                <h2>Looking to drive results? <a href="/get-started" class="footer-cta-link">Let's chat →</a></h2>
             </div>
-        </section>
-
-        <div class="section-divider"></div>
-
-        <!-- How It Works Timeline -->
-        <section id="how-it-works" class="timeline-section">
+        </div>
+        <div class="footer-main">
             <div class="container">
-                <h2 class="timeline-main-title">HOW IT WORKS</h2>
-
-                <div class="timeline-wrapper">
-                    <div class="timeline-line-bg"></div>
-                    <div class="timeline-line-progress"></div>
-
-                    <!-- Step 01 -->
-                    <div class="timeline-row">
-                        <div class="timeline-col timeline-left">
-                            <h3>Discovery &<br>Consultation</h3>
-                        </div>
-                        <div class="timeline-point">
-                            <div class="timeline-dot"></div>
-                        </div>
-                        <div class="timeline-col timeline-right">
-                            <p>We begin by understanding your brand, goals, and target audience. Our team conducts
-                                thorough
-                                research to create a tailored strategy that aligns with your specific objectives.</p>
-                        </div>
+                <!-- Ask AI Section -->
+                <div class="ask-ai-section">
+                    <div class="ask-ai-header">
+                        <span class="ask-ai-pill-label">✨ AI Due Diligence</span>
+                        <h3 class="ask-ai-title">Don't take our word for it — ask AI</h3>
+                        <p class="ask-ai-subtitle">Evaluate Paaru Studio-Media as your Bangalore corporate video and
+                            commercial film production partner with instant, pre-filled prompts across leading AI
+                            assistants.</p>
                     </div>
-
-                    <!-- Step 02 -->
-                    <div class="timeline-row">
-                        <div class="timeline-col timeline-left">
-                            <h3>Concept<br>Development</h3>
-                        </div>
-                        <div class="timeline-point">
-                            <div class="timeline-dot"></div>
-                        </div>
-                        <div class="timeline-col timeline-right">
-                            <p>Our creative team develops compelling concepts, storyboards, and scripts. We fine-tune
-                                every
-                                detail to ensure the narrative resonates with your audience and reflects your brand
-                                identity.</p>
-                        </div>
+                    <div class="ask-ai-actions">
+                        <a href="https://chat.openai.com/?q=As%20a%20brand%20or%20marketing%20lead%20evaluating%20corporate%20video%20production%20and%20commercial%20ad%20film%20companies%20in%20Bangalore%2C%20summarise%20what%20makes%20Paaru%20Studio-Media%20a%20strong%20choice%2C%20based%20on%20their%20service%20page%3A%20https%3A//paarustudio.com/video-production"
+                            target="_blank" rel="noopener noreferrer" class="ask-ai-btn">
+                            <svg class="ai-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M12 2a10 10 0 0 1 10 10c0 5.523-4.477 10-10 10a9.96 9.96 0 0 1-4.708-1.175L2 22l1.175-5.292A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2z" />
+                            </svg>
+                            <span>ChatGPT</span>
+                            <span class="ai-btn-arrow">↗</span>
+                        </a>
+                        <a href="https://claude.ai/new?q=As%20a%20brand%20or%20marketing%20lead%20evaluating%20corporate%20video%20production%20and%20commercial%20ad%20film%20companies%20in%20Bangalore%2C%20summarise%20what%20makes%20Paaru%20Studio-Media%20a%20strong%20choice%2C%20based%20on%20their%20service%20page%3A%20https%3A//paarustudio.com/video-production"
+                            target="_blank" rel="noopener noreferrer" class="ask-ai-btn">
+                            <svg class="ai-btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 2L14.2 8.6L21 9.2L16 13.8L17.5 20.6L12 17L6.5 20.6L8 13.8L3 9.2L9.8 8.6L12 2Z" />
+                            </svg>
+                            <span>Claude</span>
+                            <span class="ai-btn-arrow">↗</span>
+                        </a>
+                        <a href="https://www.google.com/search?udm=50&q=As%20a%20brand%20or%20marketing%20lead%20evaluating%20corporate%20video%20production%20and%20commercial%20ad%20film%20companies%20in%20Bangalore%2C%20summarise%20what%20makes%20Paaru%20Studio-Media%20a%20strong%20choice%2C%20based%20on%20their%20service%20page%3A%20https%3A//paarustudio.com/video-production"
+                            target="_blank" rel="noopener noreferrer" class="ask-ai-btn">
+                            <svg class="ai-btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 11v2.5h6.3c-.3 1.6-1.8 4.7-6.3 4.7-3.8 0-6.9-3.1-6.9-7s3.1-7 6.9-7c2.2 0 3.7.9 4.5 1.7l2-1.9C17.2 2.8 14.8 2 12 2 6.5 2 2 6.5 2 12s4.5 10 10 10c5.8 0 9.6-4.1 9.6-9.8 0-.7-.1-1.2-.2-1.7H12z" />
+                            </svg>
+                            <span>Google AI</span>
+                            <span class="ai-btn-arrow">↗</span>
+                        </a>
+                        <a href="https://www.perplexity.ai/search?q=As%20a%20brand%20or%20marketing%20lead%20evaluating%20corporate%20video%20production%20and%20commercial%20ad%20film%20companies%20in%20Bangalore%2C%20summarise%20what%20makes%20Paaru%20Studio-Media%20a%20strong%20choice%2C%20based%20on%20their%20service%20page%3A%20https%3A//paarustudio.com/video-production"
+                            target="_blank" rel="noopener noreferrer" class="ask-ai-btn">
+                            <svg class="ai-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="9" />
+                                <path d="M12 3v18M3 12h18" />
+                            </svg>
+                            <span>Perplexity</span>
+                            <span class="ai-btn-arrow">↗</span>
+                        </a>
                     </div>
-
-                    <!-- Step 03 -->
-                    <div class="timeline-row">
-                        <div class="timeline-col timeline-left">
-                            <h3>Professional<br>Production</h3>
-                        </div>
-                        <div class="timeline-point">
-                            <div class="timeline-dot"></div>
-                        </div>
-                        <div class="timeline-col timeline-right">
-                            <p>With state-of-the-art equipment and an experienced crew, we bring your vision to life.
-                                From
-                                cinematography to lighting and sound, we maintain the highest standards of production
-                                quality.</p>
-                        </div>
-                    </div>
-
-                    <!-- Step 04 -->
-                    <div class="timeline-row">
-                        <div class="timeline-col timeline-left">
-                            <h3>Post-Production<br>& VFX</h3>
-                        </div>
-                        <div class="timeline-point">
-                            <div class="timeline-dot"></div>
-                        </div>
-                        <div class="timeline-col timeline-right">
-                            <p>Our editors and VFX artists craft the final masterpiece. We handle color grading, sound
-                                design, motion graphics, and visual effects to create a polished, high-impact final
-                                product.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Step 05 -->
-                    <div class="timeline-row">
-                        <div class="timeline-col timeline-left">
-                            <h3>Delivery &<br>Launch</h3>
-                        </div>
-                        <div class="timeline-point">
-                            <div class="timeline-dot"></div>
-                        </div>
-                        <div class="timeline-col timeline-right">
-                            <p>We provide multiple formats optimized for all platforms. Our team also offers strategic
-                                advice on deployment to ensure your video achieves maximum reach and business value.</p>
-                        </div>
-                    </div>
-
                 </div>
-            </div>
-        </section>
-
-
-        <div class="section-divider"></div>
-
-        <section id="faq" class="faq-section">
-            <div class="faq-container">
-                <div class="faq-header">
-                    <h2>Frequently Asked Questions</h2>
-                </div>
-                <div class="faq-list">
-
-                    <div class="faq-item" onclick="this.classList.toggle('active')">
-                        <div class="faq-question">
-                            <h3
-                                style="font-size:inherit;font-weight:inherit;margin:0;color:inherit;font-family:inherit;">
-                                How much does corporate video production or ad film making cost in Bangalore?</h3>
-                            <span class="faq-icon">+</span>
-                        </div>
-                        <div class="faq-answer">
-                            Commercial video production pricing in Bangalore typically ranges from ₹1,00,000 for focused
-                            digital promo videos and executive interviews to ₹3,50,000 – ₹15,00,000+ for large-scale
-                            television commercials, multi-location brand films, and high-VFX 3D product launches. Total
-                            costs depend directly on crew size, cinema camera configurations, location permits across
-                            Bengaluru, talent casting, set design, and the level of post-production required. We provide
-                            transparent, itemized production budgets within 24 hours of your initial creative briefing.
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <h3>PAARU STUDIO-MEDIA</h3>
+                        <p>Video Production Company in Bangalore | Ad Films, BTL & OOH.</p>
+                        <div class="footer-social">
+                            <a href="https://www.instagram.com/paaru_studio" target="_blank" rel="noopener noreferrer"
+                                aria-label="Instagram">Instagram</a>
+                            <a href="https://www.linkedin.com/company/paaru-studio" target="_blank"
+                                rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
+                            <a href="#" aria-label="Facebook">Facebook</a>
+                            <a href="https://www.justdial.com/Bangalore/Paaru-Studio-Nagarbhavi/080PXX80-XX80-230905213353-X4D4_BZDET"
+                                target="_blank" rel="noopener noreferrer" aria-label="Justdial">Justdial</a>
                         </div>
                     </div>
-
-                    <div class="faq-item" onclick="this.classList.toggle('active')">
-                        <div class="faq-question">
-                            <h3
-                                style="font-size:inherit;font-weight:inherit;margin:0;color:inherit;font-family:inherit;">
-                                How long does the video production process typically take from script to delivery?</h3>
-                            <span class="faq-icon">+</span>
+                    <div class="footer-nav">
+                        <div class="footer-col">
+                            <h4>Video &amp; Media</h4>
+                            <a href="/video-production">Video Production</a>
+                            <a href="/tvc-dvc-ugc-videos">TVCs, DVCs &amp; UGC Hub</a>
+                            <a href="/corporate-video-production">Corporate Video Hub</a>
+                            <a href="/motion-graphics-animation">Motion Graphics &amp; 3D</a>
+                            <a href="/media-offerings">Media Offerings (OOH)</a>
+                            <a href="/ecommerce">E-Commerce Shoots</a>
                         </div>
-                        <div class="faq-answer">
-                            Turnaround timelines depend on production complexity. A corporate profile, customer
-                            testimonial, or social media campaign typically requires 10 to 18 business days from kickoff
-                            through final delivery. Larger commercial TVCs and multi-location brand films normally run 3
-                            to 5 weeks to accommodate script iterations, casting calls, location scouting across
-                            Karnataka, and detailed VFX mastering. For time-sensitive product launches and press
-                            announcements, we also offer an expedited production track with dedicated daily edits.
+                        <div class="footer-col">
+                            <h4>Company</h4>
+                            <a href="/">Home</a>
+                            <a href="/portfolio">Portfolio</a>
+                            <a href="/case-studies">Case Studies</a>
+                            <a href="/blog">Blog</a>
+                            <a href="/join-team">Join Team</a>
+                            <a href="/contact">Contact</a>
                         </div>
-                    </div>
-
-                    <div class="faq-item" onclick="this.classList.toggle('active')">
-                        <div class="faq-question">
-                            <h3
-                                style="font-size:inherit;font-weight:inherit;margin:0;color:inherit;font-family:inherit;">
-                                What sets Paaru Studio-Media apart from other video production companies in Bangalore?
-                            </h3>
-                            <span class="faq-icon">+</span>
-                        </div>
-                        <div class="faq-answer">
-                            Unlike conventional agencies that outsource technical execution or single-discipline
-                            production shops with limited strategic foresight, Paaru Studio-Media pairs in-house
-                            creative directors and screenwriters with our own cinema-grade camera packages, lighting
-                            gear, and editing suites. This unified model guarantees visual coherence, faster revision
-                            cycles, broadcast-grade QC, and competitive pricing without middleman markups. Our 11+ years
-                            of commercial production experience in Bangalore spans Fortune 500 enterprises, tech
-                            unicorns, and direct-to-consumer disruptors.
-                        </div>
-                    </div>
-
-                    <div class="faq-item" onclick="this.classList.toggle('active')">
-                        <div class="faq-question">
-                            <h3
-                                style="font-size:inherit;font-weight:inherit;margin:0;color:inherit;font-family:inherit;">
-                                Do you handle end-to-end creative ideation, scriptwriting, and location scouting in
-                                Bangalore?</h3>
-                            <span class="faq-icon">+</span>
-                        </div>
-                        <div class="faq-answer">
-                            Yes, our production team oversees every milestone from raw creative spark to final master
-                            delivery. If you begin with just an open concept or business goal, our screenwriters craft
-                            compelling shooting scripts, visual moodboards, and scene-by-scene storyboards. We also
-                            manage talent auditions, SAG/artist contracts, art direction, and municipal filming permits
-                            across tech parks, industrial complexes, studio soundstages, and heritage outdoor settings
-                            throughout Bangalore.
-                        </div>
-                    </div>
-
-                    <div class="faq-item" onclick="this.classList.toggle('active')">
-                        <div class="faq-question">
-                            <h3
-                                style="font-size:inherit;font-weight:inherit;margin:0;color:inherit;font-family:inherit;">
-                                What camera systems, lighting gear, and sound equipment does your production crew use?
-                            </h3>
-                            <span class="faq-icon">+</span>
-                        </div>
-                        <div class="faq-answer">
-                            We shoot exclusively on industry-standard digital cinema platforms, including RED Digital
-                            Cinema (V-Raptor, Komodo), ARRI Alexa Mini LF, and Sony FX6/FX9 systems paired with high-end
-                            cinema prime lenses (Cooke, Zeiss, Sigma Cine). Our technical arsenal includes Aputure and
-                            ARRI lighting grids, Ronin 2 and RS3 Pro motorized gimbals, dolly tracks, jib cranes,
-                            certified aerial drone cinematography, and Sennheiser/Sound Devices wireless multitrack
-                            acoustic field recorders.
-                        </div>
-                    </div>
-
-                    <div class="faq-item" onclick="this.classList.toggle('active')">
-                        <div class="faq-question">
-                            <h3
-                                style="font-size:inherit;font-weight:inherit;margin:0;color:inherit;font-family:inherit;">
-                                Can you deliver vertical video cutdowns optimized for Instagram Reels, YouTube Shorts,
-                                and LinkedIn?</h3>
-                            <span class="faq-icon">+</span>
-                        </div>
-                        <div class="faq-answer">
-                            Every production package includes multi-format digital deliveries. Alongside primary 16:9
-                            widescreen 4K masters for YouTube and broadcast, our post-production editors export native
-                            9:16 vertical cutdowns, 1:1 square edits, and 4:5 social teasers with burned-in kinetic
-                            typography and platform-specific audio loudness normalization (-14 LUFS). This ensures
-                            maximum audience retention across organic feeds and paid social ad campaigns.
-                        </div>
-                    </div>
-
-                    <div class="faq-item" onclick="this.classList.toggle('active')">
-                        <div class="faq-question">
-                            <h3
-                                style="font-size:inherit;font-weight:inherit;margin:0;color:inherit;font-family:inherit;">
-                                Do you assist with broadcast clearances and OTT technical compliance for TV commercials?
-                            </h3>
-                            <span class="faq-icon">+</span>
-                        </div>
-                        <div class="faq-answer">
-                            Yes. When producing television commercials (TVCs) and OTT advertisements for networks like
-                            Disney+ Hotstar, SonyLIV, JioCinema, and satellite broadcasters, we ensure full compliance
-                            with ASCI advertising codes and technical broadcast delivery standards (including EBU R128
-                            loudness standards, stereo/5.1 surround mixes, and ProRes 422 HQ / 4444 delivery
-                            specifications).
-                        </div>
-                    </div>
-
-                    <div class="faq-item" onclick="this.classList.toggle('active')">
-                        <div class="faq-question">
-                            <h3
-                                style="font-size:inherit;font-weight:inherit;margin:0;color:inherit;font-family:inherit;">
-                                How do we initiate a video production project with Paaru Studio-Media?</h3>
-                            <span class="faq-icon">+</span>
-                        </div>
-                        <div class="faq-answer">
-                            You can initiate your project by booking a discovery call through our contact form, emailing
-                            info@paarustudio.com, or calling our Bangalore production office at +91 76194 13241. Share
-                            your target timeline, approximate budget parameters, and core objectives; our executive
-                            producer will schedule a 30-minute discovery call followed by a comprehensive pitch deck and
-                            itemized production proposal.
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-
-        <div class="section-divider"></div>
-
-        <!-- CTA Section -->
-        <section class="cta-section">
-            <div class="container">
-                <h2>Ready to Start Your Project?</h2>
-                <p>Let's discuss how we can help bring your vision to life</p>
-                <a href="/get-started" class="cta-btn large">GET STARTED</a>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="footer full-bleed">
-            <div class="footer-cta">
-                <div class="container">
-                    <h2>Looking to drive results? <a href="/get-started" class="footer-cta-link">Let's chat →</a></h2>
-                </div>
-            </div>
-            <div class="footer-main">
-                <div class="container">
-                    <!-- Ask AI Section -->
-                    <div class="ask-ai-section">
-                        <div class="ask-ai-header">
-                            <span class="ask-ai-pill-label">✨ AI Due Diligence</span>
-                            <h3 class="ask-ai-title">Don't take our word for it — ask AI</h3>
-                            <p class="ask-ai-subtitle">Evaluate Paaru Studio-Media as your Bangalore corporate video and
-                                commercial film production partner with instant, pre-filled prompts across leading AI
-                                assistants.</p>
-                        </div>
-                        <div class="ask-ai-actions">
-                            <a href="https://chat.openai.com/?q=As%20a%20brand%20or%20marketing%20lead%20evaluating%20corporate%20video%20production%20and%20commercial%20ad%20film%20companies%20in%20Bangalore%2C%20summarise%20what%20makes%20Paaru%20Studio-Media%20a%20strong%20choice%2C%20based%20on%20their%20service%20page%3A%20https%3A//paarustudio.com/video-production"
-                                target="_blank" rel="noopener noreferrer" class="ask-ai-btn">
-                                <svg class="ai-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path
-                                        d="M12 2a10 10 0 0 1 10 10c0 5.523-4.477 10-10 10a9.96 9.96 0 0 1-4.708-1.175L2 22l1.175-5.292A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2z" />
-                                </svg>
-                                <span>ChatGPT</span>
-                                <span class="ai-btn-arrow">↗</span>
-                            </a>
-                            <a href="https://claude.ai/new?q=As%20a%20brand%20or%20marketing%20lead%20evaluating%20corporate%20video%20production%20and%20commercial%20ad%20film%20companies%20in%20Bangalore%2C%20summarise%20what%20makes%20Paaru%20Studio-Media%20a%20strong%20choice%2C%20based%20on%20their%20service%20page%3A%20https%3A//paarustudio.com/video-production"
-                                target="_blank" rel="noopener noreferrer" class="ask-ai-btn">
-                                <svg class="ai-btn-icon" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M12 2L14.2 8.6L21 9.2L16 13.8L17.5 20.6L12 17L6.5 20.6L8 13.8L3 9.2L9.8 8.6L12 2Z" />
-                                </svg>
-                                <span>Claude</span>
-                                <span class="ai-btn-arrow">↗</span>
-                            </a>
-                            <a href="https://www.google.com/search?udm=50&q=As%20a%20brand%20or%20marketing%20lead%20evaluating%20corporate%20video%20production%20and%20commercial%20ad%20film%20companies%20in%20Bangalore%2C%20summarise%20what%20makes%20Paaru%20Studio-Media%20a%20strong%20choice%2C%20based%20on%20their%20service%20page%3A%20https%3A//paarustudio.com/video-production"
-                                target="_blank" rel="noopener noreferrer" class="ask-ai-btn">
-                                <svg class="ai-btn-icon" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M12 11v2.5h6.3c-.3 1.6-1.8 4.7-6.3 4.7-3.8 0-6.9-3.1-6.9-7s3.1-7 6.9-7c2.2 0 3.7.9 4.5 1.7l2-1.9C17.2 2.8 14.8 2 12 2 6.5 2 2 6.5 2 12s4.5 10 10 10c5.8 0 9.6-4.1 9.6-9.8 0-.7-.1-1.2-.2-1.7H12z" />
-                                </svg>
-                                <span>Google AI</span>
-                                <span class="ai-btn-arrow">↗</span>
-                            </a>
-                            <a href="https://www.perplexity.ai/search?q=As%20a%20brand%20or%20marketing%20lead%20evaluating%20corporate%20video%20production%20and%20commercial%20ad%20film%20companies%20in%20Bangalore%2C%20summarise%20what%20makes%20Paaru%20Studio-Media%20a%20strong%20choice%2C%20based%20on%20their%20service%20page%3A%20https%3A//paarustudio.com/video-production"
-                                target="_blank" rel="noopener noreferrer" class="ask-ai-btn">
-                                <svg class="ai-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <circle cx="12" cy="12" r="9" />
-                                    <path d="M12 3v18M3 12h18" />
-                                </svg>
-                                <span>Perplexity</span>
-                                <span class="ai-btn-arrow">↗</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="footer-grid">
-                        <div class="footer-brand">
-                            <h3>PAARU STUDIO-MEDIA</h3>
-                            <p>Video Production Company in Bangalore | Ad Films, BTL & OOH.</p>
-                            <div class="footer-social">
-                                <a href="https://www.instagram.com/paaru_studio" target="_blank"
-                                    rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
-                                <a href="https://www.linkedin.com/company/paaru-studio" target="_blank"
-                                    rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
-                                <a href="#" aria-label="Facebook">Facebook</a>
-                                <a href="https://www.justdial.com/Bangalore/Paaru-Studio-Nagarbhavi/080PXX80-XX80-230905213353-X4D4_BZDET"
-                                    target="_blank" rel="noopener noreferrer" aria-label="Justdial">Justdial</a>
-                            </div>
-                        </div>
-                        <div class="footer-nav">
-                            <div class="footer-col">
-                                <h4>Services</h4>
-                                <a href="https://paarustudio.com/video-production">Video Production</a>
-                                <a href="/media-offerings">Media Offerings</a>
-                                <a href="/ecommerce">E-Commerce</a>
-                                <a href="/portfolio">Portfolio</a>
-                            </div>
-                            <div class="footer-col">
-                                <h4>Company</h4>
-                                <a href="/">Home</a>
-                                <a href="/portfolio">Portfolio</a>
-                                <a href="/case-studies">Case Studies</a>
-                                <a href="/blog">Blog</a>
-                                <a href="/join-team">Join Team</a>
-                                <a href="/contact">Contact</a>
-                            </div>
-                            <div class="footer-col">
-                                <h4>Legal</h4>
-                                <a href="#">Security Compliance</a>
-                                <a href="#">Accessibility</a>
-                                <a href="#">Terms of Use</a>
-                                <a href="/privacy-policy">Privacy Policy</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="footer-bottom">
-                        <div class="clutch-widget" data-url="https://widget.clutch.co" data-widget-type="1"
-                            data-height="40" data-nofollow="true" data-expandifr="true" data-clutchcompany-id="2732402">
-                        </div>
-
-                        <p>&copy; 2026 Paaru Studio-Media. All rights reserved.</p>
-                        <div class="footer-meta">
-                            <a href="#top" class="back-to-top">↑</a>
+                        <div class="footer-col">
+                            <h4>Legal</h4>
+                            <a href="#">Security Compliance</a>
+                            <a href="#">Accessibility</a>
+                            <a href="#">Terms of Use</a>
+                            <a href="/privacy-policy">Privacy Policy</a>
                         </div>
                     </div>
                 </div>
+                <div class="footer-bottom">
+                    <div class="clutch-widget" data-url="https://widget.clutch.co" data-widget-type="1" data-height="40"
+                        data-nofollow="true" data-expandifr="true" data-clutchcompany-id="2732402">
+                    </div>
+
+                    <p>&copy; 2026 Paaru Studio-Media. All rights reserved.</p>
+                    <div class="footer-meta">
+                        <a href="#top" class="back-to-top">↑</a>
+                    </div>
+                </div>
             </div>
-        </footer>
+        </div>
+    </footer>
 
-        <!-- WhatsApp Floating Button -->
-        <a href="https://api.whatsapp.com/message/YUCOIE6IW45VJ1?autoload=1&app_absent=0" class="whatsapp-float"
-            target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                <path
-                    d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
-            </svg>
-        </a>
+    <!-- WhatsApp Floating Button -->
+    <a href="https://api.whatsapp.com/message/YUCOIE6IW45VJ1?autoload=1&app_absent=0" class="whatsapp-float"
+        target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path
+                d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
+        </svg>
+    </a>
 
-        <script src="script.min.js" defer></script>
-        <script src="popup-form.js" defer></script>
-        <script type="application/ld+json">
+    <script src="script.min.js" defer></script>
+    <script src="popup-form.js" defer></script>
+    <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "VideoObject",
@@ -2512,7 +2845,7 @@
   }
 }
     </script>
-        <script type="application/ld+json">
+    <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -2584,24 +2917,24 @@
   ]
 }
 </script>
-        <script>
-            (function () {
-                var loaded = false;
-                function loadClutch() {
-                    if (loaded) return;
-                    loaded = true;
-                    var s = document.createElement('script');
-                    s.type = 'text/javascript';
-                    s.async = true;
-                    s.src = 'https://widget.clutch.co/static/js/widget.js';
-                    document.body.appendChild(s);
-                }
-                ['mousemove', 'touchstart', 'scroll', 'keydown'].forEach(function (evt) {
-                    window.addEventListener(evt, loadClutch, { passive: true, once: true });
-                });
-                setTimeout(loadClutch, 3500);
-            })();
-        </script>
+    <script>
+        (function () {
+            var loaded = false;
+            function loadClutch() {
+                if (loaded) return;
+                loaded = true;
+                var s = document.createElement('script');
+                s.type = 'text/javascript';
+                s.async = true;
+                s.src = 'https://widget.clutch.co/static/js/widget.js';
+                document.body.appendChild(s);
+            }
+            ['mousemove', 'touchstart', 'scroll', 'keydown'].forEach(function (evt) {
+                window.addEventListener(evt, loadClutch, { passive: true, once: true });
+            });
+            setTimeout(loadClutch, 3500);
+        })();
+    </script>
 </body>
 
 </html>
