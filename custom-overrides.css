@@ -62,11 +62,13 @@
 
 /* Mobile navbar contrast handling */
 @media (max-width: 900px) {
+
     .navbar:not(.scrolled) .logo-text,
     .navbar:not(.scrolled) .logo-text-static,
     .navbar:not(.scrolled) .flip-word {
         color: #ffffff !important;
     }
+
     .navbar.scrolled .logo-text,
     .navbar.scrolled .logo-text-static,
     .navbar.scrolled .flip-word {
@@ -1004,7 +1006,7 @@ body {
 /* 2. Timeline Pipeline Section Architecture (Fixes Overlapping Step Headings) */
 .timeline-section {
     padding: 90px 0 !important;
-    background: #111111 !important;
+    background: #ffffff !important;
     position: relative !important;
     clear: both !important;
 }
@@ -1012,7 +1014,7 @@ body {
 .timeline-main-title {
     text-align: center !important;
     font-size: clamp(26px, 4vw, 40px) !important;
-    color: #ffffff !important;
+    color: #000000 !important;
     font-weight: 800 !important;
     margin-bottom: 50px !important;
 }
