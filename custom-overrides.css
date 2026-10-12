@@ -23,7 +23,7 @@
 
 .navbar .logo-text-static,
 .logo-text-static {
-    color: #000000 !important;
+    color: #ffbe0c !important;
 }
 
 .navbar .flip-word,
@@ -38,14 +38,15 @@
     color: #000000 !important;
 }
 
-/* Crystal-clear, smooth original logo badge */
+/* Crystal-clear, smooth original logo badge (increased by 20%) */
 .navbar .logo-image,
 .logo .logo-image,
 .logo-image {
-    width: 44px !important;
-    height: 44px !important;
+    width: 53px !important;
+    height: 53px !important;
     object-fit: contain !important;
     border-radius: 50% !important;
+    image-rendering: auto !important;
     filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.10)) !important;
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
@@ -56,12 +57,29 @@
 }
 
 .navbar.scrolled .logo-image {
-    width: 38px !important;
-    height: 38px !important;
+    width: 46px !important;
+    height: 46px !important;
 }
 
-/* Mobile navbar contrast handling */
+/* Remove top announcement banners from all pages */
+.top-banner {
+    display: none !important;
+}
+
+/* Mobile navbar contrast and logo sizing */
 @media (max-width: 900px) {
+
+    .navbar .logo-image,
+    .logo .logo-image,
+    .logo-image {
+        width: 46px !important;
+        height: 46px !important;
+    }
+
+    .navbar.scrolled .logo-image {
+        width: 42px !important;
+        height: 42px !important;
+    }
 
     .navbar:not(.scrolled) .logo-text,
     .navbar:not(.scrolled) .logo-text-static,
