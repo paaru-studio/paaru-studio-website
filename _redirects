@@ -42,8 +42,6 @@ http://paarustudio.com/*       https://paarustudio.com/:splat  301!
 /films.html                 /films                      301!
 /corporate-video-production.html         /corporate-video-production              301!
 /motion-graphics-animation.html          /motion-graphics-animation               301!
-/films.html                   /films                      301!
-/films                       /films                      301!
 
 # Legacy redirect (keep existing)
 /services.html                           /video-production                        301!
