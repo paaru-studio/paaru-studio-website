@@ -464,7 +464,7 @@
     <noscript>
         <link rel="stylesheet" href="styles.min.css?v=20260707">
     </noscript>
-    <link rel="stylesheet" href="custom-overrides.css?v=20261010-logo">
+    <link rel="stylesheet" href="custom-overrides.css?v=20261013-nav-v3">
     <link rel="preload" href="popup-form.css" as="style" onload="this.rel='stylesheet'">
     <noscript>
         <link rel="stylesheet" href="popup-form.css">
@@ -521,10 +521,109 @@
         ]
     }
     </script>
+    <script>
+        (function () {
+            function syncNavbar() {
+                var nb = document.querySelector('.navbar');
+                if (!nb) return;
+                var y = window.pageYOffset || document.documentElement.scrollTop || window.scrollY || (document.body ? document.body.scrollTop : 0) || 0;
+                if (y > 40) {
+                    nb.classList.add('scrolled');
+                } else {
+                    nb.classList.remove('scrolled');
+                }
+            }
+            window.addEventListener('scroll', syncNavbar, { passive: true, capture: true });
+            document.addEventListener('scroll', syncNavbar, { passive: true, capture: true });
+            window.addEventListener('resize', syncNavbar, { passive: true });
+            window.addEventListener('load', syncNavbar);
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', syncNavbar);
+            } else {
+                syncNavbar();
+            }
+        })();
+    </script>
 </head>
 
 <body id="top" class="services-page">
 
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="/" class="logo">
+                    <img loading="eager" fetchpriority="high" decoding="async" src="logo.png" alt="Paaru Studio Logo"
+                        class="logo-image" width="53" height="53">
+                    <span class="logo-text">
+                        <span class="logo-text-static">PAARU</span>
+                        <span class="logo-text-flip">
+                            <span class="flip-word">STUDIO</span>
+                            <span class="flip-word">MEDIA</span>
+                        </span>
+                    </span>
+                </a>
+                <!-- Mobile menu button (visible on small screens) -->
+                <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">☰</button>
+                <div class="nav-links">
+                    <a href="/">Home</a>
+                    <div class="nav-dropdown">
+                        <a href="/video-production" class="nav-dropdown-toggle">Services <span
+                                class="dropdown-arrow">▾</span></a>
+                        <div class="nav-dropdown-menu mega-menu">
+                            <a href="/video-production" class="mega-menu-item">
+                                <img loading="lazy" decoding="async" src="video_pro.webp" alt="Video Production"
+                                    width="120" height="80">
+                                <div class="mega-item-content">
+                                    <h4>Video Production</h4>
+                                    <p>TVCs, Digital Ads, Corporate films. End-to-end video solutions.</p>
+                                </div>
+                            </a>
+                            <a href="/ecommerce" class="mega-menu-item">
+                                <img loading="lazy" decoding="async" src="shopify_img.webp" alt="E-commerce Solutions"
+                                    width="120" height="120">
+                                <div class="mega-item-content">
+                                    <h4>E-commerce Solutions</h4>
+                                    <p>Boost your online sales with tailored e-commerce strategies.</p>
+                                </div>
+                            </a>
+                            <a href="/performance-marketing" class="mega-menu-item">
+                                <img loading="lazy" decoding="async" src="pm_1.webp" alt="Digital Marketing" width="120"
+                                    height="68">
+                                <div class="mega-item-content">
+                                    <h4>Digital Marketing</h4>
+                                    <p>Data-driven performance and social media campaigns.</p>
+                                </div>
+                            </a>
+                            <a href="/media-offerings" class="mega-menu-item">
+                                <img loading="lazy" decoding="async" src="OOH_banner.webp"
+                                    alt="Offline Marketing (OOH/DOOH)" width="120" height="90">
+                                <div class="mega-item-content">
+                                    <h4>Offline Marketing</h4>
+                                    <p>High-impact outdoor and digital out-of-home advertising.</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="nav-dropdown">
+                        <a href="/media-offerings" class="nav-dropdown-toggle">Media <span
+                                class="dropdown-arrow">▾</span></a>
+                        <div class="nav-dropdown-menu">
+                            <a href="/media-offerings">Media Offerings (OOH & DOOH)</a>
+                            <a href="/performance-marketing">Performance Marketing</a>
+                            <a href="/social-media-marketing">Social Media Marketing</a>
+                            <a href="/influencer-marketing">Influencer Marketing</a>
+                        </div>
+                    </div>
+                    <a href="/portfolio">Portfolio</a>
+                    <a href="/get-started">Get Started</a>
+                    <a href="/join-team">Join Team</a>
+                    <a href="/ai-services" class="ai-explore-btn" aria-label="Explore Ai"><span>Explore Ai</span></a>
+                    <a href="/contact" class="cta-btn">Contact Us</a>
+                </div>
+            </div>
+        </div>
     </nav>
     <div class="mobile-nav-backdrop" aria-hidden="true"></div>
 
@@ -965,7 +1064,7 @@
         </svg>
     </a>
 
-    <script src="script.min.js" defer></script>
+    <script src="script.min.js?v=20261013-nav-v3" defer></script>
     <script src="popup-form.js" defer></script>
 </body>
 

@@ -877,12 +877,13 @@
                 border: none;
                 padding: 0;
             }
+        }
     </style>
     <link rel="stylesheet" href="styles.min.css?v=20260707" media="print" onload="this.media='all'">
     <noscript>
         <link rel="stylesheet" href="styles.min.css?v=20260707">
     </noscript>
-    <link rel="stylesheet" href="custom-overrides.css?v=20260801">
+    <link rel="stylesheet" href="custom-overrides.css?v=20261013-nav-v3">
     <link rel="preload" href="popup-form.css" as="style" onload="this.rel='stylesheet'">
     <noscript>
         <link rel="stylesheet" href="popup-form.css">
@@ -962,19 +963,6 @@
             --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif
         }
 
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 79px;
-            background: #fff;
-            z-index: 999998;
-            display: flex;
-            justify-content: center;
-            align-items: center
-        }
-
         body {
             margin: 0;
             background: #000;
@@ -994,6 +982,29 @@
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
     <link rel="dns-prefetch" href="https://connect.facebook.net">
 
+    <script>
+        (function () {
+            function syncNavbar() {
+                var nb = document.querySelector('.navbar');
+                if (!nb) return;
+                var y = window.pageYOffset || document.documentElement.scrollTop || window.scrollY || (document.body ? document.body.scrollTop : 0) || 0;
+                if (y > 40) {
+                    nb.classList.add('scrolled');
+                } else {
+                    nb.classList.remove('scrolled');
+                }
+            }
+            window.addEventListener('scroll', syncNavbar, { passive: true, capture: true });
+            document.addEventListener('scroll', syncNavbar, { passive: true, capture: true });
+            window.addEventListener('resize', syncNavbar, { passive: true });
+            window.addEventListener('load', syncNavbar);
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', syncNavbar);
+            } else {
+                syncNavbar();
+            }
+        })();
+    </script>
 </head>
 
 <body id="top" class="services-page ecommerce-page">
@@ -2223,7 +2234,7 @@
         </svg>
     </a>
 
-    <script src="script.min.js" defer></script>
+    <script src="script.min.js?v=20261013-nav-v3" defer></script>
     <script src="popup-form.js" defer></script>
     <script type="application/ld+json">
 {

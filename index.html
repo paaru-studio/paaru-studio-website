@@ -65,7 +65,7 @@
         <link rel="stylesheet" href="fonts.css">
     </noscript>
     <link rel="stylesheet" href="styles.min.css?v=20260707">
-    <link rel="stylesheet" href="custom-overrides.css?v=20261012-nogradient">
+    <link rel="stylesheet" href="custom-overrides.css?v=20261013-nav-v3">
 
     <link rel="preload" href="popup-form.css" as="style" onload="this.rel='stylesheet'">
     <noscript>
@@ -137,6 +137,29 @@
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
     <link rel="dns-prefetch" href="https://connect.facebook.net">
 
+    <script>
+        (function () {
+            function syncNavbar() {
+                var nb = document.querySelector('.navbar');
+                if (!nb) return;
+                var y = window.pageYOffset || document.documentElement.scrollTop || window.scrollY || (document.body ? document.body.scrollTop : 0) || 0;
+                if (y > 40) {
+                    nb.classList.add('scrolled');
+                } else {
+                    nb.classList.remove('scrolled');
+                }
+            }
+            window.addEventListener('scroll', syncNavbar, { passive: true, capture: true });
+            document.addEventListener('scroll', syncNavbar, { passive: true, capture: true });
+            window.addEventListener('resize', syncNavbar, { passive: true });
+            window.addEventListener('load', syncNavbar);
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', syncNavbar);
+            } else {
+                syncNavbar();
+            }
+        })();
+    </script>
 </head>
 
 
@@ -2967,9 +2990,9 @@
         </div>
     </footer>
 
-    <script src="script.min.js" defer></script>
+    <script src="script.min.js?v=20261013-nav-v3" defer></script>
     <script src="popup-form.js" defer></script>
-    <script src="scripts-extra.js?v=20261012-wrap" defer></script>
+    <script src="scripts-extra.js?v=20261013-nav-v3" defer></script>
 
     <!-- WhatsApp Floating Button -->
     <a href="https://api.whatsapp.com/message/YUCOIE6IW45VJ1?autoload=1&app_absent=0" class="whatsapp-float"

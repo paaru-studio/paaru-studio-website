@@ -425,3 +425,37 @@ function initIndexCircularCarousel(carousel) {
         rafId = requestAnimationFrame(step);
     }
 }
+
+// 7. Universal Navbar Scroll Handler
+(function () {
+    function updateNavbar() {
+        var navbar = document.querySelector('.navbar');
+        if (!navbar) return;
+        var scrollY = window.pageYOffset || document.documentElement.scrollTop || window.scrollY || (document.body ? document.body.scrollTop : 0) || 0;
+        if (scrollY > 40) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    }
+    var scrollTicking = false;
+    function onScroll() {
+        updateNavbar();
+        if (!scrollTicking) {
+            window.requestAnimationFrame(function () {
+                updateNavbar();
+                scrollTicking = false;
+            });
+            scrollTicking = true;
+        }
+    }
+    window.addEventListener('scroll', onScroll, { passive: true, capture: true });
+    document.addEventListener('scroll', onScroll, { passive: true, capture: true });
+    window.addEventListener('resize', updateNavbar, { passive: true });
+    window.addEventListener('load', updateNavbar);
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', updateNavbar);
+    } else {
+        updateNavbar();
+    }
+})();
