@@ -1958,35 +1958,6 @@
                 }
             }, { passive: true });
         });
-
-        // Timeline Scroll Animation
-        window.addEventListener('scroll', function () {
-            const wrapper = document.querySelector('.timeline-wrapper');
-            if (!wrapper) return;
-            const progress = document.querySelector('.timeline-line-progress');
-            const rows = document.querySelectorAll('.timeline-row');
-
-            const rect = wrapper.getBoundingClientRect();
-            const viewH = window.innerHeight;
-
-            // Calculate progress based on wrapper's position relative to center of view
-            const startPoint = viewH * 0.5;
-            let percent = 0;
-            if (rect.top < startPoint) {
-                // Adjusting the math to ensure it reaches 100% correctly at the bottom
-                percent = Math.max(0, Math.min(100, (startPoint - rect.top) / (rect.height) * 100));
-            }
-            if (progress) progress.style.height = percent + '%';
-
-            rows.forEach((row) => {
-                const rowRect = row.getBoundingClientRect();
-                if (rowRect.top < startPoint + 50) {
-                    row.classList.add('active');
-                } else {
-                    row.classList.remove('active');
-                }
-            });
-        }, { passive: true });
     </script>
     <div class="section-divider"></div>
     <section class="services-overview-intro yellow-strip-section">
@@ -3112,7 +3083,7 @@
         </svg>
     </a>
 
-    <script src="script.min.js?v=20261013-nav-v3" defer></script>
+    <script src="script.min.js?v=20261013-timeline-v4" defer></script>
     <script src="popup-form.js" defer></script>
     <script type="application/ld+json">
 {
@@ -3225,6 +3196,86 @@
             });
             setTimeout(loadClutch, 3500);
         })();
+    </script>
+
+    <!-- Timeline Scroll Progress Animation -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var wrapper = document.querySelector('#how-it-works .timeline-wrapper') || document.querySelector('.timeline-wrapper');
+            if (!wrapper) return;
+            var progressBar = wrapper.querySelector('.timeline-line-progress');
+            var bgLine = wrapper.querySelector('.timeline-line-bg');
+            var dots = wrapper.querySelectorAll('.timeline-dot');
+            if (!progressBar || !dots.length) return;
+
+            function update() {
+                var vh = window.innerHeight;
+                var triggerY = vh * 0.65;
+                var firstDot = dots[0];
+                var lastDot = dots[dots.length - 1];
+
+                var wrapRect = wrapper.getBoundingClientRect();
+                var firstRect = firstDot.getBoundingClientRect();
+                var lastRect = lastDot.getBoundingClientRect();
+
+                var startOffset = (firstRect.top - wrapRect.top) + (firstRect.height / 2);
+                var endOffset = (lastRect.top - wrapRect.top) + (lastRect.height / 2);
+                var totalDist = Math.max(0, endOffset - startOffset);
+
+                if (bgLine) {
+                    bgLine.style.top = startOffset + 'px';
+                    bgLine.style.height = totalDist + 'px';
+                    bgLine.style.bottom = 'auto';
+                }
+                progressBar.style.top = startOffset + 'px';
+
+                var firstCenterY = firstRect.top + firstRect.height / 2;
+                var lastCenterY = lastRect.top + lastRect.height / 2;
+
+                var progress = 0;
+                if (totalDist > 0) {
+                    if (triggerY <= firstCenterY) {
+                        progress = 0;
+                    } else if (triggerY >= lastCenterY) {
+                        progress = 1;
+                    } else {
+                        progress = (triggerY - firstCenterY) / totalDist;
+                    }
+                }
+                progress = Math.max(0, Math.min(1, progress));
+                progressBar.style.height = (totalDist * progress) + 'px';
+
+                dots.forEach(function (dot) {
+                    var dRect = dot.getBoundingClientRect();
+                    var dCenterY = dRect.top + dRect.height / 2;
+                    var row = dot.closest('.timeline-row');
+                    if (triggerY >= dCenterY - 4) {
+                        dot.classList.add('active');
+                        if (row) row.classList.add('active');
+                    } else {
+                        dot.classList.remove('active');
+                        if (row) row.classList.remove('active');
+                    }
+                });
+            }
+
+            var ticking = false;
+            function onScroll() {
+                if (!ticking) {
+                    requestAnimationFrame(function () {
+                        update();
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            }
+
+            window.addEventListener('scroll', onScroll, { passive: true });
+            window.addEventListener('resize', onScroll, { passive: true });
+            update();
+            setTimeout(update, 200);
+            setTimeout(update, 800);
+        });
     </script>
 </body>
 
