@@ -2871,3 +2871,144 @@ select {
     color: #ffbf00 !important;
     border-color: rgba(255, 191, 0, 0.3) !important;
 }
+
+/* ==========================================================================
+   Auram Jewellery Creative Showcase & Grid
+   ========================================================================== */
+.auram-creative-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) !important;
+    gap: 20px !important;
+    margin-top: 36px !important;
+}
+
+@media (min-width: 1024px) {
+    .auram-creative-grid.five-cols {
+        grid-template-columns: repeat(5, 1fr) !important;
+    }
+}
+
+.auram-creative-card {
+    background: #141414 !important;
+    border: 1px solid rgba(255, 191, 0, 0.22) !important;
+    border-radius: 16px !important;
+    overflow: hidden !important;
+    display: flex !important;
+    flex-direction: column !important;
+    transition: transform 0.35s cubic-bezier(0.2, 0, 0.2, 1), border-color 0.35s ease, box-shadow 0.35s ease !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+    position: relative !important;
+}
+
+.auram-creative-card:hover {
+    transform: translateY(-8px) !important;
+    border-color: rgba(255, 191, 0, 0.6) !important;
+    box-shadow: 0 20px 40px rgba(255, 191, 0, 0.16) !important;
+}
+
+.auram-creative-img-wrap {
+    position: relative !important;
+    width: 100% !important;
+    aspect-ratio: 9 / 16 !important;
+    overflow: hidden !important;
+    background: #080808 !important;
+}
+
+.auram-creative-img-wrap img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+    transition: transform 0.5s ease !important;
+}
+
+.auram-creative-card:hover .auram-creative-img-wrap img {
+    transform: scale(1.05) !important;
+}
+
+.auram-creative-caption {
+    padding: 16px 14px !important;
+    background: #121212 !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.06) !important;
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    flex-grow: 1 !important;
+}
+
+.auram-creative-caption .badge {
+    display: inline-block !important;
+    background: rgba(255, 191, 0, 0.15) !important;
+    color: #ffbf00 !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    padding: 3px 10px !important;
+    border-radius: 12px !important;
+    margin-bottom: 8px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+}
+
+.auram-creative-caption h4 {
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+    margin: 0 !important;
+    line-height: 1.35 !important;
+}
+
+/* Performance Marketing Page Auram Hero Showcase */
+.perf-auram-hero-section {
+    padding: 70px 0 90px !important;
+    background: #080808 !important;
+    position: relative !important;
+    border-bottom: 1px solid rgba(255, 191, 0, 0.15) !important;
+}
+
+.perf-auram-hero-section .section-kicker {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    background: rgba(255, 191, 0, 0.1) !important;
+    border: 1px solid rgba(255, 191, 0, 0.3) !important;
+    padding: 6px 18px !important;
+    border-radius: 999px !important;
+    color: #ffbf00 !important;
+    font-size: 12px !important;
+    font-weight: 800 !important;
+    letter-spacing: 1px !important;
+    text-transform: uppercase !important;
+    margin-bottom: 16px !important;
+}
+
+.perf-auram-metrics {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 16px !important;
+    flex-wrap: wrap !important;
+    margin: 28px 0 36px !important;
+}
+
+.perf-auram-metric-pill {
+    background: #141414 !important;
+    border: 1px solid rgba(255, 191, 0, 0.22) !important;
+    border-radius: 12px !important;
+    padding: 12px 20px !important;
+    text-align: center !important;
+    min-width: 140px !important;
+}
+
+.perf-auram-metric-pill strong {
+    display: block !important;
+    font-size: 26px !important;
+    font-weight: 800 !important;
+    color: #ffbf00 !important;
+    line-height: 1.1 !important;
+}
+
+.perf-auram-metric-pill span {
+    font-size: 12px !important;
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-weight: 600 !important;
+}
