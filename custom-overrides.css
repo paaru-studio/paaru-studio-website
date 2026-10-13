@@ -192,6 +192,7 @@
         right: 40px !important;
         width: calc(100% - 80px) !important;
     }
+
     .navbar.scrolled .nav-content {
         padding: 0 24px !important;
         gap: 30px !important;
@@ -204,6 +205,7 @@
         right: 20px !important;
         width: calc(100% - 40px) !important;
     }
+
     .navbar.scrolled .nav-content {
         padding: 0 16px !important;
         gap: 16px !important;
@@ -225,6 +227,7 @@
         box-shadow: 0 4px 20px rgba(255, 191, 0, 0.3) !important;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
     }
+
     .navbar.scrolled .nav-content {
         height: 54px !important;
         padding: 0 !important;
@@ -552,7 +555,7 @@
     font-size: 19px;
 }
 
-/* 6. "Explore Ai" Navbar Button — Original Dotted Texture Component */
+/* 6. "Ai Services" Navbar Button — Original Dotted Texture Component */
 .ai-explore-btn,
 .nav-links .ai-explore-btn {
     position: relative !important;
@@ -2668,4 +2671,203 @@ select {
     color: var(--accent-color, #ffbf00) !important;
     font-weight: 700 !important;
     flex-shrink: 0 !important;
+}
+
+/* ==========================================================================
+   Case Studies Page & Grid Styling
+   ========================================================================== */
+.case-studies-section {
+    padding: 50px 0 120px !important;
+    background: #0a0a0a !important;
+}
+
+.case-study-filters {
+    display: flex !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    gap: 12px !important;
+    margin-bottom: 48px !important;
+}
+
+.case-study-filters .filter-btn {
+    background: #141414 !important;
+    color: rgba(255, 255, 255, 0.75) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    padding: 10px 22px !important;
+    border-radius: 999px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: all 0.25s ease !important;
+    font-family: inherit !important;
+    touch-action: manipulation;
+}
+
+.case-study-filters .filter-btn:hover,
+.case-study-filters .filter-btn.active {
+    background: #ffbf00 !important;
+    color: #000000 !important;
+    border-color: #ffbf00 !important;
+    font-weight: 700 !important;
+    box-shadow: 0 4px 16px rgba(255, 191, 0, 0.35) !important;
+}
+
+.case-studies-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 32px !important;
+    align-items: stretch !important;
+}
+
+@media (max-width: 1100px) {
+    .case-studies-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 24px !important;
+    }
+}
+
+@media (max-width: 700px) {
+    .case-studies-grid {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+    }
+}
+
+.case-study-card {
+    background: #141414 !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 16px !important;
+    overflow: hidden !important;
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+    transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.35s ease, box-shadow 0.35s ease !important;
+    position: relative !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45) !important;
+}
+
+.case-study-card:hover {
+    transform: translateY(-8px) !important;
+    border-color: rgba(255, 191, 0, 0.45) !important;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.65), 0 0 24px rgba(255, 191, 0, 0.18) !important;
+}
+
+.case-study-link {
+    text-decoration: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+    color: inherit !important;
+}
+
+.case-study-image {
+    position: relative !important;
+    width: 100% !important;
+    height: 230px !important;
+    overflow: hidden !important;
+    background: #1a1a1a !important;
+}
+
+.case-study-image img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+    transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+}
+
+.case-study-card:hover .case-study-image img {
+    transform: scale(1.06) !important;
+}
+
+.case-study-overlay {
+    position: absolute !important;
+    inset: 0 !important;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.85) 100%) !important;
+    display: flex !important;
+    align-items: flex-end !important;
+    padding: 16px !important;
+    pointer-events: none !important;
+}
+
+.view-case-study {
+    color: #ffbf00 !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    background: rgba(0, 0, 0, 0.65) !important;
+    padding: 6px 14px !important;
+    border-radius: 20px !important;
+    border: 1px solid rgba(255, 191, 0, 0.35) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+    transition: background 0.25s ease, border-color 0.25s ease !important;
+}
+
+.case-study-card:hover .view-case-study {
+    background: rgba(255, 191, 0, 0.2) !important;
+    border-color: #ffbf00 !important;
+}
+
+.case-study-content {
+    padding: 24px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    flex-grow: 1 !important;
+}
+
+.case-study-badge {
+    font-size: 11px !important;
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.08em !important;
+    color: #ffbf00 !important;
+    margin-bottom: 8px !important;
+    display: inline-block !important;
+}
+
+.case-study-title {
+    font-size: 24px !important;
+    font-weight: 800 !important;
+    color: #ffffff !important;
+    margin: 0 0 10px 0 !important;
+    line-height: 1.3 !important;
+    letter-spacing: -0.4px !important;
+}
+
+.case-study-description {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    color: rgba(255, 255, 255, 0.72) !important;
+    margin: 0 0 20px 0 !important;
+    flex-grow: 1 !important;
+}
+
+.case-study-tags {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    margin-top: auto !important;
+    padding-top: 16px !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.case-study-tags .tag {
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    padding: 5px 12px !important;
+    border-radius: 6px !important;
+    background: rgba(255, 255, 255, 0.06) !important;
+    color: rgba(255, 255, 255, 0.85) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    letter-spacing: 0.03em !important;
+    text-transform: uppercase !important;
+}
+
+.case-study-tags .tag.highlight {
+    background: rgba(255, 191, 0, 0.12) !important;
+    color: #ffbf00 !important;
+    border-color: rgba(255, 191, 0, 0.3) !important;
 }
