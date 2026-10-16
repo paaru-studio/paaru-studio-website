@@ -392,6 +392,7 @@ function runAudit() {
     const missingFromSitemap = [];
     const thinPages = [];
     const navFooterMismatches = [];
+    const nonCanonicalPages = [];
 
     const pageSummaries = [];
 
@@ -400,26 +401,37 @@ function runAudit() {
         const contextualInLinks = inLinks.filter(l => !l.isTemplate);
         const depth = clickDepth.get(url);
         const inSitemap = sitemapUrls.has(url);
+        const isNonCanonical = (page.canonicalPath && page.canonicalPath !== url) || redirects.has(url);
 
-        if (inLinks.length === 0 && url !== '/') {
-            orphanPages.push(url);
-        }
-        if (depth > 2 && depth !== Infinity) {
-            depthGt2.push({ url, depth });
-        }
-        if (depth === Infinity && url !== '/') {
-            depthGt2.push({ url, depth: 'Unreachable' });
-        }
-        if (contextualInLinks.length < 3 && url !== '/') {
-            lowContextualInbound.push({
+        if (isNonCanonical) {
+            nonCanonicalPages.push({
                 url,
-                count: contextualInLinks.length,
-                sources: [...new Set(contextualInLinks.map(l => l.sourceUrl))]
+                filename: page.filename,
+                canonicalTarget: page.canonicalPath,
+                redirectTarget: redirects.get(url)
             });
+        } else {
+            if (inLinks.length === 0 && url !== '/') {
+                orphanPages.push(url);
+            }
+            if (depth > 2 && depth !== Infinity) {
+                depthGt2.push({ url, depth });
+            }
+            if (depth === Infinity && url !== '/') {
+                depthGt2.push({ url, depth: 'Unreachable' });
+            }
+            if (contextualInLinks.length < 3 && url !== '/') {
+                lowContextualInbound.push({
+                    url,
+                    count: contextualInLinks.length,
+                    sources: [...new Set(contextualInLinks.map(l => l.sourceUrl))]
+                });
+            }
+            if (!inSitemap) {
+                missingFromSitemap.push(url);
+            }
         }
-        if (!inSitemap) {
-            missingFromSitemap.push(url);
-        }
+
         if (page.wordCount < 500) {
             thinPages.push({ url, wordCount: page.wordCount, h1: page.h1 });
         }
@@ -461,6 +473,7 @@ function runAudit() {
         missingFromSitemap,
         thinPages,
         navFooterMismatches,
+        nonCanonicalPages,
         redirectLinksFound,
         pageSummaries,
         pages,
@@ -476,11 +489,13 @@ if (require.main === module) {
     const audit = runAudit();
     console.log(`=== LINK AUDIT SUMMARY ===`);
     console.log(`Total HTML pages: ${audit.totalPages}`);
+    console.log(`Canonical indexable pages: ${audit.totalPages - audit.nonCanonicalPages.length}`);
     console.log(`Total URLs in sitemap: ${audit.sitemapUrlCount}`);
     console.log(`Orphans (0 total inbound): ${audit.orphanPages.length} ->`, audit.orphanPages);
     console.log(`Click depth > 2 from /: ${audit.depthGt2.length} ->`, audit.depthGt2);
     console.log(`Pages with < 3 contextual inbound links: ${audit.lowContextualInbound.length}`);
     console.log(`Pages missing from sitemap.xml: ${audit.missingFromSitemap.length} ->`, audit.missingFromSitemap);
+    console.log(`Non-canonical / redirected pages: ${audit.nonCanonicalPages.length} ->`, audit.nonCanonicalPages.map(p => p.url));
     console.log(`Thin pages (< 500 words): ${audit.thinPages.length}`);
     console.log(`Nav/Footer template mismatches: ${audit.navFooterMismatches.length}`);
     console.log(`Internal links pointing to redirects or .html: ${audit.redirectLinksFound.length}`);
