@@ -191,13 +191,13 @@ function parseHtmlFile(filepath, filename, redirects) {
     // Nav Template Variant Detection
     let navVariant = 'Unknown';
     if (content.includes('class="navbar"')) {
-        const hasServicesDropdown = content.includes('Services <span') || content.includes('Services<span');
-        const hasMediaDropdown = content.includes('Media <span') || content.includes('Media<span');
-        const hasCaseStudies = content.includes('href="/case-studies"') || content.includes('href="case-studies.html"');
-        const hasBlog = content.includes('href="/blog"') || content.includes('href="blog.html"');
-        const hasJoinTeamInNav = content.includes('<div class="nav-links">') && (
-            content.match(/<div class="nav-links">[\s\S]*?href="[^"]*join-team[^"]*"[\s\S]*?<\/div>/)
-        );
+        const navBlockMatch = content.match(/<nav class=["']navbar["'][\s\S]*?<\/nav>/i);
+        const navContent = navBlockMatch ? navBlockMatch[0] : '';
+        const hasServicesDropdown = navContent.includes('Services <span') || navContent.includes('Services<span');
+        const hasMediaDropdown = navContent.includes('Media <span') || navContent.includes('Media<span');
+        const hasCaseStudies = navContent.includes('href="/case-studies"') || navContent.includes('href="case-studies.html"');
+        const hasBlog = navContent.includes('href="/blog"') || navContent.includes('href="blog.html"');
+        const hasJoinTeamInNav = navContent.includes('join-team');
 
         if (hasServicesDropdown && hasMediaDropdown && hasCaseStudies && hasBlog && !hasJoinTeamInNav) {
             navVariant = 'Modern Full (Services+Media, CaseStudies, Blog, AI, Contact)';
