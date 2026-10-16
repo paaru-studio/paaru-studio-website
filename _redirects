@@ -51,3 +51,133 @@ http://paarustudio.com/*       https://paarustudio.com/:splat  301!
 # Service subpath aliases
 /brand-film-production                   /video-production#brand-film-production       301!
 /ad-film-production                      /video-production#ad-film-production          301!
+
+# Image & Asset Renaming 301 Redirects
+/Auram%20Jewellery%20assets/*  /auram_jewellery_assets/:splat  301!
+/Auram\ Jewellery\ assets/*  /auram_jewellery_assets/:splat  301!
+/Logos/ChatGPT%20Image%20Aug%2021,%202025%20at%2001_00_18%20PM.webp  /Logos/logo_simpliaxis.webp  301!
+/Logos/ChatGPT\ Image\ Aug\ 21,\ 2025\ at\ 01_00_18\ PM.webp  /Logos/logo_simpliaxis.webp  301!
+/Logos/ChatGPT%20Image%20Aug%2021,%202025%20at%2001_00_18%20PM.png  /Logos/logo_simpliaxis.png  301!
+/Logos/ChatGPT\ Image\ Aug\ 21,\ 2025\ at\ 01_00_18\ PM.png  /Logos/logo_simpliaxis.png  301!
+/Logos/ChatGPT%20Image%20Aug%2021,%202025%20at%2001_51_46%20PM.webp  /Logos/logo_fortis.webp  301!
+/Logos/ChatGPT\ Image\ Aug\ 21,\ 2025\ at\ 01_51_46\ PM.webp  /Logos/logo_fortis.webp  301!
+/Logos/ChatGPT%20Image%20Aug%2021,%202025%20at%2001_51_46%20PM.png  /Logos/logo_fortis.png  301!
+/Logos/ChatGPT\ Image\ Aug\ 21,\ 2025\ at\ 01_51_46\ PM.png  /Logos/logo_fortis.png  301!
+/Logos/ChatGPT%20Image%20Aug%2021,%202025%20at%2002_14_37%20PM.webp  /Logos/logo_ovum.webp  301!
+/Logos/ChatGPT\ Image\ Aug\ 21,\ 2025\ at\ 02_14_37\ PM.webp  /Logos/logo_ovum.webp  301!
+/Logos/ChatGPT%20Image%20Aug%2021,%202025%20at%2002_14_37%20PM.png  /Logos/logo_ovum.png  301!
+/Logos/ChatGPT\ Image\ Aug\ 21,\ 2025\ at\ 02_14_37\ PM.png  /Logos/logo_ovum.png  301!
+/Logos/ChatGPT%20Image%20Aug%2021,%202025%20at%2012_46_51%20PM.webp  /Logos/logo_mytatva.webp  301!
+/Logos/ChatGPT\ Image\ Aug\ 21,\ 2025\ at\ 12_46_51\ PM.webp  /Logos/logo_mytatva.webp  301!
+/Logos/ChatGPT%20Image%20Aug%2021,%202025%20at%2012_46_51%20PM.png  /Logos/logo_mytatva.png  301!
+/Logos/ChatGPT\ Image\ Aug\ 21,\ 2025\ at\ 12_46_51\ PM.png  /Logos/logo_mytatva.png  301!
+/Logos/ChatGPT%20Image%20Aug%2021,%202025%20at%2012_52_24%20PM.webp  /Logos/logo_herbalife.webp  301!
+/Logos/ChatGPT\ Image\ Aug\ 21,\ 2025\ at\ 12_52_24\ PM.webp  /Logos/logo_herbalife.webp  301!
+/Logos/ChatGPT%20Image%20Aug%2021,%202025%20at%2012_52_24%20PM.png  /Logos/logo_herbalife.png  301!
+/Logos/ChatGPT\ Image\ Aug\ 21,\ 2025\ at\ 12_52_24\ PM.png  /Logos/logo_herbalife.png  301!
+/Logos/ChatGPT%20Image%20Aug%2022,%202025%20at%2001_00_39%20PM.webp  /Logos/logo_anora.webp  301!
+/Logos/ChatGPT\ Image\ Aug\ 22,\ 2025\ at\ 01_00_39\ PM.webp  /Logos/logo_anora.webp  301!
+/Logos/ChatGPT%20Image%20Aug%2022,%202025%20at%2001_00_39%20PM.png  /Logos/logo_anora.png  301!
+/Logos/ChatGPT\ Image\ Aug\ 22,\ 2025\ at\ 01_00_39\ PM.png  /Logos/logo_anora.png  301!
+/Logos/ChatGPT%20Image%20Aug%2022,%202025%20at%2012_00_42%20PM.webp  /Logos/logo_mockzraj_ias.webp  301!
+/Logos/ChatGPT\ Image\ Aug\ 22,\ 2025\ at\ 12_00_42\ PM.webp  /Logos/logo_mockzraj_ias.webp  301!
+/Logos/ChatGPT%20Image%20Aug%2022,%202025%20at%2012_00_42%20PM.png  /Logos/logo_mockzraj_ias.png  301!
+/Logos/ChatGPT\ Image\ Aug\ 22,\ 2025\ at\ 12_00_42\ PM.png  /Logos/logo_mockzraj_ias.png  301!
+/Logos/ChatGPT%20Image%20Aug%2022,%202025%20at%2012_16_18%20PM.webp  /Logos/logo_iraedu_tech.webp  301!
+/Logos/ChatGPT\ Image\ Aug\ 22,\ 2025\ at\ 12_16_18\ PM.webp  /Logos/logo_iraedu_tech.webp  301!
+/Logos/ChatGPT%20Image%20Aug%2022,%202025%20at%2012_16_18%20PM.png  /Logos/logo_iraedu_tech.png  301!
+/Logos/ChatGPT\ Image\ Aug\ 22,\ 2025\ at\ 12_16_18\ PM.png  /Logos/logo_iraedu_tech.png  301!
+/Logos/ChatGPT%20Image%20Aug%2022,%202025%20at%2012_21_11%20PM.webp  /Logos/logo_cyseck.webp  301!
+/Logos/ChatGPT\ Image\ Aug\ 22,\ 2025\ at\ 12_21_11\ PM.webp  /Logos/logo_cyseck.webp  301!
+/Logos/ChatGPT%20Image%20Aug%2022,%202025%20at%2012_21_11%20PM.png  /Logos/logo_cyseck.png  301!
+/Logos/ChatGPT\ Image\ Aug\ 22,\ 2025\ at\ 12_21_11\ PM.png  /Logos/logo_cyseck.png  301!
+/Logos/ChatGPT%20Image%20Aug%2022,%202025%20at%2012_55_36%20PM.webp  /Logos/logo_the_mohraj.webp  301!
+/Logos/ChatGPT\ Image\ Aug\ 22,\ 2025\ at\ 12_55_36\ PM.webp  /Logos/logo_the_mohraj.webp  301!
+/Logos/ChatGPT%20Image%20Aug%2022,%202025%20at%2012_55_36%20PM.png  /Logos/logo_the_mohraj.png  301!
+/Logos/ChatGPT\ Image\ Aug\ 22,\ 2025\ at\ 12_55_36\ PM.png  /Logos/logo_the_mohraj.png  301!
+/Logos/ChatGPT%20Image%20Aug%2022,%202025%20at%2012_57_54%20PM.webp  /Logos/logo_the_tribe_concepts.webp  301!
+/Logos/ChatGPT\ Image\ Aug\ 22,\ 2025\ at\ 12_57_54\ PM.webp  /Logos/logo_the_tribe_concepts.webp  301!
+/Logos/ChatGPT%20Image%20Aug%2022,%202025%20at%2012_57_54%20PM.png  /Logos/logo_the_tribe_concepts.png  301!
+/Logos/ChatGPT\ Image\ Aug\ 22,\ 2025\ at\ 12_57_54\ PM.png  /Logos/logo_the_tribe_concepts.png  301!
+/Logos/ChatGPT%20Image%20Aug%2026,%202025%20at%2011_29_17%20AM.webp  /Logos/logo_livspace.webp  301!
+/Logos/ChatGPT\ Image\ Aug\ 26,\ 2025\ at\ 11_29_17\ AM.webp  /Logos/logo_livspace.webp  301!
+/Logos/ChatGPT%20Image%20Aug%2026,%202025%20at%2011_29_17%20AM.png  /Logos/logo_livspace.png  301!
+/Logos/ChatGPT\ Image\ Aug\ 26,\ 2025\ at\ 11_29_17\ AM.png  /Logos/logo_livspace.png  301!
+/Logos/Logo_1.webp  /Logos/logo_onsurity.webp  301!
+/Logos/Logo_1.png  /Logos/logo_onsurity.png  301!
+/Logos/Logo_2.webp  /Logos/logo_windowfab.webp  301!
+/Logos/Logo_2.png  /Logos/logo_windowfab.png  301!
+/Logos/Logo_3.webp  /Logos/logo_cinemon.webp  301!
+/Logos/Logo_3.png  /Logos/logo_cinemon.png  301!
+/Image%2001.webp  /image_01.webp  301!
+/Image\ 01.webp  /image_01.webp  301!
+/Image%2001.jpeg  /image_01.jpeg  301!
+/Image\ 01.jpeg  /image_01.jpeg  301!
+/portfolio_pics/03%20(1).webp  /portfolio_pics/03_1.webp  301!
+/portfolio_pics/03%20%281%29.webp  /portfolio_pics/03_1.webp  301!
+/portfolio_pics/03\ (1).webp  /portfolio_pics/03_1.webp  301!
+/portfolio_pics/03%20(1).jpeg  /portfolio_pics/03_1.jpeg  301!
+/portfolio_pics/03%20%281%29.jpeg  /portfolio_pics/03_1.jpeg  301!
+/portfolio_pics/03\ (1).jpeg  /portfolio_pics/03_1.jpeg  301!
+/portfolio_pics/04%20(1).webp  /portfolio_pics/04_1.webp  301!
+/portfolio_pics/04%20%281%29.webp  /portfolio_pics/04_1.webp  301!
+/portfolio_pics/04\ (1).webp  /portfolio_pics/04_1.webp  301!
+/portfolio_pics/04%20(1).jpeg  /portfolio_pics/04_1.jpeg  301!
+/portfolio_pics/04%20%281%29.jpeg  /portfolio_pics/04_1.jpeg  301!
+/portfolio_pics/04\ (1).jpeg  /portfolio_pics/04_1.jpeg  301!
+/Cart%20Logo.webp  /cart_logo.webp  301!
+/Cart\ Logo.webp  /cart_logo.webp  301!
+/Cart%20Logo.png  /cart_logo.png  301!
+/Cart\ Logo.png  /cart_logo.png  301!
+/Influencer%20Network%20Pic.webp  /influencer_network_pic.webp  301!
+/Influencer\ Network\ Pic.webp  /influencer_network_pic.webp  301!
+/Influencer%20Network%20Pic.png  /influencer_network_pic.png  301!
+/Influencer\ Network\ Pic.png  /influencer_network_pic.png  301!
+/google%20Ads%20Video01.webp  /google_ads_video01.webp  301!
+/google\ Ads\ Video01.webp  /google_ads_video01.webp  301!
+/google%20Ads%20Video01.png  /google_ads_video01.png  301!
+/google\ Ads\ Video01.png  /google_ads_video01.png  301!
+/google%20performance%20ads01.webp  /google_performance_ads01.webp  301!
+/google\ performance\ ads01.webp  /google_performance_ads01.webp  301!
+/google%20performance%20ads01.png  /google_performance_ads01.png  301!
+/google\ performance\ ads01.png  /google_performance_ads01.png  301!
+/social%20media_01.webp  /social_media_01.webp  301!
+/social\ media_01.webp  /social_media_01.webp  301!
+/social%20media_01.jpg  /social_media_01.jpg  301!
+/social\ media_01.jpg  /social_media_01.jpg  301!
+/social%20media_02.webp  /social_media_02.webp  301!
+/social\ media_02.webp  /social_media_02.webp  301!
+/social%20media_02.jpg  /social_media_02.jpg  301!
+/social\ media_02.jpg  /social_media_02.jpg  301!
+/social%20media_03.webp  /social_media_03.webp  301!
+/social\ media_03.webp  /social_media_03.webp  301!
+/social%20media_03.jpg  /social_media_03.jpg  301!
+/social\ media_03.jpg  /social_media_03.jpg  301!
+/social%20media_04.webp  /social_media_04.webp  301!
+/social\ media_04.webp  /social_media_04.webp  301!
+/social%20media_04.jpg  /social_media_04.jpg  301!
+/social\ media_04.jpg  /social_media_04.jpg  301!
+/social%20media_05.webp  /social_media_05.webp  301!
+/social\ media_05.webp  /social_media_05.webp  301!
+/social%20media_05.jpg  /social_media_05.jpg  301!
+/social\ media_05.jpg  /social_media_05.jpg  301!
+/Asset%201Ai%20Logo%20Web.webp  /asset_1_ai_logo_web.webp  301!
+/Asset\ 1Ai\ Logo\ Web.webp  /asset_1_ai_logo_web.webp  301!
+/Showreel_Paaru%20Studio%2001.mp4  /showreel_paaru_studio_01.mp4  301!
+/Showreel_Paaru\ Studio\ 01.mp4  /showreel_paaru_studio_01.mp4  301!
+/Web%20Bg%20Curve%204k%20.webp  /web_bg_curve_4k.webp  301!
+/Web\ Bg\ Curve\ 4k\ .webp  /web_bg_curve_4k.webp  301!
+/Web%20Bg%20Curve%204k%20.png  /web_bg_curve_4k.png  301!
+/Web\ Bg\ Curve\ 4k\ .png  /web_bg_curve_4k.png  301!
+/Website%20Bg%20Curve.webp  /website_bg_curve.webp  301!
+/Website\ Bg\ Curve.webp  /website_bg_curve.webp  301!
+/Website%20Bg%20Curve.png  /website_bg_curve.png  301!
+/Website\ Bg\ Curve.png  /website_bg_curve.png  301!
+/web%20page%20bg%204K.webp  /web_page_bg_4k.webp  301!
+/web\ page\ bg\ 4K.webp  /web_page_bg_4k.webp  301!
+/web%20page%20bg%204K.png  /web_page_bg_4k.png  301!
+/web\ page\ bg\ 4K.png  /web_page_bg_4k.png  301!
+/Auram%20Jewellery%20logo.webp  /auram_jewellery_logo.webp  301!
+/Auram\ Jewellery\ logo.webp  /auram_jewellery_logo.webp  301!
+/Logos/Auram%20Jewellery%20logo.webp  /Logos/logo_auram_jewellery.webp  301!
+/Logos/Auram\ Jewellery\ logo.webp  /Logos/logo_auram_jewellery.webp  301!

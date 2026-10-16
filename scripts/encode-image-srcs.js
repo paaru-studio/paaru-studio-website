@@ -10,27 +10,27 @@ const path = require('path');
 const ROOT_DIR = path.resolve(__dirname, '..');
 
 const mappings = [
-  { from: 'Image 01.webp', to: 'Image%2001.webp' },
-  { from: 'portfolio_pics/03 (1).webp', to: 'portfolio_pics/03%20%281%29.webp' },
-  { from: 'portfolio_pics/04 (1).webp', to: 'portfolio_pics/04%20%281%29.webp' },
-  { from: 'Influencer Network Pic.webp', to: 'Influencer%20Network%20Pic.webp' },
-  { from: 'google Ads Video01.webp', to: 'google%20Ads%20Video01.webp' },
-  { from: 'google performance ads01.webp', to: 'google%20performance%20ads01.webp' },
-  { from: 'social media_02.webp', to: 'social%20media_02.webp' },
-  { from: 'social media_03.webp', to: 'social%20media_03.webp' },
-  { from: 'social media_04.webp', to: 'social%20media_04.webp' }
+  { from: 'image_01.webp', to: 'image_01.webp' },
+  { from: 'portfolio_pics/03_1.webp', to: 'portfolio_pics/03_1.webp' },
+  { from: 'portfolio_pics/04_1.webp', to: 'portfolio_pics/04_1.webp' },
+  { from: 'influencer_network_pic.webp', to: 'influencer_network_pic.webp' },
+  { from: 'google_ads_video01.webp', to: 'google_ads_video01.webp' },
+  { from: 'google_performance_ads01.webp', to: 'google_performance_ads01.webp' },
+  { from: 'social_media_02.webp', to: 'social_media_02.webp' },
+  { from: 'social_media_03.webp', to: 'social_media_03.webp' },
+  { from: 'social_media_04.webp', to: 'social_media_04.webp' }
 ];
 
 const chatGptImages = [
-  'Logos/ChatGPT Image Aug 21, 2025 at 01_00_18 PM.webp',
-  'Logos/ChatGPT Image Aug 21, 2025 at 01_51_46 PM.webp',
-  'Logos/ChatGPT Image Aug 21, 2025 at 02_14_37 PM.webp',
-  'Logos/ChatGPT Image Aug 21, 2025 at 12_46_51 PM.webp',
-  'Logos/ChatGPT Image Aug 21, 2025 at 12_52_24 PM.webp',
-  'Logos/ChatGPT Image Aug 22, 2025 at 01_00_39 PM.webp',
-  'Logos/ChatGPT Image Aug 22, 2025 at 12_55_36 PM.webp',
-  'Logos/ChatGPT Image Aug 22, 2025 at 12_57_54 PM.webp',
-  'Logos/ChatGPT Image Aug 26, 2025 at 11_29_17 AM.webp'
+  'Logos/logo_simpliaxis.webp',
+  'Logos/logo_fortis.webp',
+  'Logos/logo_ovum.webp',
+  'Logos/logo_mytatva.webp',
+  'Logos/logo_herbalife.webp',
+  'Logos/logo_anora.webp',
+  'Logos/logo_the_mohraj.webp',
+  'Logos/logo_the_tribe_concepts.webp',
+  'Logos/logo_livspace.webp'
 ];
 
 chatGptImages.forEach(img => {
