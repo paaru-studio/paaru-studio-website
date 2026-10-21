@@ -1011,7 +1011,7 @@ body {
     }
 
     .hero-title.ref-title {
-        font-size: clamp(25px, 6.5vw, 34px) !important;
+        font-size: clamp(40px, 6.5vw, 52px) !important;
         text-align: center !important;
         margin-bottom: 12px !important;
         line-height: 1.2 !important;
@@ -3826,7 +3826,8 @@ select {
 .campaign-video-frame {
     position: relative;
     width: 100%;
-    padding-bottom: 177.78%; /* 9:16 vertical */
+    padding-bottom: 177.78%;
+    /* 9:16 vertical */
     height: 0;
     overflow: hidden;
     border-radius: 20px;
@@ -3909,6 +3910,7 @@ select {
     .campaign-spotlight-item.reverse .campaign-video-holder {
         order: 2;
     }
+
     .campaign-spotlight-item.reverse .campaign-info {
         order: 1;
     }
@@ -3976,7 +3978,8 @@ select {
     width: 100%;
     max-width: 330px;
     position: relative;
-    padding-bottom: 177.78%; /* 9:16 vertical */
+    padding-bottom: 177.78%;
+    /* 9:16 vertical */
     height: 0;
     overflow: hidden;
     border-radius: 20px;
