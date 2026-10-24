@@ -4216,3 +4216,92 @@ select {
         color: rgba(255, 255, 255, 0.9) !important;
     }
 }
+
+/* ==========================================================================
+   Framer Gradient Motion Background for Dark Grid Blocks & Cards
+   (Original Green Aurora Palette: #22c55e, #16a34a, #4ade80 on #050805)
+   ========================================================================== */
+.has-gradient-motion-bg {
+    position: relative !important;
+    overflow: hidden !important;
+    background: #050805 !important;
+    isolation: isolate;
+}
+
+.gradient-motion-bg-container {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #050805;
+    filter: contrast(110%);
+    pointer-events: none;
+    z-index: 0;
+    border-radius: inherit;
+}
+
+.gradient-motion-bg-inner {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.gradient-motion-blob {
+    position: absolute;
+    pointer-events: none;
+    will-change: transform;
+    opacity: 0.85;
+}
+
+.gradient-motion-grain {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Ensure all interactive card contents sit cleanly above the animated background */
+.has-gradient-motion-bg > *:not(.gradient-motion-bg-container) {
+    position: relative;
+    z-index: 2;
+}
+
+/* Specific Card Styling Polishes with Gradient Motion Active */
+.service-nav-card.has-gradient-motion-bg {
+    border: 1px solid rgba(74, 222, 128, 0.22) !important;
+    box-shadow: 0 10px 32px rgba(0, 0, 0, 0.45) !important;
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.35s ease, box-shadow 0.35s ease !important;
+}
+
+.service-nav-card.has-gradient-motion-bg:hover {
+    transform: translateY(-6px) !important;
+    border-color: rgba(74, 222, 128, 0.5) !important;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), 0 0 24px rgba(34, 197, 94, 0.25) !important;
+}
+
+.case-card.has-gradient-motion-bg,
+.blog-card.has-gradient-motion-bg {
+    border: 1px solid rgba(74, 222, 128, 0.2) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45) !important;
+}
+
+.case-card.has-gradient-motion-bg:hover,
+.blog-card.has-gradient-motion-bg:hover {
+    transform: translateY(-6px) !important;
+    border-color: rgba(74, 222, 128, 0.5) !important;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 28px rgba(34, 197, 94, 0.25) !important;
+}
+
+.campaign-reel-card.has-gradient-motion-bg {
+    border: 1px solid rgba(74, 222, 128, 0.22) !important;
+}
+
+.campaign-reel-card.has-gradient-motion-bg:hover {
+    border-color: rgba(74, 222, 128, 0.55) !important;
+    box-shadow: 0 28px 70px rgba(0, 0, 0, 0.7), 0 0 35px rgba(34, 197, 94, 0.25) !important;
+}
