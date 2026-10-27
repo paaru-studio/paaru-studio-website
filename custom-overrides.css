@@ -472,8 +472,8 @@
 .home-services-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
-    max-width: 1400px;
+    gap: 26px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -516,7 +516,7 @@
 
 .service-nav-card-img-link img {
     width: 100%;
-    height: 190px;
+    height: 220px;
     object-fit: cover;
     display: block;
     border-radius: 0 !important;
@@ -528,7 +528,7 @@
 }
 
 .service-nav-body {
-    padding: 22px 24px 24px;
+    padding: 24px;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -536,8 +536,8 @@
 
 .service-nav-card .service-nav-body h4 {
     color: #ffffff;
-    font-size: 18px;
-    margin-bottom: 10px;
+    font-size: 19px;
+    margin-bottom: 8px;
     font-weight: 800;
     line-height: 1.35;
     transition: color 0.2s ease;
@@ -551,7 +551,8 @@
     color: rgba(255, 255, 255, 0.72);
     font-size: 13.5px;
     line-height: 1.55;
-    margin: 0;
+    margin-bottom: 16px;
+    flex-grow: 1;
 }
 
 .service-nav-card:hover {
@@ -562,6 +563,8 @@
 }
 
 .services-portfolio-banner {
+    max-width: 1200px;
+    margin: 26px auto 0;
     background: #141414;
     border: 1px solid rgba(255, 191, 0, 0.3);
     border-radius: 14px;
