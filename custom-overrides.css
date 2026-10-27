@@ -472,8 +472,8 @@
 .home-services-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 26px;
-    max-width: 1200px;
+    gap: 24px;
+    max-width: 1320px;
     margin: 0 auto;
 }
 
@@ -516,7 +516,7 @@
 
 .service-nav-card-img-link img {
     width: 100%;
-    height: 220px;
+    height: 187px;
     object-fit: cover;
     display: block;
     border-radius: 0 !important;
@@ -528,7 +528,7 @@
 }
 
 .service-nav-body {
-    padding: 24px;
+    padding: 18px 20px 20px;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -536,10 +536,10 @@
 
 .service-nav-card .service-nav-body h4 {
     color: #ffffff;
-    font-size: 19px;
-    margin-bottom: 8px;
+    font-size: 18px;
+    margin-bottom: 6px;
     font-weight: 800;
-    line-height: 1.35;
+    line-height: 1.3;
     transition: color 0.2s ease;
 }
 
@@ -549,26 +549,26 @@
 
 .service-nav-card .service-nav-body p {
     color: rgba(255, 255, 255, 0.72);
-    font-size: 13.5px;
-    line-height: 1.55;
-    margin-bottom: 16px;
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 12px;
     flex-grow: 1;
 }
 
 .service-nav-card:hover {
     background: #181818;
     border-color: rgba(255, 191, 0, 0.6);
-    transform: translateY(-6px);
+    transform: translateY(-5px);
     box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), 0 0 24px rgba(255, 191, 0, 0.25);
 }
 
 .services-portfolio-banner {
-    max-width: 1200px;
-    margin: 26px auto 0;
+    max-width: 1320px;
+    margin: 24px auto 0;
     background: #141414;
     border: 1px solid rgba(255, 191, 0, 0.3);
     border-radius: 14px;
-    padding: 22px 28px;
+    padding: 20px 26px;
     display: flex;
     align-items: center;
     justify-content: space-between;
