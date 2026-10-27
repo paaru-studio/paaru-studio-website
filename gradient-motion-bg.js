@@ -3,15 +3,13 @@
  * Ported directly from Framer component:
  * https://framer.com/m/GradientMotionBackground-WD0KcZ.js@0XzNSaACkRVeYaCYXGIe
  *
- * Defaults:
- * - Color stops: #22c55e, #16a34a, #4ade80
- * - Base background: #050805
- * - Blend mode: screen
- * - Shape style: Blob
- * - Blob count: 3
- * - Motion style: Drift
- * - Blur: 90px - 120px
- * - Grain overlay with SVG feTurbulence
+ * Configured with Paaru Studio recommended brand warm golden aurora palette:
+ * - Color stops: ['#ffbf00', '#ff9800', '#ffd033', '#e65100']
+ * - Base background: '#050505'
+ * - High-performance requestAnimationFrame loop with Mulberry32 PRNG seed
+ * - SVG feTurbulence film grain texture
+ * - Dual layer: Fixed full-page atmospheric background + coordinated card glass backgrounds
+ * - Respects prefers-reduced-motion and pauses when tab/element is inactive
  */
 (function () {
     'use strict';
@@ -46,29 +44,29 @@
         return 'url("data:image/svg+xml;utf8,' + encodeURIComponent(svg) + '")';
     }
 
-    var DEFAULT_CONFIG = {
+    var RECOMMENDED_CONFIG = {
         colorStops: ['#ffbf00', '#ff9800', '#ffd033', '#e65100'],
-        baseBackground: '#080805',
+        baseBackground: '#050505',
         blendMode: 'screen',
         opacity: 0.85,
         contrast: 110,
         shapeStyle: 'Blob',
-        blobCount: 3,
-        blurAmount: 90,
-        sizeMin: 55,
-        sizeMax: 85,
+        blobCount: 4,
+        blurAmount: 110,
+        sizeMin: 60,
+        sizeMax: 95,
         sizeRandomness: true,
-        sizeVariation: 25,
-        positionJitter: 15,
-        speed: 38,
+        sizeVariation: 30,
+        positionJitter: 20,
+        speed: 32,
         motionStyle: 'Drift',
-        motionRange: 55,
+        motionRange: 60,
         direction: 45,
         randomDirection: true,
         easeType: 'ease-in-out',
-        seed: 7,
+        seed: 42,
         grainEnabled: true,
-        grainAmount: 12,
+        grainAmount: 10,
         grainSize: 120,
         grainBlendMode: 'overlay'
     };
@@ -82,11 +80,14 @@
     };
 
     function createGradientMotionBackground(options) {
-        var opts = Object.assign({}, DEFAULT_CONFIG, options || {});
+        var opts = Object.assign({}, RECOMMENDED_CONFIG, options || {});
         var rand = mulberry32(Math.floor(opts.seed * 100000) + 1);
 
         var container = document.createElement('div');
         container.className = 'gradient-motion-bg-container';
+        if (opts.extraClass) {
+            container.classList.add(opts.extraClass);
+        }
         container.setAttribute('aria-hidden', 'true');
 
         var inner = document.createElement('div');
@@ -98,7 +99,7 @@
 
         for (var i = 0; i < count; i++) {
             var baseX = ((i + 0.5) / count) * 100;
-            var baseY = 30 + rand() * 40;
+            var baseY = 25 + rand() * 50;
             var jitterX = (rand() - 0.5) * 2 * opts.positionJitter;
             var jitterY = (rand() - 0.5) * 2 * opts.positionJitter;
             var sizeBase = opts.sizeMin + rand() * (opts.sizeMax - opts.sizeMin);
@@ -110,7 +111,7 @@
                 id: i,
                 xPct: Math.min(100, Math.max(0, baseX + jitterX)),
                 yPct: Math.min(100, Math.max(0, baseY + jitterY)),
-                sizePct: Math.max(10, sizeJitter),
+                sizePct: Math.max(15, sizeJitter),
                 color: color,
                 rotation: rand() * 360,
                 phase: rand(),
@@ -150,7 +151,7 @@
             container.appendChild(grainEl);
         }
 
-        // Animation loop management via IntersectionObserver
+        // Animation loop management
         var isVisible = true;
         var startTime = null;
         var rafId = null;
@@ -228,8 +229,44 @@
         };
     }
 
-    function initGradientMotionBackgrounds() {
-        // Find all target cards / blocks on the index page
+    function initPageAndGridGradientMotion() {
+        var prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        // 1. FULL WEBSITE INDEX PAGE BACKGROUND
+        if (!document.getElementById('page-gradient-motion-bg')) {
+            var pageBgInstance = createGradientMotionBackground({
+                extraClass: 'page-gradient-motion-bg',
+                seed: 88,
+                speed: prefersReducedMotion ? 0 : 22,
+                blobCount: 5,
+                blurAmount: 140,
+                sizeMin: 70,
+                sizeMax: 110,
+                opacity: 0.65,
+                colorStops: ['#ffbf00', '#ff9800', '#ffd033', '#e65100'],
+                baseBackground: '#050505',
+                motionRange: 75
+            });
+
+            pageBgInstance.element.id = 'page-gradient-motion-bg';
+            // Insert right at the top of <body>
+            document.body.insertBefore(pageBgInstance.element, document.body.firstChild);
+
+            if (!prefersReducedMotion) {
+                pageBgInstance.start();
+            }
+
+            // Pause full page bg when user switches tabs to save CPU/battery
+            document.addEventListener('visibilitychange', function () {
+                if (document.hidden) {
+                    pageBgInstance.stop();
+                } else if (!prefersReducedMotion) {
+                    pageBgInstance.start();
+                }
+            });
+        }
+
+        // 2. TARGET CARDS & BLOCKS (Coordinated Gold Aura Glass)
         var targets = document.querySelectorAll([
             '.home-services-grid .service-nav-card',
             '.featured-cases-grid .case-card',
@@ -237,10 +274,8 @@
             '.blog-preview-grid .blog-card'
         ].join(', '));
 
-        if (!targets || targets.length === 0) return;
-
         var observer = null;
-        if ('IntersectionObserver' in window) {
+        if ('IntersectionObserver' in window && !prefersReducedMotion) {
             observer = new IntersectionObserver(function (entries) {
                 entries.forEach(function (entry) {
                     var inst = entry.target._gradientBgInstance;
@@ -251,41 +286,44 @@
             }, { rootMargin: '100px 0px', threshold: 0.05 });
         }
 
-        // Respect prefers-reduced-motion
-        var prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
         targets.forEach(function (card, index) {
-            if (card.querySelector('.gradient-motion-bg-container')) return;
+            // Remove previous container if already present
+            var existing = card.querySelector('.gradient-motion-bg-container');
+            if (existing) {
+                existing.remove();
+            }
 
             card.classList.add('has-gradient-motion-bg');
 
-            var instance = createGradientMotionBackground({
-                seed: (index * 7 + 13) % 997,
-                speed: prefersReducedMotion ? 0 : 36,
+            var cardInstance = createGradientMotionBackground({
+                seed: (index * 17 + 23) % 997,
+                speed: prefersReducedMotion ? 0 : 34,
+                blobCount: 3,
+                blurAmount: 80,
+                sizeMin: 55,
+                sizeMax: 85,
+                opacity: 0.85,
                 colorStops: ['#ffbf00', '#ff9800', '#ffd033', '#e65100'],
-                baseBackground: '#080805',
-                blurAmount: 85,
-                opacity: 0.82
+                baseBackground: '#0a0a0a',
+                motionRange: 50
             });
 
-            // Prepend inside the card so it acts as background behind existing content
-            card.insertBefore(instance.element, card.firstChild);
-            card._gradientBgInstance = instance;
+            card.insertBefore(cardInstance.element, card.firstChild);
+            card._gradientBgInstance = cardInstance;
 
             if (prefersReducedMotion) {
-                // Static frozen frame
-                instance.setVisible(false);
+                cardInstance.setVisible(false);
             } else if (observer) {
                 observer.observe(card);
             } else {
-                instance.start();
+                cardInstance.start();
             }
         });
     }
 
     if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initGradientMotionBackgrounds);
+        document.addEventListener('DOMContentLoaded', initPageAndGridGradientMotion);
     } else {
-        initGradientMotionBackgrounds();
+        initPageAndGridGradientMotion();
     }
 })();
