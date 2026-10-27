@@ -479,12 +479,35 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    background: rgba(255, 255, 255, 0.03);
+    background: #141414;
     border: 1px solid rgba(255, 191, 0, 0.22);
-    border-radius: 12px;
-    padding: 22px 24px;
+    border-radius: 14px;
+    padding: 20px;
     text-decoration: none;
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.service-nav-card-img-link {
+    display: block;
+    overflow: hidden;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-bottom: 16px;
+    position: relative;
+}
+
+.service-nav-card-img-link img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+    transition: transform 0.4s ease;
+}
+
+.service-nav-card:hover .service-nav-card-img-link img {
+    transform: scale(1.05);
 }
 
 .service-nav-icon {
@@ -516,17 +539,17 @@
 }
 
 .service-nav-card:hover {
-    background: rgba(255, 191, 0, 0.08);
-    border-color: #ffbf00;
-    transform: translateY(-4px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(255, 191, 0, 0.15);
+    background: #181818;
+    border-color: rgba(255, 191, 0, 0.55);
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(255, 191, 0, 0.2);
 }
 
 .service-nav-card h4 {
     color: #ffffff;
-    font-size: 17px;
-    margin-bottom: 8px;
-    font-weight: 700;
+    font-size: 19px;
+    margin-bottom: 10px;
+    font-weight: 800;
     line-height: 1.35;
     transition: color 0.2s ease;
 }
@@ -537,8 +560,8 @@
 
 .service-nav-card p {
     color: rgba(255, 255, 255, 0.72);
-    font-size: 13.5px;
-    line-height: 1.55;
+    font-size: 14px;
+    line-height: 1.6;
     margin: 0;
 }
 
