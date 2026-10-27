@@ -46,21 +46,21 @@
 
     var RECOMMENDED_CONFIG = {
         colorStops: ['#ffbf00', '#ff9800', '#ffd033', '#e65100'],
-        baseBackground: '#050505',
+        baseBackground: '#000000',
         blendMode: 'screen',
         opacity: 0.85,
         contrast: 110,
         shapeStyle: 'Blob',
-        blobCount: 4,
-        blurAmount: 110,
-        sizeMin: 60,
-        sizeMax: 95,
+        blobCount: 3,
+        blurAmount: 85,
+        sizeMin: 55,
+        sizeMax: 85,
         sizeRandomness: true,
-        sizeVariation: 30,
-        positionJitter: 20,
-        speed: 32,
+        sizeVariation: 25,
+        positionJitter: 15,
+        speed: 34,
         motionStyle: 'Drift',
-        motionRange: 60,
+        motionRange: 50,
         direction: 45,
         randomDirection: true,
         easeType: 'ease-in-out',
@@ -232,41 +232,7 @@
     function initPageAndGridGradientMotion() {
         var prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-        // 1. FULL WEBSITE INDEX PAGE BACKGROUND
-        if (!document.getElementById('page-gradient-motion-bg')) {
-            var pageBgInstance = createGradientMotionBackground({
-                extraClass: 'page-gradient-motion-bg',
-                seed: 88,
-                speed: prefersReducedMotion ? 0 : 22,
-                blobCount: 5,
-                blurAmount: 140,
-                sizeMin: 70,
-                sizeMax: 110,
-                opacity: 0.65,
-                colorStops: ['#ffbf00', '#ff9800', '#ffd033', '#e65100'],
-                baseBackground: '#050505',
-                motionRange: 75
-            });
-
-            pageBgInstance.element.id = 'page-gradient-motion-bg';
-            // Insert right at the top of <body>
-            document.body.insertBefore(pageBgInstance.element, document.body.firstChild);
-
-            if (!prefersReducedMotion) {
-                pageBgInstance.start();
-            }
-
-            // Pause full page bg when user switches tabs to save CPU/battery
-            document.addEventListener('visibilitychange', function () {
-                if (document.hidden) {
-                    pageBgInstance.stop();
-                } else if (!prefersReducedMotion) {
-                    pageBgInstance.start();
-                }
-            });
-        }
-
-        // 2. TARGET CARDS & BLOCKS (Coordinated Gold Aura Glass)
+        // TARGET CARDS & BLOCKS (Gradient Motion on dark grid cards)
         var targets = document.querySelectorAll([
             '.home-services-grid .service-nav-card',
             '.featured-cases-grid .case-card',
@@ -304,7 +270,7 @@
                 sizeMax: 85,
                 opacity: 0.85,
                 colorStops: ['#ffbf00', '#ff9800', '#ffd033', '#e65100'],
-                baseBackground: '#0a0a0a',
+                baseBackground: '#000000',
                 motionRange: 50
             });
 
