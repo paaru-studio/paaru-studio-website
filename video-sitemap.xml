@@ -174,4 +174,28 @@
       <video:publication_date>2024-08-15T12:00:00+05:30</video:publication_date>
     </video:video>
   </url>
+
+  <url>
+    <loc>https://paarustudio.com/motion-graphics-animation</loc>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/CYNWiC9gYZQ/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Trader IQ | Motion Graphics | Product Walkthrough</video:title>
+      <video:description>High-impact motion graphics product walkthrough engineered for Trader IQ by Paaru Studio-Media Bangalore.</video:description>
+      <video:content_loc>https://www.youtube.com/watch?v=CYNWiC9gYZQ</video:content_loc>
+      <video:player_loc>https://www.youtube.com/embed/CYNWiC9gYZQ</video:player_loc>
+      <video:duration>60</video:duration>
+      <video:publication_date>2026-01-01T00:00:00+05:30</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/s7ZRkThZNRk/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Otis trading | Motion Graphics | Product Explainer Video</video:title>
+      <video:description>Product explainer video and motion graphics animation for Otis Trading by Paaru Studio-Media Bangalore.</video:description>
+      <video:content_loc>https://www.youtube.com/watch?v=s7ZRkThZNRk</video:content_loc>
+      <video:player_loc>https://www.youtube.com/embed/s7ZRkThZNRk</video:player_loc>
+      <video:duration>60</video:duration>
+      <video:publication_date>2026-01-01T00:00:00+05:30</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
 </urlset>

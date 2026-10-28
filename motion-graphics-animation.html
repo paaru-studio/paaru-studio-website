@@ -504,10 +504,406 @@
             color: var(--accent-color);
         }
 
-        .faq-icon-apple {
-            font-size: 22px;
-            transition: transform 0.3s ease;
+        /* Featured Motion Showcases (Center Big Video + Side Grid) */
+        .motion-showcase-section {
+            padding: 80px 0 100px;
+            background: #000000;
+            position: relative;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .motion-showcase-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            height: 250px;
+            background: radial-gradient(ellipse at 50% 0%, rgba(255, 191, 0, 0.08) 0%, rgba(0, 0, 0, 0) 70%);
+            pointer-events: none;
+        }
+
+        .motion-showcase-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.62fr) minmax(0, 1fr);
+            gap: 32px;
+            align-items: start;
+        }
+
+        /* Big Centerpiece Card */
+        .motion-featured-card {
+            background: rgba(255, 255, 255, 0.025);
+            border: 1px solid rgba(255, 255, 255, 0.09);
+            border-radius: 28px;
+            padding: 32px;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease, box-shadow 0.35s ease;
+        }
+
+        .motion-featured-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 191, 0, 0.5), transparent);
+            pointer-events: none;
+        }
+
+        .motion-featured-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(255, 191, 0, 0.35);
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.8), 0 0 35px rgba(255, 191, 0, 0.12);
+        }
+
+        .motion-big-video-wrapper {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 widescreen */
+            height: 0;
+            overflow: hidden;
+            border-radius: 18px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 30px rgba(255, 191, 0, 0.15);
+            border: 1.5px solid rgba(255, 191, 0, 0.35);
+            margin-bottom: 26px;
+            background: #000;
+        }
+
+        .motion-big-video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .motion-video-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255, 191, 0, 0.12);
+            border: 1px solid rgba(255, 191, 0, 0.32);
+            color: #ffbf00;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 5px 14px;
+            border-radius: 999px;
+            margin-bottom: 14px;
+        }
+
+        .motion-video-badge .badge-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #ffbf00;
+            box-shadow: 0 0 6px #ffbf00;
+        }
+
+        .motion-video-title {
+            font-size: clamp(22px, 2.5vw, 28px);
+            font-weight: 800;
+            color: #ffffff;
+            line-height: 1.25;
+            margin-bottom: 14px;
+            letter-spacing: -0.6px;
+        }
+
+        .motion-video-desc {
+            color: var(--text-secondary);
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 24px;
+        }
+
+        /* Video Technical Index Specs */
+        .motion-index-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .motion-index-item {
+            background: rgba(255, 255, 255, 0.025);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 12px;
+            padding: 12px 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            transition: border-color 0.25s ease;
+        }
+
+        .motion-index-item:hover {
+            border-color: rgba(255, 191, 0, 0.25);
+        }
+
+        .motion-index-label {
+            font-size: 10.5px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent-color);
+        }
+
+        .motion-index-value {
+            font-size: 13.5px;
+            font-weight: 600;
+            color: #ffffff;
+            line-height: 1.3;
+        }
+
+        /* Capacities & Capabilities Block */
+        .motion-capacities-block {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: 16px;
+            padding: 20px 22px;
+        }
+
+        .motion-capacities-heading {
+            font-size: 13px;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 14px;
+        }
+
+        .motion-capacities-heading .capacities-icon {
+            color: var(--accent-color);
+        }
+
+        .motion-capacities-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .motion-capacities-list li {
+            position: relative;
+            padding-left: 20px;
+            font-size: 13.5px;
+            color: var(--text-secondary);
+            line-height: 1.55;
+        }
+
+        .motion-capacities-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        /* Sidebar Column with 3 Small Cards */
+        .motion-sidebar-col {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .motion-small-card {
+            background: rgba(255, 255, 255, 0.025);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 18px;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .motion-small-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 191, 0, 0.35), transparent);
+            pointer-events: none;
+        }
+
+        .motion-small-card:hover {
+            transform: translateY(-3px);
+            border-color: rgba(255, 191, 0, 0.35);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7), 0 0 25px rgba(255, 191, 0, 0.1);
+        }
+
+        .motion-small-video-wrapper {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            margin-bottom: 14px;
+            background: #000;
+        }
+
+        .motion-small-video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .motion-mini-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: rgba(255, 191, 0, 0.1);
+            border: 1px solid rgba(255, 191, 0, 0.28);
+            color: #ffbf00;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            padding: 3px 10px;
+            border-radius: 999px;
+            margin-bottom: 8px;
+        }
+
+        .motion-mini-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #ffffff;
+            line-height: 1.35;
+            margin-bottom: 6px;
+            letter-spacing: -0.2px;
+        }
+
+        .motion-mini-desc {
+            font-size: 13px;
             color: var(--text-muted);
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        /* Blank Placeholder Grid Cards */
+        .motion-small-card.blank-slot {
+            background: rgba(255, 255, 255, 0.012);
+            border: 1px dashed rgba(255, 255, 255, 0.16);
+            transition: all 0.3s ease;
+        }
+
+        .motion-small-card.blank-slot:hover {
+            border-color: rgba(255, 191, 0, 0.35);
+            background: rgba(255, 191, 0, 0.02);
+            transform: translateY(-2px);
+        }
+
+        .motion-blank-placeholder {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            height: 0;
+            border-radius: 12px;
+            background: radial-gradient(circle at 50% 50%, rgba(255, 191, 0, 0.05) 0%, rgba(10, 10, 12, 0.9) 100%);
+            border: 1px dashed rgba(255, 255, 255, 0.12);
+            margin-bottom: 14px;
+            overflow: hidden;
+        }
+
+        .motion-blank-inner {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            text-align: center;
+            padding: 12px;
+        }
+
+        .motion-blank-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 191, 0, 0.08);
+            border: 1px dashed rgba(255, 191, 0, 0.35);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffbf00;
+            font-size: 18px;
+            font-weight: 300;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .motion-small-card.blank-slot:hover .motion-blank-icon {
+            transform: scale(1.1);
+            background: rgba(255, 191, 0, 0.18);
+        }
+
+        .motion-blank-label {
+            font-size: 10.5px;
+            color: rgba(255, 255, 255, 0.5);
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .motion-mini-badge.blank {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px dashed rgba(255, 255, 255, 0.18);
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        @media (max-width: 1024px) {
+            .motion-showcase-grid {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
+
+            .motion-sidebar-col {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .motion-showcase-section {
+                padding: 60px 0;
+            }
+
+            .motion-featured-card {
+                padding: 20px 16px;
+                border-radius: 20px;
+            }
+
+            .motion-index-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .motion-sidebar-col {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 
@@ -568,6 +964,28 @@
                         "item": "https://paarustudio.com/motion-graphics-animation"
                     }
                 ]
+            },
+            {
+                "@type": "VideoObject",
+                "name": "Trader IQ | Motion Graphics | Product Walkthrough",
+                "description": "High-impact motion graphics product walkthrough engineered for Trader IQ by Paaru Studio-Media in Bangalore.",
+                "thumbnailUrl": [
+                    "https://i.ytimg.com/vi/CYNWiC9gYZQ/hqdefault.jpg",
+                    "https://i.ytimg.com/vi/CYNWiC9gYZQ/maxresdefault.jpg"
+                ],
+                "uploadDate": "2026-01-01T00:00:00+05:30",
+                "embedUrl": "https://www.youtube.com/embed/CYNWiC9gYZQ"
+            },
+            {
+                "@type": "VideoObject",
+                "name": "Otis trading | Motion Graphics | Product Explainer Video",
+                "description": "Product explainer video and motion graphics animation for Otis Trading by Paaru Studio-Media Bangalore.",
+                "thumbnailUrl": [
+                    "https://i.ytimg.com/vi/s7ZRkThZNRk/hqdefault.jpg",
+                    "https://i.ytimg.com/vi/s7ZRkThZNRk/maxresdefault.jpg"
+                ],
+                "uploadDate": "2026-01-01T00:00:00+05:30",
+                "embedUrl": "https://www.youtube.com/embed/s7ZRkThZNRk"
             }
         ]
     }
@@ -711,6 +1129,7 @@
 
             <div class="apple-btn-group">
                 <a href="/contact" class="apple-btn-primary">Book Creative Sprint →</a>
+                <a href="#featured-showcase" class="apple-btn-secondary">Watch Showcases ↓</a>
                 <a href="#animation-styles" class="apple-btn-secondary">Explore Styles ↓</a>
                 <a href="/blog-explainer-videos" class="apple-btn-secondary">Explainer Guide</a>
             </div>
@@ -748,6 +1167,141 @@
             <a href="/motion-graphics-animation"
                 style="padding: 8px 18px; border-radius: 999px; background: var(--accent-color); color: #000; text-decoration: none; font-size: 13px; font-weight: 700;">Motion
                 Graphics (Active)</a>
+        </div>
+    </section>
+
+    <!-- Featured Motion Showcases (Center Big Video + Side Grid) -->
+    <section id="featured-showcase" class="motion-showcase-section">
+        <div class="apple-container">
+            <div class="apple-section-header">
+                <div class="apple-pill-badge"><span class="dot"></span> Featured Client Showcases</div>
+                <h2 class="apple-section-title">Motion Graphics &amp; Product Showcases</h2>
+                <p class="apple-section-desc">
+                    Experience how we translate intricate tech architectures, fintech platforms, and algorithmic trading workflows into sleek, high-converting visual stories.
+                </p>
+            </div>
+
+            <div class="motion-showcase-grid">
+                <!-- Centerpiece Large Video Column -->
+                <article class="motion-featured-card">
+                    <!-- Big Video Player Embed (16:9 Widescreen) -->
+                    <div class="motion-big-video-wrapper">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/CYNWiC9gYZQ?si=4YC98EFPzGumyvr9"
+                            title="Trader IQ | Motion Graphics | Product Walkthrough"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen loading="lazy">
+                        </iframe>
+                    </div>
+
+                    <!-- Video Meta & Badges -->
+                    <div class="motion-video-badge">
+                        <span class="badge-dot"></span> Featured Product Walkthrough
+                    </div>
+
+                    <h3 class="motion-video-title">Trader IQ &mdash; Algorithmic Trading Walkthrough &amp; Motion Design</h3>
+
+                    <!-- Project Synopsis / Story -->
+                    <p class="motion-video-desc">
+                        Trader IQ required an intuitive, broadcast-caliber motion graphics walkthrough to translate complex multi-screen financial workflows, automated trading algorithms, and real-time execution metrics into an engaging visual narrative. Paaru Studio-Media conceptualized and animated this product explainer using dynamic 3D isometric perspectives, kinetic UI interactions, sleek typography, and synchronized sound design. The video deconstructs complex technical capabilities into digestible visual chapters, eliminating user onboarding friction and driving measurable conversion across web and ad channels.
+                    </p>
+
+                    <!-- Video Technical Index Grid -->
+                    <div class="motion-index-grid">
+                        <div class="motion-index-item">
+                            <span class="motion-index-label">Client / Brand</span>
+                            <span class="motion-index-value">Trader IQ</span>
+                        </div>
+                        <div class="motion-index-item">
+                            <span class="motion-index-label">Format &amp; Ratio</span>
+                            <span class="motion-index-value">16:9 • Cinema 4K UHD</span>
+                        </div>
+                        <div class="motion-index-item">
+                            <span class="motion-index-label">Discipline</span>
+                            <span class="motion-index-value">2D/3D Kinetic Motion &amp; SaaS Walkthrough</span>
+                        </div>
+                        <div class="motion-index-item">
+                            <span class="motion-index-label">Tool Pipeline</span>
+                            <span class="motion-index-value">After Effects, C4D, Illustrator, DaVinci</span>
+                        </div>
+                    </div>
+
+                    <!-- Video Production Capacities & Capabilities -->
+                    <div class="motion-capacities-block">
+                        <div class="motion-capacities-heading">
+                            <span class="capacities-icon">⚡</span> Key Video Production Capacities Demonstrated
+                        </div>
+                        <ul class="motion-capacities-list">
+                            <li>
+                                <strong style="color: #fff;">Real-Time Financial Data &amp; Chart Visualization:</strong>
+                                Simulating algorithmic buy/sell signals, depth charts, and live order books with kinetic motion curves.
+                            </li>
+                            <li>
+                                <strong style="color: #fff;">Isometric SaaS UI Modeling:</strong>
+                                Translating flat software dashboards into tactile 3D floating glass layers with depth of field and ambient lighting.
+                            </li>
+                            <li>
+                                <strong style="color: #fff;">Complex Flow Simplification:</strong>
+                                Transforming multi-step algorithmic execution into clear 60-second visual adoption milestones.
+                            </li>
+                            <li>
+                                <strong style="color: #fff;">Custom Foley &amp; Sound Engineering:</strong>
+                                Precision-timed tactile clicks, whooshes, bass drops, and electronic synth cues aligned to animation keyframes.
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Sidebar Beside It: 3 Small Videos (1 Active + 2 Blank Slots to Add Later) -->
+                <aside class="motion-sidebar-col" aria-label="Related Motion Showcases">
+                    <!-- Small Video 1: Otis Trading (Active) -->
+                    <div class="motion-small-card">
+                        <div class="motion-small-video-wrapper">
+                            <iframe width="560" height="315"
+                                src="https://www.youtube.com/embed/s7ZRkThZNRk?si=mGwxj_3_YTwVnyNX"
+                                title="Otis trading | Motion Graphics | Product Explainer Video"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin"
+                                allowfullscreen loading="lazy">
+                            </iframe>
+                        </div>
+                        <span class="motion-mini-badge">Product Explainer</span>
+                        <h4 class="motion-mini-title">Otis Trading &mdash; Motion Graphics &amp; Product Explainer</h4>
+                        <p class="motion-mini-desc">High-tempo 2D/3D animated product explainer detailing trading features, automated execution, and platform velocity.</p>
+                    </div>
+
+                    <!-- Small Video 2: Blank Grid (To Add Later) -->
+                    <!-- Video Slot 2: Add next video iframe here later -->
+                    <div class="motion-small-card blank-slot">
+                        <div class="motion-blank-placeholder">
+                            <div class="motion-blank-inner">
+                                <div class="motion-blank-icon">+</div>
+                                <span class="motion-blank-label">Video Slot 02</span>
+                            </div>
+                        </div>
+                        <span class="motion-mini-badge blank">Slot 02 • Available</span>
+                        <h4 class="motion-mini-title">Upcoming Motion Graphics Showcase</h4>
+                        <p class="motion-mini-desc">Reserved grid for next client explainer video or kinetic typography animation.</p>
+                    </div>
+
+                    <!-- Small Video 3: Blank Grid (To Add Later) -->
+                    <!-- Video Slot 3: Add next video iframe here later -->
+                    <div class="motion-small-card blank-slot">
+                        <div class="motion-blank-placeholder">
+                            <div class="motion-blank-inner">
+                                <div class="motion-blank-icon">+</div>
+                                <span class="motion-blank-label">Video Slot 03</span>
+                            </div>
+                        </div>
+                        <span class="motion-mini-badge blank">Slot 03 • Available</span>
+                        <h4 class="motion-mini-title">Upcoming 3D Product CGI Showcase</h4>
+                        <p class="motion-mini-desc">Reserved grid for next 3D photorealistic product render or CGI sequence.</p>
+                    </div>
+                </aside>
+            </div>
         </div>
     </section>
 
