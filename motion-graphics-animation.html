@@ -504,7 +504,7 @@
             color: var(--accent-color);
         }
 
-        /* Featured Motion Showcases (Center Big Video + Side Grid) */
+        /* Featured Motion Showcases (Center Big Video + 3 Small Below) */
         .motion-showcase-section {
             padding: 80px 0 100px;
             background: #000000;
@@ -525,15 +525,14 @@
             pointer-events: none;
         }
 
-        .motion-showcase-grid {
-            display: grid;
-            grid-template-columns: minmax(0, 1.62fr) minmax(0, 1fr);
-            gap: 32px;
-            align-items: start;
+        .motion-showcase-container {
+            max-width: 980px;
+            margin: 0 auto;
+            text-align: center;
         }
 
-        /* Big Centerpiece Card */
-        .motion-featured-card {
+        /* Center Big Video Card */
+        .motion-main-card {
             background: rgba(255, 255, 255, 0.025);
             border: 1px solid rgba(255, 255, 255, 0.09);
             border-radius: 28px;
@@ -543,9 +542,11 @@
             backdrop-filter: blur(14px);
             -webkit-backdrop-filter: blur(14px);
             transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease, box-shadow 0.35s ease;
+            margin: 0 auto 36px;
+            text-align: center;
         }
 
-        .motion-featured-card::before {
+        .motion-main-card::before {
             content: '';
             position: absolute;
             top: 0;
@@ -556,13 +557,14 @@
             pointer-events: none;
         }
 
-        .motion-featured-card:hover {
+        .motion-main-card:hover {
             transform: translateY(-4px);
             border-color: rgba(255, 191, 0, 0.35);
             box-shadow: 0 24px 60px rgba(0, 0, 0, 0.8), 0 0 35px rgba(255, 191, 0, 0.12);
         }
 
-        .motion-big-video-wrapper {
+        /* Video Embed & Thumbnail (Index Page Style) */
+        .motion-thumb-frame {
             position: relative;
             width: 100%;
             padding-bottom: 56.25%; /* 16:9 widescreen */
@@ -571,19 +573,109 @@
             border-radius: 18px;
             box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 30px rgba(255, 191, 0, 0.15);
             border: 1.5px solid rgba(255, 191, 0, 0.35);
-            margin-bottom: 26px;
+            margin-bottom: 24px;
             background: #000;
         }
 
-        .motion-big-video-wrapper iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
+        .motion-thumb-frame .video-poster {
+            position: absolute !important;
+            inset: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            background-size: cover;
+            background-position: center;
+            border: 0 !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            cursor: pointer;
+            display: block !important;
+            transition: transform 0.4s ease;
         }
 
+        .motion-thumb-frame .video-poster::before,
+        .motion-thumb-frame .video-poster::after {
+            display: none !important;
+        }
+
+        .motion-thumb-frame:hover .video-poster {
+            transform: scale(1.04);
+        }
+
+        .motion-thumb-frame .feat-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.15) 50%, transparent 100%);
+            z-index: 1;
+            transition: background 0.3s ease;
+            pointer-events: none;
+        }
+
+        .motion-thumb-frame:hover .feat-overlay {
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.25) 50%, rgba(255, 191, 0, 0.08) 100%);
+        }
+
+        /* Play Button (Index Page Style) */
+        .motion-thumb-frame .feat-play-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.95);
+            z-index: 2;
+            width: 60px !important;
+            height: 60px !important;
+            background: rgba(255, 255, 255, 0.94) !important;
+            border-radius: 50% !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+            pointer-events: none;
+        }
+
+        .motion-thumb-frame .feat-play-btn.big {
+            width: 80px !important;
+            height: 80px !important;
+        }
+
+        .motion-thumb-frame:hover .feat-play-btn {
+            transform: translate(-50%, -50%) scale(1.1);
+            background: #ffffff !important;
+            box-shadow: 0 8px 32px rgba(255, 191, 0, 0.45);
+        }
+
+        .motion-thumb-frame .feat-play-btn svg {
+            width: 24px !important;
+            height: 24px !important;
+            fill: #ffbf00 !important;
+            margin-left: 3px !important;
+            display: block !important;
+        }
+
+        .motion-thumb-frame .feat-play-btn.big svg {
+            width: 32px !important;
+            height: 32px !important;
+            margin-left: 4px !important;
+        }
+
+        .motion-thumb-frame .feat-badge {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            z-index: 2;
+            background: #ffbf00;
+            color: #000;
+            font-size: 11px;
+            font-weight: 750;
+            letter-spacing: 0.08em;
+            padding: 4px 11px;
+            border-radius: 999px;
+            text-transform: uppercase;
+            pointer-events: none;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Center Video Text & Capacities */
         .motion-video-badge {
             display: inline-flex;
             align-items: center;
@@ -597,7 +689,7 @@
             text-transform: uppercase;
             padding: 5px 14px;
             border-radius: 999px;
-            margin-bottom: 14px;
+            margin-bottom: 12px;
         }
 
         .motion-video-badge .badge-dot {
@@ -613,126 +705,69 @@
             font-weight: 800;
             color: #ffffff;
             line-height: 1.25;
-            margin-bottom: 14px;
-            letter-spacing: -0.6px;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+            text-align: center;
         }
 
         .motion-video-desc {
             color: var(--text-secondary);
             font-size: 15px;
-            line-height: 1.7;
-            margin-bottom: 24px;
+            line-height: 1.6;
+            margin: 0 auto 20px;
+            max-width: 720px;
+            text-align: center;
         }
 
-        /* Video Technical Index Specs */
-        .motion-index-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
-            margin-bottom: 24px;
-        }
-
-        .motion-index-item {
-            background: rgba(255, 255, 255, 0.025);
-            border: 1px solid rgba(255, 255, 255, 0.06);
-            border-radius: 12px;
-            padding: 12px 16px;
+        .motion-caps-pills {
             display: flex;
-            flex-direction: column;
-            gap: 4px;
-            transition: border-color 0.25s ease;
-        }
-
-        .motion-index-item:hover {
-            border-color: rgba(255, 191, 0, 0.25);
-        }
-
-        .motion-index-label {
-            font-size: 10.5px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--accent-color);
-        }
-
-        .motion-index-value {
-            font-size: 13.5px;
-            font-weight: 600;
-            color: #ffffff;
-            line-height: 1.3;
-        }
-
-        /* Capacities & Capabilities Block */
-        .motion-capacities-block {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(255, 255, 255, 0.07);
-            border-radius: 16px;
-            padding: 20px 22px;
-        }
-
-        .motion-capacities-heading {
-            font-size: 13px;
-            font-weight: 700;
-            color: #ffffff;
-            letter-spacing: 0.8px;
-            text-transform: uppercase;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 14px;
-        }
-
-        .motion-capacities-heading .capacities-icon {
-            color: var(--accent-color);
-        }
-
-        .motion-capacities-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 10px;
+            margin: 0 auto;
         }
 
-        .motion-capacities-list li {
-            position: relative;
-            padding-left: 20px;
-            font-size: 13.5px;
-            color: var(--text-secondary);
-            line-height: 1.55;
+        .motion-cap-pill {
+            background: rgba(255, 255, 255, 0.035);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 12.5px;
+            font-weight: 500;
+            padding: 6px 14px;
+            border-radius: 999px;
+            transition: all 0.25s ease;
         }
 
-        .motion-capacities-list li::before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            top: 0;
-            color: var(--accent-color);
-            font-weight: bold;
-            font-size: 12px;
+        .motion-cap-pill:hover {
+            border-color: rgba(255, 191, 0, 0.3);
+            color: #ffffff;
+            background: rgba(255, 191, 0, 0.06);
         }
 
-        /* Sidebar Column with 3 Small Cards */
-        .motion-sidebar-col {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
+        /* 3 Small Video Blocks Below Main Video */
+        .motion-small-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            max-width: 980px;
+            margin: 0 auto;
+            text-align: center;
         }
 
-        .motion-small-card {
+        .motion-mini-card {
             background: rgba(255, 255, 255, 0.025);
             border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 20px;
-            padding: 18px;
+            padding: 16px;
             position: relative;
             overflow: hidden;
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
         }
 
-        .motion-small-card::before {
+        .motion-mini-card::before {
             content: '';
             position: absolute;
             top: 0;
@@ -743,13 +778,13 @@
             pointer-events: none;
         }
 
-        .motion-small-card:hover {
-            transform: translateY(-3px);
+        .motion-mini-card:hover {
+            transform: translateY(-4px);
             border-color: rgba(255, 191, 0, 0.35);
             box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7), 0 0 25px rgba(255, 191, 0, 0.1);
         }
 
-        .motion-small-video-wrapper {
+        .motion-mini-thumb {
             position: relative;
             width: 100%;
             padding-bottom: 56.25%;
@@ -758,74 +793,121 @@
             border-radius: 12px;
             box-shadow: 0 10px 24px rgba(0, 0, 0, 0.6);
             border: 1px solid rgba(255, 255, 255, 0.12);
-            margin-bottom: 14px;
+            margin-bottom: 12px;
             background: #000;
         }
 
-        .motion-small-video-wrapper iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
+        .motion-mini-thumb .video-poster {
+            position: absolute !important;
+            inset: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            background-size: cover;
+            background-position: center;
+            border: 0 !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            cursor: pointer;
+            display: block !important;
+            transition: transform 0.4s ease;
         }
 
-        .motion-mini-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-            background: rgba(255, 191, 0, 0.1);
-            border: 1px solid rgba(255, 191, 0, 0.28);
-            color: #ffbf00;
+        .motion-mini-thumb .video-poster::before,
+        .motion-mini-thumb .video-poster::after {
+            display: none !important;
+        }
+
+        .motion-mini-thumb:hover .video-poster {
+            transform: scale(1.05);
+        }
+
+        .motion-mini-thumb .feat-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.15) 50%, transparent 100%);
+            z-index: 1;
+            transition: background 0.3s ease;
+            pointer-events: none;
+        }
+
+        .motion-mini-thumb:hover .feat-overlay {
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.25) 50%, rgba(255, 191, 0, 0.08) 100%);
+        }
+
+        .motion-mini-thumb .feat-play-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.95);
+            z-index: 2;
+            width: 50px !important;
+            height: 50px !important;
+            background: rgba(255, 255, 255, 0.94) !important;
+            border-radius: 50% !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+            pointer-events: none;
+        }
+
+        .motion-mini-thumb:hover .feat-play-btn {
+            transform: translate(-50%, -50%) scale(1.1);
+            background: #ffffff !important;
+            box-shadow: 0 6px 24px rgba(255, 191, 0, 0.45);
+        }
+
+        .motion-mini-thumb .feat-play-btn svg {
+            width: 20px !important;
+            height: 20px !important;
+            fill: #ffbf00 !important;
+            margin-left: 2px !important;
+            display: block !important;
+        }
+
+        .motion-mini-thumb .feat-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 2;
+            background: #ffbf00;
+            color: #000;
             font-size: 10px;
-            font-weight: 700;
-            letter-spacing: 0.8px;
-            text-transform: uppercase;
-            padding: 3px 10px;
+            font-weight: 750;
+            letter-spacing: 0.08em;
+            padding: 3px 9px;
             border-radius: 999px;
-            margin-bottom: 8px;
+            text-transform: uppercase;
+            pointer-events: none;
         }
 
         .motion-mini-title {
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 700;
             color: #ffffff;
             line-height: 1.35;
-            margin-bottom: 6px;
-            letter-spacing: -0.2px;
-        }
-
-        .motion-mini-desc {
-            font-size: 13px;
-            color: var(--text-muted);
-            line-height: 1.5;
             margin: 0;
+            letter-spacing: -0.2px;
+            text-align: center;
         }
 
-        /* Blank Placeholder Grid Cards */
-        .motion-small-card.blank-slot {
+        /* Blank Placeholder Cards */
+        .motion-mini-card.blank-slot {
             background: rgba(255, 255, 255, 0.012);
             border: 1px dashed rgba(255, 255, 255, 0.16);
             transition: all 0.3s ease;
         }
 
-        .motion-small-card.blank-slot:hover {
+        .motion-mini-card.blank-slot:hover {
             border-color: rgba(255, 191, 0, 0.35);
             background: rgba(255, 191, 0, 0.02);
             transform: translateY(-2px);
         }
 
-        .motion-blank-placeholder {
-            position: relative;
-            width: 100%;
-            padding-bottom: 56.25%;
-            height: 0;
-            border-radius: 12px;
+        .motion-mini-thumb.blank-thumb {
             background: radial-gradient(circle at 50% 50%, rgba(255, 191, 0, 0.05) 0%, rgba(10, 10, 12, 0.9) 100%);
             border: 1px dashed rgba(255, 255, 255, 0.12);
-            margin-bottom: 14px;
-            overflow: hidden;
         }
 
         .motion-blank-inner {
@@ -835,14 +917,14 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 8px;
+            gap: 6px;
             text-align: center;
             padding: 12px;
         }
 
         .motion-blank-icon {
-            width: 40px;
-            height: 40px;
+            width: 36px;
+            height: 36px;
             border-radius: 50%;
             background: rgba(255, 191, 0, 0.08);
             border: 1px dashed rgba(255, 191, 0, 0.35);
@@ -850,59 +932,118 @@
             align-items: center;
             justify-content: center;
             color: #ffbf00;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 300;
             transition: transform 0.3s ease, background 0.3s ease;
         }
 
-        .motion-small-card.blank-slot:hover .motion-blank-icon {
+        .motion-mini-card.blank-slot:hover .motion-blank-icon {
             transform: scale(1.1);
             background: rgba(255, 191, 0, 0.18);
         }
 
         .motion-blank-label {
-            font-size: 10.5px;
+            font-size: 10px;
             color: rgba(255, 255, 255, 0.5);
             font-weight: 600;
             letter-spacing: 1px;
             text-transform: uppercase;
         }
 
-        .motion-mini-badge.blank {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px dashed rgba(255, 255, 255, 0.18);
+        .motion-mini-title.blank-title {
             color: rgba(255, 255, 255, 0.6);
+            font-size: 14px;
         }
 
-        @media (max-width: 1024px) {
-            .motion-showcase-grid {
+        @media (max-width: 860px) {
+            .motion-small-grid {
                 grid-template-columns: 1fr;
-                gap: 28px;
-            }
-
-            .motion-sidebar-col {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                max-width: 440px;
                 gap: 20px;
             }
-        }
 
-        @media (max-width: 640px) {
-            .motion-showcase-section {
-                padding: 60px 0;
-            }
-
-            .motion-featured-card {
+            .motion-main-card {
                 padding: 20px 16px;
                 border-radius: 20px;
             }
+        }
 
-            .motion-index-grid {
-                grid-template-columns: 1fr;
+        /* Video Modal Theater Window (Index Page Style) */
+        .video-modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.88);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            z-index: 9999999;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .video-modal.active {
+            display: flex !important;
+            opacity: 1 !important;
+        }
+
+        .video-modal .modal-inner {
+            position: relative;
+            width: min(92vw, 1080px);
+            aspect-ratio: 16 / 9;
+            background: #000;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 25px 65px rgba(0, 0, 0, 0.85), 0 0 40px rgba(255, 191, 0, 0.18);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .video-modal .modal-inner iframe {
+            width: 100% !important;
+            height: 100% !important;
+            border: none !important;
+            display: block;
+        }
+
+        .video-modal .close-btn {
+            position: absolute;
+            top: 22px;
+            right: 26px;
+            width: 44px;
+            height: 44px;
+            background: rgba(255, 255, 255, 0.14);
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            font-size: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 10000001;
+            transition: all 0.25s ease;
+        }
+
+        .video-modal .close-btn:hover {
+            background: #ffbf00;
+            color: #000000;
+            border-color: #ffbf00;
+            transform: scale(1.08);
+        }
+
+        @media (max-width: 768px) {
+            .video-modal .modal-inner {
+                width: 95vw;
+                border-radius: 10px;
             }
 
-            .motion-sidebar-col {
-                grid-template-columns: 1fr;
+            .video-modal .close-btn {
+                top: 14px;
+                right: 14px;
+                width: 38px;
+                height: 38px;
+                font-size: 18px;
             }
         }
     </style>
@@ -1170,137 +1311,97 @@
         </div>
     </section>
 
-    <!-- Featured Motion Showcases (Center Big Video + Side Grid) -->
+    <!-- Featured Motion Showcases (Center Big Video + 3 Small Blocks Below) -->
     <section id="featured-showcase" class="motion-showcase-section">
         <div class="apple-container">
-            <div class="apple-section-header">
+            <div class="apple-section-header" style="margin-bottom: 36px; text-align: center;">
                 <div class="apple-pill-badge"><span class="dot"></span> Featured Client Showcases</div>
-                <h2 class="apple-section-title">Motion Graphics &amp; Product Showcases</h2>
-                <p class="apple-section-desc">
-                    Experience how we translate intricate tech architectures, fintech platforms, and algorithmic trading workflows into sleek, high-converting visual stories.
+                <h2 class="apple-section-title">Motion Graphics in Action</h2>
+                <p class="apple-section-desc" style="max-width: 620px; margin: 0 auto;">
+                    High-impact 2D/3D kinetic animations, SaaS walkthroughs, and UI motion engineered to captivate.
                 </p>
             </div>
 
-            <div class="motion-showcase-grid">
-                <!-- Centerpiece Large Video Column -->
-                <article class="motion-featured-card">
-                    <!-- Big Video Player Embed (16:9 Widescreen) -->
-                    <div class="motion-big-video-wrapper">
-                        <iframe width="560" height="315"
-                            src="https://www.youtube.com/embed/CYNWiC9gYZQ?si=4YC98EFPzGumyvr9"
-                            title="Trader IQ | Motion Graphics | Product Walkthrough"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin"
-                            allowfullscreen loading="lazy">
-                        </iframe>
+            <div class="motion-showcase-container">
+                <!-- Centerpiece Large Video (Index Style Thumbnail & Play Button) -->
+                <article class="motion-main-card">
+                    <div class="motion-thumb-frame video-embed" data-video-id="CYNWiC9gYZQ"
+                        data-embed-url="https://www.youtube.com/embed/CYNWiC9gYZQ?si=4YC98EFPzGumyvr9">
+                        <button class="video-poster" aria-label="Play Trader IQ walkthrough"
+                            style="background-image: url('https://i.ytimg.com/vi/CYNWiC9gYZQ/maxresdefault.jpg');">
+                            <div class="feat-overlay"></div>
+                            <span class="feat-badge">&#9654; Featured Walkthrough</span>
+                            <span class="feat-play-btn big">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </span>
+                        </button>
                     </div>
 
-                    <!-- Video Meta & Badges -->
                     <div class="motion-video-badge">
-                        <span class="badge-dot"></span> Featured Product Walkthrough
+                        <span class="badge-dot"></span> Trader IQ
                     </div>
 
-                    <h3 class="motion-video-title">Trader IQ &mdash; Algorithmic Trading Walkthrough &amp; Motion Design</h3>
+                    <h3 class="motion-video-title">Trader IQ &mdash; Algorithmic Trading Walkthrough</h3>
 
-                    <!-- Project Synopsis / Story -->
                     <p class="motion-video-desc">
-                        Trader IQ required an intuitive, broadcast-caliber motion graphics walkthrough to translate complex multi-screen financial workflows, automated trading algorithms, and real-time execution metrics into an engaging visual narrative. Paaru Studio-Media conceptualized and animated this product explainer using dynamic 3D isometric perspectives, kinetic UI interactions, sleek typography, and synchronized sound design. The video deconstructs complex technical capabilities into digestible visual chapters, eliminating user onboarding friction and driving measurable conversion across web and ad channels.
+                        Dynamic 3D isometric walkthrough translating algorithmic trading, multi-screen workflows, and real-time execution into a seamless visual story.
                     </p>
 
-                    <!-- Video Technical Index Grid -->
-                    <div class="motion-index-grid">
-                        <div class="motion-index-item">
-                            <span class="motion-index-label">Client / Brand</span>
-                            <span class="motion-index-value">Trader IQ</span>
-                        </div>
-                        <div class="motion-index-item">
-                            <span class="motion-index-label">Format &amp; Ratio</span>
-                            <span class="motion-index-value">16:9 • Cinema 4K UHD</span>
-                        </div>
-                        <div class="motion-index-item">
-                            <span class="motion-index-label">Discipline</span>
-                            <span class="motion-index-value">2D/3D Kinetic Motion &amp; SaaS Walkthrough</span>
-                        </div>
-                        <div class="motion-index-item">
-                            <span class="motion-index-label">Tool Pipeline</span>
-                            <span class="motion-index-value">After Effects, C4D, Illustrator, DaVinci</span>
-                        </div>
-                    </div>
-
-                    <!-- Video Production Capacities & Capabilities -->
-                    <div class="motion-capacities-block">
-                        <div class="motion-capacities-heading">
-                            <span class="capacities-icon">⚡</span> Key Video Production Capacities Demonstrated
-                        </div>
-                        <ul class="motion-capacities-list">
-                            <li>
-                                <strong style="color: #fff;">Real-Time Financial Data &amp; Chart Visualization:</strong>
-                                Simulating algorithmic buy/sell signals, depth charts, and live order books with kinetic motion curves.
-                            </li>
-                            <li>
-                                <strong style="color: #fff;">Isometric SaaS UI Modeling:</strong>
-                                Translating flat software dashboards into tactile 3D floating glass layers with depth of field and ambient lighting.
-                            </li>
-                            <li>
-                                <strong style="color: #fff;">Complex Flow Simplification:</strong>
-                                Transforming multi-step algorithmic execution into clear 60-second visual adoption milestones.
-                            </li>
-                            <li>
-                                <strong style="color: #fff;">Custom Foley &amp; Sound Engineering:</strong>
-                                Precision-timed tactile clicks, whooshes, bass drops, and electronic synth cues aligned to animation keyframes.
-                            </li>
-                        </ul>
+                    <!-- Compact Video Index Capacities Strip -->
+                    <div class="motion-caps-pills">
+                        <span class="motion-cap-pill">⚡ 4K 16:9 Motion Graphics</span>
+                        <span class="motion-cap-pill">📊 Real-Time Financial Visuals</span>
+                        <span class="motion-cap-pill">🖥️ Isometric SaaS UI</span>
+                        <span class="motion-cap-pill">🎧 Custom Sound Design</span>
                     </div>
                 </article>
 
-                <!-- Sidebar Beside It: 3 Small Videos (1 Active + 2 Blank Slots to Add Later) -->
-                <aside class="motion-sidebar-col" aria-label="Related Motion Showcases">
+                <!-- 3 Small Video Blocks Below Main Video (Aligned Centre) -->
+                <div class="motion-small-grid" aria-label="Related Motion Showcases">
                     <!-- Small Video 1: Otis Trading (Active) -->
-                    <div class="motion-small-card">
-                        <div class="motion-small-video-wrapper">
-                            <iframe width="560" height="315"
-                                src="https://www.youtube.com/embed/s7ZRkThZNRk?si=mGwxj_3_YTwVnyNX"
-                                title="Otis trading | Motion Graphics | Product Explainer Video"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerpolicy="strict-origin-when-cross-origin"
-                                allowfullscreen loading="lazy">
-                            </iframe>
+                    <div class="motion-mini-card video-embed" data-video-id="s7ZRkThZNRk"
+                        data-embed-url="https://www.youtube.com/embed/s7ZRkThZNRk?si=mGwxj_3_YTwVnyNX">
+                        <div class="motion-mini-thumb">
+                            <button class="video-poster" aria-label="Play Otis Trading explainer"
+                                style="background-image: url('https://i.ytimg.com/vi/s7ZRkThZNRk/maxresdefault.jpg');">
+                                <div class="feat-overlay"></div>
+                                <span class="feat-badge">&#9654; Explainer</span>
+                                <span class="feat-play-btn">
+                                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                </span>
+                            </button>
                         </div>
-                        <span class="motion-mini-badge">Product Explainer</span>
-                        <h4 class="motion-mini-title">Otis Trading &mdash; Motion Graphics &amp; Product Explainer</h4>
-                        <p class="motion-mini-desc">High-tempo 2D/3D animated product explainer detailing trading features, automated execution, and platform velocity.</p>
+                        <h4 class="motion-mini-title">Otis Trading &mdash; Product Explainer</h4>
                     </div>
 
                     <!-- Small Video 2: Blank Grid (To Add Later) -->
-                    <!-- Video Slot 2: Add next video iframe here later -->
-                    <div class="motion-small-card blank-slot">
-                        <div class="motion-blank-placeholder">
+                    <!-- Video Slot 2: Add next video iframe or ID here later -->
+                    <div class="motion-mini-card blank-slot">
+                        <div class="motion-mini-thumb blank-thumb">
                             <div class="motion-blank-inner">
                                 <div class="motion-blank-icon">+</div>
                                 <span class="motion-blank-label">Video Slot 02</span>
                             </div>
                         </div>
-                        <span class="motion-mini-badge blank">Slot 02 • Available</span>
-                        <h4 class="motion-mini-title">Upcoming Motion Graphics Showcase</h4>
-                        <p class="motion-mini-desc">Reserved grid for next client explainer video or kinetic typography animation.</p>
+                        <h4 class="motion-mini-title blank-title">Upcoming Motion Showcase</h4>
                     </div>
 
                     <!-- Small Video 3: Blank Grid (To Add Later) -->
-                    <!-- Video Slot 3: Add next video iframe here later -->
-                    <div class="motion-small-card blank-slot">
-                        <div class="motion-blank-placeholder">
+                    <!-- Video Slot 3: Add next video iframe or ID here later -->
+                    <div class="motion-mini-card blank-slot">
+                        <div class="motion-mini-thumb blank-thumb">
                             <div class="motion-blank-inner">
                                 <div class="motion-blank-icon">+</div>
                                 <span class="motion-blank-label">Video Slot 03</span>
                             </div>
                         </div>
-                        <span class="motion-mini-badge blank">Slot 03 • Available</span>
-                        <h4 class="motion-mini-title">Upcoming 3D Product CGI Showcase</h4>
-                        <p class="motion-mini-desc">Reserved grid for next 3D photorealistic product render or CGI sequence.</p>
+                        <h4 class="motion-mini-title blank-title">Upcoming 3D CGI Showcase</h4>
                     </div>
-                </aside>
+                </div>
             </div>
         </div>
     </section>
@@ -1698,6 +1799,71 @@
 
     <script src="script.min.js?v=20261013-nav-v3" defer></script>
     <script src="popup-form.js" defer></script>
+
+    <!-- Video Modal Player (Adopted from Index Page Theatre Window Style) -->
+    <script>
+    (function () {
+        function setupMotionShowcaseModal() {
+            var modal = document.querySelector('.video-modal');
+            if (!modal) {
+                modal = document.createElement('div');
+                modal.className = 'video-modal';
+                modal.innerHTML = '<div class="modal-inner" role="dialog" aria-modal="true"></div><button class="close-btn" aria-label="Close">✕</button>';
+                (document.body || document.documentElement).appendChild(modal);
+            }
+            var modalInner = modal.querySelector('.modal-inner');
+            var closeBtn = modal.querySelector('.close-btn');
+
+            function closeModalWindow() {
+                modal.classList.remove('active');
+                if (modalInner) modalInner.innerHTML = '';
+                document.documentElement.style.overflow = '';
+                document.body.style.overflow = '';
+            }
+
+            if (closeBtn) closeBtn.onclick = closeModalWindow;
+            modal.onclick = function (e) {
+                if (e.target === modal) closeModalWindow();
+            };
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') closeModalWindow();
+            });
+
+            document.addEventListener('click', function (e) {
+                var btn = e.target.closest && e.target.closest('.motion-showcase-section .video-poster');
+                if (!btn) return;
+                var embedCard = btn.closest('.video-embed');
+                if (!embedCard) return;
+
+                var vid = embedCard.getAttribute('data-video-id');
+                var embedUrl = embedCard.getAttribute('data-embed-url');
+                if (!embedUrl && vid) {
+                    embedUrl = 'https://www.youtube.com/embed/' + vid + '?autoplay=1&rel=0';
+                } else if (embedUrl && embedUrl.indexOf('autoplay=1') === -1) {
+                    embedUrl += (embedUrl.indexOf('?') === -1 ? '?' : '&') + 'autoplay=1';
+                }
+
+                if (embedUrl) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    if (e.stopImmediatePropagation) e.stopImmediatePropagation();
+
+                    modalInner.innerHTML = '<iframe width="100%" height="100%" src="' + embedUrl + '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="width:100%;height:100%;border:none;display:block;"></iframe>';
+                    modal.classList.add('active');
+                    document.documentElement.style.overflow = 'hidden';
+                    document.body.style.overflow = 'hidden';
+                    if (closeBtn) closeBtn.focus();
+                }
+            }, true);
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', setupMotionShowcaseModal);
+        } else {
+            setupMotionShowcaseModal();
+        }
+    })();
+    </script>
 </body>
 
 </html>
