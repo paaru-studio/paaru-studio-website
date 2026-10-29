@@ -1001,6 +1001,7 @@
             }
         })();
     </script>
+    <script src="theme.js"></script>
 </head>
 
 <body id="top" class="services-page">
@@ -1021,7 +1022,32 @@
                     </span>
                 </a>
                 <!-- Mobile menu button (visible on small screens) -->
-                <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">☰</button>
+                <div class="mobile-nav-actions">
+                    <button class="theme-toggle-btn mobile-theme-btn" type="button" aria-label="Switch theme" title="Toggle theme">
+                        <span class="theme-toggle-slider">
+                            <span class="theme-icon-box sun-box">
+                                <svg class="theme-icon icon-sun" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                </svg>
+                            </span>
+                            <span class="theme-icon-box moon-box">
+                                <svg class="theme-icon icon-moon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                </svg>
+                            </span>
+                            <span class="theme-toggle-indicator"></span>
+                        </span>
+                    </button>
+                    <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">☰</button>
+                </div>
                 <div class="nav-links">
                     <a href="/">Home</a>
                     <div class="nav-dropdown">
@@ -1086,6 +1112,29 @@
                     <a href="/get-started">Get Started</a>
                     <a href="/ai-services" class="ai-explore-btn" aria-label="AI Services"><span>AI Services</span></a>
                     <a href="/contact" class="cta-btn">Contact Us</a>
+                    <button class="theme-toggle-btn" type="button" aria-label="Switch theme" title="Toggle theme">
+                        <span class="theme-toggle-slider">
+                            <span class="theme-icon-box sun-box">
+                                <svg class="theme-icon icon-sun" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                </svg>
+                            </span>
+                            <span class="theme-icon-box moon-box">
+                                <svg class="theme-icon icon-moon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                </svg>
+                            </span>
+                            <span class="theme-toggle-indicator"></span>
+                        </span>
+                    </button>
                 </div>
             </div>
         </div>

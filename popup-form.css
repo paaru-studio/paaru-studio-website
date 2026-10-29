@@ -1,4 +1,4 @@
-/* Minimal popup form styles, neutral, matches attached visual loosely */
+/* Elegant popup form styles harmonized with Paaru Studio Light & Dark Theme */
 .video-modal, .site-popup-modal { }
 .site-popup-modal {
   position: fixed;
@@ -6,38 +6,125 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0,0,0,0.45);
+  background: rgba(16, 16, 15, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   z-index: 100000 !important;
 }
 .site-popup-inner {
   width: 880px;
   max-width: calc(100% - 40px);
-  background: #fff;
-  border-radius: 12px;
+  background: var(--card-bg, #ffffff);
+  border-radius: 16px;
   display: flex;
   overflow: hidden;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.45);
+  box-shadow: 0 25px 65px rgba(0,0,0,0.45);
+  border: 1px solid var(--border-color, rgba(10, 97, 90, 0.15));
 }
 .site-popup-left {
-  flex: 0 0 45%;
-  background: linear-gradient(180deg,#5B2FDD,#4A20B8);
-  color: #fff;
-  padding: 36px 28px;
+  flex: 0 0 42%;
+  background: linear-gradient(135deg, #0a615a 0%, #074742 60%, #ffd900 100%);
+  color: #ffffff;
+  padding: 40px 32px;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
 }
-.site-popup-left h3{ font-size: 22px; margin:0 0 8px; }
-.site-popup-left p{ opacity:0.95; }
-.site-popup-right { flex:1; padding: 28px 32px; position: relative; }
-.site-popup-close { position: absolute; right: 14px; top: 12px; background: transparent; border: 0; font-size: 22px; cursor: pointer; }
-.site-popup-form { display: flex; flex-direction: column; gap: 12px; }
-.site-popup-form input, .site-popup-form textarea { width: 100%; padding: 12px 14px; border-radius: 8px; border: 1px solid #e6e6e6; font-size: 14px; }
-.site-popup-form textarea { min-height: 96px; resize: vertical; }
-.site-popup-form .submit-btn { background: #0b8454; color: #fff; padding: 12px 18px; border-radius: 8px; border: none; cursor: pointer; font-weight:700; }
+.site-popup-left h3 { 
+  font-size: 24px; 
+  font-weight: 800; 
+  margin: 0 0 10px; 
+  color: #ffffff; 
+  line-height: 1.25; 
+}
+.site-popup-left p { 
+  opacity: 0.95; 
+  font-size: 15px; 
+  color: rgba(255, 255, 255, 0.9); 
+  line-height: 1.5; 
+}
+.site-popup-right { 
+  flex: 1; 
+  padding: 36px 40px; 
+  position: relative; 
+  background: var(--card-bg, #ffffff); 
+  color: var(--text-primary, #10100f); 
+}
+html[data-theme="dark"] .site-popup-right {
+  background: #181919;
+  color: #ffffff;
+}
+.site-popup-close { 
+  position: absolute; 
+  right: 18px; 
+  top: 16px; 
+  background: transparent; 
+  border: 0; 
+  font-size: 22px; 
+  cursor: pointer; 
+  color: var(--text-secondary, #495452); 
+  transition: transform 0.2s, color 0.2s; 
+}
+.site-popup-close:hover { 
+  transform: scale(1.15); 
+  color: #ffd900; 
+}
+.site-popup-form { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 14px; 
+  margin-top: 16px; 
+}
+.site-popup-form input, 
+.site-popup-form textarea { 
+  width: 100%; 
+  padding: 12px 14px; 
+  border-radius: 8px; 
+  border: 1px solid var(--border-color, rgba(10, 97, 90, 0.2)); 
+  font-size: 14px; 
+  background: var(--input-bg, #ffffff); 
+  color: var(--text-primary, #10100f); 
+  font-family: inherit; 
+  box-sizing: border-box; 
+  transition: border-color 0.2s, box-shadow 0.2s; 
+}
+html[data-theme="dark"] .site-popup-form input,
+html[data-theme="dark"] .site-popup-form textarea {
+  background: #121312;
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.15);
+}
+.site-popup-form input:focus, 
+.site-popup-form textarea:focus { 
+  outline: none; 
+  border-color: #ffd900; 
+  box-shadow: 0 0 0 3px rgba(255, 217, 0, 0.25); 
+}
+.site-popup-form textarea { 
+  min-height: 96px; 
+  resize: vertical; 
+}
+.site-popup-form .submit-btn { 
+  background: #ffd900; 
+  color: #10100f; 
+  padding: 12px 24px; 
+  border-radius: 999px; 
+  border: none; 
+  cursor: pointer; 
+  font-weight: 700; 
+  font-size: 15px; 
+  transition: background 0.3s, transform 0.2s, box-shadow 0.2s; 
+  box-shadow: 0 4px 15px rgba(255, 217, 0, 0.35); 
+}
+.site-popup-form .submit-btn:hover { 
+  background: #0a615a; 
+  color: #ffffff; 
+  transform: translateY(-2px); 
+  box-shadow: 0 6px 20px rgba(10, 97, 90, 0.35); 
+}
 @media (max-width: 720px){
   .site-popup-inner { flex-direction: column; }
-  .site-popup-left { flex: 0 0 auto; width: 100%; padding: 22px; }
-  .site-popup-right { padding: 18px; }
+  .site-popup-left { flex: 0 0 auto; width: 100%; padding: 26px 22px; }
+  .site-popup-right { padding: 24px 20px; }
 }
