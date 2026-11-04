@@ -65,7 +65,7 @@
         <link rel="stylesheet" href="fonts.css">
     </noscript>
     <link rel="stylesheet" href="styles.min.css?v=20260707">
-    <link rel="stylesheet" href="custom-overrides.css?v=20261013-nav-v3">
+    <link rel="stylesheet" href="custom-overrides.css?v=20261104-cream-v2">
 
     <link rel="preload" href="popup-form.css" as="style" onload="this.rel='stylesheet'">
     <noscript>
@@ -110,8 +110,8 @@
 
         body {
             margin: 0;
-            background: #000;
-            color: #fff;
+            background: #FAF7EE;
+            color: #111;
             font-family: var(--font-body);
             overflow-x: hidden
         }
@@ -163,7 +163,7 @@
 </head>
 
 
-<body id="top" class="index-page">
+<body id="top" class="index-page home-theme-cream">
 
     <!-- ========== FRAMER TICKERSCROLL INTRO OVERLAY ========== -->
     <div id="ps-intro" aria-hidden="true">
@@ -623,16 +623,15 @@
             style="opacity: 0; transition: opacity 1s ease;" loading="lazy"></iframe>
         <div class="container hero-split-container">
             <div class="hero-content left-align">
+                <div class="hero-agency-badge">Creative &amp; Advertising Agency · Bengaluru</div>
                 <h1 class="hero-title ref-title">Creative Ad Agency in Bengaluru</h1>
                 <div class="hero-tagline-subheadline">
-                    <span style="white-space: nowrap;">Stories That Scale.</span><br>
-                    <span style="white-space: nowrap;">Digital Campaigns, Films, Influencers &amp; OOH/DOOH.</span><br>
-                    <span class="red-underline" style="white-space: nowrap;">Zero Clutter. Pure Impact.</span>
+                    <span>Stories That Scale.</span><br>
+                    <span>Digital Campaigns, Films, Influencers &amp; OOH/DOOH.</span><br>
+                    <span class="red-underline">Zero Clutter. Pure Impact.</span>
                 </div>
                 <p class="hero-subtitle ref-subtitle">
-                    As a creative ad agency in Bengaluru, we engineer high-impact digital campaign, branding, creatives,
-                    ad films, video production, social media marketing, influencer marketing, e-commerce solutions,
-                    outdoor marketing (OOH & DOOH) and performance marketing for high-growth brands.
+                    As a premier creative ad agency in Bengaluru, we engineer high-impact digital campaigns, broadcast TV commercials, 3D animation, influencer activations, e-commerce solutions, and outdoor DOOH media for market-leading brands.
                 </p>
             </div>
             <div class="hero-visual right-form">
@@ -666,7 +665,6 @@
                     </form>
                 </div>
             </div>
-        </div>
     </section>
 
     <div class="section-divider"></div>
@@ -954,7 +952,6 @@
                     </div>
                 </div>
             </div>
-        </div>
     </section>
 
     <!-- Portfolio (moved to directly after About) -->
@@ -1383,23 +1380,33 @@
                 <button class="carousel-nav next" aria-label="Next project">›</button>
             </div>
 
-            <!-- Featured Case Studies Section -->
-            <section id="featured-case-studies" class="featured-case-studies-section"
-                style="margin-top: 70px; margin-bottom: 70px;">
-                <div style="text-align: center; margin-bottom: 36px;">
-                    <h2
-                        style="font-size: 32px; font-weight: 900; letter-spacing: -0.5px; color: #ffffff; margin-bottom: 12px;">
-                        Featured Case Studies: Creative &amp; Advertising Agency in Bengaluru
-                    </h2>
-                    <div class="underline"
-                        style="width: 50px; height: 3px; background: linear-gradient(135deg, #ffd033, #ffbf00); margin: 0 auto 14px; border-radius: 2px;">
-                    </div>
-                    <p
-                        style="color: rgba(255, 255, 255, 0.75); font-size: 16px; max-width: 750px; margin: 0 auto; line-height: 1.5;">
-                        Discover how our creative campaigns, fashion cinematography, and performance marketing drive
-                        scalable business growth.
-                    </p>
+            <!-- View Portfolio CTA directly below video carousel -->
+            <div class="portfolio-cta" style="text-align: center; margin-top: 40px;">
+                <a href="/portfolio" class="cta-btn" style="background: #000000; color: #ffffff; font-weight: 800; padding: 14px 34px; border-radius: 999px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
+                    View All 50+ Brand Films →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Featured Case Studies Section -->
+    <section id="featured-case-studies" class="featured-case-studies-section full-bleed">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 40px;">
+                <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(255, 215, 0, 0.12); border: 1px solid rgba(255, 215, 0, 0.32); border-radius: 50px; padding: 6px 18px; margin-bottom: 14px;">
+                    <span style="width: 8px; height: 8px; background: #FFD700; border-radius: 50%; display: inline-block;"></span>
+                    <span style="color: #FFD700; font-size: 12px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase;">Proven Results</span>
                 </div>
+                <h2 style="font-size: 34px; font-weight: 900; letter-spacing: -0.5px; color: #FFD700; margin-bottom: 12px;">
+                    Featured Case Studies: Creative &amp; Advertising Agency in Bengaluru
+                </h2>
+                <div class="underline" style="width: 60px; height: 3px; background: #FFD700; margin: 0 auto 16px; border-radius: 2px;"></div>
+                <p style="color: #FFFFFF; font-size: 16px; max-width: 750px; margin: 0 auto; line-height: 1.6;">
+                    Discover how our creative campaigns, fashion cinematography, and performance marketing drive scalable business growth.
+                </p>
+            </div>
 
                 <div class="featured-cases-grid"
                     style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 26px; max-width: 1200px; margin: 0 auto;">
@@ -1499,86 +1506,91 @@
                     </div>
                 </div>
 
-                <div style="text-align: center; margin-top: 36px;">
+                <div style="text-align: center; margin-top: 40px;">
                     <a href="/case-studies" class="cta-btn"
-                        style="background: linear-gradient(135deg, #ffd033, #ffbf00); color: #0a0a0a; font-weight: 800; padding: 12px 32px; border-radius: 999px; text-decoration: none; display: inline-block;">
-                        View all case studies →
+                        style="background: linear-gradient(135deg, #ffd033, #ffbf00); color: #0a0a0a; font-weight: 800; padding: 14px 34px; border-radius: 999px; text-decoration: none; display: inline-block;">
+                        View All Case Studies →
                     </a>
                 </div>
-            </section>
+            </div>
+    </section>
 
-            <!-- FEATURING Section: New YouTube Shorts -->
-            <div style="margin-top: 60px; margin-bottom: 10px;">
-                <div style="text-align: center; margin-bottom: 36px;">
-                    <h2
-                        style="font-size: 30px; font-weight: 900; margin-bottom: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #fff;">
-                        Latest Shorts &amp; Reels</h2>
-                    <div style="width: 50px; height: 3px; background: #fff; margin: 0 auto 12px; border-radius: 2px;">
-                    </div>
-                    <p
-                        style="color: rgba(255,255,255,0.55); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; margin: 0;">
-                        Latest Shorts &amp; Reels from Paaru Studio-Media</p>
+    <div class="section-divider"></div>
+
+    <!-- FEATURING Section: New YouTube Shorts -->
+    <section id="featured-shorts" class="featured-shorts-section full-bleed">
+        <div class="container">
+            <div class="shorts-header" style="text-align: center; margin-bottom: 38px;">
+                <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(255, 215, 0, 0.12); border: 1px solid rgba(255, 215, 0, 0.32); border-radius: 50px; padding: 6px 18px; margin-bottom: 14px;">
+                    <span style="width: 8px; height: 8px; background: #FFD700; border-radius: 50%; display: inline-block;"></span>
+                    <span style="color: #FFD700; font-size: 12px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase;">9:16 Vertical Storytelling</span>
                 </div>
-                <div class="featuring-grid" style="max-width: 1440px; margin: 0 auto;" aria-label="Featuring reels">
-                    <!-- Short 1 -->
-                    <div class="featuring-card video-embed" data-video-id="_nXASlZC_ao">
-                        <button class="video-poster" aria-label="Play featuring short 1"
-                            style="background-image: url('https://i.ytimg.com/vi/_nXASlZC_ao/maxresdefault.jpg');">
-                            <div class="feat-overlay"></div>
-                            <span class="feat-badge">&#9654; Short</span>
-                            <span class="feat-play-btn">
-                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M8 5v14l11-7z" />
-                                </svg>
-                            </span>
-                        </button>
-                    </div>
-                    <!-- Short 2 -->
-                    <div class="featuring-card video-embed" data-video-id="077yokCutpU">
-                        <button class="video-poster" aria-label="Play featuring short 2"
-                            style="background-image: url('https://i.ytimg.com/vi/077yokCutpU/maxresdefault.jpg');">
-                            <div class="feat-overlay"></div>
-                            <span class="feat-badge">&#9654; Short</span>
-                            <span class="feat-play-btn">
-                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M8 5v14l11-7z" />
-                                </svg>
-                            </span>
-                        </button>
-                    </div>
-                    <!-- Short 3 -->
-                    <div class="featuring-card video-embed" data-video-id="Dt-RoKB0s40">
-                        <button class="video-poster" aria-label="Play featuring short 3"
-                            style="background-image: url('https://i.ytimg.com/vi/Dt-RoKB0s40/maxresdefault.jpg');">
-                            <div class="feat-overlay"></div>
-                            <span class="feat-badge">&#9654; Short</span>
-                            <span class="feat-play-btn">
-                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M8 5v14l11-7z" />
-                                </svg>
-                            </span>
-                        </button>
-                    </div>
-                    <!-- Short 4 -->
-                    <div class="featuring-card video-embed" data-video-id="j2Bir3qKFQo">
-                        <button class="video-poster" aria-label="Play featuring short 4"
-                            style="background-image: url('https://i.ytimg.com/vi/j2Bir3qKFQo/maxresdefault.jpg');">
-                            <div class="feat-overlay"></div>
-                            <span class="feat-badge">&#9654; Short</span>
-                            <span class="feat-play-btn">
-                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M8 5v14l11-7z" />
-                                </svg>
-                            </span>
-                        </button>
-                    </div>
+                <h2 style="font-size: 32px; font-weight: 900; letter-spacing: -0.02em; color: #FFD700; margin-bottom: 12px;">
+                    Latest Shorts &amp; Reels
+                </h2>
+                <div class="underline" style="width: 50px; height: 3px; background: #FFD700; margin: 0 auto 14px; border-radius: 2px;"></div>
+                <p style="color: #FFFFFF; font-size: 14.5px; margin: 0; opacity: 0.9;">
+                    High-engagement short-form video production and influencer reels crafted by Paaru Studio-Media
+                </p>
+            </div>
+            <div class="featuring-grid" style="max-width: 1440px; margin: 0 auto;" aria-label="Featuring reels">
+                <!-- Short 1 -->
+                <div class="featuring-card video-embed" data-video-id="_nXASlZC_ao">
+                    <button class="video-poster" aria-label="Play featuring short 1"
+                        style="background-image: url('https://i.ytimg.com/vi/_nXASlZC_ao/maxresdefault.jpg');">
+                        <div class="feat-overlay"></div>
+                        <span class="feat-badge">&#9654; Short</span>
+                        <span class="feat-play-btn">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 5v14l11-7z" />
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+                <!-- Short 2 -->
+                <div class="featuring-card video-embed" data-video-id="077yokCutpU">
+                    <button class="video-poster" aria-label="Play featuring short 2"
+                        style="background-image: url('https://i.ytimg.com/vi/077yokCutpU/maxresdefault.jpg');">
+                        <div class="feat-overlay"></div>
+                        <span class="feat-badge">&#9654; Short</span>
+                        <span class="feat-play-btn">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 5v14l11-7z" />
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+                <!-- Short 3 -->
+                <div class="featuring-card video-embed" data-video-id="Dt-RoKB0s40">
+                    <button class="video-poster" aria-label="Play featuring short 3"
+                        style="background-image: url('https://i.ytimg.com/vi/Dt-RoKB0s40/maxresdefault.jpg');">
+                        <div class="feat-overlay"></div>
+                        <span class="feat-badge">&#9654; Short</span>
+                        <span class="feat-play-btn">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 5v14l11-7z" />
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+                <!-- Short 4 -->
+                <div class="featuring-card video-embed" data-video-id="j2Bir3qKFQo">
+                    <button class="video-poster" aria-label="Play featuring short 4"
+                        style="background-image: url('https://i.ytimg.com/vi/j2Bir3qKFQo/maxresdefault.jpg');">
+                        <div class="feat-overlay"></div>
+                        <span class="feat-badge">&#9654; Short</span>
+                        <span class="feat-play-btn">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 5v14l11-7z" />
+                            </svg>
+                        </span>
+                    </button>
                 </div>
             </div>
-
-            <!-- View Portfolio CTA below videos -->
-            <div class="portfolio-cta" style="text-align:center;margin-top:48px;">
-                <a href="/portfolio" class="cta-btn"
-                    style="background-color: #111; color: #020202; border-color: #111;">View Portfolio</a>
+            <div class="featured-shorts-cta" style="text-align: center; margin-top: 44px;">
+                <a href="/influencer-marketing" class="cta-btn" style="background: linear-gradient(135deg, #ffd033, #ffbf00); color: #0a0a0a; font-weight: 800; padding: 14px 34px; border-radius: 999px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
+                    Explore Short-Form Video Production →
+                </a>
             </div>
         </div>
     </section>
@@ -1818,7 +1830,6 @@
                     </picture>
                 </div>
             </div>
-        </div>
     </section>
     <div class="section-divider"></div>
 
@@ -1933,7 +1944,6 @@
                     <div class="gold-label">Years</div>
                 </div>
             </div>
-        </div>
     </section>
     <script>
         // Animate numeric counters in gold-banner when it becomes visible.
@@ -2193,38 +2203,25 @@
             </div>
         </div>
 
-        <!-- Trust Strip: Proof Points & Review Badge Placeholders -->
-        <div class="trust-strip"
-            style="margin-top: 40px; padding: 24px 20px; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 191, 0, 0.2); border-radius: 14px; max-width: 1000px; margin-left: auto; margin-right: auto;">
-            <div
-                style="display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; gap: 24px; text-align: center;">
-                <div class="trust-point" style="flex: 1 1 200px;">
-                    <div
-                        style="font-size: 32px; font-weight: 800; color: #ffbf00; font-family: var(--font-heading); line-height: 1.2;">
-                        11+</div>
-                    <div style="font-size: 14px; color: rgba(255, 255, 255, 0.75); margin-top: 4px; font-weight: 500;">
-                        Years of Industry Experience</div>
+        <!-- Trust Strip: Proof Points & Review Badge -->
+        <div class="trust-strip">
+            <div class="trust-points-row">
+                <div class="trust-point">
+                    <div class="trust-number">11+</div>
+                    <div class="trust-label">Years of Industry Experience</div>
                 </div>
-                <div class="trust-point" style="flex: 1 1 200px;">
-                    <div
-                        style="font-size: 32px; font-weight: 800; color: #ffbf00; font-family: var(--font-heading); line-height: 1.2;">
-                        50+</div>
-                    <div style="font-size: 14px; color: rgba(255, 255, 255, 0.75); margin-top: 4px; font-weight: 500;">
-                        Brand Films Produced</div>
+                <div class="trust-point">
+                    <div class="trust-number">50+</div>
+                    <div class="trust-label">Brand Films Produced</div>
                 </div>
-                <div class="trust-point" style="flex: 1 1 200px;">
-                    <div
-                        style="font-size: 32px; font-weight: 800; color: #ffbf00; font-family: var(--font-heading); line-height: 1.2;">
-                        35+</div>
-                    <div style="font-size: 14px; color: rgba(255, 255, 255, 0.75); margin-top: 4px; font-weight: 500;">
-                        Trusted Enterprise &amp; Startup Clients</div>
+                <div class="trust-point">
+                    <div class="trust-number">35+</div>
+                    <div class="trust-label">Trusted Enterprise &amp; Startup Clients</div>
                 </div>
             </div>
-            <div class="trust-badges"
-                style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 20px; margin-top: 24px; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.08);">
+            <div class="trust-badges">
                 <a href="https://g.page/r/CdbDwVz3YbDAEBM/review" target="_blank" rel="noopener noreferrer"
-                    class="google-review-badge"
-                    style="display: inline-flex; align-items: center; gap: 10px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.15); padding: 8px 18px; border-radius: 999px; text-decoration: none; color: #fff; font-size: 13px; font-weight: 600; transition: border-color 0.2s, background 0.2s;">
+                    class="google-review-badge">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
                         aria-hidden="true">
                         <path
@@ -2245,7 +2242,6 @@
                 <div class="clutch-widget" data-url="https://widget.clutch.co" data-widget-type="1" data-height="40"
                     data-nofollow="false" data-expandifr="true" data-clutchcompany-id="2732402"></div>
             </div>
-        </div>
         </div>
     </section>
 
@@ -2617,7 +2613,6 @@
                     </div>
                 </div>
             </div>
-        </div>
     </section>
 
     <script>
@@ -2650,7 +2645,6 @@
                     <p class="author-position">Leading Interior Design Brand</p>
                 </div>
             </div>
-        </div>
     </section>
 
     <div class="section-divider"></div>
@@ -2703,7 +2697,6 @@
                     </div>
                 </div>
             </div>
-        </div>
     </section>
 
     <div class="section-divider"></div>
@@ -2898,13 +2891,12 @@
                     </div>
                 </div>
             </div>
-        </div>
     </section>
 
     <div class="section-divider"></div>
 
     <!-- Latest from the Blog Section -->
-    <section id="blog-preview" class="blog-preview-section" style="padding: 90px 0; background: #0a0a0a;">
+    <section id="blog-preview" class="blog-preview-section" style="padding: 90px 0;">
         <div class="container">
             <div style="text-align: center; margin-bottom: 48px;">
                 <h2
