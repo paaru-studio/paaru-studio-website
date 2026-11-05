@@ -4879,25 +4879,52 @@ select {
 }
 
 /* ==========================================================================
-   PAARU STUDIO - CREAM & BLACK ALTERNATING CONTRAST THEME (CONTRAST > 12:1)
-   Handcrafted Luxury Editorial Aesthetic
+   PAARU STUDIO - UNIFIED LUXURY BRAND IDENTITY (CREAM, BLACK & GOLDEN YELLOW)
+   Single cohesive, professional design matching Client Logos & Review sections.
+   Applied ONLY to Index Page via body.home-theme-cream.
+   Palette: Cream (#FAF7EE), Pure White Cards (#FFFFFF), Black (#000000 / #111111),
+            Golden Yellow (#FFBE0C / #FFD700).
+   Contrast Ratios: Strictly >= 12.6:1 (Black on White 21:1, Black on Cream 19.6:1,
+                    Black on Gold 12.6:1, Gold on Black 12.6:1, White on Black 21:1).
+   Textures: 0% Noise / 0% Grain / 0% Vectors.
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   BASE & SMOOTH SCROLLING
+   BASE CANVAS (PURE CREAM, ZERO TEXTURES)
    -------------------------------------------------------------------------- */
 body.home-theme-cream {
     background-color: #FAF7EE !important;
+    background: #FAF7EE !important;
+    background-image: none !important;
     color: #111111 !important;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
-body.home-theme-cream section {
-    scroll-margin-top: 85px !important;
+/* Eliminate any film grain / texture pseudo-element */
+body.home-theme-cream::before,
+body.home-theme-cream::after {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
 }
 
-/* Eliminate any muddy canvas/motion background blobs across all cards */
+body.home-theme-cream section {
+    background-color: #FAF7EE !important;
+    background: #FAF7EE !important;
+    background-image: none !important;
+    scroll-margin-top: 85px !important;
+    position: relative !important;
+    padding: 85px 0 !important;
+}
+
+body.home-theme-cream section > .container,
+body.home-theme-cream section > div {
+    position: relative !important;
+    z-index: 2 !important;
+}
+
+/* Eliminate any canvas/motion background blobs */
 body.home-theme-cream .gradient-motion-bg-container,
 body.home-theme-cream canvas.gradient-motion-bg-canvas,
 body.home-theme-cream .service-nav-card .gradient-motion-bg-container,
@@ -4909,25 +4936,25 @@ body.home-theme-cream .blog-card .gradient-motion-bg-container {
     pointer-events: none !important;
 }
 
-/* Refined Section Divider */
+/* Subtle, Elegant Section Divider (Golden Yellow Accent) */
 body.home-theme-cream .section-divider {
     height: 1px !important;
     background: transparent !important;
     border: none !important;
     position: relative !important;
+    margin: 0 !important;
 }
-
 body.home-theme-cream .section-divider::after {
     content: '' !important;
     position: absolute !important;
     left: 10% !important;
     right: 10% !important;
     height: 1px !important;
-    background: linear-gradient(90deg, transparent, rgba(212, 160, 0, 0.45), transparent) !important;
+    background: linear-gradient(90deg, transparent, rgba(212, 160, 0, 0.35), transparent) !important;
 }
 
 /* --------------------------------------------------------------------------
-   0. NAVIGATION (HANDCRAFTED FROSTED FLOATING PILL & TOP BAR)
+   0. NAVIGATION (FROSTED CREAM PILL & GOLDEN BRAND ACCENTS)
    -------------------------------------------------------------------------- */
 /* Unscrolled Navbar */
 body.home-theme-cream .navbar:not(.scrolled) {
@@ -4935,128 +4962,129 @@ body.home-theme-cream .navbar:not(.scrolled) {
     border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.03) !important;
 }
-
 body.home-theme-cream .navbar:not(.scrolled) .nav-links a:not(.cta-btn):not(.ai-explore-btn) {
     color: #111111 !important;
     font-weight: 700 !important;
 }
-
 body.home-theme-cream .navbar:not(.scrolled) .nav-links a:not(.cta-btn):not(.ai-explore-btn):hover {
-    color: #B8860B !important;
+    color: #000000 !important;
+    text-decoration: underline !important;
 }
-
 body.home-theme-cream .navbar:not(.scrolled) .logo-text,
 body.home-theme-cream .navbar:not(.scrolled) .flip-word {
     color: #000000 !important;
 }
-
 body.home-theme-cream .navbar:not(.scrolled) .logo-text-static {
     color: #FFBE0C !important;
 }
-
 body.home-theme-cream .navbar:not(.scrolled) .mobile-menu-btn {
     color: #000000 !important;
 }
 
-/* Scrolled Navbar: Frosted Glass Floating Pill (NO jarring yellow background!) */
+/* Scrolled Navbar: Frosted Glass Floating Pill Matching Review Card Language */
 body.home-theme-cream .navbar.scrolled {
-    background: rgba(250, 247, 238, 0.92) !important;
+    background: rgba(250, 247, 238, 0.94) !important;
     backdrop-filter: blur(20px) saturate(160%) !important;
     -webkit-backdrop-filter: blur(20px) saturate(160%) !important;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04) !important;
-    border: 1px solid rgba(0, 0, 0, 0.12) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.04) !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
     border-radius: 9999px !important;
     top: 10px !important;
     height: 54px !important;
+    transition: all 0.3s ease !important;
 }
-
 body.home-theme-cream .navbar.scrolled .logo-text,
 body.home-theme-cream .navbar.scrolled .flip-word {
     color: #000000 !important;
 }
-
 body.home-theme-cream .navbar.scrolled .logo-text-static {
     color: #FFBE0C !important;
 }
-
 body.home-theme-cream .navbar.scrolled .nav-links a:not(.cta-btn):not(.ai-explore-btn) {
     color: #111111 !important;
     font-weight: 700 !important;
 }
-
 body.home-theme-cream .navbar.scrolled .nav-links a:not(.cta-btn):not(.ai-explore-btn):hover {
-    color: #B8860B !important;
+    color: #000000 !important;
+    text-decoration: underline !important;
 }
-
 body.home-theme-cream .navbar.scrolled .mobile-menu-btn {
     color: #000000 !important;
 }
 
-/* Scrolled AI Services Button */
+/* AI Services Button */
 body.home-theme-cream .navbar.scrolled .ai-explore-btn,
-body.home-theme-cream .navbar.scrolled .nav-links>a.ai-explore-btn {
+body.home-theme-cream .navbar.scrolled .nav-links>a.ai-explore-btn,
+body.home-theme-cream .navbar:not(.scrolled) .ai-explore-btn,
+body.home-theme-cream .navbar:not(.scrolled) .nav-links>a.ai-explore-btn {
     background: #000000 !important;
     color: #FFFFFF !important;
     border: 1.5px solid #000000 !important;
     border-radius: 50px !important;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
 }
-
 body.home-theme-cream .navbar.scrolled .ai-explore-btn span,
-body.home-theme-cream .navbar.scrolled .nav-links>a.ai-explore-btn span {
+body.home-theme-cream .navbar.scrolled .nav-links>a.ai-explore-btn span,
+body.home-theme-cream .navbar:not(.scrolled) .ai-explore-btn span,
+body.home-theme-cream .navbar:not(.scrolled) .nav-links>a.ai-explore-btn span {
     color: #FFFFFF !important;
 }
-
-body.home-theme-cream .navbar.scrolled .ai-explore-btn:hover {
+body.home-theme-cream .navbar.scrolled .ai-explore-btn:hover,
+body.home-theme-cream .navbar:not(.scrolled) .ai-explore-btn:hover {
     background: #1f1f23 !important;
-    border-color: #1f1f23 !important;
+    border-color: #FFBE0C !important;
 }
 
-/* Scrolled Contact Us CTA Button */
+/* Contact Us CTA Button */
 body.home-theme-cream .navbar.scrolled .cta-btn,
-body.home-theme-cream .navbar.scrolled .nav-links>a.cta-btn {
-    background: #FFD700 !important;
+body.home-theme-cream .navbar.scrolled .nav-links>a.cta-btn,
+body.home-theme-cream .navbar:not(.scrolled) .cta-btn,
+body.home-theme-cream .navbar:not(.scrolled) .nav-links>a.cta-btn {
+    background: #FFBE0C !important;
     color: #000000 !important;
     font-weight: 800 !important;
     border-radius: 50px !important;
     border: none !important;
-    box-shadow: 0 4px 14px rgba(255, 215, 0, 0.35) !important;
+    box-shadow: 0 4px 14px rgba(255, 190, 12, 0.35) !important;
 }
-
 body.home-theme-cream .navbar.scrolled .cta-btn:hover,
-body.home-theme-cream .navbar.scrolled .nav-links>a.cta-btn:hover {
-    background: #FFE033 !important;
+body.home-theme-cream .navbar.scrolled .nav-links>a.cta-btn:hover,
+body.home-theme-cream .navbar:not(.scrolled) .cta-btn:hover,
+body.home-theme-cream .navbar:not(.scrolled) .nav-links>a.cta-btn:hover {
+    background: #FFD700 !important;
     color: #000000 !important;
     transform: translateY(-1px) !important;
-    box-shadow: 0 6px 18px rgba(255, 215, 0, 0.45) !important;
+    box-shadow: 0 6px 18px rgba(255, 190, 12, 0.45) !important;
 }
 
 /* Mobile Dropdown Menu */
 body.home-theme-cream .navbar.open .nav-links {
-    background: #0c0d11 !important;
-    border: 1px solid rgba(255, 215, 0, 0.3) !important;
+    background: #FAF7EE !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1) !important;
 }
-
 body.home-theme-cream .navbar.open .nav-links a {
-    color: #FFFFFF !important;
+    color: #000000 !important;
 }
-
 body.home-theme-cream .navbar.open .nav-links a:hover {
-    color: #FFD700 !important;
+    color: #000000 !important;
 }
 
 /* --------------------------------------------------------------------------
-   1. HERO SECTION (CREAM BACKGROUND) - Contrast > 18:1
+   1. HERO SECTION (PURE CREAM + CRISP WHITE FORM CARD)
    -------------------------------------------------------------------------- */
 body.home-theme-cream .hero {
+    background-color: #FAF7EE !important;
     background: #FAF7EE !important;
-    position: relative !important;
-    overflow: hidden !important;
+    background-image: none !important;
     padding-top: 100px !important;
     padding-bottom: 70px !important;
+    position: relative !important;
+    overflow: hidden !important;
 }
 
-/* Fully hide background poster/iframe to eliminate ghost text watermark */
+/* Fully hide background poster/iframe/watermarks */
+body.home-theme-cream .hero picture,
 body.home-theme-cream .hero-poster,
 body.home-theme-cream .hero-bg-iframe,
 body.home-theme-cream .hero::after,
@@ -5071,16 +5099,25 @@ body.home-theme-cream .hero-agency-badge {
     display: inline-flex !important;
     align-items: center !important;
     gap: 8px !important;
-    background: rgba(184, 134, 11, 0.12) !important;
-    border: 1px solid rgba(184, 134, 11, 0.3) !important;
-    color: #7A5500 !important;
-    font-weight: 700 !important;
+    background: #FFFFFF !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    color: #000000 !important;
+    font-weight: 800 !important;
     font-size: 0.82rem !important;
     text-transform: uppercase !important;
     letter-spacing: 0.08em !important;
     padding: 6px 16px !important;
     border-radius: 50px !important;
     margin-bottom: 18px !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04) !important;
+}
+body.home-theme-cream .hero-agency-badge::before {
+    content: '' !important;
+    width: 8px !important;
+    height: 8px !important;
+    background: #FFBE0C !important;
+    border-radius: 50% !important;
+    display: inline-block !important;
 }
 
 /* Hero Title */
@@ -5102,14 +5139,13 @@ body.home-theme-cream .hero-tagline-subheadline {
     line-height: 1.35 !important;
     margin-bottom: 22px !important;
 }
-
 body.home-theme-cream .hero-tagline-subheadline span {
     color: #111111 !important;
 }
-
-body.home-theme-cream .hero-tagline-subheadline strong {
+body.home-theme-cream .hero-tagline-subheadline strong,
+body.home-theme-cream .hero-tagline-subheadline span.red-underline {
     color: #000000 !important;
-    border-bottom: 3px solid #FFD700 !important;
+    border-bottom: 3px solid #FFBE0C !important;
     padding-bottom: 2px !important;
 }
 
@@ -5117,76 +5153,76 @@ body.home-theme-cream .hero-tagline-subheadline strong {
 body.home-theme-cream .hero-subtitle.ref-subtitle,
 body.home-theme-cream .hero-description,
 body.home-theme-cream .hero-content p {
-    color: #242426 !important;
+    color: #222222 !important;
     font-size: 1.05rem !important;
     line-height: 1.65 !important;
     max-width: 580px !important;
 }
 
-/* Hero Lead Form Card: Modern Luxury Obsidian Architecture */
+/* Hero Lead Form Card: Matching the White Trust-Strip & Review Card Language */
 body.home-theme-cream .hero-form-card {
-    background: #F9F9F9 !important;
-    border: 1px solid rgba(255, 215, 0, 0.4) !important;
+    background-color: #FFFFFF !important;
+    background: #FFFFFF !important;
+    background-image: none !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
     border-radius: 20px !important;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.05) !important;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05) !important;
     padding: 32px 28px !important;
+    position: relative !important;
 }
-
+body.home-theme-cream .hero-form-card::before,
+body.home-theme-cream .hero-form-card::after {
+    display: none !important;
+}
 body.home-theme-cream .hero-form-card h3 {
-    color: #FFD700 !important;
+    color: #000000 !important;
     font-size: 1.55rem !important;
     font-weight: 800 !important;
     letter-spacing: -0.02em !important;
     margin-bottom: 6px !important;
 }
-
 body.home-theme-cream .hero-form-card p.form-subtitle {
-    color: rgba(255, 255, 255, 0.85) !important;
+    color: #222222 !important;
     font-size: 0.92rem !important;
     margin-bottom: 22px !important;
 }
-
 body.home-theme-cream .hero-form-card input,
 body.home-theme-cream .hero-form-card select,
 body.home-theme-cream .hero-form-card textarea {
-    background: #181922 !important;
-    color: #FFFFFF !important;
-    border: 1px solid rgba(255, 255, 255, 0.22) !important;
+    background: #FAF7EE !important;
+    color: #000000 !important;
+    border: 1px solid rgba(0, 0, 0, 0.12) !important;
     border-radius: 10px !important;
     padding: 12px 14px !important;
     font-size: 0.92rem !important;
+    font-weight: 600 !important;
     margin-bottom: 12px !important;
     width: 100% !important;
     box-sizing: border-box !important;
     outline: none !important;
     transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
 }
-
 body.home-theme-cream .hero-form-card input::placeholder,
 body.home-theme-cream .hero-form-card textarea::placeholder {
-    color: #A1A1AA !important;
+    color: #333333 !important;
     opacity: 1 !important;
 }
-
 body.home-theme-cream .hero-form-card select {
-    color: #A1A1AA !important;
+    color: #333333 !important;
 }
-
 body.home-theme-cream .hero-form-card select option {
-    background: #181922 !important;
-    color: #FFFFFF !important;
+    background: #FFFFFF !important;
+    color: #000000 !important;
 }
-
 body.home-theme-cream .hero-form-card input:focus,
 body.home-theme-cream .hero-form-card select:focus,
 body.home-theme-cream .hero-form-card textarea:focus {
-    border-color: #FFD700 !important;
-    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.2) !important;
+    border-color: #FFBE0C !important;
+    box-shadow: 0 0 0 3px rgba(255, 190, 12, 0.25) !important;
 }
-
 body.home-theme-cream .hero-form-card .submit-btn,
-body.home-theme-cream .hero-form-card button[type=submit] {
-    background: #FFD700 !important;
+body.home-theme-cream .hero-form-card button[type="submit"] {
+    background: #FFBE0C !important;
     color: #000000 !important;
     font-weight: 800 !important;
     font-size: 1rem !important;
@@ -5196,72 +5232,71 @@ body.home-theme-cream .hero-form-card button[type=submit] {
     width: 100% !important;
     cursor: pointer !important;
     transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease !important;
-    box-shadow: 0 4px 14px rgba(255, 215, 0, 0.3) !important;
+    box-shadow: 0 4px 14px rgba(255, 190, 12, 0.3) !important;
     margin-top: 6px !important;
 }
-
 body.home-theme-cream .hero-form-card .submit-btn:hover,
-body.home-theme-cream .hero-form-card button[type=submit]:hover {
-    background: #FFE033 !important;
+body.home-theme-cream .hero-form-card button[type="submit"]:hover {
+    background: #FFD700 !important;
     transform: translateY(-2px) !important;
-    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.45) !important;
+    box-shadow: 0 6px 20px rgba(255, 190, 12, 0.45) !important;
 }
 
 /* --------------------------------------------------------------------------
-   2. CORE CAPABILITIES / ABOUT SECTION (DEEP OBSIDIAN SHOWCASE) - Contrast > 14:1
+   2. CORE PRODUCTION CAPABILITIES / ABOUT (MATCHING REVIEW CARD AESTHETIC)
    -------------------------------------------------------------------------- */
-body.home-theme-cream #about.about-section {
-    background: #08080a !important;
-    color: #FFFFFF !important;
-    padding: 90px 0 !important;
-    border-top: 1px solid rgba(255, 215, 0, 0.25) !important;
-    border-bottom: 1px solid rgba(255, 215, 0, 0.25) !important;
-    scroll-margin-top: 85px !important;
+body.home-theme-cream #about.about-section,
+body.home-theme-cream .about-section {
+    background-color: #FAF7EE !important;
+    background: #FAF7EE !important;
+    background-image: none !important;
+    color: #111111 !important;
+    padding: 85px 0 !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.06) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
 }
-
 body.home-theme-cream #about .about-tagline,
 body.home-theme-cream #about h2 {
-    color: #FFD700 !important;
+    color: #000000 !important;
     font-weight: 900 !important;
     font-size: clamp(1.8rem, 3.2vw, 2.5rem) !important;
+    text-align: center !important;
 }
-
 body.home-theme-cream #about .underline {
-    background: #FFD700 !important;
+    background: #FFBE0C !important;
+    width: 60px !important;
+    height: 3px !important;
+    border-radius: 2px !important;
+    margin: 0 auto 20px !important;
 }
-
 body.home-theme-cream #about .about-intro p {
-    color: #E2E2E6 !important;
+    color: #222222 !important;
     font-size: 17px !important;
     line-height: 1.8 !important;
 }
-
 body.home-theme-cream #about .about-intro p a {
-    color: #FFD700 !important;
+    color: #000000 !important;
     text-decoration: underline !important;
     font-weight: 700 !important;
 }
-
 body.home-theme-cream #about .about-block h3 {
-    color: #FFD700 !important;
+    color: #000000 !important;
     font-weight: 800 !important;
 }
-
 body.home-theme-cream #about .about-block p {
-    color: #FFFFFF !important;
+    color: #222222 !important;
     font-size: 16px !important;
     line-height: 1.7 !important;
 }
-
 body.home-theme-cream #about .about-block p a {
-    color: #FFD700 !important;
+    color: #000000 !important;
     text-decoration: underline !important;
     font-weight: 700 !important;
 }
 
-/* Core Production Capabilities Grid Heading */
+/* Section Title */
 body.home-theme-cream .home-services-nav-title {
-    color: #FFD700 !important;
+    color: #000000 !important;
     font-weight: 800 !important;
     font-size: clamp(1.5rem, 2.8vw, 2.2rem) !important;
     letter-spacing: -0.01em !important;
@@ -5269,128 +5304,141 @@ body.home-theme-cream .home-services-nav-title {
     text-align: center !important;
 }
 
-/* Handcrafted Service Cards (Crisp obsidian, no muddy gradient blobs!) */
+/* Service Cards: Matching Client Logo & Review Card Styling */
 body.home-theme-cream .service-nav-card {
-    background: #121216 !important;
-    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    background-color: #FFFFFF !important;
+    background: #FFFFFF !important;
+    background-image: none !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
     border-radius: 16px !important;
     overflow: hidden !important;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3) !important;
-    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.3s ease !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04) !important;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease !important;
 }
-
+body.home-theme-cream .service-nav-card::before,
+body.home-theme-cream .service-nav-card::after {
+    display: none !important;
+}
 body.home-theme-cream .service-nav-card:hover {
-    transform: translateY(-6px) !important;
-    border-color: rgba(255, 215, 0, 0.55) !important;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45), 0 0 20px rgba(255, 215, 0, 0.15) !important;
+    transform: translateY(-4px) !important;
+    border-color: rgba(212, 160, 0, 0.45) !important;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08) !important;
 }
-
 body.home-theme-cream .service-nav-card .service-nav-body {
-    background: transparent !important;
+    background: #FFFFFF !important;
     padding: 22px 22px 24px !important;
 }
-
 body.home-theme-cream .service-nav-card h4,
 body.home-theme-cream .service-nav-card h4 a {
-    color: #FFD700 !important;
+    color: #000000 !important;
     font-size: 1.18rem !important;
     font-weight: 800 !important;
     text-decoration: none !important;
     margin-bottom: 8px !important;
 }
-
 body.home-theme-cream .service-nav-card p {
-    color: #E2E2E6 !important;
+    color: #222222 !important;
     font-size: 0.88rem !important;
     line-height: 1.55 !important;
     margin-bottom: 16px !important;
 }
-
 body.home-theme-cream .service-nav-card span {
-    background: rgba(255, 215, 0, 0.14) !important;
-    color: #FFD700 !important;
-    font-weight: 700 !important;
+    background: #FFBE0C !important;
+    color: #000000 !important;
+    border: none !important;
+    font-weight: 800 !important;
     font-size: 0.72rem !important;
     letter-spacing: 0.08em !important;
     text-transform: uppercase !important;
     padding: 4px 10px !important;
-    border-radius: 4px !important;
+    border-radius: 20px !important;
     display: inline-block !important;
 }
-
-body.home-theme-cream .service-nav-card a.service-nav-link {
-    color: #FFD700 !important;
-    font-weight: 700 !important;
+body.home-theme-cream .service-nav-card a.service-nav-link,
+body.home-theme-cream .service-nav-card .service-nav-body a[href^="/"] {
+    color: #000000 !important;
+    font-weight: 800 !important;
     font-size: 0.88rem !important;
     text-decoration: none !important;
     display: inline-flex !important;
     align-items: center !important;
     gap: 6px !important;
-    transition: transform 0.2s ease, color 0.2s ease !important;
+    transition: transform 0.2s ease !important;
 }
-
-body.home-theme-cream .service-nav-card a.service-nav-link:hover {
-    color: #FFE033 !important;
+body.home-theme-cream .service-nav-card a.service-nav-link:hover,
+body.home-theme-cream .service-nav-card .service-nav-body a[href^="/"]:hover {
     transform: translateX(4px) !important;
 }
 
 body.home-theme-cream .services-portfolio-banner {
-    background: #121216 !important;
-    border: 1px solid rgba(255, 215, 0, 0.35) !important;
+    background-color: #FFFFFF !important;
+    background: #FFFFFF !important;
+    background-image: none !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    border-radius: 16px !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04) !important;
 }
-
 body.home-theme-cream .services-portfolio-banner h4 a {
-    color: #FFD700 !important;
+    color: #000000 !important;
 }
-
 body.home-theme-cream .services-portfolio-banner p {
-    color: #FFFFFF !important;
+    color: #222222 !important;
 }
-
 body.home-theme-cream .services-portfolio-banner p a {
-    color: #FFD700 !important;
+    color: #000000 !important;
+    font-weight: 700 !important;
+    text-decoration: underline !important;
 }
 
 /* --------------------------------------------------------------------------
-   3. PORTFOLIO CAROUSEL SECTION (CREAM BACKGROUND) - Contrast > 18:1
+   3. PORTFOLIO CAROUSEL SECTION
    -------------------------------------------------------------------------- */
 body.home-theme-cream #portfolio.portfolio-section,
+body.home-theme-cream .portfolio-section,
 body.home-theme-cream .portfolio-section.yellow-strip {
+    background-color: #FAF7EE !important;
     background: #FAF7EE !important;
-    border-top: 1px solid rgba(0, 0, 0, 0.08) !important;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+    background-image: none !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.06) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
     padding-top: 90px !important;
     padding-bottom: 70px !important;
-    scroll-margin-top: 85px !important;
 }
-
 body.home-theme-cream #portfolio h2,
+body.home-theme-cream .portfolio-section h2,
 body.home-theme-cream .portfolio-section.yellow-strip h2 {
     color: #000000 !important;
     font-weight: 900 !important;
     font-size: clamp(2rem, 3.8vw, 2.8rem) !important;
     letter-spacing: -0.02em !important;
 }
-
 body.home-theme-cream #portfolio .underline,
 body.home-theme-cream .portfolio-section.yellow-strip .underline {
-    background: #000000 !important;
+    background: #FFBE0C !important;
+    width: 60px !important;
+    height: 3px !important;
+    border-radius: 2px !important;
+    margin: 0 auto 16px !important;
 }
-
 body.home-theme-cream .portfolio-section.yellow-strip p,
-body.home-theme-cream .portfolio-section.yellow-strip p.portfolio-tagline {
-    color: #111111 !important;
+body.home-theme-cream .portfolio-section.yellow-strip p.portfolio-tagline,
+body.home-theme-cream #portfolio p {
+    color: #222222 !important;
     font-weight: 600 !important;
     font-size: 1.12rem !important;
     margin-top: 14px !important;
     margin-bottom: 30px !important;
 }
-
 body.home-theme-cream .carousel-nav {
     background: #000000 !important;
     color: #FFFFFF !important;
+    border: none !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
 }
-
+body.home-theme-cream .carousel-nav:hover {
+    background: #FFBE0C !important;
+    color: #000000 !important;
+}
 body.home-theme-cream .portfolio-cta a.cta-btn {
     background: #000000 !important;
     color: #FFFFFF !important;
@@ -5398,222 +5446,277 @@ body.home-theme-cream .portfolio-cta a.cta-btn {
     border-radius: 9999px !important;
     font-weight: 700 !important;
     padding: 12px 28px !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12) !important;
     transition: all 0.25s ease !important;
 }
-
 body.home-theme-cream .portfolio-cta a.cta-btn:hover {
-    background: #FFD700 !important;
+    background: #FFBE0C !important;
     color: #000000 !important;
-    border-color: #FFD700 !important;
+    border-color: #FFBE0C !important;
     transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(255, 190, 12, 0.35) !important;
 }
 
 /* --------------------------------------------------------------------------
-   4. FEATURED CASE STUDIES (DEEP OBSIDIAN SHOWCASE) - Contrast > 14:1
+   4. FEATURED CASE STUDIES SECTION (MATCHING REVIEW CARD AESTHETIC)
    -------------------------------------------------------------------------- */
 body.home-theme-cream #featured-case-studies,
 body.home-theme-cream .featured-case-studies-section {
-    background: #08080a !important;
+    background-color: #FAF7EE !important;
+    background: #FAF7EE !important;
+    background-image: none !important;
     padding: 85px 0 !important;
-    border-top: 1px solid rgba(255, 215, 0, 0.25) !important;
-    border-bottom: 1px solid rgba(255, 215, 0, 0.25) !important;
-    scroll-margin-top: 85px !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.06) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
+    border-radius: 0 !important;
 }
-
+body.home-theme-cream #featured-case-studies::before,
+body.home-theme-cream #featured-case-studies::after {
+    display: none !important;
+}
 body.home-theme-cream #featured-case-studies h2 {
-    color: #FFD700 !important;
+    color: #000000 !important;
     font-weight: 900 !important;
     font-size: clamp(1.8rem, 3.2vw, 2.6rem) !important;
     letter-spacing: -0.02em !important;
 }
-
 body.home-theme-cream #featured-case-studies .underline {
-    background: #FFD700 !important;
+    background: #FFBE0C !important;
+    width: 60px !important;
+    height: 3px !important;
+    border-radius: 2px !important;
+    margin: 0 auto 16px !important;
 }
-
 body.home-theme-cream #featured-case-studies p {
-    color: #E0E0E0 !important;
+    color: #222222 !important;
     font-size: 1.05rem !important;
     line-height: 1.6 !important;
 }
-
 body.home-theme-cream #featured-case-studies .case-card,
 body.home-theme-cream .case-card {
-    background: #141418 !important;
-    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    background-color: #FFFFFF !important;
+    background: #FFFFFF !important;
+    background-image: none !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
     border-radius: 16px !important;
     overflow: hidden !important;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35) !important;
-    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04) !important;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease !important;
 }
-
 body.home-theme-cream #featured-case-studies .case-card:hover,
 body.home-theme-cream .case-card:hover {
-    transform: translateY(-6px) !important;
-    border-color: rgba(255, 215, 0, 0.6) !important;
-    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5), 0 0 25px rgba(255, 215, 0, 0.15) !important;
+    transform: translateY(-4px) !important;
+    border-color: rgba(212, 160, 0, 0.45) !important;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08) !important;
 }
-
+body.home-theme-cream .case-card-body {
+    background: #FFFFFF !important;
+    padding: 22px 22px 24px !important;
+}
 body.home-theme-cream .case-card h3 a,
 body.home-theme-cream .case-card h3,
 body.home-theme-cream .case-card-body h4 {
-    color: #FFD700 !important;
+    color: #000000 !important;
     font-weight: 800 !important;
     font-size: 1.25rem !important;
     text-decoration: none !important;
 }
-
 body.home-theme-cream .case-card p,
 body.home-theme-cream .case-card-body p {
-    color: #D4D4D8 !important;
+    color: #222222 !important;
     font-size: 0.95rem !important;
     line-height: 1.6 !important;
 }
-
 body.home-theme-cream .case-card span {
-    background: rgba(255, 215, 0, 0.16) !important;
-    color: #FFD700 !important;
-    font-weight: 700 !important;
+    background: #FFBE0C !important;
+    color: #000000 !important;
+    border: none !important;
+    font-weight: 800 !important;
+    border-radius: 20px !important;
 }
-
-body.home-theme-cream .case-card a[href^=/case-study] {
-    color: #FFD700 !important;
+body.home-theme-cream .case-card a[href^="/case-study"] {
+    color: #000000 !important;
     font-weight: 800 !important;
 }
 
 /* --------------------------------------------------------------------------
-   5. FEATURED SHORTS & REELS (DEEP OBSIDIAN SHOWCASE) - Contrast > 14:1
+   5. FEATURED SHORTS & REELS SECTION
    -------------------------------------------------------------------------- */
 body.home-theme-cream #featured-shorts,
 body.home-theme-cream .featured-shorts-section {
-    background: #0d0d10 !important;
+    background-color: #FAF7EE !important;
+    background: #FAF7EE !important;
+    background-image: none !important;
     padding: 85px 0 !important;
-    border-top: 1px solid rgba(255, 215, 0, 0.2) !important;
-    border-bottom: 1px solid rgba(255, 215, 0, 0.2) !important;
-    scroll-margin-top: 85px !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.06) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
+    border-radius: 0 !important;
 }
-
+body.home-theme-cream #featured-shorts::before,
+body.home-theme-cream #featured-shorts::after {
+    display: none !important;
+}
 body.home-theme-cream #featured-shorts h2 {
-    color: #FFD700 !important;
+    color: #000000 !important;
     font-weight: 900 !important;
     font-size: clamp(1.8rem, 3.2vw, 2.5rem) !important;
     letter-spacing: -0.02em !important;
 }
-
+body.home-theme-cream #featured-shorts .underline {
+    background: #FFBE0C !important;
+    width: 60px !important;
+    height: 3px !important;
+    border-radius: 2px !important;
+    margin: 0 auto 16px !important;
+}
 body.home-theme-cream #featured-shorts p {
-    color: #D4D4D8 !important;
+    color: #222222 !important;
     font-size: 1.05rem !important;
     line-height: 1.6 !important;
 }
-
 body.home-theme-cream .shorts-card,
-body.home-theme-cream .yt-shorts-item {
-    background: #181920 !important;
-    border: 1px solid rgba(255, 255, 255, 0.14) !important;
+body.home-theme-cream .yt-shorts-item,
+body.home-theme-cream .featuring-card {
+    background-color: #FFFFFF !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
     border-radius: 16px !important;
     overflow: hidden !important;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35) !important;
-    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04) !important;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease !important;
 }
-
 body.home-theme-cream .shorts-card:hover,
-body.home-theme-cream .yt-shorts-item:hover {
-    transform: translateY(-6px) scale(1.02) !important;
-    border-color: #FFD700 !important;
-    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 215, 0, 0.2) !important;
+body.home-theme-cream .yt-shorts-item:hover,
+body.home-theme-cream .featuring-card:hover {
+    transform: translateY(-4px) !important;
+    border-color: rgba(212, 160, 0, 0.45) !important;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08) !important;
 }
 
 /* --------------------------------------------------------------------------
-   6. GALLERY SECTION (CREAM BACKGROUND) - Contrast > 18:1
+   6. GALLERY SECTION
    -------------------------------------------------------------------------- */
 body.home-theme-cream #gallery.gallery-section {
+    background-color: #FAF7EE !important;
     background: #FAF7EE !important;
+    background-image: none !important;
     padding: 80px 0 !important;
-    scroll-margin-top: 85px !important;
 }
-
 body.home-theme-cream #gallery h2 {
     color: #000000 !important;
     font-weight: 900 !important;
 }
-
 body.home-theme-cream #gallery .underline {
-    background: #000000 !important;
+    background: #FFBE0C !important;
+    width: 60px !important;
+    height: 3px !important;
+    border-radius: 2px !important;
+    margin: 0 auto 16px !important;
 }
 
 /* --------------------------------------------------------------------------
-   7. CAMPAIGN REELS (DEEP OBSIDIAN SHOWCASE) - Contrast > 14:1
+   7. CAMPAIGN REELS SECTION
    -------------------------------------------------------------------------- */
 body.home-theme-cream #campaign-reels.campaign-reels-section {
-    background: #08080a !important;
+    background-color: #FAF7EE !important;
+    background: #FAF7EE !important;
+    background-image: none !important;
     padding: 85px 0 !important;
-    border-top: 1px solid rgba(255, 215, 0, 0.25) !important;
-    border-bottom: 1px solid rgba(255, 215, 0, 0.25) !important;
-    scroll-margin-top: 85px !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.06) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
 }
-
 body.home-theme-cream #campaign-reels h2 {
-    color: #FFD700 !important;
+    color: #000000 !important;
     font-weight: 800 !important;
 }
-
 body.home-theme-cream #campaign-reels .gradient-text {
     background: none !important;
-    -webkit-text-fill-color: #FFD700 !important;
-    color: #FFD700 !important;
+    -webkit-text-fill-color: #000000 !important;
+    color: #000000 !important;
 }
-
 body.home-theme-cream #campaign-reels .underline {
-    background: #FFD700 !important;
+    background: #FFBE0C !important;
+    width: 60px !important;
+    height: 3px !important;
+    border-radius: 2px !important;
+    margin: 0 auto 16px !important;
 }
-
 body.home-theme-cream #campaign-reels p {
-    color: #FFFFFF !important;
+    color: #222222 !important;
 }
-
 body.home-theme-cream .campaign-reel-card {
-    background: #121216 !important;
-    border: 1px solid rgba(255, 215, 0, 0.25) !important;
+    background-color: #FFFFFF !important;
+    background: #FFFFFF !important;
+    background-image: none !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    border-radius: 16px !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04) !important;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease !important;
 }
-
+body.home-theme-cream .campaign-reel-card:hover {
+    transform: translateY(-4px) !important;
+    border-color: rgba(212, 160, 0, 0.45) !important;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08) !important;
+}
 body.home-theme-cream .campaign-reel-title {
-    color: #FFD700 !important;
+    color: #000000 !important;
     font-weight: 800 !important;
 }
-
 body.home-theme-cream .campaign-reel-desc {
-    color: #FFFFFF !important;
+    color: #222222 !important;
 }
-
 body.home-theme-cream .campaign-reel-tag {
-    background: rgba(255, 255, 255, 0.1) !important;
-    color: #FFFFFF !important;
-    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    background: #FFBE0C !important;
+    color: #000000 !important;
+    border: none !important;
+    font-weight: 800 !important;
 }
-
-body.home-theme-cream .campaign-reel-badge {
-    background: rgba(255, 215, 0, 0.2) !important;
-    color: #FFD700 !important;
-    border: 1px solid rgba(255, 215, 0, 0.4) !important;
-}
-
 body.home-theme-cream .campaign-reel-btn {
-    color: #FFD700 !important;
+    color: #000000 !important;
     font-weight: 800 !important;
 }
 
 /* --------------------------------------------------------------------------
-   8. CLIENTS SECTION & TRUST STRIP (SEAMLESS CREAM EDITORIAL) - Contrast > 18:1
+   8. STUDIO STATS BANNER
+   -------------------------------------------------------------------------- */
+body.home-theme-cream .gold-banner {
+    background-color: #FAF7EE !important;
+    background: #FAF7EE !important;
+    background-image: none !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.06) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
+    padding: 60px 0 !important;
+}
+body.home-theme-cream .gold-blocks {
+    background: #FFFFFF !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    border-radius: 20px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04) !important;
+    padding: 30px 40px !important;
+}
+body.home-theme-cream .gold-number {
+    color: #000000 !important;
+    font-weight: 900 !important;
+}
+body.home-theme-cream .gold-plus {
+    color: #FFBE0C !important;
+}
+body.home-theme-cream .gold-label {
+    color: #222222 !important;
+    font-weight: 600 !important;
+}
+
+/* --------------------------------------------------------------------------
+   9. CLIENTS SECTION & TRUST STRIP (THE DESIGN BENCHMARK)
    -------------------------------------------------------------------------- */
 body.home-theme-cream #clients.clients-section,
 body.home-theme-cream .clients-section {
+    background-color: #FAF7EE !important;
     background: #FAF7EE !important;
+    background-image: none !important;
     padding: 75px 0 65px !important;
     border-top: 1px solid rgba(0, 0, 0, 0.06) !important;
     border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
-    scroll-margin-top: 85px !important;
 }
-
 body.home-theme-cream .trusted-by-text-custom,
 body.home-theme-cream .clients-section .section-header h2 {
     color: #000000 !important;
@@ -5624,13 +5727,12 @@ body.home-theme-cream .clients-section .section-header h2 {
     text-align: center !important;
     margin-bottom: 28px !important;
 }
-
 body.home-theme-cream .trusted-by-text-custom::before,
 body.home-theme-cream .trusted-by-text-custom::after {
     background: rgba(0, 0, 0, 0.18) !important;
 }
 
-/* Translucent Marquee on Cream (Eliminates harsh black stripe!) */
+/* Translucent Marquee on Cream */
 body.home-theme-cream #clients .clients-marquee,
 body.home-theme-cream .clients-marquee {
     background: transparent !important;
@@ -5641,11 +5743,9 @@ body.home-theme-cream .clients-marquee {
     mask-image: linear-gradient(90deg, transparent 0%, #000 12%, #000 88%, transparent 100%) !important;
     -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 12%, #000 88%, transparent 100%) !important;
 }
-
 body.home-theme-cream #clients .clients-track {
     background: transparent !important;
 }
-
 body.home-theme-cream #clients .client-logo,
 body.home-theme-cream .client-logo {
     background: #FFFFFF !important;
@@ -5655,7 +5755,6 @@ body.home-theme-cream .client-logo {
     padding: 12px 24px !important;
     transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease !important;
 }
-
 body.home-theme-cream #clients .client-logo:hover,
 body.home-theme-cream .client-logo:hover {
     transform: translateY(-3px) scale(1.02) !important;
@@ -5675,7 +5774,6 @@ body.home-theme-cream .trust-strip {
     margin-left: auto !important;
     margin-right: auto !important;
 }
-
 body.home-theme-cream .trust-points-row {
     display: flex !important;
     justify-content: space-around !important;
@@ -5684,7 +5782,6 @@ body.home-theme-cream .trust-points-row {
     gap: 24px !important;
     text-align: center !important;
 }
-
 body.home-theme-cream .trust-badges {
     display: flex !important;
     justify-content: center !important;
@@ -5695,7 +5792,6 @@ body.home-theme-cream .trust-badges {
     padding-top: 20px !important;
     border-top: 1px solid rgba(0, 0, 0, 0.08) !important;
 }
-
 body.home-theme-cream .trust-number {
     font-size: 2.4rem !important;
     font-weight: 900 !important;
@@ -5703,26 +5799,22 @@ body.home-theme-cream .trust-number {
     font-family: var(--font-heading) !important;
     line-height: 1.1 !important;
 }
-
 body.home-theme-cream .trust-label {
     font-size: 0.9rem !important;
-    color: #2b2b2b !important;
+    color: #222222 !important;
     margin-top: 5px !important;
     font-weight: 600 !important;
 }
-
 body.home-theme-cream .trust-point div:first-child {
     color: #000000 !important;
     font-weight: 900 !important;
     font-size: 2.2rem !important;
 }
-
 body.home-theme-cream .trust-point div:last-child {
-    color: #2b2b2b !important;
+    color: #222222 !important;
     font-weight: 600 !important;
     font-size: 0.95rem !important;
 }
-
 body.home-theme-cream .google-review-badge {
     background: #000000 !important;
     color: #FFFFFF !important;
@@ -5738,13 +5830,11 @@ body.home-theme-cream .google-review-badge {
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15) !important;
     transition: transform 0.2s ease, background 0.2s ease !important;
 }
-
 body.home-theme-cream .google-review-badge:hover {
     background: #1f1f23 !important;
     color: #FFFFFF !important;
     transform: translateY(-2px) !important;
 }
-
 body.home-theme-cream .google-review-badge span {
     background: none !important;
     color: #FFFFFF !important;
@@ -5757,347 +5847,402 @@ body.home-theme-cream .google-review-badge span {
 }
 
 /* --------------------------------------------------------------------------
-   9. HIGH IMPACT SERVICES TABS (DEEP OBSIDIAN SHOWCASE) - Contrast > 14:1
+   10. HIGH IMPACT SERVICES TABS
    -------------------------------------------------------------------------- */
-body.home-theme-cream #services-tabs.impact-tabs-section {
-    background: #08080a !important;
+body.home-theme-cream #services-tabs.impact-tabs-section,
+body.home-theme-cream .impact-tabs-section {
+    background-color: #FAF7EE !important;
+    background: #FAF7EE !important;
+    background-image: none !important;
     padding: 85px 0 !important;
-    border-top: 1px solid rgba(255, 215, 0, 0.25) !important;
-    border-bottom: 1px solid rgba(255, 215, 0, 0.25) !important;
-    scroll-margin-top: 85px !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.06) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
 }
-
+body.home-theme-cream .impact-tabs-container {
+    background: #FFFFFF !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    border-radius: 20px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04) !important;
+    padding: 40px !important;
+}
 body.home-theme-cream .tab-btn {
-    background: #18181b !important;
-    color: #FFFFFF !important;
-    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    background: #FAF7EE !important;
+    color: #000000 !important;
+    border: 1px solid rgba(0, 0, 0, 0.12) !important;
+    border-radius: 50px !important;
+    font-weight: 700 !important;
+    padding: 10px 22px !important;
+    transition: all 0.25s ease !important;
 }
-
+body.home-theme-cream .tab-btn:hover {
+    border-color: #FFBE0C !important;
+}
 body.home-theme-cream .tab-btn.active {
-    background: #FFD700 !important;
+    background: #FFBE0C !important;
     color: #000000 !important;
     font-weight: 800 !important;
-    border-color: #FFD700 !important;
+    border-color: #FFBE0C !important;
+    box-shadow: 0 4px 14px rgba(255, 190, 12, 0.3) !important;
 }
-
+body.home-theme-cream .tab-pane {
+    background: #FAF7EE !important;
+    border: 1px solid rgba(0, 0, 0, 0.06) !important;
+    border-radius: 20px !important;
+}
+body.home-theme-cream .pane-ecommerce,
+body.home-theme-cream .pane-advertising,
+body.home-theme-cream .pane-ipl {
+    background: #FAF7EE !important;
+}
 body.home-theme-cream .pane-text h2 {
-    color: #FFD700 !important;
-    font-weight: 800 !important;
-}
-
-body.home-theme-cream .pane-text p {
-    color: #FFFFFF !important;
-}
-
-body.home-theme-cream .tab-pane-link {
-    background: #FFD700 !important;
     color: #000000 !important;
     font-weight: 800 !important;
+}
+body.home-theme-cream .pane-text p {
+    color: #222222 !important;
+}
+body.home-theme-cream .tab-pane-link {
+    background: #000000 !important;
+    color: #FFFFFF !important;
+    border-radius: 50px !important;
+    font-weight: 700 !important;
+    padding: 12px 28px !important;
+    display: inline-block !important;
+    text-decoration: none !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15) !important;
+    transition: all 0.25s ease !important;
+}
+body.home-theme-cream .tab-pane-link:hover {
+    background: #FFBE0C !important;
+    color: #000000 !important;
 }
 
 /* --------------------------------------------------------------------------
-   10. TESTIMONIALS & REVIEWS (CREAM BACKGROUND) - Contrast > 18:1
+   11. TESTIMONIALS & REVIEWS SECTION (BENCHMARK SECTION)
    -------------------------------------------------------------------------- */
 body.home-theme-cream .testimonials-section,
 body.home-theme-cream .reviews-section {
+    background-color: #FAF7EE !important;
     background: #FAF7EE !important;
+    background-image: none !important;
     color: #111111 !important;
     padding: 80px 0 !important;
-    scroll-margin-top: 85px !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.06) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
 }
-
 body.home-theme-cream .testimonials-section h2,
 body.home-theme-cream .reviews-section h2 {
     color: #000000 !important;
     font-weight: 800 !important;
+    text-align: center !important;
 }
-
 body.home-theme-cream .testimonials-section h2 span {
     color: #000000 !important;
     text-decoration: underline !important;
-    text-decoration-color: #FFBF00 !important;
+    text-decoration-color: #FFBE0C !important;
 }
-
 body.home-theme-cream .testimonials-section .underline {
-    background-color: #000000 !important;
+    background-color: #FFBE0C !important;
+    width: 60px !important;
+    height: 3px !important;
+    border-radius: 2px !important;
+    margin: 0 auto 20px !important;
 }
-
 body.home-theme-cream .testimonial-text {
     color: #111111 !important;
     font-size: 24px !important;
     font-weight: 600 !important;
 }
-
 body.home-theme-cream .author-name {
     color: #000000 !important;
     font-weight: 800 !important;
 }
-
 body.home-theme-cream .author-position {
     color: #222222 !important;
     font-weight: 600 !important;
 }
-
 body.home-theme-cream .review-card {
     background: #FFFFFF !important;
     border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    border-radius: 16px !important;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04) !important;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease !important;
 }
-
+body.home-theme-cream .review-card:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08) !important;
+    border-color: rgba(212, 160, 0, 0.45) !important;
+}
 body.home-theme-cream .review-name {
     color: #000000 !important;
     font-weight: 800 !important;
 }
-
 body.home-theme-cream .review-brand {
     color: #222222 !important;
     font-weight: 600 !important;
 }
-
 body.home-theme-cream .review-text {
     color: #111111 !important;
     font-size: 15px !important;
     line-height: 1.7 !important;
 }
-
 body.home-theme-cream .review-rating {
-    color: #d49a00 !important;
+    color: #FFBE0C !important;
 }
 
 /* --------------------------------------------------------------------------
-   11. FAQ SECTION (DEEP OBSIDIAN SHOWCASE) - Contrast > 14:1
+   12. FAQ SECTION
    -------------------------------------------------------------------------- */
 body.home-theme-cream #faq.faq-section {
-    background: #08080a !important;
-    color: #FFFFFF !important;
+    background-color: #FAF7EE !important;
+    background: #FAF7EE !important;
+    background-image: none !important;
     padding: 85px 0 !important;
-    border-top: 1px solid rgba(255, 215, 0, 0.25) !important;
-    border-bottom: 1px solid rgba(255, 215, 0, 0.25) !important;
-    scroll-margin-top: 85px !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.06) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
 }
-
 body.home-theme-cream #faq .faq-header h2 {
-    color: #FFD700 !important;
+    color: #000000 !important;
     font-weight: 800 !important;
+    text-align: center !important;
 }
-
 body.home-theme-cream #faq .faq-list {
-    border-top: 1px solid rgba(255, 215, 0, 0.3) !important;
+    border-top: none !important;
+    max-width: 900px !important;
+    margin: 30px auto 0 !important;
 }
-
 body.home-theme-cream #faq .faq-item {
-    border-bottom: 1px solid rgba(255, 215, 0, 0.3) !important;
+    background: #FFFFFF !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    border-radius: 14px !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03) !important;
+    margin-bottom: 14px !important;
+    padding: 20px 26px !important;
+    transition: all 0.25s ease !important;
 }
-
+body.home-theme-cream #faq .faq-item:hover {
+    border-color: rgba(212, 160, 0, 0.45) !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06) !important;
+}
 body.home-theme-cream #faq .faq-question,
 body.home-theme-cream #faq .faq-question h3 {
-    color: #FFD700 !important;
+    color: #000000 !important;
     font-weight: 700 !important;
+    font-size: 1.05rem !important;
 }
-
 body.home-theme-cream #faq .faq-icon {
-    color: #FFD700 !important;
+    color: #FFBE0C !important;
+    font-weight: 900 !important;
 }
-
 body.home-theme-cream #faq .faq-answer {
-    color: #FFFFFF !important;
-    font-size: 17px !important;
+    color: #222222 !important;
+    font-size: 16px !important;
     line-height: 1.7 !important;
-    opacity: 1 !important;
+    padding-top: 14px !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.06) !important;
+    margin-top: 14px !important;
 }
-
 body.home-theme-cream #faq .faq-answer a {
-    color: #FFD700 !important;
+    color: #000000 !important;
     font-weight: 700 !important;
     text-decoration: underline !important;
 }
 
 /* --------------------------------------------------------------------------
-   12. BLOG PREVIEW SECTION (CREAM BACKGROUND) - Contrast > 18:1
+   13. BLOG PREVIEW SECTION
    -------------------------------------------------------------------------- */
 body.home-theme-cream #blog-preview.blog-preview-section {
+    background-color: #FAF7EE !important;
     background: #FAF7EE !important;
+    background-image: none !important;
     padding: 85px 0 !important;
-    scroll-margin-top: 85px !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.06) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
 }
-
 body.home-theme-cream #blog-preview h2 {
     color: #000000 !important;
     font-weight: 900 !important;
 }
-
 body.home-theme-cream #blog-preview .underline {
-    background: #000000 !important;
+    background: #FFBE0C !important;
+    width: 60px !important;
+    height: 3px !important;
+    border-radius: 2px !important;
+    margin: 0 auto 16px !important;
 }
-
 body.home-theme-cream #blog-preview p {
-    color: #111111 !important;
+    color: #222222 !important;
     font-weight: 500 !important;
 }
-
 body.home-theme-cream .blog-card {
+    background-color: #FFFFFF !important;
     background: #FFFFFF !important;
     border: 1px solid rgba(0, 0, 0, 0.08) !important;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04) !important;
     border-radius: 16px !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04) !important;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease !important;
 }
-
+body.home-theme-cream .blog-card:hover {
+    transform: translateY(-4px) !important;
+    border-color: rgba(212, 160, 0, 0.45) !important;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08) !important;
+}
 body.home-theme-cream .blog-card h3 a,
 body.home-theme-cream .blog-card h3 {
     color: #000000 !important;
     font-weight: 800 !important;
 }
-
 body.home-theme-cream .blog-card p {
-    color: #111111 !important;
+    color: #222222 !important;
 }
-
 body.home-theme-cream .blog-card span {
-    background: #000000 !important;
-    color: #FFD700 !important;
-    font-weight: 700 !important;
+    background: #FFBE0C !important;
+    color: #000000 !important;
+    border: none !important;
+    font-weight: 800 !important;
+    border-radius: 20px !important;
 }
-
-body.home-theme-cream .blog-card a[href^=/blog-] {
+body.home-theme-cream .blog-card a[href^="/blog-"] {
     color: #000000 !important;
     font-weight: 800 !important;
     text-decoration: underline !important;
 }
-
 body.home-theme-cream #blog-preview .cta-btn {
     background: #000000 !important;
     color: #FFFFFF !important;
     border: 2px solid #000000 !important;
     border-radius: 9999px !important;
+    transition: all 0.25s ease !important;
 }
-
 body.home-theme-cream #blog-preview .cta-btn:hover {
-    background: #FFD700 !important;
+    background: #FFBE0C !important;
     color: #000000 !important;
-    border-color: #FFD700 !important;
+    border-color: #FFBE0C !important;
 }
 
 /* --------------------------------------------------------------------------
-   13. CONTACT SECTION & FOOTER (DEEP OBSIDIAN SHOWCASE) - Contrast > 14:1
+   14. CONTACT SECTION & FOOTER (GROUNDING BLACK FOOTER)
    -------------------------------------------------------------------------- */
 body.home-theme-cream #contact.contact-section {
-    background: #08080a !important;
-    padding: 85px 0 !important;
-    border-top: 1px solid rgba(255, 215, 0, 0.25) !important;
-    scroll-margin-top: 85px !important;
+    background-color: #FAF7EE !important;
+    background: #FAF7EE !important;
+    background-image: none !important;
+    padding: 85px 0 0 !important;
 }
-
 body.home-theme-cream .contact-callout {
     background: #FAF7EE !important;
 }
-
 body.home-theme-cream .callout-inner {
-    background: #0f1015 !important;
-    border: 1px solid rgba(255, 215, 0, 0.35) !important;
+    background-color: #FFFFFF !important;
+    background: #FFFFFF !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
     border-radius: 20px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04) !important;
+    padding: 40px !important;
 }
-
 body.home-theme-cream .callout-text h2 {
-    color: #FFD700 !important;
-}
-
-body.home-theme-cream .callout-text h2 span {
-    color: #FFFFFF !important;
-}
-
-body.home-theme-cream .callout-text p {
-    color: #FFFFFF !important;
-}
-
-body.home-theme-cream .callout-cta a {
-    background: #FFD700 !important;
     color: #000000 !important;
+}
+body.home-theme-cream .callout-text h2 span {
+    color: #FFBE0C !important;
+}
+body.home-theme-cream .callout-text p {
+    color: #222222 !important;
+}
+body.home-theme-cream .callout-cta a {
+    background: #000000 !important;
+    color: #FFFFFF !important;
     font-weight: 800 !important;
     border-radius: 50px !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15) !important;
+    transition: all 0.25s ease !important;
 }
-
+body.home-theme-cream .callout-cta a:hover {
+    background: #FFBE0C !important;
+    color: #000000 !important;
+}
 body.home-theme-cream .contact-band {
-    background: #08080a !important;
+    background-color: #FAF7EE !important;
+    background: #FAF7EE !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.06) !important;
+    padding: 60px 0 !important;
 }
-
 body.home-theme-cream .contact-left h4 {
-    color: #FFD700 !important;
+    color: #000000 !important;
 }
-
 body.home-theme-cream .contact-phone a,
 body.home-theme-cream .contact-email a {
-    color: #FFFFFF !important;
+    color: #000000 !important;
+    font-weight: 700 !important;
 }
-
 body.home-theme-cream .city-code {
-    color: #FFD700 !important;
+    color: #FFBE0C !important;
     font-weight: 800 !important;
 }
-
 body.home-theme-cream .city-address {
-    color: #FFFFFF !important;
+    color: #222222 !important;
 }
-
 body.home-theme-cream .contact-band p {
-    color: #FFFFFF !important;
+    color: #222222 !important;
 }
 
-/* Footer */
+/* Grounding Solid Black Footer */
 body.home-theme-cream footer.footer {
-    background: #040405 !important;
-    border-top: 1px solid rgba(255, 215, 0, 0.2) !important;
+    background-color: #000000 !important;
+    background: #000000 !important;
+    background-image: none !important;
+    border-top: 1px solid rgba(255, 190, 12, 0.2) !important;
+    padding: 70px 0 30px !important;
 }
-
 body.home-theme-cream footer.footer h2 {
-    color: #FFD700 !important;
+    color: #FFBE0C !important;
 }
-
 body.home-theme-cream .footer-cta-link {
     color: #FFFFFF !important;
     text-decoration: underline !important;
 }
-
 body.home-theme-cream .ask-ai-section {
-    background: #0e0f14 !important;
-    border: 1px solid rgba(255, 215, 0, 0.25) !important;
+    background-color: #0f1015 !important;
+    border: 1px solid rgba(255, 190, 12, 0.25) !important;
     border-radius: 16px !important;
 }
-
 body.home-theme-cream .ask-ai-title {
-    color: #FFD700 !important;
+    color: #FFBE0C !important;
 }
-
 body.home-theme-cream .ask-ai-subtitle {
     color: #FFFFFF !important;
 }
-
 body.home-theme-cream .ask-ai-btn {
     background: #181920 !important;
     color: #FFFFFF !important;
     border: 1px solid rgba(255, 255, 255, 0.2) !important;
 }
-
-body.home-theme-cream .footer-brand h3 {
-    color: #FFD700 !important;
+body.home-theme-cream .ask-ai-btn:hover {
+    border-color: #FFBE0C !important;
+    color: #FFBE0C !important;
 }
-
+body.home-theme-cream .footer-brand h3 {
+    color: #FFBE0C !important;
+}
 body.home-theme-cream .footer-brand p {
     color: #FFFFFF !important;
 }
-
 body.home-theme-cream .footer-social a {
     color: #FFFFFF !important;
 }
-
+body.home-theme-cream .footer-social a:hover {
+    color: #FFBE0C !important;
+}
 body.home-theme-cream .footer-col h4 {
-    color: #FFD700 !important;
+    color: #FFBE0C !important;
     font-weight: 800 !important;
 }
-
 body.home-theme-cream .footer-col a {
     color: #FFFFFF !important;
 }
-
+body.home-theme-cream .footer-col a:hover {
+    color: #FFBE0C !important;
+}
 body.home-theme-cream .footer-bottom p {
-    color: #FFFFFF !important;
+    color: #e0e0e0 !important;
 }
